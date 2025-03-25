@@ -386,6 +386,7 @@ void KisToolTransform::continueActionImpl(KoPointerEvent *event, bool usePrimary
         currentStrategy()->continueAlternateAction(event, action);
     }
 
+    setFunctionalCursor();
     updateOptionWidget();
     outlineChanged();
 }

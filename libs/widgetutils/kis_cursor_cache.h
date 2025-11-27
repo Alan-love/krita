@@ -24,7 +24,7 @@ public:
     static KisCursorCache* instance();
     KisCursorCache();
 
-    QCursor load(const QString & cursorName, int hotspotX, int hotspotY);
+    QCursor load(const QString & cursorName, int width, int height, int hotspotX, int hotspotY);
 
 private:
 

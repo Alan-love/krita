@@ -24,7 +24,7 @@ public:
 
     KisToolBasicBrushBase(KoCanvasBase *canvas,
                           ToolType type,
-                          const QCursor & cursor=KisCursor::load("tool_outline_selection_cursor.png", 5, 5));
+                          const QCursor & cursor=KisCursor::loadWithSize("tool_outline_selection_cursor.svg", 32, 32, 5, 5));
     ~KisToolBasicBrushBase() override;
 
     void mouseMoveEvent(KoPointerEvent *event) override;

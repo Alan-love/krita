@@ -28,7 +28,7 @@
 
 
 KisToolRectangle::KisToolRectangle(KoCanvasBase * canvas)
-        : KisToolRectangleBase(canvas, KisToolRectangleBase::PAINT, KisCursor::load("tool_rectangle_cursor.png", 6, 6))
+        : KisToolRectangleBase(canvas, KisToolRectangleBase::PAINT, KisCursor::loadWithSize("tool_rectangle_cursor.svg", 32, 32, 6, 6))
 {
     setSupportOutline(true);
     setObjectName("tool_rectangle");
@@ -46,7 +46,7 @@ KisToolRectangle::~KisToolRectangle()
 void KisToolRectangle::resetCursorStyle()
 {
     if (isEraser() && (nodePaintAbility() == NodePaintAbility::PAINT)) {
-        useCursor(KisCursor::load("tool_rectangle_eraser_cursor.png", 6, 6));
+        useCursor(KisCursor::loadWithSize("tool_rectangle_eraser_cursor.svg", 32, 32, 6, 6));
     } else {
         KisToolRectangleBase::resetCursorStyle();
     }

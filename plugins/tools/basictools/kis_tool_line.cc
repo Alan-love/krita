@@ -44,7 +44,7 @@ const KisCoordinatesConverter* getCoordinatesConverter(KoCanvasBase * canvas)
 
 
 KisToolLine::KisToolLine(KoCanvasBase * canvas)
-    : KisToolShape(canvas, KisCursor::load("tool_line_cursor.png", 6, 6)),
+    : KisToolShape(canvas, KisCursor::loadWithSize("tool_line_cursor.svg", 32, 32, 6, 6)),
       m_showGuideline(true),
       m_strokeIsRunning(false),
       m_infoBuilder(new KisConverterPaintingInformationBuilder(getCoordinatesConverter(canvas))),
@@ -75,7 +75,7 @@ KisToolLine::~KisToolLine()
 void KisToolLine::resetCursorStyle()
 {
     if (isEraser() && (nodePaintAbility() == PAINT)) {
-        useCursor(KisCursor::load("tool_line_eraser_cursor.png", 6, 6));
+        useCursor(KisCursor::loadWithSize("tool_line_eraser_cursor.svg", 32, 32, 6, 6));
     } else {
         KisToolPaint::resetCursorStyle();
     }

@@ -5,30 +5,30 @@
 -->
 <RCC version="1.0">
     <qresource>
-        <file>color-sampler_image_background.xpm</file>
-        <file>color-sampler_image_foreground.xpm</file>
-        <file>color-sampler_layer_background.xpm</file>
-        <file>color-sampler_layer_foreground.xpm</file>
-        <file>cursor-cross.xpm</file>
+        <file>color-sampler_image_background.svg</file>
+        <file>color-sampler_image_foreground.svg</file>
+        <file>color-sampler_layer_background.svg</file>
+        <file>color-sampler_layer_foreground.svg</file>
+        <file>cursor-cross.svg</file>
         <file>cursor-pixel-white.xpm</file>
         <file>cursor-pixel-black.xpm</file>
-        <file>cursor-round.xpm</file>
-        <file>cursor-triangle_lefthanded.xpm</file>
-        <file>cursor-triangle_righthanded.xpm</file>
-        <file>cursor-eraser.xpm</file>
-        <file>exposure-cursor-gesture.xpm</file>
-        <file>gamma-cursor-gesture.xpm</file>
-        <file>precise-pick-layer-icon.xpm</file>
-        <file>rotate_discrete.xpm</file>
-        <file>rotate_smooth.xpm</file>
-        <file>move-tool.xpm</file>
-        <file>move-selection.xpm</file>
+        <file>cursor-round.svg</file>
+        <file>cursor-triangle_lefthanded.svg</file>
+        <file>cursor-triangle_righthanded.svg</file>
+        <file>cursor-eraser.svg</file>
+        <file>exposure-cursor-gesture.svg</file>
+        <file>gamma-cursor-gesture.svg</file>
+        <file>precise-pick-layer-icon.svg</file>
+        <file>rotate_discrete.svg</file>
+        <file>rotate_smooth.svg</file>
+        <file>move-tool.svg</file>
+        <file>move-selection.svg</file>
         <file>shear_x.xpm</file>
         <file>shear_y.xpm</file>
-        <file>zoom_discrete.xpm</file>
-        <file>zoom_smooth.xpm</file>
-        <file>tool_freehand_cursor.xpm</file>
-        <file>tool_color_sampler_cursor.xpm</file>
-        <file>rotate_cursor.xpm</file>
+        <file>zoom_discrete.svg</file>
+        <file>zoom_smooth.svg</file>
+        <file>tool_freehand_cursor.svg</file>
+        <file>tool_color_sampler_cursor.svg</file>
+        <file>rotate_cursor.svg</file>
     </qresource>
 </RCC>

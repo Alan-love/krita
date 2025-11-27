@@ -5,6 +5,6 @@
 -->
 <RCC version="1.0">
     <qresource>
-        <file>tool_crop_cursor.png</file>
+        <file>tool_crop_cursor.svg</file>
     </qresource>
 </RCC>

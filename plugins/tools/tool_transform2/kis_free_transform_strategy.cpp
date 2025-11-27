@@ -68,8 +68,8 @@ struct KisFreeTransformStrategy::Private
         scaleCursors[6] = KisCursor::sizeVerCursor();
         scaleCursors[7] = KisCursor::sizeBDiagCursor();
 
-        shearCursorPixmap.load(":/shear_cursor.png");
-        rotateHandlesCursor = QCursor(QPixmap(":/rotate_cursor_handles.xpm"));
+        shearCursorPixmap = QIcon(":/shear_cursor.svg").pixmap(22, 22);
+        rotateHandlesCursor = QCursor(QIcon(":/rotate_cursor_handles.svg").pixmap(32, 32));
     }
 
     KisFreeTransformStrategy *q;

@@ -5,7 +5,7 @@
 -->
 <RCC version="1.0">
     <qresource>
-        <file>tool_polygon_cursor.png</file>
-        <file>tool_polygon_eraser_cursor.png</file>
+        <file>tool_polygon_cursor.svg</file>
+        <file>tool_polygon_eraser_cursor.svg</file>
     </qresource>
 </RCC>

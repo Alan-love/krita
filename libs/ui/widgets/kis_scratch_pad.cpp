@@ -175,8 +175,8 @@ KisScratchPad::KisScratchPad(QWidget *parent)
     setAutoFillBackground(false);
     setMouseTracking(true);
 
-    m_cursor = KisCursor::load("tool_freehand_cursor.xpm", 2, 2);
-    m_colorSamplerCursor = KisCursor::load("tool_color_sampler_cursor.xpm", 2, 2);
+    m_cursor = KisCursor::loadWithSize("tool_freehand_cursor.svg", 32, 32, 2, 2);
+    m_colorSamplerCursor = KisCursor::loadWithSize("tool_color_sampler_cursor.svg", 32, 32, 2, 2);
     setCursor(m_cursor);
 
 

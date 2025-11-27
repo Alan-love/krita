@@ -23,7 +23,7 @@
 #include <brushengine/kis_paintop_preset.h>
 
 KisToolEllipse::KisToolEllipse(KoCanvasBase * canvas)
-        : KisToolEllipseBase(canvas, KisToolEllipseBase::PAINT, KisCursor::load("tool_ellipse_cursor.png", 6, 6))
+        : KisToolEllipseBase(canvas, KisToolEllipseBase::PAINT, KisCursor::loadWithSize("tool_ellipse_cursor.svg", 32, 32, 6, 6))
 {
     setObjectName("tool_ellipse");
     setSupportOutline(true);
@@ -41,7 +41,7 @@ KisToolEllipse::~KisToolEllipse()
 void KisToolEllipse::resetCursorStyle()
 {
     if (isEraser() && (nodePaintAbility() == NodePaintAbility::PAINT)) {
-        useCursor(KisCursor::load("tool_ellipse_eraser_cursor.png", 6, 6));
+        useCursor(KisCursor::loadWithSize("tool_ellipse_eraser_cursor.svg", 32, 32, 6, 6));
     } else {
         KisToolEllipseBase::resetCursorStyle();
     }

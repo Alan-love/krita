@@ -47,7 +47,7 @@ void KisToolPathLocalTool::endShape()
 
 KisPathEnclosingProducer::KisPathEnclosingProducer(KoCanvasBase * canvas)
     : KisDynamicDelegateTool<DelegatedPathTool>(canvas,
-                                                KisCursor::load("tool_polygonal_selection_cursor.png", 6, 6),
+                                                KisCursor::loadWithSize("tool_polygonal_selection_cursor.svg", 32, 32, 6, 6),
                                                 new KisToolPathLocalTool(canvas, this))
 {
     setObjectName("enclosing_tool_path");
@@ -65,7 +65,7 @@ KisPathEnclosingProducer::~KisPathEnclosingProducer()
 void  KisPathEnclosingProducer::resetCursorStyle()
 {
     if (isEraser()) {
-        useCursor(KisCursor::load("tool_polygonal_selection_enclose_eraser_cursor.png", 6, 6));
+        useCursor(KisCursor::loadWithSize("tool_polygonal_selection_enclose_eraser_cursor.svg", 32, 32, 6, 6));
     } else {
         KisDynamicDelegateTool::resetCursorStyle();
     }

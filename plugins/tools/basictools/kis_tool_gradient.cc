@@ -51,7 +51,7 @@
 
 
 KisToolGradient::KisToolGradient(KoCanvasBase * canvas)
-        : KisToolPaint(canvas, KisCursor::load("tool_gradient_cursor.png", 6, 6))
+        : KisToolPaint(canvas, KisCursor::loadWithSize("tool_gradient_cursor.svg", 32, 32, 6, 6))
 {
     setObjectName("tool_gradient");
 
@@ -76,7 +76,7 @@ KisToolGradient::~KisToolGradient()
 void KisToolGradient::resetCursorStyle()
 {
     if (isEraser()) {
-        useCursor(KisCursor::load("tool_gradient_eraser_cursor.png", 6, 6));
+        useCursor(KisCursor::loadWithSize("tool_gradient_eraser_cursor.svg", 32, 32, 6, 6));
     } else {
         KisToolPaint::resetCursorStyle();
     }

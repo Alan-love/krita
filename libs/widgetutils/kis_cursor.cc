@@ -33,22 +33,22 @@ QCursor KisCursor::upArrowCursor()
 
 QCursor KisCursor::crossCursor()
 {
-    return load("cursor-cross.xpm");
+    return loadWithSize("cursor-cross.svg", 31, 31);
 }
 
 QCursor KisCursor::roundCursor()
 {
-    return load("cursor-round.xpm");
+    return loadWithSize("cursor-round.svg", 31, 31);
 }
 
 QCursor KisCursor::pixelBlackCursor()
 {
-    return load("cursor-pixel-black.xpm");
+    return loadWithSize("cursor-pixel-black.xpm", 31, 31);
 }
 
 QCursor KisCursor::pixelWhiteCursor()
 {
-    return load("cursor-pixel-white.xpm");
+    return loadWithSize("cursor-pixel-white.xpm", 31, 31);
 }
 
 QCursor KisCursor::waitCursor()
@@ -114,82 +114,82 @@ QCursor KisCursor::samplerCursor()
 
 QCursor KisCursor::pickLayerCursor()
 {
-    return load("precise-pick-layer-icon.xpm", 7, 23);
+    return loadWithSize("precise-pick-layer-icon.svg", 33, 31, 7, 23);
 }
 
 QCursor KisCursor::zoomSmoothCursor()
 {
-    return load("zoom_smooth.xpm");
+    return loadWithSize("zoom_smooth.svg", 33, 31);
 }
 
 QCursor KisCursor::zoomDiscreteCursor()
 {
-    return load("zoom_discrete.xpm");
+    return loadWithSize("zoom_discrete.svg", 33, 31);
 }
 
 QCursor KisCursor::rotateCanvasSmoothCursor()
 {
-    return load("rotate_smooth.xpm");
+    return loadWithSize("rotate_smooth.svg", 33, 31);
 }
 
 QCursor KisCursor::rotateCanvasDiscreteCursor()
 {
-    return load("rotate_discrete.xpm");
+    return loadWithSize("rotate_discrete.svg", 33, 31);
 }
 
 QCursor KisCursor::samplerImageForegroundCursor()
 {
-    return load("color-sampler_image_foreground.xpm", 8, 23);
+    return loadWithSize("color-sampler_image_foreground.svg", 33, 31, 8, 23);
 }
 
 QCursor KisCursor::samplerImageBackgroundCursor()
 {
-    return load("color-sampler_image_background.xpm", 8, 23);
+    return loadWithSize("color-sampler_image_background.svg", 33, 31,  8, 23);
 }
 
 QCursor KisCursor::samplerLayerForegroundCursor()
 {
-    return load("color-sampler_layer_foreground.xpm", 8, 23);
+    return loadWithSize("color-sampler_layer_foreground.svg", 33, 31, 8, 23);
 }
 
 QCursor KisCursor::samplerLayerBackgroundCursor()
 {
-    return load("color-sampler_layer_background.xpm", 8, 23);
+    return loadWithSize("color-sampler_layer_background.svg", 33, 31, 8, 23);
 }
 
 QCursor KisCursor::changeExposureCursor()
 {
-    return load("exposure-cursor-gesture.xpm");
+    return loadWithSize("exposure-cursor-gesture.svg", 22, 22);
 }
 
 QCursor KisCursor::changeGammaCursor()
 {
-    return load("gamma-cursor-gesture.xpm");
+    return loadWithSize("gamma-cursor-gesture.svg", 32, 32);
 }
 
 QCursor KisCursor::triangleLeftHandedCursor()
 {
-    return load("cursor-triangle_lefthanded.xpm");
+    return loadWithSize("cursor-triangle_lefthanded.svg", 31, 31);
 }
 
 QCursor KisCursor::triangleRightHandedCursor()
 {
-    return load("cursor-triangle_righthanded.xpm");
+    return loadWithSize("cursor-triangle_righthanded.svg", 31, 31);
 }
 
 QCursor KisCursor::eraserCursor()
 {
-    return load("cursor-eraser.xpm", 2, 2);
+    return loadWithSize("cursor-eraser.svg", 32, 32, 2, 2);
 }
 
 QCursor KisCursor::moveCursor()
 {
-    return load("move-tool.xpm");
+    return loadWithSize("move-tool.svg", 24, 24);
 }
 
 QCursor KisCursor::moveSelectionCursor()
 {
-    return load("move-selection.xpm", 11, 11);
+    return loadWithSize("move-selection.svg", 32, 32, 11, 11);
 }
 
 QCursor KisCursor::handCursor()
@@ -209,20 +209,25 @@ QCursor KisCursor::closedHandCursor()
 
 QCursor KisCursor::rotateCursor()
 {
-    return load("rotate_cursor.xpm");
+    return loadWithSize("rotate_cursor.svg", 22, 22);
 }
 
 QCursor KisCursor::meshCursorFree()
 {
-    return load("mesh_cursor_free.png", 5, 5);
+    return loadWithSize("mesh_cursor_free.svg", 32, 32, 5, 5);
 }
 
 QCursor KisCursor::meshCursorLocked()
 {
-    return load("mesh_cursor_locked.png", 5, 5);
+    return loadWithSize("mesh_cursor_locked.svg", 32, 32, 5, 5);
 }
 
-QCursor KisCursor::load(const QString & cursorName, int hotspotX, int hotspotY)
+QCursor KisCursor::load(const QString &cursorName, int hotspotX, int hotspotY)
 {
-    return KisCursorCache::instance()->load(cursorName, hotspotX, hotspotY);
+    return KisCursorCache::instance()->load(cursorName, 32, 32, hotspotX, hotspotY);
+}
+
+QCursor KisCursor::loadWithSize(const QString & cursorName, int width, int height, int hotspotX, int hotspotY)
+{
+    return KisCursorCache::instance()->load(cursorName, width, height, hotspotX, hotspotY);
 }

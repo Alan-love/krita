@@ -435,9 +435,9 @@ DefaultTool::DefaultTool(KoCanvasBase *canvas, bool connectToSelectedShapesProxy
     setupActions();
 
     QPixmap rotatePixmap, shearPixmap;
-    rotatePixmap.load(":/cursor_rotate.png");
+    rotatePixmap = QIcon(":/cursor_rotate.svg").pixmap(22, 22);
     Q_ASSERT(!rotatePixmap.isNull());
-    shearPixmap.load(":/cursor_shear.png");
+    shearPixmap = QIcon(":/cursor_shear.svg").pixmap(22, 22);
     Q_ASSERT(!shearPixmap.isNull());
 
     m_rotateCursors[0] = QCursor(rotatePixmap.transformed(QTransform().rotate(45)));

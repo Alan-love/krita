@@ -28,7 +28,7 @@ KisBrushEnclosingProducer::~KisBrushEnclosingProducer()
 void  KisBrushEnclosingProducer::resetCursorStyle()
 {
     if (isEraser()) {
-        useCursor(KisCursor::load("cursor-eraser.xpm", 2, 2));
+        useCursor(KisCursor::loadWithSize("cursor-eraser.svg", 32, 32, 2, 2));
     } else {
         KisDynamicDelegateTool::resetCursorStyle();
     }

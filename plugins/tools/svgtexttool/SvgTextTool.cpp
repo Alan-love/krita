@@ -155,14 +155,14 @@ SvgTextTool::SvgTextTool(KoCanvasBase *canvas)
 
     connect(&m_textCursor, SIGNAL(selectionChanged()), this, SLOT(updateTextPathHelper()));
 
-    m_base_cursor = QCursor(QPixmap(":/tool_text_basic.xpm"), 7, 7);
-    m_text_inline_horizontal = QCursor(QPixmap(":/tool_text_inline_horizontal.xpm"), 7, 7);
-    m_text_inline_vertical = QCursor(QPixmap(":/tool_text_inline_vertical.xpm"), 7, 7);
-    m_text_on_path = QCursor(QPixmap(":/tool_text_on_path.xpm"), 7, 7);
-    m_text_in_shape = QCursor(QPixmap(":/tool_text_in_shape.xpm"), 7, 7);
-    m_ibeam_horizontal = QCursor(QPixmap(":/tool_text_i_beam_horizontal.xpm"), 11, 11);
-    m_ibeam_vertical = QCursor(QPixmap(":/tool_text_i_beam_vertical.xpm"), 11, 11);
-    m_ibeam_horizontal_done = QCursor(QPixmap(":/tool_text_i_beam_horizontal_done.xpm"), 5, 11);
+    m_base_cursor = QCursor(QIcon(":/tool_text_basic.svg").pixmap(32), 7, 7);
+    m_text_inline_horizontal = QCursor(QIcon(":/tool_text_inline_horizontal.svg").pixmap(32), 7, 7);
+    m_text_inline_vertical = QCursor(QIcon(":/tool_text_inline_vertical.svg").pixmap(32), 7, 7);
+    m_text_on_path = QCursor(QIcon(":/tool_text_on_path.svg").pixmap(32), 7, 7);
+    m_text_in_shape = QCursor(QIcon(":/tool_text_in_shape.svg").pixmap(32), 7, 7);
+    m_ibeam_horizontal = QCursor(QIcon(":/tool_text_i_beam_horizontal.svg").pixmap(22), 11, 11);
+    m_ibeam_vertical = QCursor(QIcon(":/tool_text_i_beam_vertical.svg").pixmap(22), 11, 11);
+    m_ibeam_horizontal_done = QCursor(QIcon(":/tool_text_i_beam_horizontal_done.svg").pixmap(22), 5, 11);
 }
 
 SvgTextTool::~SvgTextTool()

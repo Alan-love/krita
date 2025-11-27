@@ -95,7 +95,7 @@ DecorationLine decors[20] =
 const int decorsIndex[DECORATION_COUNT] = {0,4,12,18,20};
 
 KisToolCrop::KisToolCrop(KoCanvasBase * canvas)
-        : KisTool(canvas, KisCursor::load("tool_crop_cursor.png", 6, 6))
+        : KisTool(canvas, KisCursor::loadWithSize("tool_crop_cursor.svg", 32, 32, 6, 6))
 {
     setObjectName("tool_crop");
     m_handleSize = 13;

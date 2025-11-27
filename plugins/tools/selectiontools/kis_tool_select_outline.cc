@@ -41,7 +41,7 @@
 
 __KisToolSelectOutlineLocal::__KisToolSelectOutlineLocal(KoCanvasBase * canvas)
     : KisToolOutlineBase(canvas, KisToolOutlineBase::SELECT,
-                         KisCursor::load("tool_outline_selection_cursor.png", 5, 5))
+                         KisCursor::loadWithSize("tool_outline_selection_cursor.svg", 32, 32, 5, 5))
 {
     setObjectName("tool_select_outline");
 }
@@ -189,13 +189,13 @@ bool KisToolSelectOutline::alternateActionSupportsHiResEvents(AlternateAction ac
 void KisToolSelectOutline::resetCursorStyle()
 {
     if (selectionAction() == SELECTION_ADD) {
-        useCursor(KisCursor::load("tool_outline_selection_cursor_add.png", 5, 5));
+        useCursor(KisCursor::loadWithSize("tool_outline_selection_cursor_add.svg", 32, 32, 5, 5));
     } else if (selectionAction() == SELECTION_SUBTRACT) {
-        useCursor(KisCursor::load("tool_outline_selection_cursor_sub.png", 5, 5));
+        useCursor(KisCursor::loadWithSize("tool_outline_selection_cursor_sub.svg", 32, 32, 5, 5));
     } else if (selectionAction() == SELECTION_INTERSECT) {
-        useCursor(KisCursor::load("tool_outline_selection_cursor_inter.png", 5, 5));
+        useCursor(KisCursor::loadWithSize("tool_outline_selection_cursor_inter.svg", 32, 32, 5, 5));
     } else if (selectionAction() == SELECTION_SYMMETRICDIFFERENCE) {
-        useCursor(KisCursor::load("tool_outline_selection_cursor_symdiff.png", 5, 5));
+        useCursor(KisCursor::loadWithSize("tool_outline_selection_cursor_symdiff.svg", 32, 32, 5, 5));
     } else {
         KisToolSelectBase<__KisToolSelectOutlineLocal>::resetCursorStyle();
     }

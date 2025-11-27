@@ -19,7 +19,7 @@
 #include "kis_figure_painting_tool_helper.h"
 
 KisToolPolyline::KisToolPolyline(KoCanvasBase * canvas)
-        : KisToolPolylineBase(canvas, KisToolPolylineBase::PAINT, KisCursor::load("tool_polyline_cursor.png", 6, 6))
+        : KisToolPolylineBase(canvas, KisToolPolylineBase::PAINT, KisCursor::loadWithSize("tool_polyline_cursor.svg", 32, 32, 6, 6))
 {
     setObjectName("tool_polyline");
     setSupportOutline(true);
@@ -33,7 +33,7 @@ KisToolPolyline::~KisToolPolyline()
 void KisToolPolyline::resetCursorStyle()
 {
     if (isEraser()) {
-        useCursor(KisCursor::load("tool_polyline_eraser_cursor.png", 6, 6));
+        useCursor(KisCursor::loadWithSize("tool_polyline_eraser_cursor.svg", 32, 32, 6, 6));
     } else {
         KisToolPolylineBase::resetCursorStyle();
     }

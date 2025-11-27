@@ -65,7 +65,7 @@
 #include "kis_icon_utils.h"
 
 KisToolFill::KisToolFill(KoCanvasBase * canvas)
-    : KisToolPaint(canvas, KisCursor::load("tool_fill_cursor.png", 6, 6))
+    : KisToolPaint(canvas, KisCursor::loadWithSize("tool_fill_cursor.svg", 32, 32, 6, 6))
     , m_fillMask(nullptr)
     , m_referencePaintDevice(nullptr)
     , m_referenceNodeList(nullptr)
@@ -89,7 +89,7 @@ KisToolFill::~KisToolFill()
 void KisToolFill::resetCursorStyle()
 {
     if (isEraser() && !m_useCustomBlendingOptions) {
-        useCursor(KisCursor::load("tool_fill_eraser_cursor.png", 6, 6));
+        useCursor(KisCursor::loadWithSize("tool_fill_eraser_cursor.svg", 32, 32, 6, 6));
     } else {
         KisToolPaint::resetCursorStyle();
     }

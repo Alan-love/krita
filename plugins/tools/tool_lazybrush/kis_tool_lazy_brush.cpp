@@ -44,7 +44,7 @@ struct KisToolLazyBrush::Private
 
 KisToolLazyBrush::KisToolLazyBrush(KoCanvasBase * canvas)
     : KisToolFreehand(canvas,
-                      KisCursor::load("tool_freehand_cursor.xpm", 2, 2),
+                      KisCursor::loadWithSize("tool_freehand_cursor.svg", 32, 32, 2, 2),
                       kundo2_i18n("Colorize Mask Key Stroke")),
       m_d(new Private)
 {

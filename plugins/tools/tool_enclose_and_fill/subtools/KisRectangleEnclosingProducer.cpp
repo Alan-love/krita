@@ -13,7 +13,7 @@
 #include "KisRectangleEnclosingProducer.h"
 
 KisRectangleEnclosingProducer::KisRectangleEnclosingProducer(KoCanvasBase * canvas)
-    : KisDynamicDelegateTool<KisToolRectangleBase>(canvas, KisToolRectangleBase::PAINT, KisCursor::load("tool_rectangular_selection_cursor.png", 6, 6))
+    : KisDynamicDelegateTool<KisToolRectangleBase>(canvas, KisToolRectangleBase::PAINT, KisCursor::loadWithSize("tool_rectangular_selection_cursor.svg", 32, 32, 6, 6))
 {
     setObjectName("enclosing_tool_rectangle");
     setSupportOutline(true);
@@ -30,7 +30,7 @@ KisRectangleEnclosingProducer::~KisRectangleEnclosingProducer()
 void  KisRectangleEnclosingProducer::resetCursorStyle()
 {
     if (isEraser()) {
-        useCursor(KisCursor::load("tool_rectangular_selection_enclose_eraser_cursor.png", 6, 6));
+        useCursor(KisCursor::loadWithSize("tool_rectangular_selection_enclose_eraser_cursor.png", 32, 32, 6, 6));
     } else {
         KisDynamicDelegateTool::resetCursorStyle();
     }

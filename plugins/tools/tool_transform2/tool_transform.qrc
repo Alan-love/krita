@@ -5,9 +5,9 @@
 -->
 <RCC version="1.0">
     <qresource>
-        <file>mesh_cursor_free.png</file>
-        <file>mesh_cursor_locked.png</file>
-        <file>shear_cursor.png</file>
-        <file>rotate_cursor_handles.xpm</file>
+        <file>mesh_cursor_free.svg</file>
+        <file>mesh_cursor_locked.svg</file>
+        <file>shear_cursor.svg</file>
+        <file>rotate_cursor_handles.svg</file>
     </qresource>
 </RCC>

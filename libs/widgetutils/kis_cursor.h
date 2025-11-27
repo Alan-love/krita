@@ -74,6 +74,8 @@ public:
     // each file will be loaded only once.
     static QCursor load(const QString & cursorName, int hotspotX = -1, int hotspotY = -1);
 
+    static QCursor loadWithSize(const QString & cursorName, int width, int height, int hotspotX = -1, int hotspotY = -1);
+
 private:
 
 

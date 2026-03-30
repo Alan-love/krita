@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-28 00:41+0000\n"
-"PO-Revision-Date: 2026-03-18 11:59+0100\n"
+"PO-Revision-Date: 2026-03-28 08:20+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #. i18n: Display name of resource, see context: [path-to-resources]/[resource-type]/[resource-filename]
 #, kde-format
@@ -5909,7 +5909,7 @@ msgctxt ""
 "./krita/data/bundles/Krita_3_Default_Resources.bundle:brushes/A_dirty-brush."
 "gih"
 msgid "A - 2 Dirty Brush2"
-msgstr "A - 2 Pinzell brut2"
+msgstr "A – 2 Pinzell brut2"
 
 #. i18n: Display name of resource, see context: [path-to-resources]/[resource-type]/[resource-filename]
 #: krita/data/bundles/Krita_3_Default_Resources.bundle:brushes/A_distant-mountain.gih:1
@@ -5927,7 +5927,7 @@ msgctxt ""
 "./krita/data/bundles/Krita_3_Default_Resources.bundle:brushes/A_dynamic-"
 "brush.gih"
 msgid "A - 2 Dynamic Brush"
-msgstr "A - 2 pinzell dinàmic"
+msgstr "A – 2 pinzell dinàmic"
 
 #. i18n: Display name of resource, see context: [path-to-resources]/[resource-type]/[resource-filename]
 #: krita/data/bundles/Krita_3_Default_Resources.bundle:brushes/A_dynamic-brush3.gih:1
@@ -5972,7 +5972,7 @@ msgctxt ""
 "./krita/data/bundles/Krita_3_Default_Resources.bundle:brushes/A_eroded-"
 "dirtybrush-anim.gih"
 msgid "A - 2 Dirty Brush"
-msgstr "A - 2 Pinzell brut"
+msgstr "A – 2 Pinzell brut"
 
 #. i18n: Display name of resource, see context: [path-to-resources]/[resource-type]/[resource-filename]
 #: krita/data/bundles/Krita_3_Default_Resources.bundle:brushes/A_eroded-knife-anim.gih:1
@@ -23373,7 +23373,7 @@ msgstr "Mòdul"
 #, kde-format
 msgctxt "Blending mode - Modulo - Continuous"
 msgid "Modulo - Continuous"
-msgstr "Mòdul - Continu"
+msgstr "Mòdul – Continu"
 
 #: libs/pigment/KoCompositeOpRegistry.cpp:98
 #, kde-format
@@ -23385,7 +23385,7 @@ msgstr "Mòdul divisible"
 #, kde-format
 msgctxt "Blending mode - Divisive Modulo - Continuous"
 msgid "Divisive Modulo - Continuous"
-msgstr "Mòdul divisible - Continu"
+msgstr "Mòdul divisible – Continu"
 
 #: libs/pigment/KoCompositeOpRegistry.cpp:100
 #, kde-format
@@ -23397,7 +23397,7 @@ msgstr "Desplaçament de mòdul"
 #, kde-format
 msgctxt "Blending mode - Modulo Shift - Continuous"
 msgid "Modulo Shift - Continuous"
-msgstr "Desplaçament de mòdul - Continu"
+msgstr "Desplaçament de mòdul – Continu"
 
 #: libs/pigment/KoCompositeOpRegistry.cpp:103
 #, kde-format
@@ -23571,7 +23571,7 @@ msgstr "Interpolació"
 #, kde-format
 msgctxt "Blending mode - Interpolation - 2X"
 msgid "Interpolation - 2X"
-msgstr "Interpolació - 2X"
+msgstr "Interpolació – 2X"
 
 #: libs/pigment/KoCompositeOpRegistry.cpp:134
 #, kde-format
@@ -32892,14 +32892,11 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkUseHighFunctionKeyMouseButtonEmulationWorkaround)
 #: libs/ui/forms/wdgtabletsettings.ui:201
-#, fuzzy, kde-format
-#| msgid ""
-#| "Treat page up/down keys as right/middle mouse buttons (workaround for "
-#| "Xiaomi styluses)"
+#, kde-format
 msgid "Treate F13 key as middle mouse button (workaround for OnePlus styluses)"
 msgstr ""
-"Tracta les tecles «Amunt» i «Avall» de la pàgina com a botons dret/mig del "
-"ratolí (solució alternativa per als llapis Xiaomi)"
+"Tracta la tecla F13 com a botó del mig del ratolí (solució alternativa per "
+"als llapis OnePlus)"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkUseIgnoreHistoricTabletEventsWorkaround)
 #: libs/ui/forms/wdgtabletsettings.ui:208
@@ -35095,9 +35092,9 @@ msgid ""
 "  - instant preview:\t %4\n"
 msgstr ""
 "Mida de la imatge:\t %1\n"
-"  - Capes:\t\t %2\n"
-"  - Projeccions:\t %3\n"
-"  - Vista prèvia instantània:\t %4\n"
+"  – Capes:\t\t %2\n"
+"  – Projeccions:\t %3\n"
+"  – Vista prèvia instantània:\t %4\n"
 
 #: libs/ui/kis_statusbar.cc:291
 #, kde-format
@@ -35384,7 +35381,7 @@ msgstr ""
 "Si en lloc d'açò voleu afegir la capa de fitxer a un document que ja es "
 "troba en una instància en execució de Krita, marqueu la casella de selecció "
 "«Permet només una única instància de Krita» en la configuració (Configuració "
-"-> General -> Finestra)."
+"→ General → Finestra)."
 
 #: libs/ui/KisApplication.cpp:837
 #, kde-format
@@ -35768,7 +35765,7 @@ msgstr "S'ha produït un error mentre es llegia des del fitxer."
 #: libs/ui/KisImportExportErrorCode.cpp:28
 #, kde-format
 msgid "An error occurred when writing to the file."
-msgstr "S'ha produït un error mentre s'escrivia al fitxer."
+msgstr "S'ha produït un error mentre s'escrivia en el fitxer."
 
 #: libs/ui/KisImportExportErrorCode.cpp:30
 #, kde-format
@@ -35891,7 +35888,7 @@ msgstr "No hi ha prou espai en el disc per a guardar el fitxer."
 #: libs/ui/KisImportExportErrorCode.cpp:168
 #, kde-format
 msgid "Error occurred while writing to the file."
-msgstr "S'ha produït un error mentre s'escrivia al fitxer."
+msgstr "S'ha produït un error mentre s'escrivia en el fitxer."
 
 #: libs/ui/KisImportExportErrorCode.cpp:170
 #, kde-format
@@ -41085,7 +41082,7 @@ msgstr "Quant a KDE"
 #: libs/widgetutils/xmlgui/kaboutkdedialog_p.cpp:39
 #, kde-format
 msgid "<html><font size=\"5\">KDE - Be Free!</font></html>"
-msgstr "<html><font size=\"5\">KDE - Sigueu lliure</font></html>"
+msgstr "<html><font size=\"5\">KDE – Sigueu lliure</font></html>"
 
 #: libs/widgetutils/xmlgui/kaboutkdedialog_p.cpp:53
 #, kde-format
@@ -41123,7 +41120,7 @@ msgid ""
 "your wish. Make sure you use the severity called \"Wishlist\".</html>"
 msgstr ""
 "<html>Els programes sempre es poden millorar, i l'equip de KDE està preparat "
-"per a fer-ho. En canvi, vós - l'usuari - heu de dir-nos quan alguna cosa no "
+"per a fer-ho. En canvi, vós – l'usuari – heu de dir-nos quan alguna cosa no "
 "funciona tal com s'espera o es pot fer millor.<br /><br />KDE té un sistema "
 "de seguiment d'errors. Visiteu <a href=\"%1\">%1</a> o utilitzeu el diàleg "
 "«Informeu d'un error…» des del menú «Ajuda» per a informar dels errors. <br /"
@@ -41237,7 +41234,7 @@ msgid ""
 "The version of this application - please make sure that no newer version is "
 "available before sending a bug report"
 msgstr ""
-"La versió d'esta aplicació - assegureu-vos que no hi ha disponible cap "
+"La versió d'esta aplicació – assegureu-vos que no hi ha disponible cap "
 "versió més nova abans d'enviar un informe d'error"
 
 #: libs/widgetutils/xmlgui/kbugreport.cpp:133
@@ -43882,7 +43879,7 @@ msgstr "Isomètric"
 #: plugins/dockers/griddocker/grid_config_widget.cpp:420
 #, kde-format
 msgid "Isometric (Legacy - requires OpenGL)"
-msgstr "Isomètric (antic - requerix OpenGL)"
+msgstr "Isomètric (antic – requerix OpenGL)"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkShowGrid)
 #: plugins/dockers/griddocker/grid_config_widget.ui:60
@@ -49605,28 +49602,28 @@ msgstr "Ombra"
 #, kde-format
 msgctxt "EXIF: postprocessing - light source"
 msgid "Daylight fluorescent (D5700 - 7100K)"
-msgstr "Fluorescent amb llum del dia (D 5700 - 7100 K)"
+msgstr "Fluorescent amb llum del dia (D 5700 – 7100 K)"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, editLightSource)
 #: plugins/extensions/metadataeditor/editors/exif.ui:650
 #, kde-format
 msgctxt "EXIF: postprocessing - light source"
 msgid "Day white fluorescent (N4600 - 5400K)"
-msgstr "Fluorescent de dia blanc (N 4600 - 5400 K)"
+msgstr "Fluorescent de dia blanc (N 4600 – 5400 K)"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, editLightSource)
 #: plugins/extensions/metadataeditor/editors/exif.ui:655
 #, kde-format
 msgctxt "EXIF: postprocessing - light source"
 msgid "Cool white fluorescent (W3900 - 4500K)"
-msgstr "Fluorescent fred blanc (W 3900 - 4500 K)"
+msgstr "Fluorescent fred blanc (W 3900 – 4500 K)"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, editLightSource)
 #: plugins/extensions/metadataeditor/editors/exif.ui:660
 #, kde-format
 msgctxt "EXIF: postprocessing - light source"
 msgid "White fluorescent (WW 3200 - 3700K)"
-msgstr "Fluorescent blanc (WW 3200 - 3700 K)"
+msgstr "Fluorescent blanc (WW 3200 – 3700 K)"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, editLightSource)
 #: plugins/extensions/metadataeditor/editors/exif.ui:670
@@ -51254,7 +51251,7 @@ msgid ""
 "level. These can be configured under S Pen Settings > Air actions."
 msgstr ""
 "Assegureu-vos que les accions corresponen al gest correcte a nivell del "
-"sistema. Estos es poden configurar a Paràmetres de S-Pen -> Accions aire."
+"sistema. Estos es poden configurar a Paràmetres de S-Pen → Accions aire."
 
 #. i18n: ectx: property (title), widget (QGroupBox, boxButtonActions)
 #: plugins/extensions/spensettings/wdg_spensettings.ui:43
@@ -61183,13 +61180,13 @@ msgstr "Vora suavitzada:"
 #, kde-format
 msgctxt "PaintOp instant preview limitation"
 msgid "Size -> Fuzzy (sensor)"
-msgstr "Mida -> Difusa (sensor)"
+msgstr "Mida → Difusa (sensor)"
 
 #: plugins/paintops/libpaintop/KisSizeOptionData.cpp:27
 #, kde-format
 msgctxt "PaintOp instant preview limitation"
 msgid "Size -> Fade (sensor)"
-msgstr "Mida -> Esvaïx (sensor)"
+msgstr "Mida → Esvaïx (sensor)"
 
 #: plugins/paintops/libpaintop/KisSpacingOptionWidget.cpp:38
 #, kde-format
@@ -61350,7 +61347,7 @@ msgstr "Intensitat de la claredat"
 #, kde-format
 msgctxt "PaintOp instant preview limitation"
 msgid "Texture->Pattern (low quality preview)"
-msgstr "Textura -> Patró (vista prèvia de baixa qualitat)"
+msgstr "Textura → Patró (vista prèvia de baixa qualitat)"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkBoxRepeat)
 #: plugins/paintops/libpaintop/sensors/SensorDistanceConfiguration.ui:39

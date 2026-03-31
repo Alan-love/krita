@@ -3,7 +3,7 @@
 #
 # SPDX-FileCopyrightText: 2000 Sebastià Pla <sastia@retemail.es>
 # SPDX-FileCopyrightText: 2002, 2003, 2004, 2005, 2006 Albert Astals Cid <aacid@kde.org>
-# SPDX-FileCopyrightText: 2003, 2006, 2013, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023 Antoni Bella Pérez <antonibella5@yahoo.com>
+# SPDX-FileCopyrightText: 2003, 2006, 2013, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2026 Antoni Bella Pérez <antonibella5@yahoo.com>
 # SPDX-FileCopyrightText: 2006, 2007 Pau Tallada Crespí <pau_tallada@telefonica.net>
 # SPDX-FileCopyrightText: 2006 Xavier Batlle i Pèlach <tevibp@wanadoo.es>
 # SPDX-FileCopyrightText: 2006, 2007, 2008, 2009, 2010, 2011 Rafael Carreras <rcarreras@caliu.cat>
@@ -13,9 +13,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-28 00:41+0000\n"
-"PO-Revision-Date: 2026-03-28 08:20+0100\n"
-"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
+"POT-Creation-Date: 2026-03-31 00:42+0000\n"
+"PO-Revision-Date: 2026-03-30 15:53+0200\n"
+"Last-Translator: Antoni Bella Pérez <antonibella5@yahoo.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 25.04.0\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #. i18n: Display name of resource, see context: [path-to-resources]/[resource-type]/[resource-filename]
 #, kde-format
@@ -16319,31 +16319,31 @@ msgstr "Espais de treball"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgSplash)
 #. i18n: ectx: property (windowTitle), widget (QDialog, KisRecoverNamedAutosaveDialog)
-#: krita/main.cc:691 libs/ui/dialogs/KisRecoverNamedAutosaveDialog.ui:21
+#: krita/main.cc:699 libs/ui/dialogs/KisRecoverNamedAutosaveDialog.ui:21
 #: libs/ui/wdgsplash.ui:309
 #, kde-format
 msgid "Krita"
 msgstr "Krita"
 
-#: krita/main.cc:693
+#: krita/main.cc:701
 #, kde-format
 msgid "Krita is the full-featured digital art studio"
 msgstr "El Krita és l'estudi d'art digital ple de funcionalitats"
 
-#: krita/main.cc:695
+#: krita/main.cc:703
 #, kde-format
 msgctxt "@info:credit"
 msgid "© 1999–2026 The Krita Developers"
 msgstr "© 1999–2026 The Krita Developers"
 
-#: krita/main.cc:792 libs/ui/KisApplication.cpp:506
+#: krita/main.cc:800 libs/ui/KisApplication.cpp:506
 #: libs/ui/KisApplication.cpp:836
 #, kde-format
 msgctxt "@title:window"
 msgid "Krita: Warning"
 msgstr "Krita: Avís"
 
-#: krita/main.cc:793
+#: krita/main.cc:801
 #, kde-format
 msgid ""
 "You are running an unsupported version of Windows: %1.\n"
@@ -35148,8 +35148,8 @@ msgstr ""
 "AVÍS:\tAlgunes capes triguen molta estona a calcular les\n"
 "\t\tseves miniatures. S'han canviat al mode miniatures de\n"
 "\t\tbaixa qualitat. Proveu de purgar les dades no utilitzades\n"
-"\t\td'imatges amb l'acció Imatge->Purga les dades no\n"
-"\t\tutilitzades d'imatges.\n"
+"\t\td'imatges amb l'acció «Imatge -> Purga les dades no\n"
+"\t\tutilitzades d'imatges».\n"
 "Capes lentes: "
 
 #: libs/ui/kis_statusbar.cc:415

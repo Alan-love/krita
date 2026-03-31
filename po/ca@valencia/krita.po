@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-28 00:41+0000\n"
+"POT-Creation-Date: 2026-03-31 00:42+0000\n"
 "PO-Revision-Date: 2026-03-28 08:20+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -16314,31 +16314,31 @@ msgstr "Espais de treball"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgSplash)
 #. i18n: ectx: property (windowTitle), widget (QDialog, KisRecoverNamedAutosaveDialog)
-#: krita/main.cc:691 libs/ui/dialogs/KisRecoverNamedAutosaveDialog.ui:21
+#: krita/main.cc:699 libs/ui/dialogs/KisRecoverNamedAutosaveDialog.ui:21
 #: libs/ui/wdgsplash.ui:309
 #, kde-format
 msgid "Krita"
 msgstr "Krita"
 
-#: krita/main.cc:693
+#: krita/main.cc:701
 #, kde-format
 msgid "Krita is the full-featured digital art studio"
 msgstr "Krita és l'estudi d'art digital ple de funcionalitats"
 
-#: krita/main.cc:695
+#: krita/main.cc:703
 #, kde-format
 msgctxt "@info:credit"
 msgid "© 1999–2026 The Krita Developers"
 msgstr "© 1999–2026 The Krita Developers"
 
-#: krita/main.cc:792 libs/ui/KisApplication.cpp:506
+#: krita/main.cc:800 libs/ui/KisApplication.cpp:506
 #: libs/ui/KisApplication.cpp:836
 #, kde-format
 msgctxt "@title:window"
 msgid "Krita: Warning"
 msgstr "Krita: Avís"
 
-#: krita/main.cc:793
+#: krita/main.cc:801
 #, kde-format
 msgid ""
 "You are running an unsupported version of Windows: %1.\n"
@@ -18469,7 +18469,7 @@ msgstr "Components tangut"
 #, kde-format
 msgctxt "@title"
 msgid "Khitan Small Script"
-msgstr "Escriptura kitan xicoteta"
+msgstr "Estil cal·ligràfic kitan xicotet"
 
 #: libs/flake/text/data/KoUnicodeBlockData.cpp:297
 #, kde-format
@@ -19323,7 +19323,9 @@ msgstr "Grec matemàtic"
 msgctxt "@tooltip"
 msgid ""
 "Replaces normal Greek script with glyphs intended for mathematical usage."
-msgstr "Substituïx l'alfabet grec normal per glifs destinats a l'ús matemàtic."
+msgstr ""
+"Substituïx l'estil cal·ligràfic grec normal per glifs destinats a l'ús "
+"matemàtic."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:165
 #, kde-format
@@ -19416,7 +19418,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "Math script style alternates"
-msgstr "Estil alternatiu d'alfabet matemàtic"
+msgstr "Estil alternatiu d'estil cal·ligràfic matemàtic"
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:190
 #, kde-format
@@ -19603,7 +19605,7 @@ msgid ""
 "Controls substitution for above base forms in Khmer and other Indic scripts"
 msgstr ""
 "Controla la substitució per les formes de dalt la base en khmer i altres "
-"alfabets índics"
+"estils cal·ligràfics índics"
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:249
 #, kde-format
@@ -19617,7 +19619,8 @@ msgstr "Posicionament de marques sobre la base"
 msgctxt "@tooltip"
 msgid "Controls above-base mark positioning for Indic scripts."
 msgstr ""
-"Controla el posicionament de les marques sobre la base als alfabets índics."
+"Controla el posicionament de les marques sobre la base als estils "
+"cal·ligràfics índics."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:253
 #, kde-format
@@ -19631,8 +19634,8 @@ msgstr "Substitucions per damunt de la base"
 msgctxt "@tooltip"
 msgid "Controls above-base mark ligatures for Indic scripts."
 msgstr ""
-"Controla les lligadures de les marques per damunt de la base per als "
-"alfabets índics."
+"Controla les lligadures de les marques per damunt de la base per als estils "
+"cal·ligràfics índics."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:257
 #, kde-format
@@ -19645,7 +19648,7 @@ msgstr "Akhand"
 #, kde-format
 msgctxt "@tooltip"
 msgid "Controls Akhand ligatures for Indic scripts."
-msgstr "Controla les lligadures Akhand per a alfabets índics."
+msgstr "Controla les lligadures Akhand per a estils cal·ligràfics índics."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:261
 #, kde-format
@@ -19659,8 +19662,8 @@ msgstr "Formes per davall de la base"
 msgctxt "@tooltip"
 msgid "Controls substitution for below base forms in Indic scripts."
 msgstr ""
-"Controla la substitució de les formes per davall de la base en alfabets "
-"índics."
+"Controla la substitució de les formes per davall de la base en estils "
+"cal·ligràfics índics."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:265
 #, kde-format
@@ -19674,8 +19677,8 @@ msgstr "Posicionament de marques davall de la base"
 msgctxt "@tooltip"
 msgid "Controls below-base mark positioning for Indic scripts."
 msgstr ""
-"Controla el posicionament davall la base de les marques per als alfabets "
-"índics."
+"Controla el posicionament davall la base de les marques per als estils "
+"cal·ligràfics índics."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:269
 #, kde-format
@@ -19689,7 +19692,8 @@ msgstr "Substitucions davall de la base"
 msgctxt "@tooltip"
 msgid "Controls below-base mark ligatures for Indic scripts."
 msgstr ""
-"Controla les lligadures marcades davall de la base per als alfabets índics."
+"Controla les lligadures marcades davall de la base per als estils "
+"cal·ligràfics índics."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:273
 #, kde-format
@@ -19702,7 +19706,8 @@ msgstr "Forma conjunta després de Ro"
 #, kde-format
 msgctxt "@tooltip"
 msgid "Controls glyphs following conjoined Ro in Khmer script."
-msgstr "Controla els glifs seguint la Ro conjunta en l'alfabet khmer."
+msgstr ""
+"Controla els glifs seguint la Ro conjunta en l'estil cal·ligràfic khmer."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:277
 #, kde-format
@@ -19715,7 +19720,7 @@ msgstr "Formes conjuntes"
 #, kde-format
 msgctxt "@tooltip"
 msgid "Controls conjunct forms in Indic scripts."
-msgstr "Controla les formes conjuntes en alfabets índics."
+msgstr "Controla les formes conjuntes en estils cal·ligràfics índics."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:281
 #, kde-format
@@ -19728,7 +19733,9 @@ msgstr "Distàncies"
 #, kde-format
 msgctxt "@tooltip"
 msgid "Controls distances in Indic scripts, to avoid collisions."
-msgstr "Controla les distàncies en alfabets índics, per a evitar col·lisions."
+msgstr ""
+"Controla les distàncies en estils cal·ligràfics índics, per a evitar "
+"col·lisions."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:285
 #, kde-format
@@ -19742,7 +19749,8 @@ msgstr "Calces formes"
 msgctxt "@tooltip"
 msgid "Replaces consonants in Indic scripts with their half forms."
 msgstr ""
-"Substituïx les consonants en els alfabets índics per les seues calces formes."
+"Substituïx les consonants en els estils cal·ligràfics índics per les seues "
+"calces formes."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:289
 #, kde-format
@@ -19756,8 +19764,8 @@ msgstr "Formes Halant"
 msgctxt "@tooltip"
 msgid "Replaces consonants in Indic scripts with their halant forms."
 msgstr ""
-"Substituïx les consonants en els alfabets índics per les seues formes "
-"«halant»."
+"Substituïx les consonants en els estils cal·ligràfics índics per les seues "
+"formes «halant»."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:293
 #, kde-format
@@ -19773,8 +19781,8 @@ msgid ""
 "Replaces consonants combined with Nukta in Indic scripts with their Nukta "
 "forms."
 msgstr ""
-"Substituïx les consonants combinades amb «nukta» en els alfabets índics per "
-"les seues formes «nukta»."
+"Substituïx les consonants combinades amb «nukta» en els estils cal·ligràfics "
+"índics per les seues formes «nukta»."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:297
 #, kde-format
@@ -19790,8 +19798,8 @@ msgid ""
 "Replaces the pre-base form of a consonant in Khmer script, when a 'Coeng Ra' "
 "situation occurs."
 msgstr ""
-"Substituïx la forma prebase d'una consonant en alfabet khmer, quan es "
-"produïx una situació «Coeng Ra»."
+"Substituïx la forma prebase d'una consonant en estil cal·ligràfic khmer, "
+"quan es produïx una situació «Coeng Ra»."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:301
 #, kde-format
@@ -19805,8 +19813,8 @@ msgstr "Substitucions prebase"
 msgctxt "@tooltip"
 msgid "Replaces consonants with their pre-base forms in Indic scripts."
 msgstr ""
-"Substituïx les consonants per les seues formes prebase en els alfabets "
-"índics."
+"Substituïx les consonants per les seues formes prebase en els estils "
+"cal·ligràfics índics."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:305
 #, kde-format
@@ -19838,7 +19846,7 @@ msgid ""
 "Replaces base glyphs and post-base glyphs with a ligature in Indic scripts."
 msgstr ""
 "Substituïx els glifs base i els glifs postbase per una lligadura en els "
-"alfabets índics."
+"estils cal·ligràfics índics."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:313
 #, kde-format
@@ -19852,8 +19860,8 @@ msgstr "Formes Rakar"
 msgctxt "@tooltip"
 msgid "Replaces sequences of glyphs in Indic scripts with their Rakar forms."
 msgstr ""
-"Substituïx seqüències de glifs en alfabets índics per les seues formes "
-"«rakar»."
+"Substituïx seqüències de glifs en estils cal·ligràfics índics per les seues "
+"formes «rakar»."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:317
 #, kde-format
@@ -19868,8 +19876,8 @@ msgctxt "@tooltip"
 msgid ""
 "Replaces Reph forms in Indic scripts with a consonant and Halant sequence."
 msgstr ""
-"Substituïx les formes de Reph en els alfabets índics per una seqüència de "
-"consonant i «halant»."
+"Substituïx les formes de Reph en els estils cal·ligràfics índics per una "
+"seqüència de consonant i «halant»."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:321
 #, kde-format
@@ -19884,8 +19892,8 @@ msgctxt "@tooltip"
 msgid ""
 "Replaces ligatures in Indic scripts with a base consonant and Vattu form."
 msgstr ""
-"Substituïx lligadures en alfabets índics per una consonant base i forma "
-"«vattu»."
+"Substituïx lligadures en estils cal·ligràfics índics per una consonant base "
+"i forma «vattu»."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:327
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:343
@@ -19917,7 +19925,8 @@ msgstr "Puntuació CJK centrada"
 #, kde-format
 msgctxt "@tooltip"
 msgid "Adjusts non-centered punctuation to be centered in CJK scripts."
-msgstr "Ajusta la puntuació no centrada a centrar-se en alfabets CJK."
+msgstr ""
+"Ajusta la puntuació no centrada a centrar-se en estils cal·ligràfics CJK."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:335
 #, kde-format
@@ -20388,8 +20397,8 @@ msgid ""
 "Replaces all horizontal-script glyphs with rotated variants for vertical "
 "layout."
 msgstr ""
-"Substituïx tots els glifs d'alfabet horitzontal per variants girades per a "
-"una disposició vertical."
+"Substituïx tots els glifs d'estil cal·ligràfic horitzontal per variants "
+"girades per a una disposició vertical."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:473
 #, kde-format
@@ -20417,8 +20426,8 @@ msgid ""
 "Replaces the final glyph in a sequence of glyphs in a joined script with its "
 "end form."
 msgstr ""
-"Substituïx el glif final en una seqüència de glifs en un alfabet unit per la "
-"seua forma final."
+"Substituïx el glif final en una seqüència de glifs en un estil cal·ligràfic "
+"unit per la seua forma final."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:481
 #, kde-format
@@ -20468,8 +20477,8 @@ msgid ""
 "Replaces the first glyph in a sequence of glyphs in a joined script with its "
 "start form."
 msgstr ""
-"Substituïx el primer glif en una seqüència de glifs en un alfabet unit per "
-"la seua forma inicial."
+"Substituïx el primer glif en una seqüència de glifs en un estil cal·ligràfic "
+"unit per la seua forma inicial."
 
 # skip-rule: kct-script
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:494
@@ -20479,8 +20488,8 @@ msgid ""
 "Replaces a glyph in a sequence of glyphs in a joined script with its "
 "isolated form."
 msgstr ""
-"Substituïx un glif en una seqüència de glifs en un alfabet unit per la seua "
-"forma aïllada."
+"Substituïx un glif en una seqüència de glifs en un estil cal·ligràfic unit "
+"per la seua forma aïllada."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:497
 #, kde-format
@@ -20521,8 +20530,8 @@ msgid ""
 "Replaces glyphs in the middle of a sequence of glyphs in a joined script "
 "with their medial forms."
 msgstr ""
-"Substituïx els glifs enmig d'una seqüència de glifs en un alfabet unit per "
-"les seues formes al mig."
+"Substituïx els glifs enmig d'una seqüència de glifs en un estil cal·ligràfic "
+"unit per les seues formes al mig."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:509
 #, kde-format
@@ -24144,7 +24153,7 @@ msgstr "Nom del fitxer"
 #: libs/resources/KisTagResourceModel.cpp:637
 #, kde-format
 msgid "Tooltip"
-msgstr "Consell"
+msgstr "Consell d'eina"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, shapeBox)
 #. i18n: ectx: property (text), item, widget (QComboBox, cmbType)
@@ -46084,7 +46093,8 @@ msgstr "Alfabètic"
 msgctxt "@info:tooltip"
 msgid "Align to the baseline for scripts that align at the bottom."
 msgstr ""
-"Alinea a la línia base per als alfabets que s'alineen a la part inferior."
+"Alinea a la línia base per als estils cal·ligràfics que s'alineen a la part "
+"inferior."
 
 #: plugins/dockers/textproperties/qml/AlignmentBaseline.qml:86
 #: plugins/dockers/textproperties/qml/DominantBaseline.qml:84
@@ -46127,7 +46137,8 @@ msgstr "Suspensió"
 msgctxt "@info:tooltip"
 msgid "Align to the headstroke as used by North-Brahmic scripts."
 msgstr ""
-"Alinea al traç superior com s'utilitza en els alfabets bràmics del nord."
+"Alinea al traç superior com s'utilitza en els estils cal·ligràfics bràmics "
+"del nord."
 
 #: plugins/dockers/textproperties/qml/AlignmentBaseline.qml:92
 #: plugins/dockers/textproperties/qml/DominantBaseline.qml:90
@@ -46779,7 +46790,7 @@ msgstr "Emmagatzema este idioma entre sessions."
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Script:"
-msgstr "Alfabet:"
+msgstr "Estil cal·ligràfic:"
 
 #: plugins/dockers/textproperties/qml/LetterSpacing.qml:14
 #, kde-format
@@ -46818,8 +46829,8 @@ msgid ""
 "Mostly used for CJK scripts, requires language being set."
 msgstr ""
 "Salt de línia permet triar una rigidesa per a l'algorisme de salt de línia. "
-"S'utilitza principalment per a alfabets CJK, requerix que s'establisca un "
-"idioma."
+"S'utilitza principalment per a estils cal·ligràfics CJK, requerix que "
+"s'establisca un idioma."
 
 #: plugins/dockers/textproperties/qml/LineBreak.qml:19
 #, kde-format

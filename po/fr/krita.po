@@ -102,10 +102,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-28 00:41+0000\n"
-"PO-Revision-Date: 2026-03-19 20:25+0100\n"
+"POT-Creation-Date: 2026-03-31 00:42+0000\n"
+"PO-Revision-Date: 2026-03-29 10:32+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
-"Language-Team: \n"
+"Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16415,31 +16415,31 @@ msgstr "Espaces de travail"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgSplash)
 #. i18n: ectx: property (windowTitle), widget (QDialog, KisRecoverNamedAutosaveDialog)
-#: krita/main.cc:691 libs/ui/dialogs/KisRecoverNamedAutosaveDialog.ui:21
+#: krita/main.cc:699 libs/ui/dialogs/KisRecoverNamedAutosaveDialog.ui:21
 #: libs/ui/wdgsplash.ui:309
 #, kde-format
 msgid "Krita"
 msgstr "Krita"
 
-#: krita/main.cc:693
+#: krita/main.cc:701
 #, kde-format
 msgid "Krita is the full-featured digital art studio"
 msgstr "Krita vous offre un studio d'art numérique vraiment complet."
 
-#: krita/main.cc:695
+#: krita/main.cc:703
 #, kde-format
 msgctxt "@info:credit"
 msgid "© 1999–2026 The Krita Developers"
 msgstr "© 1999 - 2026, L'équipe de développement de Krita"
 
-#: krita/main.cc:792 libs/ui/KisApplication.cpp:506
+#: krita/main.cc:800 libs/ui/KisApplication.cpp:506
 #: libs/ui/KisApplication.cpp:836
 #, kde-format
 msgctxt "@title:window"
 msgid "Krita: Warning"
 msgstr "Krita : avertissement"
 
-#: krita/main.cc:793
+#: krita/main.cc:801
 #, kde-format
 msgid ""
 "You are running an unsupported version of Windows: %1.\n"
@@ -33053,15 +33053,11 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkUseHighFunctionKeyMouseButtonEmulationWorkaround)
 #: libs/ui/forms/wdgtabletsettings.ui:201
-#, fuzzy, kde-format
-#| msgid ""
-#| "Treat page up/down keys as right/middle mouse buttons (workaround for "
-#| "Xiaomi styluses)"
+#, kde-format
 msgid "Treate F13 key as middle mouse button (workaround for OnePlus styluses)"
 msgstr ""
-"Traiter les touches « Page vers le haut / Page vers le bas » comme les "
-"boutons droit / central de la souris (Solution de contournement pour les "
-"stylets de Xiaomi)"
+"Traiter la touche « F13 » comme le bouton central de la souris (Solution de "
+"contournement pour les stylets de OnePlus)"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkUseIgnoreHistoricTabletEventsWorkaround)
 #: libs/ui/forms/wdgtabletsettings.ui:208

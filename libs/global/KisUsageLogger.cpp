@@ -16,6 +16,8 @@
 #include <QDir>
 #include <QScreen>
 #include <QClipboard>
+#include <QMutex>
+#include <QMutexLocker>
 #include <QThread>
 #include <QApplication>
 #include <klocalizedstring.h>
@@ -51,6 +53,7 @@ struct KisUsageLogger::Private {
     bool active {false};
     QFile logFile;
     QFile sysInfoFile;
+    QMutex mutex;
 };
 
 KisUsageLogger::KisUsageLogger()
@@ -215,16 +218,22 @@ void KisUsageLogger::close()
 
 void KisUsageLogger::log(const QString &message)
 {
+    QMutexLocker locker(&s_instance->d->mutex);
+
     if (!s_instance->d->active) return;
     if (!s_instance->d->logFile.isOpen()) return;
 
     s_instance->d->logFile.write(QDateTime::currentDateTime().toString(Qt::RFC2822Date).toUtf8());
     s_instance->d->logFile.write(": ");
-    write(message);
+    s_instance->d->logFile.write(message.toUtf8());
+    s_instance->d->logFile.write("\n");
+    s_instance->d->logFile.flush();
 }
 
 void KisUsageLogger::write(const QString &message)
 {
+    QMutexLocker locker(&s_instance->d->mutex);
+
     if (!s_instance->d->active) return;
     if (!s_instance->d->logFile.isOpen()) return;
 
@@ -236,6 +245,8 @@ void KisUsageLogger::write(const QString &message)
 
 void KisUsageLogger::writeSysInfo(const QString &message)
 {
+    QMutexLocker locker(&s_instance->d->mutex);
+
     if (!s_instance->d->active) return;
     if (!s_instance->d->sysInfoFile.isOpen()) return;
 

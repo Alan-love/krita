@@ -35,9 +35,6 @@ public:
     /// Logs with date/time
     static void log(const QString &message);
 
-    /// Writes without date/time
-    static void write(const QString &message);
-
     /// Writes to the system information file and Krita log
     static void writeSysInfo(const QString &message);
 

@@ -230,19 +230,6 @@ void KisUsageLogger::log(const QString &message)
     s_instance->d->logFile.flush();
 }
 
-void KisUsageLogger::write(const QString &message)
-{
-    QMutexLocker locker(&s_instance->d->mutex);
-
-    if (!s_instance->d->active) return;
-    if (!s_instance->d->logFile.isOpen()) return;
-
-    s_instance->d->logFile.write(message.toUtf8());
-    s_instance->d->logFile.write("\n");
-
-    s_instance->d->logFile.flush();
-}
-
 void KisUsageLogger::writeSysInfo(const QString &message)
 {
     QMutexLocker locker(&s_instance->d->mutex);
@@ -256,7 +243,6 @@ void KisUsageLogger::writeSysInfo(const QString &message)
     s_instance->d->sysInfoFile.flush();
 
 }
-
 
 void KisUsageLogger::writeHeader()
 {
@@ -376,4 +362,3 @@ void KisUsageLogger::rotateLog()
 
     }
 }
-

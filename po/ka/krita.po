@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-03 00:41+0000\n"
-"PO-Revision-Date: 2026-04-02 05:03+0200\n"
+"PO-Revision-Date: 2026-04-03 05:40+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -19843,7 +19843,7 @@ msgstr "სრული სიგანეები"
 #, kde-format
 msgctxt "@tooltip"
 msgid "Replaces or respaces proportional glyphs with full-width glyphs."
-msgstr ""
+msgstr "ჩაანაცვლებს პროპორციულ გლიფებს სრული სიგანის გლიფებით."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:344
 #, kde-format
@@ -19917,7 +19917,7 @@ msgstr "კურსივი"
 #, kde-format
 msgctxt "@tooltip"
 msgid "Replaces Latin glyphs in a CJK font with their italic forms."
-msgstr ""
+msgstr "ჩაანაცვლებს ლათინურ გლიფებს CJK ფონტში მათი კურსივი ფორმებით."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:367
 #, kde-format
@@ -20003,7 +20003,7 @@ msgstr "პროპორციული ალტერნატიული �
 #, kde-format
 msgctxt "@tooltip"
 msgid "Respaces full-width glyphs to fit in a proportional context."
-msgstr ""
+msgstr "ჩაანაცვლებს სრულსიგანიან გლიფებს, რომ პროპორციულ კონტექსტში ჩაეტიოს."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:395
 #, kde-format
@@ -20015,7 +20015,7 @@ msgstr "პროპორციული კანა"
 #, kde-format
 msgctxt "@tooltip"
 msgid "Replaces full-width kana in Japanese fonts with proportional kana."
-msgstr ""
+msgstr "ჩაანაცვლებს სრულსიგანიან კანას იაპონურ ფონტებში პროპორციული კანათი."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:399
 #, kde-format
@@ -20027,7 +20027,7 @@ msgstr "პროპორციული სიგანეები"
 #, kde-format
 msgctxt "@tooltip"
 msgid "Replaces uniform-width glyphs with proportional glyphs."
-msgstr ""
+msgstr "ჩაანაცვლებს ერთგვაროვან გლიფებს პროპორციული გლიფებით."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:403
 #, kde-format
@@ -20065,7 +20065,7 @@ msgstr "გამარტივებული ფორმები"
 #, kde-format
 msgctxt "@tooltip"
 msgid "Replaces glyphs in CJK fonts with 'simplified' forms."
-msgstr ""
+msgstr "ჩაანაცვლებს გლიფებს CJK ფონტებში 'გამარტივებული' ფორმებით."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:415
 #, kde-format
@@ -20159,7 +20159,7 @@ msgstr "ვერტიკალური ალტერნატივებ�
 #, kde-format
 msgctxt "@tooltip"
 msgid "Replaces glyphs in CJK fonts with ones suited for vertical writing."
-msgstr ""
+msgstr "ჩაანაცვლებს გლიფებს CJK ფონტებში ვერტიკალური წერისთვის შესაფერისებით."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:447
 #, kde-format
@@ -25305,6 +25305,8 @@ msgid ""
 "Add any FFmpeg filtering options here. It will be put between source and "
 "destination streams of the FFmpeg instance"
 msgstr ""
+"დაამატეთ აქ FFmpeg-ის ფილტრის პარამეტრები. ისინი FFmpeg-ის გაშვებული ასლის "
+"წყარო და სამიზნე ნაკადებს შორის ჩაისმება"
 
 #. i18n: ectx: property (text), widget (QPushButton, btnResetCustomLine)
 #. i18n: ectx: property (text), widget (QPushButton, resetOriginButton)
@@ -30807,6 +30809,8 @@ msgid ""
 "The image data you are trying to paste has no color profile information. How "
 "do you want to interpret this data?"
 msgstr ""
+"გამოსახულების მონაცემებს, რომლის ჩასმასაც ცდილობთ, ფერის პროფილის ინფორმაცია "
+"არ გააჩნია. როგორ გნებავთ ამ მონაცემების ინტერპრეტაცია?"
 
 #. i18n: ectx: property (text), widget (QLabel, lblExplanationWeb)
 #: libs/ui/forms/wdgMissingColorProfile.ui:63
@@ -30815,6 +30819,8 @@ msgid ""
 "Use standard colors that are displayed from computer monitors. This is the "
 "most common way that images are stored."
 msgstr ""
+"კომპიუტერის ეკრანზე ნაჩვენები სტანდარტული ფერების გამოყენება. ეს "
+"გამოსახულებების შენახვის ყველა ზე გავრცელებული გზაა."
 
 #. i18n: ectx: property (text), widget (QRadioButton, btnAsWeb)
 #: libs/ui/forms/wdgMissingColorProfile.ui:79
@@ -30835,6 +30841,8 @@ msgid ""
 "If you know a bit about color management and want to use your monitor to "
 "determine the color profile."
 msgstr ""
+"თუ იცით ცოტა მაინც ფერების მართვის შესახებ და გნებავთ, გამოიყენოთ თქვენი "
+"ეკრანი ფერების პროფილის დასადგენად."
 
 #. i18n: ectx: property (text), widget (QCheckBox, dontPrompt)
 #: libs/ui/forms/wdgMissingColorProfile.ui:115
@@ -32339,6 +32347,7 @@ msgstr ""
 #, kde-format
 msgid "Treate F13 key as middle mouse button (workaround for OnePlus styluses)"
 msgstr ""
+"ღილაკის F13 თაგუნას შუა ღილაკად აღქმა (გამოსავალი OnePlus-ის სტილუსებისთვის)"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkUseIgnoreHistoricTabletEventsWorkaround)
 #: libs/ui/forms/wdgtabletsettings.ui:208
@@ -32347,6 +32356,8 @@ msgid ""
 "Disregard tablet position history (workaround for jagged lines with Xiaomi "
 "styluses)"
 msgstr ""
+"ტაბლეტის მდებარეობის ისტორიის უგულებელყოფა (გამოსავალი Xiaomi-ის სტილუსების "
+"დაკბილული ხაზებისთვის)"
 
 #. i18n: ectx: property (toolTip), widget (KisSliderSpinBox, intMaxAllowedBrushSpeed)
 #: libs/ui/forms/wdgtabletsettings.ui:221
@@ -46357,7 +46368,7 @@ msgstr "ტექსტის ბლოკი"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Options for modifying the text area padding and margins."
-msgstr ""
+msgstr "პარამეტრები ტექსტური არეს შევსებისა და მინდვრების შესაცვლელად."
 
 #: plugins/dockers/textproperties/qml/TextAreaOptions.qml:20
 #, kde-format

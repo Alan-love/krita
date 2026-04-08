@@ -81,7 +81,9 @@ void CutThroughShapeStrategy::handleMouseMove(const QPointF &mouseLocation, Qt::
 
     QRectF accumulatedWithPrevious = m_previousLineDirtyRect | dirtyRect;
 
-    tool()->canvas()->updateCanvas(accumulatedWithPrevious);
+    if (tool() && tool()->canvas()) {
+        tool()->canvas()->updateCanvas(accumulatedWithPrevious);
+    }
     m_previousLineDirtyRect = dirtyRect;
 
 }

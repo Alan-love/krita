@@ -246,8 +246,6 @@ void KisUsageLogger::writeSysInfo(const QString &message)
 
 void KisUsageLogger::writeHeader()
 {
-    QMutexLocker locker(&s_instance->d->mutex);
-
     Q_ASSERT(s_instance->d->sysInfoFile.isOpen());
     s_instance->d->logFile.write(s_sectionHeader.toUtf8());
 

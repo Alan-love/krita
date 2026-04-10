@@ -18,6 +18,9 @@ public:
     ~KisSelectionActionsPanelHandle();
     void draw(QPainter& painter, const KoColorDisplayRendererInterface *renderInterface);
     void set_held(bool held);
+protected:
+    void contextMenuEvent(QContextMenuEvent *event) override;
+    void mousePressEvent(QMouseEvent* event) override;
 private:
     struct Private;
     QScopedPointer<Private> d;

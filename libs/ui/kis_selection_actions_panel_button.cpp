@@ -6,6 +6,7 @@
 
 #include "kis_selection_actions_panel_button.h"
 
+#include "KisLongPressEventFilter.h"
 #include "kis_icon_utils.h"
 #include <qapplication.h>
 #include <qevent.h>
@@ -24,6 +25,7 @@ KisSelectionActionsPanelButton::KisSelectionActionsPanelButton(const QString& ic
     setCursor(Qt::PointingHandCursor);
     setIconSize(QSize(size - ICON_SIZE_OFFSET, size - ICON_SIZE_OFFSET));
     setAttribute(Qt::WA_AcceptTouchEvents);
+    setProperty(KisLongPressEventFilter::ENABLED_PROPERTY, true);
 }
 
 KisSelectionActionsPanelButton::~KisSelectionActionsPanelButton()
@@ -105,4 +107,20 @@ bool KisSelectionActionsPanelButton::event(QEvent *e)
         }
     }
     return QAbstractButton::event(e);
+}
+
+void KisSelectionActionsPanelButton::contextMenuEvent(QContextMenuEvent *event)
+{
+    Q_EMIT customContextMenuRequested(mapToGlobal(event->pos()));
+    event->accept();
+}
+
+void KisSelectionActionsPanelButton::mousePressEvent(QMouseEvent *event)
+{
+    //Do not propagate the rmb event, to prevent other tool context menus from appearing
+    if (event->button() == Qt::RightButton) {
+        event->accept();
+    } else {
+        QAbstractButton::mousePressEvent(event);
+    }
 }

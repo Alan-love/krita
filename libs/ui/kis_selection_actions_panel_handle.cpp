@@ -8,6 +8,7 @@
 #include "kis_icon_utils.h"
 #include <qapplication.h>
 #include <KoColorDisplayRendererInterface.h>
+#include <qevent.h>
 
 struct KisSelectionActionsPanelHandle::Private
 {
@@ -62,4 +63,20 @@ void KisSelectionActionsPanelHandle::draw(QPainter& painter, const KoColorDispla
 #endif
     target.moveCenter(rect.center() + QPoint(3, 0));
     painter.drawImage(target, ic);
+}
+
+void KisSelectionActionsPanelHandle::contextMenuEvent(QContextMenuEvent *event)
+{
+    Q_EMIT customContextMenuRequested(mapToGlobal(event->pos()));
+    event->accept();
+}
+
+void KisSelectionActionsPanelHandle::mousePressEvent(QMouseEvent *event)
+{
+    //Do not propagate the rmb event, to prevent other tool context menus from appearing
+    if (event->button() == Qt::RightButton) {
+        event->accept();
+    } else {
+        QWidget::mousePressEvent(event);
+    }
 }

@@ -60,6 +60,7 @@ parts:
       - -DBUILD_TESTING=OFF
       - -DKDE_SKIP_TEST_SETTINGS=ON
       - -DBUILD_KRITA_QT_DESIGNER_PLUGINS=OFF
+      - -DBUILD_WITH_QT6=ON
     build-packages:
       - cmake
       - gettext

@@ -106,6 +106,7 @@ parts:
       - libfreetype6-dev
     build-snaps:
       - ffmpeg-2404-sdk
+      - kf6-core24-sdk/latest/beta
       - kde-qt6-core24-sdk/latest/stable
       - kde-pyside6-core24-sdk/latest/stable
     parse-info:

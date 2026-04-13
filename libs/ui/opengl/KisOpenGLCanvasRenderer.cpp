@@ -589,13 +589,7 @@ void KisOpenGLCanvasRenderer::drawBackground(const QRect &updateRect)
     // Draw the border (that is, clear the whole widget to the border color)
     QColor widgetBackgroundColor = borderColor();
 
-    const KoColorSpace *finalColorSpace =
-            KoColorSpaceRegistry::instance()->colorSpace(RGBAColorModelID.id(),
-                                                         d->openGLImageTextures->updateInfoBuilder().destinationColorSpace()->colorDepthId().id(),
-                                                         d->openGLImageTextures->monitorProfile());
-
-    KoColor convertedBackgroundColor = KoColor(widgetBackgroundColor, KoColorSpaceRegistry::instance()->rgb8());
-    convertedBackgroundColor.convertTo(finalColorSpace);
+    KoColor convertedBackgroundColor = colorToDisplaySpace(widgetBackgroundColor);
 
     QVector<float> channels = QVector<float>(4);
     convertedBackgroundColor.colorSpace()->normalisedChannelsValue(convertedBackgroundColor.data(), channels);
@@ -1015,7 +1009,10 @@ void KisOpenGLCanvasRenderer::updateCursorColor()
     bool useSeparateEraserCursor = cfg.separateEraserCursor() &&
             canvas()->resourceManager()->resource(KoCanvasResource::CurrentEffectiveCompositeOp).toString() == COMPOSITE_ERASE;
 
-    d->cursorColor = (!useSeparateEraserCursor) ? cfg.getCursorMainColor() : cfg.getEraserCursorMainColor();
+    KoColor c = colorToDisplaySpace((!useSeparateEraserCursor) ? cfg.getCursorMainColor() : cfg.getEraserCursorMainColor());
+    QVector<float> norm(4);
+    c.colorSpace()->normalisedChannelsValue(c.data(), norm);
+    d->cursorColor = QColor::fromRgbF(norm[2], norm[1], norm[0], norm[3]);
 }
 
 void KisOpenGLCanvasRenderer::updatePixelGridMode()
@@ -1091,11 +1088,23 @@ void KisOpenGLCanvasRenderer::renderCanvasGL(const QRect &updateRect)
     }
 }
 
+KoColor KisOpenGLCanvasRenderer::colorToDisplaySpace(const QColor &c) {
+    KoColor convertedColor = KoColor(c, KoColorSpaceRegistry::instance()->rgb8());
+    if (!d->openGLImageTextures || !d->openGLImageTextures->updateInfoBuilder().destinationColorSpace()) return convertedColor;
+    const KoColorSpace *finalColorSpace =
+        KoColorSpaceRegistry::instance()->colorSpace(RGBAColorModelID.id(),
+                                                     d->openGLImageTextures->updateInfoBuilder().destinationColorSpace()->colorDepthId().id(),
+                                                     d->openGLImageTextures->monitorProfile());
+    convertedColor.convertTo(finalColorSpace);
+    return convertedColor;
+}
+
 void KisOpenGLCanvasRenderer::setDisplayConfig(const KisDisplayConfig &config)
 {
     d->openGLImageTextures->setMonitorProfile(config.profile,
                                               config.intent,
                                               config.conversionFlags);
+    updateConfig();
 }
 
 void KisOpenGLCanvasRenderer::channelSelectionChanged(const QBitArray &channelFlags)

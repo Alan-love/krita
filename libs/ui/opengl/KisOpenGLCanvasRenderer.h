@@ -110,6 +110,7 @@ private:
 
     QRectF widgetToSurface(const QRectF &rc);
     QRectF surfaceToWidget(const QRectF &rc);
+    KoColor colorToDisplaySpace(const QColor &c);
 
 private:
     struct Private;

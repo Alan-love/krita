@@ -68,6 +68,15 @@ public:
      */
     void applyDisplayFilteringF32(KisFixedPaintDeviceSP device, const KoColorSpace *dstColorSpace) const;
 
+    /**
+     * @brief convertColorToDisplayColorSpace
+     * This applies displayfiltering to the given KoColor, and then funnels the resulting
+     * data into a QColor for display. This function is used to draw canvas decorations into
+     * the canvas colorspace, as required for proper HDR and wide gamut support.
+     * @param color the KoColor to convert.
+     * @return a QColor in the display color space.
+     */
+    QColor convertColorToDisplayColorSpace(const KoColor color) const;
 
     /**
      * Converts the exactBounds() (!) of the \p srcDevice into QImage

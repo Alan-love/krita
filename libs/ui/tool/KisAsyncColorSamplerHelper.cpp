@@ -179,16 +179,11 @@ KisAsyncColorSamplerHelper::KisAsyncColorSamplerHelper(KisCanvas2 *canvas)
     m_d->samplingCompressor.reset(
         new Private::SamplingCompressor(100, callback, KisSignalCompressor::FIRST_ACTIVE));
 
-    KoColor bgColor;
-    bgColor.fromQColor(qApp->palette().color(QPalette::Base));
-    bgColor = m_d->canvas->displayColorConverter()->applyDisplayFiltering(bgColor, Float32BitsColorDepthID);
-    QVector<float> norm(4);
-    bgColor.colorSpace()->normalisedChannelsValue(bgColor.data(), norm);
-    m_d->backgroundColor = QColor::fromRgbF(norm[0], norm[1], norm[2], norm[3]);
-
     m_d->activationDelayTimer.setInterval(100);
     m_d->activationDelayTimer.setSingleShot(true);
     connect(&m_d->activationDelayTimer, SIGNAL(timeout()), this, SLOT(activateDelayedPreview()));
+    connect(m_d->canvas->displayColorConverter(), SIGNAL(displayConfigurationChanged()), this, SLOT(slotUpdateBgColor()));
+    slotUpdateBgColor();
 }
 
 KisAsyncColorSamplerHelper::~KisAsyncColorSamplerHelper()
@@ -244,12 +239,9 @@ void KisAsyncColorSamplerHelper::activatePreview()
     m_d->activationDelayTimer.stop();
     m_d->showPreview = true;
 
-    KoColor currentColor =
+    const KoColor currentColor =
         m_d->canvas->resourceManager()->koColorResource(m_d->sampleResourceId);
-    currentColor = m_d->canvas->displayColorConverter()->applyDisplayFiltering(currentColor, Float32BitsColorDepthID);
-    QVector<float> norm(4);
-    currentColor.colorSpace()->normalisedChannelsValue(currentColor.data(), norm);
-    const QColor previewColor = QColor::fromRgbF(norm[0], norm[1], norm[2], norm[3]);
+    const QColor previewColor = m_d->canvas->displayColorConverter()->convertColorToDisplayColorSpace(currentColor);
 
     m_d->currentColor = previewColor;
     m_d->baseColor = previewColor;
@@ -610,9 +602,7 @@ void KisAsyncColorSamplerHelper::slotColorSamplingFinished(const KoColor &rawCol
 
     if (!m_d->showPreview) return;
 
-    color = m_d->canvas->displayColorConverter()->applyDisplayFiltering(color, Float32BitsColorDepthID);QVector<float> norm(4);
-    color.colorSpace()->normalisedChannelsValue(color.data(), norm);
-    const QColor previewColor = QColor::fromRgbF(norm[0], norm[1], norm[2], norm[3]);
+    const QColor previewColor = m_d->canvas->displayColorConverter()->convertColorToDisplayColorSpace(color);
 
     if (!m_d->haveSample || m_d->currentColor != previewColor) {
         m_d->haveSample = true;
@@ -621,4 +611,11 @@ void KisAsyncColorSamplerHelper::slotColorSamplingFinished(const KoColor &rawCol
     }
 
     Q_EMIT sigRequestUpdateOutline();
+}
+
+void KisAsyncColorSamplerHelper::slotUpdateBgColor()
+{
+    KoColor bgColor;
+    bgColor.fromQColor(qApp->palette().color(QPalette::Base));
+    m_d->backgroundColor = m_d->canvas->displayColorConverter()->convertColorToDisplayColorSpace(bgColor);
 }

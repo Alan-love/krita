@@ -73,6 +73,7 @@ private Q_SLOTS:
     void activateDelayedPreview();
     void slotAddSamplingJob(const QPointF &docPoint);
     void slotColorSamplingFinished(const KoColor &rawColor);
+    void slotUpdateBgColor();
 
 private:
     void activatePreview();

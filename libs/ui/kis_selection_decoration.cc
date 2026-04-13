@@ -38,6 +38,7 @@
 #include "kis_selection_mask.h"
 #include <KisPart.h>
 #include <KisScreenMigrationTracker.h>
+#include <kis_display_color_converter.h>
 
 static const unsigned int ANT_LENGTH = 4;
 static const unsigned int ANT_SPACE = 4;
@@ -68,6 +69,10 @@ KisSelectionDecoration::KisSelectionDecoration(QPointer<KisView>_view)
     m_selectionActionsPanel = new KisSelectionActionsPanel(this->view()->viewManager());
 
     slotConfigChanged();
+    KisCanvas2 *kisCanvas = dynamic_cast<KisCanvas2*>(view()->canvasBase());
+    if (kisCanvas) {
+        connect(kisCanvas->displayColorConverter(), SIGNAL(displayConfigurationChanged()), this, SLOT(initializePens()));
+    }
 }
 
 KisSelectionDecoration::~KisSelectionDecoration()
@@ -95,8 +100,21 @@ bool KisSelectionDecoration::selectionIsActive()
 
 void KisSelectionDecoration::initializePens()
 {
+    QColor white(Qt::white);
+    QColor black(Qt::black);
+
+    KisCanvas2 *kisCanvas = dynamic_cast<KisCanvas2*>(view()->canvasBase());
+    if (kisCanvas) {
+        KoColor c;
+        c.fromQColor(white);
+        white = kisCanvas->displayColorConverter()->convertColorToDisplayColorSpace(c);
+        c.fromQColor(black);
+        black = kisCanvas->displayColorConverter()->convertColorToDisplayColorSpace(c);
+    }
+
     KisPaintingTweaks::initAntsPen(&m_antsPen, &m_outlinePen,
-                                   ANT_LENGTH, ANT_SPACE);
+                                   ANT_LENGTH, ANT_SPACE,
+                                   black, white);
 
     m_antsPen.setWidth(decorationThickness());
     m_outlinePen.setWidth(decorationThickness());

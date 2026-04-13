@@ -37,7 +37,8 @@ namespace KisPaintingTweaks {
     KRITAGLOBAL_EXPORT QRect safeClipBoundingRect(const QPainter &painter);
 
     KRITAGLOBAL_EXPORT void initAntsPen(QPen *antsPen, QPen *outlinePen,
-                                        int antLength = 4, int antSpace = 4);
+                                        int antLength = 4, int antSpace = 4,
+                                        QColor black = QColor(Qt::black), QColor white = QColor(Qt::white));
 
 
     /**

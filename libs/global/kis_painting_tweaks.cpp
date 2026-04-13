@@ -39,7 +39,8 @@ QRect safeClipBoundingRect(const QPainter &painter)
 }
 
 void initAntsPen(QPen *antsPen, QPen *outlinePen,
-                 int antLength, int antSpace)
+                 int antLength, int antSpace,
+                 QColor black, QColor white)
 {
     QVector<qreal> antDashPattern;
     antDashPattern << antLength << antSpace;
@@ -47,11 +48,11 @@ void initAntsPen(QPen *antsPen, QPen *outlinePen,
     *antsPen = QPen(Qt::CustomDashLine);
     antsPen->setDashPattern(antDashPattern);
     antsPen->setCosmetic(true);
-    antsPen->setColor(Qt::black);
+    antsPen->setColor(black);
 
     *outlinePen = QPen(Qt::SolidLine);
     outlinePen->setCosmetic(true);
-    outlinePen->setColor(Qt::white);
+    outlinePen->setColor(white);
 }
 
 PenBrushSaver::PenBrushSaver(QPainter *painter)

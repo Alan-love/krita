@@ -629,6 +629,29 @@ void KisDisplayColorConverter::applyDisplayFilteringF32(KisFixedPaintDeviceSP de
     device->convertTo(dstColorSpace);
 }
 
+QColor KisDisplayColorConverter::convertColorToDisplayColorSpace(const KoColor color) const
+{
+    KoColor newColor = applyDisplayFiltering(color, Float32BitsColorDepthID);
+
+    /// No idea why it wouldn't be RGBAColorModelID, but do something useful in any case...
+    KIS_SAFE_ASSERT_RECOVER_RETURN_VALUE(newColor.colorSpace()->colorModelId() == RGBAColorModelID, newColor.toQColor());
+
+    QVector<float> norm(newColor.colorSpace()->channelCount());
+    newColor.colorSpace()->normalisedChannelsValue(newColor.data(), norm);
+
+    // sort into RGBA order... maybe a little overengineered.
+    QVector<float> sorted = norm;
+    for (int ch = 0; ch < norm.size(); ch++) {
+        const KoChannelInfo *info = newColor.colorSpace()->channels().at(ch);
+        sorted[info->displayPosition()] = norm[ch];
+    }
+
+    // We need to manually create a QColor here, because if we use KoColor.toQColor, the whole KoColor is first
+    // converted to sRGB before becoming a QColor, while we explicitely do not want that for our QColor.
+    // This is further complicated by the fact that QColors cannot have any (Q)ColorSpace metadata associated with it, unlike KoColor.
+    return QColor::fromRgbF(sorted[0], sorted[1], sorted[2], sorted[3]);
+}
+
 KoColor KisDisplayColorConverter::Private::approximateFromQColor(const QColor &qcolor)
 {
     if (!useOcio()) {

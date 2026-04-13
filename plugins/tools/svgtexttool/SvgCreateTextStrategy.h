@@ -11,6 +11,7 @@
 
 #include <QPointF>
 #include <QSizeF>
+#include <KisHandleStyle.h>
 
 class SvgTextTool;
 
@@ -20,7 +21,7 @@ class KoShape;
 class SvgCreateTextStrategy : public KoInteractionStrategy
 {
 public:
-    SvgCreateTextStrategy(SvgTextTool *tool, const QPointF &clicked, KoShape *shape = nullptr);
+    SvgCreateTextStrategy(SvgTextTool *tool, const QPointF &clicked, KisHandlePalette palette = KisHandlePalette(), KoShape *shape = nullptr);
     ~SvgCreateTextStrategy() override = default;
 
     void paint(QPainter &painter, const KoViewConverter &converter) override;
@@ -37,6 +38,7 @@ private:
     QPointF m_dragEnd;
     QSizeF m_minSizeInline;
     KoShape *m_flowShape;
+    KisHandlePalette m_handlePalette;
     Qt::KeyboardModifiers m_modifiers;
 };
 

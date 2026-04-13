@@ -14,6 +14,7 @@
 #include <QPainter>
 #include <KoShape.h>
 #include "kritatoolsvgtext_export.h"
+#include <KisHandleStyle.h>
 
 class KoCanvasBase;
 class SvgTextInsertCommand;
@@ -267,7 +268,7 @@ public:
     void deselectText();
 
     /// Paint all decorations and blinkingcursors.
-    void paintDecorations(QPainter &gc, QColor selectionColor, int decorationThickness = 1, qreal handleRadius = 5.0);
+    void paintDecorations(QPainter &gc, QColor selectionColor, int decorationThickness = 1, qreal handleRadius = 5.0, KisHandlePalette handlePalette = KisHandlePalette());
 
     /// Process an input method query and return the requested result.
     QVariant inputMethodQuery(Qt::InputMethodQuery query) const;

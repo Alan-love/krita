@@ -156,6 +156,8 @@ struct KisDisplayColorConverter::Private
     KisNodeSP connectedNode;
     KisImageSP image;
 
+    KisHandlePalette handlePalette;
+
     inline KoColor approximateFromQColor(const QColor &qcolor);
     inline QColor approximateToQColor(const KoColor &color);
 
@@ -240,6 +242,8 @@ KisDisplayColorConverter::KisDisplayColorConverter(KoCanvasResourceProvider *res
     m_d->paintingColorSpace = KoColorSpaceRegistry::instance()->rgb8();
     m_d->setCurrentNode(0);
     setDisplayFilter(QSharedPointer<KisDisplayFilter>(0));
+    updateKisHandlePalette();
+    connect(this, SIGNAL(displayConfigurationChanged()), this, SLOT(updateKisHandlePalette()));
 }
 
 KisDisplayColorConverter::KisDisplayColorConverter()
@@ -330,6 +334,34 @@ void KisDisplayColorConverter::Private::slotCanvasResourceChanged(int key, const
 void KisDisplayColorConverter::Private::slotUpdateCurrentNodeColorSpace()
 {
     setCurrentNode(connectedNode);
+}
+
+void KisDisplayColorConverter::updateKisHandlePalette()
+{
+    KisHandlePalette palette;
+    KoColor c;
+    c.fromQColor(palette.gradientFillColor);
+    palette.gradientFillColor = convertColorToDisplayColorSpace(c);
+
+    c.fromQColor(palette.highlightColor);
+    palette.highlightColor = convertColorToDisplayColorSpace(c);
+
+    c.fromQColor(palette.highlightOutlineColor);
+    palette.highlightOutlineColor = convertColorToDisplayColorSpace(c);
+
+    c.fromQColor(palette.primaryColor);
+    palette.primaryColor = convertColorToDisplayColorSpace(c);
+
+    c.fromQColor(palette.secondaryColor);
+    palette.secondaryColor = convertColorToDisplayColorSpace(c);
+
+    c.fromQColor(palette.selectionColor);
+    palette.selectionColor = convertColorToDisplayColorSpace(c);
+
+    c.fromQColor(palette.white);
+    palette.white = convertColorToDisplayColorSpace(c);
+
+    m_d->handlePalette = palette;
 }
 
 inline KisPaintDeviceSP findValidDevice(KisNodeSP node) {
@@ -650,6 +682,11 @@ QColor KisDisplayColorConverter::convertColorToDisplayColorSpace(const KoColor c
     // converted to sRGB before becoming a QColor, while we explicitely do not want that for our QColor.
     // This is further complicated by the fact that QColors cannot have any (Q)ColorSpace metadata associated with it, unlike KoColor.
     return QColor::fromRgbF(sorted[0], sorted[1], sorted[2], sorted[3]);
+}
+
+KisHandlePalette KisDisplayColorConverter::handlePaletteForDisplayColorSpace() const
+{
+    return m_d->handlePalette;
 }
 
 KoColor KisDisplayColorConverter::Private::approximateFromQColor(const QColor &qcolor)

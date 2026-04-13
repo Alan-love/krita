@@ -86,7 +86,7 @@ bool SvgTextOnPathDecorationHelper::hitTest(QPointF mouseInPts, const QTransform
     return hit;
 }
 
-void SvgTextOnPathDecorationHelper::paint(QPainter *p, const KoViewConverter &converter)
+void SvgTextOnPathDecorationHelper::paint(QPainter *p, const KoViewConverter &converter, KisHandlePalette handlePalette)
 {
     if (!d->shape) return;
     KoSvgTextNodeIndex index = d->shape->topLevelNodeForPos(d->pos);
@@ -99,11 +99,11 @@ void SvgTextOnPathDecorationHelper::paint(QPainter *p, const KoViewConverter &co
             KoShape::createHandlePainterHelperView(p, d->shape, converter, d->handleRadius, d->decorationThickness);
 
     if (d->isActive) {
-        helper.setHandleStyle(KisHandleStyle::selectedPrimaryHandles());
+        helper.setHandleStyle(KisHandleStyle::selectedPrimaryHandles(handlePalette));
     } else if (d->isHovered) {
-        helper.setHandleStyle(KisHandleStyle::highlightedPrimaryHandles());
+        helper.setHandleStyle(KisHandleStyle::highlightedPrimaryHandles(handlePalette));
     } else {
-        helper.setHandleStyle(KisHandleStyle::primarySelection());
+        helper.setHandleStyle(KisHandleStyle::primarySelection(handlePalette));
     }
 
     helper.drawConnectionLine(line);

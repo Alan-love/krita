@@ -34,6 +34,8 @@ struct KoSvgTextShapeOutlineHelper::Private {
     bool drawOutline = false;
     bool textWrappingAreasHovered = false;
 
+    KisHandlePalette handlePalette;
+
     KoSvgTextShape *getTextModeShape() {
         return dynamic_cast<KoSvgTextShape*>(canvas->currentShapeManagerOwnerShape());
     }
@@ -117,12 +119,11 @@ QList<QLineF> getTextAreaOrderArrows(QList<QPainterPath> areas) {
 }
 
 void KoSvgTextShapeOutlineHelper::paintTextShape(QPainter *painter, const KoViewConverter &converter,
-                                                  const QPalette &pal, KoSvgTextShape *text,
-                                                  bool contourModeActive) {
+                                                 const QPalette &pal, KoSvgTextShape *text, bool contourModeActive) {
     painter->save();
     KisHandlePainterHelper helper =
             KoShape::createHandlePainterHelperView(painter, text, converter, d->handleRadius, d->decorationThickness);
-    helper.setHandleStyle(KisHandleStyle::secondarySelection());
+    helper.setHandleStyle(KisHandleStyle::secondarySelection(d->handlePalette));
     if (contourModeActive) {
         if (d->drawOutline) {
 
@@ -146,7 +147,7 @@ void KoSvgTextShapeOutlineHelper::paintTextShape(QPainter *painter, const KoView
     }
     if (d->drawTextWrappingArea) {
         if (d->textWrappingAreasHovered) {
-            helper.setHandleStyle(KisHandleStyle::partiallyHighlightedPrimaryHandles());
+            helper.setHandleStyle(KisHandleStyle::partiallyHighlightedPrimaryHandles(d->handlePalette));
         }
         QList<QPainterPath> areas = text->textWrappingAreas();
         Q_FOREACH(QLineF arrow, getTextAreaOrderArrows(areas)) {
@@ -243,6 +244,11 @@ void KoSvgTextShapeOutlineHelper::setHandleRadius(int radius)
 void KoSvgTextShapeOutlineHelper::setDecorationThickness(int thickness)
 {
     d->decorationThickness = thickness;
+}
+
+void KoSvgTextShapeOutlineHelper::setHandlePalette(KisHandlePalette handlePalette)
+{
+    d->handlePalette = handlePalette;
 }
 
 KoSvgTextShape *KoSvgTextShapeOutlineHelper::contourModeButtonHovered(const QPointF &point)

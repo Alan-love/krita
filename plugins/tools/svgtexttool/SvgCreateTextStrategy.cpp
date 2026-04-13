@@ -31,11 +31,12 @@
 #include <KoPathShape.h>
 #include <KoPathSegment.h>
 
-SvgCreateTextStrategy::SvgCreateTextStrategy(SvgTextTool *tool, const QPointF &clicked, KoShape *shape)
+SvgCreateTextStrategy::SvgCreateTextStrategy(SvgTextTool *tool, const QPointF &clicked, KisHandlePalette handlePalette, KoShape *shape)
     : KoInteractionStrategy(tool)
     , m_dragStart(clicked)
     , m_dragEnd(clicked)
     , m_flowShape(shape)
+    , m_handlePalette(handlePalette)
 {
     KoSvgTextProperties properties = tool->propertiesForNewText();
     properties.inheritFrom(KoSvgTextProperties::defaultProperties(), true);
@@ -52,7 +53,7 @@ void SvgCreateTextStrategy::paint(QPainter &painter, const KoViewConverter &conv
     KisHandlePainterHelper handlePainter(&painter, originalPainterTransform, 0.0, decorationThickness());
 
     const QPolygonF poly(QRectF(m_dragStart, m_dragEnd));
-    handlePainter.setHandleStyle(KisHandleStyle::primarySelection());
+    handlePainter.setHandleStyle(KisHandleStyle::primarySelection(m_handlePalette));
     handlePainter.drawRubberLine(poly);
 }
 

@@ -83,6 +83,7 @@ void SelectionDecorator::setCurrentMeshGradientHandles(const KoShapeMeshGradient
 
 void SelectionDecorator::paint(QPainter &painter, const KoViewConverter &converter)
 {
+    KisHandlePalette palette;
     QList<KoShape*> selectedShapes = m_selection->selectedVisibleShapes();
     if (selectedShapes.isEmpty()) return;
 

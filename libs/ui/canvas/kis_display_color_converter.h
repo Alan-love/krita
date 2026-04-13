@@ -12,6 +12,7 @@
 #include <KoColorDisplayRendererInterface.h>
 #include <KoColorConversionTransformation.h>
 
+#include "KisHandleStyle.h"
 #include "kis_types.h"
 #include "canvas/kis_display_filter.h"
 
@@ -78,6 +79,8 @@ public:
      */
     QColor convertColorToDisplayColorSpace(const KoColor color) const;
 
+    KisHandlePalette handlePaletteForDisplayColorSpace() const;
+
     /**
      * Converts the exactBounds() (!) of the \p srcDevice into QImage
      * properly rendered into display RGB space. Please note that the
@@ -121,6 +124,7 @@ private:
     Q_PRIVATE_SLOT(m_d, void slotCanvasResourceChanged(int key, const QVariant &v));
     Q_PRIVATE_SLOT(m_d, void selectPaintingColorSpace());
     Q_PRIVATE_SLOT(m_d, void slotUpdateCurrentNodeColorSpace());
+    Q_SLOT void updateKisHandlePalette();
 
 private:
     struct Private;

@@ -14,6 +14,7 @@
 #include <QScopedPointer>
 
 #include <kritaflake_export.h>
+#include <KisHandleStyle.h>
 
 class KoSvgTextShape;
 /**
@@ -61,6 +62,8 @@ public:
 
     void setHandleRadius(int radius);
     void setDecorationThickness(int thickness);
+
+    void setHandlePalette(KisHandlePalette handlePalette);
 
     KoSvgTextShape *contourModeButtonHovered(const QPointF &point);
 

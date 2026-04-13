@@ -34,7 +34,7 @@ slots:
 parts:
   kdcraw:
     source: https://invent.kde.org/graphics/libkdcraw.git
-    source-branch: release/25.12
+    source-branch: release/26.04
     plugin: cmake
     cmake-parameters:
       - -DCMAKE_INSTALL_PREFIX=/usr
@@ -106,6 +106,7 @@ parts:
       - libsdl2-dev
       - libfribidi-dev
       - libfreetype6-dev
+      - libquazip5-dev
     build-snaps:
       - ffmpeg-2404-sdk
       - kf6-core24-sdk/latest/beta

@@ -15,6 +15,8 @@
 #include <klocalizedstring.h>
 
 #include <KoUnit.h>
+#include <KoColorDisplayRendererInterface.h>
+#include <kis_canvas2.h>
 
 #include "kis_grid_config.h"
 #include "kis_coordinates_converter.h"
@@ -72,6 +74,9 @@ void KisGridDecoration::drawDecoration(QPainter& gc, const QRectF& updateArea, c
 
     QPen mainPen = m_d->config.penMain();
     QPen subdivisionPen = m_d->config.penSubdivision();
+
+    mainPen.setColor(canvas->displayRendererInterface()->convertColorToDisplayColorSpace(KoColor(mainPen.color(), KoColorSpaceRegistry::instance()->rgb8())));
+    subdivisionPen.setColor(canvas->displayRendererInterface()->convertColorToDisplayColorSpace(KoColor(subdivisionPen.color(), KoColorSpaceRegistry::instance()->rgb8())));
 
     gc.save();
     gc.setTransform(transform);

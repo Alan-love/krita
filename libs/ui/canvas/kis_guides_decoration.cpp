@@ -10,6 +10,8 @@
 #include "kis_config.h"
 #include "kis_guides_config.h"
 #include "kis_coordinates_converter.h"
+#include <KoColorDisplayRendererInterface.h>
+#include <kis_canvas2.h>
 
 struct KisGuidesDecoration::Private
 {
@@ -43,7 +45,8 @@ void KisGuidesDecoration::drawDecoration(QPainter &painter, const QRectF& update
     Q_UNUSED(canvas);
 
     const qreal borderDelta = 2.0;
-    const QPen guidesPen(m_d->guidesConfig.guidesPen());
+    QPen guidesPen(m_d->guidesConfig.guidesPen());
+    guidesPen.setColor(canvas->displayRendererInterface()->convertColorToDisplayColorSpace(KoColor(guidesPen.color(), KoColorSpaceRegistry::instance()->rgb8())));
 
     painter.save();
     painter.setPen(guidesPen);

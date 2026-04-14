@@ -22,6 +22,7 @@
 #include <kis_canvas_controller.h>
 #include <KisView.h>
 #include <kis_algebra_2d.h>
+#include <KoColorDisplayRendererInterface.h>
 
 KisInfinityManager::KisInfinityManager(QPointer<KisView>view, KisCanvas2 *canvas)
   : KisCanvasDecoration(INFINITY_DECORATION_ID, view),
@@ -134,7 +135,12 @@ void KisInfinityManager::drawDecoration(QPainter& gc, const QRectF& updateArea, 
 
     KisConfig cfg(true);
     QColor color = cfg.canvasBorderColor();
-    gc.fillPath(m_decorationPath, color.darker(115));
+    KoColor c;
+    c.fromQColor(color.darker(115));
+    QColor darkerColor = canvas->displayRendererInterface()->convertColorToDisplayColorSpace(c);
+    gc.fillPath(m_decorationPath, darkerColor);
+    c.fromQColor(color);
+    color = canvas->displayRendererInterface()->convertColorToDisplayColorSpace(c);
 
     QPainterPath p = KisAlgebra2D::smallArrow();
 

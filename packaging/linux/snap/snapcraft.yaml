@@ -32,6 +32,19 @@ slots:
     name: org.kde.krita
     bus: session
 parts:
+  pyqt6:
+    python-packages:
+      - pyqt6
+  eigen:
+    source: https://gitlab.com/libeigen/eigen.git
+    plugin: cmake
+    cmake-parameters:
+      - -DCMAKE_INSTALL_PREFIX=/usr
+      - -DCMAKE_BUILD_TYPE=Release
+      - -DENABLE_TESTING=OFF
+      - -DBUILD_TESTING=OFF
+      - -DKDE_SKIP_TEST_SETTINGS=ON
+      - -DQUAZIP_QT_MAJOR_VERSION=6
   libgpgmepp-qt6:
     build-packages:
       - libassuan-dev
@@ -151,6 +164,8 @@ parts:
       - kdcraw
       - quazip
       - poppler
+      - eigen
+      - pyqt6
     source: .
     source-type: local
     plugin: cmake

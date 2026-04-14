@@ -14,6 +14,7 @@
 class QGraphicsScene;
 class QGraphicsPixmapItem;
 class QGraphicsDropShadowEffect;
+class KoColorDisplayRendererInterface;
 
 class KisFpsDecoration : public KisCanvasDecoration
 {
@@ -25,7 +26,7 @@ public:
     static const QString idTag;
 
 private:
-    bool draw(const QString &text, QSize &outSize);
+    bool draw(const QString &text, QSize &outSize, const KoColorDisplayRendererInterface *displayRenderInterface);
 	QString getText() const;
 
     QFont m_font;

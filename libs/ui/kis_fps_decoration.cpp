@@ -15,6 +15,7 @@
 #include <QGraphicsScene>
 #include <QGraphicsPixmapItem>
 #include <QGraphicsDropShadowEffect>
+#include <KoColorDisplayRendererInterface.h>
 
 const QString KisFpsDecoration::idTag = "fps_decoration";
 
@@ -39,7 +40,7 @@ KisFpsDecoration::~KisFpsDecoration()
 {
 }
 
-void KisFpsDecoration::drawDecoration(QPainter& gc, const QRectF& /*updateRect*/, const KisCoordinatesConverter */*converter*/, KisCanvas2* /*canvas*/)
+void KisFpsDecoration::drawDecoration(QPainter& gc, const QRectF& /*updateRect*/, const KisCoordinatesConverter */*converter*/, KisCanvas2* canvas)
 {
     // we always paint into a pixmap instead of directly into gc, as the latter
     // approach is known to cause garbled graphics on macOS, Windows, and even
@@ -56,14 +57,14 @@ void KisFpsDecoration::drawDecoration(QPainter& gc, const QRectF& /*updateRect*/
 
     QSize size;
 
-    if (!draw(text, size)) {
+    if (!draw(text, size, canvas->displayRendererInterface())) {
         // the pixmap is too small, we need to make it larger. make it 10% wider
         // than the measured width to avoid resizing again as soon as the text
         // gets a bit wider due to different content.
 
         m_pixmap = QPixmap(size.width() * 1.1f, size.height());
 
-        KIS_ASSERT(draw(text, size));
+        KIS_ASSERT(draw(text, size, canvas->displayRendererInterface()));
     }
 
     QRectF r = m_pixmap.rect();
@@ -73,7 +74,7 @@ void KisFpsDecoration::drawDecoration(QPainter& gc, const QRectF& /*updateRect*/
     m_scene->render(&gc, r.translated(20, 20), r);
 }
 
-bool KisFpsDecoration::draw(const QString &text, QSize &outSize)
+bool KisFpsDecoration::draw(const QString &text, QSize &outSize, const KoColorDisplayRendererInterface *displayRenderInterface)
 {
     m_pixmap.fill(Qt::transparent);
 
@@ -83,7 +84,10 @@ bool KisFpsDecoration::draw(const QString &text, QSize &outSize)
     QPainter painter(&m_pixmap);
     painter.setFont(m_font);
 
-    painter.setPen(QPen(QColor(0xF0, 0xF0, 0xF0)));
+    KoColor c;
+    c.fromQColor(QColor(0xF0, 0xF0, 0xF0));
+
+    painter.setPen(QPen(displayRenderInterface->convertColorToDisplayColorSpace(c)));
     painter.drawText(m_pixmap.rect().translated(1, 1), flags, text, &bounds);
 
     outSize = bounds.size() + QSize(1, 1);

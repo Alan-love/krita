@@ -9,12 +9,14 @@
 #include <qpainter.h>
 #include <qwidget.h>
 
+class KoColorDisplayRendererInterface;
+
 class KisSelectionActionsPanelHandle : public QWidget
 {
 public:
     KisSelectionActionsPanelHandle(int size, QWidget *parent);
     ~KisSelectionActionsPanelHandle();
-    void draw(QPainter& painter);
+    void draw(QPainter& painter, const KoColorDisplayRendererInterface *renderInterface);
     void set_held(bool held);
 private:
     struct Private;

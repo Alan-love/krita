@@ -69,10 +69,6 @@ KisSelectionDecoration::KisSelectionDecoration(QPointer<KisView>_view)
     m_selectionActionsPanel = new KisSelectionActionsPanel(this->view()->viewManager());
 
     slotConfigChanged();
-    KisCanvas2 *kisCanvas = dynamic_cast<KisCanvas2*>(view()->canvasBase());
-    if (kisCanvas) {
-        connect(kisCanvas->displayColorConverter(), SIGNAL(displayConfigurationChanged()), this, SLOT(initializePens()));
-    }
 }
 
 KisSelectionDecoration::~KisSelectionDecoration()
@@ -102,15 +98,6 @@ void KisSelectionDecoration::initializePens()
 {
     QColor white(Qt::white);
     QColor black(Qt::black);
-
-    KisCanvas2 *kisCanvas = dynamic_cast<KisCanvas2*>(view()->canvasBase());
-    if (kisCanvas) {
-        KoColor c;
-        c.fromQColor(white);
-        white = kisCanvas->displayColorConverter()->convertColorToDisplayColorSpace(c);
-        c.fromQColor(black);
-        black = kisCanvas->displayColorConverter()->convertColorToDisplayColorSpace(c);
-    }
 
     KisPaintingTweaks::initAntsPen(&m_antsPen, &m_outlinePen,
                                    ANT_LENGTH, ANT_SPACE,
@@ -226,7 +213,7 @@ void KisSelectionDecoration::drawDecoration(QPainter& gc, const QRectF& updateRe
     if ((m_mode == Ants && m_outlinePath.isEmpty()) || (m_mode == Mask && m_thumbnailImage.isNull())
         || !m_selectionVisibility) {
         //The SAP needs to be drawn on top of the decoration, but to avoid the panel flashing when making a new selection, we also need to call draw here
-        m_selectionActionsPanel->draw(gc);
+        m_selectionActionsPanel->draw(gc, canvas->displayRendererInterface());
 
         return;
     }
@@ -261,6 +248,13 @@ void KisSelectionDecoration::drawDecoration(QPainter& gc, const QRectF& updateRe
         gc.drawPath(p1 - p2);
 
     } else /* if (m_mode == Ants) */ {
+
+        KoColor c;
+        c.fromQColor(Qt::white);
+        m_outlinePen.setColor(canvas->displayColorConverter()->convertColorToDisplayColorSpace(c));
+        c.fromQColor(Qt::black);
+        m_antsPen.setColor(canvas->displayColorConverter()->convertColorToDisplayColorSpace(c));
+
         gc.setRenderHints(QPainter::Antialiasing | QPainter::Antialiasing, m_antialiasSelectionOutline);
 
         gc.setOpacity(m_opacity);
@@ -275,7 +269,7 @@ void KisSelectionDecoration::drawDecoration(QPainter& gc, const QRectF& updateRe
     }
 
     gc.restore();
-    m_selectionActionsPanel->draw(gc);
+    m_selectionActionsPanel->draw(gc, canvas->displayRendererInterface());
 }
 
 void KisSelectionDecoration::setCanvasWidget(KisCanvasWidgetBase* canvas)

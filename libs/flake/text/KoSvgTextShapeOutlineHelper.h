@@ -64,6 +64,7 @@ public:
     void setDecorationThickness(int thickness);
 
     void setHandlePalette(KisHandlePalette handlePalette);
+    void setSystemPalette(QPalette pal);
 
     KoSvgTextShape *contourModeButtonHovered(const QPointF &point);
 
@@ -80,8 +81,7 @@ public:
     void setTextAreasHovered(bool enabled);
 
 private:
-    void paintTextShape(QPainter *painter, const KoViewConverter &converter,
-                        const QPalette &pal, KoSvgTextShape *text,
+    void paintTextShape(QPainter *painter, const KoViewConverter &converter, KoSvgTextShape *text,
                         bool contourModeActive = false);
     struct Private;
     QScopedPointer<Private> d;

@@ -686,9 +686,11 @@ void SvgTextTool::paint(QPainter &gc, const KoViewConverter &converter)
     if (!isActivated()) return;
 
     KisHandlePalette handlePalette;
+    QPalette systemPalette = qApp->palette();
     KisCanvas2* kisCanvas = dynamic_cast<KisCanvas2*>(canvas());
     if (kisCanvas) {
         handlePalette = kisCanvas->displayColorConverter()->handlePaletteForDisplayColorSpace();
+        systemPalette = kisCanvas->displayColorConverter()->systemPaletteForDisplayColorSpace();
     }
 
     if (m_dragging == DragMode::Create || m_dragging == DragMode::InShapeOffset) {
@@ -741,6 +743,7 @@ void SvgTextTool::paint(QPainter &gc, const KoViewConverter &converter)
     m_textOutlineHelper->setDecorationThickness(decorationThickness());
     m_textOutlineHelper->setHandleRadius(handleRadius());
     m_textOutlineHelper->setHandlePalette(handlePalette);
+    m_textOutlineHelper->setSystemPalette(systemPalette);
     m_textOutlineHelper->paint(&gc, converter);
     m_textOnPathHelper.setDecorationThickness(decorationThickness());
     m_textOnPathHelper.setHandleRadius(handleRadius());
@@ -756,7 +759,7 @@ void SvgTextTool::paint(QPainter &gc, const KoViewConverter &converter)
         }
     }
     if (shape) {
-        m_textCursor.paintDecorations(gc, qApp->palette().color(QPalette::Highlight), decorationThickness(), handleRadius(), handlePalette);
+        m_textCursor.paintDecorations(gc, systemPalette.color(QPalette::Highlight), decorationThickness(), handleRadius(), handlePalette);
     }
     if (m_interactionStrategy) {
         gc.save();

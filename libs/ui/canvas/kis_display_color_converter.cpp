@@ -8,6 +8,7 @@
 
 #include <QGlobalStatic>
 #include <QPointer>
+#include <QPalette>
 
 #include <KoColor.h>
 #include <KoColorDisplayRendererInterface.h>
@@ -157,6 +158,7 @@ struct KisDisplayColorConverter::Private
     KisImageSP image;
 
     KisHandlePalette handlePalette;
+    QPalette systemPalette;
 
     inline KoColor approximateFromQColor(const QColor &qcolor);
     inline QColor approximateToQColor(const KoColor &color);
@@ -242,8 +244,8 @@ KisDisplayColorConverter::KisDisplayColorConverter(KoCanvasResourceProvider *res
     m_d->paintingColorSpace = KoColorSpaceRegistry::instance()->rgb8();
     m_d->setCurrentNode(0);
     setDisplayFilter(QSharedPointer<KisDisplayFilter>(0));
-    updateKisHandlePalette();
-    connect(this, SIGNAL(displayConfigurationChanged()), this, SLOT(updateKisHandlePalette()));
+    updatePalettes();
+    connect(this, SIGNAL(displayConfigurationChanged()), this, SLOT(updatePalettes()));
 }
 
 KisDisplayColorConverter::KisDisplayColorConverter()
@@ -336,7 +338,7 @@ void KisDisplayColorConverter::Private::slotUpdateCurrentNodeColorSpace()
     setCurrentNode(connectedNode);
 }
 
-void KisDisplayColorConverter::updateKisHandlePalette()
+void KisDisplayColorConverter::updatePalettes()
 {
     KisHandlePalette palette;
     KoColor c;
@@ -361,7 +363,19 @@ void KisDisplayColorConverter::updateKisHandlePalette()
     c.fromQColor(palette.white);
     palette.white = convertColorToDisplayColorSpace(c);
 
+    c.fromQColor(palette.black);
+    palette.black = convertColorToDisplayColorSpace(c);
+
+    QPalette pal = qApp->palette();
+    for (int r = 0; r < QPalette::NColorRoles; r++) {
+        for (int cg = 0; cg < QPalette::NColorGroups; cg++) {
+            c.fromQColor(pal.brush(QPalette::ColorGroup(cg), QPalette::ColorRole(r)).color());
+            pal.setBrush(QPalette::ColorGroup(cg), QPalette::ColorRole(r), convertColorToDisplayColorSpace(c));
+        }
+    }
+
     m_d->handlePalette = palette;
+    m_d->systemPalette = pal;
 }
 
 inline KisPaintDeviceSP findValidDevice(KisNodeSP node) {
@@ -687,6 +701,11 @@ QColor KisDisplayColorConverter::convertColorToDisplayColorSpace(const KoColor c
 KisHandlePalette KisDisplayColorConverter::handlePaletteForDisplayColorSpace() const
 {
     return m_d->handlePalette;
+}
+
+QPalette KisDisplayColorConverter::systemPaletteForDisplayColorSpace() const
+{
+    return m_d->systemPalette;
 }
 
 KoColor KisDisplayColorConverter::Private::approximateFromQColor(const QColor &qcolor)

@@ -35,6 +35,7 @@ struct KoSvgTextShapeOutlineHelper::Private {
     bool textWrappingAreasHovered = false;
 
     KisHandlePalette handlePalette;
+    QPalette systemPalette;
 
     KoSvgTextShape *getTextModeShape() {
         return dynamic_cast<KoSvgTextShape*>(canvas->currentShapeManagerOwnerShape());
@@ -119,7 +120,7 @@ QList<QLineF> getTextAreaOrderArrows(QList<QPainterPath> areas) {
 }
 
 void KoSvgTextShapeOutlineHelper::paintTextShape(QPainter *painter, const KoViewConverter &converter,
-                                                 const QPalette &pal, KoSvgTextShape *text, bool contourModeActive) {
+                                                 KoSvgTextShape *text, bool contourModeActive) {
     painter->save();
     KisHandlePainterHelper helper =
             KoShape::createHandlePainterHelperView(painter, text, converter, d->handleRadius, d->decorationThickness);
@@ -162,9 +163,9 @@ void KoSvgTextShapeOutlineHelper::paintTextShape(QPainter *painter, const KoView
     painter->save();
     QIcon icon = contourModeActive? KisIconUtils::loadIcon(ICON_EXIT): KisIconUtils::loadIcon(ICON_ENTER);
     QPixmap pm = icon.pixmap(BUTTON_ICON_SIZE, BUTTON_ICON_SIZE);
-    painter->setBrush(contourModeActive? pal.highlight(): pal.button());
+    painter->setBrush(contourModeActive? d->systemPalette.highlight(): d->systemPalette.button());
     QPen pen;
-    pen.setColor(contourModeActive? pal.highlightedText().color(): pal.buttonText().color());
+    pen.setColor(contourModeActive? d->systemPalette.highlightedText().color(): d->systemPalette.buttonText().color());
     pen.setCosmetic(true);
     pen.setWidthF(d->decorationThickness);
     painter->setPen(pen);
@@ -176,15 +177,14 @@ void KoSvgTextShapeOutlineHelper::paintTextShape(QPainter *painter, const KoView
 
 void KoSvgTextShapeOutlineHelper::paint(QPainter *painter, const KoViewConverter &converter)
 {
-    const QPalette pal = qApp->palette();
     KoSvgTextShape *text = d->getTextModeShape();
     if (text) {
-        paintTextShape(painter, converter, pal, text, true);
+        paintTextShape(painter, converter, text, true);
     } else {
         Q_FOREACH(KoShape* shape, d->canvas->shapeManager()->selection()->selectedEditableShapes()) {
             text = dynamic_cast<KoSvgTextShape*>(shape);
             if (d->drawButton(text)) {
-                paintTextShape(painter, converter, pal, text, false);
+                paintTextShape(painter, converter, text, false);
             }
         }
     }
@@ -249,6 +249,11 @@ void KoSvgTextShapeOutlineHelper::setDecorationThickness(int thickness)
 void KoSvgTextShapeOutlineHelper::setHandlePalette(KisHandlePalette handlePalette)
 {
     d->handlePalette = handlePalette;
+}
+
+void KoSvgTextShapeOutlineHelper::setSystemPalette(QPalette pal)
+{
+    d->systemPalette = pal;
 }
 
 KoSvgTextShape *KoSvgTextShapeOutlineHelper::contourModeButtonHovered(const QPointF &point)

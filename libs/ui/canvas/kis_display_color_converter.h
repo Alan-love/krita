@@ -22,6 +22,7 @@ class KoCanvasResourceProvider;
 class KisDisplayConfig;
 class KisMultiSurfaceDisplayConfig;
 class KoID;
+class QPalette;
 
 /**
  * Special helper class that provides primitives for converting colors when
@@ -81,6 +82,8 @@ public:
 
     KisHandlePalette handlePaletteForDisplayColorSpace() const;
 
+    QPalette systemPaletteForDisplayColorSpace() const;
+
     /**
      * Converts the exactBounds() (!) of the \p srcDevice into QImage
      * properly rendered into display RGB space. Please note that the
@@ -124,7 +127,7 @@ private:
     Q_PRIVATE_SLOT(m_d, void slotCanvasResourceChanged(int key, const QVariant &v));
     Q_PRIVATE_SLOT(m_d, void selectPaintingColorSpace());
     Q_PRIVATE_SLOT(m_d, void slotUpdateCurrentNodeColorSpace());
-    Q_SLOT void updateKisHandlePalette();
+    Q_SLOT void updatePalettes();
 
 private:
     struct Private;

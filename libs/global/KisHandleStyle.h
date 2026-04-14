@@ -23,6 +23,7 @@ struct KRITAGLOBAL_EXPORT KisHandlePalette
         , highlightOutlineColor(QColor(155, 0, 0))
         , selectionColor(QColor(164, 227, 243))
         , white(Qt::white)
+        , black(Qt::black)
     {
     }
 
@@ -33,6 +34,7 @@ struct KRITAGLOBAL_EXPORT KisHandlePalette
     QColor highlightOutlineColor;
     QColor selectionColor;
     QColor white;
+    QColor black;
 };
 
 /**

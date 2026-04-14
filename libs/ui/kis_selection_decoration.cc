@@ -243,7 +243,9 @@ void KisSelectionDecoration::drawDecoration(QPainter& gc, const QRectF& updateRe
         QPainterPath p2;
         p2.addRect(r2);
 
-        gc.setBrush(m_maskColor);
+        KoColor c;
+        c.fromQColor(m_maskColor);
+        gc.setBrush(canvas->displayColorConverter()->convertColorToDisplayColorSpace(c));
         gc.setPen(Qt::NoPen);
         gc.drawPath(p1 - p2);
 

@@ -71,7 +71,7 @@ void ConcentricEllipseAssistant::adjustLine(QPointF &point, QPointF &strokeBegin
     point = project(point, strokeBegin);
 }
 
-void ConcentricEllipseAssistant::drawAssistant(QPainter& gc, const QRectF& updateRect, const KisCoordinatesConverter* converter, bool cached, KisCanvas2* canvas, bool assistantVisible, bool previewVisible)
+void ConcentricEllipseAssistant::drawAssistant(QPainter& gc, const QRectF& updateRect, const KisCoordinatesConverter* converter, const KoColorDisplayRendererInterface *displayRenderInterface, bool cached, KisCanvas2* canvas, bool assistantVisible, bool previewVisible)
 {
     gc.save();
     gc.resetTransform();
@@ -95,17 +95,17 @@ void ConcentricEllipseAssistant::drawAssistant(QPainter& gc, const QRectF& updat
                 QPainterPath path;
                 // Draw the ellipse
                 path.addEllipse(QPointF(0, 0), m_ellipse.semiMajor()*Ratio, m_ellipse.semiMinor()*Ratio);
-                drawPreview(gc, path);
+                drawPreview(gc, path, displayRenderInterface);
             }
         }
     }
     gc.restore();
-    KisPaintingAssistant::drawAssistant(gc, updateRect, converter, cached, canvas, assistantVisible, previewVisible);
+    KisPaintingAssistant::drawAssistant(gc, updateRect, converter, displayRenderInterface, cached, canvas, assistantVisible, previewVisible);
 
 }
 
 
-void ConcentricEllipseAssistant::drawCache(QPainter& gc, const KisCoordinatesConverter *converter, bool assistantVisible)
+void ConcentricEllipseAssistant::drawCache(QPainter& gc, const KisCoordinatesConverter *converter, const KoColorDisplayRendererInterface *displayRenderInterface, bool assistantVisible)
 {
     if (assistantVisible == false || handles().size() < 2) { // 2 points means a line, so we can continue after 1 point
         return;
@@ -119,7 +119,7 @@ void ConcentricEllipseAssistant::drawCache(QPainter& gc, const KisCoordinatesCon
         QPainterPath path;
         path.moveTo(*handles()[0]);
         path.lineTo(*handles()[1]);
-        drawPath(gc, path, isSnappingActive());
+        drawPath(gc, path, displayRenderInterface, isSnappingActive());
         return;
     }
 
@@ -133,7 +133,7 @@ void ConcentricEllipseAssistant::drawCache(QPainter& gc, const KisCoordinatesCon
         path.moveTo(QPointF(0, -m_ellipse.semiMinor())); path.lineTo(QPointF(0, m_ellipse.semiMinor()));
         // Draw the ellipse
         path.addEllipse(QPointF(0, 0), m_ellipse.semiMajor(), m_ellipse.semiMinor());
-        drawPath(gc, path, isSnappingActive());
+        drawPath(gc, path, displayRenderInterface, isSnappingActive());
     }
 }
 

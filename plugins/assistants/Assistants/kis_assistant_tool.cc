@@ -26,6 +26,7 @@
 #include <KoFileDialog.h>
 #include <KoViewConverter.h>
 #include <KoPointerEvent.h>
+#include <KoColorDisplayRendererInterface.h>
 
 #include <canvas/kis_canvas2.h>
 #include <kis_abstract_perspective_grid.h>
@@ -1375,10 +1376,10 @@ void KisAssistantTool::paint(QPainter& _gc, const KoViewConverter &_converter)
     // show special display while a new assistant is in the process of being created
     if (m_newAssistant) {
 
-        QColor assistantColor = m_newAssistant->effectiveAssistantColor();
+        QColor assistantColor = m_canvas->displayRendererInterface()->convertColorToDisplayColorSpace(KoColor(m_newAssistant->effectiveAssistantColor(), KoColorSpaceRegistry::instance()->rgb8()));
         assistantColor.setAlpha(80);
 
-        m_newAssistant->drawAssistant(_gc, canvasSize, m_canvas->coordinatesConverter(), false, m_canvas, true, false);
+        m_newAssistant->drawAssistant(_gc, canvasSize, m_canvas->coordinatesConverter(), m_canvas->displayRendererInterface(), false, m_canvas, true, false);
         Q_FOREACH (const KisPaintingAssistantHandleSP handle, m_newAssistant->handles()) {
             QPainterPath path;
             path.addEllipse(QRectF(_converter.documentToView(*handle) -  QPointF(m_handleSize * 0.5, m_handleSize * 0.5), QSizeF(m_handleSize, m_handleSize)));
@@ -1394,7 +1395,7 @@ void KisAssistantTool::paint(QPainter& _gc, const KoViewConverter &_converter)
 
     Q_FOREACH (KisPaintingAssistantSP assistant, m_canvas->paintingAssistantsDecoration()->assistants()) {
 
-        QColor assistantColor = assistant->effectiveAssistantColor();
+        QColor assistantColor = m_canvas->displayRendererInterface()->convertColorToDisplayColorSpace(KoColor(assistant->effectiveAssistantColor(), KoColorSpaceRegistry::instance()->rgb8()));
         assistantColor.setAlpha(80);
 
         Q_FOREACH (const KisPaintingAssistantHandleSP handle, m_handles) {

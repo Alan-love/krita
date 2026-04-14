@@ -80,7 +80,7 @@ void VanishingPointAssistant::adjustLine(QPointF &point, QPointF &strokeBegin)
     point = project(point, strokeBegin, 0.0);
 }
 
-void VanishingPointAssistant::drawAssistant(QPainter& gc, const QRectF& updateRect, const KisCoordinatesConverter* converter, bool cached, KisCanvas2* canvas, bool assistantVisible, bool previewVisible)
+void VanishingPointAssistant::drawAssistant(QPainter& gc, const QRectF& updateRect, const KisCoordinatesConverter* converter, const KoColorDisplayRendererInterface *displayRenderInterface, bool cached, KisCanvas2* canvas, bool assistantVisible, bool previewVisible)
 {
     // HACK ALERT: side handles aren't saved in old krita versions
     // we need to just add a default position for now if we are loading a vanishing point
@@ -119,7 +119,7 @@ void VanishingPointAssistant::drawAssistant(QPainter& gc, const QRectF& updateRe
             path.moveTo(snapLine.p2());
             path.lineTo(snapLine.p1());
 
-            drawPreview(gc, path);//and we draw the preview.
+            drawPreview(gc, path, displayRenderInterface);//and we draw the preview.
 
         }
     }
@@ -143,7 +143,7 @@ void VanishingPointAssistant::drawAssistant(QPainter& gc, const QRectF& updateRe
 
         QPainterPath pathCenter;
         pathCenter.addEllipse(ellipse);
-        drawPath(gc, pathCenter, isSnappingActive());
+        drawPath(gc, pathCenter, displayRenderInterface, isSnappingActive());
 
         QColor paintingColor = effectiveAssistantColor();
 
@@ -184,7 +184,7 @@ void VanishingPointAssistant::drawAssistant(QPainter& gc, const QRectF& updateRe
         path.lineTo(initialTransform.map(p3));
         path.lineTo(initialTransform.map(p4));
         path.lineTo(initialTransform.map(p1));
-        drawPath(gc, path, isSnappingActive());//and we draw the rectangle
+        drawPath(gc, path, displayRenderInterface, isSnappingActive());//and we draw the rectangle
     }
 
 
@@ -211,17 +211,17 @@ void VanishingPointAssistant::drawAssistant(QPainter& gc, const QRectF& updateRe
             QPainterPath path;
             path.moveTo(snapLine.p1());
             path.lineTo(snapLine.p2());
-            drawPreview(gc, path);//and we draw the preview.
+            drawPreview(gc, path, displayRenderInterface);//and we draw the preview.
         }
     }
 
 
     gc.restore();
 
-    KisPaintingAssistant::drawAssistant(gc, updateRect, converter, cached, canvas, assistantVisible, previewVisible);
+    KisPaintingAssistant::drawAssistant(gc, updateRect, converter, displayRenderInterface, cached, canvas, assistantVisible, previewVisible);
 }
 
-void VanishingPointAssistant::drawCache(QPainter& gc, const KisCoordinatesConverter *converter, bool assistantVisible)
+void VanishingPointAssistant::drawCache(QPainter& gc, const KisCoordinatesConverter *converter, const KoColorDisplayRendererInterface *displayRenderInterface, bool assistantVisible)
 {
     if (!m_canvas || !isAssistantComplete()) {
         return;
@@ -243,7 +243,7 @@ void VanishingPointAssistant::drawCache(QPainter& gc, const KisCoordinatesConver
     path.lineTo(QPointF(p0.x() + 10.0, p0.y() - 10.0));
 
 
-    drawPath(gc, path, isSnappingActive());
+    drawPath(gc, path, displayRenderInterface, isSnappingActive());
 }
 
 KisPaintingAssistantHandleSP VanishingPointAssistant::firstLocalHandle() const

@@ -77,7 +77,7 @@ void FisheyePointAssistant::adjustLine(QPointF &point, QPointF &strokeBegin)
     strokeBegin = QPointF();
 }
 
-void FisheyePointAssistant::drawAssistant(QPainter& gc, const QRectF& updateRect, const KisCoordinatesConverter* converter, bool cached, KisCanvas2* canvas, bool assistantVisible, bool previewVisible)
+void FisheyePointAssistant::drawAssistant(QPainter& gc, const QRectF& updateRect, const KisCoordinatesConverter* converter, const KoColorDisplayRendererInterface *displayRenderInterface, bool cached, KisCanvas2* canvas, bool assistantVisible, bool previewVisible)
 {
     gc.save();
     gc.resetTransform();
@@ -96,7 +96,7 @@ void FisheyePointAssistant::drawAssistant(QPainter& gc, const QRectF& updateRect
                     QPainterPath path;
                     // Draw the ellipse
                     path.addEllipse(QPointF(0, 0), extraE.semiMajor(), extraE.semiMinor());
-                    drawPreview(gc, path);
+                    drawPreview(gc, path, displayRenderInterface);
                 }
                 QLineF radius(*handles()[1], *handles()[0]);
                 radius.setAngle(fmod(radius.angle()+180.0,360.0));
@@ -106,7 +106,7 @@ void FisheyePointAssistant::drawAssistant(QPainter& gc, const QRectF& updateRect
                     QPainterPath path;
                     // Draw the ellipse
                     path.addEllipse(QPointF(0, 0), extraE.semiMajor(), extraE.semiMinor());
-                    drawPreview(gc, path);
+                    drawPreview(gc, path, displayRenderInterface);
                 }
                 QLineF radius2(*handles()[0], *handles()[1]);
                 radius2.setAngle(fmod(radius2.angle()+180.0,360.0));
@@ -116,7 +116,7 @@ void FisheyePointAssistant::drawAssistant(QPainter& gc, const QRectF& updateRect
                     QPainterPath path;
                     // Draw the ellipse
                     path.addEllipse(QPointF(0, 0), extraE.semiMajor(), extraE.semiMinor());
-                    drawPreview(gc, path);
+                    drawPreview(gc, path, displayRenderInterface);
                 }
 
             }
@@ -124,11 +124,11 @@ void FisheyePointAssistant::drawAssistant(QPainter& gc, const QRectF& updateRect
     }
     gc.restore();
 
-    KisPaintingAssistant::drawAssistant(gc, updateRect, converter, cached, canvas, assistantVisible, previewVisible);
+    KisPaintingAssistant::drawAssistant(gc, updateRect, converter, displayRenderInterface, cached, canvas, assistantVisible, previewVisible);
 
 }
 
-void FisheyePointAssistant::drawCache(QPainter& gc, const KisCoordinatesConverter *converter, bool assistantVisible)
+void FisheyePointAssistant::drawCache(QPainter& gc, const KisCoordinatesConverter *converter, const KoColorDisplayRendererInterface *displayRenderInterface, bool assistantVisible)
 {
     if (assistantVisible == false){
         return;
@@ -142,7 +142,7 @@ void FisheyePointAssistant::drawCache(QPainter& gc, const KisCoordinatesConverte
         QPainterPath path;
         path.moveTo(*handles()[0]);
         path.lineTo(*handles()[1]);
-        drawPath(gc, path, isSnappingActive());
+        drawPath(gc, path, displayRenderInterface, isSnappingActive());
         return;
     }
     if (e.set(*handles()[0], *handles()[1], *handles()[2])) {
@@ -161,7 +161,7 @@ void FisheyePointAssistant::drawCache(QPainter& gc, const KisCoordinatesConverte
         //path.moveTo(QPointF(0, -e.semiMinor())); path.lineTo(QPointF(0, e.semiMinor()));
         // Draw the ellipse
         path.addEllipse(QPointF(0, 0), e.semiMajor(), e.semiMinor());
-        drawPath(gc, path, isSnappingActive());
+        drawPath(gc, path, displayRenderInterface, isSnappingActive());
     }
 
 }

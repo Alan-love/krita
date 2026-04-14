@@ -76,7 +76,7 @@ void InfiniteRulerAssistant::adjustLine(QPointF &point, QPointF &strokeBegin)
     strokeBegin = project(strokeBegin, strokeBegin, false, 0.0);
 }
 
-void InfiniteRulerAssistant::drawSubdivisions(QPainter& gc, const KisCoordinatesConverter *converter) {
+void InfiniteRulerAssistant::drawSubdivisions(QPainter& gc, const KisCoordinatesConverter *converter, const KoColorDisplayRendererInterface *displayRenderInterface) {
     if (subdivisions() == 0) {
         return;
     }
@@ -160,13 +160,13 @@ void InfiniteRulerAssistant::drawSubdivisions(QPainter& gc, const KisCoordinates
         }
   
         // Draw highlight as regular path (2 px wide)
-        drawPath(gc, highlight);
+        drawPath(gc, highlight, displayRenderInterface);
         // Draw normal lines as preview (1 px wide)
-        drawPreview(gc, path);
+        drawPreview(gc, path, displayRenderInterface);
     }
 }
 
-void InfiniteRulerAssistant::drawAssistant(QPainter& gc, const QRectF& updateRect, const KisCoordinatesConverter* converter, bool cached, KisCanvas2* canvas, bool assistantVisible, bool previewVisible)
+void InfiniteRulerAssistant::drawAssistant(QPainter& gc, const QRectF& updateRect, const KisCoordinatesConverter* converter, const KoColorDisplayRendererInterface *displayRendererInterface, bool cached, KisCanvas2* canvas, bool assistantVisible, bool previewVisible)
 {
     gc.save();
     gc.resetTransform();
@@ -183,19 +183,19 @@ void InfiniteRulerAssistant::drawAssistant(QPainter& gc, const QRectF& updateRec
         QPainterPath path;
         path.moveTo(snapLine.p1());
         path.lineTo(snapLine.p2());
-        drawPreview(gc, path);
+        drawPreview(gc, path, displayRendererInterface);
         
         // Add the extended subdivisions, if active
         // When the number of subdivisions (or minor subdivisions) is set to
         // 0, the respective feature is turned off and won't be rendered.
         if (subdivisions() > 0) {
-            drawSubdivisions(gc, converter);
+            drawSubdivisions(gc, converter, displayRendererInterface);
         }
     }
     
     gc.restore();
     
-    RulerAssistant::drawAssistant(gc, updateRect, converter, cached, canvas, assistantVisible, previewVisible);
+    RulerAssistant::drawAssistant(gc, updateRect, converter, displayRendererInterface, cached, canvas, assistantVisible, previewVisible);
 }
 
 InfiniteRulerAssistant::ClippingResult InfiniteRulerAssistant::clipLineParametric(QLineF line, QRectF rect, bool extendFirst, bool extendSecond) {

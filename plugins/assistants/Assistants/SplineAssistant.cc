@@ -19,6 +19,7 @@
 #include <kis_coordinates_converter.h>
 #include "kis_debug.h"
 #include "KisBezierUtils.h"
+#include <KoColorDisplayRendererInterface.h>
 
 #include <math.h>
 #include <limits>
@@ -218,7 +219,7 @@ void SplineAssistant::adjustLine(QPointF &point, QPointF &strokeBegin)
     strokeBegin = QPointF();
 }
 
-void SplineAssistant::drawAssistant(QPainter& gc, const QRectF& updateRect, const KisCoordinatesConverter* converter, bool cached, KisCanvas2* canvas, bool assistantVisible, bool previewVisible)
+void SplineAssistant::drawAssistant(QPainter& gc, const QRectF& updateRect, const KisCoordinatesConverter* converter, const KoColorDisplayRendererInterface *displayRenderInterface, bool cached, KisCanvas2* canvas, bool assistantVisible, bool previewVisible)
 {
     gc.save();
     gc.resetTransform();
@@ -255,7 +256,7 @@ void SplineAssistant::drawAssistant(QPainter& gc, const QRectF& updateRect, cons
         
         //then we use this path to check the bounding rectangle//
         if (isSnappingActive() && path.boundingRect().contains(initialTransform.inverted().map(mousePos)) && previewVisible==true){
-            drawPreview(gc, path);//and we draw the preview.
+            drawPreview(gc, path, displayRenderInterface);//and we draw the preview.
         }
     }
     gc.restore();
@@ -263,11 +264,11 @@ void SplineAssistant::drawAssistant(QPainter& gc, const QRectF& updateRect, cons
    // there is some odd rectangle that is getting rendered when there is only one point, so don't start rendering the line until after 2
    // this issue only exists with this spline assistant...none of the others
    if (handles().size() > 2) {
-      KisPaintingAssistant::drawAssistant(gc, updateRect, converter, cached, canvas, assistantVisible, previewVisible);
+      KisPaintingAssistant::drawAssistant(gc, updateRect, converter, displayRenderInterface, cached, canvas, assistantVisible, previewVisible);
    }
 }
 
-void SplineAssistant::drawCache(QPainter& gc, const KisCoordinatesConverter *converter, bool assistantVisible)
+void SplineAssistant::drawCache(QPainter& gc, const KisCoordinatesConverter *converter, const KoColorDisplayRendererInterface *displayRenderInterface, bool assistantVisible)
 {
     if (assistantVisible == false || handles().size() < 2 ){
         return;
@@ -286,7 +287,7 @@ void SplineAssistant::drawCache(QPainter& gc, const KisCoordinatesConverter *con
 
     {  // Draw bezier handles control lines only if we are editing the assistant
         gc.save();
-        QColor assistantColor = effectiveAssistantColor();
+        QColor assistantColor = displayRenderInterface->convertColorToDisplayColorSpace(KoColor(effectiveAssistantColor(), KoColorSpaceRegistry::instance()->rgb8()));
         QPen bezierlinePen(assistantColor);
         bezierlinePen.setStyle(Qt::DotLine);
         bezierlinePen.setWidth(2);
@@ -317,7 +318,7 @@ void SplineAssistant::drawCache(QPainter& gc, const KisCoordinatesConverter *con
     QPainterPath path;
     path.moveTo(pts[0]);
     path.cubicTo(pts[2], pts[3], pts[1]);
-    drawPath(gc, path, isSnappingActive());
+    drawPath(gc, path, displayRenderInterface, isSnappingActive());
 
 
 }

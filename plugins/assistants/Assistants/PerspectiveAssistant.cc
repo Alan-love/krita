@@ -139,7 +139,7 @@ bool PerspectiveAssistant::isActive() const
     return isSnappingActive();
 }
 
-void PerspectiveAssistant::drawAssistant(QPainter& gc, const QRectF& updateRect, const KisCoordinatesConverter* converter, bool cached, KisCanvas2* canvas, bool assistantVisible, bool previewVisible)
+void PerspectiveAssistant::drawAssistant(QPainter& gc, const QRectF& updateRect, const KisCoordinatesConverter* converter, const KoColorDisplayRendererInterface *displayRenderInterface, bool cached, KisCanvas2* canvas, bool assistantVisible, bool previewVisible)
 {
     gc.save();
     gc.resetTransform();
@@ -150,10 +150,10 @@ void PerspectiveAssistant::drawAssistant(QPainter& gc, const QRectF& updateRect,
     if (getTransform(poly, transform) && assistantVisible==true) {
         // draw vanishing points
         if (m_cache.vanishingPoint1) {
-            drawX(gc, initialTransform.map(m_cache.vanishingPoint1.get()));
+            drawX(gc, initialTransform.map(m_cache.vanishingPoint1.get()), displayRenderInterface);
         }
         if (m_cache.vanishingPoint2) {
-            drawX(gc, initialTransform.map(m_cache.vanishingPoint2.get()));
+            drawX(gc, initialTransform.map(m_cache.vanishingPoint2.get()), displayRenderInterface);
         }
     }
 
@@ -206,7 +206,7 @@ void PerspectiveAssistant::drawAssistant(QPainter& gc, const QRectF& updateRect,
                     }
                 }
             }
-            drawPreview(gc, path2);
+            drawPreview(gc, path2, displayRenderInterface);
         }
     }
 
@@ -223,11 +223,11 @@ void PerspectiveAssistant::drawAssistant(QPainter& gc, const QRectF& updateRect,
                 QPainterPath path;
                 // that will create a triangle with a point inside connected to all vertices of the triangle
                 path.addPolygon(PerspectiveBasedAssistantHelper::getAllConnectedTetragon(handles()));
-                drawError(gc, path);
+                drawError(gc, path, displayRenderInterface);
             } else {
                 QPainterPath path;
                 path.addPolygon(poly);
-                drawPath(gc, path, isSnappingActive());
+                drawPath(gc, path, displayRenderInterface, isSnappingActive());
             }
         } else {
             gc.setPen(QColor(0, 0, 0, 125));
@@ -250,7 +250,7 @@ void PerspectiveAssistant::drawAssistant(QPainter& gc, const QRectF& updateRect,
                 path.lineTo(line.p2());
             }
 
-            drawPath(gc, path, isSnappingActive());
+            drawPath(gc, path, displayRenderInterface, isSnappingActive());
         }
     }
     //
@@ -258,14 +258,15 @@ void PerspectiveAssistant::drawAssistant(QPainter& gc, const QRectF& updateRect,
 
     gc.restore();
 
-    KisPaintingAssistant::drawAssistant(gc, updateRect, converter, cached,canvas, assistantVisible, previewVisible);
+    KisPaintingAssistant::drawAssistant(gc, updateRect, converter, displayRenderInterface, cached,canvas, assistantVisible, previewVisible);
 }
 
-void PerspectiveAssistant::drawCache(QPainter& gc, const KisCoordinatesConverter *converter, bool assistantVisible)
+void PerspectiveAssistant::drawCache(QPainter& gc, const KisCoordinatesConverter *converter, const KoColorDisplayRendererInterface *displayRenderInterface, bool assistantVisible)
 {
     Q_UNUSED(gc);
     Q_UNUSED(converter);
     Q_UNUSED(assistantVisible);
+    Q_UNUSED(displayRenderInterface);
 }
 
 QPointF PerspectiveAssistant::getDefaultEditorPosition() const

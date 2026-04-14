@@ -33,6 +33,7 @@ slots:
     bus: session
 parts:
   pyqt6:
+    plugin: python
     python-packages:
       - pyqt6
   eigen:

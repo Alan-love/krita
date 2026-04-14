@@ -16,6 +16,7 @@ class QPainter;
 class KoInteractionStrategy;
 class KoPointerEvent;
 class KoViewConverter;
+class KoColorDisplayRendererInterface;
 
 class KoInteractionStrategyFactory;
 typedef QSharedPointer<KoInteractionStrategyFactory> KoInteractionStrategyFactorySP;
@@ -31,7 +32,7 @@ public:
 
     virtual KoInteractionStrategy* createStrategy(KoPointerEvent *ev) = 0;
     virtual bool hoverEvent(KoPointerEvent *ev) = 0;
-    virtual bool paintOnHover(QPainter &painter, const KoViewConverter &converter) = 0;
+    virtual bool paintOnHover(QPainter &painter, const KoViewConverter &converter, const KoColorDisplayRendererInterface *displayRendererInterface) = 0;
     virtual bool tryUseCustomCursor() = 0;
 
     static bool compareLess(KoInteractionStrategyFactorySP f1, KoInteractionStrategyFactorySP f2);

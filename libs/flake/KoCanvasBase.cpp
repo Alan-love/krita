@@ -19,6 +19,7 @@
 #include "KoToolProxy.h"
 #include "KoSelection.h"
 #include "KoSelectedShapesProxy.h"
+#include <KoColorDisplayRendererInterface.h>
 
 class Q_DECL_HIDDEN KoCanvasBase::Private
 {
@@ -61,6 +62,11 @@ KoCanvasBase::~KoCanvasBase()
 {
     d->shapeController->reset();
     delete d;
+}
+
+KoColorDisplayRendererInterface *KoCanvasBase::displayRendererInterface() const
+{
+    return KoDumbColorDisplayRenderer::instance();
 }
 
 QPointF KoCanvasBase::viewToDocument(const QPointF &viewPoint) const

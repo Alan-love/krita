@@ -685,16 +685,11 @@ void SvgTextTool::paint(QPainter &gc, const KoViewConverter &converter)
 {
     if (!isActivated()) return;
 
-    KisHandlePalette handlePalette;
-    QPalette systemPalette = qApp->palette();
-    KisCanvas2* kisCanvas = dynamic_cast<KisCanvas2*>(canvas());
-    if (kisCanvas) {
-        handlePalette = kisCanvas->displayColorConverter()->handlePaletteForDisplayColorSpace();
-        systemPalette = kisCanvas->displayColorConverter()->systemPaletteForDisplayColorSpace();
-    }
+    KisHandlePalette handlePalette = canvas()->displayRendererInterface()->handlePaletteForDisplayColorSpace();
+    QPalette systemPalette = canvas()->displayRendererInterface()->systemPaletteForDisplayColorSpace();
 
     if (m_dragging == DragMode::Create || m_dragging == DragMode::InShapeOffset) {
-        m_interactionStrategy->paint(gc, converter);
+        m_interactionStrategy->paint(gc, converter, canvas()->displayRendererInterface());
     }
 
     KoSvgTextShape *shape = selectedShape();
@@ -864,7 +859,7 @@ void SvgTextTool::mousePressEvent(KoPointerEvent *event)
 
     if (!selectedShape && !hoveredShape && !hoveredFlowShape && !crossLayerPossible) {
         QPointF point = canvas()->snapGuide()->snap(event->point, event->modifiers());
-        m_interactionStrategy.reset(new SvgCreateTextStrategy(this, point, handlePalette));
+        m_interactionStrategy.reset(new SvgCreateTextStrategy(this, point));
         m_dragging = DragMode::Create;
         event->accept();
     } else if (hoveredShape) {
@@ -878,7 +873,7 @@ void SvgTextTool::mousePressEvent(KoPointerEvent *event)
         event->accept();
     } else if (hoveredFlowShape) {
         QPointF point = canvas()->snapGuide()->snap(event->point, event->modifiers());
-        m_interactionStrategy.reset(new SvgCreateTextStrategy(this, point, handlePalette, hoveredFlowShape));
+        m_interactionStrategy.reset(new SvgCreateTextStrategy(this, point, hoveredFlowShape));
         m_dragging = DragMode::Create;
         event->accept();
     } else if (crossLayerPossible) {

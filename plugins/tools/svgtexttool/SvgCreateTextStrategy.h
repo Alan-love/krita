@@ -21,10 +21,10 @@ class KoShape;
 class SvgCreateTextStrategy : public KoInteractionStrategy
 {
 public:
-    SvgCreateTextStrategy(SvgTextTool *tool, const QPointF &clicked, KisHandlePalette palette = KisHandlePalette(), KoShape *shape = nullptr);
+    SvgCreateTextStrategy(SvgTextTool *tool, const QPointF &clicked, KoShape *shape = nullptr);
     ~SvgCreateTextStrategy() override = default;
 
-    void paint(QPainter &painter, const KoViewConverter &converter) override;
+    void paint(QPainter &painter, const KoViewConverter &converter, const KoColorDisplayRendererInterface *displayRendererInterface) override;
     void handleMouseMove(const QPointF &mouseLocation, Qt::KeyboardModifiers modifiers) override;
     KUndo2Command *createCommand() override;
     void cancelInteraction() override;
@@ -38,7 +38,6 @@ private:
     QPointF m_dragEnd;
     QSizeF m_minSizeInline;
     KoShape *m_flowShape;
-    KisHandlePalette m_handlePalette;
     Qt::KeyboardModifiers m_modifiers;
 };
 

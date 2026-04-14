@@ -16,6 +16,7 @@
 #include <KoCanvasResourceProvider.h>
 #include <commands/KoShapeTransformCommand.h>
 #include <KoShapeBulkActionLock.h>
+#include <KoColorDisplayRendererInterface.h>
 
 #include <QPointF>
 #include <math.h>
@@ -84,11 +85,14 @@ void ShapeRotateStrategy::rotateBy(qreal angle)
     KoShapeBulkActionLock::bulkShapesUpdate(lock.unlock());
 }
 
-void ShapeRotateStrategy::paint(QPainter &painter, const KoViewConverter &converter)
+void ShapeRotateStrategy::paint(QPainter &painter, const KoViewConverter &converter, const KoColorDisplayRendererInterface *displayRendererInterface)
 {
     // paint the rotation center
-    painter.setPen(QPen(Qt::red));
-    painter.setBrush(QBrush(Qt::red));
+    KoColor c;
+    c.fromQColor(Qt::red);
+    QColor red = displayRendererInterface->convertColorToDisplayColorSpace(c);
+    painter.setPen(QPen(red));
+    painter.setBrush(QBrush(red));
     painter.setRenderHint(QPainter::Antialiasing, true);
     QRectF circle(0, 0, handleRadius(), handleRadius());
     circle.moveCenter(converter.documentToView(m_rotationCenter));

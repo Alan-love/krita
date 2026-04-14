@@ -12,6 +12,8 @@
 #include <KoChannelInfo.h>
 #include <KoColorConversionTransformation.h>
 #include <KoColorSpace.h>
+#include <KisHandleStyle.h>
+#include <QPalette>
 
 Q_GLOBAL_STATIC(KoDumbColorDisplayRenderer, s_instance)
 
@@ -80,4 +82,19 @@ qreal KoDumbColorDisplayRenderer::maxVisibleFloatValue(const KoChannelInfo *chan
 const KoColorSpace* KoDumbColorDisplayRenderer::getPaintingColorSpace() const
 {
     return KoColorSpaceRegistry::instance()->rgb8();
+}
+
+QColor KoDumbColorDisplayRenderer::convertColorToDisplayColorSpace(KoColor c) const
+{
+    return c.toQColor();
+}
+
+KisHandlePalette KoDumbColorDisplayRenderer::handlePaletteForDisplayColorSpace() const
+{
+    return KisHandlePalette();
+}
+
+QPalette KoDumbColorDisplayRenderer::systemPaletteForDisplayColorSpace() const
+{
+    return QPalette();
 }

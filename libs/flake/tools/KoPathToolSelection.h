@@ -17,6 +17,7 @@ class KoPathTool;
 class KoPathPoint;
 class KoPathPointData;
 class KoViewConverter;
+class KoColorDisplayRendererInterface;
 class QPainter;
 
 /**
@@ -35,7 +36,7 @@ public:
     ~KoPathToolSelection() override;
 
     /// @brief Draw the selected points
-    void paint(QPainter &painter, const KoViewConverter &converter, qreal handleRadius);
+    void paint(QPainter &painter, const KoViewConverter &converter, qreal handleRadius, KoColorDisplayRendererInterface *renderInterface);
 
     /**
     * @brief Add a point to the selection

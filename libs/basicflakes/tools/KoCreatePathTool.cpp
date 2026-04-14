@@ -18,6 +18,7 @@
 #include "KoCanvasBase.h"
 #include "kis_int_parse_spin_box.h"
 #include <KoColor.h>
+#include <KoColorDisplayRendererInterface.h>
 #include "kis_canvas_resource_provider.h"
 #include <KisHandlePainterHelper.h>
 #include "KoPathPointTypeCommand.h"
@@ -78,6 +79,8 @@ void KoCreatePathTool::paint(QPainter &painter, const KoViewConverter &converter
 {
     Q_D(KoCreatePathTool);
 
+    KisHandlePalette palette = canvas()->displayRendererInterface()->handlePaletteForDisplayColorSpace();
+
     if (pathStarted()) {
 
         painter.save();
@@ -97,13 +100,13 @@ void KoCreatePathTool::paint(QPainter &painter, const KoViewConverter &converter
                 paintFlags |= KoPathPoint::ControlPoint1;
             }
 
-            helper.setHandleStyle(KisHandleStyle::highlightedPrimaryHandles());
+            helper.setHandleStyle(KisHandleStyle::highlightedPrimaryHandles(palette));
             d->activePoint->paint(helper, paintFlags, onlyPaintActivePoints);
         }
 
         if (!firstPointActive) {
             helper.setHandleStyle(d->mouseOverFirstPoint ?
-                                      KisHandleStyle::highlightedPrimaryHandles() :
+                                      KisHandleStyle::highlightedPrimaryHandles(palette) :
                                       KisHandleStyle::primarySelection());
             d->firstPoint->paint(helper, KoPathPoint::Node);
         }
@@ -111,7 +114,7 @@ void KoCreatePathTool::paint(QPainter &painter, const KoViewConverter &converter
 
     if (d->hoveredPoint) {
         KisHandlePainterHelper helper = KoShape::createHandlePainterHelperView(&painter, d->hoveredPoint->parent(), converter, d->handleRadius, d->decorationThickness);
-        helper.setHandleStyle(KisHandleStyle::highlightedPrimaryHandles());
+        helper.setHandleStyle(KisHandleStyle::highlightedPrimaryHandles(palette));
         d->hoveredPoint->paint(helper, KoPathPoint::Node);
     }
 

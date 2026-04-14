@@ -21,6 +21,7 @@ class KoToolBase;
 class KUndo2Command;
 class QPointF;
 class QPainter;
+class KoColorDisplayRendererInterface;
 
 /**
  * Abstract interface to define what actions a KoInteractionTool can do based on
@@ -46,7 +47,7 @@ public:
      * Reimplement this if the action needs to draw a "blob" on the canvas;
      * that is, a transient decoration like a rubber band.
      */
-    virtual void paint(QPainter &painter, const KoViewConverter &converter);
+    virtual void paint(QPainter &painter, const KoViewConverter &converter, const KoColorDisplayRendererInterface *displayRendererInterface);
     /**
      * Extending classes should implement this method to update the selectedShapes
      * based on the new mouse position.

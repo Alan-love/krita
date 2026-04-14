@@ -41,6 +41,7 @@
 #include "kis_pointer_utils.h"
 #include <KisHandlePainterHelper.h>
 #include <KoShapeStrokeModel.h>
+#include <KoColorDisplayRendererInterface.h>
 #include <commands/KoKeepShapesSelectedCommand.h>
 #include <commands/KoMultiPathPointJoinCommand.h>
 #include <commands/KoMultiPathPointMergeCommand.h>
@@ -444,10 +445,12 @@ void KoPathTool::paint(QPainter &painter, const KoViewConverter &converter)
     m_textOutlineHelper->setHandleRadius(handleRadius());
     m_textOutlineHelper->paint(&painter, converter);
 
+    const KisHandlePalette palette = canvas()->displayRendererInterface()->handlePaletteForDisplayColorSpace();
+
     Q_FOREACH (KoPathShape *shape, m_pointSelection.selectedShapes()) {
         KisHandlePainterHelper helper =
                 KoShape::createHandlePainterHelperView(&painter, shape, converter, handleRadius(), decorationThickness());
-        helper.setHandleStyle(KisHandleStyle::primarySelection());
+        helper.setHandleStyle(KisHandleStyle::primarySelection(palette));
 
         KoParameterShape * parameterShape = dynamic_cast<KoParameterShape*>(shape);
         if (parameterShape && parameterShape->isParametricShape()) {
@@ -457,22 +460,22 @@ void KoPathTool::paint(QPainter &painter, const KoViewConverter &converter)
         }
 
         if (!shape->stroke() || !shape->stroke()->isVisible()) {
-            helper.setHandleStyle(KisHandleStyle::secondarySelection());
+            helper.setHandleStyle(KisHandleStyle::secondarySelection(palette));
             helper.drawPath(shape->outline());
         }
     }
 
     if (m_currentStrategy) {
         painter.save();
-        m_currentStrategy->paint(painter, converter);
+        m_currentStrategy->paint(painter, converter, canvas()->displayRendererInterface());
         painter.restore();
     }
 
-    m_pointSelection.paint(painter, converter, handleRadius());
+    m_pointSelection.paint(painter, converter, handleRadius(), canvas()->displayRendererInterface());
 
     if (m_activeHandle) {
         if (m_activeHandle->check(m_pointSelection.selectedShapes())) {
-            m_activeHandle->paint(painter, converter, handleRadius(), decorationThickness());
+            m_activeHandle->paint(painter, converter, handleRadius(), decorationThickness(), canvas()->displayRendererInterface());
         } else {
             m_activeHandle.reset();
         }
@@ -489,7 +492,7 @@ void KoPathTool::paint(QPainter &painter, const KoViewConverter &converter)
 
             KisHandlePainterHelper helper =
                     KoShape::createHandlePainterHelperView(&painter, shape, converter, handleRadius(), decorationThickness());
-            helper.setHandleStyle(KisHandleStyle::secondarySelection());
+            helper.setHandleStyle(KisHandleStyle::secondarySelection(palette));
 
             QPainterPath path;
             path.moveTo(segment.first()->point());

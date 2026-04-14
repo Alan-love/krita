@@ -223,6 +223,18 @@ struct KisDisplayColorConverter::Private
             return m_displayColorConverter->paintingColorSpace();
         }
 
+        QColor convertColorToDisplayColorSpace(KoColor c) const override {
+            return m_displayColorConverter->convertColorToDisplayColorSpace(c);
+        }
+
+        KisHandlePalette handlePaletteForDisplayColorSpace() const override {
+            return m_displayColorConverter->handlePaletteForDisplayColorSpace();
+        }
+
+        QPalette systemPaletteForDisplayColorSpace() const override {
+            return m_displayColorConverter->systemPaletteForDisplayColorSpace();
+        }
+
     private:
         KisDisplayColorConverter *m_displayColorConverter;
         QPointer<KoCanvasResourceProvider> m_resourceManager;

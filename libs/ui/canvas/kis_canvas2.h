@@ -125,6 +125,8 @@ public: // KoCanvasBase implementation
     const KoViewConverter *viewConverter() const override;
     KoViewConverter *viewConverter() override;
 
+    KoColorDisplayRendererInterface* displayRendererInterface() const override;
+
     QWidget* canvasWidget() override;
 
     const QWidget* canvasWidget() const override;

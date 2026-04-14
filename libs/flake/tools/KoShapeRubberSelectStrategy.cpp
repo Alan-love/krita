@@ -15,6 +15,8 @@
 #include "KoShapeManager.h"
 #include "KoSelection.h"
 #include "KoCanvasBase.h"
+#include <KoColor.h>
+#include <KoColorDisplayRendererInterface.h>
 
 KoShapeRubberSelectStrategy::KoShapeRubberSelectStrategy(KoToolBase *tool, const QPointF &clicked, bool useSnapToGrid)
     : KoInteractionStrategy(*(new KoShapeRubberSelectStrategyPrivate(tool)))
@@ -26,13 +28,16 @@ KoShapeRubberSelectStrategy::KoShapeRubberSelectStrategy(KoToolBase *tool, const
     d->selectRect = QRectF(d->snapGuide->snap(clicked, QFlags<Qt::KeyboardModifier>()), QSizeF(0, 0));
 }
 
-void KoShapeRubberSelectStrategy::paint(QPainter &painter, const KoViewConverter &converter)
+void KoShapeRubberSelectStrategy::paint(QPainter &painter, const KoViewConverter &converter, const KoColorDisplayRendererInterface *displayRendererInterface)
 {
     Q_D(KoShapeRubberSelectStrategy);
     painter.setRenderHint(QPainter::Antialiasing, false);
 
-    const QColor crossingColor(80,130,8);
-    const QColor coveringColor(8,60,167);
+    KoColor c;
+    c.fromQColor(QColor(80,130,8));
+    const QColor crossingColor(displayRendererInterface->convertColorToDisplayColorSpace(c));
+    c.fromQColor(QColor(8,60,167));
+    const QColor coveringColor(displayRendererInterface->convertColorToDisplayColorSpace(c));
 
     QColor selectColor(
         currentMode() == CrossingSelection ?

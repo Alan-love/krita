@@ -159,10 +159,11 @@ void ShapeShearStrategy::handleMouseMove(const QPointF &point, Qt::KeyboardModif
     m_shearMatrix = matrix;
 }
 
-void ShapeShearStrategy::paint(QPainter &painter, const KoViewConverter &converter)
+void ShapeShearStrategy::paint(QPainter &painter, const KoViewConverter &converter, const KoColorDisplayRendererInterface *displayRendererInterface)
 {
     Q_UNUSED(painter);
     Q_UNUSED(converter);
+    Q_UNUSED(displayRendererInterface);
 }
 
 KUndo2Command *ShapeShearStrategy::createCommand()

@@ -27,6 +27,7 @@ class KoCanvasController;
 class KoShape;
 class KoSnapGuide;
 class KoSelectedShapesProxy;
+class KoColorDisplayRendererInterface;
 
 class QWidget;
 class QCursor;
@@ -171,6 +172,14 @@ public:
      */
     virtual const KoViewConverter *viewConverter() const = 0;
     virtual KoViewConverter *viewConverter() = 0;
+
+    /**
+     * @brief displayRendererInterface
+     * The display renderer interface has a number of color conversion
+     * functions which are useful to convert a KoColor to a QColor.
+     * @return The display renderer interface for this canvas.
+     */
+    virtual KoColorDisplayRendererInterface* displayRendererInterface() const;
 
     /**
      * Convert a coordinate in pixels to pt.

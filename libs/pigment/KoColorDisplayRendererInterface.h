@@ -94,6 +94,13 @@ public:
     virtual QColor convertColorToDisplayColorSpace(const KoColor color) const = 0;
 
     /**
+     * @brief convertImageToDisplayColorSpace
+     * @param source -- image to convert.
+     * @return image converted to be used as a canvas decoration.
+     */
+    virtual QImage convertImageToDisplayColorSpace(const QImage source) const = 0;
+
+    /**
      * @brief handlePaletteForDisplayColorSpace
      * @return get a version of KisHandlePalette suited for canvas decorations
      */
@@ -132,6 +139,7 @@ public:
     const KoColorSpace* getPaintingColorSpace() const override;
 
     QColor convertColorToDisplayColorSpace(KoColor c) const override;
+    QImage convertImageToDisplayColorSpace(const QImage source) const override;
     KisHandlePalette handlePaletteForDisplayColorSpace() const override;
     QPalette systemPaletteForDisplayColorSpace() const override;
 

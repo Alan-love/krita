@@ -227,6 +227,15 @@ struct KisDisplayColorConverter::Private
             return m_displayColorConverter->convertColorToDisplayColorSpace(c);
         }
 
+        QImage convertImageToDisplayColorSpace(const QImage source) const override {
+            // Limited to 8bit sRGB for now...
+            KisPaintDeviceSP srcDevice = new KisPaintDevice(KoColorSpaceRegistry::instance()->rgb8());
+            srcDevice->convertFromQImage(source, KoColorSpaceRegistry::instance()->p709SRGBProfile(), 0, 0);
+            QImage destination = m_displayColorConverter->convertImageToDisplayColorSpace(srcDevice);
+            destination.setDevicePixelRatio(source.devicePixelRatio());
+            return destination;
+        }
+
         KisHandlePalette handlePaletteForDisplayColorSpace() const override {
             return m_displayColorConverter->handlePaletteForDisplayColorSpace();
         }
@@ -708,6 +717,13 @@ QColor KisDisplayColorConverter::convertColorToDisplayColorSpace(const KoColor c
     // converted to sRGB before becoming a QColor, while we explicitely do not want that for our QColor.
     // This is further complicated by the fact that QColors cannot have any (Q)ColorSpace metadata associated with it, unlike KoColor.
     return QColor::fromRgbF(sorted[0], sorted[1], sorted[2], sorted[3]);
+}
+
+QImage KisDisplayColorConverter::convertImageToDisplayColorSpace(KisPaintDeviceSP srcDevice) const
+{
+    KisPaintDeviceSP conversionDevice = new KisPaintDevice(*srcDevice.data());
+    conversionDevice->convertTo(m_d->openGLSurfaceColorSpace(Float32BitsColorDepthID), m_d->multiSurfaceDisplayConfig.intent, m_d->multiSurfaceDisplayConfig.conversionFlags);
+    return conversionDevice->convertToQImage(m_d->openGLSurfaceProfile(), m_d->multiSurfaceDisplayConfig.intent, m_d->multiSurfaceDisplayConfig.conversionFlags);
 }
 
 KisHandlePalette KisDisplayColorConverter::handlePaletteForDisplayColorSpace() const

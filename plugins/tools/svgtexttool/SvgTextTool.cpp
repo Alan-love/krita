@@ -737,8 +737,6 @@ void SvgTextTool::paint(QPainter &gc, const KoViewConverter &converter)
 
     m_textOutlineHelper->setDecorationThickness(decorationThickness());
     m_textOutlineHelper->setHandleRadius(handleRadius());
-    m_textOutlineHelper->setHandlePalette(handlePalette);
-    m_textOutlineHelper->setSystemPalette(systemPalette);
     m_textOutlineHelper->paint(&gc, converter);
     m_textOnPathHelper.setDecorationThickness(decorationThickness());
     m_textOnPathHelper.setHandleRadius(handleRadius());

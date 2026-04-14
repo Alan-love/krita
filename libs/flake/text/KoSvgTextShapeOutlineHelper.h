@@ -63,9 +63,6 @@ public:
     void setHandleRadius(int radius);
     void setDecorationThickness(int thickness);
 
-    void setHandlePalette(KisHandlePalette handlePalette);
-    void setSystemPalette(QPalette pal);
-
     KoSvgTextShape *contourModeButtonHovered(const QPointF &point);
 
     /**

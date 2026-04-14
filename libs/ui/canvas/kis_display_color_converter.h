@@ -80,9 +80,20 @@ public:
      */
     QColor convertColorToDisplayColorSpace(const KoColor color) const;
 
+    QImage convertImageToDisplayColorSpace(KisPaintDeviceSP srcDevice) const;
+
+    /**
+     * @brief handlePaletteForDisplayColorSpace
+     * @return KisHandlePalette suitable to draw canvas decorations with.
+     */
     KisHandlePalette handlePaletteForDisplayColorSpace() const;
 
+    /**
+     * @brief systemPaletteForDisplayColorSpace
+     * @return QPalette suitable to draw canvas decorations with.
+     */
     QPalette systemPaletteForDisplayColorSpace() const;
+
 
     /**
      * Converts the exactBounds() (!) of the \p srcDevice into QImage

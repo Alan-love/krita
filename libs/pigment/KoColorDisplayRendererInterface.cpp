@@ -89,6 +89,11 @@ QColor KoDumbColorDisplayRenderer::convertColorToDisplayColorSpace(KoColor c) co
     return c.toQColor();
 }
 
+QImage KoDumbColorDisplayRenderer::convertImageToDisplayColorSpace(const QImage source) const
+{
+    return source;
+}
+
 KisHandlePalette KoDumbColorDisplayRenderer::handlePaletteForDisplayColorSpace() const
 {
     return KisHandlePalette();

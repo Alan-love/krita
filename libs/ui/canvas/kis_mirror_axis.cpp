@@ -31,6 +31,7 @@
 #include <kis_signals_blocker.h>
 #include <kactioncollection.h>
 #include "kis_floating_message.h"
+#include <KoColorDisplayRendererInterface.h>
 
 #ifdef Q_OS_MACOS
     // HACK alert
@@ -63,10 +64,10 @@ public:
     KisCanvasResourceProvider* resourceProvider;
     KisImageWSP image;
 
-    QPixmap horizontalHandleIcon;
-    QPixmap verticalHandleIcon;
-    QPixmap horizontalIcon;
-    QPixmap verticalIcon;
+    QImage horizontalHandleIcon;
+    QImage verticalHandleIcon;
+    QImage horizontalIcon;
+    QImage verticalIcon;
 
     QRectF horizontalHandle;
     QRectF verticalHandle;
@@ -95,10 +96,10 @@ KisMirrorAxis::KisMirrorAxis(KisCanvasResourceProvider* provider, QPointer<KisVi
 
     d->config.setMirrorHorizontal(d->resourceProvider->mirrorHorizontal());
     d->config.setMirrorVertical(d->resourceProvider->mirrorVertical());
-    d->horizontalIcon = KisIconUtils::loadIcon("mirrorAxis-HorizontalMove").pixmap(d->config.handleSize(), QIcon::Normal, QIcon::On);
-    d->verticalIcon = KisIconUtils::loadIcon("mirrorAxis-VerticalMove").pixmap(d->config.handleSize(), QIcon::Normal, QIcon::On);
-    d->horizontalHandleIcon = KisIconUtils::loadIcon("transform-move").pixmap(d->config.handleSize(), QIcon::Normal, QIcon::On);
-    d->verticalHandleIcon = KisIconUtils::loadIcon("transform-move").pixmap(d->config.handleSize(), QIcon::Normal, QIcon::On);
+    d->horizontalIcon = KisIconUtils::loadIcon("mirrorAxis-HorizontalMove").pixmap(d->config.handleSize(), QIcon::Normal, QIcon::On).toImage();
+    d->verticalIcon = KisIconUtils::loadIcon("mirrorAxis-VerticalMove").pixmap(d->config.handleSize(), QIcon::Normal, QIcon::On).toImage();
+    d->horizontalHandleIcon = KisIconUtils::loadIcon("transform-move").pixmap(d->config.handleSize(), QIcon::Normal, QIcon::On).toImage();
+    d->verticalHandleIcon = KisIconUtils::loadIcon("transform-move").pixmap(d->config.handleSize(), QIcon::Normal, QIcon::On).toImage();
     setVisible(d->config.mirrorHorizontal() || d->config.mirrorVertical());
 
     d->image = parent->canvasBase()->image();
@@ -117,10 +118,10 @@ void KisMirrorAxis::setHandleSize(float newSize)
 {
     if(d->config.handleSize() != newSize) {
         d->config.setHandleSize(newSize);
-        d->horizontalIcon = KisIconUtils::loadIcon("symmetry-horizontal").pixmap(d->config.handleSize(), QIcon::Normal, QIcon::On);
-        d->verticalIcon = KisIconUtils::loadIcon("symmetry-vertical").pixmap(d->config.handleSize(), QIcon::Normal, QIcon::On);
-        d->horizontalHandleIcon = KisIconUtils::loadIcon("transform-move").pixmap(d->config.handleSize(), QIcon::Normal, QIcon::On);
-        d->verticalHandleIcon = KisIconUtils::loadIcon("transform-move").pixmap(d->config.handleSize(), QIcon::Normal, QIcon::On);
+        d->horizontalIcon = KisIconUtils::loadIcon("symmetry-horizontal").pixmap(d->config.handleSize(), QIcon::Normal, QIcon::On).toImage();
+        d->verticalIcon = KisIconUtils::loadIcon("symmetry-vertical").pixmap(d->config.handleSize(), QIcon::Normal, QIcon::On).toImage();
+        d->horizontalHandleIcon = KisIconUtils::loadIcon("transform-move").pixmap(d->config.handleSize(), QIcon::Normal, QIcon::On).toImage();
+        d->verticalHandleIcon = KisIconUtils::loadIcon("transform-move").pixmap(d->config.handleSize(), QIcon::Normal, QIcon::On).toImage();
         d->minHandlePosition = d->sideMargin + newSize;
         Q_EMIT handleSizeChanged();
         Q_EMIT sigConfigChanged();
@@ -139,15 +140,20 @@ void KisMirrorAxis::drawDecoration(QPainter& gc, const QRectF& updateArea, const
 
     gc.save();
 
-    QPen pen1(QColor(0, 0, 0, 64), 2 * decorationThickness(), Qt::DashDotDotLine, Qt::RoundCap, Qt::RoundJoin);
+    KoColor c;
+    c.fromQColor(QColor(0, 0, 0, 64));
+
+    QPen pen1(canvas->displayRendererInterface()->convertColorToDisplayColorSpace(c), 2 * decorationThickness(), Qt::DashDotDotLine, Qt::RoundCap, Qt::RoundJoin);
     pen1.setCosmetic(true);
     QPen pen2 = pen1;
-    pen2.setColor(QColor(0, 0, 0, 128));
+    c.fromQColor(QColor(0, 0, 0, 128));
+    pen2.setColor(canvas->displayRendererInterface()->convertColorToDisplayColorSpace(c));
     pen2.setStyle(Qt::SolidLine);
     QPen pen3 = pen2;
     pen3.setWidth(1 * decorationThickness());
     gc.setPen(pen3);
-    gc.setBrush(Qt::white);
+    c.fromQColor(Qt::white);
+    gc.setBrush(canvas->displayRendererInterface()->convertColorToDisplayColorSpace(c));
     gc.setRenderHints(QPainter::Antialiasing | QPainter::SmoothPixmapTransform);
 
     QOpenGLContext *ctx = QOpenGLContext::currentContext();
@@ -189,7 +195,7 @@ void KisMirrorAxis::drawDecoration(QPainter& gc, const QRectF& updateArea, const
             if (!d->config.lockHorizontal()) {
                 gc.setPen(pen2);
                 gc.drawEllipse(d->horizontalHandle);
-                gc.drawPixmap(d->horizontalHandle.adjusted(5, 5, -5, -5).toRect(), d->horizontalIcon);
+                gc.drawImage(d->horizontalHandle.adjusted(5, 5, -5, -5).toRect(), canvas->displayRendererInterface()->convertImageToDisplayColorSpace(d->horizontalIcon));
             }
 
         } else {
@@ -215,7 +221,7 @@ void KisMirrorAxis::drawDecoration(QPainter& gc, const QRectF& updateArea, const
             if (!d->config.lockVertical()) {
                 gc.setPen(pen2);
                 gc.drawEllipse(d->verticalHandle);
-                gc.drawPixmap(d->verticalHandle.adjusted(5, 5, -5, -5).toRect(), d->verticalIcon);
+                gc.drawImage(d->verticalHandle.adjusted(5, 5, -5, -5).toRect(), canvas->displayRendererInterface()->convertImageToDisplayColorSpace(d->verticalIcon));
             }
 
         } else {

@@ -13,6 +13,7 @@
 #include <KoViewConverter.h>
 #include <KoCanvasBase.h>
 #include <KoCanvasResourceProvider.h>
+#include <KoColorDisplayRendererInterface.h>
 
 #include <QPainter>
 #include <QPainterPath>
@@ -208,7 +209,7 @@ QRectF KoSnapGuide::boundingRect()
     }
 }
 
-void KoSnapGuide::paint(QPainter &painter, const KoViewConverter &converter)
+void KoSnapGuide::paint(QPainter &painter, const KoViewConverter &converter, const KoColorDisplayRendererInterface *displayRenderer)
 {
     if (! d->currentStrategy || ! d->active)
         return;
@@ -219,13 +220,17 @@ void KoSnapGuide::paint(QPainter &painter, const KoViewConverter &converter)
 
     painter.setBrush(Qt::NoBrush);
 
-    QPen whitePen(Qt::white, thickness);
+    KoColor c;
+    c.fromQColor(Qt::white);
+
+    QPen whitePen(displayRenderer->convertColorToDisplayColorSpace(c), thickness);
     whitePen.setCosmetic(true);
     whitePen.setStyle(Qt::SolidLine);
     painter.setPen(whitePen);
     painter.drawPath(decoration);
 
-    QPen redPen(Qt::red, thickness);
+    c.fromQColor(Qt::red);
+    QPen redPen(displayRenderer->convertColorToDisplayColorSpace(c), thickness);
     redPen.setCosmetic(true);
     redPen.setStyle(Qt::DotLine);
     painter.setPen(redPen);

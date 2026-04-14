@@ -509,7 +509,7 @@ void KoPathTool::paint(QPainter &painter, const KoViewConverter &converter)
     if (m_currentStrategy) {
         painter.save();
         painter.setTransform(converter.documentToView(), true);
-        d->canvas->snapGuide()->paint(painter, converter);
+        d->canvas->snapGuide()->paint(painter, converter, canvas()->displayRendererInterface());
         painter.restore();
     }
 }

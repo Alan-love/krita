@@ -756,7 +756,7 @@ void SvgTextTool::paint(QPainter &gc, const KoViewConverter &converter)
     }
     if (m_interactionStrategy) {
         gc.save();
-        canvas()->snapGuide()->paint(gc, converter);
+        canvas()->snapGuide()->paint(gc, converter, canvas()->displayRendererInterface());
         gc.restore();
     }
 

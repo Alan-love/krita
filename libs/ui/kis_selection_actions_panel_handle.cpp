@@ -57,7 +57,7 @@ void KisSelectionActionsPanelHandle::draw(QPainter& painter, const KoColorDispla
     QImage ic = renderInterface->convertImageToDisplayColorSpace(d->handle_icon.pixmap(d->size, d->size).toImage());
 #if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
     QRect target = QRect(QPoint(0, 0), ic.size()/ic.devicePixelRatioF());
-#elif
+#else
     QRect target = QRect(QPoint(0, 0), ic.deviceIndependentSize().toSize());
 #endif
     target.moveCenter(rect.center() + QPoint(3, 0));

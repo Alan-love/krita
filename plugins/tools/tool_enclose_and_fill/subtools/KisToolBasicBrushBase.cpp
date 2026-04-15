@@ -19,6 +19,7 @@
 #include <kis_image_config.h>
 #include <brushengine/kis_paintop_preset.h>
 #include <kis_tool_utils.h>
+#include <KoColorDisplayRendererInterface.h>
 
 #include "KisToolBasicBrushBase.h"
 
@@ -26,10 +27,13 @@ KisToolBasicBrushBase::KisToolBasicBrushBase(KoCanvasBase * canvas, ToolType typ
     : KisToolShape(canvas, cursor)
     , m_type(type)
     , m_previewColor(0, 255, 0, 128)
+    , m_displayRenderer(canvas->displayRendererInterface())
 {
     setSupportOutline(true);
     connect(KisConfigNotifier::instance(), SIGNAL(configChanged()), SLOT(updateSettings()));
+    connect(m_displayRenderer, SIGNAL(displayConfigurationChanged), this, SLOT(updatePreviewColor()));
     updateSettings();
+    updatePreviewColor();
 }
 
 KisToolBasicBrushBase::~KisToolBasicBrushBase()
@@ -333,6 +337,12 @@ void KisToolBasicBrushBase::resetCursorStyle()
         KisToolPaint::resetCursorStyle();
         break;
     }
+}
+
+void KisToolBasicBrushBase::updatePreviewColor()
+{
+    KoColor c(QColor(0, 255, 0, 128), KoColorSpaceRegistry::instance()->rgb8());
+    m_previewColor = m_displayRenderer->convertColorToDisplayColorSpace(c);
 }
 
 qreal KisToolBasicBrushBase::pressureToCurve(qreal pressure)

@@ -32,6 +32,10 @@
 #include "kis_fixed_paint_device.h"
 #include "KisDisplayConfig.h"
 
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
+#include <QGuiApplication>
+#endif
+
 Q_GLOBAL_STATIC(KisDisplayColorConverter, s_instance)
 
 

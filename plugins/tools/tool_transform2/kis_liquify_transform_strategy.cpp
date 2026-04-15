@@ -114,8 +114,9 @@ QCursor KisLiquifyTransformStrategy::getCurrentCursor() const
     return Qt::BlankCursor;
 }
 
-void KisLiquifyTransformStrategy::paint(QPainter &gc)
+void KisLiquifyTransformStrategy::paint(QPainter &gc, const KoColorDisplayRendererInterface *displayRendererInterface)
 {
+    Q_UNUSED(displayRendererInterface)
     // Draw preview image
 
     if (m_d->recalculateOnNextRedraw) {

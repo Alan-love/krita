@@ -19,6 +19,7 @@ class QPainter;
 class QCursor;
 class KoPointerEvent;
 class QPainterPath;
+class KoColorDisplayRendererInterface;
 
 
 class KisTransformStrategyBase : public QObject
@@ -36,7 +37,7 @@ public:
 
     virtual bool acceptsClicks() const;
 
-    virtual void paint(QPainter &gc) = 0;
+    virtual void paint(QPainter &gc, const KoColorDisplayRendererInterface *displayRendererInterface) = 0;
     virtual QCursor getCurrentCursor() const = 0;
     virtual QPainterPath getCursorOutline() const;
 

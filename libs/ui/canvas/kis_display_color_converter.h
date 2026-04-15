@@ -81,7 +81,15 @@ public:
      */
     QColor convertColorToDisplayColorSpace(const KoColor color, bool applyOcio = false) const;
 
-    QImage convertImageToDisplayColorSpace(KisPaintDeviceSP srcDevice) const;
+    /**
+     * @brief convertImageToDisplayColorSpace
+     * Same as convertColorToDisplayColorSpace, but then for a KisPaintDevice.
+     * @param srcDevice -- src device to process.
+     * @param source -- source rect.
+     * @param applyOcio -- whether to also apply OCIO. Only useful for previews and not UI elements.
+     * @return a QImage in the display color space.
+     */
+    QImage convertImageToDisplayColorSpace(KisPaintDeviceSP srcDevice, QRect source = QRect(), bool applyOcio = false) const;
 
     /**
      * @brief handlePaletteForDisplayColorSpace

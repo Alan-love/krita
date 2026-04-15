@@ -198,6 +198,7 @@ bool KisAsyncColorSamplerHelper::isActive() const
 
 void KisAsyncColorSamplerHelper::activate(bool sampleCurrentLayer, bool pickFgColor)
 {
+
     KIS_SAFE_ASSERT_RECOVER_RETURN(!m_d->isActive);
     m_d->isActive = true;
 

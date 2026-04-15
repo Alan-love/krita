@@ -57,6 +57,7 @@
 
 #include <KoShapeTransformCommand.h>
 #include <KoCanvasController.h>
+#include <kis_display_color_converter.h>
 
 #include "kis_action_registry.h"
 
@@ -293,7 +294,7 @@ void KisToolTransform::paint(QPainter& gc, const KoViewConverter &converter)
         currentStrategy()->externalConfigChanged();
     }
     currentStrategy()->setDecorationThickness(decorationThickness());
-    currentStrategy()->paint(gc);
+    currentStrategy()->paint(gc, m_canvas->displayRendererInterface());
 
 
     if (!m_cursorOutline.isEmpty()) {
@@ -777,18 +778,16 @@ void KisToolTransform::initThumbnailImage(KisPaintDeviceSP previewDevice)
 
             QRect thumbRect = scaleTransform.mapRect(m_transaction.originalRect()).toAlignedRect();
 
-            origImg = m_selectedPortionCache->
-                    createThumbnailUncached(thumbRect.width(),
-                                    thumbRect.height(),
-                                    srcRect, 1,
-                                    KoColorConversionTransformation::internalRenderingIntent(),
-                                    KoColorConversionTransformation::internalConversionFlags());
+            QSize size = thumbRect.size();
+            if (size.width() < 1) size.setWidth(1);
+            if (size.height() < 1) size.setHeight(1);
+            KisPaintDeviceSP dev = m_selectedPortionCache->createThumbnailDeviceOversampled(size.width(), size.height(), 1, srcRect);
+            origImg = m_canvas->displayColorConverter()->convertImageToDisplayColorSpace(dev, QRect(QPoint(0, 0), size), true);
+
             thumbToImageTransform = scaleTransform.inverted();
 
         } else {
-            origImg = m_selectedPortionCache->convertToQImage(0, x, y, w, h,
-                                                              KoColorConversionTransformation::internalRenderingIntent(),
-                                                              KoColorConversionTransformation::internalConversionFlags());
+            origImg = m_canvas->displayColorConverter()->convertImageToDisplayColorSpace(m_selectedPortionCache, QRect(x, y, w, h), true);
             thumbToImageTransform = QTransform();
         }
     }

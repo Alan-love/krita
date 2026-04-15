@@ -725,11 +725,28 @@ QColor KisDisplayColorConverter::convertColorToDisplayColorSpace(const KoColor c
     return QColor::fromRgbF(sorted[0], sorted[1], sorted[2], sorted[3]);
 }
 
-QImage KisDisplayColorConverter::convertImageToDisplayColorSpace(KisPaintDeviceSP srcDevice) const
+QImage KisDisplayColorConverter::convertImageToDisplayColorSpace(KisPaintDeviceSP srcDevice, QRect source, bool applyOcio) const
 {
     KisPaintDeviceSP conversionDevice = new KisPaintDevice(*srcDevice.data());
+    const QRect s = source.isValid()? source: conversionDevice->exactBounds();
+
+    if (m_d->useOcio() && applyOcio) {
+        KIS_ASSERT_RECOVER(m_d->ocioInputColorSpace()->pixelSize() == 16) {
+            return QImage();
+        }
+
+        conversionDevice->convertTo(m_d->ocioInputColorSpace());
+        KisSequentialIterator it(conversionDevice, s);
+        int numConseqPixels = it.nConseqPixels();
+        while (it.nextPixels(numConseqPixels)) {
+            numConseqPixels = it.nConseqPixels();
+            m_d->displayFilter->filter(it.rawData(), numConseqPixels);
+        }
+        conversionDevice->setProfile(m_d->ocioOutputProfile(), 0);
+    }
+
     conversionDevice->convertTo(m_d->openGLSurfaceColorSpace(Float32BitsColorDepthID), m_d->multiSurfaceDisplayConfig.intent, m_d->multiSurfaceDisplayConfig.conversionFlags);
-    return conversionDevice->convertToQImage(m_d->openGLSurfaceProfile(), m_d->multiSurfaceDisplayConfig.intent, m_d->multiSurfaceDisplayConfig.conversionFlags);
+    return conversionDevice->convertToQImage(m_d->openGLSurfaceProfile(), s, m_d->multiSurfaceDisplayConfig.intent, m_d->multiSurfaceDisplayConfig.conversionFlags);
 }
 
 KisHandlePalette KisDisplayColorConverter::handlePaletteForDisplayColorSpace() const

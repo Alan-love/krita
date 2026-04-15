@@ -559,6 +559,31 @@ QPointF KisPaintingAssistantsDecoration::snapToGuide(const QPointF& pt, const QP
  * we potentially could make some of these inline to speed up performance
 */
 
+void drawSingleState(QPainter& gc, const QImage &icon, QRect maxRect, const QPoint &position, const KoColorDisplayRendererInterface *renderInterface, QPoint additional = QPoint()) {
+    maxRect.moveTopLeft(position+additional);
+    const QMargins m(2, 2, 2, 2);
+    QRect target(QPoint(), (icon.size()/icon.devicePixelRatioF()));
+    target.moveCenter(maxRect.center());
+    target = target.marginsRemoved(m);
+    gc.drawImage(target.intersected(maxRect), renderInterface->convertImageToDisplayColorSpace(icon));
+}
+
+void drawDoubleState(QPainter& gc, const QImage &icon, const QImage &icon2, QRect maxRect, const QPoint &position, const bool state, const KoColorDisplayRendererInterface *renderInterface) {
+    maxRect.moveTopLeft(position);
+    const QMargins m(2, 2, 2, 2);
+    QRect target(QPoint(), (icon.size()/icon.devicePixelRatioF()));
+    target.moveCenter(maxRect.center());
+    target = target.marginsRemoved(m);
+    if (state) {
+        gc.drawImage(target.intersected(maxRect), renderInterface->convertImageToDisplayColorSpace(icon));
+    } else {
+        gc.save();
+        gc.setOpacity(0.35);
+        gc.drawImage(target.intersected(maxRect.marginsRemoved(m)), renderInterface->convertImageToDisplayColorSpace(icon2));
+        gc.restore();
+    }
+}
+
 void KisPaintingAssistantsDecoration::drawEditorWidget(KisPaintingAssistantSP assistant, QPainter& gc, const KisCoordinatesConverter *converter, const KoColorDisplayRendererInterface *renderInterface)
 {
     if (!assistant->isAssistantComplete() || !globalEditorWidgetData.widgetActivated) {
@@ -597,7 +622,6 @@ void KisPaintingAssistantsDecoration::drawEditorWidget(KisPaintingAssistantSP as
     gc.drawPath(bgPath);
     gc.fillPath(bgPath, backgroundColor);
 
-
     //draw drag handle
     KoColor c;
     c.fromQColor(QColor(150,150,150,255));
@@ -625,49 +649,26 @@ void KisPaintingAssistantsDecoration::drawEditorWidget(KisPaintingAssistantSP as
     dragRectDots.translate((globalEditorWidgetData.dragDecorationWidth/2)+width,(globalEditorWidgetData.boundingSize.height()/2)+actionsPosition.y()+globalEditorWidgetData.widgetOffset);
     gc.fillPath(dragRectDots,dragDecorationDotsColor);
 
-
+    QRect buttonRect(QPoint(0,0), QSize(globalEditorWidgetData.buttonSize, globalEditorWidgetData.buttonSize));
     //loop over all visible buttons and render them
     if (globalEditorWidgetData.moveButtonActivated) {
-        QPointF iconMovePosition(actionsPosition + globalEditorWidgetData.moveIconPosition);
-        gc.drawImage(iconMovePosition, renderInterface->convertImageToDisplayColorSpace(globalEditorWidgetData.m_iconMove));
+        QPoint pos = QPointF(actionsPosition + globalEditorWidgetData.moveIconPosition).toPoint();
+        drawSingleState(gc, globalEditorWidgetData.m_iconMove, buttonRect, pos, renderInterface, QPoint(5, 5));
     }
     if (globalEditorWidgetData.snapButtonActivated) {
-        QPointF iconSnapPosition(actionsPosition + globalEditorWidgetData.snapIconPosition);
-        if (assistant->isSnappingActive() == true) {
-            gc.drawImage(iconSnapPosition, renderInterface->convertImageToDisplayColorSpace(globalEditorWidgetData.m_iconSnapOn));
-        }else {
-            gc.drawImage(iconSnapPosition, renderInterface->convertImageToDisplayColorSpace(globalEditorWidgetData.m_iconSnapOff));
-        }
+        QPoint pos = QPointF(actionsPosition + globalEditorWidgetData.snapIconPosition).toPoint();
+        drawDoubleState(gc, globalEditorWidgetData.m_iconSnapOn, globalEditorWidgetData.m_iconSnapOff, buttonRect, pos, assistant->isSnappingActive(), renderInterface);
     }
     if (globalEditorWidgetData.lockButtonActivated) {
-        QPointF iconLockedPosition(actionsPosition + globalEditorWidgetData.lockedIconPosition);
-        if (assistant->isLocked()) {
-            gc.drawImage(iconLockedPosition, renderInterface->convertImageToDisplayColorSpace(globalEditorWidgetData.m_iconLockOn));
-        } else {
-            qreal oldOpacity = gc.opacity();
-            gc.setOpacity(0.35);
-            gc.drawImage(iconLockedPosition, renderInterface->convertImageToDisplayColorSpace(globalEditorWidgetData.m_iconLockOff));
-            gc.setOpacity(oldOpacity);
-        }
+        QPoint pos = QPointF(actionsPosition + globalEditorWidgetData.lockedIconPosition).toPoint();
+        drawDoubleState(gc, globalEditorWidgetData.m_iconLockOn, globalEditorWidgetData.m_iconLockOff, buttonRect, pos, assistant->isLocked(), renderInterface);
     }
     if (globalEditorWidgetData.duplicateButtonActivated) {
-        QPointF iconDuplicatePosition(actionsPosition + globalEditorWidgetData.duplicateIconPosition);
-        if(assistant->isDuplicating()) {
-            //draw button depressed
-            qreal oldOpacity = gc.opacity();
-            gc.setOpacity(0.35);
-            gc.drawImage(iconDuplicatePosition, renderInterface->convertImageToDisplayColorSpace(globalEditorWidgetData.m_iconDuplicate));
-            gc.setOpacity(oldOpacity);
-        }else {
-            gc.drawImage(iconDuplicatePosition, renderInterface->convertImageToDisplayColorSpace(globalEditorWidgetData.m_iconDuplicate));
-        }
+        QPoint pos = QPointF(actionsPosition + globalEditorWidgetData.duplicateIconPosition).toPoint();
+        drawDoubleState(gc, globalEditorWidgetData.m_iconDuplicate, globalEditorWidgetData.m_iconDuplicate, buttonRect, pos, !assistant->isDuplicating(), renderInterface);
     }
     if (globalEditorWidgetData.deleteButtonActivated) {
-        QPointF iconDeletePosition(actionsPosition + globalEditorWidgetData.deleteIconPosition);
-        gc.drawImage(iconDeletePosition, renderInterface->convertImageToDisplayColorSpace(globalEditorWidgetData.m_iconDelete));
+        QPoint pos = QPointF(actionsPosition + globalEditorWidgetData.deleteIconPosition).toPoint();
+        drawSingleState(gc, globalEditorWidgetData.m_iconDelete, buttonRect, pos, renderInterface);
     }
-
-
-
-
 }

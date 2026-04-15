@@ -241,7 +241,7 @@ void KisAsyncColorSamplerHelper::activatePreview()
 
     const KoColor currentColor =
         m_d->canvas->resourceManager()->koColorResource(m_d->sampleResourceId);
-    const QColor previewColor = m_d->canvas->displayColorConverter()->convertColorToDisplayColorSpace(currentColor);
+    const QColor previewColor = m_d->canvas->displayColorConverter()->convertColorToDisplayColorSpace(currentColor, true);
 
     m_d->currentColor = previewColor;
     m_d->baseColor = previewColor;
@@ -602,7 +602,7 @@ void KisAsyncColorSamplerHelper::slotColorSamplingFinished(const KoColor &rawCol
 
     if (!m_d->showPreview) return;
 
-    const QColor previewColor = m_d->canvas->displayColorConverter()->convertColorToDisplayColorSpace(color);
+    const QColor previewColor = m_d->canvas->displayColorConverter()->convertColorToDisplayColorSpace(color, true);
 
     if (!m_d->haveSample || m_d->currentColor != previewColor) {
         m_d->haveSample = true;

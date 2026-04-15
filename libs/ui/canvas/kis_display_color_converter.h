@@ -76,9 +76,10 @@ public:
      * data into a QColor for display. This function is used to draw canvas decorations into
      * the canvas colorspace, as required for proper HDR and wide gamut support.
      * @param color the KoColor to convert.
+     * @param applyOcio whether to also apply OCIO. This is only really relevant for color pickers.
      * @return a QColor in the display color space.
      */
-    QColor convertColorToDisplayColorSpace(const KoColor color) const;
+    QColor convertColorToDisplayColorSpace(const KoColor color, bool applyOcio = false) const;
 
     QImage convertImageToDisplayColorSpace(KisPaintDeviceSP srcDevice) const;
 

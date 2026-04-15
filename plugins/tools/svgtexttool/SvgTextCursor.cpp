@@ -5,6 +5,7 @@
  */
 #include "SvgTextCursor.h"
 #include "KoCanvasBase.h"
+#include "KoColorDisplayRendererInterface.h"
 #include "KoSvgTextProperties.h"
 #include "SvgTextInsertCommand.h"
 #include "SvgTextInsertRichCommand.h"
@@ -831,12 +832,12 @@ void SvgTextCursor::deselectText()
     setPos(d->pos, d->pos);
 }
 
-static QColor bgColorForCaret(QColor c, KisHandlePalette handlePalette, int opacity = 64) {
-
+static QColor bgColorForCaret(QColor c, KisHandlePalette handlePalette, int opacity = 64)
+{
     if (KisPaintingTweaks::luminosityCoarse(c) > 0.8) {
-        return QColor(0, 0, 0, opacity);
+        return QColor(handlePalette.black.red(), handlePalette.black.green(), handlePalette.black.blue(), opacity);
     } else {
-        return handlePalette.white;
+        return QColor(handlePalette.white.red(), handlePalette.white.green(), handlePalette.white.blue(), opacity);
     }
 }
 
@@ -863,7 +864,7 @@ void SvgTextCursor::paintDecorations(QPainter &gc, QColor selectionColor, int de
             pen.setWidth((d->cursorWidth + 2) * decorationThickness);
             gc.setPen(pen);
             gc.drawPath(d->cursorShape);
-            pen.setColor(c);
+            pen.setColor(d->canvas->displayRendererInterface()->convertColorToDisplayColorSpace(KoColor(c, KoColorSpaceRegistry::instance()->rgb8())) );
             pen.setWidth(d->cursorWidth * decorationThickness);
             gc.setPen(pen);
             gc.drawPath(d->cursorShape);

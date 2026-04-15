@@ -696,9 +696,15 @@ void KisDisplayColorConverter::applyDisplayFilteringF32(KisFixedPaintDeviceSP de
     device->convertTo(dstColorSpace);
 }
 
-QColor KisDisplayColorConverter::convertColorToDisplayColorSpace(const KoColor color) const
+QColor KisDisplayColorConverter::convertColorToDisplayColorSpace(const KoColor color, bool applyOcio) const
 {
-    KoColor newColor = applyDisplayFiltering(color, Float32BitsColorDepthID);
+    KoColor newColor;
+    if (applyOcio) {
+        newColor = applyDisplayFiltering(color, Float32BitsColorDepthID);
+    } else {
+        newColor = KoColor(color);
+        newColor.convertTo(m_d->openGLSurfaceColorSpace(Float32BitsColorDepthID), m_d->multiSurfaceDisplayConfig.intent, m_d->multiSurfaceDisplayConfig.conversionFlags);
+    }
 
     /// No idea why it wouldn't be RGBAColorModelID, but do something useful in any case...
     KIS_SAFE_ASSERT_RECOVER_RETURN_VALUE(newColor.colorSpace()->colorModelId() == RGBAColorModelID, newColor.toQColor());

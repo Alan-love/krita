@@ -65,8 +65,8 @@ parts:
     stage-packages:
       - libassuan0
       - libgpg-error0
-    source: https://www.gnupg.org/ftp/gcrypt/gpgme/gpgme-1.23.2.tar.bz2
-    source-checksum: sha256/9499e8b1f33cccb6815527a1bc16049d35a6198a6c5fae0185f2bd561bce5224
+    source: https://github.com/gpg/gpgme.git
+    source-tag: gpgme-2.0.1
     plugin: autotools
     autotools-configure-parameters:
       - --disable-gpgsm-test

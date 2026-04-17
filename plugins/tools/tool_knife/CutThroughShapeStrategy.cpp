@@ -25,6 +25,7 @@
 #include <KoKeepShapesSelectedCommand.h>
 #include <QtMath>
 #include <KoSvgTextShape.h>
+#include <KoColorDisplayRendererInterface.h>
 
 
 CutThroughShapeStrategy::CutThroughShapeStrategy(KoToolBase *tool, KoSelection *selection, const QList<KoShape *> &shapes, QPointF startPoint, const GutterWidthsConfig &width)
@@ -314,11 +315,13 @@ void CutThroughShapeStrategy::finishInteraction(Qt::KeyboardModifiers modifiers)
 
 }
 
-void CutThroughShapeStrategy::paint(QPainter &painter, const KoViewConverter &converter)
+void CutThroughShapeStrategy::paint(QPainter &painter, const KoViewConverter &converter, const KoColorDisplayRendererInterface *displayRendererInterface)
 {
     painter.save();
 
-    QColor semitransparentGray = QColor(Qt::darkGray);
+    KoColor c;
+    c.fromQColor(Qt::darkGray);
+    QColor semitransparentGray = displayRendererInterface->convertColorToDisplayColorSpace(c);
     semitransparentGray.setAlphaF(0.6);
     QPen pen = QPen(QBrush(semitransparentGray), 2);
     painter.setPen(pen);

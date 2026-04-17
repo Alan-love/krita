@@ -26,6 +26,7 @@
 #include "kis_datamanager.h"
 
 #include "KoColorSpaceRegistry.h"
+#include <kis_display_color_converter.h>
 #include <KisCursorOverrideLock.h>
 
 #include "kis_tool_smart_patch_options_widget.h"
@@ -255,8 +256,10 @@ void KisToolSmartPatch::paint(QPainter &painter, const KoViewConverter &converte
 
     painter.save();
     painter.setBrush(Qt::magenta);
-    QImage img = m_d->maskDev->convertToQImage(0);
+    KisCanvas2 * kiscanvas = dynamic_cast<KisCanvas2*>(canvas());
+    QImage img = kiscanvas->displayColorConverter()->convertImageToDisplayColorSpace(m_d->maskDev);
     if( !img.size().isEmpty() ){
+
         painter.drawImage(pixelToView(m_d->maskDev->exactBounds()), img);
     }
     painter.restore();

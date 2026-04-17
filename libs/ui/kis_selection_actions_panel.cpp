@@ -1,3 +1,4 @@
+
 /*
  *  SPDX-FileCopyrightText: 2025 Ross Rosales <ross.erosales@gmail.com>
  *
@@ -33,6 +34,8 @@
 #include <QApplication>
 #include <QPainter>
 #include <QPainterPath>
+
+#include <KoColorDisplayRendererInterface.h>
 
 static constexpr int BUTTON_SIZE = 30;
 static constexpr int BUFFER_SPACE = 5;
@@ -105,7 +108,7 @@ KisSelectionActionsPanel::~KisSelectionActionsPanel()
 {
 }
 
-void KisSelectionActionsPanel::draw(QPainter &painter)
+void KisSelectionActionsPanel::draw(QPainter &painter, const KoColorDisplayRendererInterface *displayRendererInterface)
 {
     KisSelectionSP selection = d->m_viewManager->selection();
 
@@ -113,12 +116,12 @@ void KisSelectionActionsPanel::draw(QPainter &painter)
         return;
     }
 
-    drawActionBarBackground(painter);
+    drawActionBarBackground(painter, displayRendererInterface);
     Q_FOREACH(KisSelectionActionsPanelButton* button, d->m_buttons){
-        button->draw(painter);
+        button->draw(painter, displayRendererInterface);
     }
 
-    d->m_handleWidget->draw(painter);
+    d->m_handleWidget->draw(painter, displayRendererInterface);
 }
 
 void KisSelectionActionsPanel::setVisible(bool p_visible)
@@ -293,7 +296,7 @@ QPoint KisSelectionActionsPanel::initialDragHandlePosition() const
     return updateCanvasBoundaries(widgetBottomCenter.toPoint(), d->m_viewManager->canvas());
 }
 
-void KisSelectionActionsPanel::drawActionBarBackground(QPainter &painter) const
+void KisSelectionActionsPanel::drawActionBarBackground(QPainter &painter, const KoColorDisplayRendererInterface *displayRendererInterface) const
 {
     const int cornerRadius = 4;
     QColor outlineColor = qApp->palette().window().color();
@@ -306,6 +309,13 @@ void KisSelectionActionsPanel::drawActionBarBackground(QPainter &painter) const
     }
 
     KisPaintingTweaks::dragColor(&bgColor,  outlineColor, 0.25);
+
+    // Manually convert here, to keep as much consistency as possible.
+    KoColor c;
+    c.fromQColor(bgColor);
+    bgColor = displayRendererInterface->convertColorToDisplayColorSpace(c);
+    c.fromQColor(outlineColor);
+    outlineColor = displayRendererInterface->convertColorToDisplayColorSpace(c);
 
     QColor bgColorTrans = bgColor;
     bgColorTrans.setAlpha(80);

@@ -39,7 +39,7 @@ public:
     void setTransformFunction(const QPointF &mousePos, bool perspectiveModifierActive, bool shiftModifierActive, bool altModifierActive) override;
     void setTransformType(TransformType type);
 
-    void paint(QPainter &gc) override;
+    void paint(QPainter &gc, const KoColorDisplayRendererInterface *displayRendererInterface) override;
     QCursor getCurrentCursor() const override;
 
     void externalConfigChanged() override;

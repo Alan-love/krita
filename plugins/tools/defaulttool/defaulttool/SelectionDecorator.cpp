@@ -22,6 +22,7 @@
 #include "KoShapeGradientHandles.h"
 #include <KoCanvasBase.h>
 #include <KoSvgTextShape.h>
+#include <KoColorDisplayRendererInterface.h>
 
 #include "kis_painting_tweaks.h"
 #include "kis_coordinates_converter.h"
@@ -31,8 +32,9 @@
 
 #define HANDLE_DISTANCE 10
 
-SelectionDecorator::SelectionDecorator(KoCanvasResourceProvider *resourceManager)
+SelectionDecorator::SelectionDecorator(KoCanvasResourceProvider *resourceManager, KoColorDisplayRendererInterface *displayInterface)
     : m_hotPosition(KoFlake::Center)
+    , m_rendererInterface(displayInterface)
     , m_handleRadius(7)
     , m_decorationThickness(1)
     , m_showFillGradientHandles(false)
@@ -86,6 +88,8 @@ void SelectionDecorator::paint(QPainter &painter, const KoViewConverter &convert
     QList<KoShape*> selectedShapes = m_selection->selectedVisibleShapes();
     if (selectedShapes.isEmpty()) return;
 
+    const KisHandlePalette palette = m_rendererInterface->handlePaletteForDisplayColorSpace();
+
     const bool haveOnlyOneEditableShape =
         m_selection->selectedEditableShapes().size() == 1 &&
         selectedShapes.size() == 1;
@@ -98,7 +102,7 @@ void SelectionDecorator::paint(QPainter &painter, const KoViewConverter &convert
             KisHandlePainterHelper helper =
                 KoShape::createHandlePainterHelperView(&painter, shape, converter, m_handleRadius, m_decorationThickness);
 
-            helper.setHandleStyle(KisHandleStyle::secondarySelection());
+            helper.setHandleStyle(KisHandleStyle::secondarySelection(palette));
 
             if (!m_forceShapeOutlines) {
                 helper.drawRubberLine(shape->outlineRect());
@@ -131,7 +135,7 @@ void SelectionDecorator::paint(QPainter &painter, const KoViewConverter &convert
         KisHandlePainterHelper helper =
             KoShape::createHandlePainterHelperView(&painter, m_selection, converter, m_handleRadius, m_decorationThickness);
 
-        helper.setHandleStyle(KisHandleStyle::primarySelection());
+        helper.setHandleStyle(KisHandleStyle::primarySelection(palette));
         helper.drawRubberLine(handleArea);
     }
 
@@ -140,7 +144,7 @@ void SelectionDecorator::paint(QPainter &painter, const KoViewConverter &convert
     if (editable) {
         KisHandlePainterHelper helper =
             KoShape::createHandlePainterHelperView(&painter, m_selection, converter, m_handleRadius, m_decorationThickness);
-        helper.setHandleStyle(KisHandleStyle::primarySelection());
+        helper.setHandleStyle(KisHandleStyle::primarySelection(palette));
 
         QPolygonF outline = handleArea;
 
@@ -155,7 +159,7 @@ void SelectionDecorator::paint(QPainter &painter, const KoViewConverter &convert
             helper.drawHandleRect(0.5 * (outline.value(3) + outline.value(0)));
 
             QPointF hotPos = KoFlake::anchorToPoint(m_hotPosition, handleArea);
-            helper.setHandleStyle(KisHandleStyle::highlightedPrimaryHandles());
+            helper.setHandleStyle(KisHandleStyle::highlightedPrimaryHandles(palette));
             helper.drawHandleRect(hotPos);
         }
     }
@@ -181,6 +185,7 @@ void SelectionDecorator::paintGradientHandles(KoShape *shape, KoFlake::FillVaria
 {
     KoShapeGradientHandles gradientHandles(fillVariant, shape);
     QVector<KoShapeGradientHandles::Handle> handles = gradientHandles.handles();
+    const KisHandlePalette palette = m_rendererInterface->handlePaletteForDisplayColorSpace();
 
     KisHandlePainterHelper helper =
         KoShape::createHandlePainterHelperView(&painter, shape, converter, m_handleRadius, m_decorationThickness);
@@ -191,12 +196,12 @@ void SelectionDecorator::paintGradientHandles(KoShape *shape, KoFlake::FillVaria
         KIS_SAFE_ASSERT_RECOVER_NOOP(handles.size() == 2);
 
         if (handles.size() == 2) {
-            helper.setHandleStyle(KisHandleStyle::gradientArrows());
+            helper.setHandleStyle(KisHandleStyle::gradientArrows(palette));
             helper.drawGradientArrow(t.map(handles[0].pos), t.map(handles[1].pos), 1.5 * m_handleRadius);
         }
     }
 
-    helper.setHandleStyle(KisHandleStyle::gradientHandles());
+    helper.setHandleStyle(KisHandleStyle::gradientHandles(palette));
 
     Q_FOREACH (const KoShapeGradientHandles::Handle &h, handles) {
         if (h.type == KoShapeGradientHandles::Handle::RadialCenter) {
@@ -213,10 +218,11 @@ void SelectionDecorator::paintMeshGradientHandles(KoShape *shape,
                                                   const KoViewConverter &converter)
 {
     KoShapeMeshGradientHandles gradientHandles(fillVariant, shape);
+    const KisHandlePalette palette = m_rendererInterface->handlePaletteForDisplayColorSpace();
 
     KisHandlePainterHelper helper =
         KoShape::createHandlePainterHelperView(&painter, shape, converter, m_handleRadius, m_decorationThickness);
-    helper.setHandleStyle(KisHandleStyle::secondarySelection());
+    helper.setHandleStyle(KisHandleStyle::secondarySelection(palette));
 
     helper.drawPath(gradientHandles.path());
 
@@ -233,7 +239,7 @@ void SelectionDecorator::paintMeshGradientHandles(KoShape *shape,
         }
     }
 
-    helper.setHandleStyle(KisHandleStyle::highlightedPrimaryHandlesWithSolidOutline());
+    helper.setHandleStyle(KisHandleStyle::highlightedPrimaryHandlesWithSolidOutline(palette));
 
     // highlight the selected handle (only corner)
     if (m_selectedMeshHandle.type == KoShapeMeshGradientHandles::Handle::Corner) {

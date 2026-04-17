@@ -29,6 +29,7 @@ class KisCoordinatesConverter;
 class KisCanvas2;
 class QDomDocument;
 class QDomElement;
+class KoColorDisplayRendererInterface;
 
 #include <kis_shared_ptr.h>
 #include <KoGenericRegistry.h>
@@ -175,7 +176,7 @@ public:
     QColor assistantCustomColor();
     void setAssistantGlobalColorCache(const QColor &color);
 
-    virtual void drawAssistant(QPainter& gc, const QRectF& updateRect, const KisCoordinatesConverter *converter, bool cached, KisCanvas2 *canvas=0, bool assistantVisible=true, bool previewVisible=true);
+    virtual void drawAssistant(QPainter& gc, const QRectF& updateRect, const KisCoordinatesConverter *converter, const KoColorDisplayRendererInterface *displayRenderInterface, bool cached, KisCanvas2 *canvas=0, bool assistantVisible=true, bool previewVisible=true);
     void uncache();
     const QList<KisPaintingAssistantHandleSP>& handles() const;
     QList<KisPaintingAssistantHandleSP> handles();
@@ -237,12 +238,12 @@ public:
     /**
      * This will render the final output. The drawCache does rendering most of the time so be sure to check that
      */
-    void drawPath(QPainter& painter, const QPainterPath& path, bool drawActive=true);
-    void drawPreview(QPainter& painter, const QPainterPath& path);
+    void drawPath(QPainter& painter, const QPainterPath& path, const KoColorDisplayRendererInterface *displayRenderInterface, bool drawActive=true);
+    void drawPreview(QPainter& painter, const QPainterPath& path, const KoColorDisplayRendererInterface *displayRenderInterface);
     // draw a path in a red color, signalizing incorrect state
-    void drawError(QPainter& painter, const QPainterPath& path);
+    void drawError(QPainter& painter, const QPainterPath& path, const KoColorDisplayRendererInterface *displayRenderInterface);
     // draw a vanishing point marker
-    void drawX(QPainter& painter, const QPointF& pt);
+    void drawX(QPainter& painter, const QPointF& pt, const KoColorDisplayRendererInterface *displayRenderInterface);
     static double norm2(const QPointF& p);
 
     void setDecorationThickness(int thickness);
@@ -253,7 +254,7 @@ protected:
     virtual QRect boundingRect() const;
 
     /// performance layer where the graphics can be drawn from a cache instead of generated every render update
-    virtual void drawCache(QPainter& gc, const KisCoordinatesConverter *converter, bool assistantVisible=true) = 0;
+    virtual void drawCache(QPainter& gc, const KisCoordinatesConverter *converter, const KoColorDisplayRendererInterface *displayRenderInterface, bool assistantVisible=true) = 0;
 
     void initHandles(QList<KisPaintingAssistantHandleSP> _handles);
     QList<KisPaintingAssistantHandleSP> m_handles;

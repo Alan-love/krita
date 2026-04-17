@@ -138,6 +138,7 @@ public Q_SLOTS:
     void setGrowCenter(bool g);
 
     void slotRectChanged();
+    void updateDecorationColors();
 
 private:
     void doCanvasUpdate(const QRect &updateRect);
@@ -204,6 +205,11 @@ private:
     KisConstrainedRect m_finalRect;
     QRect m_initialDragRect;
     QPointF m_dragOffsetDoc;
+
+    QColor m_black{Qt::black};
+    QColor m_transparentBlack{Qt::black};
+    QColor m_transparentGrey{QColor(200, 200, 200, 40)};
+
 };
 
 class KisToolCropFactory : public KoToolFactoryBase

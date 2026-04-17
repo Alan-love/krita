@@ -80,7 +80,7 @@ void RulerAssistant::adjustLine(QPointF &point, QPointF &strokeBegin)
     strokeBegin = project(strokeBegin);
 }
 
-void RulerAssistant::drawSubdivisions(QPainter& gc, const KisCoordinatesConverter *converter) {
+void RulerAssistant::drawSubdivisions(QPainter& gc, const KisCoordinatesConverter *converter, const KoColorDisplayRendererInterface *displayRenderInterface) {
     if (subdivisions() == 0) {
         return;
     }
@@ -142,12 +142,12 @@ void RulerAssistant::drawSubdivisions(QPainter& gc, const KisCoordinatesConverte
   
         gc.save();
         gc.resetTransform();
-        drawPath(gc, path, isSnappingActive());
+        drawPath(gc, path, displayRenderInterface, isSnappingActive());
         gc.restore();
     }
 }
 
-void RulerAssistant::drawHandleAnnotations(QPainter& gc, const KisCoordinatesConverter* converter) {
+void RulerAssistant::drawHandleAnnotations(QPainter& gc, const KisCoordinatesConverter* converter, const KoColorDisplayRendererInterface *displayRenderInterface) {
     gc.save();
     gc.resetTransform();
     
@@ -175,29 +175,29 @@ void RulerAssistant::drawHandleAnnotations(QPainter& gc, const KisCoordinatesCon
         path.arcTo(bounds, i * 180, -90);
     }
     
-    drawPath(gc, path);
+    drawPath(gc, path, displayRenderInterface);
     gc.restore();
 }
 
-void RulerAssistant::drawAssistant(QPainter& gc, const QRectF& updateRect, const KisCoordinatesConverter* converter, bool cached, KisCanvas2* canvas, bool assistantVisible, bool previewVisible)
+void RulerAssistant::drawAssistant(QPainter& gc, const QRectF& updateRect, const KisCoordinatesConverter* converter, const KoColorDisplayRendererInterface *displayRenderInterface, bool cached, KisCanvas2* canvas, bool assistantVisible, bool previewVisible)
 {
     // Draw the subdivisions
     // When the number of subdivisions (or minor subdivisions) is set to
     // 0, the respective feature is turned off and won't be rendered.
     if (assistantVisible && isAssistantComplete() && subdivisions() > 0) {
-        drawSubdivisions(gc, converter);
+        drawSubdivisions(gc, converter, displayRenderInterface);
     }
     
     // Indicate handle type on fixed-length handles
     if (canvas && canvas->paintingAssistantsDecoration()->isEditingAssistants() && hasFixedLength()) {
-        drawHandleAnnotations(gc, converter);
+        drawHandleAnnotations(gc, converter, displayRenderInterface);
     }
     
     // Draw the ruler itself via drawCache
-    KisPaintingAssistant::drawAssistant(gc, updateRect, converter, cached, canvas, assistantVisible, previewVisible);
+    KisPaintingAssistant::drawAssistant(gc, updateRect, converter, displayRenderInterface, cached, canvas, assistantVisible, previewVisible);
 }
 
-void RulerAssistant::drawCache(QPainter& gc, const KisCoordinatesConverter *converter, bool assistantVisible)
+void RulerAssistant::drawCache(QPainter& gc, const KisCoordinatesConverter *converter, const KoColorDisplayRendererInterface *displayRenderInterface, bool assistantVisible)
 {
     if (!assistantVisible || !isAssistantComplete()){
         return;
@@ -213,7 +213,7 @@ void RulerAssistant::drawCache(QPainter& gc, const KisCoordinatesConverter *conv
     QPainterPath path;
     path.moveTo(p1);
     path.lineTo(p2);
-    drawPath(gc, path, isSnappingActive());
+    drawPath(gc, path, displayRenderInterface, isSnappingActive());
 }
 
 QPointF RulerAssistant::getDefaultEditorPosition() const

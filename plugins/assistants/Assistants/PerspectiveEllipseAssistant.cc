@@ -371,7 +371,7 @@ void PerspectiveEllipseAssistant::adjustLine(QPointF &point, QPointF &strokeBegi
     strokeBegin = QPointF();
 }
 
-void PerspectiveEllipseAssistant::drawAssistant(QPainter& gc, const QRectF& updateRect, const KisCoordinatesConverter* converter, bool cached, KisCanvas2* canvas, bool assistantVisible, bool previewVisible)
+void PerspectiveEllipseAssistant::drawAssistant(QPainter& gc, const QRectF& updateRect, const KisCoordinatesConverter* converter, const KoColorDisplayRendererInterface *displayRenderInterface, bool cached, KisCanvas2* canvas, bool assistantVisible, bool previewVisible)
 {
     gc.save();
     gc.resetTransform();
@@ -394,10 +394,10 @@ void PerspectiveEllipseAssistant::drawAssistant(QPainter& gc, const QRectF& upda
     if (isEllipseValid() && assistantVisible==true) {
         // draw vanishing points
         if (d->cache.vanishingPoint1) {
-            drawX(gc, initialTransform.map(d->cache.vanishingPoint1.get()));
+            drawX(gc, initialTransform.map(d->cache.vanishingPoint1.get()), displayRenderInterface);
         }
         if (d->cache.vanishingPoint2) {
-            drawX(gc, initialTransform.map(d->cache.vanishingPoint2.get()));
+            drawX(gc, initialTransform.map(d->cache.vanishingPoint2.get()), displayRenderInterface);
         }
     }
 
@@ -411,9 +411,9 @@ void PerspectiveEllipseAssistant::drawAssistant(QPainter& gc, const QRectF& upda
         path.addEllipse(QPointF(0.0, 0.0), d->simpleEllipse.semiMajor(), d->simpleEllipse.semiMinor());
 
         if (assistantVisible || isEditing) {
-            drawPath(gc, path, isSnappingActive());
+            drawPath(gc, path, displayRenderInterface, isSnappingActive());
         } else if (previewVisible && isSnappingActive() && boundingRect().contains(initialTransform.inverted().map(mousePos.toPoint()), false)) {
-            drawPreview(gc, path);
+            drawPreview(gc, path, displayRenderInterface);
         }
 
         if (isEditing) {
@@ -460,7 +460,7 @@ void PerspectiveEllipseAssistant::drawAssistant(QPainter& gc, const QRectF& upda
         touchingLine.lineTo(pt4);
 
         if (assistantVisible) {
-            drawPath(gc, touchingLine, isSnappingActive());
+            drawPath(gc, touchingLine, displayRenderInterface, isSnappingActive());
         }
     }
 
@@ -476,11 +476,11 @@ void PerspectiveEllipseAssistant::drawAssistant(QPainter& gc, const QRectF& upda
                 // that will create a triangle with a point inside connected to all vertices of the triangle
                 polyAllConnected << *handles()[0] << *handles()[1] << *handles()[2] << *handles()[3] << *handles()[0] << *handles()[2] << *handles()[1] << *handles()[3];
                 path.addPolygon(polyAllConnected);
-                drawError(gc, path);
+                drawError(gc, path, displayRenderInterface);
             } else {
                 QPainterPath path;
                 path.addPolygon(poly);
-                drawPath(gc, path, isSnappingActive());
+                drawPath(gc, path, displayRenderInterface, isSnappingActive());
             }
         } else {
             gc.setPen(QColor(0, 0, 0, 125));
@@ -501,21 +501,22 @@ void PerspectiveEllipseAssistant::drawAssistant(QPainter& gc, const QRectF& upda
                 path.lineTo(line.p2());
             }
 
-            drawPath(gc, path, isSnappingActive());
+            drawPath(gc, path, displayRenderInterface, isSnappingActive());
         }
     }
     
     gc.restore();
-    KisPaintingAssistant::drawAssistant(gc, updateRect, converter, cached, canvas, assistantVisible, previewVisible);
+    KisPaintingAssistant::drawAssistant(gc, updateRect, converter, displayRenderInterface, cached, canvas, assistantVisible, previewVisible);
 
 }
 
 
-void PerspectiveEllipseAssistant::drawCache(QPainter& gc, const KisCoordinatesConverter *converter, bool assistantVisible)
+void PerspectiveEllipseAssistant::drawCache(QPainter& gc, const KisCoordinatesConverter *converter, const KoColorDisplayRendererInterface *displayRenderInterface, bool assistantVisible)
 {
     Q_UNUSED(converter);
     Q_UNUSED(gc);
     Q_UNUSED(assistantVisible);
+    Q_UNUSED(displayRenderInterface);
 }
 
 QRect PerspectiveEllipseAssistant::boundingRect() const

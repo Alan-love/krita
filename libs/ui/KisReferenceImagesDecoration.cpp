@@ -12,6 +12,7 @@
 #include "KisDocument.h"
 #include "KisReferenceImagesLayer.h"
 #include "kis_layer_utils.h"
+#include <KoColorDisplayRendererInterface.h>
 
 struct KisReferenceImagesDecoration::Private {
     struct Buffer
@@ -119,7 +120,7 @@ bool KisReferenceImagesDecoration::documentHasReferenceImages() const
     return view()->document()->referenceImagesLayer() != nullptr;
 }
 
-void KisReferenceImagesDecoration::drawDecoration(QPainter &gc, const QRectF &/*updateRect*/, const KisCoordinatesConverter *converter, KisCanvas2 */*canvas*/)
+void KisReferenceImagesDecoration::drawDecoration(QPainter &gc, const QRectF &/*updateRect*/, const KisCoordinatesConverter *converter, KisCanvas2 *canvas)
 {
     // TODO: can we use partial updates here?
 
@@ -137,7 +138,8 @@ void KisReferenceImagesDecoration::drawDecoration(QPainter &gc, const QRectF &/*
         }
 
         if (!d->buffer.image.isNull()) {
-            gc.drawImage(d->buffer.position, d->buffer.image);
+            // currently, this is clipped to sRGB. At some point, we should support color managing in the vectors, possibly by recognising qcolorspace.
+            gc.drawImage(d->buffer.position, canvas->displayRendererInterface()->convertImageToDisplayColorSpace(d->buffer.image));
         }
     }
 }

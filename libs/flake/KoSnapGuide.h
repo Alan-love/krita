@@ -21,6 +21,7 @@ class KoCanvasBase;
 class QPainter;
 class QPointF;
 class QRectF;
+class KoColorDisplayRendererInterface;
 
 /**
  * This class is the place where all the snapping (i.e. snap to grid) is handled.
@@ -72,7 +73,7 @@ public:
     QPointF snap(const QPointF &mousePosition, const QPointF &dragOffset, Qt::KeyboardModifiers modifiers);
 
     /// paints the guide
-    void paint(QPainter &painter, const KoViewConverter &converter);
+    void paint(QPainter &painter, const KoViewConverter &converter, const KoColorDisplayRendererInterface *displayRenderer);
 
     /// returns the bounding rect of the guide
     QRectF boundingRect();

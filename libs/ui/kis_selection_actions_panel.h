@@ -23,6 +23,7 @@
 class KisCanvas2;
 class KisCoordinatesConverter;
 class KisViewManager;
+class KoColorDisplayRendererInterface;
 
 class KisSelectionActionsPanel;
 typedef KisSharedPtr<KisSelectionActionsPanel> KisSelectionActionsPanelSP;
@@ -35,7 +36,7 @@ public:
     KisSelectionActionsPanel(KisViewManager *viewManager);
     ~KisSelectionActionsPanel();
 
-    void draw(QPainter &painter);
+    void draw(QPainter &painter, const KoColorDisplayRendererInterface *displayRendererInterface);
     void setVisible(bool visible);
     void setEnabled(bool enabled);
     bool eventFilter(QObject *obj, QEvent *event) override;
@@ -44,7 +45,7 @@ public:
 private:
     QPoint updateCanvasBoundaries(QPoint position, QWidget *canvasWidget) const;
     QPoint initialDragHandlePosition() const;
-    void drawActionBarBackground(QPainter &gc) const;
+    void drawActionBarBackground(QPainter &gc, const KoColorDisplayRendererInterface *displayRendererInterface) const;
 
     bool handlePress(QEvent *event, const QPoint &pos, Qt::MouseButton button = Qt::LeftButton);
     bool handleMove(QEvent *event, const QPoint &pos);

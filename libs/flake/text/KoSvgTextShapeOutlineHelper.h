@@ -14,6 +14,7 @@
 #include <QScopedPointer>
 
 #include <kritaflake_export.h>
+#include <KisHandleStyle.h>
 
 class KoSvgTextShape;
 /**
@@ -77,8 +78,7 @@ public:
     void setTextAreasHovered(bool enabled);
 
 private:
-    void paintTextShape(QPainter *painter, const KoViewConverter &converter,
-                        const QPalette &pal, KoSvgTextShape *text,
+    void paintTextShape(QPainter *painter, const KoViewConverter &converter, KoSvgTextShape *text,
                         bool contourModeActive = false);
     struct Private;
     QScopedPointer<Private> d;

@@ -30,7 +30,7 @@ public:
     ~KisLiquifyTransformStrategy() override;
 
     void setTransformFunction(const QPointF &mousePos, bool perspectiveModifierActive, bool shiftModifierActive);
-    void paint(QPainter &gc) override;
+    void paint(QPainter &gc, const KoColorDisplayRendererInterface *displayRendererInterface) override;
     QCursor getCurrentCursor() const override;
     QPainterPath getCursorOutline() const override;
 

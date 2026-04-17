@@ -5,6 +5,7 @@
  */
 #include "SvgTextCursor.h"
 #include "KoCanvasBase.h"
+#include "KoColorDisplayRendererInterface.h"
 #include "KoSvgTextProperties.h"
 #include "SvgTextInsertCommand.h"
 #include "SvgTextInsertRichCommand.h"
@@ -831,12 +832,16 @@ void SvgTextCursor::deselectText()
     setPos(d->pos, d->pos);
 }
 
-static QColor bgColorForCaret(QColor c, int opacity = 64) {
-
-    return KisPaintingTweaks::luminosityCoarse(c) > 0.8? QColor(0, 0, 0, opacity) : QColor(255, 255, 255, opacity);
+static QColor bgColorForCaret(QColor c, KisHandlePalette handlePalette, int opacity = 64)
+{
+    if (KisPaintingTweaks::luminosityCoarse(c) > 0.8) {
+        return QColor(handlePalette.black.red(), handlePalette.black.green(), handlePalette.black.blue(), opacity);
+    } else {
+        return QColor(handlePalette.white.red(), handlePalette.white.green(), handlePalette.white.blue(), opacity);
+    }
 }
 
-void SvgTextCursor::paintDecorations(QPainter &gc, QColor selectionColor, int decorationThickness, qreal handleRadius)
+void SvgTextCursor::paintDecorations(QPainter &gc, QColor selectionColor, int decorationThickness, qreal handleRadius, KisHandlePalette handlePalette)
 {
     if (d->shape) {
         gc.save();
@@ -855,11 +860,11 @@ void SvgTextCursor::paintDecorations(QPainter &gc, QColor selectionColor, int de
             QPen pen;
             pen.setCosmetic(true);
             QColor c = d->cursorColor.isValid()? d->cursorColor: Qt::black;
-            pen.setColor(bgColorForCaret(c));
+            pen.setColor(bgColorForCaret(c, handlePalette));
             pen.setWidth((d->cursorWidth + 2) * decorationThickness);
             gc.setPen(pen);
             gc.drawPath(d->cursorShape);
-            pen.setColor(c);
+            pen.setColor(d->canvas->displayRendererInterface()->convertColorToDisplayColorSpace(KoColor(c, KoColorSpaceRegistry::instance()->rgb8())) );
             pen.setWidth(d->cursorWidth * decorationThickness);
             gc.setPen(pen);
             gc.drawPath(d->cursorShape);
@@ -877,8 +882,8 @@ void SvgTextCursor::paintDecorations(QPainter &gc, QColor selectionColor, int de
             d->handleRadius = handleRadius;
             QTransform painterTf = gc.transform();
             KisHandlePainterHelper helper(&gc, handleRadius, decorationThickness);
-            const KisHandleStyle highlight = KisHandleStyle::partiallyHighlightedPrimaryHandles();
-            const KisHandleStyle regular = KisHandleStyle::secondarySelection();
+            const KisHandleStyle highlight = KisHandleStyle::partiallyHighlightedPrimaryHandles(handlePalette);
+            const KisHandleStyle regular = KisHandleStyle::secondarySelection(handlePalette);
 
             QMap<SvgTextCursor::TypeSettingModeHandle, QPainterPath> paths
                     = d->typeSettingDecor.testBaselines(d->lastKnownModifiers)? d->typeSettingDecor.baselines: d->typeSettingDecor.paths;
@@ -924,7 +929,7 @@ void SvgTextCursor::paintDecorations(QPainter &gc, QColor selectionColor, int de
                 font.setHintingPreference(QFont::PreferFullHinting);
                 textP.addText(painterTf.map(d->typeSettingDecor.closestBaselinePoint).toPoint(), font, name);
                 gc.save();
-                QPen pen(bgColorForCaret(selectionColor, 255));
+                QPen pen(bgColorForCaret(selectionColor, handlePalette, 255));
                 pen.setCosmetic(true);
                 pen.setWidth(decorationThickness);
                 gc.setPen(pen);

@@ -105,8 +105,9 @@ void ShapeMoveStrategy::finishInteraction(Qt::KeyboardModifiers modifiers)
     Q_UNUSED(modifiers);
 }
 
-void ShapeMoveStrategy::paint(QPainter &painter, const KoViewConverter &converter)
+void ShapeMoveStrategy::paint(QPainter &painter, const KoViewConverter &converter, const KoColorDisplayRendererInterface *displayRendererInterface)
 {
     Q_UNUSED(painter);
     Q_UNUSED(converter);
+    Q_UNUSED(displayRendererInterface);
 }

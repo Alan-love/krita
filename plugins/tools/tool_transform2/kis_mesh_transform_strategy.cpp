@@ -5,6 +5,7 @@
  */
 
 #include "kis_mesh_transform_strategy.h"
+#include "KoColorDisplayRendererInterface.h"
 #include "tool_transform_args.h"
 
 #include <QPointF>
@@ -260,7 +261,7 @@ void KisMeshTransformStrategy::verifyExpectedMeshSize()
     }
 }
 
-void KisMeshTransformStrategy::paint(QPainter &gc)
+void KisMeshTransformStrategy::paint(QPainter &gc, const KoColorDisplayRendererInterface *displayRendererInterface)
 {
     gc.save();
 
@@ -274,15 +275,16 @@ void KisMeshTransformStrategy::paint(QPainter &gc)
     gc.setTransform(KisTransformUtils::imageToFlakeTransform(m_d->converter), true);
 
     KisHandlePainterHelper handlePainter(&gc, 0.5 * KisTransformUtils::handleRadius, decorationThickness());
+    KisHandlePalette palette = displayRendererInterface->handlePaletteForDisplayColorSpace();
 
     for (auto it = m_d->currentArgs.meshTransform()->beginSegments();
          it != m_d->currentArgs.meshTransform()->endSegments();
          ++it) {
 
         if (m_d->hoveredSegment && it.segmentIndex() == *m_d->hoveredSegment) {
-            handlePainter.setHandleStyle(KisHandleStyle::highlightedPrimaryHandlesWithSolidOutline());
+            handlePainter.setHandleStyle(KisHandleStyle::highlightedPrimaryHandlesWithSolidOutline(palette));
         } else {
-            handlePainter.setHandleStyle(KisHandleStyle::primarySelection());
+            handlePainter.setHandleStyle(KisHandleStyle::primarySelection(palette));
         }
 
         QPainterPath path;
@@ -305,15 +307,15 @@ void KisMeshTransformStrategy::paint(QPainter &gc)
 
         if (m_d->hoveredControl && *m_d->hoveredControl == it.controlIndex()) {
 
-            handlePainter.setHandleStyle(KisHandleStyle::highlightedPrimaryHandles());
+            handlePainter.setHandleStyle(KisHandleStyle::highlightedPrimaryHandles(palette));
 
         } else if (it.type() == KisBezierTransformMesh::ControlType::Node &&
                    m_d->selectedNodes.contains(it.nodeIndex())) {
 
-            handlePainter.setHandleStyle(KisHandleStyle::selectedPrimaryHandles());
+            handlePainter.setHandleStyle(KisHandleStyle::selectedPrimaryHandles(palette));
 
         } else {
-            handlePainter.setHandleStyle(KisHandleStyle::primarySelection());
+            handlePainter.setHandleStyle(KisHandleStyle::primarySelection(palette));
         }
 
         if (it.type() == KisBezierTransformMesh::ControlType::Node) {

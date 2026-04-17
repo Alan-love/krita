@@ -8,6 +8,7 @@
 
 #include <QGlobalStatic>
 #include <QPointer>
+#include <QPalette>
 
 #include <KoColor.h>
 #include <KoColorDisplayRendererInterface.h>
@@ -30,6 +31,10 @@
 #include "kis_iterator_ng.h"
 #include "kis_fixed_paint_device.h"
 #include "KisDisplayConfig.h"
+
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
+#include <QGuiApplication>
+#endif
 
 Q_GLOBAL_STATIC(KisDisplayColorConverter, s_instance)
 
@@ -156,6 +161,9 @@ struct KisDisplayColorConverter::Private
     KisNodeSP connectedNode;
     KisImageSP image;
 
+    KisHandlePalette handlePalette;
+    QPalette systemPalette;
+
     inline KoColor approximateFromQColor(const QColor &qcolor);
     inline QColor approximateToQColor(const KoColor &color);
 
@@ -219,6 +227,27 @@ struct KisDisplayColorConverter::Private
             return m_displayColorConverter->paintingColorSpace();
         }
 
+        QColor convertColorToDisplayColorSpace(KoColor c) const override {
+            return m_displayColorConverter->convertColorToDisplayColorSpace(c);
+        }
+
+        QImage convertImageToDisplayColorSpace(const QImage source) const override {
+            // Limited to 8bit sRGB for now...
+            KisPaintDeviceSP srcDevice = new KisPaintDevice(KoColorSpaceRegistry::instance()->rgb8());
+            srcDevice->convertFromQImage(source, KoColorSpaceRegistry::instance()->p709SRGBProfile(), 0, 0);
+            QImage destination = m_displayColorConverter->convertImageToDisplayColorSpace(srcDevice);
+            destination.setDevicePixelRatio(source.devicePixelRatio());
+            return destination;
+        }
+
+        KisHandlePalette handlePaletteForDisplayColorSpace() const override {
+            return m_displayColorConverter->handlePaletteForDisplayColorSpace();
+        }
+
+        QPalette systemPaletteForDisplayColorSpace() const override {
+            return m_displayColorConverter->systemPaletteForDisplayColorSpace();
+        }
+
     private:
         KisDisplayColorConverter *m_displayColorConverter;
         QPointer<KoCanvasResourceProvider> m_resourceManager;
@@ -240,6 +269,8 @@ KisDisplayColorConverter::KisDisplayColorConverter(KoCanvasResourceProvider *res
     m_d->paintingColorSpace = KoColorSpaceRegistry::instance()->rgb8();
     m_d->setCurrentNode(0);
     setDisplayFilter(QSharedPointer<KisDisplayFilter>(0));
+    updatePalettes();
+    connect(this, SIGNAL(displayConfigurationChanged()), this, SLOT(updatePalettes()));
 }
 
 KisDisplayColorConverter::KisDisplayColorConverter()
@@ -330,6 +361,46 @@ void KisDisplayColorConverter::Private::slotCanvasResourceChanged(int key, const
 void KisDisplayColorConverter::Private::slotUpdateCurrentNodeColorSpace()
 {
     setCurrentNode(connectedNode);
+}
+
+void KisDisplayColorConverter::updatePalettes()
+{
+    KisHandlePalette palette;
+    KoColor c;
+    c.fromQColor(palette.gradientFillColor);
+    palette.gradientFillColor = convertColorToDisplayColorSpace(c);
+
+    c.fromQColor(palette.highlightColor);
+    palette.highlightColor = convertColorToDisplayColorSpace(c);
+
+    c.fromQColor(palette.highlightOutlineColor);
+    palette.highlightOutlineColor = convertColorToDisplayColorSpace(c);
+
+    c.fromQColor(palette.primaryColor);
+    palette.primaryColor = convertColorToDisplayColorSpace(c);
+
+    c.fromQColor(palette.secondaryColor);
+    palette.secondaryColor = convertColorToDisplayColorSpace(c);
+
+    c.fromQColor(palette.selectionColor);
+    palette.selectionColor = convertColorToDisplayColorSpace(c);
+
+    c.fromQColor(palette.white);
+    palette.white = convertColorToDisplayColorSpace(c);
+
+    c.fromQColor(palette.black);
+    palette.black = convertColorToDisplayColorSpace(c);
+
+    QPalette pal = qApp->palette();
+    for (int r = 0; r < QPalette::NColorRoles; r++) {
+        for (int cg = 0; cg < QPalette::NColorGroups; cg++) {
+            c.fromQColor(pal.brush(QPalette::ColorGroup(cg), QPalette::ColorRole(r)).color());
+            pal.setBrush(QPalette::ColorGroup(cg), QPalette::ColorRole(r), convertColorToDisplayColorSpace(c));
+        }
+    }
+
+    m_d->handlePalette = palette;
+    m_d->systemPalette = pal;
 }
 
 inline KisPaintDeviceSP findValidDevice(KisNodeSP node) {
@@ -627,6 +698,69 @@ void KisDisplayColorConverter::applyDisplayFilteringF32(KisFixedPaintDeviceSP de
 
     KIS_SAFE_ASSERT_RECOVER_RETURN(dstColorSpace);
     device->convertTo(dstColorSpace);
+}
+
+QColor KisDisplayColorConverter::convertColorToDisplayColorSpace(const KoColor color, bool applyOcio) const
+{
+    KoColor newColor;
+    if (applyOcio) {
+        newColor = applyDisplayFiltering(color, Float32BitsColorDepthID);
+    } else {
+        newColor = KoColor(color);
+        newColor.convertTo(m_d->openGLSurfaceColorSpace(Float32BitsColorDepthID), m_d->multiSurfaceDisplayConfig.intent, m_d->multiSurfaceDisplayConfig.conversionFlags);
+    }
+
+    /// No idea why it wouldn't be RGBAColorModelID, but do something useful in any case...
+    KIS_SAFE_ASSERT_RECOVER_RETURN_VALUE(newColor.colorSpace()->colorModelId() == RGBAColorModelID, newColor.toQColor());
+
+    QVector<float> norm(newColor.colorSpace()->channelCount());
+    newColor.colorSpace()->normalisedChannelsValue(newColor.data(), norm);
+
+    // sort into RGBA order... maybe a little overengineered.
+    QVector<float> sorted = norm;
+    for (int ch = 0; ch < norm.size(); ch++) {
+        const KoChannelInfo *info = newColor.colorSpace()->channels().at(ch);
+        sorted[info->displayPosition()] = norm[ch];
+    }
+
+    // We need to manually create a QColor here, because if we use KoColor.toQColor, the whole KoColor is first
+    // converted to sRGB before becoming a QColor, while we explicitely do not want that for our QColor.
+    // This is further complicated by the fact that QColors cannot have any (Q)ColorSpace metadata associated with it, unlike KoColor.
+    return QColor::fromRgbF(sorted[0], sorted[1], sorted[2], sorted[3]);
+}
+
+QImage KisDisplayColorConverter::convertImageToDisplayColorSpace(KisPaintDeviceSP srcDevice, QRect source, bool applyOcio) const
+{
+    KisPaintDeviceSP conversionDevice = new KisPaintDevice(*srcDevice.data());
+    const QRect s = source.isValid()? source: conversionDevice->exactBounds();
+
+    if (m_d->useOcio() && applyOcio) {
+        KIS_ASSERT_RECOVER(m_d->ocioInputColorSpace()->pixelSize() == 16) {
+            return QImage();
+        }
+
+        conversionDevice->convertTo(m_d->ocioInputColorSpace());
+        KisSequentialIterator it(conversionDevice, s);
+        int numConseqPixels = it.nConseqPixels();
+        while (it.nextPixels(numConseqPixels)) {
+            numConseqPixels = it.nConseqPixels();
+            m_d->displayFilter->filter(it.rawData(), numConseqPixels);
+        }
+        conversionDevice->setProfile(m_d->ocioOutputProfile(), 0);
+    }
+
+    conversionDevice->convertTo(m_d->openGLSurfaceColorSpace(Float32BitsColorDepthID), m_d->multiSurfaceDisplayConfig.intent, m_d->multiSurfaceDisplayConfig.conversionFlags);
+    return conversionDevice->convertToQImage(m_d->openGLSurfaceProfile(), s, m_d->multiSurfaceDisplayConfig.intent, m_d->multiSurfaceDisplayConfig.conversionFlags);
+}
+
+KisHandlePalette KisDisplayColorConverter::handlePaletteForDisplayColorSpace() const
+{
+    return m_d->handlePalette;
+}
+
+QPalette KisDisplayColorConverter::systemPaletteForDisplayColorSpace() const
+{
+    return m_d->systemPalette;
 }
 
 KoColor KisDisplayColorConverter::Private::approximateFromQColor(const QColor &qcolor)

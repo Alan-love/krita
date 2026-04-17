@@ -21,6 +21,7 @@
 #include "KoShapeController.h"
 #include <QPainter>
 #include <KisHandlePainterHelper.h>
+#include <KoColorDisplayRendererInterface.h>
 
 
 KoPathToolHandle::KoPathToolHandle(KoPathTool *tool)
@@ -40,7 +41,7 @@ PointHandle::PointHandle(KoPathTool *tool, KoPathPoint *activePoint, KoPathPoint
 {
 }
 
-void PointHandle::paint(QPainter &painter, const KoViewConverter &converter, qreal handleRadius, int decorationThickness)
+void PointHandle::paint(QPainter &painter, const KoViewConverter &converter, qreal handleRadius, int decorationThickness, KoColorDisplayRendererInterface *renderInterface)
 {
     KoPathToolSelection * selection = dynamic_cast<KoPathToolSelection*>(m_tool->selection());
 
@@ -49,7 +50,7 @@ void PointHandle::paint(QPainter &painter, const KoViewConverter &converter, qre
         allPaintedTypes = KoPathPoint::All;
     }
 
-
+    const KisHandlePalette palette = renderInterface->handlePaletteForDisplayColorSpace();
     KisHandlePainterHelper helper = KoShape::createHandlePainterHelperView(&painter, m_activePoint->parent(), converter, handleRadius, decorationThickness);
 
 
@@ -58,17 +59,17 @@ void PointHandle::paint(QPainter &painter, const KoViewConverter &converter, qre
         KoPathPoint::PointTypes nonNodeType = nonHighlightedType & ~KoPathPoint::Node;
 
         if (nonNodeType != KoPathPoint::None) {
-            helper.setHandleStyle(KisHandleStyle::selectedPrimaryHandles());
+            helper.setHandleStyle(KisHandleStyle::selectedPrimaryHandles(palette));
             m_activePoint->paint(helper, nonHighlightedType);
         }
 
         if (nonHighlightedType & KoPathPoint::Node) {
-            helper.setHandleStyle(KisHandleStyle::partiallyHighlightedPrimaryHandles());
+            helper.setHandleStyle(KisHandleStyle::partiallyHighlightedPrimaryHandles(palette));
             m_activePoint->paint(helper, KoPathPoint::Node);
         }
     }
 
-    helper.setHandleStyle(KisHandleStyle::highlightedPrimaryHandles());
+    helper.setHandleStyle(KisHandleStyle::highlightedPrimaryHandles(palette));
     m_activePoint->paint(helper, m_activePointType);
 }
 
@@ -166,10 +167,11 @@ ParameterHandle::ParameterHandle(KoPathTool *tool, KoParameterShape *parameterSh
 {
 }
 
-void ParameterHandle::paint(QPainter &painter, const KoViewConverter &converter, qreal handleRadius, int decorationThickness)
+void ParameterHandle::paint(QPainter &painter, const KoViewConverter &converter, qreal handleRadius, int decorationThickness, KoColorDisplayRendererInterface *renderInterface)
 {
     KisHandlePainterHelper helper = KoShape::createHandlePainterHelperView(&painter, m_parameterShape, converter, handleRadius, decorationThickness);
-    helper.setHandleStyle(KisHandleStyle::highlightedPrimaryHandles());
+    const KisHandlePalette palette = renderInterface->handlePaletteForDisplayColorSpace();
+    helper.setHandleStyle(KisHandleStyle::highlightedPrimaryHandles(palette));
     m_parameterShape->paintHandle(helper, m_handleId);
 }
 

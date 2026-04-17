@@ -23,6 +23,7 @@
 #include <KoShapeController.h>
 #include <kundo2command.h>
 #include <KoKeepShapesSelectedCommand.h>
+#include <KoColorDisplayRendererInterface.h>
 
 
 
@@ -315,10 +316,12 @@ void RemoveGutterStrategy::finishInteraction(Qt::KeyboardModifiers modifiers)
 
 }
 
-void RemoveGutterStrategy::paint(QPainter &painter, const KoViewConverter &converter)
+void RemoveGutterStrategy::paint(QPainter &painter, const KoViewConverter &converter, const KoColorDisplayRendererInterface *displayRendererInterface)
 {
     painter.save();
-    painter.setPen(QPen(QBrush(Qt::darkGray), 2));
+    KoColor c;
+    c.fromQColor(Qt::darkGray);
+    painter.setPen(QPen(QBrush(displayRendererInterface->convertColorToDisplayColorSpace(c)), 2));
 
     QLineF line = converter.documentToView().map(QLineF(m_startPoint, m_endPoint));
     if (line.length() > 0) {

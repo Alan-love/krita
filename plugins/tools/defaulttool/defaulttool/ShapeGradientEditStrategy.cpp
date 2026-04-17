@@ -89,9 +89,10 @@ void ShapeGradientEditStrategy::finishInteraction(Qt::KeyboardModifiers modifier
     tool()->canvas()->snapGuide()->reset();
 }
 
-void ShapeGradientEditStrategy::paint(QPainter &painter, const KoViewConverter &converter)
+void ShapeGradientEditStrategy::paint(QPainter &painter, const KoViewConverter &converter, const KoColorDisplayRendererInterface *displayRendererInterface)
 {
     Q_UNUSED(painter);
     Q_UNUSED(converter);
+    Q_UNUSED(displayRendererInterface);
 }
 

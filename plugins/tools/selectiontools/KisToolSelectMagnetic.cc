@@ -20,6 +20,7 @@
 #include <KoPathShape.h>
 #include <KoColorSpace.h>
 #include <KoCompositeOp.h>
+#include <KoColorDisplayRendererInterface.h>
 #include <KoViewConverter.h>
 
 #include <kis_layer.h>
@@ -629,15 +630,16 @@ void KisToolSelectMagnetic::paint(QPainter& gc, const KoViewConverter &converter
 
 void KisToolSelectMagnetic::drawAnchors(QPainter &gc)
 {
+    const KisHandlePalette palette = canvas()->displayRendererInterface()->handlePaletteForDisplayColorSpace();
     int sides = updateInitialAnchorBounds(m_anchorPoints.first());
     Q_FOREACH (const QPoint pt, m_anchorPoints) {
         KisHandlePainterHelper helper(&gc, handleRadius(), decorationThickness());
         QRect r(QPoint(0, 0), QSize(sides, sides));
         r.moveCenter(pt);
         if (r.contains(m_lastCursorPos.toPoint())) {
-            helper.setHandleStyle(KisHandleStyle::highlightedPrimaryHandles());
+            helper.setHandleStyle(KisHandleStyle::highlightedPrimaryHandles(palette));
         } else {
-            helper.setHandleStyle(KisHandleStyle::primarySelection());
+            helper.setHandleStyle(KisHandleStyle::primarySelection(palette));
         }
         helper.drawHandleRect(pixelToView(pt), 4, QPoint(0, 0));
     }

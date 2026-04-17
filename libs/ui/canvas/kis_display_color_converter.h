@@ -12,6 +12,7 @@
 #include <KoColorDisplayRendererInterface.h>
 #include <KoColorConversionTransformation.h>
 
+#include "KisHandleStyle.h"
 #include "kis_types.h"
 #include "canvas/kis_display_filter.h"
 
@@ -21,6 +22,7 @@ class KoCanvasResourceProvider;
 class KisDisplayConfig;
 class KisMultiSurfaceDisplayConfig;
 class KoID;
+class QPalette;
 
 /**
  * Special helper class that provides primitives for converting colors when
@@ -68,6 +70,39 @@ public:
      */
     void applyDisplayFilteringF32(KisFixedPaintDeviceSP device, const KoColorSpace *dstColorSpace) const;
 
+    /**
+     * @brief convertColorToDisplayColorSpace
+     * This applies displayfiltering to the given KoColor, and then funnels the resulting
+     * data into a QColor for display. This function is used to draw canvas decorations into
+     * the canvas colorspace, as required for proper HDR and wide gamut support.
+     * @param color the KoColor to convert.
+     * @param applyOcio whether to also apply OCIO. This is only really relevant for color pickers.
+     * @return a QColor in the display color space.
+     */
+    QColor convertColorToDisplayColorSpace(const KoColor color, bool applyOcio = false) const;
+
+    /**
+     * @brief convertImageToDisplayColorSpace
+     * Same as convertColorToDisplayColorSpace, but then for a KisPaintDevice.
+     * @param srcDevice -- src device to process.
+     * @param source -- source rect.
+     * @param applyOcio -- whether to also apply OCIO. Only useful for previews and not UI elements.
+     * @return a QImage in the display color space.
+     */
+    QImage convertImageToDisplayColorSpace(KisPaintDeviceSP srcDevice, QRect source = QRect(), bool applyOcio = false) const;
+
+    /**
+     * @brief handlePaletteForDisplayColorSpace
+     * @return KisHandlePalette suitable to draw canvas decorations with.
+     */
+    KisHandlePalette handlePaletteForDisplayColorSpace() const;
+
+    /**
+     * @brief systemPaletteForDisplayColorSpace
+     * @return QPalette suitable to draw canvas decorations with.
+     */
+    QPalette systemPaletteForDisplayColorSpace() const;
+
 
     /**
      * Converts the exactBounds() (!) of the \p srcDevice into QImage
@@ -112,6 +147,7 @@ private:
     Q_PRIVATE_SLOT(m_d, void slotCanvasResourceChanged(int key, const QVariant &v));
     Q_PRIVATE_SLOT(m_d, void selectPaintingColorSpace());
     Q_PRIVATE_SLOT(m_d, void slotUpdateCurrentNodeColorSpace());
+    Q_SLOT void updatePalettes();
 
 private:
     struct Private;

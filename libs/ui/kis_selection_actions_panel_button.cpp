@@ -11,6 +11,7 @@
 #include <qevent.h>
 #include <qpainter.h>
 #include <qpainterpath.h>
+#include <KoColorDisplayRendererInterface.h>
 
 static constexpr int ICON_SIZE_OFFSET = 6;
 
@@ -30,14 +31,14 @@ KisSelectionActionsPanelButton::~KisSelectionActionsPanelButton()
 
 }
 
-void KisSelectionActionsPanelButton::draw(QPainter &painter)
+void KisSelectionActionsPanelButton::draw(QPainter &painter, const KoColorDisplayRendererInterface *displayRendererInterface)
 {
     QRect rect = geometry();
     //Draw an outline when the button is pressed
     if(this->isDown()) {
         QPainterPath path;
         path.addRoundedRect(rect, 3, 3);
-        QPen pen = qApp->palette().highlight().color();
+        QPen pen = displayRendererInterface->systemPaletteForDisplayColorSpace().highlight().color();
         pen.setWidth(2);
 
         painter.setPen(pen);
@@ -45,7 +46,14 @@ void KisSelectionActionsPanelButton::draw(QPainter &painter)
     }
 
     int padding = ICON_SIZE_OFFSET / 2;
-    icon().paint(&painter, rect.marginsRemoved(QMargins(padding, padding, padding, padding)));
+    QImage ic = displayRendererInterface->convertImageToDisplayColorSpace(icon().pixmap(rect.width()-(padding*2), rect.height()-(padding*2)).toImage());
+#if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
+    QRect target = QRect(QPoint(0, 0), ic.size()/ic.devicePixelRatioF());
+#else
+    QRect target = QRect(QPoint(0, 0), ic.deviceIndependentSize().toSize());
+#endif
+    target.moveCenter(rect.center());
+    painter.drawImage(target.intersected(rect.marginsRemoved(QMargins(padding, padding, padding, padding))), ic);
 }
 
 

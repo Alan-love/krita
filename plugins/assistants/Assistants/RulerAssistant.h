@@ -42,15 +42,15 @@ public:
     void ensureLength();
 
 protected:
-    void drawAssistant(QPainter& gc, const QRectF& updateRect, const KisCoordinatesConverter* converter, bool cached, KisCanvas2* canvas, bool assistantVisible=true, bool previewVisible=true) override;
-    void drawCache(QPainter& gc, const KisCoordinatesConverter *converter,  bool assistantVisible=true) override;
+    void drawAssistant(QPainter& gc, const QRectF& updateRect, const KisCoordinatesConverter* converter, const KoColorDisplayRendererInterface *displayRenderInterface, bool cached, KisCanvas2* canvas, bool assistantVisible=true, bool previewVisible=true) override;
+    void drawCache(QPainter& gc, const KisCoordinatesConverter *converter, const KoColorDisplayRendererInterface *displayRenderInterface, bool assistantVisible=true) override;
     explicit RulerAssistant(const QString& id, const QString& name);
     explicit RulerAssistant(const RulerAssistant &rhs, QMap<KisPaintingAssistantHandleSP, KisPaintingAssistantHandleSP> &handleMap);
 
   private:
     QPointF project(const QPointF& pt) const;
-    void drawSubdivisions(QPainter& gc, const KisCoordinatesConverter *converter);
-    void drawHandleAnnotations(QPainter& gc, const KisCoordinatesConverter *converter);
+    void drawSubdivisions(QPainter& gc, const KisCoordinatesConverter *converter, const KoColorDisplayRendererInterface *displayRenderInterface);
+    void drawHandleAnnotations(QPainter& gc, const KisCoordinatesConverter *converter, const KoColorDisplayRendererInterface *displayRenderInterface);
     
     int m_subdivisions {0};
     int m_minorSubdivisions {0};

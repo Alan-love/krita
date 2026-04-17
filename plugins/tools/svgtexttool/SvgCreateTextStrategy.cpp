@@ -27,6 +27,7 @@
 #include "kis_global.h"
 #include "kis_shape_layer.h"
 #include "kundo2command.h"
+#include <KoColorDisplayRendererInterface.h>
 
 #include <KoPathShape.h>
 #include <KoPathSegment.h>
@@ -45,14 +46,14 @@ SvgCreateTextStrategy::SvgCreateTextStrategy(SvgTextTool *tool, const QPointF &c
     m_minSizeInline = {lineHeight, lineHeight};
 }
 
-void SvgCreateTextStrategy::paint(QPainter &painter, const KoViewConverter &converter)
+void SvgCreateTextStrategy::paint(QPainter &painter, const KoViewConverter &converter, const KoColorDisplayRendererInterface *displayRendererInterface)
 {
     const QTransform originalPainterTransform = painter.transform();
     painter.setTransform(converter.documentToView(), true);
     KisHandlePainterHelper handlePainter(&painter, originalPainterTransform, 0.0, decorationThickness());
 
     const QPolygonF poly(QRectF(m_dragStart, m_dragEnd));
-    handlePainter.setHandleStyle(KisHandleStyle::primarySelection());
+    handlePainter.setHandleStyle(KisHandleStyle::primarySelection(displayRendererInterface->handlePaletteForDisplayColorSpace()));
     handlePainter.drawRubberLine(poly);
 }
 

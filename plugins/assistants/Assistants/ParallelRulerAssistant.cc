@@ -79,7 +79,7 @@ void ParallelRulerAssistant::adjustLine(QPointF &point, QPointF &strokeBegin)
     point = project(point, strokeBegin, 0.0);
 }
 
-void ParallelRulerAssistant::drawAssistant(QPainter& gc, const QRectF& updateRect, const KisCoordinatesConverter* converter, bool cached, KisCanvas2* canvas, bool assistantVisible, bool previewVisible)
+void ParallelRulerAssistant::drawAssistant(QPainter& gc, const QRectF& updateRect, const KisCoordinatesConverter* converter, const KoColorDisplayRendererInterface *displayRenderInterface, bool cached, KisCanvas2* canvas, bool assistantVisible, bool previewVisible)
 {
     gc.save();
     gc.resetTransform();
@@ -101,7 +101,7 @@ void ParallelRulerAssistant::drawAssistant(QPainter& gc, const QRectF& updateRec
         path.lineTo(initialTransform.map(local.bottomRight()));
         path.lineTo(initialTransform.map(local.bottomLeft()));
         path.lineTo(initialTransform.map(local.topLeft()));
-        drawPath(gc, path, isSnappingActive());//and we draw the preview.
+        drawPath(gc, path, displayRenderInterface, isSnappingActive());//and we draw the preview.
     }
 
 
@@ -121,15 +121,15 @@ void ParallelRulerAssistant::drawAssistant(QPainter& gc, const QRectF& updateRec
         path.moveTo(snapLine.p1());
         path.lineTo(snapLine.p2());
 
-        drawPreview(gc, path);//and we draw the preview.
+        drawPreview(gc, path, displayRenderInterface);//and we draw the preview.
     }
     gc.restore();
 
-    KisPaintingAssistant::drawAssistant(gc, updateRect, converter, cached, canvas, assistantVisible, previewVisible);
+    KisPaintingAssistant::drawAssistant(gc, updateRect, converter, displayRenderInterface, cached, canvas, assistantVisible, previewVisible);
 
 }
 
-void ParallelRulerAssistant::drawCache(QPainter& gc, const KisCoordinatesConverter *converter, bool assistantVisible)
+void ParallelRulerAssistant::drawCache(QPainter& gc, const KisCoordinatesConverter *converter, const KoColorDisplayRendererInterface *displayRenderInterface, bool assistantVisible)
 {
     if (assistantVisible == false || handles().size() < 2) {
         return;
@@ -145,7 +145,7 @@ void ParallelRulerAssistant::drawCache(QPainter& gc, const KisCoordinatesConvert
     QPainterPath path;
     path.moveTo(p1);
     path.lineTo(p2);
-    drawPath(gc, path, isSnappingActive());
+    drawPath(gc, path, displayRenderInterface, isSnappingActive());
 
 }
 

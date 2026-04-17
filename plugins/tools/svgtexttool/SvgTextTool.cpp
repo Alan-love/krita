@@ -77,6 +77,7 @@
 #include "kis_tool_utils.h"
 #include "kis_debug.h"
 #include <commands/KoKeepShapesSelectedCommand.h>
+#include <kis_display_color_converter.h>
 
 #ifdef Q_OS_ANDROID
 #include <QMenuBar>
@@ -232,7 +233,8 @@ QVariant SvgTextTool::inputMethodQuery(Qt::InputMethodQuery query) const
 
 void SvgTextTool::inputMethodEvent(QInputMethodEvent *event)
 {
-    m_textCursor.inputMethodEvent(event);
+    m_textCursor.
+        inputMethodEvent(event);
 }
 
 QWidget *SvgTextTool::createOptionWidget()
@@ -683,8 +685,11 @@ void SvgTextTool::paint(QPainter &gc, const KoViewConverter &converter)
 {
     if (!isActivated()) return;
 
+    KisHandlePalette handlePalette = canvas()->displayRendererInterface()->handlePaletteForDisplayColorSpace();
+    QPalette systemPalette = canvas()->displayRendererInterface()->systemPaletteForDisplayColorSpace();
+
     if (m_dragging == DragMode::Create || m_dragging == DragMode::InShapeOffset) {
-        m_interactionStrategy->paint(gc, converter);
+        m_interactionStrategy->paint(gc, converter, canvas()->displayRendererInterface());
     }
 
     KoSvgTextShape *shape = selectedShape();
@@ -693,7 +698,7 @@ void SvgTextTool::paint(QPainter &gc, const KoViewConverter &converter)
             KoShape::createHandlePainterHelperView(&gc, shape, converter, handleRadius(), decorationThickness());
 
         if (m_dragging != DragMode::InlineSizeHandle && m_dragging != DragMode::Move && m_dragging != DragMode::TypeSetting) {
-            handlePainter.setHandleStyle(KisHandleStyle::primarySelection());
+            handlePainter.setHandleStyle(KisHandleStyle::primarySelection(handlePalette));
             QPainterPath path;
             path.addRect(shape->outlineRect());
             handlePainter.drawPath(path);
@@ -702,30 +707,30 @@ void SvgTextTool::paint(QPainter &gc, const KoViewConverter &converter)
         qreal pxlToPt = canvas()->viewConverter()->viewToDocumentX(1.0);
         qreal length = (INLINE_SIZE_DASHES_PATTERN_A + INLINE_SIZE_DASHES_PATTERN_B) * INLINE_SIZE_DASHES_PATTERN_LENGTH;
         if (std::optional<InlineSizeInfo> info = InlineSizeInfo::fromShape(shape, length * pxlToPt)) {
-            handlePainter.setHandleStyle(KisHandleStyle::secondarySelection());
+            handlePainter.setHandleStyle(KisHandleStyle::secondarySelection(handlePalette));
             handlePainter.drawConnectionLine(info->baselineLineLocal());
 
             if (m_highlightItem == HighlightItem::InlineSizeStartHandle) {
-                handlePainter.setHandleStyle(m_dragging == DragMode::InlineSizeHandle? KisHandleStyle::partiallyHighlightedPrimaryHandles()
-                                                                                     : KisHandleStyle::highlightedPrimaryHandles());
+                handlePainter.setHandleStyle(m_dragging == DragMode::InlineSizeHandle? KisHandleStyle::partiallyHighlightedPrimaryHandles(handlePalette)
+                                                                                     : KisHandleStyle::highlightedPrimaryHandles(handlePalette));
             }
             QVector<qreal> dashPattern = {INLINE_SIZE_DASHES_PATTERN_A, INLINE_SIZE_DASHES_PATTERN_B};
             handlePainter.drawHandleLine(info->startLineLocal());
             handlePainter.drawHandleLine(info->startLineDashes(), INLINE_SIZE_HANDLE_THICKNESS, dashPattern, INLINE_SIZE_DASHES_PATTERN_A);
 
-            handlePainter.setHandleStyle(KisHandleStyle::secondarySelection());
+            handlePainter.setHandleStyle(KisHandleStyle::secondarySelection(handlePalette));
             if (m_highlightItem == HighlightItem::InlineSizeEndHandle) {
-                handlePainter.setHandleStyle(m_dragging == DragMode::InlineSizeHandle? KisHandleStyle::partiallyHighlightedPrimaryHandles()
-                                                                                     : KisHandleStyle::highlightedPrimaryHandles());
+                handlePainter.setHandleStyle(m_dragging == DragMode::InlineSizeHandle? KisHandleStyle::partiallyHighlightedPrimaryHandles(handlePalette)
+                                                                                     : KisHandleStyle::highlightedPrimaryHandles(handlePalette));
             }
             handlePainter.drawHandleLine(info->endLineLocal());
             handlePainter.drawHandleLine(info->endLineDashes(), INLINE_SIZE_HANDLE_THICKNESS, dashPattern, INLINE_SIZE_DASHES_PATTERN_A);
         }
 
         if (m_highlightItem == HighlightItem::MoveBorder) {
-            handlePainter.setHandleStyle(KisHandleStyle::highlightedPrimaryHandles());
+            handlePainter.setHandleStyle(KisHandleStyle::highlightedPrimaryHandles(handlePalette));
         } else {
-            handlePainter.setHandleStyle(KisHandleStyle::primarySelection());
+            handlePainter.setHandleStyle(KisHandleStyle::primarySelection(handlePalette));
         }
         handlePainter.drawHandleCircle(QPointF(), KoToolBase::handleRadius() * 0.75);
     }
@@ -735,23 +740,23 @@ void SvgTextTool::paint(QPainter &gc, const KoViewConverter &converter)
     m_textOutlineHelper->paint(&gc, converter);
     m_textOnPathHelper.setDecorationThickness(decorationThickness());
     m_textOnPathHelper.setHandleRadius(handleRadius());
-    m_textOnPathHelper.paint(&gc, converter);
+    m_textOnPathHelper.paint(&gc, converter, handlePalette);
     gc.setTransform(converter.documentToView(), true);
     {
         KisHandlePainterHelper handlePainter(&gc, handleRadius(), decorationThickness());
         if (!m_hoveredShapeHighlightRect.isEmpty()) {
-            handlePainter.setHandleStyle(KisHandleStyle::highlightedPrimaryHandlesWithSolidOutline());
+            handlePainter.setHandleStyle(KisHandleStyle::highlightedPrimaryHandlesWithSolidOutline(handlePalette));
             QPainterPath path;
             path.addPath(m_hoveredShapeHighlightRect);
             handlePainter.drawPath(path);
         }
     }
     if (shape) {
-        m_textCursor.paintDecorations(gc, qApp->palette().color(QPalette::Highlight), decorationThickness(), handleRadius());
+        m_textCursor.paintDecorations(gc, systemPalette.color(QPalette::Highlight), decorationThickness(), handleRadius(), handlePalette);
     }
     if (m_interactionStrategy) {
         gc.save();
-        canvas()->snapGuide()->paint(gc, converter);
+        canvas()->snapGuide()->paint(gc, converter, canvas()->displayRendererInterface());
         gc.restore();
     }
 
@@ -785,6 +790,12 @@ void SvgTextTool::mousePressEvent(KoPointerEvent *event)
     if (!nodeEditable()) {
         event->accept();
         return;
+    }
+
+    KisHandlePalette handlePalette;
+    KisCanvas2* kisCanvas = dynamic_cast<KisCanvas2*>(canvas());
+    if (kisCanvas) {
+        handlePalette = kisCanvas->displayColorConverter()->handlePaletteForDisplayColorSpace();
     }
 
     KoSvgTextShape *selectedShape = this->selectedShape();

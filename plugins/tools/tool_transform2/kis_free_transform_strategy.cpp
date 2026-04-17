@@ -13,6 +13,7 @@
 
 #include <KoResourcePaths.h>
 
+#include "KoColorDisplayRendererInterface.h"
 #include "kis_coordinates_converter.h"
 #include "tool_transform_args.h"
 #include "transform_transaction_properties.h"
@@ -350,7 +351,7 @@ QCursor KisFreeTransformStrategy::getCurrentCursor() const
     return cursor;
 }
 
-void KisFreeTransformStrategy::paint(QPainter &gc)
+void KisFreeTransformStrategy::paint(QPainter &gc, const KoColorDisplayRendererInterface *displayRendererInterface)
 {
     gc.save();
 
@@ -416,7 +417,7 @@ void KisFreeTransformStrategy::paint(QPainter &gc)
     pen[0].setCosmetic(true);
     pen[1].setWidth(decorationThickness() * 2);
     pen[1].setCosmetic(true);
-    pen[1].setColor(Qt::lightGray);
+    pen[1].setColor(displayRendererInterface->convertColorToDisplayColorSpace(KoColor(Qt::lightGray, KoColorSpaceRegistry::instance()->rgb8())));
 
     for (int i = 1; i >= 0; --i) {
         gc.setPen(pen[i]);

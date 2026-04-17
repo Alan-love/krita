@@ -128,9 +128,10 @@ public:
     void handleMouseMove(const QPointF & /*mouseLocation*/, Qt::KeyboardModifiers /*modifiers*/) override {}
     void finishInteraction(Qt::KeyboardModifiers /*modifiers*/) override {}
 
-    void paint(QPainter &painter, const KoViewConverter &converter) override {
+    void paint(QPainter &painter, const KoViewConverter &converter, const KoColorDisplayRendererInterface *displayRendererInterface) override {
         Q_UNUSED(painter);
         Q_UNUSED(converter);
+        Q_UNUSED(displayRendererInterface)
     }
 };
 
@@ -142,8 +143,8 @@ public:
     {
     }
 
-    void paint(QPainter &painter, const KoViewConverter &converter) override {
-        KoShapeRubberSelectStrategy::paint(painter, converter);
+    void paint(QPainter &painter, const KoViewConverter &converter, const KoColorDisplayRendererInterface *displayRendererInterface) override {
+        KoShapeRubberSelectStrategy::paint(painter, converter, displayRendererInterface);
     }
 
     void cancelInteraction() override
@@ -209,10 +210,11 @@ public:
         return false;
     }
 
-    bool paintOnHover(QPainter &painter, const KoViewConverter &converter) override
+    bool paintOnHover(QPainter &painter, const KoViewConverter &converter, const KoColorDisplayRendererInterface *displayRendererInterface) override
     {
         Q_UNUSED(painter);
         Q_UNUSED(converter);
+        Q_UNUSED(displayRendererInterface)
         return false;
     }
 
@@ -328,10 +330,11 @@ public:
         return false;
     }
 
-    bool paintOnHover(QPainter &painter, const KoViewConverter &converter) override
+    bool paintOnHover(QPainter &painter, const KoViewConverter &converter, const KoColorDisplayRendererInterface *displayRendererInterface) override
     {
         Q_UNUSED(painter);
         Q_UNUSED(converter);
+        Q_UNUSED(displayRendererInterface);
         return false;
     }
 
@@ -1108,7 +1111,7 @@ void DefaultTool::paint(QPainter &painter, const KoViewConverter &converter)
 {
     KoSelection *selection = koSelection();
     if (selection) {
-        m_decorator.reset(new SelectionDecorator(canvas()->resourceManager()));
+        m_decorator.reset(new SelectionDecorator(canvas()->resourceManager(), canvas()->displayRendererInterface()));
 
         {
             /**
@@ -1142,7 +1145,7 @@ void DefaultTool::paint(QPainter &painter, const KoViewConverter &converter)
 
     painter.save();
     painter.setTransform(converter.documentToView(), true);
-    canvas()->snapGuide()->paint(painter, converter);
+    canvas()->snapGuide()->paint(painter, converter, canvas()->displayRendererInterface());
     painter.restore();
 }
 

@@ -35,7 +35,7 @@ public:
     QPointF handleSnapPoint(const QPointF &imagePos) override;
     bool shiftModifierIsUsed() const override;
 
-    void paint(QPainter &gc) override;
+    void paint(QPainter &gc, const KoColorDisplayRendererInterface *displayRendererInterface) override;
     QCursor getCurrentCursor() const override;
     void externalConfigChanged() override;
 

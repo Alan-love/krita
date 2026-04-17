@@ -15,6 +15,7 @@
 #include <KoSelection.h>
 #include <QApplication>
 #include <QPalette>
+#include <KoColorDisplayRendererInterface.h>
 
 const int BUTTON_ICON_SIZE = 16;
 const int BUTTON_PADDING = 4;
@@ -64,6 +65,10 @@ struct KoSvgTextShapeOutlineHelper::Private {
 
     bool drawButton(KoSvgTextShape *text) {
         return text && !text->internalShapeManager()->shapes().isEmpty();
+    }
+
+    KoColorDisplayRendererInterface *renderInterface() {
+        return canvas->displayRendererInterface();
     }
 };
 
@@ -117,9 +122,9 @@ QList<QLineF> getTextAreaOrderArrows(QList<QPainterPath> areas) {
 }
 
 void KoSvgTextShapeOutlineHelper::paintTextShape(QPainter *painter, const KoViewConverter &converter,
-                                                  const QPalette &pal, KoSvgTextShape *text,
-                                                  bool contourModeActive) {
+                                                 KoSvgTextShape *text, bool contourModeActive) {
     painter->save();
+    KisHandlePalette handlePalette = d->renderInterface()->handlePaletteForDisplayColorSpace();
     KisHandlePainterHelper helper =
             KoShape::createHandlePainterHelperView(painter, text, converter, d->handleRadius, d->decorationThickness);
     helper.setHandleStyle(KisHandleStyle::secondarySelection());
@@ -146,7 +151,7 @@ void KoSvgTextShapeOutlineHelper::paintTextShape(QPainter *painter, const KoView
     }
     if (d->drawTextWrappingArea) {
         if (d->textWrappingAreasHovered) {
-            helper.setHandleStyle(KisHandleStyle::partiallyHighlightedPrimaryHandles());
+            helper.setHandleStyle(KisHandleStyle::partiallyHighlightedPrimaryHandles(handlePalette));
         }
         QList<QPainterPath> areas = text->textWrappingAreas();
         Q_FOREACH(QLineF arrow, getTextAreaOrderArrows(areas)) {
@@ -159,31 +164,31 @@ void KoSvgTextShapeOutlineHelper::paintTextShape(QPainter *painter, const KoView
     painter->restore();
 
     painter->save();
+    QPalette systemPalette = d->renderInterface()->systemPaletteForDisplayColorSpace();
     QIcon icon = contourModeActive? KisIconUtils::loadIcon(ICON_EXIT): KisIconUtils::loadIcon(ICON_ENTER);
-    QPixmap pm = icon.pixmap(BUTTON_ICON_SIZE, BUTTON_ICON_SIZE);
-    painter->setBrush(contourModeActive? pal.highlight(): pal.button());
+    QImage pm = d->renderInterface()->convertImageToDisplayColorSpace(icon.pixmap(BUTTON_ICON_SIZE, BUTTON_ICON_SIZE).toImage());
+    painter->setBrush(contourModeActive? systemPalette.highlight(): systemPalette.button());
     QPen pen;
-    pen.setColor(contourModeActive? pal.highlightedText().color(): pal.buttonText().color());
+    pen.setColor(contourModeActive? systemPalette.highlightedText().color(): systemPalette.buttonText().color());
     pen.setCosmetic(true);
     pen.setWidthF(d->decorationThickness);
     painter->setPen(pen);
     const QRectF buttonRect = d->getButtonRect(converter.documentToView().mapRect(text->boundingRect()));
     painter->drawRoundedRect(buttonRect, BUTTON_CORNER_ROUND, BUTTON_CORNER_ROUND);
-    painter->drawPixmap(buttonRect.topLeft()+QPointF(BUTTON_PADDING, BUTTON_PADDING), pm);
+    painter->drawImage(buttonRect.topLeft()+QPointF(BUTTON_PADDING, BUTTON_PADDING), pm);
     painter->restore();
 }
 
 void KoSvgTextShapeOutlineHelper::paint(QPainter *painter, const KoViewConverter &converter)
 {
-    const QPalette pal = qApp->palette();
     KoSvgTextShape *text = d->getTextModeShape();
     if (text) {
-        paintTextShape(painter, converter, pal, text, true);
+        paintTextShape(painter, converter, text, true);
     } else {
         Q_FOREACH(KoShape* shape, d->canvas->shapeManager()->selection()->selectedEditableShapes()) {
             text = dynamic_cast<KoSvgTextShape*>(shape);
             if (d->drawButton(text)) {
-                paintTextShape(painter, converter, pal, text, false);
+                paintTextShape(painter, converter, text, false);
             }
         }
     }

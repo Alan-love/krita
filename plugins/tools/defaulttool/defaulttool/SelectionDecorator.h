@@ -18,6 +18,7 @@
 
 class KoSelection;
 class KoCanvasResourceProvider;
+class KoColorDisplayRendererInterface;
 
 static const struct DecoratorIconPositions {
     QPoint uiOffset = QPoint(0, 40);
@@ -35,7 +36,7 @@ public:
      * @param rotationHandles if true; the rotation handles will be drawn
      * @param shearHandles if true; the shearhandles will be drawn
      */
-    SelectionDecorator(KoCanvasResourceProvider *resourceManager);
+    SelectionDecorator(KoCanvasResourceProvider *resourceManager, KoColorDisplayRendererInterface *displayInterface);
     ~SelectionDecorator() {}
 
     /**
@@ -89,6 +90,7 @@ private:
 private:
     KoFlake::AnchorPosition m_hotPosition;
     KoSelection *m_selection {nullptr};
+    KoColorDisplayRendererInterface *m_rendererInterface {nullptr};
     KoShapeMeshGradientHandles::Handle m_currentHoveredMeshHandle;
     KoShapeMeshGradientHandles::Handle m_selectedMeshHandle;
     int m_handleRadius {7};

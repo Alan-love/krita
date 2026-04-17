@@ -39,7 +39,7 @@ KoInteractionStrategy::~KoInteractionStrategy()
     delete d_ptr;
 }
 
-void KoInteractionStrategy::paint(QPainter &, const KoViewConverter &)
+void KoInteractionStrategy::paint(QPainter &, const KoViewConverter &, const KoColorDisplayRendererInterface *displayRendererInterface)
 {
 }
 

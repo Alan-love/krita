@@ -24,6 +24,7 @@
 #include "KisViewManager.h"
 #include <KoCompositeOpRegistry.h>
 #include "kis_tool_proxy.h"
+#include <KoColorDisplayRendererInterface.h>
 
 #include <QPainter>
 #include <QPainterPath>
@@ -325,26 +326,28 @@ void KisPaintingAssistantsDecoration::drawDecoration(QPainter& gc, const QRectF&
         kritaProxy->supportsPaintingAssistants();
 
     Q_FOREACH (KisPaintingAssistantSP assistant, assistants()) {
-        assistant->drawAssistant(gc, updateRect, converter, d->useCache, canvas, assistantVisibility(), outlineVisible);
+        assistant->drawAssistant(gc, updateRect, converter, canvas->displayRendererInterface(), d->useCache, canvas, assistantVisibility(), outlineVisible);
 
         if (isEditingAssistants()) {
-            drawHandles(assistant, gc, converter);
+            drawHandles(assistant, gc, converter, canvas->displayRendererInterface());
         }
     }
 
     // draw editor controls on top of all assistant lines (why this code is last)
     if (isEditingAssistants()) {
         Q_FOREACH (KisPaintingAssistantSP assistant, assistants()) {
-            drawEditorWidget(assistant, gc, converter);
+            drawEditorWidget(assistant, gc, converter, canvas->displayRendererInterface());
         }
      }
 }
 
-void KisPaintingAssistantsDecoration::drawHandles(KisPaintingAssistantSP assistant, QPainter& gc, const KisCoordinatesConverter *converter)
+void KisPaintingAssistantsDecoration::drawHandles(KisPaintingAssistantSP assistant, QPainter& gc, const KisCoordinatesConverter *converter, const KoColorDisplayRendererInterface *renderInterface)
 {
         QTransform initialTransform = converter->documentToWidgetTransform();
 
-        QColor colorToPaint = assistant->effectiveAssistantColor();
+    KoColor c;
+        c.fromQColor(assistant->effectiveAssistantColor());
+        QColor colorToPaint = renderInterface->convertColorToDisplayColorSpace(c);
 
         Q_FOREACH (const KisPaintingAssistantHandleSP handle, assistant->handles()) {
 
@@ -556,7 +559,32 @@ QPointF KisPaintingAssistantsDecoration::snapToGuide(const QPointF& pt, const QP
  * we potentially could make some of these inline to speed up performance
 */
 
-void KisPaintingAssistantsDecoration::drawEditorWidget(KisPaintingAssistantSP assistant, QPainter& gc, const KisCoordinatesConverter *converter)
+void drawSingleState(QPainter& gc, const QImage &icon, QRect maxRect, const QPoint &position, const KoColorDisplayRendererInterface *renderInterface, QPoint additional = QPoint()) {
+    maxRect.moveTopLeft(position+additional);
+    const QMargins m(2, 2, 2, 2);
+    QRect target(QPoint(), (icon.size()/icon.devicePixelRatioF()));
+    target.moveCenter(maxRect.center());
+    target = target.marginsRemoved(m);
+    gc.drawImage(target.intersected(maxRect), renderInterface->convertImageToDisplayColorSpace(icon));
+}
+
+void drawDoubleState(QPainter& gc, const QImage &icon, const QImage &icon2, QRect maxRect, const QPoint &position, const bool state, const KoColorDisplayRendererInterface *renderInterface) {
+    maxRect.moveTopLeft(position);
+    const QMargins m(2, 2, 2, 2);
+    QRect target(QPoint(), (icon.size()/icon.devicePixelRatioF()));
+    target.moveCenter(maxRect.center());
+    target = target.marginsRemoved(m);
+    if (state) {
+        gc.drawImage(target.intersected(maxRect), renderInterface->convertImageToDisplayColorSpace(icon));
+    } else {
+        gc.save();
+        gc.setOpacity(0.35);
+        gc.drawImage(target.intersected(maxRect.marginsRemoved(m)), renderInterface->convertImageToDisplayColorSpace(icon2));
+        gc.restore();
+    }
+}
+
+void KisPaintingAssistantsDecoration::drawEditorWidget(KisPaintingAssistantSP assistant, QPainter& gc, const KisCoordinatesConverter *converter, const KoColorDisplayRendererInterface *renderInterface)
 {
     if (!assistant->isAssistantComplete() || !globalEditorWidgetData.widgetActivated) {
         return;
@@ -566,9 +594,12 @@ void KisPaintingAssistantsDecoration::drawEditorWidget(KisPaintingAssistantSP as
     QPointF actionsPosition = initialTransform.map(assistant->viewportConstrainedEditorPosition(converter, globalEditorWidgetData.boundingSize));
 
     //draw editor widget background
-    QBrush backgroundColor = d->m_canvas->viewManager()->mainWindowAsQWidget()->palette().window();
+    QPalette sysPalette = renderInterface->systemPaletteForDisplayColorSpace();
+
+    QBrush backgroundColor = sysPalette.window();
     QPointF actionsBGRectangle(actionsPosition + QPointF(globalEditorWidgetData.widgetOffset,globalEditorWidgetData.widgetOffset));
-    QPen stroke(QColor(60, 60, 60, 80), 2);
+    QPen stroke(sysPalette.window(), 2);
+
 
     gc.setRenderHint(QPainter::Antialiasing);
 
@@ -582,7 +613,7 @@ void KisPaintingAssistantsDecoration::drawEditorWidget(KisPaintingAssistantSP as
     if (selectedAssistant()) { // there might not be a selected assistant, so do not seg fault
         if (assistant->getEditorPosition() == selectedAssistant()->getEditorPosition()) {
             stroke.setWidth(6);
-            stroke.setColor(qApp->palette().color(QPalette::Highlight));
+            stroke.setColor(sysPalette.color(QPalette::Highlight));
 
         }
     }
@@ -591,9 +622,10 @@ void KisPaintingAssistantsDecoration::drawEditorWidget(KisPaintingAssistantSP as
     gc.drawPath(bgPath);
     gc.fillPath(bgPath, backgroundColor);
 
-
     //draw drag handle
-    QColor dragDecorationColor(150,150,150,255);
+    KoColor c;
+    c.fromQColor(QColor(150,150,150,255));
+    QColor dragDecorationColor = renderInterface->convertColorToDisplayColorSpace(c);
 
     QPainterPath dragRect;
     int width = actionsPosition.x()+globalEditorWidgetData.boundingSize.width()-globalEditorWidgetData.dragDecorationWidth+globalEditorWidgetData.widgetOffset;
@@ -603,7 +635,8 @@ void KisPaintingAssistantsDecoration::drawEditorWidget(KisPaintingAssistantSP as
 
     //draw dot decoration on handle
     QPainterPath dragRectDots;
-    QColor dragDecorationDotsColor(50,50,50,255);
+    c.fromQColor(QColor(50,50,50,255));
+    QColor dragDecorationDotsColor = renderInterface->convertColorToDisplayColorSpace(c);
     int dotSize = 2;
     dragRectDots.addEllipse(3,2.5,dotSize,dotSize);
     dragRectDots.addEllipse(3,7.5,dotSize,dotSize);
@@ -616,49 +649,26 @@ void KisPaintingAssistantsDecoration::drawEditorWidget(KisPaintingAssistantSP as
     dragRectDots.translate((globalEditorWidgetData.dragDecorationWidth/2)+width,(globalEditorWidgetData.boundingSize.height()/2)+actionsPosition.y()+globalEditorWidgetData.widgetOffset);
     gc.fillPath(dragRectDots,dragDecorationDotsColor);
 
-
+    QRect buttonRect(QPoint(0,0), QSize(globalEditorWidgetData.buttonSize, globalEditorWidgetData.buttonSize));
     //loop over all visible buttons and render them
     if (globalEditorWidgetData.moveButtonActivated) {
-        QPointF iconMovePosition(actionsPosition + globalEditorWidgetData.moveIconPosition);
-        gc.drawPixmap(iconMovePosition, globalEditorWidgetData.m_iconMove);
+        QPoint pos = QPointF(actionsPosition + globalEditorWidgetData.moveIconPosition).toPoint();
+        drawSingleState(gc, globalEditorWidgetData.m_iconMove, buttonRect, pos, renderInterface, QPoint(5, 5));
     }
     if (globalEditorWidgetData.snapButtonActivated) {
-        QPointF iconSnapPosition(actionsPosition + globalEditorWidgetData.snapIconPosition);
-        if (assistant->isSnappingActive() == true) {
-            gc.drawPixmap(iconSnapPosition, globalEditorWidgetData.m_iconSnapOn);
-        }else {
-            gc.drawPixmap(iconSnapPosition, globalEditorWidgetData.m_iconSnapOff);
-        }
+        QPoint pos = QPointF(actionsPosition + globalEditorWidgetData.snapIconPosition).toPoint();
+        drawDoubleState(gc, globalEditorWidgetData.m_iconSnapOn, globalEditorWidgetData.m_iconSnapOff, buttonRect, pos, assistant->isSnappingActive(), renderInterface);
     }
     if (globalEditorWidgetData.lockButtonActivated) {
-        QPointF iconLockedPosition(actionsPosition + globalEditorWidgetData.lockedIconPosition);
-        if (assistant->isLocked()) {
-            gc.drawPixmap(iconLockedPosition, globalEditorWidgetData.m_iconLockOn);
-        } else {
-            qreal oldOpacity = gc.opacity();
-            gc.setOpacity(0.35);
-            gc.drawPixmap(iconLockedPosition, globalEditorWidgetData.m_iconLockOff);
-            gc.setOpacity(oldOpacity);
-        }
+        QPoint pos = QPointF(actionsPosition + globalEditorWidgetData.lockedIconPosition).toPoint();
+        drawDoubleState(gc, globalEditorWidgetData.m_iconLockOn, globalEditorWidgetData.m_iconLockOff, buttonRect, pos, assistant->isLocked(), renderInterface);
     }
     if (globalEditorWidgetData.duplicateButtonActivated) {
-        QPointF iconDuplicatePosition(actionsPosition + globalEditorWidgetData.duplicateIconPosition);
-        if(assistant->isDuplicating()) {
-            //draw button depressed
-            qreal oldOpacity = gc.opacity();
-            gc.setOpacity(0.35);
-            gc.drawPixmap(iconDuplicatePosition,globalEditorWidgetData.m_iconDuplicate);
-            gc.setOpacity(oldOpacity);
-        }else {
-            gc.drawPixmap(iconDuplicatePosition,globalEditorWidgetData.m_iconDuplicate);
-        }
+        QPoint pos = QPointF(actionsPosition + globalEditorWidgetData.duplicateIconPosition).toPoint();
+        drawDoubleState(gc, globalEditorWidgetData.m_iconDuplicate, globalEditorWidgetData.m_iconDuplicate, buttonRect, pos, !assistant->isDuplicating(), renderInterface);
     }
     if (globalEditorWidgetData.deleteButtonActivated) {
-        QPointF iconDeletePosition(actionsPosition + globalEditorWidgetData.deleteIconPosition);
-        gc.drawPixmap(iconDeletePosition, globalEditorWidgetData.m_iconDelete);
+        QPoint pos = QPointF(actionsPosition + globalEditorWidgetData.deleteIconPosition).toPoint();
+        drawSingleState(gc, globalEditorWidgetData.m_iconDelete, buttonRect, pos, renderInterface);
     }
-
-
-
-
 }

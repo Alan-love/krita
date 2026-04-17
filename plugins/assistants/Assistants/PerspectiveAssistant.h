@@ -31,7 +31,7 @@ public:
 
     QPointF getDefaultEditorPosition() const override;
     int numHandles() const override { return 4; }
-    void drawAssistant(QPainter& gc, const QRectF& updateRect, const KisCoordinatesConverter* converter, bool cached = true,KisCanvas2* canvas=0, bool assistantVisible=true, bool previewVisible=true) override;
+    void drawAssistant(QPainter& gc, const QRectF& updateRect, const KisCoordinatesConverter* converter, const KoColorDisplayRendererInterface *displayRenderInterface, bool cached = true,KisCanvas2* canvas=0, bool assistantVisible=true, bool previewVisible=true) override;
 
     bool contains(const QPointF& point) const override;
     qreal distance(const QPointF& point) const override;
@@ -46,7 +46,7 @@ public:
     bool loadCustomXml(QXmlStreamReader *xml) override;
 
 protected:
-    void drawCache(QPainter& gc, const KisCoordinatesConverter *converter,  bool assistantVisible=true) override;
+    void drawCache(QPainter& gc, const KisCoordinatesConverter *converter, const KoColorDisplayRendererInterface *displayRenderInterface, bool assistantVisible=true) override;
 private:
     QPointF project(const QPointF& pt, const QPointF& strokeBegin, const bool snapToAnyDirection, qreal moveThresholdPt);
     // creates the convex hull, returns false if it's not a quadrilateral

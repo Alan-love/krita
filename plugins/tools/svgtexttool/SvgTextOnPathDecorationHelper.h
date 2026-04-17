@@ -8,6 +8,7 @@
 
 #include <QPointF>
 #include <QPainter>
+#include <KisHandleStyle.h>
 
 
 class KoSvgTextShape;
@@ -51,7 +52,7 @@ public:
      * @brief paint
      * Paint the handles for the text path.
      */
-    void paint(QPainter *painter, const KoViewConverter &converter);
+    void paint(QPainter *painter, const KoViewConverter &converter, KisHandlePalette handlePalette);
 
     /**
      * @brief decorationRect

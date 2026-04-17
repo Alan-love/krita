@@ -31,11 +31,11 @@ void KoInteractionTool::paint(QPainter &painter, const KoViewConverter &converte
     Q_D(KoInteractionTool);
 
     if (d->currentStrategy) {
-        d->currentStrategy->paint(painter, converter);
+        d->currentStrategy->paint(painter, converter, canvas()->displayRendererInterface());
     } else {
         Q_FOREACH (KoInteractionStrategyFactorySP factory, d->interactionFactories) {
             // skip the rest of rendering if the factory asks for it
-            if (factory->paintOnHover(painter, converter)) break;
+            if (factory->paintOnHover(painter, converter, canvas()->displayRendererInterface())) break;
         }
     }
 }

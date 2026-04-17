@@ -12,6 +12,7 @@
 #include <QPainter>
 #include <QPainterPath>
 
+#include "KoColorDisplayRendererInterface.h"
 #include "kis_coordinates_converter.h"
 #include "tool_transform_args.h"
 #include "transform_transaction_properties.h"
@@ -223,7 +224,7 @@ void KisWarpTransformStrategy::drawConnectionLines(QPainter &gc,
     }
 }
 
-void KisWarpTransformStrategy::paint(QPainter &gc)
+void KisWarpTransformStrategy::paint(QPainter &gc, const KoColorDisplayRendererInterface *displayRendererInterface)
 {
     // Draw preview image
 
@@ -247,12 +248,12 @@ void KisWarpTransformStrategy::paint(QPainter &gc)
                             m_d->currentArgs.transfPoints(),
                             m_d->currentArgs.isEditingTransformPoints());
     }
+    KisHandlePalette palette = displayRendererInterface->handlePaletteForDisplayColorSpace();
 
-
-    QPen mainPen(Qt::black);
+    QPen mainPen(palette.black);
     mainPen.setCosmetic(true);
     mainPen.setWidth(decorationThickness());
-    QPen outlinePen(Qt::white);
+    QPen outlinePen(palette.white);
     outlinePen.setCosmetic(true);
     outlinePen.setWidth(decorationThickness());
 
@@ -335,7 +336,7 @@ void KisWarpTransformStrategy::paint(QPainter &gc)
 
 
         KisHandlePainterHelper handlePainter(&gc, 0.0, decorationThickness());
-        handlePainter.setHandleStyle(KisHandleStyle::primarySelection());
+        handlePainter.setHandleStyle(KisHandleStyle::primarySelection(palette));
 
         // draw horizontal lines
         for (int i = 0; i < numPoints; i++) {

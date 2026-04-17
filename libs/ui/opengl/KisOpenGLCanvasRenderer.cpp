@@ -5,6 +5,7 @@
  *  SPDX-License-Identifier: GPL-2.0-or-later
  */
 
+#include "KoColorDisplayRendererInterface.h"
 #define GL_GLEXT_PROTOTYPES
 
 #include "opengl/KisOpenGLCanvasRenderer.h"
@@ -587,22 +588,9 @@ void KisOpenGLCanvasRenderer::drawBackground(const QRect &updateRect)
     Q_UNUSED(updateRect);
 
     // Draw the border (that is, clear the whole widget to the border color)
-    QColor widgetBackgroundColor = borderColor();
 
-    const KoColorSpace *finalColorSpace =
-            KoColorSpaceRegistry::instance()->colorSpace(RGBAColorModelID.id(),
-                                                         d->openGLImageTextures->updateInfoBuilder().destinationColorSpace()->colorDepthId().id(),
-                                                         d->openGLImageTextures->monitorProfile());
-
-    KoColor convertedBackgroundColor = KoColor(widgetBackgroundColor, KoColorSpaceRegistry::instance()->rgb8());
-    convertedBackgroundColor.convertTo(finalColorSpace);
-
-    QVector<float> channels = QVector<float>(4);
-    convertedBackgroundColor.colorSpace()->normalisedChannelsValue(convertedBackgroundColor.data(), channels);
-
-
-    // Data returned by KoRgbU8ColorSpace comes in the order: blue, green, red.
-    glClearColor(channels[2], channels[1], channels[0], 1.0);
+    QColor bgColor = colorToDisplaySpace(borderColor());
+    glClearColor(bgColor.redF(), bgColor.greenF(), bgColor.blueF(), 1.0);
     glClear(GL_COLOR_BUFFER_BIT);
 }
 
@@ -1015,7 +1003,7 @@ void KisOpenGLCanvasRenderer::updateCursorColor()
     bool useSeparateEraserCursor = cfg.separateEraserCursor() &&
             canvas()->resourceManager()->resource(KoCanvasResource::CurrentEffectiveCompositeOp).toString() == COMPOSITE_ERASE;
 
-    d->cursorColor = (!useSeparateEraserCursor) ? cfg.getCursorMainColor() : cfg.getEraserCursorMainColor();
+    d->cursorColor = colorToDisplaySpace((!useSeparateEraserCursor) ? cfg.getCursorMainColor() : cfg.getEraserCursorMainColor());
 }
 
 void KisOpenGLCanvasRenderer::updatePixelGridMode()
@@ -1091,11 +1079,18 @@ void KisOpenGLCanvasRenderer::renderCanvasGL(const QRect &updateRect)
     }
 }
 
+QColor KisOpenGLCanvasRenderer::colorToDisplaySpace(const QColor &c) {
+    KoColor convertedColor = KoColor(c, KoColorSpaceRegistry::instance()->rgb8());
+    if (!d->openGLImageTextures || !d->openGLImageTextures->updateInfoBuilder().destinationColorSpace()) return convertedColor.toQColor();
+    return canvas()->displayRendererInterface()->convertColorToDisplayColorSpace(convertedColor);
+}
+
 void KisOpenGLCanvasRenderer::setDisplayConfig(const KisDisplayConfig &config)
 {
     d->openGLImageTextures->setMonitorProfile(config.profile,
                                               config.intent,
                                               config.conversionFlags);
+    updateConfig();
 }
 
 void KisOpenGLCanvasRenderer::channelSelectionChanged(const QBitArray &channelFlags)

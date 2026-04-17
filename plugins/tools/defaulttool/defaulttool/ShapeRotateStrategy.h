@@ -40,7 +40,7 @@ public:
     {
         Q_UNUSED(modifiers);
     }
-    void paint(QPainter &painter, const KoViewConverter &converter) override;
+    void paint(QPainter &painter, const KoViewConverter &converter, const KoColorDisplayRendererInterface *displayRendererInterface) override;
 
 private:
     void rotateBy(qreal angle);

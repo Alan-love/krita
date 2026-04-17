@@ -14,6 +14,8 @@
 
 class KoChannelInfo;
 class KoColorSpace;
+struct KisHandlePalette;
+class QPalette;
 
 /**
  * A special interface class provided by pigment to let widgets render
@@ -84,6 +86,32 @@ public:
      */
     virtual const KoColorSpace* getPaintingColorSpace() const = 0;
 
+    /**
+     * @brief convertColorToDisplayColorSpace
+     * @param color -- base color.
+     * @return get a QColor version of the KoColor that is suited for canvas decorations.
+     */
+    virtual QColor convertColorToDisplayColorSpace(const KoColor color) const = 0;
+
+    /**
+     * @brief convertImageToDisplayColorSpace
+     * @param source -- image to convert.
+     * @return image converted to be used as a canvas decoration.
+     */
+    virtual QImage convertImageToDisplayColorSpace(const QImage source) const = 0;
+
+    /**
+     * @brief handlePaletteForDisplayColorSpace
+     * @return get a version of KisHandlePalette suited for canvas decorations
+     */
+    virtual KisHandlePalette handlePaletteForDisplayColorSpace() const = 0;
+
+    /**
+     * @brief systemPaletteForDisplayColorSpace
+     * @return  get a version of the system palette that is suited for canvas decorations.
+     */
+    virtual QPalette systemPaletteForDisplayColorSpace() const = 0;
+
 Q_SIGNALS:
     void displayConfigurationChanged();
 
@@ -109,6 +137,11 @@ public:
     qreal maxVisibleFloatValue(const KoChannelInfo *chaninfo) const override;
 
     const KoColorSpace* getPaintingColorSpace() const override;
+
+    QColor convertColorToDisplayColorSpace(KoColor c) const override;
+    QImage convertImageToDisplayColorSpace(const QImage source) const override;
+    KisHandlePalette handlePaletteForDisplayColorSpace() const override;
+    QPalette systemPaletteForDisplayColorSpace() const override;
 
     static KoColorDisplayRendererInterface* instance();
 };

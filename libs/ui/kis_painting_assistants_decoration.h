@@ -19,6 +19,7 @@
 #include <kritaui_export.h>
 
 class KisView;
+class KoColorDisplayRendererInterface;
 
 class KisPaintingAssistantsDecoration;
 typedef KisSharedPtr<KisPaintingAssistantsDecoration> KisPaintingAssistantsDecorationSP;
@@ -49,13 +50,13 @@ struct AssistantEditorData {
     //size of the side drag decoration
     const int dragDecorationWidth = 15;
     //QPixMaps representing icons for buttons
-    const QPixmap m_iconMove = KisIconUtils::loadIcon("transform-move").pixmap(buttonSize+10, buttonSize+10);
-    const QPixmap m_iconSnapOn = KisIconUtils::loadIcon("visible").pixmap(buttonSize, buttonSize);
-    const QPixmap m_iconSnapOff = KisIconUtils::loadIcon("novisible").pixmap(buttonSize, buttonSize);
-    const QPixmap m_iconLockOn = KisIconUtils::loadIcon("layer-locked").pixmap(buttonSize, buttonSize);
-    const QPixmap m_iconLockOff = KisIconUtils::loadIcon("layer-unlocked").pixmap(buttonSize, buttonSize);
-    const QPixmap m_iconDuplicate = KisIconUtils::loadIcon("duplicateitem").pixmap(buttonSize, buttonSize);
-    const QPixmap m_iconDelete = KisIconUtils::loadIcon("deletelayer").pixmap(buttonSize, buttonSize);
+    const QImage m_iconMove = KisIconUtils::loadIcon("transform-move").pixmap(buttonSize+10, buttonSize+10).toImage();
+    const QImage m_iconSnapOn = KisIconUtils::loadIcon("visible").pixmap(buttonSize, buttonSize).toImage();
+    const QImage m_iconSnapOff = KisIconUtils::loadIcon("novisible").pixmap(buttonSize, buttonSize).toImage();
+    const QImage m_iconLockOn = KisIconUtils::loadIcon("layer-locked").pixmap(buttonSize, buttonSize).toImage();
+    const QImage m_iconLockOff = KisIconUtils::loadIcon("layer-unlocked").pixmap(buttonSize, buttonSize).toImage();
+    const QImage m_iconDuplicate = KisIconUtils::loadIcon("duplicateitem").pixmap(buttonSize, buttonSize).toImage();
+    const QImage m_iconDelete = KisIconUtils::loadIcon("deletelayer").pixmap(buttonSize, buttonSize).toImage();
     //how many buttons fit horizontally before extending to the next row
     const int horizontalButtonLimit = 3;
 };
@@ -159,8 +160,8 @@ public Q_SLOTS:
 
 protected:
     void drawDecoration(QPainter& gc, const QRectF& updateRect, const KisCoordinatesConverter *converter,KisCanvas2* canvas) override;
-    void drawHandles(KisPaintingAssistantSP assistant, QPainter& gc, const KisCoordinatesConverter *converter);
-    void drawEditorWidget(KisPaintingAssistantSP assistant, QPainter& gc, const KisCoordinatesConverter *converter);
+    void drawHandles(KisPaintingAssistantSP assistant, QPainter& gc, const KisCoordinatesConverter *converter, const KoColorDisplayRendererInterface *renderInterface);
+    void drawEditorWidget(KisPaintingAssistantSP assistant, QPainter& gc, const KisCoordinatesConverter *converter, const KoColorDisplayRendererInterface *renderInterface);
 
 private:
     struct Private;

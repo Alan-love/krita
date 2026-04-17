@@ -17,6 +17,7 @@
 #include <KoSelection.h>
 #include <KoCanvasResourceProvider.h>
 #include <KoColor.h>
+#include <KoColorDisplayRendererInterface.h>
 #include <KoPathPoint.h>
 #include <KoPathPointData.h>
 #include <KoPathPointMergeCommand.h>
@@ -75,7 +76,7 @@ void KoPencilTool::paint(QPainter &painter, const KoViewConverter &converter)
         KisHandlePainterHelper helper =
             KoShape::createHandlePainterHelperView(&painter, m_hoveredPoint->parent(), converter, handleRadius(), decorationThickness());
 
-        helper.setHandleStyle(KisHandleStyle::primarySelection());
+        helper.setHandleStyle(KisHandleStyle::primarySelection(canvas()->displayRendererInterface()->handlePaletteForDisplayColorSpace()));
         m_hoveredPoint->paint(helper, KoPathPoint::Node);
     }
 }

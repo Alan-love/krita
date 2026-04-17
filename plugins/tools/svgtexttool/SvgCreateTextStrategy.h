@@ -11,6 +11,7 @@
 
 #include <QPointF>
 #include <QSizeF>
+#include <KisHandleStyle.h>
 
 class SvgTextTool;
 
@@ -23,7 +24,7 @@ public:
     SvgCreateTextStrategy(SvgTextTool *tool, const QPointF &clicked, KoShape *shape = nullptr);
     ~SvgCreateTextStrategy() override = default;
 
-    void paint(QPainter &painter, const KoViewConverter &converter) override;
+    void paint(QPainter &painter, const KoViewConverter &converter, const KoColorDisplayRendererInterface *displayRendererInterface) override;
     void handleMouseMove(const QPointF &mouseLocation, Qt::KeyboardModifiers modifiers) override;
     KUndo2Command *createCommand() override;
     void cancelInteraction() override;

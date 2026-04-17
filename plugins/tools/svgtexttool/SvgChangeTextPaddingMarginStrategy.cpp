@@ -8,6 +8,7 @@
 #include "SvgTextTool.h"
 #include <KoPathShape.h>
 #include <KoPathSegment.h>
+#include <KoColorDisplayRendererInterface.h>
 
 #include <KoSvgTextProperties.h>
 #include <KisHandlePainterHelper.h>
@@ -134,13 +135,14 @@ KoSvgTextProperties getProperties(bool isPadding, QLineF line, KoSvgTextProperti
     return previous;
 }
 
-void SvgChangeTextPaddingMarginStrategy::paint(QPainter &painter, const KoViewConverter &converter)
+void SvgChangeTextPaddingMarginStrategy::paint(QPainter &painter, const KoViewConverter &converter, const KoColorDisplayRendererInterface *displayRendererInterface)
 {
     if (!(m_referenceShape && m_shape)) return;
     painter.save();
     KisHandlePainterHelper handlePainter =
             KoShape::createHandlePainterHelperView(&painter, m_shape, converter, handleRadius(), decorationThickness());
-    handlePainter.setHandleStyle(KisHandleStyle::selectedPrimaryHandles());
+    handlePainter.setHandleStyle(KisHandleStyle::selectedPrimaryHandles(displayRendererInterface->handlePaletteForDisplayColorSpace()));
+
 
     const QLineF line = getLine(m_lastMousePos, m_referenceShape, m_isPadding);
     const QTransform lineTf = m_referenceShape->absoluteTransformation() * m_shape->absoluteTransformation().inverted();

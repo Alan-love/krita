@@ -683,6 +683,11 @@ KoViewConverter *KisCanvas2::viewConverter()
     return m_d->coordinatesConverter;
 }
 
+KoColorDisplayRendererInterface* KisCanvas2::displayRendererInterface() const
+{
+    return m_d->displayColorConverter.displayRendererInterface();
+}
+
 KisInputManager* KisCanvas2::globalInputManager() const
 {
     return m_d->view->globalInputManager();

@@ -1,3 +1,4 @@
+
 /*
  *  SPDX-FileCopyrightText: 2022 Dmitry Kazakov <dimula73@gmail.com>
  *  SPDX-FileCopyrightText: 2025 Carsten Hartenfels <carsten.hartenfels@pm.me>
@@ -71,6 +72,7 @@ struct KisAsyncColorSamplerHelper::Private
 
     QColor currentColor;
     QColor baseColor;
+    QColor backgroundColor;
 
     QPixmap cache;
     qreal cacheRotation = 0.0;
@@ -180,6 +182,8 @@ KisAsyncColorSamplerHelper::KisAsyncColorSamplerHelper(KisCanvas2 *canvas)
     m_d->activationDelayTimer.setInterval(100);
     m_d->activationDelayTimer.setSingleShot(true);
     connect(&m_d->activationDelayTimer, SIGNAL(timeout()), this, SLOT(activateDelayedPreview()));
+    connect(m_d->canvas->displayColorConverter(), SIGNAL(displayConfigurationChanged()), this, SLOT(slotUpdateBgColor()));
+    slotUpdateBgColor();
 }
 
 KisAsyncColorSamplerHelper::~KisAsyncColorSamplerHelper()
@@ -194,6 +198,7 @@ bool KisAsyncColorSamplerHelper::isActive() const
 
 void KisAsyncColorSamplerHelper::activate(bool sampleCurrentLayer, bool pickFgColor)
 {
+
     KIS_SAFE_ASSERT_RECOVER_RETURN(!m_d->isActive);
     m_d->isActive = true;
 
@@ -237,7 +242,7 @@ void KisAsyncColorSamplerHelper::activatePreview()
 
     const KoColor currentColor =
         m_d->canvas->resourceManager()->koColorResource(m_d->sampleResourceId);
-    const QColor previewColor = m_d->canvas->displayColorConverter()->toQColor(currentColor);
+    const QColor previewColor = m_d->canvas->displayColorConverter()->convertColorToDisplayColorSpace(currentColor, true);
 
     m_d->currentColor = previewColor;
     m_d->baseColor = previewColor;
@@ -456,7 +461,7 @@ void KisAsyncColorSamplerHelper::paintCircle(QPainter &gc,
         QPainter cachePainter(&m_d->cache);
         cachePainter.setRenderHint(QPainter::Antialiasing);
 
-        QColor backgroundColor = colorWithAlpha(qApp->palette().color(QPalette::Base), OPACITY_OPAQUE_U8 / 2 + 1);
+        QColor backgroundColor = colorWithAlpha(m_d->backgroundColor, OPACITY_OPAQUE_U8 / 2 + 1);
         qreal penWidth = m_d->circlePreviewDiameter > 100 ? (2.0 * dpr) : (1.0 * dpr);
         QPen pen = QPen(backgroundColor, penWidth);
         if (m_d->circlePreviewOutlineEnabled) {
@@ -598,7 +603,7 @@ void KisAsyncColorSamplerHelper::slotColorSamplingFinished(const KoColor &rawCol
 
     if (!m_d->showPreview) return;
 
-    const QColor previewColor = m_d->canvas->displayColorConverter()->toQColor(color);
+    const QColor previewColor = m_d->canvas->displayColorConverter()->convertColorToDisplayColorSpace(color, true);
 
     if (!m_d->haveSample || m_d->currentColor != previewColor) {
         m_d->haveSample = true;
@@ -607,4 +612,11 @@ void KisAsyncColorSamplerHelper::slotColorSamplingFinished(const KoColor &rawCol
     }
 
     Q_EMIT sigRequestUpdateOutline();
+}
+
+void KisAsyncColorSamplerHelper::slotUpdateBgColor()
+{
+    KoColor bgColor;
+    bgColor.fromQColor(qApp->palette().color(QPalette::Base));
+    m_d->backgroundColor = m_d->canvas->displayColorConverter()->convertColorToDisplayColorSpace(bgColor);
 }

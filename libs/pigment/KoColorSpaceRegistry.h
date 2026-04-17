@@ -23,6 +23,7 @@ class KoColorProfile;
 class KoColorConversionSystem;
 class KoColorConversionCache;
 class KoColorConversionTransformation;
+class QColorSpace;
 
 /**
  * The registry for colorspaces and profiles.
@@ -346,6 +347,24 @@ public:
      */
     const KoColorProfile *profileFor(const QVector<double> &colorants, ColorPrimaries colorPrimaries, TransferCharacteristics transferFunction) const;
 
+    /**
+     * @brief profileForQColorSpace
+     * Find a KoColorProfile that matches a given QColorSpace.
+     * This will use the QColorSpace::IccProfile function as a
+     * last resort, preferring to use preexisting profiles in the
+     * registery.
+     * @param space -- space to return the profile for.
+     * @return A Profile for the given QColorSpace, may be null if nothing was found.
+     */
+    const KoColorProfile *profileForQColorSpace(const QColorSpace &space);
+
+    /**
+     * @brief QColorSpaceForProfile
+     * Generate a QColorSpace for the given KoColorProfile.
+     * @param profile -- source profile
+     * @return a QColorSpace loaded from the profile. May not be RGB!
+     */
+    QColorSpace QColorSpaceForProfile(const KoColorProfile *profile) const;
     /**
      * @return the list of available color models
      */

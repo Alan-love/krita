@@ -724,6 +724,84 @@ const KoColorProfile *KoColorSpaceRegistry::profileFor(const QVector<double> &co
     return nullptr;
 }
 
+#include <QColorSpace>
+
+static QMap<QColorSpace::ColorModel, QString> mapQColorSpaceModelToId {
+    {QColorSpace::ColorModel::Rgb, RGBAColorModelID.id()},
+    {QColorSpace::ColorModel::Cmyk, CMYKAColorModelID.id()},
+    {QColorSpace::ColorModel::Gray, GrayAColorModelID.id()},
+};
+
+static QMap<QColorSpace::Primaries, ColorPrimaries> mapQColorSpaceColorPrimaries {
+    {QColorSpace::Primaries::SRgb, PRIMARIES_ITU_R_BT_709_5},
+    {QColorSpace::Primaries::AdobeRgb, PRIMARIES_ADOBE_RGB_1998},
+    {QColorSpace::Primaries::DciP3D65, PRIMARIES_SMPTE_EG_432_1},
+    {QColorSpace::Primaries::ProPhotoRgb, PRIMARIES_PROPHOTO},
+    {QColorSpace::Primaries::Bt2020, PRIMARIES_ITU_R_BT_2020_2_AND_2100_0},
+    {QColorSpace::Primaries::Custom, PRIMARIES_UNSPECIFIED}
+};
+
+static QMap<QColorSpace::TransferFunction, TransferCharacteristics> mapQColorSpaceColorTransfer {
+    {QColorSpace::TransferFunction::Linear, TRC_LINEAR},
+    {QColorSpace::TransferFunction::SRgb, TRC_IEC_61966_2_1},
+    {QColorSpace::TransferFunction::ProPhotoRgb, TRC_PROPHOTO},
+    {QColorSpace::TransferFunction::Bt2020, TRC_ITU_R_BT_2020_2_12bit},
+#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
+    {QColorSpace::TransferFunction::St2084, TRC_ITU_R_BT_2100_0_PQ},
+    {QColorSpace::TransferFunction::Hlg, TRC_ITU_R_BT_2100_0_HLG},
+#endif
+    {QColorSpace::TransferFunction::Custom, TRC_UNSPECIFIED}
+};
+
+const KoColorProfile *KoColorSpaceRegistry::profileForQColorSpace(const QColorSpace &space)
+{
+    // We want to test RGB before testing wether we are dealing with a LUT, because we want to funnel rec2020 pq into loading our profile.
+    if (space.colorModel() == QColorSpace::ColorModel::Rgb) {
+        if (space.transferFunction() == QColorSpace::TransferFunction::Gamma) {
+            // load icc profile.
+            QByteArray profileData = space.iccProfile();
+            return createColorProfile(RGBAColorModelID.id(), Integer8BitsColorDepthID.id(), profileData);
+        }
+        ColorPrimaries primaries = mapQColorSpaceColorPrimaries.value(space.primaries(), PRIMARIES_UNSPECIFIED);
+        TransferCharacteristics transfer = mapQColorSpaceColorTransfer.value(space.transferFunction(), TRC_UNSPECIFIED);
+        // In qt6.9 we can get the 'primary points'.
+        QVector<double> colorants;
+        if ((!colorants.isEmpty() || primaries != PRIMARIES_UNSPECIFIED) && transfer != TRC_UNSPECIFIED) {
+            return profileFor(colorants, primaries, transfer);
+        }
+    } else if (space.colorModel() == QColorSpace::ColorModel::Gray) {
+        TransferCharacteristics transfer = mapQColorSpaceColorTransfer.value(space.transferFunction(), TRC_UNSPECIFIED);
+        if (space.transferFunction() == QColorSpace::TransferFunction::Gamma) {
+            QByteArray profileData = space.iccProfile();
+            return createColorProfile(RGBAColorModelID.id(), Integer8BitsColorDepthID.id(), profileData);
+
+        }
+        QVector<double> colorants;
+        colorants << space.whitePoint().x() << space.whitePoint().y();
+        if (!colorants.isEmpty() && transfer != TRC_UNSPECIFIED) {
+            return profileFor(colorants, PRIMARIES_UNSPECIFIED, transfer);
+        }
+    }
+    KoColorSpaceEngine *engine = KoColorSpaceEngineRegistry::instance()->get("icc");
+    if (space.isValid() && engine) {
+        // byte array from icc profile.
+        QByteArray profileData = space.iccProfile();
+        return engine->addProfile(profileData);
+    }
+
+    return nullptr;
+}
+
+QColorSpace KoColorSpaceRegistry::QColorSpaceForProfile(const KoColorProfile *profile) const
+{
+#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
+    if (profile == p2020PQProfile()) {
+        return QColorSpace(QColorSpace::Bt2100Pq);
+    }
+#endif
+    return QColorSpace::fromIccProfile(profile->rawData());
+}
+
 QList<KoID> KoColorSpaceRegistry::colorModelsList(ColorSpaceListVisibility option) const
 {
     QReadLocker l(&d->registrylock);

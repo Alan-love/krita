@@ -6,13 +6,14 @@
 
 #include "KisReferenceImagesDecoration.h"
 
+#include "KisDisplayConfig.h"
 #include "KoShapeManager.h"
 
 #include "kis_algebra_2d.h"
 #include "KisDocument.h"
 #include "KisReferenceImagesLayer.h"
 #include "kis_layer_utils.h"
-#include <KoColorDisplayRendererInterface.h>
+#include <kis_display_color_converter.h>
 #include <qcolorspace.h>
 
 struct KisReferenceImagesDecoration::Private {
@@ -138,13 +139,17 @@ void KisReferenceImagesDecoration::drawDecoration(QPainter &gc, const QRectF &/*
             d->previousTransform = transform;
             d->buffer.image = QImage(QSize(1, 1), QImage::Format_ARGB32);
             // Set this with canvas opengl colorprofile.
-            d->buffer.image.setColorSpace(QColorSpace(QColorSpace::Bt2100Pq));
+            const KoColorProfile *canvasProfile = canvas->displayColorConverter()->multiSurfaceDisplayConfig().canvasProfile;
+            if (canvasProfile) {
+                d->buffer.image.setColorSpace(KoColorSpaceRegistry::instance()->QColorSpaceForProfile(canvasProfile));
+            } else {
+                d->buffer.image.setColorSpace(QColorSpace(QColorSpace::SRgb));
+            }
             d->updateBufferByWidgetCoordinates(QRectF(QPointF(0,0), viewSize));
         }
 
         if (!d->buffer.image.isNull()) {
-            // currently, this is clipped to sRGB. At some point, we should support color managing in the vectors, possibly by recognising qcolorspace.
-            gc.drawImage(d->buffer.position, canvas->displayRendererInterface()->convertImageToDisplayColorSpace(d->buffer.image));
+            gc.drawImage(d->buffer.position, d->buffer.image);
         }
     }
 }

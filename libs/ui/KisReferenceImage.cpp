@@ -92,9 +92,11 @@ struct KisReferenceImage::Private : public QSharedData
         // See https://bugs.kde.org/show_bug.cgi?id=416515 -- a jpeg image
         // loaded into a qimage cannot be saved to png unless we explicitly
         // convert the colorspace of the QImage
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
         if (image.colorSpace().colorModel() != QColorSpace::ColorModel::Rgb || !image.colorSpace().isValid()) {
             image.convertToColorSpace(QColorSpace(QColorSpace::SRgb));
         }
+#endif
 
         return (!image.isNull());
     }
@@ -265,7 +267,11 @@ void KisReferenceImage::paint(QPainter &gc) const
 
     // Color conversion.
     QImage *targetD = dynamic_cast<QImage*>(gc.device());
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+    const bool getTargetCs = (targetD);
+#else
     const bool getTargetCs = (targetD && targetD->colorSpace().colorModel() == QColorSpace::ColorModel::Rgb);
+#endif
     const KoColorProfile *targetP = getTargetCs? KoColorSpaceRegistry::instance()->profileForQColorSpace(targetD->colorSpace()): KoColorSpaceRegistry::instance()->p709SRGBProfile();
     const KoColorProfile *sourceP = KoColorSpaceRegistry::instance()->profileForQColorSpace(d->image.colorSpace());
     if (targetP != sourceP) {

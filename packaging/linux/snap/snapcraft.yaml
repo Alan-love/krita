@@ -32,7 +32,7 @@ slots:
     name: org.kde.krita
     bus: session
 parts:
-  seexpr:
+  kseexpr:
     source: https://invent.kde.org/graphics/kseexpr.git
     plugin: cmake
     build-packages:
@@ -180,7 +180,7 @@ parts:
       - poppler
       - eigen
       - pyqt6
-      - seexpr
+      - kseexpr
     source: .
     source-type: local
     plugin: cmake
@@ -198,10 +198,8 @@ parts:
     build-packages:
       - cmake
       - gettext
-      - libkseexpr-dev
       - libboost-system-dev
       - libcurl4-gnutls-dev
-      - libeigen3-dev
       - libexiv2-dev
       - libfftw3-dev
       - libgif-dev
@@ -239,6 +237,9 @@ parts:
       - libsdl2-dev
       - libfribidi-dev
       - libfreetype6-dev
+      - libjxl-dev
+      - python3-dev
+      - sip-tools
     build-snaps:
       - ffmpeg-2404-sdk
       - kf6-core24-sdk/latest/beta
@@ -256,8 +257,6 @@ parts:
       - libgsl27
       - libheif1
       - libjpeg-turbo8
-      - libkseexpr4
-      - libkseexprui4
       - liblcms2-2
       - libmypaint-1.5-1
       - libopencolorio2.1t64

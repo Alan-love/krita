@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: calligra\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-17 00:42+0000\n"
+"POT-Creation-Date: 2026-04-18 00:42+0000\n"
 "PO-Revision-Date: 2015-02-24 23:27+0100\n"
 "Last-Translator: Samir Ribić <megaribi@epn.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -16807,67 +16807,67 @@ msgid ""
 "Please update to a supported version of Windows: Windows 7, 8, 8.1 or 10."
 msgstr ""
 
-#: libs/basicflakes/tools/KoCreatePathTool.cpp:563
+#: libs/basicflakes/tools/KoCreatePathTool.cpp:566
 #, fuzzy, kde-format
 msgid "Path options"
 msgstr "Opcije šrafure"
 
-#: libs/basicflakes/tools/KoCreatePathTool.cpp:565
+#: libs/basicflakes/tools/KoCreatePathTool.cpp:568
 #, kde-format
 msgid "Autosmooth curve"
 msgstr ""
 
-#: libs/basicflakes/tools/KoCreatePathTool.cpp:569
+#: libs/basicflakes/tools/KoCreatePathTool.cpp:572
 #, fuzzy, kde-format
 #| msgid "Activate angle snap:"
 msgid "Activate angle snap"
 msgstr "Aktiviraj pomjeranje ugla:"
 
 #. i18n: ectx: property (text), widget (QLabel, lblPrecision)
-#: libs/basicflakes/tools/KoPencilTool.cpp:294
+#: libs/basicflakes/tools/KoPencilTool.cpp:295
 #: plugins/paintops/libpaintop/forms/wdgbrushchooser.ui:85
 #, kde-format
 msgid "Precision:"
 msgstr "Preciznost:"
 
-#: libs/basicflakes/tools/KoPencilTool.cpp:296
+#: libs/basicflakes/tools/KoPencilTool.cpp:297
 #, kde-format
 msgctxt "The raw line data"
 msgid "Raw"
 msgstr "Sirovi"
 
-#: libs/basicflakes/tools/KoPencilTool.cpp:297
+#: libs/basicflakes/tools/KoPencilTool.cpp:298
 #: plugins/flake/pathshapes/spiral/SpiralShapeConfigWidget.cpp:16
 #: plugins/paintops/curvebrush/curve_paintop_plugin.cpp:30
 #, kde-format
 msgid "Curve"
 msgstr "Krivulja"
 
-#: libs/basicflakes/tools/KoPencilTool.cpp:298
+#: libs/basicflakes/tools/KoPencilTool.cpp:299
 #, kde-format
 msgid "Straight"
 msgstr "Prava"
 
-#: libs/basicflakes/tools/KoPencilTool.cpp:307
-#: libs/basicflakes/tools/KoPencilTool.cpp:314
+#: libs/basicflakes/tools/KoPencilTool.cpp:308
+#: libs/basicflakes/tools/KoPencilTool.cpp:315
 #, fuzzy, kde-format
 #| msgid "Optimize"
 msgid "Optimize"
 msgstr "Optimiziraj"
 
-#: libs/basicflakes/tools/KoPencilTool.cpp:321
+#: libs/basicflakes/tools/KoPencilTool.cpp:322
 #, kde-format
 msgid "Exactness:"
 msgstr "Tačnost:"
 
-#: libs/basicflakes/tools/KoPencilTool.cpp:354
 #: libs/basicflakes/tools/KoPencilTool.cpp:355
+#: libs/basicflakes/tools/KoPencilTool.cpp:356
 #, kde-format
 msgid "Pencil"
 msgstr "Olovka"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, shapeCBox)
-#: libs/basicflakes/tools/KoPencilTool.cpp:360
+#: libs/basicflakes/tools/KoPencilTool.cpp:361
 #: plugins/flake/pathshapes/spiral/SpiralShapeConfigWidget.cpp:17
 #: plugins/paintops/gridbrush/wdggridbrushshapeoptions.ui:51
 #, kde-format
@@ -16963,7 +16963,7 @@ msgstr "Promijeni parametar"
 
 #: libs/flake/commands/KoParameterToPathCommand.cpp:31
 #: libs/flake/commands/KoParameterToPathCommand.cpp:40
-#: libs/flake/tools/KoPathTool.cpp:314
+#: libs/flake/tools/KoPathTool.cpp:315
 msgctxt "(qtundo-format)"
 msgid "Convert to Path"
 msgstr "Pretvori u stazu"
@@ -17091,7 +17091,7 @@ msgstr "Raspodjeli oblike"
 
 #: libs/flake/commands/KoShapeGroupCommand.cpp:67
 #: libs/libkis/VectorLayer.cpp:225
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1608
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1611
 msgctxt "(qtundo-format)"
 msgid "Group shapes"
 msgstr "Grupisanje oblika"
@@ -17182,7 +17182,7 @@ msgid "Unclip Shapes"
 msgstr "Ne odsijeci likove"
 
 #: libs/flake/commands/KoShapeUngroupCommand.cpp:42
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1636
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1639
 msgctxt "(qtundo-format)"
 msgid "Ungroup shapes"
 msgstr "Razgrupisanje oblika"
@@ -21173,42 +21173,42 @@ msgctxt "(qtundo-format)"
 msgid "Change Segment"
 msgstr "Segment promjene"
 
-#: libs/flake/tools/KoPathTool.cpp:130
+#: libs/flake/tools/KoPathTool.cpp:131
 #, fuzzy, kde-format
 #| msgid "Add Shape"
 msgid "Edit Shape"
 msgstr "Dodati oblik"
 
-#: libs/flake/tools/KoPathTool.cpp:633
+#: libs/flake/tools/KoPathTool.cpp:636
 #, kde-format
 msgid "Drag to move handle."
 msgstr "Povlačenje do držača za premještanje."
 
-#: libs/flake/tools/KoPathTool.cpp:687
+#: libs/flake/tools/KoPathTool.cpp:690
 #, kde-format
 msgid "Drag to move point. Shift click to change point type."
 msgstr "Povucite da promijenite tačku. Klikni shift da promjenite tip tačke."
 
-#: libs/flake/tools/KoPathTool.cpp:689
+#: libs/flake/tools/KoPathTool.cpp:692
 #, kde-format
 msgid "Drag to move control point."
 msgstr "Povucite da pomjerite kontrolnu tačku."
 
-#: libs/flake/tools/KoPathTool.cpp:712
+#: libs/flake/tools/KoPathTool.cpp:715
 #, kde-format
 msgid "Drag to change curve directly. Double click to insert new path point."
 msgstr ""
 "Povucite za direktnu promjenu krivulje. Dvaput kliknite da biste umetnuli "
 "novu  tačku."
 
-#: libs/flake/tools/KoPathTool.cpp:722
+#: libs/flake/tools/KoPathTool.cpp:725
 #, fuzzy, kde-format
 #| msgid "Press B to break path at selected point."
 msgctxt "%1 is a shortcut to be pressed"
 msgid "Press %1 to break path at selected point."
 msgstr "Pritisnite B za prelom puta u označenoj tački."
 
-#: libs/flake/tools/KoPathTool.cpp:724
+#: libs/flake/tools/KoPathTool.cpp:727
 #, fuzzy, kde-format
 #| msgid "Press B to break path at selected segments."
 msgctxt "%1 is a shortcut to be pressed"
@@ -21713,7 +21713,7 @@ msgctxt "(qtundo-format)"
 msgid "Opacity Change"
 msgstr "Promjeni providnost"
 
-#: libs/image/commands/kis_node_property_list_command.cpp:59
+#: libs/image/commands/kis_node_property_list_command.cpp:61
 msgctxt "(qtundo-format)"
 msgid "Property Changes"
 msgstr "Promjene osobine"
@@ -21738,7 +21738,7 @@ msgid "Node Rename"
 msgstr "Novo ime"
 
 #: libs/image/commands_new/kis_image_resize_command.cpp:16
-#: libs/image/kis_image.cc:840
+#: libs/image/kis_image.cc:841
 msgctxt "(qtundo-format)"
 msgid "Resize Image"
 msgstr "Promjeni dimenzije slike"
@@ -22008,14 +22008,14 @@ msgstr "Mičel"
 msgid "Pass Through"
 msgstr ""
 
-#: libs/image/kis_image.cc:397
+#: libs/image/kis_image.cc:398
 #, fuzzy, kde-format
 #| msgid "Import Image"
 msgid "Imported Image"
 msgstr "Uvezi sliku"
 
 #. i18n.
-#: libs/image/kis_image.cc:736 libs/ui/kis_import_catcher.cc:50
+#: libs/image/kis_image.cc:737 libs/ui/kis_import_catcher.cc:50
 #: libs/ui/KisDocument.cpp:2709 plugins/impex/psd/psd_loader.cpp:221
 #, fuzzy, kde-format
 #| msgid "Background"
@@ -22023,42 +22023,42 @@ msgctxt "Name for the bottom-most layer in the layerstack"
 msgid "Background"
 msgstr "Pozadina"
 
-#: libs/image/kis_image.cc:740 libs/ui/kis_layer_manager.cc:686
+#: libs/image/kis_image.cc:741 libs/ui/kis_layer_manager.cc:686
 #, fuzzy, kde-format
 msgid "Paint Layer"
 msgstr "&Slikarski sloj"
 
-#: libs/image/kis_image.cc:839
+#: libs/image/kis_image.cc:840
 msgctxt "(qtundo-format)"
 msgid "Crop Image"
 msgstr "Saseci sliku"
 
-#: libs/image/kis_image.cc:886
+#: libs/image/kis_image.cc:887
 msgctxt "(qtundo-format)"
 msgid "Purge Unused Data"
 msgstr ""
 
-#: libs/image/kis_image.cc:990
+#: libs/image/kis_image.cc:991
 msgctxt "(qtundo-format)"
 msgid "Crop Layer"
 msgstr "Isijeci sloj"
 
-#: libs/image/kis_image.cc:991
+#: libs/image/kis_image.cc:992
 msgctxt "(qtundo-format)"
 msgid "Crop Mask"
 msgstr "Maska odsjecanja"
 
-#: libs/image/kis_image.cc:1028
+#: libs/image/kis_image.cc:1029
 msgctxt "(qtundo-format)"
 msgid "Scale Image"
 msgstr "Skaliraj sliku"
 
-#: libs/image/kis_image.cc:1029
+#: libs/image/kis_image.cc:1030
 msgctxt "(qtundo-format)"
 msgid "Change Image Resolution"
 msgstr "Promijeni rezoluciju slike"
 
-#: libs/image/kis_image.cc:1079
+#: libs/image/kis_image.cc:1080
 #, fuzzy, kde-format
 #| msgctxt "(qtundo-format)"
 #| msgid "Scale Layer"
@@ -22069,19 +22069,19 @@ msgstr[0] "Skaliraj sloj"
 msgstr[1] "Skaliraj sloj"
 msgstr[2] "Skaliraj sloj"
 
-#: libs/image/kis_image.cc:1218
+#: libs/image/kis_image.cc:1219
 msgctxt "(qtundo-format)"
 msgid "Rotate Image"
 msgstr "Rotiraj sliku"
 
-#: libs/image/kis_image.cc:1228
+#: libs/image/kis_image.cc:1229
 #, fuzzy
 #| msgid "Rotate Canvas"
 msgctxt "(qtundo-format)"
 msgid "Rotate Mask"
 msgstr "Okreni platno"
 
-#: libs/image/kis_image.cc:1231
+#: libs/image/kis_image.cc:1232
 #, fuzzy, kde-format
 #| msgctxt "(qtundo-format)"
 #| msgid "Rotate Layer"
@@ -22092,7 +22092,7 @@ msgstr[0] "Okreni sloj"
 msgstr[1] "Okreni sloj"
 msgstr[2] "Okreni sloj"
 
-#: libs/image/kis_image.cc:1332
+#: libs/image/kis_image.cc:1333
 #, fuzzy
 #| msgctxt "(qtundo-format)"
 #| msgid "Shear shapes"
@@ -22100,7 +22100,7 @@ msgctxt "(qtundo-format)"
 msgid "Shear Mask"
 msgstr "Kresanje oblika"
 
-#: libs/image/kis_image.cc:1336
+#: libs/image/kis_image.cc:1337
 #, fuzzy, kde-format
 #| msgid "Shear Layer"
 msgctxt "(qtundo-format)"
@@ -22110,48 +22110,48 @@ msgstr[0] "Smakni sloj"
 msgstr[1] "Smakni sloj"
 msgstr[2] "Smakni sloj"
 
-#: libs/image/kis_image.cc:1343
+#: libs/image/kis_image.cc:1344
 msgctxt "(qtundo-format)"
 msgid "Shear Image"
 msgstr "Smakni sliku"
 
-#: libs/image/kis_image.cc:1361
+#: libs/image/kis_image.cc:1362
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Convert Layer Color Space"
 msgstr "&Pretvori prostor sloja slike..."
 
-#: libs/image/kis_image.cc:1412
+#: libs/image/kis_image.cc:1413
 msgctxt "(qtundo-format)"
 msgid "Convert Image Color Space"
 msgstr "Konvertuj prostor boja slike"
 
-#: libs/image/kis_image.cc:1413
+#: libs/image/kis_image.cc:1414
 msgctxt "(qtundo-format)"
 msgid "Convert Projection Color Space"
 msgstr "Konvertuj prostor boja projekcije"
 
-#: libs/image/kis_image.cc:1465
+#: libs/image/kis_image.cc:1466
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Unify Layers Color Space"
 msgstr "&Pretvori prostor sloja slike..."
 
-#: libs/image/kis_image.cc:1495
+#: libs/image/kis_image.cc:1496
 #, fuzzy
 #| msgid "Assign to tag"
 msgctxt "(qtundo-format)"
 msgid "Assign Profile to Layer"
 msgstr "Dodjela za oznaku"
 
-#: libs/image/kis_image.cc:1536
+#: libs/image/kis_image.cc:1537
 #, fuzzy
 #| msgid "Open Color Profile"
 msgctxt "(qtundo-format)"
 msgid "Assign Profile"
 msgstr "Otvor profil boje"
 
-#: libs/image/kis_image.cc:2572
+#: libs/image/kis_image.cc:2573
 msgctxt "(qtundo-format)"
 msgid "Crop Selections"
 msgstr "Kropaj izbore"
@@ -24704,7 +24704,7 @@ msgstr "Upravljane Resurs Bundlima"
 #: libs/resources/KisResourceCacheDb.cpp:353
 #: libs/resourcewidgets/KisStorageChooserWidget.cpp:179
 #: libs/ui/animation/KisAnimationRender.cpp:48
-#: libs/ui/animation/KisAnimationRender.cpp:116
+#: libs/ui/animation/KisAnimationRender.cpp:118
 #: libs/ui/animation/KisDlgAnimationRenderer.cpp:747
 #: libs/ui/animation/KisDlgAnimationRenderer.cpp:753
 #: libs/ui/animation/KisDlgAnimationRenderer.cpp:756
@@ -24740,10 +24740,10 @@ msgstr "Upravljane Resurs Bundlima"
 #: libs/ui/KisTemplateCreateDia.cpp:284 libs/ui/KisTemplateCreateDia.cpp:390
 #: libs/ui/KisView.cpp:679 libs/ui/KisView.cpp:1166
 #: libs/ui/KisWelcomePageWidget.cpp:725 libs/ui/KisWindowLayoutResource.cpp:390
-#: libs/ui/opengl/KisOpenGLCanvasRenderer.cpp:334
+#: libs/ui/opengl/KisOpenGLCanvasRenderer.cpp:335
 #: libs/ui/widgets/kis_custom_image_widget.cc:291
-#: plugins/assistants/Assistants/kis_assistant_tool.cc:1582
-#: plugins/assistants/Assistants/kis_assistant_tool.cc:1585
+#: plugins/assistants/Assistants/kis_assistant_tool.cc:1583
+#: plugins/assistants/Assistants/kis_assistant_tool.cc:1586
 #: plugins/dockers/gamutmask/gamutmask_dock.cpp:293
 #: plugins/dockers/storyboarddocker/DlgExportStoryboard.cpp:175
 #: plugins/dockers/storyboarddocker/DlgExportStoryboard.cpp:178
@@ -25794,7 +25794,7 @@ msgid ""
 msgstr ""
 
 #: libs/ui/animation/KisAnimationRender.cpp:48
-#: libs/ui/animation/KisAnimationRender.cpp:116
+#: libs/ui/animation/KisAnimationRender.cpp:118
 #, fuzzy, kde-format
 msgid ""
 "Could not render animation:\n"
@@ -25816,15 +25816,15 @@ msgid ""
 "you want to overwrite the existing file?"
 msgstr ""
 
-#: libs/ui/animation/KisAnimationRender.cpp:151
 #: libs/ui/animation/KisAnimationRender.cpp:153
+#: libs/ui/animation/KisAnimationRender.cpp:155
 #, fuzzy, kde-format
 #| msgid "Parsing error"
 msgctxt "@title:window"
 msgid "Rendering error"
 msgstr "Greška u raščlanjivanju"
 
-#: libs/ui/animation/KisAnimationRender.cpp:153
+#: libs/ui/animation/KisAnimationRender.cpp:155
 #, fuzzy, kde-format
 #| msgid "Failed to create an action."
 msgid "Failed to render animation frames! Output files are incomplete."
@@ -26417,7 +26417,7 @@ msgstr ""
 #: plugins/filters/colorsfilters/wdg_hsv_adjustment.ui:337
 #: plugins/filters/colorsfilters/wdg_perchannel.ui:346
 #: plugins/tools/basictools/wdgmultihandtool.ui:192
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:141
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:142
 #, kde-format
 msgid "Reset"
 msgstr "Resetuj"
@@ -27430,7 +27430,7 @@ msgstr "Verzija"
 msgid "None"
 msgstr "Ništa"
 
-#: libs/ui/canvas/kis_canvas2.cpp:1535
+#: libs/ui/canvas/kis_canvas2.cpp:1540
 #, kde-format
 msgid ""
 "WARNING: HDR mode was activated on surface working in 8-bit mode!\n"
@@ -27524,14 +27524,14 @@ msgid "Edit Guides"
 msgstr "Uredi vodilice"
 
 #: libs/ui/canvas/kis_guides_manager.cpp:543
-#: libs/ui/canvas/kis_mirror_axis.cpp:325
+#: libs/ui/canvas/kis_mirror_axis.cpp:331
 #, fuzzy, kde-format
 #| msgid "%1 px"
 msgid "Y: %1 px"
 msgstr "%1 px"
 
 #: libs/ui/canvas/kis_guides_manager.cpp:548
-#: libs/ui/canvas/kis_mirror_axis.cpp:309
+#: libs/ui/canvas/kis_mirror_axis.cpp:315
 #, fuzzy, kde-format
 #| msgid "%1 px"
 msgid "X: %1 px"
@@ -35040,7 +35040,7 @@ msgid "Color Sampler"
 msgstr "Potenciometri boja"
 
 #: libs/ui/input/KisTouchGestureAction.cpp:29
-#: libs/ui/kis_selection_actions_panel.cpp:76
+#: libs/ui/kis_selection_actions_panel.cpp:79
 #, fuzzy, kde-format
 msgid "Deselect"
 msgstr "Poništi izbor"
@@ -35962,37 +35962,37 @@ msgstr ""
 "oznaku ovdje ."
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonSelectAll)
-#: libs/ui/kis_selection_actions_panel.cpp:74
+#: libs/ui/kis_selection_actions_panel.cpp:77
 #: plugins/dockers/recorder/recorder_snapshots_manager.cpp:195
 #: plugins/dockers/recorder/recorder_snapshots_manager.ui:205
 #, fuzzy, kde-format
 msgid "Select All"
 msgstr "Izaberi sve"
 
-#: libs/ui/kis_selection_actions_panel.cpp:75
+#: libs/ui/kis_selection_actions_panel.cpp:78
 #, fuzzy, kde-format
 #| msgctxt "(qtundo-format)"
 #| msgid "Invert Selection"
 msgid "Invert Selection"
 msgstr "Obrni odabir"
 
-#: libs/ui/kis_selection_actions_panel.cpp:77
+#: libs/ui/kis_selection_actions_panel.cpp:80
 #, fuzzy, kde-format
 msgid "Fill Selection with Color"
 msgstr "Izaberi neprozirno"
 
-#: libs/ui/kis_selection_actions_panel.cpp:78
+#: libs/ui/kis_selection_actions_panel.cpp:81
 #, fuzzy, kde-format
 #| msgid "Feather Selection"
 msgid "Clear Selection"
 msgstr "Umekšaj izbor"
 
-#: libs/ui/kis_selection_actions_panel.cpp:79
+#: libs/ui/kis_selection_actions_panel.cpp:82
 #, fuzzy, kde-format
 msgid "Copy To New Layer"
 msgstr "Isijeci sloj"
 
-#: libs/ui/kis_selection_actions_panel.cpp:80
+#: libs/ui/kis_selection_actions_panel.cpp:83
 #, fuzzy, kde-format
 #| msgctxt "(qtundo-format)"
 #| msgid "Crop Selections"
@@ -38963,7 +38963,7 @@ msgstr ""
 msgid "OpenColorIO is disabled: image color space is not supported"
 msgstr ""
 
-#: libs/ui/opengl/KisOpenGLCanvasRenderer.cpp:335
+#: libs/ui/opengl/KisOpenGLCanvasRenderer.cpp:336
 #, fuzzy, kde-format
 #| msgid ""
 #| "Krita could not initialize the OpenGL canvas:\n"
@@ -39006,7 +39006,7 @@ msgstr "Dekor izbora"
 #. i18n: ectx: attribute (title), widget (QWidget, tabTransform)
 #: libs/ui/tool/kis_selection_tool_helper.cpp:386
 #: plugins/generators/pattern/wdgpatternoptions.ui:51
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:2268
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:2271
 #: plugins/tools/defaulttool/referenceimagestool/ToolReferenceImages.cpp:338
 #, fuzzy, kde-format
 #| msgctxt "(qtundo-format)"
@@ -39039,7 +39039,7 @@ msgstr ""
 #: plugins/tools/basictools/kis_tool_path.cc:91
 #: plugins/tools/basictools/kis_tool_pencil.cc:64
 #: plugins/tools/tool_enclose_and_fill/subtools/KisPathEnclosingProducer.cpp:130
-#: plugins/tools/tool_enclose_and_fill/subtools/KisToolBasicBrushBase.cpp:71
+#: plugins/tools/tool_enclose_and_fill/subtools/KisToolBasicBrushBase.cpp:75
 #, kde-format
 msgid "The MyPaint Brush Engine is not available for this colorspace"
 msgstr ""
@@ -39047,7 +39047,7 @@ msgstr ""
 #: libs/ui/tool/kis_tool_polyline_base.cpp:116
 #: libs/ui/tool/kis_tool_rectangle_base.cpp:158
 #: libs/ui/tool/KisToolOutlineBase.cpp:163
-#: plugins/tools/tool_enclose_and_fill/subtools/KisToolBasicBrushBase.cpp:65
+#: plugins/tools/tool_enclose_and_fill/subtools/KisToolBasicBrushBase.cpp:69
 #, kde-format
 msgid ""
 "This tool cannot paint on clone layers.  Please select a paint or vector "
@@ -39092,7 +39092,7 @@ msgstr ""
 msgid "Group not editable."
 msgstr "Grupa se ne može mijenjati"
 
-#: libs/ui/tool/KisAsyncColorSamplerHelper.cpp:581
+#: libs/ui/tool/KisAsyncColorSamplerHelper.cpp:586
 #, kde-format
 msgid "Color sampler does not work on this layer."
 msgstr ""
@@ -41249,62 +41249,62 @@ msgstr "Kolone:"
 msgid "Smoothing:"
 msgstr "Uglađivanje"
 
-#: libs/ui/widgets/KoStrokeConfigWidget.cpp:90
+#: libs/ui/widgets/KoStrokeConfigWidget.cpp:93
 #, kde-format
 msgid "Butt cap"
 msgstr "Ravan završetak"
 
-#: libs/ui/widgets/KoStrokeConfigWidget.cpp:97
+#: libs/ui/widgets/KoStrokeConfigWidget.cpp:100
 #, kde-format
 msgid "Round cap"
 msgstr "Zaobljeni završetak"
 
-#: libs/ui/widgets/KoStrokeConfigWidget.cpp:104
+#: libs/ui/widgets/KoStrokeConfigWidget.cpp:107
 #, kde-format
 msgid "Square cap"
 msgstr "Kvadratni završetak"
 
-#: libs/ui/widgets/KoStrokeConfigWidget.cpp:115
+#: libs/ui/widgets/KoStrokeConfigWidget.cpp:118
 #, kde-format
 msgid "Miter join"
 msgstr "Nalegli spoj"
 
-#: libs/ui/widgets/KoStrokeConfigWidget.cpp:122
+#: libs/ui/widgets/KoStrokeConfigWidget.cpp:125
 #, kde-format
 msgid "Round join"
 msgstr "Obli spoj"
 
-#: libs/ui/widgets/KoStrokeConfigWidget.cpp:129
+#: libs/ui/widgets/KoStrokeConfigWidget.cpp:132
 #, kde-format
 msgid "Bevel join"
 msgstr "Zakošeni spoj"
 
-#: libs/ui/widgets/KoStrokeConfigWidget.cpp:139
+#: libs/ui/widgets/KoStrokeConfigWidget.cpp:142
 #, kde-format
 msgid "Miter limit"
 msgstr "Pravougli limit"
 
-#: libs/ui/widgets/KoStrokeConfigWidget.cpp:235
+#: libs/ui/widgets/KoStrokeConfigWidget.cpp:238
 #, kde-format
 msgid "Set line width of actual selection"
 msgstr "Postavi širinu linije trenutno označenog"
 
 #. i18n: ectx: property (text), widget (QLabel, strokeStyleLabel)
-#: libs/ui/widgets/KoStrokeConfigWidget.cpp:246
+#: libs/ui/widgets/KoStrokeConfigWidget.cpp:249
 #: libs/ui/widgets/KoStrokeConfigWidget.ui:81
 #, fuzzy, kde-format
 #| msgid "New style"
 msgid "Line Style:"
 msgstr "Novi stil:"
 
-#: libs/ui/widgets/KoStrokeConfigWidget.cpp:249
+#: libs/ui/widgets/KoStrokeConfigWidget.cpp:252
 #, fuzzy, kde-format
 #| msgid "New style"
 msgctxt "@info:tooltip"
 msgid "Line style"
 msgstr "Novi stil:"
 
-#: libs/ui/widgets/KoStrokeConfigWidget.cpp:260
+#: libs/ui/widgets/KoStrokeConfigWidget.cpp:263
 #, fuzzy, kde-format
 #| msgctxt "(qtundo-format)"
 #| msgid "Set marker"
@@ -41312,7 +41312,7 @@ msgctxt "@info:tooltip"
 msgid "Start marker"
 msgstr "Podesi oznaku"
 
-#: libs/ui/widgets/KoStrokeConfigWidget.cpp:267
+#: libs/ui/widgets/KoStrokeConfigWidget.cpp:270
 #, fuzzy, kde-format
 #| msgctxt "(qtundo-format)"
 #| msgid "Set marker"
@@ -41320,7 +41320,7 @@ msgctxt "@info:tooltip"
 msgid "Node marker"
 msgstr "Podesi oznaku"
 
-#: libs/ui/widgets/KoStrokeConfigWidget.cpp:274
+#: libs/ui/widgets/KoStrokeConfigWidget.cpp:277
 #, fuzzy, kde-format
 #| msgctxt "(qtundo-format)"
 #| msgid "Set marker"
@@ -43006,13 +43006,13 @@ msgstr "Elipsa pomćnik"
 msgid "Concentric Ellipse"
 msgstr "Selektiraj eklipsu"
 
-#: plugins/assistants/Assistants/CurvilinearPerspectiveAssistant.cc:28
+#: plugins/assistants/Assistants/CurvilinearPerspectiveAssistant.cc:29
 #, fuzzy, kde-format
 #| msgid "Perspective assistant"
 msgid "Curvilinear Perspective assistant"
 msgstr "Pomocnik perspektive"
 
-#: plugins/assistants/Assistants/CurvilinearPerspectiveAssistant.cc:261
+#: plugins/assistants/Assistants/CurvilinearPerspectiveAssistant.cc:265
 #, fuzzy, kde-format
 #| msgid "Clear Perspective Grid"
 msgid "Curvilinear Perspective"
@@ -43075,42 +43075,42 @@ msgstr "Neograničeni lenjirski pomoćnik"
 msgid "Infinite Ruler"
 msgstr "Neograničeni linijar"
 
-#: plugins/assistants/Assistants/kis_assistant_tool.cc:1437
+#: plugins/assistants/Assistants/kis_assistant_tool.cc:1438
 #, kde-format
 msgid "Select an Assistant"
 msgstr "Izaberi pomoćnika"
 
-#: plugins/assistants/Assistants/kis_assistant_tool.cc:1585
+#: plugins/assistants/Assistants/kis_assistant_tool.cc:1586
 #, kde-format
 msgid "Errors were encountered. Not all assistants were successfully loaded."
 msgstr "Došlo je do grešaka.  Svi pomoćnici nisu uspješno utovareni."
 
-#: plugins/assistants/Assistants/kis_assistant_tool.cc:1673
+#: plugins/assistants/Assistants/kis_assistant_tool.cc:1674
 #, kde-format
 msgid "Save Assistant"
 msgstr "Asistent snimanja"
 
-#: plugins/assistants/Assistants/kis_assistant_tool.cc:1768
-#: plugins/assistants/Assistants/kis_assistant_tool.cc:1774
+#: plugins/assistants/Assistants/kis_assistant_tool.cc:1769
+#: plugins/assistants/Assistants/kis_assistant_tool.cc:1775
 #, fuzzy, kde-format
 #| msgid "Opacity:"
 msgid "Opacity: "
 msgstr "Providnost:"
 
-#: plugins/assistants/Assistants/kis_assistant_tool.cc:1781
-#: plugins/assistants/Assistants/kis_assistant_tool.cc:1785
+#: plugins/assistants/Assistants/kis_assistant_tool.cc:1782
+#: plugins/assistants/Assistants/kis_assistant_tool.cc:1786
 #, fuzzy, kde-format
 #| msgid "Density:"
 msgid "Density: "
 msgstr "Gustina:"
 
-#: plugins/assistants/Assistants/kis_assistant_tool.cc:1790
+#: plugins/assistants/Assistants/kis_assistant_tool.cc:1791
 #, fuzzy, kde-format
 #| msgid "Subdivision:"
 msgid "Subdivisions: "
 msgstr "Potpodela:"
 
-#: plugins/assistants/Assistants/kis_assistant_tool.cc:1794
+#: plugins/assistants/Assistants/kis_assistant_tool.cc:1795
 #, fuzzy, kde-format
 #| msgid "Subdivision:"
 msgid "Minor Subdivisions: "
@@ -43211,7 +43211,7 @@ msgstr "Pomocnik perspektive"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, perspectiveTransformButton)
 #. i18n: ectx: property (text), widget (QToolButton, perspectiveTransformButton)
-#: plugins/assistants/Assistants/PerspectiveAssistant.cc:364
+#: plugins/assistants/Assistants/PerspectiveAssistant.cc:365
 #: plugins/tools/tool_transform2/wdg_tool_transform.ui:164
 #: plugins/tools/tool_transform2/wdg_tool_transform.ui:167
 #, kde-format
@@ -43224,7 +43224,7 @@ msgstr "Perspektiva"
 msgid "Perspective Ellipse assistant"
 msgstr "Pomocnik perspektive"
 
-#: plugins/assistants/Assistants/PerspectiveEllipseAssistant.cc:631
+#: plugins/assistants/Assistants/PerspectiveEllipseAssistant.cc:632
 #, fuzzy, kde-format
 #| msgid "Perspective grid"
 msgid "Perspective Ellipse"
@@ -43240,25 +43240,25 @@ msgstr "Lenjirski pomoćnik"
 msgid "Ruler"
 msgstr "Lenjir"
 
-#: plugins/assistants/Assistants/SplineAssistant.cc:75
+#: plugins/assistants/Assistants/SplineAssistant.cc:76
 #, kde-format
 msgid "Spline assistant"
 msgstr "Spline pomoćnik"
 
-#: plugins/assistants/Assistants/SplineAssistant.cc:350
+#: plugins/assistants/Assistants/SplineAssistant.cc:351
 #, fuzzy, kde-format
 #| msgid "Spline"
 msgctxt "A type of drawing assistants"
 msgid "Spline"
 msgstr "Linija"
 
-#: plugins/assistants/Assistants/TwoPointAssistant.cc:27
+#: plugins/assistants/Assistants/TwoPointAssistant.cc:28
 #, fuzzy, kde-format
 #| msgid "Spline assistant"
 msgid "Two point assistant"
 msgstr "Spline pomoćnik"
 
-#: plugins/assistants/Assistants/TwoPointAssistant.cc:528
+#: plugins/assistants/Assistants/TwoPointAssistant.cc:532
 #, fuzzy, kde-format
 #| msgid "Perspective"
 msgid "2 Point Perspective"
@@ -48115,7 +48115,7 @@ msgstr "Ukloni šablon"
 
 #: plugins/dockers/textproperties/qml/OpenTypeFeatureSettings.qml:237
 #: plugins/tools/svgtexttool/glyphpalette/GlyphPalette.qml:127
-#: qmlmodules/components/qml/ResourceView.qml:315
+#: qmlmodules/components/qml/ResourceView.qml:322
 #, fuzzy, kde-format
 #| msgid "&Search:"
 msgctxt "@info:placeholder"
@@ -68043,7 +68043,7 @@ msgstr "Unutrašnji"
 msgid "Interval Y:"
 msgstr "Unutrašnji"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:586
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:589
 #, fuzzy
 #| msgctxt "(qtundo-format)"
 #| msgid "Add shapes to group"
@@ -68051,14 +68051,14 @@ msgctxt "(qtundo-format)"
 msgid "Add shapes to text flow."
 msgstr "Dodaj oblike u grupu"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:628
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:631
 #, fuzzy
 #| msgid "Text On Path"
 msgctxt "(qtundo-format)"
 msgid "Put Text On Path"
 msgstr "Tekst na stazi"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:688
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:691
 #, fuzzy
 #| msgctxt "(qtundo-format)"
 #| msgid "Stroke Shapes"
@@ -68066,66 +68066,66 @@ msgctxt "(qtundo-format)"
 msgid "Subtract shapes from text flow."
 msgstr "Oblici poteza"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:721
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:724
 #, fuzzy
 #| msgid "Remove Shape Collection"
 msgctxt "(qtundo-format)"
 msgid "Remove shapes from text flow."
 msgstr "Obriši kolekciju oblika"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:742
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:745
 #, fuzzy
 #| msgid "Toggle Rotate Mode"
 msgctxt "(qtundo-format)"
 msgid "Toggle Flow Shape Type"
 msgstr "Uključi/isključi režim oretanja"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:768
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:771
 msgctxt "(qtundo-format)"
 msgid "Set Flow Shape as First"
 msgstr ""
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:770
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:773
 #, fuzzy
 #| msgid "Decrease Value"
 msgctxt "(qtundo-format)"
 msgid "Decrease Flow Shape Index"
 msgstr "Smanji vrijednost"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:772
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:775
 #, fuzzy
 #| msgid "Increase Value"
 msgctxt "(qtundo-format)"
 msgid "Increase Flow Shape Index"
 msgstr "Povećaj vrijednost"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:774
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:777
 msgctxt "(qtundo-format)"
 msgid "Set Flow Shape as Last"
 msgstr ""
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1045
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1048
 #, kde-format
 msgid ""
 "Left click rotates around center, right click around highlighted position."
 msgstr "Lijevi klik rotira oko centra, desni klik oko istaknute pozicije."
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1048
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1051
 #, kde-format
 msgid "Click and drag to shear selection."
 msgstr "Kliknite i povucite za smicanje označenog."
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1053
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1056
 #, kde-format
 msgid "Click and drag to resize selection."
 msgstr "Kliknite i povucite za promjenu velicine označenog."
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1088
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1091
 #, kde-format
 msgid "Click and drag to move selection."
 msgstr "Kliknite i povucite za pomjeranje označenog."
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1092
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1095
 #, kde-format
 msgid ""
 "Click and drag to resize selection. Middle click to set highlighted position."
@@ -68133,12 +68133,12 @@ msgstr ""
 "Kliknite i povucite za početni oblik označenog. Srednji klik za postavljanje "
 "istaknute pozicije."
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1168
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1171
 #, kde-format
 msgid "This tool only works on vector layers. You probably want the move tool."
 msgstr ""
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1670
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1673
 #, fuzzy
 #| msgctxt "rotate image 90 degrees Clockwise"
 #| msgid "Rotate Image 90° Clockwise"
@@ -68146,7 +68146,7 @@ msgctxt "(qtundo-format)"
 msgid "Rotate Object 90° CW"
 msgstr "Rotiraj sliku za 90° u pravcu kazaljke na satu"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1674
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1677
 #, fuzzy
 #| msgctxt "rotate image 90 degrees Clockwise"
 #| msgid "Rotate Image 90° Clockwise"
@@ -68154,25 +68154,25 @@ msgctxt "(qtundo-format)"
 msgid "Rotate Object 90° CCW"
 msgstr "Rotiraj sliku za 90° u pravcu kazaljke na satu"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1678
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1681
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Rotate Object 180°"
 msgstr "Okreni sloj za 180°"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1682
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1685
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Mirror Object Horizontally"
 msgstr "preslikano vodoravno"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1686
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1689
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Mirror Object Vertically"
 msgstr "preslikano uspravno"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1690
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1693
 #, fuzzy
 #| msgctxt "(qtundo-format)"
 #| msgid "Reset Transformations"
@@ -68180,7 +68180,7 @@ msgctxt "(qtundo-format)"
 msgid "Reset Object Transformations"
 msgstr "Reset Transformacije"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1764
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1767
 #, fuzzy
 #| msgctxt "(qtundo-format)"
 #| msgid "Unclip Shapes"
@@ -68188,14 +68188,14 @@ msgctxt "(qtundo-format)"
 msgid "Unite Shapes"
 msgstr "Ne odsijeci likove"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1778
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1781
 #, fuzzy
 #| msgid "Intersect"
 msgctxt "(qtundo-format)"
 msgid "Intersect Shapes"
 msgstr "Presjeci"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1788
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1791
 #, fuzzy
 #| msgctxt "(qtundo-format)"
 #| msgid "Stroke Shapes"
@@ -68203,25 +68203,25 @@ msgctxt "(qtundo-format)"
 msgid "Subtract Shapes"
 msgstr "Oblici poteza"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1833
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1836
 #, fuzzy
 #| msgid "Spiral Shape"
 msgctxt "(qtundo-format)"
 msgid "Split Shapes"
 msgstr "Spiralni lik"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:2265
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:2268
 #, fuzzy, kde-format
 #| msgid "Vector Selection"
 msgid "Vector Shape Actions"
 msgstr "Odabir vektora"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:2284
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:2287
 #, fuzzy, kde-format
 msgid "Logical Operations"
 msgstr "Promijeni opcije praćenja"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:2314
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:2317
 #, fuzzy, kde-format
 #| msgid "Text"
 msgid "Text"
@@ -68340,17 +68340,17 @@ msgstr "Pritisni ALT za zadržavanje x- ili y- pozicije."
 msgid "Press CTRL to resize from center."
 msgstr "Pritisni CTRL da bi promjenio veličinu od centra."
 
-#: plugins/tools/defaulttool/defaulttool/ShapeRotateStrategy.cpp:45
+#: plugins/tools/defaulttool/defaulttool/ShapeRotateStrategy.cpp:46
 #, kde-format
 msgid "Press ALT to rotate in 45 degree steps."
 msgstr "Pritisnii ALT da bi rotirao sa uglom od 45 stepeni."
 
-#: plugins/tools/defaulttool/defaulttool/ShapeRotateStrategy.cpp:106
+#: plugins/tools/defaulttool/defaulttool/ShapeRotateStrategy.cpp:110
 msgctxt "(qtundo-format)"
 msgid "Rotate"
 msgstr "Rotiraj"
 
-#: plugins/tools/defaulttool/defaulttool/ShapeShearStrategy.cpp:184
+#: plugins/tools/defaulttool/defaulttool/ShapeShearStrategy.cpp:185
 msgctxt "(qtundo-format)"
 msgid "Shear"
 msgstr "Ostriži"
@@ -68991,61 +68991,61 @@ msgctxt "action"
 msgid "Magnetic Curve Selection Tool"
 msgstr "Alat magnetnog izbora"
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:51
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:52
 #, kde-format
 msgid "Magnetic Selection"
 msgstr "Magnetni izbor"
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:488
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:505
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:489
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:506
 #, fuzzy
 #| msgid "Magnetic Selection"
 msgctxt "(qtundo-format)"
 msgid "Magnetic Selection"
 msgstr "Magnetni izbor"
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:734
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:736
 #, fuzzy, kde-format
 #| msgid "Feather radius:"
 msgctxt "Filter radius in Magnetic Select Tool settings"
 msgid "Filter Radius: "
 msgstr "Poluprečnik perja:"
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:741
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:743
 #, fuzzy, kde-format
 #| msgid "Threshold: "
 msgctxt "Threshold in Magnetic Selection's Tool options"
 msgid "Threshold: "
 msgstr "Prag: "
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:749
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:751
 #, fuzzy, kde-format
 #| msgid "Vertical Radius"
 msgctxt "Search Radius in Magnetic Selection's Tool options"
 msgid "Search Radius: "
 msgstr "Vertikalni Radijus"
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:758
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:760
 #, fuzzy, kde-format
 #| msgid "Anchor:"
 msgctxt "Anchor Gap in Magnetic Selection's Tool options"
 msgid "Anchor Gap: "
 msgstr "Sidro:"
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:762
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:764
 #, fuzzy, kde-format
 #| msgid "Compress:"
 msgctxt "Complete the selection"
 msgid "Complete"
 msgstr "Kompresija:"
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:767
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:769
 #, fuzzy, kde-format
 msgctxt "Discard the selection"
 msgid "Discard"
 msgstr "Odbaci alfa-kanal"
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:773
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:775
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -69053,25 +69053,25 @@ msgid ""
 "calculate"
 msgstr ""
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:777
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:779
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Threshold for determining the minimum intensity of the edges"
 msgstr ""
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:779
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:781
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Extra area to be searched"
 msgstr ""
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:781
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:783
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Gap between 2 anchors in interactive mode"
 msgstr ""
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:783
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:785
 #, fuzzy, kde-format
 #| msgctxt "(qtundo-format)"
 #| msgid "Crop Selections"
@@ -69079,13 +69079,13 @@ msgctxt "@info:tooltip"
 msgid "Complete Selection"
 msgstr "Kropaj izbore"
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:785
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:787
 #, fuzzy, kde-format
 msgctxt "@info:tooltip"
 msgid "Discard Selection"
 msgstr "Prikaži izbor"
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:792
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:794
 #, fuzzy, kde-format
 msgctxt "The 'path options' section label in magnetic selection's tool options"
 msgid "Path options"
@@ -69236,46 +69236,46 @@ msgctxt "(qtundo-format)"
 msgid "Adjust character transforms on text."
 msgstr ""
 
-#: plugins/tools/svgtexttool/SvgTextCursor.cpp:472
+#: plugins/tools/svgtexttool/SvgTextCursor.cpp:473
 #, fuzzy, kde-format
 msgctxt "Type setting mode line name"
 msgid "Text Top"
 msgstr "Alat za tekst"
 
-#: plugins/tools/svgtexttool/SvgTextCursor.cpp:474
-#: plugins/tools/svgtexttool/SvgTextCursor.cpp:480
+#: plugins/tools/svgtexttool/SvgTextCursor.cpp:475
+#: plugins/tools/svgtexttool/SvgTextCursor.cpp:481
 #, fuzzy, kde-format
 msgctxt "Type setting mode line name"
 msgid "Font Size"
 msgstr "Veličina štampe"
 
-#: plugins/tools/svgtexttool/SvgTextCursor.cpp:478
+#: plugins/tools/svgtexttool/SvgTextCursor.cpp:479
 #, fuzzy, kde-format
 msgctxt "Type setting mode line name"
 msgid "Text Bottom"
 msgstr "Dno"
 
-#: plugins/tools/svgtexttool/SvgTextCursor.cpp:483
+#: plugins/tools/svgtexttool/SvgTextCursor.cpp:484
 #, fuzzy, kde-format
 msgctxt "Type setting mode line name"
 msgid "Alphabetic"
 msgstr "Vertikalno"
 
-#: plugins/tools/svgtexttool/SvgTextCursor.cpp:485
+#: plugins/tools/svgtexttool/SvgTextCursor.cpp:486
 #, fuzzy, kde-format
 #| msgid "Bibliography"
 msgctxt "Type setting mode line name"
 msgid "Ideographic"
 msgstr "Bibliografija"
 
-#: plugins/tools/svgtexttool/SvgTextCursor.cpp:487
+#: plugins/tools/svgtexttool/SvgTextCursor.cpp:488
 #, fuzzy, kde-format
 #| msgid "Angular"
 msgctxt "Type setting mode line name"
 msgid "Hanging"
 msgstr "Uglovno"
 
-#: plugins/tools/svgtexttool/SvgTextCursor.cpp:489
+#: plugins/tools/svgtexttool/SvgTextCursor.cpp:490
 #, fuzzy, kde-format
 #| msgctxt "Middle Mouse Button"
 #| msgid "Middle"
@@ -69283,33 +69283,33 @@ msgctxt "Type setting mode line name"
 msgid "Middle"
 msgstr "Srednja"
 
-#: plugins/tools/svgtexttool/SvgTextCursor.cpp:491
+#: plugins/tools/svgtexttool/SvgTextCursor.cpp:492
 #, fuzzy, kde-format
 msgctxt "Type setting mode line name"
 msgid "Mathematical"
 msgstr "Promijeni opcije praćenja"
 
-#: plugins/tools/svgtexttool/SvgTextCursor.cpp:493
+#: plugins/tools/svgtexttool/SvgTextCursor.cpp:494
 #, fuzzy, kde-format
 #| msgid "Center"
 msgctxt "Type setting mode line name"
 msgid "Central"
 msgstr "Centar"
 
-#: plugins/tools/svgtexttool/SvgTextCursor.cpp:495
+#: plugins/tools/svgtexttool/SvgTextCursor.cpp:496
 #, fuzzy, kde-format
 msgctxt "Type setting mode line name"
 msgid "Line Height"
 msgstr "VIsina štampe:"
 
-#: plugins/tools/svgtexttool/SvgTextCursor.cpp:498
+#: plugins/tools/svgtexttool/SvgTextCursor.cpp:499
 #, fuzzy, kde-format
 #| msgid "&Add to current selection"
 msgctxt "Type setting mode line name"
 msgid "Current Baseline"
 msgstr "&Dodaj u tekući izbor"
 
-#: plugins/tools/svgtexttool/SvgTextCursor.cpp:500
+#: plugins/tools/svgtexttool/SvgTextCursor.cpp:501
 #, fuzzy, kde-format
 #| msgid "Use outline"
 msgctxt "Type setting mode line name"
@@ -69852,7 +69852,7 @@ msgctxt "action"
 msgid "Remove all set text properties from the selection."
 msgstr "Postavi širinu linije trenutno označenog"
 
-#: plugins/tools/svgtexttool/SvgTextTool.cpp:313
+#: plugins/tools/svgtexttool/SvgTextTool.cpp:315
 #, fuzzy, kde-format
 msgctxt "@title:window"
 msgid "Krita - Edit Text"
@@ -70108,21 +70108,21 @@ msgid "Editor background:"
 msgstr "Boja pozadine"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgToolCrop)
-#: plugins/tools/tool_crop/kis_tool_crop.cc:111
+#: plugins/tools/tool_crop/kis_tool_crop.cc:112
 #: plugins/tools/tool_crop/wdg_tool_crop.ui:18
 #, kde-format
 msgid "Crop"
 msgstr "Odsjeci"
 
 #. i18n: ectx: property (text), widget (QCheckBox, boolCenter)
-#: plugins/tools/tool_crop/kis_tool_crop.cc:113
+#: plugins/tools/tool_crop/kis_tool_crop.cc:114
 #: plugins/tools/tool_crop/wdg_tool_crop.ui:69
 #, kde-format
 msgid "Center"
 msgstr "Centar"
 
 #. i18n: ectx: property (text), widget (QCheckBox, boolGrow)
-#: plugins/tools/tool_crop/kis_tool_crop.cc:116
+#: plugins/tools/tool_crop/kis_tool_crop.cc:117
 #: plugins/tools/tool_crop/wdg_tool_crop.ui:161
 #, fuzzy, kde-format
 #| msgid "Grow"
@@ -70130,29 +70130,29 @@ msgctxt "Grow as in crop tool"
 msgid "Grow"
 msgstr "Izrasti"
 
-#: plugins/tools/tool_crop/kis_tool_crop.cc:119
+#: plugins/tools/tool_crop/kis_tool_crop.cc:120
 #, fuzzy, kde-format
 msgid "Lock Width"
 msgstr "Zaključaj širinu"
 
-#: plugins/tools/tool_crop/kis_tool_crop.cc:122
+#: plugins/tools/tool_crop/kis_tool_crop.cc:123
 #, fuzzy, kde-format
 msgid "Lock Height"
 msgstr "Zaključaj visinu"
 
-#: plugins/tools/tool_crop/kis_tool_crop.cc:125
+#: plugins/tools/tool_crop/kis_tool_crop.cc:126
 #, fuzzy, kde-format
 msgid "Lock Ratio"
 msgstr "Namjera sjenčenja"
 
-#: plugins/tools/tool_crop/kis_tool_crop.cc:250
+#: plugins/tools/tool_crop/kis_tool_crop.cc:257
 #, fuzzy, kde-format
 #| msgctxt "(qtundo-format)"
 #| msgid "Crop Selections"
 msgid "Crop Tool Actions"
 msgstr "Kropaj izbore"
 
-#: plugins/tools/tool_crop/kis_tool_crop.cc:726
+#: plugins/tools/tool_crop/kis_tool_crop.cc:747
 #, fuzzy, kde-format
 #| msgid "%1 px"
 msgid ""
@@ -70160,14 +70160,14 @@ msgid ""
 "Y: %2"
 msgstr "%1 px"
 
-#: plugins/tools/tool_crop/kis_tool_crop.cc:731
+#: plugins/tools/tool_crop/kis_tool_crop.cc:752
 #, fuzzy, kde-format
 msgid ""
 "Width: %1\n"
 "Height: %2"
 msgstr "VIsina štampe:"
 
-#: plugins/tools/tool_crop/kis_tool_crop.h:215
+#: plugins/tools/tool_crop/kis_tool_crop.h:221
 #, fuzzy, kde-format
 msgid "Crop Tool"
 msgstr "Sasjeći čvor"
@@ -70566,8 +70566,8 @@ msgstr "promjene prednje boje"
 msgid "Enclose and Fill Tool"
 msgstr "Aktiviraj alatku za linije"
 
-#: plugins/tools/tool_knife/CutThroughShapeStrategy.cpp:205
-#: plugins/tools/tool_knife/RemoveGutterStrategy.cpp:218
+#: plugins/tools/tool_knife/CutThroughShapeStrategy.cpp:206
+#: plugins/tools/tool_knife/RemoveGutterStrategy.cpp:219
 msgctxt "(qtundo-format)"
 msgid "Knife tool: cut through shapes"
 msgstr ""
@@ -70750,7 +70750,7 @@ msgstr "Reljef dijagonalno"
 msgid "Diagonal type angle threshold:"
 msgstr "Režim prikaza"
 
-#: plugins/tools/tool_knife/RemoveGutterStrategy.cpp:280
+#: plugins/tools/tool_knife/RemoveGutterStrategy.cpp:281
 msgctxt "(qtundo-format)"
 msgid "Knife tool: remove a gutter"
 msgstr ""
@@ -70907,13 +70907,13 @@ msgctxt "action"
 msgid "Polyline Tool. Shift-mouseclick ends the polyline."
 msgstr "Polyline alat . Shift-mouseclick završava polyline."
 
-#: plugins/tools/tool_smart_patch/kis_tool_smart_patch.cpp:134
+#: plugins/tools/tool_smart_patch/kis_tool_smart_patch.cpp:135
 #, fuzzy, kde-format
 #| msgid "Select a directory to save the bundle"
 msgid "Select a paint layer to use this tool"
 msgstr "Odaberite direktorij za spremanje snopa"
 
-#: plugins/tools/tool_smart_patch/kis_tool_smart_patch.cpp:173
+#: plugins/tools/tool_smart_patch/kis_tool_smart_patch.cpp:174
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Smart Patch"
@@ -70969,90 +70969,90 @@ msgstr ""
 "GNU naučnu biblioteku ili koristite opcijsku kontrolu za uređivanje "
 "vrijednosti skaliranja ručno."
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:123
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:124
 #, fuzzy, kde-format
 #| msgid "Warp"
 msgctxt "Warp Transform Tab Label"
 msgid "Warp"
 msgstr "Uvijanje"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:124
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:125
 #, fuzzy, kde-format
 #| msgid "Liquify"
 msgctxt "Liquify Transform Tab Label"
 msgid "Liquify"
 msgstr "Tečno"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:125
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:126
 #, fuzzy, kde-format
 #| msgid "Brush size"
 msgctxt "Mesh Transform Tab Label"
 msgid "Mesh"
 msgstr "Veličina četkice"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:126
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:127
 #, fuzzy, kde-format
 #| msgid "Cage"
 msgctxt "Cage Transform Tab Label"
 msgid "Cage"
 msgstr "Kavez"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:127
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:128
 #, fuzzy, kde-format
 #| msgid "Free"
 msgctxt "Free Transform Tab Label"
 msgid "Free"
 msgstr "Slobodno"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:128
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:129
 #, fuzzy, kde-format
 #| msgid "Perspective"
 msgctxt "Perspective Transform Tab Label"
 msgid "Perspective"
 msgstr "Perspektiva"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:131
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:132
 #, fuzzy, kde-format
 msgid "Mirror Horizontal"
 msgstr "preslikano vodoravno"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:132
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:133
 #, fuzzy, kde-format
 msgid "Mirror Vertical"
 msgstr "preslikano uspravno"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:133
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:134
 #, fuzzy, kde-format
 #| msgctxt "rotate image 90 degrees Clockwise"
 #| msgid "Rotate Image 90° Clockwise"
 msgid "Rotate 90 degrees Clockwise"
 msgstr "Rotiraj sliku za 90° u pravcu kazaljke na satu"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:134
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:135
 #, fuzzy, kde-format
 #| msgctxt "rotate image 90 degrees Counter-Clockwise"
 #| msgid "Rotate Image 90° Counter-Clockwise"
 msgid "Rotate 90 degrees CounterClockwise"
 msgstr "Rotiraj sliku za 90° obrnuto od kazaljke na satu"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:136
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:137
 #, fuzzy, kde-format
 #| msgctxt "(qtundo-format)"
 #| msgid "Keep Aspect Ratio"
 msgid "Keep Aspect Ratio"
 msgstr "Čuvaj razmjeru"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:140
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:141
 #, kde-format
 msgid "Apply"
 msgstr ""
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:426
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:427
 #, fuzzy, kde-format
 msgid "Transform Tool Actions"
 msgstr "Trasformiši"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:942
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:941
 #, fuzzy, kde-format
 #| msgctxt "floating message in transformation tool"
 #| msgid "Cannot transform empty layer "
@@ -71060,7 +71060,7 @@ msgctxt "floating message in transformation tool"
 msgid "Cannot transform locked layers"
 msgstr "Ne mogu transformisati prazan sloj"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:948
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:947
 #, fuzzy, kde-format
 #| msgctxt "floating message in transformation tool"
 #| msgid "Cannot transform empty layer "
@@ -71068,7 +71068,7 @@ msgctxt "floating message in transformation tool"
 msgid "Cannot transform hidden layers"
 msgstr "Ne mogu transformisati prazan sloj"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:954
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:953
 #, fuzzy, kde-format
 #| msgctxt "floating message in transformation tool"
 #| msgid "Cannot transform empty layer "
@@ -71076,21 +71076,21 @@ msgctxt "floating message in transformation tool"
 msgid "Cannot use transform tool on this set of layers"
 msgstr "Ne mogu transformisati prazan sloj"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:970
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:969
 #, fuzzy, kde-format
 #| msgid "Activate Line Tool"
 msgctxt "floating message in transformation tool"
 msgid "Layer type cannot use the transform tool"
 msgstr "Aktiviraj alatku za linije"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:977
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:976
 #, fuzzy, kde-format
 #| msgid "Activate Line Tool"
 msgctxt "floating message in transformation tool"
 msgid "Layer type cannot use the transform tool. Use transform mask instead."
 msgstr "Aktiviraj alatku za linije"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:996
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:995
 #, kde-format
 msgctxt "floating message in transformation tool"
 msgid ""
@@ -71098,20 +71098,20 @@ msgid ""
 "transformation."
 msgstr ""
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:1009
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:1008
 #, kde-format
 msgctxt "floating message in transformation tool"
 msgid "Selections are not used when editing transform masks "
 msgstr "Izbori nisu korišteni pri uređivanju transformacijskih maski"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:1096
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:1135
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:1095
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:1134
 #, kde-format
 msgctxt "floating message in transformation tool"
 msgid "Cannot transform empty layer "
 msgstr "Ne mogu transformisati prazan sloj"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:1122
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:1121
 #, kde-format
 msgctxt "floating message in transformation tool"
 msgid ""
@@ -71983,55 +71983,55 @@ msgid ""
 "work correctly."
 msgstr ""
 
-#: qmlmodules/components/qml/ResourceView.qml:142
+#: qmlmodules/components/qml/ResourceView.qml:149
 #, fuzzy, kde-format
 msgctxt "@label:button"
 msgid "Tag"
 msgstr "Oznake"
 
-#: qmlmodules/components/qml/ResourceView.qml:185
+#: qmlmodules/components/qml/ResourceView.qml:192
 #, fuzzy, kde-format
 #| msgid "Assign to tag"
 msgctxt "@title:menu"
 msgid "Assign to Tag"
 msgstr "Dodjela za oznaku"
 
-#: qmlmodules/components/qml/ResourceView.qml:210
+#: qmlmodules/components/qml/ResourceView.qml:217
 #, fuzzy, kde-format
 #| msgid "New Name:"
 msgctxt "@info:placeholder"
 msgid "New Tag Name..."
 msgstr "Novo ime"
 
-#: qmlmodules/components/qml/ResourceView.qml:235
+#: qmlmodules/components/qml/ResourceView.qml:242
 #, fuzzy, kde-format
 #| msgid "Remove from this tag"
 msgctxt "@action:inmenu"
 msgid "Remove from this tag"
 msgstr "Ukloni sa ove oznake"
 
-#: qmlmodules/components/qml/ResourceView.qml:244
+#: qmlmodules/components/qml/ResourceView.qml:251
 #, fuzzy, kde-format
 #| msgid "Remove from other tag"
 msgctxt "@title:menu"
 msgid "Remove from other tag"
 msgstr "Ukloni sa druge oznake"
 
-#: qmlmodules/components/qml/ResourceView.qml:323
+#: qmlmodules/components/qml/ResourceView.qml:330
 #, fuzzy, kde-format
 #| msgid "Selection decoration"
 msgctxt "@option:check"
 msgid "Search in tag"
 msgstr "Dekor izbora"
 
-#: qmlmodules/components/qml/ResourceView.qml:342
+#: qmlmodules/components/qml/ResourceView.qml:349
 #, fuzzy, kde-format
 #| msgid "Import"
 msgctxt "@info:tooltip, %1 is resource type name"
 msgid "Import %1"
 msgstr "Uvezi"
 
-#: qmlmodules/components/qml/ResourceView.qml:366
+#: qmlmodules/components/qml/ResourceView.qml:373
 #, fuzzy, kde-format
 #| msgid "Remove"
 msgctxt "@info:tooltip, %1 is resource type name"

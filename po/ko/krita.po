@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-17 00:42+0000\n"
+"POT-Creation-Date: 2026-04-18 00:42+0000\n"
 "PO-Revision-Date: 2024-08-20 23:32+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -17283,69 +17283,69 @@ msgstr ""
 "실행을 추천하지 않습니다. 버그를 보고하지 마십시오.\n"
 "지원하는 Windows 버전을 사용하십시오: Windows 7, 8, 8.1, 10."
 
-#: libs/basicflakes/tools/KoCreatePathTool.cpp:563
+#: libs/basicflakes/tools/KoCreatePathTool.cpp:566
 #, fuzzy, kde-format
 #| msgid "Patch Options"
 msgid "Path options"
 msgstr "패치 옵션"
 
-#: libs/basicflakes/tools/KoCreatePathTool.cpp:565
+#: libs/basicflakes/tools/KoCreatePathTool.cpp:568
 #, kde-format
 msgid "Autosmooth curve"
 msgstr "곡선 자동으로 부드럽게"
 
-#: libs/basicflakes/tools/KoCreatePathTool.cpp:569
+#: libs/basicflakes/tools/KoCreatePathTool.cpp:572
 #, fuzzy, kde-format
 #| msgid "Activate angle snap:"
 msgid "Activate angle snap"
 msgstr "각도 스냅 활성화:"
 
 #. i18n: ectx: property (text), widget (QLabel, lblPrecision)
-#: libs/basicflakes/tools/KoPencilTool.cpp:294
+#: libs/basicflakes/tools/KoPencilTool.cpp:295
 #: plugins/paintops/libpaintop/forms/wdgbrushchooser.ui:85
 #, kde-format
 msgid "Precision:"
 msgstr "정밀도:"
 
-#: libs/basicflakes/tools/KoPencilTool.cpp:296
+#: libs/basicflakes/tools/KoPencilTool.cpp:297
 #, kde-format
 msgctxt "The raw line data"
 msgid "Raw"
 msgstr "원본"
 
-#: libs/basicflakes/tools/KoPencilTool.cpp:297
+#: libs/basicflakes/tools/KoPencilTool.cpp:298
 #: plugins/flake/pathshapes/spiral/SpiralShapeConfigWidget.cpp:16
 #: plugins/paintops/curvebrush/curve_paintop_plugin.cpp:30
 #, kde-format
 msgid "Curve"
 msgstr "곡선"
 
-#: libs/basicflakes/tools/KoPencilTool.cpp:298
+#: libs/basicflakes/tools/KoPencilTool.cpp:299
 #, kde-format
 msgid "Straight"
 msgstr "직선"
 
-#: libs/basicflakes/tools/KoPencilTool.cpp:307
-#: libs/basicflakes/tools/KoPencilTool.cpp:314
+#: libs/basicflakes/tools/KoPencilTool.cpp:308
+#: libs/basicflakes/tools/KoPencilTool.cpp:315
 #, fuzzy, kde-format
 #| msgctxt "Label of Optimize in JPEG Exporting dialogue"
 #| msgid "Optimize"
 msgid "Optimize"
 msgstr "최적화"
 
-#: libs/basicflakes/tools/KoPencilTool.cpp:321
+#: libs/basicflakes/tools/KoPencilTool.cpp:322
 #, kde-format
 msgid "Exactness:"
 msgstr "정확도:"
 
-#: libs/basicflakes/tools/KoPencilTool.cpp:354
 #: libs/basicflakes/tools/KoPencilTool.cpp:355
+#: libs/basicflakes/tools/KoPencilTool.cpp:356
 #, kde-format
 msgid "Pencil"
 msgstr "연필"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, shapeCBox)
-#: libs/basicflakes/tools/KoPencilTool.cpp:360
+#: libs/basicflakes/tools/KoPencilTool.cpp:361
 #: plugins/flake/pathshapes/spiral/SpiralShapeConfigWidget.cpp:17
 #: plugins/paintops/gridbrush/wdggridbrushshapeoptions.ui:51
 #, kde-format
@@ -17441,7 +17441,7 @@ msgstr "인자 변경"
 
 #: libs/flake/commands/KoParameterToPathCommand.cpp:31
 #: libs/flake/commands/KoParameterToPathCommand.cpp:40
-#: libs/flake/tools/KoPathTool.cpp:314
+#: libs/flake/tools/KoPathTool.cpp:315
 msgctxt "(qtundo-format)"
 msgid "Convert to Path"
 msgstr "경로로 변환"
@@ -17559,7 +17559,7 @@ msgstr "모양 분배"
 
 #: libs/flake/commands/KoShapeGroupCommand.cpp:67
 #: libs/libkis/VectorLayer.cpp:225
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1608
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1611
 msgctxt "(qtundo-format)"
 msgid "Group shapes"
 msgstr "모양 그룹"
@@ -17652,7 +17652,7 @@ msgid "Unclip Shapes"
 msgstr "모양 클립 해제"
 
 #: libs/flake/commands/KoShapeUngroupCommand.cpp:42
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1636
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1639
 msgctxt "(qtundo-format)"
 msgid "Ungroup shapes"
 msgstr "모양 그룹 해제"
@@ -21774,43 +21774,43 @@ msgctxt "(qtundo-format)"
 msgid "Change Segment"
 msgstr "세그먼트 변경"
 
-#: libs/flake/tools/KoPathTool.cpp:130
+#: libs/flake/tools/KoPathTool.cpp:131
 #, kde-format
 msgid "Edit Shape"
 msgstr "모양 편집"
 
-#: libs/flake/tools/KoPathTool.cpp:633
+#: libs/flake/tools/KoPathTool.cpp:636
 #, kde-format
 msgid "Drag to move handle."
 msgstr "핸들을 이동하려면 드래그하십시오."
 
-#: libs/flake/tools/KoPathTool.cpp:687
+#: libs/flake/tools/KoPathTool.cpp:690
 #, kde-format
 msgid "Drag to move point. Shift click to change point type."
 msgstr ""
 "점을 이동하려면 드래그하십시오. Shift 키를 클릭하면서 마우스 단추를 클릭하면 "
 "점 종류를 변경합니다."
 
-#: libs/flake/tools/KoPathTool.cpp:689
+#: libs/flake/tools/KoPathTool.cpp:692
 #, kde-format
 msgid "Drag to move control point."
 msgstr "제어 점을 이동하려면 드래그하십시오."
 
-#: libs/flake/tools/KoPathTool.cpp:712
+#: libs/flake/tools/KoPathTool.cpp:715
 #, kde-format
 msgid "Drag to change curve directly. Double click to insert new path point."
 msgstr ""
 "곡선을 직접 변경하려면 드래그하십시오. 두 번 클릭하면 새 경로 점을 삽입합니"
 "다."
 
-#: libs/flake/tools/KoPathTool.cpp:722
+#: libs/flake/tools/KoPathTool.cpp:725
 #, fuzzy, kde-format
 #| msgid "Press B to break path at selected point."
 msgctxt "%1 is a shortcut to be pressed"
 msgid "Press %1 to break path at selected point."
 msgstr "경로를 선택한 점에서 끊으려면 B 키를 누르십시오."
 
-#: libs/flake/tools/KoPathTool.cpp:724
+#: libs/flake/tools/KoPathTool.cpp:727
 #, fuzzy, kde-format
 #| msgid "Press B to break path at selected segments."
 msgctxt "%1 is a shortcut to be pressed"
@@ -22312,7 +22312,7 @@ msgctxt "(qtundo-format)"
 msgid "Opacity Change"
 msgstr "불투명도 변경"
 
-#: libs/image/commands/kis_node_property_list_command.cpp:59
+#: libs/image/commands/kis_node_property_list_command.cpp:61
 msgctxt "(qtundo-format)"
 msgid "Property Changes"
 msgstr "속성 변경"
@@ -22335,7 +22335,7 @@ msgid "Node Rename"
 msgstr "노드 이름 바꾸기"
 
 #: libs/image/commands_new/kis_image_resize_command.cpp:16
-#: libs/image/kis_image.cc:840
+#: libs/image/kis_image.cc:841
 msgctxt "(qtundo-format)"
 msgid "Resize Image"
 msgstr "이미지 크기 조정"
@@ -22590,13 +22590,13 @@ msgstr "Mitchell"
 msgid "Pass Through"
 msgstr "통과"
 
-#: libs/image/kis_image.cc:397
+#: libs/image/kis_image.cc:398
 #, kde-format
 msgid "Imported Image"
 msgstr "가져온 이미지"
 
 #. i18n.
-#: libs/image/kis_image.cc:736 libs/ui/kis_import_catcher.cc:50
+#: libs/image/kis_image.cc:737 libs/ui/kis_import_catcher.cc:50
 #: libs/ui/KisDocument.cpp:2709 plugins/impex/psd/psd_loader.cpp:221
 #, fuzzy, kde-format
 #| msgid "Background"
@@ -22604,42 +22604,42 @@ msgctxt "Name for the bottom-most layer in the layerstack"
 msgid "Background"
 msgstr "배경"
 
-#: libs/image/kis_image.cc:740 libs/ui/kis_layer_manager.cc:686
+#: libs/image/kis_image.cc:741 libs/ui/kis_layer_manager.cc:686
 #, kde-format
 msgid "Paint Layer"
 msgstr "칠하기 레이어"
 
-#: libs/image/kis_image.cc:839
+#: libs/image/kis_image.cc:840
 msgctxt "(qtundo-format)"
 msgid "Crop Image"
 msgstr "이미지 자르기"
 
-#: libs/image/kis_image.cc:886
+#: libs/image/kis_image.cc:887
 msgctxt "(qtundo-format)"
 msgid "Purge Unused Data"
 msgstr ""
 
-#: libs/image/kis_image.cc:990
+#: libs/image/kis_image.cc:991
 msgctxt "(qtundo-format)"
 msgid "Crop Layer"
 msgstr "레이어 자르기"
 
-#: libs/image/kis_image.cc:991
+#: libs/image/kis_image.cc:992
 msgctxt "(qtundo-format)"
 msgid "Crop Mask"
 msgstr "마스크 자르기"
 
-#: libs/image/kis_image.cc:1028
+#: libs/image/kis_image.cc:1029
 msgctxt "(qtundo-format)"
 msgid "Scale Image"
 msgstr "이미지 크기 조정"
 
-#: libs/image/kis_image.cc:1029
+#: libs/image/kis_image.cc:1030
 msgctxt "(qtundo-format)"
 msgid "Change Image Resolution"
 msgstr "이미지 해상도 변경"
 
-#: libs/image/kis_image.cc:1079
+#: libs/image/kis_image.cc:1080
 #, fuzzy, kde-format
 #| msgctxt "(qtundo-format)"
 #| msgid "Scale Layer"
@@ -22648,17 +22648,17 @@ msgid "Scale Layer"
 msgid_plural "Scale %1 Layers"
 msgstr[0] "레이어 크기 조정"
 
-#: libs/image/kis_image.cc:1218
+#: libs/image/kis_image.cc:1219
 msgctxt "(qtundo-format)"
 msgid "Rotate Image"
 msgstr "이미지 회전"
 
-#: libs/image/kis_image.cc:1228
+#: libs/image/kis_image.cc:1229
 msgctxt "(qtundo-format)"
 msgid "Rotate Mask"
 msgstr "마스크 회전"
 
-#: libs/image/kis_image.cc:1231
+#: libs/image/kis_image.cc:1232
 #, fuzzy, kde-format
 #| msgctxt "(qtundo-format)"
 #| msgid "Rotate Layer"
@@ -22667,12 +22667,12 @@ msgid "Rotate Layer"
 msgid_plural "Rotate %1 Layers"
 msgstr[0] "레이어 회전"
 
-#: libs/image/kis_image.cc:1332
+#: libs/image/kis_image.cc:1333
 msgctxt "(qtundo-format)"
 msgid "Shear Mask"
 msgstr "마스크 기울이기"
 
-#: libs/image/kis_image.cc:1336
+#: libs/image/kis_image.cc:1337
 #, fuzzy, kde-format
 #| msgctxt "(qtundo-format)"
 #| msgid "Shear Layer"
@@ -22681,27 +22681,27 @@ msgid "Shear Layer"
 msgid_plural "Shear %1 Layers"
 msgstr[0] "레이어 기울이기"
 
-#: libs/image/kis_image.cc:1343
+#: libs/image/kis_image.cc:1344
 msgctxt "(qtundo-format)"
 msgid "Shear Image"
 msgstr "이미지 기울이기"
 
-#: libs/image/kis_image.cc:1361
+#: libs/image/kis_image.cc:1362
 msgctxt "(qtundo-format)"
 msgid "Convert Layer Color Space"
 msgstr "레이어 색 공간 변환"
 
-#: libs/image/kis_image.cc:1412
+#: libs/image/kis_image.cc:1413
 msgctxt "(qtundo-format)"
 msgid "Convert Image Color Space"
 msgstr "이미지 색 공간 변환"
 
-#: libs/image/kis_image.cc:1413
+#: libs/image/kis_image.cc:1414
 msgctxt "(qtundo-format)"
 msgid "Convert Projection Color Space"
 msgstr "투영 색 공간 변환"
 
-#: libs/image/kis_image.cc:1465
+#: libs/image/kis_image.cc:1466
 #, fuzzy
 #| msgctxt "(qtundo-format)"
 #| msgid "Convert Layer Color Space"
@@ -22709,17 +22709,17 @@ msgctxt "(qtundo-format)"
 msgid "Unify Layers Color Space"
 msgstr "레이어 색 공간 변환"
 
-#: libs/image/kis_image.cc:1495
+#: libs/image/kis_image.cc:1496
 msgctxt "(qtundo-format)"
 msgid "Assign Profile to Layer"
 msgstr "레이어에 프로필 할당"
 
-#: libs/image/kis_image.cc:1536
+#: libs/image/kis_image.cc:1537
 msgctxt "(qtundo-format)"
 msgid "Assign Profile"
 msgstr "프로필 할당"
 
-#: libs/image/kis_image.cc:2572
+#: libs/image/kis_image.cc:2573
 msgctxt "(qtundo-format)"
 msgid "Crop Selections"
 msgstr "선택 자르기"
@@ -25093,7 +25093,7 @@ msgstr "로컬 리소스"
 #: libs/resources/KisResourceCacheDb.cpp:353
 #: libs/resourcewidgets/KisStorageChooserWidget.cpp:179
 #: libs/ui/animation/KisAnimationRender.cpp:48
-#: libs/ui/animation/KisAnimationRender.cpp:116
+#: libs/ui/animation/KisAnimationRender.cpp:118
 #: libs/ui/animation/KisDlgAnimationRenderer.cpp:747
 #: libs/ui/animation/KisDlgAnimationRenderer.cpp:753
 #: libs/ui/animation/KisDlgAnimationRenderer.cpp:756
@@ -25129,10 +25129,10 @@ msgstr "로컬 리소스"
 #: libs/ui/KisTemplateCreateDia.cpp:284 libs/ui/KisTemplateCreateDia.cpp:390
 #: libs/ui/KisView.cpp:679 libs/ui/KisView.cpp:1166
 #: libs/ui/KisWelcomePageWidget.cpp:725 libs/ui/KisWindowLayoutResource.cpp:390
-#: libs/ui/opengl/KisOpenGLCanvasRenderer.cpp:334
+#: libs/ui/opengl/KisOpenGLCanvasRenderer.cpp:335
 #: libs/ui/widgets/kis_custom_image_widget.cc:291
-#: plugins/assistants/Assistants/kis_assistant_tool.cc:1582
-#: plugins/assistants/Assistants/kis_assistant_tool.cc:1585
+#: plugins/assistants/Assistants/kis_assistant_tool.cc:1583
+#: plugins/assistants/Assistants/kis_assistant_tool.cc:1586
 #: plugins/dockers/gamutmask/gamutmask_dock.cpp:293
 #: plugins/dockers/storyboarddocker/DlgExportStoryboard.cpp:175
 #: plugins/dockers/storyboarddocker/DlgExportStoryboard.cpp:178
@@ -26128,7 +26128,7 @@ msgstr ""
 "조정하거나 잘라 내십시오."
 
 #: libs/ui/animation/KisAnimationRender.cpp:48
-#: libs/ui/animation/KisAnimationRender.cpp:116
+#: libs/ui/animation/KisAnimationRender.cpp:118
 #, kde-format
 msgid ""
 "Could not render animation:\n"
@@ -26152,14 +26152,14 @@ msgid ""
 "you want to overwrite the existing file?"
 msgstr ""
 
-#: libs/ui/animation/KisAnimationRender.cpp:151
 #: libs/ui/animation/KisAnimationRender.cpp:153
+#: libs/ui/animation/KisAnimationRender.cpp:155
 #, kde-format
 msgctxt "@title:window"
 msgid "Rendering error"
 msgstr "렌더링 오류"
 
-#: libs/ui/animation/KisAnimationRender.cpp:153
+#: libs/ui/animation/KisAnimationRender.cpp:155
 #, kde-format
 msgid "Failed to render animation frames! Output files are incomplete."
 msgstr ""
@@ -26772,7 +26772,7 @@ msgstr ""
 #: plugins/filters/colorsfilters/wdg_hsv_adjustment.ui:337
 #: plugins/filters/colorsfilters/wdg_perchannel.ui:346
 #: plugins/tools/basictools/wdgmultihandtool.ui:192
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:141
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:142
 #, kde-format
 msgid "Reset"
 msgstr "초기화"
@@ -27774,7 +27774,7 @@ msgstr "FFMpeg 버전: 없음"
 msgid "None"
 msgstr "없음"
 
-#: libs/ui/canvas/kis_canvas2.cpp:1535
+#: libs/ui/canvas/kis_canvas2.cpp:1540
 #, kde-format
 msgid ""
 "WARNING: HDR mode was activated on surface working in 8-bit mode!\n"
@@ -27871,13 +27871,13 @@ msgid "Edit Guides"
 msgstr "안내선 편집"
 
 #: libs/ui/canvas/kis_guides_manager.cpp:543
-#: libs/ui/canvas/kis_mirror_axis.cpp:325
+#: libs/ui/canvas/kis_mirror_axis.cpp:331
 #, kde-format
 msgid "Y: %1 px"
 msgstr "Y: %1픽셀"
 
 #: libs/ui/canvas/kis_guides_manager.cpp:548
-#: libs/ui/canvas/kis_mirror_axis.cpp:309
+#: libs/ui/canvas/kis_mirror_axis.cpp:315
 #, kde-format
 msgid "X: %1 px"
 msgstr "X: %1픽셀"
@@ -35354,7 +35354,7 @@ msgid "Color Sampler"
 msgstr "색상 표본 추출기"
 
 #: libs/ui/input/KisTouchGestureAction.cpp:29
-#: libs/ui/kis_selection_actions_panel.cpp:76
+#: libs/ui/kis_selection_actions_panel.cpp:79
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Deselect"
@@ -36244,40 +36244,40 @@ msgstr ""
 "한 다음 여기서 태그를 선택해야 합니다."
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonSelectAll)
-#: libs/ui/kis_selection_actions_panel.cpp:74
+#: libs/ui/kis_selection_actions_panel.cpp:77
 #: plugins/dockers/recorder/recorder_snapshots_manager.cpp:195
 #: plugins/dockers/recorder/recorder_snapshots_manager.ui:205
 #, kde-format
 msgid "Select All"
 msgstr "모두 선택"
 
-#: libs/ui/kis_selection_actions_panel.cpp:75
+#: libs/ui/kis_selection_actions_panel.cpp:78
 #, fuzzy, kde-format
 #| msgctxt "(qtundo-format)"
 #| msgid "Invert Selection"
 msgid "Invert Selection"
 msgstr "선택 반전"
 
-#: libs/ui/kis_selection_actions_panel.cpp:77
+#: libs/ui/kis_selection_actions_panel.cpp:80
 #, fuzzy, kde-format
 #| msgid "Select a Color"
 msgid "Fill Selection with Color"
 msgstr "색상 선택"
 
-#: libs/ui/kis_selection_actions_panel.cpp:78
+#: libs/ui/kis_selection_actions_panel.cpp:81
 #, fuzzy, kde-format
 #| msgid "Feather Selection"
 msgid "Clear Selection"
 msgstr "선택 페더"
 
-#: libs/ui/kis_selection_actions_panel.cpp:79
+#: libs/ui/kis_selection_actions_panel.cpp:82
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Copy Layer"
 msgid "Copy To New Layer"
 msgstr "레이어 복사"
 
-#: libs/ui/kis_selection_actions_panel.cpp:80
+#: libs/ui/kis_selection_actions_panel.cpp:83
 #, fuzzy, kde-format
 #| msgctxt "(qtundo-format)"
 #| msgid "Crop Selections"
@@ -39269,7 +39269,7 @@ msgstr "사용 가능한 렌더러에서 선호하는 출력 형식을 지원하
 msgid "OpenColorIO is disabled: image color space is not supported"
 msgstr "OpenColorIO가 비활성화됨: 이미지 색 공간이 지원되지 않습니다"
 
-#: libs/ui/opengl/KisOpenGLCanvasRenderer.cpp:335
+#: libs/ui/opengl/KisOpenGLCanvasRenderer.cpp:336
 #, kde-format
 msgid ""
 "Krita could not initialize the OpenGL canvas:\n"
@@ -39301,7 +39301,7 @@ msgstr "선택 작업"
 #. i18n: ectx: attribute (title), widget (QWidget, tabTransform)
 #: libs/ui/tool/kis_selection_tool_helper.cpp:386
 #: plugins/generators/pattern/wdgpatternoptions.ui:51
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:2268
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:2271
 #: plugins/tools/defaulttool/referenceimagestool/ToolReferenceImages.cpp:338
 #, kde-format
 msgid "Transform"
@@ -39334,7 +39334,7 @@ msgstr ""
 #: plugins/tools/basictools/kis_tool_path.cc:91
 #: plugins/tools/basictools/kis_tool_pencil.cc:64
 #: plugins/tools/tool_enclose_and_fill/subtools/KisPathEnclosingProducer.cpp:130
-#: plugins/tools/tool_enclose_and_fill/subtools/KisToolBasicBrushBase.cpp:71
+#: plugins/tools/tool_enclose_and_fill/subtools/KisToolBasicBrushBase.cpp:75
 #, kde-format
 msgid "The MyPaint Brush Engine is not available for this colorspace"
 msgstr "이 색 공간에서는 MyPaint 브러시 엔진을 사용할 수 없음"
@@ -39342,7 +39342,7 @@ msgstr "이 색 공간에서는 MyPaint 브러시 엔진을 사용할 수 없음
 #: libs/ui/tool/kis_tool_polyline_base.cpp:116
 #: libs/ui/tool/kis_tool_rectangle_base.cpp:158
 #: libs/ui/tool/KisToolOutlineBase.cpp:163
-#: plugins/tools/tool_enclose_and_fill/subtools/KisToolBasicBrushBase.cpp:65
+#: plugins/tools/tool_enclose_and_fill/subtools/KisToolBasicBrushBase.cpp:69
 #, kde-format
 msgid ""
 "This tool cannot paint on clone layers.  Please select a paint or vector "
@@ -39393,7 +39393,7 @@ msgstr "레이어는 워시 모드에서만 그릴 수 있습니다."
 msgid "Group not editable."
 msgstr "그룹을 편집할 수 없습니다."
 
-#: libs/ui/tool/KisAsyncColorSamplerHelper.cpp:581
+#: libs/ui/tool/KisAsyncColorSamplerHelper.cpp:586
 #, kde-format
 msgid "Color sampler does not work on this layer."
 msgstr "이 레이어에서 색상 표본 추출기를 사용할 수 없습니다."
@@ -41673,72 +41673,72 @@ msgstr "칸:"
 msgid "Smoothing:"
 msgstr "스무딩:"
 
-#: libs/ui/widgets/KoStrokeConfigWidget.cpp:90
+#: libs/ui/widgets/KoStrokeConfigWidget.cpp:93
 #, kde-format
 msgid "Butt cap"
 msgstr "뭉툭하게 덮기"
 
-#: libs/ui/widgets/KoStrokeConfigWidget.cpp:97
+#: libs/ui/widgets/KoStrokeConfigWidget.cpp:100
 #, kde-format
 msgid "Round cap"
 msgstr "둥근 모양으로 덮기"
 
-#: libs/ui/widgets/KoStrokeConfigWidget.cpp:104
+#: libs/ui/widgets/KoStrokeConfigWidget.cpp:107
 #, kde-format
 msgid "Square cap"
 msgstr "사각 모양으로 덮기"
 
-#: libs/ui/widgets/KoStrokeConfigWidget.cpp:115
+#: libs/ui/widgets/KoStrokeConfigWidget.cpp:118
 #, kde-format
 msgid "Miter join"
 msgstr "모서리 각지게"
 
-#: libs/ui/widgets/KoStrokeConfigWidget.cpp:122
+#: libs/ui/widgets/KoStrokeConfigWidget.cpp:125
 #, kde-format
 msgid "Round join"
 msgstr "모서리 둥글게"
 
-#: libs/ui/widgets/KoStrokeConfigWidget.cpp:129
+#: libs/ui/widgets/KoStrokeConfigWidget.cpp:132
 #, kde-format
 msgid "Bevel join"
 msgstr "모서리 깎기"
 
-#: libs/ui/widgets/KoStrokeConfigWidget.cpp:139
+#: libs/ui/widgets/KoStrokeConfigWidget.cpp:142
 #, kde-format
 msgid "Miter limit"
 msgstr "각짐 제한"
 
-#: libs/ui/widgets/KoStrokeConfigWidget.cpp:235
+#: libs/ui/widgets/KoStrokeConfigWidget.cpp:238
 #, kde-format
 msgid "Set line width of actual selection"
 msgstr "실제 선택의 선 굵기 설정"
 
 #. i18n: ectx: property (text), widget (QLabel, strokeStyleLabel)
-#: libs/ui/widgets/KoStrokeConfigWidget.cpp:246
+#: libs/ui/widgets/KoStrokeConfigWidget.cpp:249
 #: libs/ui/widgets/KoStrokeConfigWidget.ui:81
 #, kde-format
 msgid "Line Style:"
 msgstr "선 스타일:"
 
-#: libs/ui/widgets/KoStrokeConfigWidget.cpp:249
+#: libs/ui/widgets/KoStrokeConfigWidget.cpp:252
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Line style"
 msgstr "선 스타일"
 
-#: libs/ui/widgets/KoStrokeConfigWidget.cpp:260
+#: libs/ui/widgets/KoStrokeConfigWidget.cpp:263
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Start marker"
 msgstr "시작 마커"
 
-#: libs/ui/widgets/KoStrokeConfigWidget.cpp:267
+#: libs/ui/widgets/KoStrokeConfigWidget.cpp:270
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Node marker"
 msgstr "노드 마커"
 
-#: libs/ui/widgets/KoStrokeConfigWidget.cpp:274
+#: libs/ui/widgets/KoStrokeConfigWidget.cpp:277
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "End marker"
@@ -43444,13 +43444,13 @@ msgstr "동심원 도우미"
 msgid "Concentric Ellipse"
 msgstr "동심원"
 
-#: plugins/assistants/Assistants/CurvilinearPerspectiveAssistant.cc:28
+#: plugins/assistants/Assistants/CurvilinearPerspectiveAssistant.cc:29
 #, fuzzy, kde-format
 #| msgid "Perspective assistant"
 msgid "Curvilinear Perspective assistant"
 msgstr "원근법 도우미"
 
-#: plugins/assistants/Assistants/CurvilinearPerspectiveAssistant.cc:261
+#: plugins/assistants/Assistants/CurvilinearPerspectiveAssistant.cc:265
 #, fuzzy, kde-format
 #| msgid "Clear Perspective Grid"
 msgid "Curvilinear Perspective"
@@ -43508,40 +43508,40 @@ msgstr "무한 눈금자 도우미"
 msgid "Infinite Ruler"
 msgstr "무한 눈금자"
 
-#: plugins/assistants/Assistants/kis_assistant_tool.cc:1437
+#: plugins/assistants/Assistants/kis_assistant_tool.cc:1438
 #, kde-format
 msgid "Select an Assistant"
 msgstr "도우미 선택"
 
-#: plugins/assistants/Assistants/kis_assistant_tool.cc:1585
+#: plugins/assistants/Assistants/kis_assistant_tool.cc:1586
 #, kde-format
 msgid "Errors were encountered. Not all assistants were successfully loaded."
 msgstr "오류가 발생했습니다. 모든 도우미를 성공적으로 불러오지 못했습니다."
 
-#: plugins/assistants/Assistants/kis_assistant_tool.cc:1673
+#: plugins/assistants/Assistants/kis_assistant_tool.cc:1674
 #, kde-format
 msgid "Save Assistant"
 msgstr "도우미 저장"
 
-#: plugins/assistants/Assistants/kis_assistant_tool.cc:1768
-#: plugins/assistants/Assistants/kis_assistant_tool.cc:1774
+#: plugins/assistants/Assistants/kis_assistant_tool.cc:1769
+#: plugins/assistants/Assistants/kis_assistant_tool.cc:1775
 #, kde-format
 msgid "Opacity: "
 msgstr "불투명도: "
 
-#: plugins/assistants/Assistants/kis_assistant_tool.cc:1781
-#: plugins/assistants/Assistants/kis_assistant_tool.cc:1785
+#: plugins/assistants/Assistants/kis_assistant_tool.cc:1782
+#: plugins/assistants/Assistants/kis_assistant_tool.cc:1786
 #, kde-format
 msgid "Density: "
 msgstr "밀도: "
 
-#: plugins/assistants/Assistants/kis_assistant_tool.cc:1790
+#: plugins/assistants/Assistants/kis_assistant_tool.cc:1791
 #, fuzzy, kde-format
 #| msgid "Subdivision:"
 msgid "Subdivisions: "
 msgstr "세분:"
 
-#: plugins/assistants/Assistants/kis_assistant_tool.cc:1794
+#: plugins/assistants/Assistants/kis_assistant_tool.cc:1795
 #, fuzzy, kde-format
 #| msgid "Subdivision:"
 msgid "Minor Subdivisions: "
@@ -43642,7 +43642,7 @@ msgstr "원근법 도우미"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, perspectiveTransformButton)
 #. i18n: ectx: property (text), widget (QToolButton, perspectiveTransformButton)
-#: plugins/assistants/Assistants/PerspectiveAssistant.cc:364
+#: plugins/assistants/Assistants/PerspectiveAssistant.cc:365
 #: plugins/tools/tool_transform2/wdg_tool_transform.ui:164
 #: plugins/tools/tool_transform2/wdg_tool_transform.ui:167
 #, kde-format
@@ -43655,7 +43655,7 @@ msgstr "원근법"
 msgid "Perspective Ellipse assistant"
 msgstr "원근법 도우미"
 
-#: plugins/assistants/Assistants/PerspectiveEllipseAssistant.cc:631
+#: plugins/assistants/Assistants/PerspectiveEllipseAssistant.cc:632
 #, fuzzy, kde-format
 #| msgid "Perspective Grid Tool"
 msgid "Perspective Ellipse"
@@ -43671,24 +43671,24 @@ msgstr "눈금자 도우미"
 msgid "Ruler"
 msgstr "눈금자"
 
-#: plugins/assistants/Assistants/SplineAssistant.cc:75
+#: plugins/assistants/Assistants/SplineAssistant.cc:76
 #, kde-format
 msgid "Spline assistant"
 msgstr "자유 곡선 도우미"
 
-#: plugins/assistants/Assistants/SplineAssistant.cc:350
+#: plugins/assistants/Assistants/SplineAssistant.cc:351
 #, fuzzy, kde-format
 #| msgid "Spline"
 msgctxt "A type of drawing assistants"
 msgid "Spline"
 msgstr "자유 곡선"
 
-#: plugins/assistants/Assistants/TwoPointAssistant.cc:27
+#: plugins/assistants/Assistants/TwoPointAssistant.cc:28
 #, kde-format
 msgid "Two point assistant"
 msgstr "2점 도우미"
 
-#: plugins/assistants/Assistants/TwoPointAssistant.cc:528
+#: plugins/assistants/Assistants/TwoPointAssistant.cc:532
 #, kde-format
 msgid "2 Point Perspective"
 msgstr "2점 원근법"
@@ -48451,7 +48451,7 @@ msgstr "서식 삭제"
 
 #: plugins/dockers/textproperties/qml/OpenTypeFeatureSettings.qml:237
 #: plugins/tools/svgtexttool/glyphpalette/GlyphPalette.qml:127
-#: qmlmodules/components/qml/ResourceView.qml:315
+#: qmlmodules/components/qml/ResourceView.qml:322
 #, fuzzy, kde-format
 #| msgid "Search"
 msgctxt "@info:placeholder"
@@ -67767,7 +67767,7 @@ msgstr "내부"
 msgid "Interval Y:"
 msgstr "내부"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:586
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:589
 #, fuzzy
 #| msgctxt "(qtundo-format)"
 #| msgid "Add shapes to group"
@@ -67775,14 +67775,14 @@ msgctxt "(qtundo-format)"
 msgid "Add shapes to text flow."
 msgstr "모양을 그룹에 추가"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:628
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:631
 #, fuzzy
 #| msgid "Text On Path"
 msgctxt "(qtundo-format)"
 msgid "Put Text On Path"
 msgstr "텍스트: 경로에 있음"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:688
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:691
 #, fuzzy
 #| msgctxt "(qtundo-format)"
 #| msgid "Subtract Shapes"
@@ -67790,24 +67790,24 @@ msgctxt "(qtundo-format)"
 msgid "Subtract shapes from text flow."
 msgstr "모양 빼기"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:721
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:724
 #, fuzzy
 #| msgid "Remove Shape Collection"
 msgctxt "(qtundo-format)"
 msgid "Remove shapes from text flow."
 msgstr "모양 모음 삭제"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:742
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:745
 msgctxt "(qtundo-format)"
 msgid "Toggle Flow Shape Type"
 msgstr ""
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:768
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:771
 msgctxt "(qtundo-format)"
 msgid "Set Flow Shape as First"
 msgstr ""
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:770
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:773
 #, fuzzy
 #| msgctxt "Blending mode - Decrease Value HSV"
 #| msgid "Decrease Value"
@@ -67815,7 +67815,7 @@ msgctxt "(qtundo-format)"
 msgid "Decrease Flow Shape Index"
 msgstr "명도 감소"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:772
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:775
 #, fuzzy
 #| msgctxt "Blending mode - Increase Value HSV"
 #| msgid "Increase Value"
@@ -67823,12 +67823,12 @@ msgctxt "(qtundo-format)"
 msgid "Increase Flow Shape Index"
 msgstr "명도 증가"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:774
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:777
 msgctxt "(qtundo-format)"
 msgid "Set Flow Shape as Last"
 msgstr ""
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1045
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1048
 #, kde-format
 msgid ""
 "Left click rotates around center, right click around highlighted position."
@@ -67836,22 +67836,22 @@ msgstr ""
 "마우스 왼쪽 단추 클릭은 중앙을 중심으로 회전하고, 오른쪽 단추 클릭은 강조 표"
 "시된 위치를 중심으로 회전합니다."
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1048
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1051
 #, kde-format
 msgid "Click and drag to shear selection."
 msgstr "선택 영역을 기울이려면 클릭한 후 드래그하십시오."
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1053
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1056
 #, kde-format
 msgid "Click and drag to resize selection."
 msgstr "선택 영역의 크기를 변경하려면 클릭한 후 드래그하십시오."
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1088
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1091
 #, kde-format
 msgid "Click and drag to move selection."
 msgstr "선택 영역을 이동하려면 클릭한 후 드래그하십시오."
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1092
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1095
 #, kde-format
 msgid ""
 "Click and drag to resize selection. Middle click to set highlighted position."
@@ -67859,44 +67859,44 @@ msgstr ""
 "선택 영역의 크기를 조절하려면 클릭하고 드래그하십시오. 가운데 단추로 클릭하"
 "면 위치를 강조 표시할 수 있습니다."
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1168
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1171
 #, kde-format
 msgid "This tool only works on vector layers. You probably want the move tool."
 msgstr ""
 "이 도구는 벡터 레이어에서만 작동합니다. 이동 도구를 사용해야 할 수도 있습니"
 "다."
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1670
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1673
 msgctxt "(qtundo-format)"
 msgid "Rotate Object 90° CW"
 msgstr "객체 90° 시계 방향 회전"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1674
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1677
 msgctxt "(qtundo-format)"
 msgid "Rotate Object 90° CCW"
 msgstr "객체 90° 반시계 방향 회전"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1678
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1681
 msgctxt "(qtundo-format)"
 msgid "Rotate Object 180°"
 msgstr "객체 180° 회전"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1682
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1685
 msgctxt "(qtundo-format)"
 msgid "Mirror Object Horizontally"
 msgstr "객체 좌우 반전"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1686
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1689
 msgctxt "(qtundo-format)"
 msgid "Mirror Object Vertically"
 msgstr "객체 상하 반전"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1690
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1693
 msgctxt "(qtundo-format)"
 msgid "Reset Object Transformations"
 msgstr "객체 변형 초기화"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1764
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1767
 #, fuzzy
 #| msgctxt "(qtundo-format)"
 #| msgid "Unclip Shapes"
@@ -67904,32 +67904,32 @@ msgctxt "(qtundo-format)"
 msgid "Unite Shapes"
 msgstr "모양 클립 해제"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1778
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1781
 msgctxt "(qtundo-format)"
 msgid "Intersect Shapes"
 msgstr "모양 교차하기"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1788
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1791
 msgctxt "(qtundo-format)"
 msgid "Subtract Shapes"
 msgstr "모양 빼기"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1833
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1836
 msgctxt "(qtundo-format)"
 msgid "Split Shapes"
 msgstr "모양 분할하기"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:2265
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:2268
 #, kde-format
 msgid "Vector Shape Actions"
 msgstr "벡터 모양 작업"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:2284
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:2287
 #, kde-format
 msgid "Logical Operations"
 msgstr "논리 연산"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:2314
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:2317
 #, fuzzy, kde-format
 #| msgctxt "Text label in SVG Text Tool"
 #| msgid "Text"
@@ -68056,17 +68056,17 @@ msgstr "Shift 키를 누르면 X 또는 Y 위치를 고정합니다."
 msgid "Press CTRL to resize from center."
 msgstr "Ctrl 키를 누르면 중앙을 기준으로 크기를 변경합니다."
 
-#: plugins/tools/defaulttool/defaulttool/ShapeRotateStrategy.cpp:45
+#: plugins/tools/defaulttool/defaulttool/ShapeRotateStrategy.cpp:46
 #, kde-format
 msgid "Press ALT to rotate in 45 degree steps."
 msgstr "Alt 키를 누르면 회전할 때 45도 단위로 고정합니다."
 
-#: plugins/tools/defaulttool/defaulttool/ShapeRotateStrategy.cpp:106
+#: plugins/tools/defaulttool/defaulttool/ShapeRotateStrategy.cpp:110
 msgctxt "(qtundo-format)"
 msgid "Rotate"
 msgstr "회전"
 
-#: plugins/tools/defaulttool/defaulttool/ShapeShearStrategy.cpp:184
+#: plugins/tools/defaulttool/defaulttool/ShapeShearStrategy.cpp:185
 msgctxt "(qtundo-format)"
 msgid "Shear"
 msgstr "기울이기"
@@ -68691,24 +68691,24 @@ msgctxt "action"
 msgid "Magnetic Curve Selection Tool"
 msgstr "자석 곡선 선택 도구"
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:51
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:52
 #, kde-format
 msgid "Magnetic Selection"
 msgstr "자석 선택"
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:488
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:505
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:489
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:506
 msgctxt "(qtundo-format)"
 msgid "Magnetic Selection"
 msgstr "자석 선택"
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:734
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:736
 #, kde-format
 msgctxt "Filter radius in Magnetic Select Tool settings"
 msgid "Filter Radius: "
 msgstr "필터 반지름: "
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:741
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:743
 #, fuzzy, kde-format
 #| msgctxt "The 'threshold' spinbox prefix in fill tool options"
 #| msgid "Threshold: "
@@ -68716,33 +68716,33 @@ msgctxt "Threshold in Magnetic Selection's Tool options"
 msgid "Threshold: "
 msgstr "임곗값: "
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:749
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:751
 #, fuzzy, kde-format
 #| msgid "Search Radius: "
 msgctxt "Search Radius in Magnetic Selection's Tool options"
 msgid "Search Radius: "
 msgstr "검색 반지름: "
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:758
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:760
 #, fuzzy, kde-format
 #| msgid "Anchor Gap: "
 msgctxt "Anchor Gap in Magnetic Selection's Tool options"
 msgid "Anchor Gap: "
 msgstr "고정 간격: "
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:762
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:764
 #, kde-format
 msgctxt "Complete the selection"
 msgid "Complete"
 msgstr "완료"
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:767
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:769
 #, kde-format
 msgctxt "Discard the selection"
 msgid "Discard"
 msgstr "무시"
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:773
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:775
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -68750,37 +68750,37 @@ msgid ""
 "calculate"
 msgstr "경계선 검출 필터의 반지름입니다. 계산에 시간이 걸릴 수도 있습니다"
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:777
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:779
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Threshold for determining the minimum intensity of the edges"
 msgstr "경계선의 최소 강도를 검출할 때 사용할 임곗값"
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:779
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:781
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Extra area to be searched"
 msgstr "추가로 검색할 영역"
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:781
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:783
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Gap between 2 anchors in interactive mode"
 msgstr "인터랙티브 모드에서 두 고정점 사이의 간격"
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:783
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:785
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Complete Selection"
 msgstr "선택 완료"
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:785
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:787
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Discard Selection"
 msgstr "선택 무시"
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:792
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:794
 #, fuzzy, kde-format
 #| msgid "Patch Options"
 msgctxt "The 'path options' section label in magnetic selection's tool options"
@@ -68935,15 +68935,15 @@ msgctxt "(qtundo-format)"
 msgid "Adjust character transforms on text."
 msgstr ""
 
-#: plugins/tools/svgtexttool/SvgTextCursor.cpp:472
+#: plugins/tools/svgtexttool/SvgTextCursor.cpp:473
 #, fuzzy, kde-format
 #| msgid "Text Tool"
 msgctxt "Type setting mode line name"
 msgid "Text Top"
 msgstr "텍스트 도구"
 
-#: plugins/tools/svgtexttool/SvgTextCursor.cpp:474
-#: plugins/tools/svgtexttool/SvgTextCursor.cpp:480
+#: plugins/tools/svgtexttool/SvgTextCursor.cpp:475
+#: plugins/tools/svgtexttool/SvgTextCursor.cpp:481
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Font Size"
@@ -68951,7 +68951,7 @@ msgctxt "Type setting mode line name"
 msgid "Font Size"
 msgstr "글꼴 크기"
 
-#: plugins/tools/svgtexttool/SvgTextCursor.cpp:478
+#: plugins/tools/svgtexttool/SvgTextCursor.cpp:479
 #, fuzzy, kde-format
 #| msgctxt "toolbar position string"
 #| msgid "Bottom"
@@ -68959,28 +68959,28 @@ msgctxt "Type setting mode line name"
 msgid "Text Bottom"
 msgstr "아래"
 
-#: plugins/tools/svgtexttool/SvgTextCursor.cpp:483
+#: plugins/tools/svgtexttool/SvgTextCursor.cpp:484
 #, fuzzy, kde-format
 #| msgid "Alphabetical"
 msgctxt "Type setting mode line name"
 msgid "Alphabetic"
 msgstr "이름 순서"
 
-#: plugins/tools/svgtexttool/SvgTextCursor.cpp:485
+#: plugins/tools/svgtexttool/SvgTextCursor.cpp:486
 #, fuzzy, kde-format
 #| msgid "Biography"
 msgctxt "Type setting mode line name"
 msgid "Ideographic"
 msgstr "전기, 일대기"
 
-#: plugins/tools/svgtexttool/SvgTextCursor.cpp:487
+#: plugins/tools/svgtexttool/SvgTextCursor.cpp:488
 #, fuzzy, kde-format
 #| msgid "Angular"
 msgctxt "Type setting mode line name"
 msgid "Hanging"
 msgstr "각짐"
 
-#: plugins/tools/svgtexttool/SvgTextCursor.cpp:489
+#: plugins/tools/svgtexttool/SvgTextCursor.cpp:490
 #, fuzzy, kde-format
 #| msgctxt "Middle Mouse Button"
 #| msgid "Middle"
@@ -68988,21 +68988,21 @@ msgctxt "Type setting mode line name"
 msgid "Middle"
 msgstr "가운데"
 
-#: plugins/tools/svgtexttool/SvgTextCursor.cpp:491
+#: plugins/tools/svgtexttool/SvgTextCursor.cpp:492
 #, fuzzy, kde-format
 #| msgid "Logical Operations"
 msgctxt "Type setting mode line name"
 msgid "Mathematical"
 msgstr "논리 연산"
 
-#: plugins/tools/svgtexttool/SvgTextCursor.cpp:493
+#: plugins/tools/svgtexttool/SvgTextCursor.cpp:494
 #, fuzzy, kde-format
 #| msgid "Center"
 msgctxt "Type setting mode line name"
 msgid "Central"
 msgstr "중앙"
 
-#: plugins/tools/svgtexttool/SvgTextCursor.cpp:495
+#: plugins/tools/svgtexttool/SvgTextCursor.cpp:496
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Line Height"
@@ -69010,14 +69010,14 @@ msgctxt "Type setting mode line name"
 msgid "Line Height"
 msgstr "줄 높이"
 
-#: plugins/tools/svgtexttool/SvgTextCursor.cpp:498
+#: plugins/tools/svgtexttool/SvgTextCursor.cpp:499
 #, fuzzy, kde-format
 #| msgid "Current selection"
 msgctxt "Type setting mode line name"
 msgid "Current Baseline"
 msgstr "현재 선택"
 
-#: plugins/tools/svgtexttool/SvgTextCursor.cpp:500
+#: plugins/tools/svgtexttool/SvgTextCursor.cpp:501
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "h264 profile name, check simplescreenrecorder for standard translations"
@@ -69556,7 +69556,7 @@ msgctxt "action"
 msgid "Remove all set text properties from the selection."
 msgstr "실제 선택의 선 굵기 설정"
 
-#: plugins/tools/svgtexttool/SvgTextTool.cpp:313
+#: plugins/tools/svgtexttool/SvgTextTool.cpp:315
 #, kde-format
 msgctxt "@title:window"
 msgid "Krita - Edit Text"
@@ -69819,48 +69819,48 @@ msgid "Editor background:"
 msgstr "편집기 배경색:"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgToolCrop)
-#: plugins/tools/tool_crop/kis_tool_crop.cc:111
+#: plugins/tools/tool_crop/kis_tool_crop.cc:112
 #: plugins/tools/tool_crop/wdg_tool_crop.ui:18
 #, kde-format
 msgid "Crop"
 msgstr "자르기"
 
 #. i18n: ectx: property (text), widget (QCheckBox, boolCenter)
-#: plugins/tools/tool_crop/kis_tool_crop.cc:113
+#: plugins/tools/tool_crop/kis_tool_crop.cc:114
 #: plugins/tools/tool_crop/wdg_tool_crop.ui:69
 #, kde-format
 msgid "Center"
 msgstr "중앙"
 
 #. i18n: ectx: property (text), widget (QCheckBox, boolGrow)
-#: plugins/tools/tool_crop/kis_tool_crop.cc:116
+#: plugins/tools/tool_crop/kis_tool_crop.cc:117
 #: plugins/tools/tool_crop/wdg_tool_crop.ui:161
 #, kde-format
 msgctxt "Grow as in crop tool"
 msgid "Grow"
 msgstr "확장"
 
-#: plugins/tools/tool_crop/kis_tool_crop.cc:119
+#: plugins/tools/tool_crop/kis_tool_crop.cc:120
 #, kde-format
 msgid "Lock Width"
 msgstr "너비 잠금"
 
-#: plugins/tools/tool_crop/kis_tool_crop.cc:122
+#: plugins/tools/tool_crop/kis_tool_crop.cc:123
 #, kde-format
 msgid "Lock Height"
 msgstr "높이 잠금"
 
-#: plugins/tools/tool_crop/kis_tool_crop.cc:125
+#: plugins/tools/tool_crop/kis_tool_crop.cc:126
 #, kde-format
 msgid "Lock Ratio"
 msgstr "비율 잠금"
 
-#: plugins/tools/tool_crop/kis_tool_crop.cc:250
+#: plugins/tools/tool_crop/kis_tool_crop.cc:257
 #, kde-format
 msgid "Crop Tool Actions"
 msgstr "자르기 도구 작업"
 
-#: plugins/tools/tool_crop/kis_tool_crop.cc:726
+#: plugins/tools/tool_crop/kis_tool_crop.cc:747
 #, kde-format
 msgid ""
 "X: %1\n"
@@ -69869,7 +69869,7 @@ msgstr ""
 "X: %1\n"
 "Y: %2"
 
-#: plugins/tools/tool_crop/kis_tool_crop.cc:731
+#: plugins/tools/tool_crop/kis_tool_crop.cc:752
 #, kde-format
 msgid ""
 "Width: %1\n"
@@ -69878,7 +69878,7 @@ msgstr ""
 "너비: %1\n"
 "높이: %2"
 
-#: plugins/tools/tool_crop/kis_tool_crop.h:215
+#: plugins/tools/tool_crop/kis_tool_crop.h:221
 #, kde-format
 msgid "Crop Tool"
 msgstr "자르기 도구"
@@ -70281,8 +70281,8 @@ msgstr "1. 전경색에서 투명으로"
 msgid "Enclose and Fill Tool"
 msgstr "채우기 도구 활성화"
 
-#: plugins/tools/tool_knife/CutThroughShapeStrategy.cpp:205
-#: plugins/tools/tool_knife/RemoveGutterStrategy.cpp:218
+#: plugins/tools/tool_knife/CutThroughShapeStrategy.cpp:206
+#: plugins/tools/tool_knife/RemoveGutterStrategy.cpp:219
 msgctxt "(qtundo-format)"
 msgid "Knife tool: cut through shapes"
 msgstr ""
@@ -70482,7 +70482,7 @@ msgstr "대각선 엠보스"
 msgid "Diagonal type angle threshold:"
 msgstr "즉시 미리 보기 임곗값:"
 
-#: plugins/tools/tool_knife/RemoveGutterStrategy.cpp:280
+#: plugins/tools/tool_knife/RemoveGutterStrategy.cpp:281
 msgctxt "(qtundo-format)"
 msgid "Knife tool: remove a gutter"
 msgstr ""
@@ -70644,12 +70644,12 @@ msgstr ""
 "폴리라인 도구: Shift 키를 누르면서 마우스 단추를 클릭하면 폴리라인을 종료합니"
 "다."
 
-#: plugins/tools/tool_smart_patch/kis_tool_smart_patch.cpp:134
+#: plugins/tools/tool_smart_patch/kis_tool_smart_patch.cpp:135
 #, kde-format
 msgid "Select a paint layer to use this tool"
 msgstr "이 도구를 사용할 칠하기 레이어 선택"
 
-#: plugins/tools/tool_smart_patch/kis_tool_smart_patch.cpp:173
+#: plugins/tools/tool_smart_patch/kis_tool_smart_patch.cpp:174
 msgctxt "(qtundo-format)"
 msgid "Smart Patch"
 msgstr "스마트 패치"
@@ -70700,80 +70700,80 @@ msgstr ""
 "을 활성화하여 다시 컴파일하거나 스케일 값을 수동으로 편집하려면 옵션 위젯을 "
 "사용하십시오."
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:123
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:124
 #, kde-format
 msgctxt "Warp Transform Tab Label"
 msgid "Warp"
 msgstr "휨"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:124
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:125
 #, kde-format
 msgctxt "Liquify Transform Tab Label"
 msgid "Liquify"
 msgstr "유동화"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:125
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:126
 #, kde-format
 msgctxt "Mesh Transform Tab Label"
 msgid "Mesh"
 msgstr "메시"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:126
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:127
 #, kde-format
 msgctxt "Cage Transform Tab Label"
 msgid "Cage"
 msgstr "케이지"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:127
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:128
 #, kde-format
 msgctxt "Free Transform Tab Label"
 msgid "Free"
 msgstr "자유"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:128
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:129
 #, kde-format
 msgctxt "Perspective Transform Tab Label"
 msgid "Perspective"
 msgstr "원근법"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:131
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:132
 #, kde-format
 msgid "Mirror Horizontal"
 msgstr "좌우 반전"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:132
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:133
 #, kde-format
 msgid "Mirror Vertical"
 msgstr "상하 반전"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:133
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:134
 #, kde-format
 msgid "Rotate 90 degrees Clockwise"
 msgstr "시계 방향으로 90° 회전"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:134
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:135
 #, kde-format
 msgid "Rotate 90 degrees CounterClockwise"
 msgstr "반시계 방향으로 90° 회전"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:136
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:137
 #, fuzzy, kde-format
 #| msgctxt "(qtundo-format)"
 #| msgid "Keep Aspect Ratio"
 msgid "Keep Aspect Ratio"
 msgstr "화면 비율 유지"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:140
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:141
 #, kde-format
 msgid "Apply"
 msgstr "적용"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:426
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:427
 #, kde-format
 msgid "Transform Tool Actions"
 msgstr "변형 도구 동작"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:942
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:941
 #, fuzzy, kde-format
 #| msgctxt "floating message in transformation tool"
 #| msgid "Cannot transform empty layer "
@@ -70781,7 +70781,7 @@ msgctxt "floating message in transformation tool"
 msgid "Cannot transform locked layers"
 msgstr "빈 레이어를 변환할 수 없음 "
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:948
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:947
 #, fuzzy, kde-format
 #| msgctxt "floating message in transformation tool"
 #| msgid "Cannot transform empty layer "
@@ -70789,7 +70789,7 @@ msgctxt "floating message in transformation tool"
 msgid "Cannot transform hidden layers"
 msgstr "빈 레이어를 변환할 수 없음 "
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:954
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:953
 #, fuzzy, kde-format
 #| msgctxt "floating message in transformation tool"
 #| msgid "Cannot transform empty layer "
@@ -70797,13 +70797,13 @@ msgctxt "floating message in transformation tool"
 msgid "Cannot use transform tool on this set of layers"
 msgstr "빈 레이어를 변환할 수 없음 "
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:970
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:969
 #, kde-format
 msgctxt "floating message in transformation tool"
 msgid "Layer type cannot use the transform tool"
 msgstr "레이어 형식에서 변형 도구를 사용할 수 없음"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:977
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:976
 #, kde-format
 msgctxt "floating message in transformation tool"
 msgid "Layer type cannot use the transform tool. Use transform mask instead."
@@ -70811,7 +70811,7 @@ msgstr ""
 "레이어 형식에서 변형 도구를 사용할 수 없습니다. 대신 변형 마스크를 사용하십시"
 "오."
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:996
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:995
 #, kde-format
 msgctxt "floating message in transformation tool"
 msgid ""
@@ -70821,20 +70821,20 @@ msgstr ""
 "레이어에 변형 마스크가 있는 자식 레이어가 있습니다. 변형을 실행하기 전에 비활"
 "성화하십시오."
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:1009
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:1008
 #, kde-format
 msgctxt "floating message in transformation tool"
 msgid "Selections are not used when editing transform masks "
 msgstr "변형 마스크를 편집할 때는 선택 항목이 사용되지 않습니다 "
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:1096
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:1135
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:1095
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:1134
 #, kde-format
 msgctxt "floating message in transformation tool"
 msgid "Cannot transform empty layer "
 msgstr "빈 레이어를 변환할 수 없음 "
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:1122
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:1121
 #, kde-format
 msgctxt "floating message in transformation tool"
 msgid ""
@@ -71674,42 +71674,42 @@ msgid ""
 "work correctly."
 msgstr ""
 
-#: qmlmodules/components/qml/ResourceView.qml:142
+#: qmlmodules/components/qml/ResourceView.qml:149
 #, fuzzy, kde-format
 #| msgid "Tag"
 msgctxt "@label:button"
 msgid "Tag"
 msgstr "태그"
 
-#: qmlmodules/components/qml/ResourceView.qml:185
+#: qmlmodules/components/qml/ResourceView.qml:192
 #, fuzzy, kde-format
 #| msgid "Assign to tag"
 msgctxt "@title:menu"
 msgid "Assign to Tag"
 msgstr "태그에 할당"
 
-#: qmlmodules/components/qml/ResourceView.qml:210
+#: qmlmodules/components/qml/ResourceView.qml:217
 #, fuzzy, kde-format
 #| msgid "New Name:"
 msgctxt "@info:placeholder"
 msgid "New Tag Name..."
 msgstr "새 이름:"
 
-#: qmlmodules/components/qml/ResourceView.qml:235
+#: qmlmodules/components/qml/ResourceView.qml:242
 #, fuzzy, kde-format
 #| msgid "Remove from this tag"
 msgctxt "@action:inmenu"
 msgid "Remove from this tag"
 msgstr "이 태그에서 삭제"
 
-#: qmlmodules/components/qml/ResourceView.qml:244
+#: qmlmodules/components/qml/ResourceView.qml:251
 #, fuzzy, kde-format
 #| msgid "Remove from other tag"
 msgctxt "@title:menu"
 msgid "Remove from other tag"
 msgstr "다른 태그에서 삭제"
 
-#: qmlmodules/components/qml/ResourceView.qml:323
+#: qmlmodules/components/qml/ResourceView.qml:330
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Search Actions"
@@ -71717,14 +71717,14 @@ msgctxt "@option:check"
 msgid "Search in tag"
 msgstr "작업 검색"
 
-#: qmlmodules/components/qml/ResourceView.qml:342
+#: qmlmodules/components/qml/ResourceView.qml:349
 #, fuzzy, kde-format
 #| msgid "Import"
 msgctxt "@info:tooltip, %1 is resource type name"
 msgid "Import %1"
 msgstr "가져오기"
 
-#: qmlmodules/components/qml/ResourceView.qml:366
+#: qmlmodules/components/qml/ResourceView.qml:373
 #, fuzzy, kde-format
 #| msgid "Remove"
 msgctxt "@info:tooltip, %1 is resource type name"

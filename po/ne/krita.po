@@ -26,7 +26,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-17 00:42+0000\n"
+"POT-Creation-Date: 2026-04-18 00:42+0000\n"
 "PO-Revision-Date: 2007-08-24 15:02+0545\n"
 "Last-Translator: Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -16492,66 +16492,66 @@ msgid ""
 "Please update to a supported version of Windows: Windows 7, 8, 8.1 or 10."
 msgstr ""
 
-#: libs/basicflakes/tools/KoCreatePathTool.cpp:563
+#: libs/basicflakes/tools/KoCreatePathTool.cpp:566
 #, fuzzy, kde-format
 msgid "Path options"
 msgstr "स्मियरी ब्रुस"
 
-#: libs/basicflakes/tools/KoCreatePathTool.cpp:565
+#: libs/basicflakes/tools/KoCreatePathTool.cpp:568
 #, fuzzy, kde-format
 #| msgid "Use custom curve"
 msgid "Autosmooth curve"
 msgstr "अनुकूल बक्र प्रयोग गर्नुहोस्"
 
-#: libs/basicflakes/tools/KoCreatePathTool.cpp:569
+#: libs/basicflakes/tools/KoCreatePathTool.cpp:572
 #, fuzzy, kde-format
 msgid "Activate angle snap"
 msgstr "सक्रिय तह"
 
 #. i18n: ectx: property (text), widget (QLabel, lblPrecision)
-#: libs/basicflakes/tools/KoPencilTool.cpp:294
+#: libs/basicflakes/tools/KoPencilTool.cpp:295
 #: plugins/paintops/libpaintop/forms/wdgbrushchooser.ui:85
 #, fuzzy, kde-format
 msgid "Precision:"
 msgstr "संतृप्ति"
 
-#: libs/basicflakes/tools/KoPencilTool.cpp:296
+#: libs/basicflakes/tools/KoPencilTool.cpp:297
 #, fuzzy, kde-format
 msgctxt "The raw line data"
 msgid "Raw"
 msgstr "गेन्सबोरो"
 
-#: libs/basicflakes/tools/KoPencilTool.cpp:297
+#: libs/basicflakes/tools/KoPencilTool.cpp:298
 #: plugins/flake/pathshapes/spiral/SpiralShapeConfigWidget.cpp:16
 #: plugins/paintops/curvebrush/curve_paintop_plugin.cpp:30
 #, fuzzy, kde-format
 msgid "Curve"
 msgstr "वक्रिय"
 
-#: libs/basicflakes/tools/KoPencilTool.cpp:298
+#: libs/basicflakes/tools/KoPencilTool.cpp:299
 #, fuzzy, kde-format
 msgid "Straight"
 msgstr "स्ट्रिङ:"
 
-#: libs/basicflakes/tools/KoPencilTool.cpp:307
-#: libs/basicflakes/tools/KoPencilTool.cpp:314
+#: libs/basicflakes/tools/KoPencilTool.cpp:308
+#: libs/basicflakes/tools/KoPencilTool.cpp:315
 #, fuzzy, kde-format
 msgid "Optimize"
 msgstr "च्यानल अधिकतम पार्नुहोस्"
 
-#: libs/basicflakes/tools/KoPencilTool.cpp:321
+#: libs/basicflakes/tools/KoPencilTool.cpp:322
 #, fuzzy, kde-format
 msgid "Exactness:"
 msgstr "समतल:"
 
-#: libs/basicflakes/tools/KoPencilTool.cpp:354
 #: libs/basicflakes/tools/KoPencilTool.cpp:355
+#: libs/basicflakes/tools/KoPencilTool.cpp:356
 #, fuzzy, kde-format
 msgid "Pencil"
 msgstr "दीर्घवृत्त"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, shapeCBox)
-#: libs/basicflakes/tools/KoPencilTool.cpp:360
+#: libs/basicflakes/tools/KoPencilTool.cpp:361
 #: plugins/flake/pathshapes/spiral/SpiralShapeConfigWidget.cpp:17
 #: plugins/paintops/gridbrush/wdggridbrushshapeoptions.ui:51
 #, fuzzy, kde-format
@@ -16650,7 +16650,7 @@ msgstr " परिमितिर परिवर्तन गर्नुहो
 
 #: libs/flake/commands/KoParameterToPathCommand.cpp:31
 #: libs/flake/commands/KoParameterToPathCommand.cpp:40
-#: libs/flake/tools/KoPathTool.cpp:314
+#: libs/flake/tools/KoPathTool.cpp:315
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Convert to Path"
@@ -16788,7 +16788,7 @@ msgstr "आकारलाई वितरण गर्नुहोस्"
 
 #: libs/flake/commands/KoShapeGroupCommand.cpp:67
 #: libs/libkis/VectorLayer.cpp:225
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1608
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1611
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Group shapes"
@@ -16892,7 +16892,7 @@ msgid "Unclip Shapes"
 msgstr "आकारलाई छुट्याउनुहोस्"
 
 #: libs/flake/commands/KoShapeUngroupCommand.cpp:42
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1636
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1639
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Ungroup shapes"
@@ -20718,38 +20718,38 @@ msgctxt "(qtundo-format)"
 msgid "Change Segment"
 msgstr "पङ्क्तिबद्धता परिवर्तन गर्नुहोस्"
 
-#: libs/flake/tools/KoPathTool.cpp:130
+#: libs/flake/tools/KoPathTool.cpp:131
 #, fuzzy, kde-format
 msgid "Edit Shape"
 msgstr "आकार:"
 
-#: libs/flake/tools/KoPathTool.cpp:633
+#: libs/flake/tools/KoPathTool.cpp:636
 #, fuzzy, kde-format
 msgid "Drag to move handle."
 msgstr "नियन्त्रण बिन्दुलाई सार्नुहोस्।"
 
-#: libs/flake/tools/KoPathTool.cpp:687
+#: libs/flake/tools/KoPathTool.cpp:690
 #, fuzzy, kde-format
 msgid "Drag to move point. Shift click to change point type."
 msgstr "नियन्त्रण बिन्दुलाई सार्नुहोस्।"
 
-#: libs/flake/tools/KoPathTool.cpp:689
+#: libs/flake/tools/KoPathTool.cpp:692
 #, fuzzy, kde-format
 msgid "Drag to move control point."
 msgstr "नियन्त्रण बिन्दुलाई सार्नुहोस्।"
 
-#: libs/flake/tools/KoPathTool.cpp:712
+#: libs/flake/tools/KoPathTool.cpp:715
 #, kde-format
 msgid "Drag to change curve directly. Double click to insert new path point."
 msgstr ""
 
-#: libs/flake/tools/KoPathTool.cpp:722
+#: libs/flake/tools/KoPathTool.cpp:725
 #, fuzzy, kde-format
 msgctxt "%1 is a shortcut to be pressed"
 msgid "Press %1 to break path at selected point."
 msgstr "सहायक मार्गलाई विन्दुमा विच्छेद गर्नुहोस्"
 
-#: libs/flake/tools/KoPathTool.cpp:724
+#: libs/flake/tools/KoPathTool.cpp:727
 #, fuzzy, kde-format
 msgctxt "%1 is a shortcut to be pressed"
 msgid "Press %1 to break path at selected segments."
@@ -21258,7 +21258,7 @@ msgctxt "(qtundo-format)"
 msgid "Opacity Change"
 msgstr "अस्पष्ट बक्र: "
 
-#: libs/image/commands/kis_node_property_list_command.cpp:59
+#: libs/image/commands/kis_node_property_list_command.cpp:61
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Property Changes"
@@ -21284,7 +21284,7 @@ msgid "Node Rename"
 msgstr "नाम:"
 
 #: libs/image/commands_new/kis_image_resize_command.cpp:16
-#: libs/image/kis_image.cc:840
+#: libs/image/kis_image.cc:841
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Resize Image"
@@ -21541,61 +21541,61 @@ msgstr "मिटचेल"
 msgid "Pass Through"
 msgstr ""
 
-#: libs/image/kis_image.cc:397
+#: libs/image/kis_image.cc:398
 #, fuzzy, kde-format
 #| msgid "Import Image"
 msgid "Imported Image"
 msgstr "छवि आयात गर्नुहोस्"
 
 #. i18n.
-#: libs/image/kis_image.cc:736 libs/ui/kis_import_catcher.cc:50
+#: libs/image/kis_image.cc:737 libs/ui/kis_import_catcher.cc:50
 #: libs/ui/KisDocument.cpp:2709 plugins/impex/psd/psd_loader.cpp:221
 #, fuzzy, kde-format
 msgctxt "Name for the bottom-most layer in the layerstack"
 msgid "Background"
 msgstr "पृष्ठभूमि"
 
-#: libs/image/kis_image.cc:740 libs/ui/kis_layer_manager.cc:686
+#: libs/image/kis_image.cc:741 libs/ui/kis_layer_manager.cc:686
 #, fuzzy, kde-format
 msgid "Paint Layer"
 msgstr "तह रङ्याउनुहोस्"
 
-#: libs/image/kis_image.cc:839
+#: libs/image/kis_image.cc:840
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Crop Image"
 msgstr "छवि काँटछाँट गर्नुहोस्"
 
-#: libs/image/kis_image.cc:886
+#: libs/image/kis_image.cc:887
 msgctxt "(qtundo-format)"
 msgid "Purge Unused Data"
 msgstr ""
 
-#: libs/image/kis_image.cc:990
+#: libs/image/kis_image.cc:991
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Crop Layer"
 msgstr "नयाँ समूह तह"
 
-#: libs/image/kis_image.cc:991
+#: libs/image/kis_image.cc:992
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Crop Mask"
 msgstr "मास्क मोटो पार्नुहोस्"
 
-#: libs/image/kis_image.cc:1028
+#: libs/image/kis_image.cc:1029
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Scale Image"
 msgstr "छवि मापन गर्नुहोस्"
 
-#: libs/image/kis_image.cc:1029
+#: libs/image/kis_image.cc:1030
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Change Image Resolution"
 msgstr "छवि रिजोल्युसन"
 
-#: libs/image/kis_image.cc:1079
+#: libs/image/kis_image.cc:1080
 #, fuzzy, kde-format
 msgctxt "(qtundo-format)"
 msgid "Scale Layer"
@@ -21603,20 +21603,20 @@ msgid_plural "Scale %1 Layers"
 msgstr[0] "तह मापन गर्नुहोस्"
 msgstr[1] "तह मापन गर्नुहोस्"
 
-#: libs/image/kis_image.cc:1218
+#: libs/image/kis_image.cc:1219
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Rotate Image"
 msgstr "छवि परिक्रमण"
 
-#: libs/image/kis_image.cc:1228
+#: libs/image/kis_image.cc:1229
 #, fuzzy
 #| msgid "Raise Mask"
 msgctxt "(qtundo-format)"
 msgid "Rotate Mask"
 msgstr "मास्क बढाउनुहोस्"
 
-#: libs/image/kis_image.cc:1231
+#: libs/image/kis_image.cc:1232
 #, fuzzy, kde-format
 msgctxt "(qtundo-format)"
 msgid "Rotate Layer"
@@ -21624,13 +21624,13 @@ msgid_plural "Rotate %1 Layers"
 msgstr[0] "तह घुमाउनुहोस्"
 msgstr[1] "तह घुमाउनुहोस्"
 
-#: libs/image/kis_image.cc:1332
+#: libs/image/kis_image.cc:1333
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Shear Mask"
 msgstr "आकारलाई काट्नुहोस्"
 
-#: libs/image/kis_image.cc:1336
+#: libs/image/kis_image.cc:1337
 #, fuzzy, kde-format
 #| msgid "Shear Layer"
 msgctxt "(qtundo-format)"
@@ -21639,51 +21639,51 @@ msgid_plural "Shear %1 Layers"
 msgstr[0] "तह काट्नुहोस्"
 msgstr[1] "तह काट्नुहोस्"
 
-#: libs/image/kis_image.cc:1343
+#: libs/image/kis_image.cc:1344
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Shear Image"
 msgstr "छवि काट्नुहोस्"
 
-#: libs/image/kis_image.cc:1361
+#: libs/image/kis_image.cc:1362
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Convert Layer Color Space"
 msgstr "छवि प्रकार रूपान्तरण गर्नुहोस्"
 
-#: libs/image/kis_image.cc:1412
+#: libs/image/kis_image.cc:1413
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Convert Image Color Space"
 msgstr "छवि प्रकार रूपान्तरण गर्नुहोस्"
 
-#: libs/image/kis_image.cc:1413
+#: libs/image/kis_image.cc:1414
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Convert Projection Color Space"
 msgstr "छवि प्रकार रूपान्तरण गर्नुहोस्"
 
-#: libs/image/kis_image.cc:1465
+#: libs/image/kis_image.cc:1466
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Unify Layers Color Space"
 msgstr "छवि प्रकार रूपान्तरण गर्नुहोस्"
 
-#: libs/image/kis_image.cc:1495
+#: libs/image/kis_image.cc:1496
 #, fuzzy
 #| msgid "Apply Profile"
 msgctxt "(qtundo-format)"
 msgid "Assign Profile to Layer"
 msgstr "प्रोफाइल लागू गर्नुहोस्"
 
-#: libs/image/kis_image.cc:1536
+#: libs/image/kis_image.cc:1537
 #, fuzzy
 #| msgid "Apply Profile"
 msgctxt "(qtundo-format)"
 msgid "Assign Profile"
 msgstr "प्रोफाइल लागू गर्नुहोस्"
 
-#: libs/image/kis_image.cc:2572
+#: libs/image/kis_image.cc:2573
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Crop Selections"
@@ -24077,7 +24077,7 @@ msgstr "स्रोत फाइल:"
 #: libs/resources/KisResourceCacheDb.cpp:353
 #: libs/resourcewidgets/KisStorageChooserWidget.cpp:179
 #: libs/ui/animation/KisAnimationRender.cpp:48
-#: libs/ui/animation/KisAnimationRender.cpp:116
+#: libs/ui/animation/KisAnimationRender.cpp:118
 #: libs/ui/animation/KisDlgAnimationRenderer.cpp:747
 #: libs/ui/animation/KisDlgAnimationRenderer.cpp:753
 #: libs/ui/animation/KisDlgAnimationRenderer.cpp:756
@@ -24113,10 +24113,10 @@ msgstr "स्रोत फाइल:"
 #: libs/ui/KisTemplateCreateDia.cpp:284 libs/ui/KisTemplateCreateDia.cpp:390
 #: libs/ui/KisView.cpp:679 libs/ui/KisView.cpp:1166
 #: libs/ui/KisWelcomePageWidget.cpp:725 libs/ui/KisWindowLayoutResource.cpp:390
-#: libs/ui/opengl/KisOpenGLCanvasRenderer.cpp:334
+#: libs/ui/opengl/KisOpenGLCanvasRenderer.cpp:335
 #: libs/ui/widgets/kis_custom_image_widget.cc:291
-#: plugins/assistants/Assistants/kis_assistant_tool.cc:1582
-#: plugins/assistants/Assistants/kis_assistant_tool.cc:1585
+#: plugins/assistants/Assistants/kis_assistant_tool.cc:1583
+#: plugins/assistants/Assistants/kis_assistant_tool.cc:1586
 #: plugins/dockers/gamutmask/gamutmask_dock.cpp:293
 #: plugins/dockers/storyboarddocker/DlgExportStoryboard.cpp:175
 #: plugins/dockers/storyboarddocker/DlgExportStoryboard.cpp:178
@@ -25088,7 +25088,7 @@ msgid ""
 msgstr ""
 
 #: libs/ui/animation/KisAnimationRender.cpp:48
-#: libs/ui/animation/KisAnimationRender.cpp:116
+#: libs/ui/animation/KisAnimationRender.cpp:118
 #, fuzzy, kde-format
 msgid ""
 "Could not render animation:\n"
@@ -25109,15 +25109,15 @@ msgid ""
 "you want to overwrite the existing file?"
 msgstr ""
 
-#: libs/ui/animation/KisAnimationRender.cpp:151
 #: libs/ui/animation/KisAnimationRender.cpp:153
+#: libs/ui/animation/KisAnimationRender.cpp:155
 #, fuzzy, kde-format
 #| msgid "Parsing error"
 msgctxt "@title:window"
 msgid "Rendering error"
 msgstr "पद वर्णन त्रुटि"
 
-#: libs/ui/animation/KisAnimationRender.cpp:153
+#: libs/ui/animation/KisAnimationRender.cpp:155
 #, fuzzy, kde-format
 msgid "Failed to render animation frames! Output files are incomplete."
 msgstr "नयाँ तह सिर्जना गर्नुहोस्"
@@ -25673,7 +25673,7 @@ msgstr ""
 #: plugins/filters/colorsfilters/wdg_hsv_adjustment.ui:337
 #: plugins/filters/colorsfilters/wdg_perchannel.ui:346
 #: plugins/tools/basictools/wdgmultihandtool.ui:192
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:141
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:142
 #, fuzzy, kde-format
 msgid "Reset"
 msgstr "पुन: चयन गर्नुहोस्"
@@ -26659,7 +26659,7 @@ msgstr "संस्करण"
 msgid "None"
 msgstr "कुनै पनि होइन"
 
-#: libs/ui/canvas/kis_canvas2.cpp:1535
+#: libs/ui/canvas/kis_canvas2.cpp:1540
 #, kde-format
 msgid ""
 "WARNING: HDR mode was activated on surface working in 8-bit mode!\n"
@@ -26751,13 +26751,13 @@ msgid "Edit Guides"
 msgstr "ग्रिड लुकाउनुहोस्"
 
 #: libs/ui/canvas/kis_guides_manager.cpp:543
-#: libs/ui/canvas/kis_mirror_axis.cpp:325
+#: libs/ui/canvas/kis_mirror_axis.cpp:331
 #, fuzzy, kde-format
 msgid "Y: %1 px"
 msgstr "चौडाइ:"
 
 #: libs/ui/canvas/kis_guides_manager.cpp:548
-#: libs/ui/canvas/kis_mirror_axis.cpp:309
+#: libs/ui/canvas/kis_mirror_axis.cpp:315
 #, fuzzy, kde-format
 msgid "X: %1 px"
 msgstr "चौडाइ:"
@@ -33972,7 +33972,7 @@ msgid "Color Sampler"
 msgstr "उस्तै चयन"
 
 #: libs/ui/input/KisTouchGestureAction.cpp:29
-#: libs/ui/kis_selection_actions_panel.cpp:76
+#: libs/ui/kis_selection_actions_panel.cpp:79
 #, fuzzy, kde-format
 msgid "Deselect"
 msgstr "चयन हटाउनुहोस्"
@@ -34833,34 +34833,34 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonSelectAll)
-#: libs/ui/kis_selection_actions_panel.cpp:74
+#: libs/ui/kis_selection_actions_panel.cpp:77
 #: plugins/dockers/recorder/recorder_snapshots_manager.cpp:195
 #: plugins/dockers/recorder/recorder_snapshots_manager.ui:205
 #, fuzzy, kde-format
 msgid "Select All"
 msgstr "सबै चयन गर्नुहोस्"
 
-#: libs/ui/kis_selection_actions_panel.cpp:75
+#: libs/ui/kis_selection_actions_panel.cpp:78
 #, fuzzy, kde-format
 msgid "Invert Selection"
 msgstr "तह चयननुहोस्"
 
-#: libs/ui/kis_selection_actions_panel.cpp:77
+#: libs/ui/kis_selection_actions_panel.cpp:80
 #, fuzzy, kde-format
 msgid "Fill Selection with Color"
 msgstr "चयन मोड:"
 
-#: libs/ui/kis_selection_actions_panel.cpp:78
+#: libs/ui/kis_selection_actions_panel.cpp:81
 #, fuzzy, kde-format
 msgid "Clear Selection"
 msgstr "चयन"
 
-#: libs/ui/kis_selection_actions_panel.cpp:79
+#: libs/ui/kis_selection_actions_panel.cpp:82
 #, fuzzy, kde-format
 msgid "Copy To New Layer"
 msgstr "नयाँ समूह तह"
 
-#: libs/ui/kis_selection_actions_panel.cpp:80
+#: libs/ui/kis_selection_actions_panel.cpp:83
 #, fuzzy, kde-format
 msgid "Crop to Selection"
 msgstr "चयन बढाउनुहोस्"
@@ -37688,7 +37688,7 @@ msgstr ""
 msgid "OpenColorIO is disabled: image color space is not supported"
 msgstr ""
 
-#: libs/ui/opengl/KisOpenGLCanvasRenderer.cpp:335
+#: libs/ui/opengl/KisOpenGLCanvasRenderer.cpp:336
 #, kde-format
 msgid ""
 "Krita could not initialize the OpenGL canvas:\n"
@@ -37714,7 +37714,7 @@ msgstr "पूरा चयन भर्नुहोस्"
 #. i18n: ectx: attribute (title), widget (QWidget, tabTransform)
 #: libs/ui/tool/kis_selection_tool_helper.cpp:386
 #: plugins/generators/pattern/wdgpatternoptions.ui:51
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:2268
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:2271
 #: plugins/tools/defaulttool/referenceimagestool/ToolReferenceImages.cpp:338
 #, fuzzy, kde-format
 msgid "Transform"
@@ -37745,7 +37745,7 @@ msgstr ""
 #: plugins/tools/basictools/kis_tool_path.cc:91
 #: plugins/tools/basictools/kis_tool_pencil.cc:64
 #: plugins/tools/tool_enclose_and_fill/subtools/KisPathEnclosingProducer.cpp:130
-#: plugins/tools/tool_enclose_and_fill/subtools/KisToolBasicBrushBase.cpp:71
+#: plugins/tools/tool_enclose_and_fill/subtools/KisToolBasicBrushBase.cpp:75
 #, kde-format
 msgid "The MyPaint Brush Engine is not available for this colorspace"
 msgstr ""
@@ -37753,7 +37753,7 @@ msgstr ""
 #: libs/ui/tool/kis_tool_polyline_base.cpp:116
 #: libs/ui/tool/kis_tool_rectangle_base.cpp:158
 #: libs/ui/tool/KisToolOutlineBase.cpp:163
-#: plugins/tools/tool_enclose_and_fill/subtools/KisToolBasicBrushBase.cpp:65
+#: plugins/tools/tool_enclose_and_fill/subtools/KisToolBasicBrushBase.cpp:69
 #, kde-format
 msgid ""
 "This tool cannot paint on clone layers.  Please select a paint or vector "
@@ -37799,7 +37799,7 @@ msgstr ""
 msgid "Group not editable."
 msgstr "तह साइज"
 
-#: libs/ui/tool/KisAsyncColorSamplerHelper.cpp:581
+#: libs/ui/tool/KisAsyncColorSamplerHelper.cpp:586
 #, kde-format
 msgid "Color sampler does not work on this layer."
 msgstr ""
@@ -39856,72 +39856,72 @@ msgstr "मान"
 msgid "Smoothing:"
 msgstr "महीन"
 
-#: libs/ui/widgets/KoStrokeConfigWidget.cpp:90
+#: libs/ui/widgets/KoStrokeConfigWidget.cpp:93
 #, kde-format
 msgid "Butt cap"
 msgstr "बट क्याप"
 
-#: libs/ui/widgets/KoStrokeConfigWidget.cpp:97
+#: libs/ui/widgets/KoStrokeConfigWidget.cpp:100
 #, kde-format
 msgid "Round cap"
 msgstr "राउन्ड क्याप"
 
-#: libs/ui/widgets/KoStrokeConfigWidget.cpp:104
+#: libs/ui/widgets/KoStrokeConfigWidget.cpp:107
 #, fuzzy, kde-format
 msgid "Square cap"
 msgstr "वर्ग गोलिचिन्ह"
 
-#: libs/ui/widgets/KoStrokeConfigWidget.cpp:115
+#: libs/ui/widgets/KoStrokeConfigWidget.cpp:118
 #, fuzzy, kde-format
 msgid "Miter join"
 msgstr "बिन्दुहरु गाभ्नुहोस्"
 
-#: libs/ui/widgets/KoStrokeConfigWidget.cpp:122
+#: libs/ui/widgets/KoStrokeConfigWidget.cpp:125
 #, kde-format
 msgid "Round join"
 msgstr "गोलो जडान"
 
-#: libs/ui/widgets/KoStrokeConfigWidget.cpp:129
+#: libs/ui/widgets/KoStrokeConfigWidget.cpp:132
 #, fuzzy, kde-format
 msgid "Bevel join"
 msgstr "बिन्दु हटाउनुहोस्"
 
-#: libs/ui/widgets/KoStrokeConfigWidget.cpp:139
+#: libs/ui/widgets/KoStrokeConfigWidget.cpp:142
 #, fuzzy, kde-format
 msgid "Miter limit"
 msgstr "प्रतिकूल पङ्क्तिबद्धता:"
 
-#: libs/ui/widgets/KoStrokeConfigWidget.cpp:235
+#: libs/ui/widgets/KoStrokeConfigWidget.cpp:238
 #, kde-format
 msgid "Set line width of actual selection"
 msgstr "खास चयनको रेखा चौडाइ सेट गर्नुहोस्"
 
 #. i18n: ectx: property (text), widget (QLabel, strokeStyleLabel)
-#: libs/ui/widgets/KoStrokeConfigWidget.cpp:246
+#: libs/ui/widgets/KoStrokeConfigWidget.cpp:249
 #: libs/ui/widgets/KoStrokeConfigWidget.ui:81
 #, fuzzy, kde-format
 msgid "Line Style:"
 msgstr "शैली"
 
-#: libs/ui/widgets/KoStrokeConfigWidget.cpp:249
+#: libs/ui/widgets/KoStrokeConfigWidget.cpp:252
 #, fuzzy, kde-format
 msgctxt "@info:tooltip"
 msgid "Line style"
 msgstr "शैली"
 
-#: libs/ui/widgets/KoStrokeConfigWidget.cpp:260
+#: libs/ui/widgets/KoStrokeConfigWidget.cpp:263
 #, fuzzy, kde-format
 msgctxt "@info:tooltip"
 msgid "Start marker"
 msgstr "किनारा सेट गर्नुहोस्।"
 
-#: libs/ui/widgets/KoStrokeConfigWidget.cpp:267
+#: libs/ui/widgets/KoStrokeConfigWidget.cpp:270
 #, fuzzy, kde-format
 msgctxt "@info:tooltip"
 msgid "Node marker"
 msgstr "किनारा सेट गर्नुहोस्।"
 
-#: libs/ui/widgets/KoStrokeConfigWidget.cpp:274
+#: libs/ui/widgets/KoStrokeConfigWidget.cpp:277
 #, fuzzy, kde-format
 msgctxt "@info:tooltip"
 msgid "End marker"
@@ -41556,12 +41556,12 @@ msgstr "गाउसियन:"
 msgid "Concentric Ellipse"
 msgstr "सबै चयन गर्नुहोस्"
 
-#: plugins/assistants/Assistants/CurvilinearPerspectiveAssistant.cc:28
+#: plugins/assistants/Assistants/CurvilinearPerspectiveAssistant.cc:29
 #, fuzzy, kde-format
 msgid "Curvilinear Perspective assistant"
 msgstr "दृश्य ग्रिड"
 
-#: plugins/assistants/Assistants/CurvilinearPerspectiveAssistant.cc:261
+#: plugins/assistants/Assistants/CurvilinearPerspectiveAssistant.cc:265
 #, fuzzy, kde-format
 #| msgid "Perspective Grid"
 msgid "Curvilinear Perspective"
@@ -41622,40 +41622,40 @@ msgstr "गाउसियन:"
 msgid "Infinite Ruler"
 msgstr "गाउसियन:"
 
-#: plugins/assistants/Assistants/kis_assistant_tool.cc:1437
+#: plugins/assistants/Assistants/kis_assistant_tool.cc:1438
 #, fuzzy, kde-format
 msgid "Select an Assistant"
 msgstr "गाउसियन:"
 
-#: plugins/assistants/Assistants/kis_assistant_tool.cc:1585
+#: plugins/assistants/Assistants/kis_assistant_tool.cc:1586
 #, kde-format
 msgid "Errors were encountered. Not all assistants were successfully loaded."
 msgstr ""
 
-#: plugins/assistants/Assistants/kis_assistant_tool.cc:1673
+#: plugins/assistants/Assistants/kis_assistant_tool.cc:1674
 #, fuzzy, kde-format
 msgid "Save Assistant"
 msgstr "गाउसियन:"
 
-#: plugins/assistants/Assistants/kis_assistant_tool.cc:1768
-#: plugins/assistants/Assistants/kis_assistant_tool.cc:1774
+#: plugins/assistants/Assistants/kis_assistant_tool.cc:1769
+#: plugins/assistants/Assistants/kis_assistant_tool.cc:1775
 #, kde-format
 msgid "Opacity: "
 msgstr "अस्पष्टता: "
 
-#: plugins/assistants/Assistants/kis_assistant_tool.cc:1781
-#: plugins/assistants/Assistants/kis_assistant_tool.cc:1785
+#: plugins/assistants/Assistants/kis_assistant_tool.cc:1782
+#: plugins/assistants/Assistants/kis_assistant_tool.cc:1786
 #, fuzzy, kde-format
 msgid "Density: "
 msgstr "वर्णन:"
 
-#: plugins/assistants/Assistants/kis_assistant_tool.cc:1790
+#: plugins/assistants/Assistants/kis_assistant_tool.cc:1791
 #, fuzzy, kde-format
 #| msgid "Subdivision:"
 msgid "Subdivisions: "
 msgstr "उपशाखा:"
 
-#: plugins/assistants/Assistants/kis_assistant_tool.cc:1794
+#: plugins/assistants/Assistants/kis_assistant_tool.cc:1795
 #, fuzzy, kde-format
 #| msgid "Subdivision:"
 msgid "Minor Subdivisions: "
@@ -41756,7 +41756,7 @@ msgstr "दृश्य ग्रिड"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, perspectiveTransformButton)
 #. i18n: ectx: property (text), widget (QToolButton, perspectiveTransformButton)
-#: plugins/assistants/Assistants/PerspectiveAssistant.cc:364
+#: plugins/assistants/Assistants/PerspectiveAssistant.cc:365
 #: plugins/tools/tool_transform2/wdg_tool_transform.ui:164
 #: plugins/tools/tool_transform2/wdg_tool_transform.ui:167
 #, fuzzy, kde-format
@@ -41768,7 +41768,7 @@ msgstr "दृश्य ग्रिड"
 msgid "Perspective Ellipse assistant"
 msgstr "दृश्य ग्रिड"
 
-#: plugins/assistants/Assistants/PerspectiveEllipseAssistant.cc:631
+#: plugins/assistants/Assistants/PerspectiveEllipseAssistant.cc:632
 #, fuzzy, kde-format
 #| msgid "Perspective grid"
 msgid "Perspective Ellipse"
@@ -41784,23 +41784,23 @@ msgstr "गाउसियन:"
 msgid "Ruler"
 msgstr "नियमित"
 
-#: plugins/assistants/Assistants/SplineAssistant.cc:75
+#: plugins/assistants/Assistants/SplineAssistant.cc:76
 #, fuzzy, kde-format
 msgid "Spline assistant"
 msgstr "गाउसियन:"
 
-#: plugins/assistants/Assistants/SplineAssistant.cc:350
+#: plugins/assistants/Assistants/SplineAssistant.cc:351
 #, fuzzy, kde-format
 msgctxt "A type of drawing assistants"
 msgid "Spline"
 msgstr "बिस्प्लाइन"
 
-#: plugins/assistants/Assistants/TwoPointAssistant.cc:27
+#: plugins/assistants/Assistants/TwoPointAssistant.cc:28
 #, fuzzy, kde-format
 msgid "Two point assistant"
 msgstr "गाउसियन:"
 
-#: plugins/assistants/Assistants/TwoPointAssistant.cc:528
+#: plugins/assistants/Assistants/TwoPointAssistant.cc:532
 #, fuzzy, kde-format
 msgid "2 Point Perspective"
 msgstr "दृश्य ग्रिड"
@@ -46421,7 +46421,7 @@ msgstr "हटाउनुहोस्"
 
 #: plugins/dockers/textproperties/qml/OpenTypeFeatureSettings.qml:237
 #: plugins/tools/svgtexttool/glyphpalette/GlyphPalette.qml:127
-#: qmlmodules/components/qml/ResourceView.qml:315
+#: qmlmodules/components/qml/ResourceView.qml:322
 #, fuzzy, kde-format
 msgctxt "@info:placeholder"
 msgid "Search..."
@@ -65451,167 +65451,167 @@ msgstr "इन्ट्रिगल चरण:"
 msgid "Interval Y:"
 msgstr "इन्ट्रिगल चरण:"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:586
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:589
 #, fuzzy
 #| msgid "Add Group"
 msgctxt "(qtundo-format)"
 msgid "Add shapes to text flow."
 msgstr "समूह थप्नुहोस्"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:628
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:631
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Put Text On Path"
 msgstr "पाठ"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:688
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:691
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Subtract shapes from text flow."
 msgstr "स्मियरी ब्रुस"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:721
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:724
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Remove shapes from text flow."
 msgstr "चयन छैन"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:742
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:745
 #, fuzzy
 #| msgid "Rotate CW"
 msgctxt "(qtundo-format)"
 msgid "Toggle Flow Shape Type"
 msgstr "घडीको दिशामा घुमाउनुहोस्"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:768
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:771
 msgctxt "(qtundo-format)"
 msgid "Set Flow Shape as First"
 msgstr ""
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:770
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:773
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Decrease Flow Shape Index"
 msgstr "इन्डेन्ट घटाउनुहोस्"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:772
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:775
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Increase Flow Shape Index"
 msgstr "इन्डेन्ट बढाउनुहोस्"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:774
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:777
 msgctxt "(qtundo-format)"
 msgid "Set Flow Shape as Last"
 msgstr ""
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1045
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1048
 #, kde-format
 msgid ""
 "Left click rotates around center, right click around highlighted position."
 msgstr ""
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1048
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1051
 #, fuzzy, kde-format
 msgid "Click and drag to shear selection."
 msgstr "छविमा तह थप्न सकेन ।"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1053
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1056
 #, fuzzy, kde-format
 msgid "Click and drag to resize selection."
 msgstr "हालको तहको साइजमा छवि रिसाइज गर्नुहोस्"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1088
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1091
 #, fuzzy, kde-format
 msgid "Click and drag to move selection."
 msgstr "छविमा तह थप्न सकेन ।"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1092
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1095
 #, fuzzy, kde-format
 msgid ""
 "Click and drag to resize selection. Middle click to set highlighted position."
 msgstr "हालको तहको साइजमा छवि रिसाइज गर्नुहोस्"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1168
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1171
 #, kde-format
 msgid "This tool only works on vector layers. You probably want the move tool."
 msgstr ""
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1670
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1673
 #, fuzzy
 #| msgid "Rotate Image 1&80"
 msgctxt "(qtundo-format)"
 msgid "Rotate Object 90° CW"
 msgstr "छवि १८० डिग्रीमा घुमाउनुहोस्"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1674
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1677
 #, fuzzy
 #| msgid "Rotate Image CCW"
 msgctxt "(qtundo-format)"
 msgid "Rotate Object 90° CCW"
 msgstr "छवि घडीको विपरित दिशामा घुमाउनुहोस्"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1678
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1681
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Rotate Object 180°"
 msgstr "तह घुमाउनुहोस्"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1682
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1685
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Mirror Object Horizontally"
 msgstr "मास्क तेर्सो रुपमा दर्पण पार्नुहोस्"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1686
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1689
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Mirror Object Vertically"
 msgstr "ठाडो रुपमा मास्क देखाउनुहोस्"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1690
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1693
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Reset Object Transformations"
 msgstr "दृश्य रूपान्तरण"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1764
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1767
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Unite Shapes"
 msgstr "आकारलाई छुट्याउनुहोस्"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1778
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1781
 #, fuzzy
 #| msgid "Intersect"
 msgctxt "(qtundo-format)"
 msgid "Intersect Shapes"
 msgstr "प्रतिच्छेद गर्नुहोस्नुहोस्"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1788
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1791
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Subtract Shapes"
 msgstr "स्मियरी ब्रुस"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1833
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1836
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Split Shapes"
 msgstr "स्मियरी ब्रुस"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:2265
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:2268
 #, fuzzy, kde-format
 #| msgid "Vector Selection"
 msgid "Vector Shape Actions"
 msgstr "भेक्टर चयनन"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:2284
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:2287
 #, fuzzy, kde-format
 msgid "Logical Operations"
 msgstr "दोहोर्याउनुहोस्:"
 
-#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:2314
+#: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:2317
 #, fuzzy, kde-format
 #| msgid "Text"
 msgid "Text"
@@ -65727,18 +65727,18 @@ msgstr ""
 msgid "Press CTRL to resize from center."
 msgstr ""
 
-#: plugins/tools/defaulttool/defaulttool/ShapeRotateStrategy.cpp:45
+#: plugins/tools/defaulttool/defaulttool/ShapeRotateStrategy.cpp:46
 #, kde-format
 msgid "Press ALT to rotate in 45 degree steps."
 msgstr ""
 
-#: plugins/tools/defaulttool/defaulttool/ShapeRotateStrategy.cpp:106
+#: plugins/tools/defaulttool/defaulttool/ShapeRotateStrategy.cpp:110
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Rotate"
 msgstr "घुमाउनुहोस्"
 
-#: plugins/tools/defaulttool/defaulttool/ShapeShearStrategy.cpp:184
+#: plugins/tools/defaulttool/defaulttool/ShapeShearStrategy.cpp:185
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Shear"
@@ -66358,59 +66358,59 @@ msgctxt "action"
 msgid "Magnetic Curve Selection Tool"
 msgstr "चुम्बकिय रूपरेखा चयन"
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:51
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:52
 #, fuzzy, kde-format
 #| msgid "Magnetic Outline Selection"
 msgid "Magnetic Selection"
 msgstr "चुम्बकिय रूपरेखा चयन"
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:488
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:505
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:489
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:506
 #, fuzzy
 #| msgid "Magnetic Outline Selection"
 msgctxt "(qtundo-format)"
 msgid "Magnetic Selection"
 msgstr "चुम्बकिय रूपरेखा चयन"
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:734
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:736
 #, fuzzy, kde-format
 msgctxt "Filter radius in Magnetic Select Tool settings"
 msgid "Filter Radius: "
 msgstr "हिलिङ रेडियस"
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:741
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:743
 #, fuzzy, kde-format
 #| msgid "Threshold: "
 msgctxt "Threshold in Magnetic Selection's Tool options"
 msgid "Threshold: "
 msgstr "थ्रेसहोल्ड: "
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:749
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:751
 #, fuzzy, kde-format
 #| msgid "Vertical:"
 msgctxt "Search Radius in Magnetic Selection's Tool options"
 msgid "Search Radius: "
 msgstr "ठाडो:"
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:758
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:760
 #, fuzzy, kde-format
 msgctxt "Anchor Gap in Magnetic Selection's Tool options"
 msgid "Anchor Gap: "
 msgstr "विकल्प"
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:762
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:764
 #, fuzzy, kde-format
 msgctxt "Complete the selection"
 msgid "Complete"
 msgstr "गुण:"
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:767
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:769
 #, fuzzy, kde-format
 msgctxt "Discard the selection"
 msgid "Discard"
 msgstr "अल्फा च्यानल छोड्नुहोस्"
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:773
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:775
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -66418,37 +66418,37 @@ msgid ""
 "calculate"
 msgstr ""
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:777
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:779
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Threshold for determining the minimum intensity of the edges"
 msgstr ""
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:779
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:781
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Extra area to be searched"
 msgstr ""
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:781
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:783
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Gap between 2 anchors in interactive mode"
 msgstr ""
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:783
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:785
 #, fuzzy, kde-format
 msgctxt "@info:tooltip"
 msgid "Complete Selection"
 msgstr "चयन बढाउनुहोस्"
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:785
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:787
 #, fuzzy, kde-format
 msgctxt "@info:tooltip"
 msgid "Discard Selection"
 msgstr "चयन प्रर्दशन गर्नुहोस्"
 
-#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:792
+#: plugins/tools/selectiontools/KisToolSelectMagnetic.cc:794
 #, fuzzy, kde-format
 msgctxt "The 'path options' section label in magnetic selection's tool options"
 msgid "Path options"
@@ -66596,77 +66596,77 @@ msgctxt "(qtundo-format)"
 msgid "Adjust character transforms on text."
 msgstr ""
 
-#: plugins/tools/svgtexttool/SvgTextCursor.cpp:472
+#: plugins/tools/svgtexttool/SvgTextCursor.cpp:473
 #, fuzzy, kde-format
 msgctxt "Type setting mode line name"
 msgid "Text Top"
 msgstr "रेखा"
 
-#: plugins/tools/svgtexttool/SvgTextCursor.cpp:474
-#: plugins/tools/svgtexttool/SvgTextCursor.cpp:480
+#: plugins/tools/svgtexttool/SvgTextCursor.cpp:475
+#: plugins/tools/svgtexttool/SvgTextCursor.cpp:481
 #, fuzzy, kde-format
 msgctxt "Type setting mode line name"
 msgid "Font Size"
 msgstr "मुद्रण"
 
-#: plugins/tools/svgtexttool/SvgTextCursor.cpp:478
+#: plugins/tools/svgtexttool/SvgTextCursor.cpp:479
 #, fuzzy, kde-format
 #| msgid "To Bottom"
 msgctxt "Type setting mode line name"
 msgid "Text Bottom"
 msgstr "तल तिर"
 
-#: plugins/tools/svgtexttool/SvgTextCursor.cpp:483
+#: plugins/tools/svgtexttool/SvgTextCursor.cpp:484
 #, fuzzy, kde-format
 msgctxt "Type setting mode line name"
 msgid "Alphabetic"
 msgstr "गोलाकार"
 
-#: plugins/tools/svgtexttool/SvgTextCursor.cpp:485
+#: plugins/tools/svgtexttool/SvgTextCursor.cpp:486
 #, fuzzy, kde-format
 msgctxt "Type setting mode line name"
 msgid "Ideographic"
 msgstr "विच्छेदन घुसाउनुहोस्"
 
-#: plugins/tools/svgtexttool/SvgTextCursor.cpp:487
+#: plugins/tools/svgtexttool/SvgTextCursor.cpp:488
 #, fuzzy, kde-format
 #| msgid "Angular"
 msgctxt "Type setting mode line name"
 msgid "Hanging"
 msgstr "कोणिय"
 
-#: plugins/tools/svgtexttool/SvgTextCursor.cpp:489
+#: plugins/tools/svgtexttool/SvgTextCursor.cpp:490
 #, fuzzy, kde-format
 msgctxt "Type setting mode line name"
 msgid "Middle"
 msgstr "मध्यम"
 
-#: plugins/tools/svgtexttool/SvgTextCursor.cpp:491
+#: plugins/tools/svgtexttool/SvgTextCursor.cpp:492
 #, fuzzy, kde-format
 msgctxt "Type setting mode line name"
 msgid "Mathematical"
 msgstr "दोहोर्याउनुहोस्:"
 
-#: plugins/tools/svgtexttool/SvgTextCursor.cpp:493
+#: plugins/tools/svgtexttool/SvgTextCursor.cpp:494
 #, fuzzy, kde-format
 msgctxt "Type setting mode line name"
 msgid "Central"
 msgstr "केन्द्र:"
 
-#: plugins/tools/svgtexttool/SvgTextCursor.cpp:495
+#: plugins/tools/svgtexttool/SvgTextCursor.cpp:496
 #, fuzzy, kde-format
 msgctxt "Type setting mode line name"
 msgid "Line Height"
 msgstr "पिक्सेल उचाइ"
 
-#: plugins/tools/svgtexttool/SvgTextCursor.cpp:498
+#: plugins/tools/svgtexttool/SvgTextCursor.cpp:499
 #, fuzzy, kde-format
 #| msgid "&Add to current selection"
 msgctxt "Type setting mode line name"
 msgid "Current Baseline"
 msgstr "हालको चयनमा थप्नुहोस्"
 
-#: plugins/tools/svgtexttool/SvgTextCursor.cpp:500
+#: plugins/tools/svgtexttool/SvgTextCursor.cpp:501
 #, fuzzy, kde-format
 msgctxt "Type setting mode line name"
 msgid "Baseline Shift"
@@ -67183,7 +67183,7 @@ msgctxt "action"
 msgid "Remove all set text properties from the selection."
 msgstr "खास चयनको रेखा चौडाइ सेट गर्नुहोस्"
 
-#: plugins/tools/svgtexttool/SvgTextTool.cpp:313
+#: plugins/tools/svgtexttool/SvgTextTool.cpp:315
 #, fuzzy, kde-format
 msgctxt "@title:window"
 msgid "Krita - Edit Text"
@@ -67425,21 +67425,21 @@ msgid "Editor background:"
 msgstr "पृष्ठभूमि"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgToolCrop)
-#: plugins/tools/tool_crop/kis_tool_crop.cc:111
+#: plugins/tools/tool_crop/kis_tool_crop.cc:112
 #: plugins/tools/tool_crop/wdg_tool_crop.ui:18
 #, kde-format
 msgid "Crop"
 msgstr "काँटछाँट गर्नुहोस्"
 
 #. i18n: ectx: property (text), widget (QCheckBox, boolCenter)
-#: plugins/tools/tool_crop/kis_tool_crop.cc:113
+#: plugins/tools/tool_crop/kis_tool_crop.cc:114
 #: plugins/tools/tool_crop/wdg_tool_crop.ui:69
 #, fuzzy, kde-format
 msgid "Center"
 msgstr "केन्द्र:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, boolGrow)
-#: plugins/tools/tool_crop/kis_tool_crop.cc:116
+#: plugins/tools/tool_crop/kis_tool_crop.cc:117
 #: plugins/tools/tool_crop/wdg_tool_crop.ui:161
 #, fuzzy, kde-format
 #| msgid "Grow"
@@ -67447,42 +67447,42 @@ msgctxt "Grow as in crop tool"
 msgid "Grow"
 msgstr "बढाउनुहोस्"
 
-#: plugins/tools/tool_crop/kis_tool_crop.cc:119
+#: plugins/tools/tool_crop/kis_tool_crop.cc:120
 #, fuzzy, kde-format
 msgid "Lock Width"
 msgstr "पिक्सेल चौडाइ"
 
-#: plugins/tools/tool_crop/kis_tool_crop.cc:122
+#: plugins/tools/tool_crop/kis_tool_crop.cc:123
 #, fuzzy, kde-format
 msgid "Lock Height"
 msgstr "दिनको प्रकाश"
 
-#: plugins/tools/tool_crop/kis_tool_crop.cc:125
+#: plugins/tools/tool_crop/kis_tool_crop.cc:126
 #, fuzzy, kde-format
 #| msgid "Rotation"
 msgid "Lock Ratio"
 msgstr "परिक्रमण"
 
-#: plugins/tools/tool_crop/kis_tool_crop.cc:250
+#: plugins/tools/tool_crop/kis_tool_crop.cc:257
 #, fuzzy, kde-format
 msgid "Crop Tool Actions"
 msgstr "चयन बढाउनुहोस्"
 
-#: plugins/tools/tool_crop/kis_tool_crop.cc:726
+#: plugins/tools/tool_crop/kis_tool_crop.cc:747
 #, kde-format
 msgid ""
 "X: %1\n"
 "Y: %2"
 msgstr ""
 
-#: plugins/tools/tool_crop/kis_tool_crop.cc:731
+#: plugins/tools/tool_crop/kis_tool_crop.cc:752
 #, fuzzy, kde-format
 msgid ""
 "Width: %1\n"
 "Height: %2"
 msgstr "पिक्सेल उचाइ"
 
-#: plugins/tools/tool_crop/kis_tool_crop.h:215
+#: plugins/tools/tool_crop/kis_tool_crop.h:221
 #, fuzzy, kde-format
 msgid "Crop Tool"
 msgstr "छवि काँटछाँट गर्नुहोस्"
@@ -67867,8 +67867,8 @@ msgstr "पृष्ठभूमि रङ"
 msgid "Enclose and Fill Tool"
 msgstr "सक्रिय तह"
 
-#: plugins/tools/tool_knife/CutThroughShapeStrategy.cpp:205
-#: plugins/tools/tool_knife/RemoveGutterStrategy.cpp:218
+#: plugins/tools/tool_knife/CutThroughShapeStrategy.cpp:206
+#: plugins/tools/tool_knife/RemoveGutterStrategy.cpp:219
 msgctxt "(qtundo-format)"
 msgid "Knife tool: cut through shapes"
 msgstr ""
@@ -68044,7 +68044,7 @@ msgstr "विकर्ण अलंकृत गर्नुहोस्"
 msgid "Diagonal type angle threshold:"
 msgstr "एन्टि-एलाइज थ्रेसहोल्ड:"
 
-#: plugins/tools/tool_knife/RemoveGutterStrategy.cpp:280
+#: plugins/tools/tool_knife/RemoveGutterStrategy.cpp:281
 msgctxt "(qtundo-format)"
 msgid "Knife tool: remove a gutter"
 msgstr ""
@@ -68200,12 +68200,12 @@ msgctxt "action"
 msgid "Polyline Tool. Shift-mouseclick ends the polyline."
 msgstr "संयुक्तरेखा कोर्नुहोस् । शिफ्ट-माउस क्लिकले संयुक्तरेखा  अन्त्य गर्दछ ।"
 
-#: plugins/tools/tool_smart_patch/kis_tool_smart_patch.cpp:134
+#: plugins/tools/tool_smart_patch/kis_tool_smart_patch.cpp:135
 #, fuzzy, kde-format
 msgid "Select a paint layer to use this tool"
 msgstr "आयातकार क्षेत्र चयन गर्नुहोस्"
 
-#: plugins/tools/tool_smart_patch/kis_tool_smart_patch.cpp:173
+#: plugins/tools/tool_smart_patch/kis_tool_smart_patch.cpp:174
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Smart Patch"
@@ -68249,112 +68249,112 @@ msgid ""
 "Library support, or use options widget for editing scale values manually."
 msgstr ""
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:123
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:124
 #, fuzzy, kde-format
 msgctxt "Warp Transform Tab Label"
 msgid "Warp"
 msgstr "आंशिक:"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:124
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:125
 #, kde-format
 msgctxt "Liquify Transform Tab Label"
 msgid "Liquify"
 msgstr ""
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:125
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:126
 #, fuzzy, kde-format
 #| msgid "Brush size"
 msgctxt "Mesh Transform Tab Label"
 msgid "Mesh"
 msgstr "ब्रुस साइज"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:126
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:127
 #, fuzzy, kde-format
 #| msgid "Palette"
 msgctxt "Cage Transform Tab Label"
 msgid "Cage"
 msgstr "रङदानी"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:127
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:128
 #, fuzzy, kde-format
 msgctxt "Free Transform Tab Label"
 msgid "Free"
 msgstr "चयन गर्नुहोस्"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:128
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:129
 #, fuzzy, kde-format
 msgctxt "Perspective Transform Tab Label"
 msgid "Perspective"
 msgstr "दृश्य ग्रिड"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:131
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:132
 #, fuzzy, kde-format
 msgid "Mirror Horizontal"
 msgstr "मास्क तेर्सो रुपमा दर्पण पार्नुहोस्"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:132
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:133
 #, fuzzy, kde-format
 msgid "Mirror Vertical"
 msgstr "ठाडो रुपमा मास्क देखाउनुहोस्"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:133
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:134
 #, fuzzy, kde-format
 #| msgid "Rotate Image 1&80"
 msgid "Rotate 90 degrees Clockwise"
 msgstr "छवि १८० डिग्रीमा घुमाउनुहोस्"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:134
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:135
 #, fuzzy, kde-format
 #| msgid "Rotate Image 1&80"
 msgid "Rotate 90 degrees CounterClockwise"
 msgstr "छवि १८० डिग्रीमा घुमाउनुहोस्"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:136
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:137
 #, fuzzy, kde-format
 msgid "Keep Aspect Ratio"
 msgstr "आकार अनुपात राख्नुहोस्।"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:140
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:141
 #, kde-format
 msgid "Apply"
 msgstr "लागू गर्नुहोस्"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:426
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:427
 #, fuzzy, kde-format
 msgid "Transform Tool Actions"
 msgstr "रूपान्तरण गर्नुहोस्"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:942
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:941
 #, fuzzy, kde-format
 msgctxt "floating message in transformation tool"
 msgid "Cannot transform locked layers"
 msgstr "रूपान्तरण गर्नुहोस्"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:948
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:947
 #, fuzzy, kde-format
 msgctxt "floating message in transformation tool"
 msgid "Cannot transform hidden layers"
 msgstr "रूपान्तरण गर्नुहोस्"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:954
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:953
 #, fuzzy, kde-format
 msgctxt "floating message in transformation tool"
 msgid "Cannot use transform tool on this set of layers"
 msgstr "रूपान्तरण गर्नुहोस्"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:970
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:969
 #, fuzzy, kde-format
 msgctxt "floating message in transformation tool"
 msgid "Layer type cannot use the transform tool"
 msgstr "सक्रिय तह"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:977
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:976
 #, fuzzy, kde-format
 msgctxt "floating message in transformation tool"
 msgid "Layer type cannot use the transform tool. Use transform mask instead."
 msgstr "सक्रिय तह"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:996
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:995
 #, kde-format
 msgctxt "floating message in transformation tool"
 msgid ""
@@ -68362,20 +68362,20 @@ msgid ""
 "transformation."
 msgstr ""
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:1009
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:1008
 #, kde-format
 msgctxt "floating message in transformation tool"
 msgid "Selections are not used when editing transform masks "
 msgstr ""
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:1096
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:1135
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:1095
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:1134
 #, fuzzy, kde-format
 msgctxt "floating message in transformation tool"
 msgid "Cannot transform empty layer "
 msgstr "रूपान्तरण गर्नुहोस्"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:1122
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:1121
 #, kde-format
 msgctxt "floating message in transformation tool"
 msgid ""
@@ -69213,50 +69213,50 @@ msgid ""
 "work correctly."
 msgstr ""
 
-#: qmlmodules/components/qml/ResourceView.qml:142
+#: qmlmodules/components/qml/ResourceView.qml:149
 #, fuzzy, kde-format
 msgctxt "@label:button"
 msgid "Tag"
 msgstr "ट्याब"
 
-#: qmlmodules/components/qml/ResourceView.qml:185
+#: qmlmodules/components/qml/ResourceView.qml:192
 #, fuzzy, kde-format
 msgctxt "@title:menu"
 msgid "Assign to Tag"
 msgstr "स्वत: पङ्क्तिबद्ध गर्नुहोस्"
 
-#: qmlmodules/components/qml/ResourceView.qml:210
+#: qmlmodules/components/qml/ResourceView.qml:217
 #, fuzzy, kde-format
 msgctxt "@info:placeholder"
 msgid "New Tag Name..."
 msgstr "नाम:"
 
-#: qmlmodules/components/qml/ResourceView.qml:235
+#: qmlmodules/components/qml/ResourceView.qml:242
 #, fuzzy, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove from this tag"
 msgstr "बिन्दु हटाउनुहोस्"
 
-#: qmlmodules/components/qml/ResourceView.qml:244
+#: qmlmodules/components/qml/ResourceView.qml:251
 #, fuzzy, kde-format
 msgctxt "@title:menu"
 msgid "Remove from other tag"
 msgstr "टिप्पणी हटाउनुहोस्"
 
-#: qmlmodules/components/qml/ResourceView.qml:323
+#: qmlmodules/components/qml/ResourceView.qml:330
 #, fuzzy, kde-format
 #| msgid "Fill entire selection"
 msgctxt "@option:check"
 msgid "Search in tag"
 msgstr "पूरा चयन भर्नुहोस्"
 
-#: qmlmodules/components/qml/ResourceView.qml:342
+#: qmlmodules/components/qml/ResourceView.qml:349
 #, fuzzy, kde-format
 msgctxt "@info:tooltip, %1 is resource type name"
 msgid "Import %1"
 msgstr "छवि आयात गर्नुहोस्"
 
-#: qmlmodules/components/qml/ResourceView.qml:366
+#: qmlmodules/components/qml/ResourceView.qml:373
 #, fuzzy, kde-format
 msgctxt "@info:tooltip, %1 is resource type name"
 msgid "Remove %1"

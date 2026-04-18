@@ -74,7 +74,7 @@ public:
 
     void paint(QPainter &gc) const override;
 
-    QColor getPixel(QPointF position);
+    KoColor getPixel(QPointF position);
 
     void saveXml(QDomDocument &document, QDomElement &parentElement, int id);
     bool saveImage(KoStore *store) const;

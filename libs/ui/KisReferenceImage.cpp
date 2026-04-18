@@ -337,9 +337,11 @@ void KisReferenceImage::setFilename(const QString &filename)
     d->externalFilename = filename;
 }
 
-QColor KisReferenceImage::getPixel(QPointF position)
+KoColor KisReferenceImage::getPixel(QPointF position)
 {
-    if (transparency() == 1.0) return Qt::transparent;
+    KoColor transparent;
+    transparent.setOpacity(0.0);
+    if (transparency() == 1.0) return transparent;
 
     const QSizeF shapeSize = size();
     const QTransform scale = QTransform::fromScale(d->image.width() / shapeSize.width(), d->image.height() / shapeSize.height());
@@ -351,7 +353,15 @@ QColor KisReferenceImage::getPixel(QPointF position)
         d->updateCache();
     }
 
-    return d->cachedImage.pixelColor(localPosition.toPoint());
+    const KoColorProfile *profile = KoColorSpaceRegistry::instance()->profileForQColorSpace(d->image.colorSpace());
+    const KoColorSpace *cs = KoColorSpaceRegistry::instance()->colorSpace(RGBAColorModelID.id(), Integer16BitsColorDepthID.id(), profile);
+
+
+    KoColor c(cs);
+    QColor pixel = d->cachedImage.pixelColor(localPosition.toPoint());
+    QVector<float> channels = {pixel.blueF(), pixel.greenF(), pixel.redF(), 1.0};
+    cs->fromNormalisedChannelsValue( c.data(),channels);
+    return c;
 }
 
 void KisReferenceImage::saveXml(QDomDocument &document, QDomElement &parentElement, int id)

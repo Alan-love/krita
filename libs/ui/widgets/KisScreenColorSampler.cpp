@@ -175,9 +175,9 @@ KoColor KisScreenColorSampler::grabScreenColor(const QPoint &p)
                     KisSharedPtr<KisReferenceImagesLayer> referenceImageLayer = view->document()->referenceImagesLayer();
 
                     if (referenceImageLayer && canvas->referenceImagesDecoration()->visible()) {
-                        QColor color = referenceImageLayer->getPixel(imagePoint);
-                        if (color.isValid()) {
-                            return KoColor(color, image->colorSpace());
+                        KoColor color = referenceImageLayer->getPixel(imagePoint);
+                        if (color.opacityU8() > 0) {
+                            return color.convertedTo(image->colorSpace());
                         }
                      }
                     if (image->wrapAroundModePermitted()) {

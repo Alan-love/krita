@@ -360,7 +360,8 @@ public:
 
     /**
      * @brief QColorSpaceForProfile
-     * Generate a QColorSpace for the given KoColorProfile.
+     * Generate a QColorSpace for the given KoColorProfile. Will return
+     * sRGB when the profile is null.
      * @param profile -- source profile
      * @return a QColorSpace loaded from the profile. May not be RGB!
      */

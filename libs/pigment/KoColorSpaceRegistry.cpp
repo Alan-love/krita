@@ -12,6 +12,7 @@
 #include <QReadWriteLock>
 #include <QDir>
 #include <QGlobalStatic>
+#include <QColorSpace>
 
 #include "KoPluginLoader.h"
 #include "KoGenericRegistry.h"
@@ -724,13 +725,13 @@ const KoColorProfile *KoColorSpaceRegistry::profileFor(const QVector<double> &co
     return nullptr;
 }
 
-#include <QColorSpace>
-
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
 static QMap<QColorSpace::ColorModel, QString> mapQColorSpaceModelToId {
     {QColorSpace::ColorModel::Rgb, RGBAColorModelID.id()},
     {QColorSpace::ColorModel::Cmyk, CMYKAColorModelID.id()},
     {QColorSpace::ColorModel::Gray, GrayAColorModelID.id()},
 };
+#endif
 
 static QMap<QColorSpace::Primaries, ColorPrimaries> mapQColorSpaceColorPrimaries {
     {QColorSpace::Primaries::SRgb, PRIMARIES_ITU_R_BT_709_5},
@@ -755,7 +756,19 @@ static QMap<QColorSpace::TransferFunction, TransferCharacteristics> mapQColorSpa
 
 const KoColorProfile *KoColorSpaceRegistry::profileForQColorSpace(const QColorSpace &space)
 {
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+    ColorPrimaries primaries = mapQColorSpaceColorPrimaries.value(space.primaries(), PRIMARIES_UNSPECIFIED);
+    TransferCharacteristics transfer = mapQColorSpaceColorTransfer.value(space.transferFunction(), TRC_UNSPECIFIED);
+    if (space.transferFunction() == QColorSpace::TransferFunction::Gamma || (transfer == TRC_UNSPECIFIED && primaries == PRIMARIES_UNSPECIFIED)) {
+        // load icc profile.
+        QByteArray profileData = space.iccProfile();
+        return createColorProfile(RGBAColorModelID.id(), Integer8BitsColorDepthID.id(), profileData);
+    } else {
+        return profileFor(colorants, primaries, transfer);
+    }
+#else
     // We want to test RGB before testing wether we are dealing with a LUT, because we want to funnel rec2020 pq into loading our profile.
+
     if (space.colorModel() == QColorSpace::ColorModel::Rgb) {
         if (space.transferFunction() == QColorSpace::TransferFunction::Gamma) {
             // load icc profile.
@@ -788,12 +801,14 @@ const KoColorProfile *KoColorSpaceRegistry::profileForQColorSpace(const QColorSp
         QByteArray profileData = space.iccProfile();
         return engine->addProfile(profileData);
     }
+#endif
 
     return nullptr;
 }
 
 QColorSpace KoColorSpaceRegistry::QColorSpaceForProfile(const KoColorProfile *profile) const
 {
+    if (!profile) return QColorSpace(QColorSpace::SRgb);
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
     if (profile == p2020PQProfile()) {
         return QColorSpace(QColorSpace::Bt2100Pq);

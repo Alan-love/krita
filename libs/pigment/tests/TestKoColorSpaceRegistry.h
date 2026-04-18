@@ -19,6 +19,9 @@ private Q_SLOTS:
     void testRgb8();
     void testRgb16();
     void testProfileByUniqueId();
+
+    void testQColorSpaceConversionRoundtrip_data();
+    void testQColorSpaceConversionRoundtrip();
 };
 
 #endif

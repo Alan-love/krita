@@ -129,22 +129,20 @@ void KisReferenceImagesDecoration::drawDecoration(QPainter &gc, const QRectF &/*
     // TODO: can we use partial updates here?
 
     KisSharedPtr<KisReferenceImagesLayer> layer = d->layer.toStrongRef();
+    const QColorSpace canvasSpace = KoColorSpaceRegistry::instance()->QColorSpaceForProfile(canvas->displayColorConverter()->multiSurfaceDisplayConfig().canvasProfile);
 
     if (!layer.isNull()) {
         QSizeF viewSize = view()->size();
 
         QTransform transform = converter->imageToWidgetTransform();
-        if (d->previousViewSize != viewSize || !KisAlgebra2D::fuzzyMatrixCompare(transform, d->previousTransform, 1e-4)) {
+        if (d->previousViewSize != viewSize || !KisAlgebra2D::fuzzyMatrixCompare(transform, d->previousTransform, 1e-4)
+            || d->buffer.image.colorSpace() != canvasSpace) {
             d->previousViewSize = viewSize;
             d->previousTransform = transform;
+
             d->buffer.image = QImage(QSize(1, 1), QImage::Format_ARGB32);
-            // Set this with canvas opengl colorprofile.
-            const KoColorProfile *canvasProfile = canvas->displayColorConverter()->multiSurfaceDisplayConfig().canvasProfile;
-            if (canvasProfile) {
-                d->buffer.image.setColorSpace(KoColorSpaceRegistry::instance()->QColorSpaceForProfile(canvasProfile));
-            } else {
-                d->buffer.image.setColorSpace(QColorSpace(QColorSpace::SRgb));
-            }
+            d->buffer.image.setColorSpace(canvasSpace);
+
             d->updateBufferByWidgetCoordinates(QRectF(QPointF(0,0), viewSize));
         }
 

@@ -766,6 +766,7 @@ const KoColorProfile *KoColorSpaceRegistry::profileForQColorSpace(const QColorSp
         QByteArray profileData = space.iccProfile();
         return createColorProfile(RGBAColorModelID.id(), Integer8BitsColorDepthID.id(), profileData);
     } else {
+        QVector<double> colorants;
         return profileFor(colorants, primaries, transfer);
     }
 #else

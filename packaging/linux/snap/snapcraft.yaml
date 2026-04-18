@@ -32,6 +32,15 @@ slots:
     name: org.kde.krita
     bus: session
 parts:
+  xsimd:
+    source: https://github.com/xtensor-stack/xsimd.git
+    source-tag: 14.1.0
+    plugin: cmake
+    cmake-parameters:
+      - -DCMAKE_INSTALL_PREFIX=/usr
+      - -DCMAKE_BUILD_TYPE=Release
+      - -DENABLE_TESTING=OFF
+      - -DBUILD_TESTING=OFF
   kseexpr:
     source: https://invent.kde.org/graphics/kseexpr.git
     plugin: cmake
@@ -181,6 +190,7 @@ parts:
       - eigen
       - pyqt6
       - kseexpr
+      - xsimd
     source: .
     source-type: local
     plugin: cmake
@@ -225,7 +235,6 @@ parts:
       - libxcb-util0-dev
       - libxcb1-dev
       - libxi-dev
-      - libxsimd-dev
       - libzug-dev
       - pkg-config
       - python3-sip-dev
@@ -240,6 +249,7 @@ parts:
       - libjxl-dev
       - python3-dev
       - sip-tools
+      - python3-sipbuild
     build-snaps:
       - ffmpeg-2404-sdk
       - kf6-core24-sdk/latest/beta
@@ -264,7 +274,6 @@ parts:
       - libopenjp2-7
       - libpng16-16
       - libpython3.12
-      - libquazip5-1
       - libtiff6
       - libturbojpeg
       - libunibreak5

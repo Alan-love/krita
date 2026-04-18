@@ -738,7 +738,9 @@ static QMap<QColorSpace::Primaries, ColorPrimaries> mapQColorSpaceColorPrimaries
     {QColorSpace::Primaries::AdobeRgb, PRIMARIES_ADOBE_RGB_1998},
     {QColorSpace::Primaries::DciP3D65, PRIMARIES_SMPTE_EG_432_1},
     {QColorSpace::Primaries::ProPhotoRgb, PRIMARIES_PROPHOTO},
+#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
     {QColorSpace::Primaries::Bt2020, PRIMARIES_ITU_R_BT_2020_2_AND_2100_0},
+#endif
     {QColorSpace::Primaries::Custom, PRIMARIES_UNSPECIFIED}
 };
 
@@ -746,8 +748,8 @@ static QMap<QColorSpace::TransferFunction, TransferCharacteristics> mapQColorSpa
     {QColorSpace::TransferFunction::Linear, TRC_LINEAR},
     {QColorSpace::TransferFunction::SRgb, TRC_IEC_61966_2_1},
     {QColorSpace::TransferFunction::ProPhotoRgb, TRC_PROPHOTO},
-    {QColorSpace::TransferFunction::Bt2020, TRC_ITU_R_BT_2020_2_12bit},
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
+    {QColorSpace::TransferFunction::Bt2020, TRC_ITU_R_BT_2020_2_12bit},
     {QColorSpace::TransferFunction::St2084, TRC_ITU_R_BT_2100_0_PQ},
     {QColorSpace::TransferFunction::Hlg, TRC_ITU_R_BT_2100_0_HLG},
 #endif

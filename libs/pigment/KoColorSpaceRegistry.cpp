@@ -758,16 +758,17 @@ static QMap<QColorSpace::TransferFunction, TransferCharacteristics> mapQColorSpa
 
 const KoColorProfile *KoColorSpaceRegistry::profileForQColorSpace(const QColorSpace &space)
 {
+    const KoColorProfile *profile = nullptr;
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     ColorPrimaries primaries = mapQColorSpaceColorPrimaries.value(space.primaries(), PRIMARIES_UNSPECIFIED);
     TransferCharacteristics transfer = mapQColorSpaceColorTransfer.value(space.transferFunction(), TRC_UNSPECIFIED);
     if (space.transferFunction() == QColorSpace::TransferFunction::Gamma || (transfer == TRC_UNSPECIFIED && primaries == PRIMARIES_UNSPECIFIED)) {
         // load icc profile.
         QByteArray profileData = space.iccProfile();
-        return createColorProfile(RGBAColorModelID.id(), Integer8BitsColorDepthID.id(), profileData);
+        profile = createColorProfile(RGBAColorModelID.id(), Integer8BitsColorDepthID.id(), profileData);
     } else {
         QVector<double> colorants;
-        return profileFor(colorants, primaries, transfer);
+        profile = profileFor(colorants, primaries, transfer);
     }
 #else
     // We want to test RGB before testing wether we are dealing with a LUT, because we want to funnel rec2020 pq into loading our profile.
@@ -776,42 +777,58 @@ const KoColorProfile *KoColorSpaceRegistry::profileForQColorSpace(const QColorSp
         if (space.transferFunction() == QColorSpace::TransferFunction::Gamma) {
             // load icc profile.
             QByteArray profileData = space.iccProfile();
-            return createColorProfile(RGBAColorModelID.id(), Integer8BitsColorDepthID.id(), profileData);
+            profile = createColorProfile(RGBAColorModelID.id(), Integer8BitsColorDepthID.id(), profileData);
         }
         ColorPrimaries primaries = mapQColorSpaceColorPrimaries.value(space.primaries(), PRIMARIES_UNSPECIFIED);
         TransferCharacteristics transfer = mapQColorSpaceColorTransfer.value(space.transferFunction(), TRC_UNSPECIFIED);
         // In qt6.9 we can get the 'primary points'.
         QVector<double> colorants;
-        if ((!colorants.isEmpty() || primaries != PRIMARIES_UNSPECIFIED) && transfer != TRC_UNSPECIFIED) {
-            return profileFor(colorants, primaries, transfer);
+        if (!profile && (!colorants.isEmpty() || primaries != PRIMARIES_UNSPECIFIED) && transfer != TRC_UNSPECIFIED) {
+            profile = profileFor(colorants, primaries, transfer);
         }
     } else if (space.colorModel() == QColorSpace::ColorModel::Gray) {
         TransferCharacteristics transfer = mapQColorSpaceColorTransfer.value(space.transferFunction(), TRC_UNSPECIFIED);
         if (space.transferFunction() == QColorSpace::TransferFunction::Gamma) {
             QByteArray profileData = space.iccProfile();
-            return createColorProfile(RGBAColorModelID.id(), Integer8BitsColorDepthID.id(), profileData);
+            profile = createColorProfile(GrayAColorModelID.id(), Integer8BitsColorDepthID.id(), profileData);
 
         }
         QVector<double> colorants;
         colorants << space.whitePoint().x() << space.whitePoint().y();
-        if (!colorants.isEmpty() && transfer != TRC_UNSPECIFIED) {
-            return profileFor(colorants, PRIMARIES_UNSPECIFIED, transfer);
+        if (!profile && !colorants.isEmpty() && transfer != TRC_UNSPECIFIED) {
+            profile = profileFor(colorants, PRIMARIES_UNSPECIFIED, transfer);
         }
     }
-    KoColorSpaceEngine *engine = KoColorSpaceEngineRegistry::instance()->get("icc");
-    if (space.isValid() && engine) {
-        // byte array from icc profile.
-        QByteArray profileData = space.iccProfile();
-        return engine->addProfile(profileData);
-    }
 #endif
+    if (!profile) {
+        // We might now have a non-qt supported colormodel. Let's load the raw data directly.
+        KoColorSpaceEngine *engine = KoColorSpaceEngineRegistry::instance()->get("icc");
+        if (engine) {
+            QByteArray profileData = space.iccProfile();
+            profile = engine->addProfile(profileData);
+        }
+    }
+    if (profile) {
+        const KoColorProfile *preExisting = profileByUniqueId(profile->uniqueId());
+        if (!preExisting) {
+            preExisting = profileByName(profile->name());
+        }
+        if (preExisting) {
+            return preExisting;
+        } else {
+            addProfile(profile);
+        }
+    }
 
-    return nullptr;
+    return profile;
 }
 
 QColorSpace KoColorSpaceRegistry::QColorSpaceForProfile(const KoColorProfile *profile) const
 {
     if (!profile) return QColorSpace(QColorSpace::SRgb);
+    if (profile == p709SRGBProfile()) {
+        return QColorSpace(QColorSpace::SRgb);
+    }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
     if (profile == p2020PQProfile()) {
         return QColorSpace(QColorSpace::Bt2100Pq);

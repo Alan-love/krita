@@ -58,6 +58,7 @@ parts:
     plugin: python
     python-packages:
       - pyqt6
+      - PyQt6-sip
   eigen:
     source: https://gitlab.com/libeigen/eigen.git
     plugin: cmake

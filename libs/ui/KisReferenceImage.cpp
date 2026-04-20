@@ -213,12 +213,16 @@ KisReferenceImage::fromPaintDevice(KisPaintDeviceSP src, const KisCoordinatesCon
     }
 
     auto *reference = new KisReferenceImage();
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
     if (src->colorSpace()->colorModelId() == RGBAColorModelID) {
         reference->d->image = src->convertToQImage(src->colorSpace()->profile());
         reference->d->image.setColorSpace(KoColorSpaceRegistry::instance()->QColorSpaceForProfile(src->colorSpace()->profile()));
     } else {
         reference->d->image = src->convertToQImage(KoColorSpaceRegistry::instance()->p709SRGBProfile());
     }
+#else
+    reference->d->image = src->convertToQImage(KoColorSpaceRegistry::instance()->p709SRGBProfile());
+#endif
 
     QRect r = QRect(QPoint(), reference->d->image.size());
     QSizeF size = converter.imageToDocument(r).size();
@@ -360,14 +364,18 @@ KoColor KisReferenceImage::getPixel(QPointF position)
         d->updateCache();
     }
 
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
     const KoColorProfile *profile = KoColorSpaceRegistry::instance()->profileForQColorSpace(d->image.colorSpace());
     const KoColorSpace *cs = KoColorSpaceRegistry::instance()->colorSpace(RGBAColorModelID.id(), Integer16BitsColorDepthID.id(), profile);
-
+#else
+    const KoColorSpace *cs = KoColorSpaceRegistry::instance()->rgb8(KoColorSpaceRegistry::instance()->p709SRGBProfile());
+#endif
 
     KoColor c(cs);
     QColor pixel = d->cachedImage.pixelColor(localPosition.toPoint());
     QVector<float> channels = {pixel.blueF(), pixel.greenF(), pixel.redF(), 1.0};
     cs->fromNormalisedChannelsValue( c.data(),channels);
+
     return c;
 }
 

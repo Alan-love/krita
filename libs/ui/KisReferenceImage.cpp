@@ -96,6 +96,8 @@ struct KisReferenceImage::Private : public QSharedData
         if (image.colorSpace().colorModel() != QColorSpace::ColorModel::Rgb || !image.colorSpace().isValid()) {
             image.convertToColorSpace(QColorSpace(QColorSpace::SRgb));
         }
+#else
+        image.convertToColorSpace(QColorSpace(QColorSpace::SRgb));
 #endif
 
         return (!image.isNull());
@@ -267,11 +269,9 @@ void KisReferenceImage::paint(QPainter &gc) const
 
     // Color conversion.
     QImage *targetD = dynamic_cast<QImage*>(gc.device());
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    const bool getTargetCs = (targetD);
-#else
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
     const bool getTargetCs = (targetD && targetD->colorSpace().colorModel() == QColorSpace::ColorModel::Rgb);
-#endif
+
     const KoColorProfile *targetP = getTargetCs? KoColorSpaceRegistry::instance()->profileForQColorSpace(targetD->colorSpace()): KoColorSpaceRegistry::instance()->p709SRGBProfile();
     const KoColorProfile *sourceP = KoColorSpaceRegistry::instance()->profileForQColorSpace(d->image.colorSpace());
     if (targetP != sourceP) {
@@ -285,6 +285,7 @@ void KisReferenceImage::paint(QPainter &gc) const
             prescaled.setColorSpace(QColorSpace(QColorSpace::SRgb));
         }
     }
+#endif
 
     if (scale > 1.0) {
         // enlarging should be done without smooth transformation

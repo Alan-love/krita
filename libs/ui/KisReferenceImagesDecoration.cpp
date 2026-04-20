@@ -147,7 +147,11 @@ void KisReferenceImagesDecoration::drawDecoration(QPainter &gc, const QRectF &/*
         }
 
         if (!d->buffer.image.isNull()) {
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
             gc.drawImage(d->buffer.position, d->buffer.image);
+#else
+            gc.drawImage(d->buffer.position, canvas->displayRendererInterface()->convertImageToDisplayColorSpace(d->buffer.image));
+#endif
         }
     }
 }

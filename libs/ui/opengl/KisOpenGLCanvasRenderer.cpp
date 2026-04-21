@@ -995,6 +995,7 @@ void KisOpenGLCanvasRenderer::updateConfig()
     d->filterMode = (KisOpenGL::FilterMode) cfg.openGLFilteringMode();
 
     updateCursorColor();
+    updatePixelGridMode();
 }
 
 void KisOpenGLCanvasRenderer::updateCursorColor()
@@ -1012,7 +1013,7 @@ void KisOpenGLCanvasRenderer::updatePixelGridMode()
 
     d->pixelGridDrawingThreshold = cfg.getPixelGridDrawingThreshold();
     d->pixelGridEnabled = cfg.pixelGridEnabled();
-    d->gridColor = cfg.getPixelGridColor();
+    d->gridColor = colorToDisplaySpace(cfg.getPixelGridColor());
 }
 
 QRectF KisOpenGLCanvasRenderer::widgetToSurface(const QRectF &rc)

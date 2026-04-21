@@ -373,7 +373,11 @@ KoColor KisReferenceImage::getPixel(QPointF position)
 
     KoColor c(cs);
     QColor pixel = d->cachedImage.pixelColor(localPosition.toPoint());
-    QVector<float> channels = {pixel.blueF(), pixel.greenF(), pixel.redF(), 1.0};
+    QVector<float> channels = {
+        static_cast<float>(pixel.blueF()),
+        static_cast<float>(pixel.greenF()),
+        static_cast<float>(pixel.redF()),
+        1.0f};
     cs->fromNormalisedChannelsValue( c.data(),channels);
 
     return c;

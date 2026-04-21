@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-20 00:44+0000\n"
-"PO-Revision-Date: 2026-04-19 04:07+0200\n"
+"PO-Revision-Date: 2026-04-20 05:27+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -35379,10 +35379,9 @@ msgstr ""
 "სახელით, სხვა მდებარეობაზე შეინახოთ."
 
 #: libs/ui/KisImportExportFilter.cpp:179
-#, fuzzy, kde-format
-#| msgid "The file could not be opened."
+#, kde-format
 msgid "%1 could not be opened"
-msgstr "ფაილის გახსნის შეცდომა."
+msgstr "%1-ის გახსნა შეუძლებელია"
 
 #: libs/ui/KisImportExportFilter.cpp:191
 #, kde-format
@@ -38558,16 +38557,13 @@ msgstr ""
 
 #: libs/ui/widgets/kis_custom_image_widget.cc:434
 #: plugins/dockers/logdocker/LogDockerDock.cpp:112
-#, fuzzy, kde-format
-#| msgid ""
-#| "Could not save %1\n"
-#| "Reason: %2"
+#, kde-format
 msgid ""
 "Could not save %1.\n"
 "Reason: %2."
 msgstr ""
-"%1-ის შენახვის შეცდომა\n"
-"მიზეზი: %2"
+"%1-ის შენახვის შეცდომა.\n"
+"მიზეზი: %2."
 
 #: libs/ui/widgets/kis_custom_image_widget.cc:536
 #, kde-format

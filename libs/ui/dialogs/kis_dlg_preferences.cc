@@ -39,6 +39,7 @@
 #include <QFont>
 #include <QSurfaceFormat>
 #include <QColorSpace>
+#include <QTextBrowser>
 
 #include <KisApplication.h>
 #include <KisDocument.h>
@@ -53,6 +54,7 @@
 #include <KoPointerEvent.h>
 
 #include <KoFileDialog.h>
+#include "KisRootSurfaceInfoProxy.h"
 #include "KoID.h"
 #include <KoVBox.h>
 
@@ -72,6 +74,7 @@
 #include "kis_action_registry.h"
 #include <kis_image.h>
 #include <KisSqueezedComboBox.h>
+#include "kis_cie_tongue_widget.h"
 #include "kis_clipboard.h"
 #include "widgets/kis_cmb_idlist.h"
 #include "KoColorSpace.h"
@@ -1367,8 +1370,21 @@ ColorSettingsTab::ColorSettingsTab(QWidget *parent, const char *name)
         vboxLayout->addItem(new QSpacerItem(20,20));
 
         KisMainWindow *mainWindow = KisPart::instance()->currentMainwindow();
-        QLabel *preferredLbl = new QLabel(i18n("Color space preferred by the operating system:\n%1", KisPlatformPluginInterfaceFactory::instance()->osPreferredColorSpaceReport(mainWindow)), this);
-        vboxLayout->addWidget(preferredLbl);
+        QTextBrowser *preferredLbl = new QTextBrowser(this);
+        preferredLbl->setText(i18n("Color space preferred by the operating system:\n%1", KisPlatformPluginInterfaceFactory::instance()->osPreferredColorSpaceReport(mainWindow)));
+        preferredLbl->setReadOnly(true);
+        QHBoxLayout *colorDescriptionLayout = new QHBoxLayout();
+        vboxLayout->addLayout(colorDescriptionLayout);
+        KisCIETongueWidget *preferredSpaceWidget = new KisCIETongueWidget(this);
+        colorDescriptionLayout->addWidget(preferredSpaceWidget);
+        colorDescriptionLayout->addWidget(preferredLbl);
+        KisRootSurfaceInfoProxy proxy(mainWindow);
+        // TODO: replace with preferred profile data.
+        const KoColorSpace *preferredCs = KoColorSpaceRegistry::instance()->colorSpace(proxy.rootSurfaceProfile()->colorModelID(), Integer8BitsColorDepthID.id(), proxy.rootSurfaceProfile());
+        preferredSpaceWidget->setGamut(preferredCs->gamutXYY());
+        // TODO: replace with master data.
+        preferredSpaceWidget->setProfileData(proxy.rootSurfaceProfile()->getColorantsxyY(), proxy.rootSurfaceProfile()->getWhitePointxyY(), true);
+        preferredSpaceWidget->setFixedSize(QSize(200, 200));
 
         m_chkEnableCanvasColorSpaceManagement->setChecked(cfg.enableCanvasSurfaceColorSpaceManagement());
 

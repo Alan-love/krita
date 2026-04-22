@@ -14,6 +14,10 @@
 
 class KoColorProfile;
 class KisSurfaceColorManagerInterface;
+namespace KisSurfaceColorimetry {
+    struct SurfaceDescription;
+}
+
 
 class KRITAUI_EXPORT KisCanvasSurfaceColorSpaceManager : public QObject
 {
@@ -33,6 +37,8 @@ public:
 
     QString colorManagementReport() const;
     QString osPreferredColorSpaceReport() const;
+
+    std::optional<KisSurfaceColorimetry::SurfaceDescription> currentSurfaceDescription() const;
 
     /**
      * Non-empty string means there was an error with setting up the

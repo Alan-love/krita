@@ -528,19 +528,22 @@ void KisCIETongueWidget::drawGamut()
     gamutPaint.setBrush(Qt::white);
     gamutPaint.setPen(Qt::white);
     int x, y = 0;
-    if (!d->gamut.empty()) {
+    if (d->colorModel == KisCIETongueWidget::RGBA) {
+        gamutPaint.save();
         gamutPaint.setOpacity(0.5);
-        if (d->colorModel == KisCIETongueWidget::RGBA) {
-            mapPoint(x, y, (QPointF(d->Primaries[0],d->Primaries[1])) );
-            path.moveTo(QPointF(x + d->xBias,y));
-            mapPoint(x, y, (QPointF(d->Primaries[3],d->Primaries[4])) );
-            path.lineTo(QPointF(x + d->xBias,y));
-            mapPoint(x, y, (QPointF(d->Primaries[6],d->Primaries[7])) );
-            path.lineTo(QPointF(x + d->xBias,y));
-            mapPoint(x, y, (QPointF(d->Primaries[0],d->Primaries[1])) );
-            path.lineTo(QPointF(x + d->xBias,y));
-        }
+        mapPoint(x, y, (QPointF(d->Primaries[0],d->Primaries[1])) );
+        path.moveTo(QPointF(x + d->xBias,y));
+        mapPoint(x, y, (QPointF(d->Primaries[3],d->Primaries[4])) );
+        path.lineTo(QPointF(x + d->xBias,y));
+        mapPoint(x, y, (QPointF(d->Primaries[6],d->Primaries[7])) );
+        path.lineTo(QPointF(x + d->xBias,y));
+        mapPoint(x, y, (QPointF(d->Primaries[0],d->Primaries[1])) );
+        path.lineTo(QPointF(x + d->xBias,y));
         gamutPaint.drawPath(path);
+        gamutPaint.restore();
+    }
+    if (!d->gamut.empty()) {
+
         gamutPaint.setOpacity(1.0);
         foreach (QPointF Point, d->gamut) {
             mapPoint(x, y, Point);

@@ -90,6 +90,8 @@
 #include <KisWidgetConnectionUtils.h>
 #include <dialogs/KisFrameRateLimitModel.h>
 #include <KisPlatformPluginInterfaceFactory.h>
+#include <surfacecolormanagement/KisSurfaceColorimetry.h>
+#include <KisColorimetryUtils.h>
 
 #include "slider_and_spin_box_sync.h"
 
@@ -1373,18 +1375,39 @@ ColorSettingsTab::ColorSettingsTab(QWidget *parent, const char *name)
         QTextBrowser *preferredLbl = new QTextBrowser(this);
         preferredLbl->setText(i18n("Color space preferred by the operating system:\n%1", KisPlatformPluginInterfaceFactory::instance()->osPreferredColorSpaceReport(mainWindow)));
         preferredLbl->setReadOnly(true);
+
+        QHBoxLayout *colorDescriptionChoice = new QHBoxLayout();
+        vboxLayout->addLayout(colorDescriptionChoice);
+
+        QLabel *descriptionChoiceLabel =  new QLabel(i18n("Diagram:"));
+        colorDescriptionChoice->addWidget(descriptionChoiceLabel);
+
+        QRadioButton *containerSpace = new QRadioButton(i18nc("@info:radiobutton", "Preferred Space"), this);
+        colorDescriptionChoice->addWidget(containerSpace);
+        containerSpace->setToolTip(i18nc("@info:tooltip", "This is the space preferred by the operating system."));
+        m_preferredSpaceGraphicMode.addButton(containerSpace, PreferredSpace);
+
+        QRadioButton *masteringSpace = new QRadioButton(i18nc("@info:radiobutton", "Mastering Space"), this);
+        colorDescriptionChoice->addWidget(masteringSpace);
+        m_preferredSpaceGraphicMode.addButton(masteringSpace, MasteringSpace);
+        masteringSpace->setToolTip(i18nc("@info:tooltip", "This is the space representing the currently active display."));
+
+        QRadioButton *canvasSpace = new QRadioButton(i18nc("@info:radiobutton", "Canvas Space"), this);
+        colorDescriptionChoice->addWidget(canvasSpace);
+        canvasSpace->setToolTip(i18nc("@info:tooltip", "This is the space chosen for the canvas surface."));
+        m_preferredSpaceGraphicMode.addButton(canvasSpace, CanvasSpace);
+        containerSpace->setChecked(true);
+        colorDescriptionChoice->addItem(new QSpacerItem(0, 0, QSizePolicy::Expanding));
+
         QHBoxLayout *colorDescriptionLayout = new QHBoxLayout();
         vboxLayout->addLayout(colorDescriptionLayout);
-        KisCIETongueWidget *preferredSpaceWidget = new KisCIETongueWidget(this);
-        colorDescriptionLayout->addWidget(preferredSpaceWidget);
+        m_preferredSpaceGraphic = new KisCIETongueWidget(this);
+        colorDescriptionLayout->addWidget(m_preferredSpaceGraphic);
         colorDescriptionLayout->addWidget(preferredLbl);
-        KisRootSurfaceInfoProxy proxy(mainWindow);
-        // TODO: replace with preferred profile data.
-        const KoColorSpace *preferredCs = KoColorSpaceRegistry::instance()->colorSpace(proxy.rootSurfaceProfile()->colorModelID(), Integer8BitsColorDepthID.id(), proxy.rootSurfaceProfile());
-        preferredSpaceWidget->setGamut(preferredCs->gamutXYY());
-        // TODO: replace with master data.
-        preferredSpaceWidget->setProfileData(proxy.rootSurfaceProfile()->getColorantsxyY(), proxy.rootSurfaceProfile()->getWhitePointxyY(), true);
-        preferredSpaceWidget->setFixedSize(QSize(200, 200));
+
+        m_preferredSpaceGraphic->setFixedSize(QSize(200, 200));
+        updatePreferredSpaceGraphic();
+        connect(&m_preferredSpaceGraphicMode, SIGNAL(buttonClicked(QAbstractButton*)), this, SLOT(updatePreferredSpaceGraphic()));
 
         m_chkEnableCanvasColorSpaceManagement->setChecked(cfg.enableCanvasSurfaceColorSpaceManagement());
 
@@ -1613,6 +1636,81 @@ void ColorSettingsTab::updateProofingDisplayInfo() {
     options.second = KoColorConversionTransformation::internalConversionFlags();
     options.second.setFlag(KoColorConversionTransformation::BlackpointCompensation, m_page->chkBlackpoint->isChecked());
     m_page->wdgProofingOptions->setDisplayConfigOptions(options);
+}
+
+void ColorSettingsTab::updatePreferredSpaceGraphic()
+{
+    if (!m_preferredSpaceGraphic) return;
+    KisMainWindow *mainWindow = KisPart::instance()->currentMainwindow();
+    KisRootSurfaceInfoProxy proxy(mainWindow);
+    std::optional<KisSurfaceColorimetry::SurfaceDescription> currentDescription = proxy.currentSurfaceDescription();
+    QVector<double> colorants;
+    QVector <double> whitePoint;
+
+    if (m_preferredSpaceGraphicMode.checkedId() == PreferredSpace) {
+        if (currentDescription) {
+            if (std::holds_alternative<KisSurfaceColorimetry::Colorimetry>(currentDescription->colorSpace.primaries)) {
+                auto col = std::get<KisSurfaceColorimetry::Colorimetry>(currentDescription->colorSpace.primaries);
+                colorants << col.red().toxy().x << col.red().toxy().y << col.red().toxyY().Y
+                          << col.green().toxy().x << col.green().toxy().y << col.green().toxyY().Y
+                          << col.blue().toxy().x << col.blue().toxy().y << col.blue().toxyY().Y;
+                whitePoint << col.white().toxy().x << col.white().toxy().y << col.white().toxyY().Y;
+                m_preferredSpaceGraphic->setRGBData(whitePoint, colorants);
+            } else {
+                bool enable = true;
+                auto named = std::get<KisSurfaceColorimetry::NamedPrimaries>(currentDescription->colorSpace.primaries);
+                KisSurfaceColorimetry::Colorimetry col = KisColorimetryUtils::Colorimetry::BT709;
+                if (named == KisSurfaceColorimetry::NamedPrimaries::primaries_srgb) {
+                    col = KisColorimetryUtils::Colorimetry::BT709;
+                } else if (named == KisSurfaceColorimetry::NamedPrimaries::primaries_adobe_rgb) {
+                    col = KisColorimetryUtils::Colorimetry::AdobeRGB;
+                } else if (named == KisSurfaceColorimetry::NamedPrimaries::primaries_bt2020) {
+                    col = KisColorimetryUtils::Colorimetry::BT2020;
+                } else if (named == KisSurfaceColorimetry::NamedPrimaries::primaries_dci_p3) {
+                    col = KisColorimetryUtils::Colorimetry::DCIP3;
+                } else if (named == KisSurfaceColorimetry::NamedPrimaries::primaries_display_p3) {
+                    col = KisColorimetryUtils::Colorimetry::DisplayP3;
+                } else {
+                    enable = false;
+                }
+
+                if (enable) {
+                    colorants << col.red().toxy().x << col.red().toxy().y << col.red().toxyY().Y
+                              << col.green().toxy().x << col.green().toxy().y << col.green().toxyY().Y
+                              << col.blue().toxy().x << col.blue().toxy().y << col.blue().toxyY().Y;
+                    whitePoint << col.white().toxy().x << col.white().toxy().y << col.white().toxyY().Y;
+                    m_preferredSpaceGraphic->setRGBData(whitePoint, colorants);
+                } else {
+                    m_preferredSpaceGraphic->setProfileDataAvailable(false);
+                }
+
+            }
+        } else {
+             m_preferredSpaceGraphic->setProfileDataAvailable(false);
+        }
+    } else if(m_preferredSpaceGraphicMode.checkedId() == MasteringSpace) {
+        if (currentDescription && currentDescription->masteringInfo) {
+            auto col = currentDescription->masteringInfo->primaries;
+            colorants << col.red().toxy().x << col.red().toxy().y << col.red().toxyY().Y
+                      << col.green().toxy().x << col.green().toxy().y << col.green().toxyY().Y
+                      << col.blue().toxy().x << col.blue().toxy().y << col.blue().toxyY().Y;
+            whitePoint << col.white().toxy().x << col.white().toxy().y << col.white().toxyY().Y;
+
+            m_preferredSpaceGraphic->setRGBData(whitePoint, colorants);
+        } else {
+            m_preferredSpaceGraphic->setProfileDataAvailable(false);
+        }
+    } else { /// canvas space.
+        if (proxy.rootSurfaceProfile()) {
+            // TODO: replace wth display config for canvas...
+            colorants = proxy.rootSurfaceProfile()->getColorantsxyY();
+            whitePoint = proxy.rootSurfaceProfile()->getWhitePointxyY();
+            m_preferredSpaceGraphic->setProfileData(colorants, whitePoint, true);
+        } else {
+            m_preferredSpaceGraphic->setProfileDataAvailable(false);
+        }
+    }
+    m_preferredSpaceGraphic->update();
 }
 
 //---------------------------------------------------------------------------------------------------

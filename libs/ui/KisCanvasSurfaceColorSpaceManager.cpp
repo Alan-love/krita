@@ -176,6 +176,11 @@ QString KisCanvasSurfaceColorSpaceManager::osPreferredColorSpaceReport() const
     return report;
 }
 
+std::optional<KisSurfaceColorimetry::SurfaceDescription> KisCanvasSurfaceColorSpaceManager::currentSurfaceDescription() const
+{
+    return m_d->interface->preferredSurfaceDescription();
+}
+
 KisSurfaceColorimetry::RenderIntent KisCanvasSurfaceColorSpaceManager::Private::calculateConfigIntent(const KisDisplayConfig::Options &options)
 {
     using KisSurfaceColorimetry::RenderIntent;

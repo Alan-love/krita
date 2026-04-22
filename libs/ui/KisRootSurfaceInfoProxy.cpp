@@ -13,6 +13,7 @@
 #include <QWindow>
 #include <KisPlatformPluginInterfaceFactory.h>
 #include <KisSRGBSurfaceColorSpaceManager.h>
+#include <surfacecolormanagement/KisSurfaceColorimetry.h>
 
 
 KisRootSurfaceInfoProxy::KisRootSurfaceInfoProxy(QWidget *watched, QObject *parent)
@@ -48,6 +49,12 @@ QString KisRootSurfaceInfoProxy::osPreferredColorSpaceReport() const
 {
     return m_topLevelSurfaceManager ? m_topLevelSurfaceManager->osPreferredColorSpaceReport()
                                     : QString("Top level surface color manager is not found!\n");
+}
+
+std::optional<KisSurfaceColorimetry::SurfaceDescription> KisRootSurfaceInfoProxy::currentSurfaceDescription() const {
+    return m_topLevelSurfaceManager ? m_topLevelSurfaceManager->currentSurfaceDescription()
+                                    : std::nullopt;
+
 }
 
 void KisRootSurfaceInfoProxy::connectToNativeWindow(QWindow *nativeWindow)

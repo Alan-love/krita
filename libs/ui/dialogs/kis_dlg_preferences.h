@@ -18,6 +18,7 @@
 #include <kpagedialog.h>
 #include <kis_config.h>
 
+#include "kis_cie_tongue_widget.h"
 #include "kis_global.h"
 #include <KisSqueezedComboBox.h>
 
@@ -193,6 +194,12 @@ public:
 
     ColorSettingsTab(QWidget *parent = 0, const char  *name = 0);
 
+    enum PreferredSpaceType {
+        PreferredSpace,
+        MasteringSpace,
+        CanvasSpace
+    };
+
 private Q_SLOTS:
 
     void refillMonitorProfiles(const KoID & s);
@@ -201,6 +208,8 @@ private Q_SLOTS:
     void toggleUseDefaultColorSpace(bool useDefColorSpace);
 
     void updateProofingDisplayInfo();
+
+    void updatePreferredSpaceGraphic();
 
 public:
     void setDefault();
@@ -217,6 +226,8 @@ public:
     QPointer<QCheckBox> m_chkEnableCanvasColorSpaceManagement;
     QPointer<KisSqueezedComboBox> m_canvasSurfaceColorSpace;
     QPointer<KisSqueezedComboBox> m_canvasSurfaceBitDepth;
+    QPointer<KisCIETongueWidget> m_preferredSpaceGraphic;
+    QButtonGroup m_preferredSpaceGraphicMode;
 };
 
 //=======================

@@ -11,6 +11,9 @@
 
 class KisSRGBSurfaceColorSpaceManager;
 class KoColorProfile;
+namespace KisSurfaceColorimetry {
+struct SurfaceDescription;
+}
 
 /**
  * KisRootSurfaceInfoProxy is a special proxy object for the
@@ -48,6 +51,8 @@ public:
 
     QString colorManagementReport() const;
     QString osPreferredColorSpaceReport() const;
+
+    std::optional<KisSurfaceColorimetry::SurfaceDescription> currentSurfaceDescription() const;
 
 Q_SIGNALS:
     void sigRootSurfaceProfileChanged(const KoColorProfile *profile) const;

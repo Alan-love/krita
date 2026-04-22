@@ -1392,18 +1392,14 @@ ColorSettingsTab::ColorSettingsTab(QWidget *parent, const char *name)
         m_preferredSpaceGraphicMode.addButton(masteringSpace, MasteringSpace);
         masteringSpace->setToolTip(i18nc("@info:tooltip", "This is the space representing the currently active display."));
 
-        QRadioButton *canvasSpace = new QRadioButton(i18nc("@info:radiobutton", "Canvas Space"), this);
-        colorDescriptionChoice->addWidget(canvasSpace);
-        canvasSpace->setToolTip(i18nc("@info:tooltip", "This is the space chosen for the canvas surface."));
-        m_preferredSpaceGraphicMode.addButton(canvasSpace, CanvasSpace);
-        containerSpace->setChecked(true);
-        colorDescriptionChoice->addItem(new QSpacerItem(0, 0, QSizePolicy::Expanding));
-
         QHBoxLayout *colorDescriptionLayout = new QHBoxLayout();
         vboxLayout->addLayout(colorDescriptionLayout);
         m_preferredSpaceGraphic = new KisCIETongueWidget(this);
         colorDescriptionLayout->addWidget(m_preferredSpaceGraphic);
         colorDescriptionLayout->addWidget(preferredLbl);
+
+        containerSpace->setChecked(true);
+        colorDescriptionChoice->addItem(new QSpacerItem(0, 0, QSizePolicy::Expanding));
 
         m_preferredSpaceGraphic->setFixedSize(QSize(200, 200));
         updatePreferredSpaceGraphic();
@@ -1697,15 +1693,6 @@ void ColorSettingsTab::updatePreferredSpaceGraphic()
             whitePoint << col.white().toxy().x << col.white().toxy().y << col.white().toxyY().Y;
 
             m_preferredSpaceGraphic->setRGBData(whitePoint, colorants);
-        } else {
-            m_preferredSpaceGraphic->setProfileDataAvailable(false);
-        }
-    } else { /// canvas space.
-        if (proxy.rootSurfaceProfile()) {
-            // TODO: replace wth display config for canvas...
-            colorants = proxy.rootSurfaceProfile()->getColorantsxyY();
-            whitePoint = proxy.rootSurfaceProfile()->getWhitePointxyY();
-            m_preferredSpaceGraphic->setProfileData(colorants, whitePoint, true);
         } else {
             m_preferredSpaceGraphic->setProfileDataAvailable(false);
         }

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-20 00:44+0000\n"
-"PO-Revision-Date: 2026-04-20 05:27+0200\n"
+"POT-Creation-Date: 2026-04-22 00:43+0000\n"
+"PO-Revision-Date: 2026-04-21 05:44+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -19885,7 +19885,7 @@ msgstr "ჰანგული"
 #, kde-format
 msgctxt "@tooltip"
 msgid "Replaces hanja in Korean with the corresponding hangul. Deprecated."
-msgstr ""
+msgstr "ჩაანაცვლებს ჰანჯას კორეულში შესაბამისი ჰანგულით. მოძველებულია."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:355
 #, kde-format
@@ -19999,7 +19999,7 @@ msgstr "NLC კანჯის ფორმები"
 #, kde-format
 msgctxt "@tooltip"
 msgid "Replaces standard form kanji in Japanese fonts with the NLC forms."
-msgstr ""
+msgstr "ჩაანაცვლებს სტანდარტული ფორმის კანჯის იაპონურ ფონტებში NLC ფორმებით."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:391
 #, kde-format
@@ -20185,6 +20185,8 @@ msgctxt "@tooltip"
 msgid ""
 "Repositions glyphs so they are half-width in a vertical writing context."
 msgstr ""
+"გადაანაცვლებს გლიფებს ისე, რომ ისინი ნახევარი სიგანითაა ვერტიკალური წერის "
+"კონტექსტში."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:451
 #, kde-format
@@ -20226,7 +20228,7 @@ msgid ""
 "Repositions glyphs so they are proportional in a vertical writing context."
 msgstr ""
 "ცვლის გლიფების მდებარეობას ისე, რომ ისინი უფრო პროპორციულად გამოიყურებოდნენ "
-"ვერტიკალური წერტის კონტექსტში."
+"ვერტიკალური წერის კონტექსტში."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:463
 #, kde-format
@@ -22212,6 +22214,8 @@ msgid ""
 "The image is not tagged as <b>non-linear gamma sRGB</b>. The image will be "
 "converted to sRGB."
 msgstr ""
+"სურათი არ არის მონიშნული, როგორც <b>არაწრფივი გამა sRGB</b>. მოხდება სურათის "
+"გადაყვანა sRGB-ში."
 
 #: libs/koplugin/KisMimeDatabase.cpp:169
 #, kde-format
@@ -23791,7 +23795,7 @@ msgstr "ლოკალური რესურსები"
 #: libs/ui/KisMainWindow.cpp:2122 libs/ui/KisMainWindow.cpp:2181
 #: libs/ui/KisMainWindow.cpp:2200 libs/ui/KisMainWindow.cpp:2832
 #: libs/ui/KisPart.cpp:555 libs/ui/KisPart.cpp:558
-#: libs/ui/KisReferenceImage.cpp:175 libs/ui/KisRemoteFileFetcher.cpp:40
+#: libs/ui/KisReferenceImage.cpp:192 libs/ui/KisRemoteFileFetcher.cpp:40
 #: libs/ui/KisRemoteFileFetcher.cpp:64 libs/ui/KisRemoteFileFetcher.cpp:91
 #: libs/ui/KisTemplateCreateDia.cpp:284 libs/ui/KisTemplateCreateDia.cpp:390
 #: libs/ui/KisView.cpp:679 libs/ui/KisView.cpp:1166
@@ -27442,6 +27446,8 @@ msgid ""
 "<p>If you are using Krita on X11 or XWayland and experience slowness, try "
 "switching between EGL and GLX</p>"
 msgstr ""
+"<p>თუ იყენებთ Krita-ს X11-ზე, ან XWayland-ზე და გრძნობთ, რომ ის შენელდა, "
+"სცადეთ გადართვა EGL-სა და GLX-ს შორის</p>"
 
 #: libs/ui/dialogs/kis_dlg_preferences.cc:2230
 #, kde-format
@@ -28980,6 +28986,8 @@ msgid ""
 "<html><head/><body><p>The current image is too big to create a pattern. </"
 "p><p>The pattern will be scaled down.</p></body></html>"
 msgstr ""
+"<html><head/><body><p>ამჟამინდელი სურათი ძალიან დიდია შაბლონის შესაქმნელად. "
+"</p><p>შაბლონი შემცირდება.</p></body></html>"
 
 #. i18n: ectx: property (text), widget (QPushButton, updateButton)
 #: libs/ui/forms/wdgcustompattern.ui:134
@@ -35928,12 +35936,12 @@ msgstr ""
 "%1\n"
 "მიზეზი: %2"
 
-#: libs/ui/KisReferenceImage.cpp:113
+#: libs/ui/KisReferenceImage.cpp:130
 msgctxt "(qtundo-format)"
 msgid "Set saturation"
 msgstr "გაჯერების დაყენება"
 
-#: libs/ui/KisReferenceImage.cpp:175
+#: libs/ui/KisReferenceImage.cpp:192
 #, kde-format
 msgid "Could not load %1."
 msgstr "შეცდომა %1-ის ჩატვირთვისას."

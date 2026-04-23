@@ -19,6 +19,7 @@ Name[gl]=Efectos
 Name[he]=אפקטים
 Name[hi]=एफएक्स
 Name[hu]=FX
+Name[ia]=FX
 Name[id]=FX
 Name[is]=FX
 Name[it]=FX

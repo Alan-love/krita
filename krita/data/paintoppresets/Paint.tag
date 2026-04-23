@@ -19,6 +19,7 @@ Name[gl]=Pintura
 Name[he]=צבע
 Name[hi]=पेंट
 Name[hu]=Festés
+Name[ia]=Pictura
 Name[id]=Cat
 Name[is]=Málning
 Name[it]=Pittura

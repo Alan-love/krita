@@ -19,6 +19,7 @@ Name[gl]=Tinta
 Name[he]=דיו
 Name[hi]=स्याही
 Name[hu]=Tinta
+Name[ia]=Tinta
 Name[id]=Tinta
 Name[is]=Blek
 Name[it]=Inchiostro

@@ -19,6 +19,7 @@ Name[gl]=Bosquexo
 Name[he]=איור
 Name[hi]=रेखा-चित्र
 Name[hu]=Vázlat
+Name[ia]=Sketch
 Name[id]=Sketsa
 Name[is]=Skissa
 Name[it]=Schizzo

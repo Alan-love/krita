@@ -196,8 +196,7 @@ public:
 
     enum PreferredSpaceType {
         PreferredSpace,
-        MasteringSpace,
-        CanvasSpace
+        MasteringSpace
     };
 
 private Q_SLOTS:

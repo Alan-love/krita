@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-23 00:41+0000\n"
+"POT-Creation-Date: 2026-04-24 00:41+0000\n"
 "PO-Revision-Date: 2024-04-22 16:03\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -20380,30 +20380,30 @@ msgid "Character Variant %1"
 msgstr "字符变体 %1"
 
 #: libs/flake/text/KoSvgTextShape.cpp:169
-#: libs/flake/text/KoSvgTextShape.cpp:2610
+#: libs/flake/text/KoSvgTextShape.cpp:2640
 #, kde-format
 msgctxt "Default text for the text shape"
 msgid "Placeholder Text"
 msgstr "请用您的文本替换此段文本。"
 
-#: libs/flake/text/KoSvgTextShape.cpp:2589
+#: libs/flake/text/KoSvgTextShape.cpp:2619
 #, kde-format
 msgctxt "Text label in SVG Text Tool"
 msgid "Text"
 msgstr "文本"
 
-#: libs/flake/text/KoSvgTextShape.cpp:2591
-#: libs/flake/text/KoSvgTextShape.cpp:2599
+#: libs/flake/text/KoSvgTextShape.cpp:2621
+#: libs/flake/text/KoSvgTextShape.cpp:2629
 #, kde-format
 msgid "SVG Text Shape"
 msgstr "SVG 文本形状"
 
-#: libs/flake/text/KoSvgTextShape.cpp:2597
+#: libs/flake/text/KoSvgTextShape.cpp:2627
 #, kde-format
 msgid "SVG Text"
 msgstr "SVG 文本"
 
-#: libs/flake/text/KoSvgTextShape.cpp:2620
+#: libs/flake/text/KoSvgTextShape.cpp:2650
 #, kde-format
 msgctxt "Default text for the text shape"
 msgid "<text>Placeholder Text</text>"

@@ -41,8 +41,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-23 00:41+0000\n"
-"PO-Revision-Date: 2026-04-20 23:37+0300\n"
+"POT-Creation-Date: 2026-04-24 00:41+0000\n"
+"PO-Revision-Date: 2026-04-23 09:02+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -3133,7 +3133,7 @@ msgctxt ""
 "./krita/data/bundles/Krita_3_Default_Resources.bundle:patterns/26_brush-"
 "marks.png"
 msgid "26 brush-marks"
-msgstr ""
+msgstr "26 סימני-מכחול"
 
 #. i18n: Display name of resource, see context: [path-to-resources]/[resource-type]/[resource-filename]
 #, kde-format
@@ -3516,7 +3516,7 @@ msgctxt ""
 "./krita/data/bundles/Krita_4_Default_Resources.bundle:brushes/"
 "abominable_snowman.png"
 msgid "abominable snowman"
-msgstr ""
+msgstr "איש השלג הנורא"
 
 #. i18n: Display name of resource, see context: [path-to-resources]/[resource-type]/[resource-filename]
 #, fuzzy, kde-format
@@ -5037,7 +5037,7 @@ msgctxt ""
 "./krita/data/bundles/Krita_4_Default_Resources.bundle:patterns/14_texture-"
 "rock.png"
 msgid "14 texture-rock"
-msgstr ""
+msgstr "14 מרקם-סלע"
 
 #. i18n: Display name of resource, see context: [path-to-resources]/[resource-type]/[resource-filename]
 #, kde-format
@@ -5045,7 +5045,7 @@ msgctxt ""
 "./krita/data/bundles/Krita_4_Default_Resources.bundle:patterns/15_texture-"
 "rockB.png"
 msgid "15 texture-rockB"
-msgstr ""
+msgstr "15 מרקם-סלע-ב׳"
 
 #. i18n: Display name of resource, see context: [path-to-resources]/[resource-type]/[resource-filename]
 #, kde-format
@@ -5053,7 +5053,7 @@ msgctxt ""
 "./krita/data/bundles/Krita_4_Default_Resources.bundle:patterns/16_texture-"
 "woody.png"
 msgid "16 texture-woody"
-msgstr ""
+msgstr "16 מרקם-מעוצה"
 
 #. i18n: Display name of resource, see context: [path-to-resources]/[resource-type]/[resource-filename]
 #, kde-format
@@ -5061,7 +5061,7 @@ msgctxt ""
 "./krita/data/bundles/Krita_4_Default_Resources.bundle:patterns/17_texture-"
 "melt.png"
 msgid "17 texture-melt"
-msgstr ""
+msgstr "17 מרקם-המסה"
 
 #. i18n: Display name of resource, see context: [path-to-resources]/[resource-type]/[resource-filename]
 #, fuzzy, kde-format
@@ -5109,7 +5109,7 @@ msgctxt ""
 "./krita/data/bundles/Krita_4_Default_Resources.bundle:patterns/22_texture-"
 "reptile.png"
 msgid "22 texture-reptile"
-msgstr ""
+msgstr "22 מרקם-זוחלים"
 
 #. i18n: Display name of resource, see context: [path-to-resources]/[resource-type]/[resource-filename]
 #, kde-format
@@ -6483,7 +6483,7 @@ msgctxt ""
 "./krita/data/bundles/Krita_3_Default_Resources.bundle:brushes/"
 "z_study_pencil_H.gih"
 msgid "Z_study pencil H"
-msgstr ""
+msgstr "Z_עיפרון לימוד ה"
 
 #. i18n: Display name of resource, see context: [path-to-resources]/[resource-type]/[resource-filename]
 #: krita/data/bundles/Krita_3_Default_Resources.bundle:brushes/z_study_pencil_H_h.gih:1
@@ -6492,7 +6492,7 @@ msgctxt ""
 "./krita/data/bundles/Krita_3_Default_Resources.bundle:brushes/"
 "z_study_pencil_H_h.gih"
 msgid "Z_study pencil H_horiz"
-msgstr ""
+msgstr "Z_עיפרון לימוד ה_אופקי"
 
 #. i18n: Display name of resource, see context: [path-to-resources]/[resource-type]/[resource-filename]
 #: krita/data/bundles/Krita_3_Default_Resources.bundle:brushes/Z_Test-pressure.gih:1
@@ -6753,7 +6753,7 @@ msgstr "&בוחר צבעים"
 msgctxt ""
 "./krita/data/bundles/Krita_3_Default_Resources.bundle:palettes/web.gpl"
 msgid "Web"
-msgstr ""
+msgstr "רשת"
 
 #. i18n: Display name of resource, see context: [path-to-resources]/[resource-type]/[resource-filename]
 #: krita/data/bundles/Krita_4_Default_Resources.bundle:brushes/bamboo_leaves_random.gih:1
@@ -6882,7 +6882,7 @@ msgctxt ""
 "./krita/data/bundles/Krita_4_Default_Resources.bundle:brushes/"
 "impressionism_brush.gih"
 msgid "random-stroke"
-msgstr ""
+msgstr "משיכה-אקראית"
 
 #. i18n: Display name of resource, see context: [path-to-resources]/[resource-type]/[resource-filename]
 #: krita/data/bundles/Krita_4_Default_Resources.bundle:brushes/mountains_distant.gih:1
@@ -9754,7 +9754,7 @@ msgstr "חידוד"
 #, kde-format
 msgctxt "action"
 msgid "B&urn"
-msgstr ""
+msgstr "&צריבה"
 
 #. i18n: context: toolTip @ Action (krita_filter_burn), Actions (Filters), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (krita_filter_burn), Actions (Filters), ActionCollection (Krita)
@@ -11023,7 +11023,7 @@ msgctxt "action"
 msgid ""
 "Insert keyframes to the left of selection, moving the tail of animation to "
 "the right."
-msgstr ""
+msgstr "הסרת תמוניות מפתח משמאל לבחירה, תוך הזזת קצה ההנפשה ימינה."
 
 #. i18n: context: text @ Action (insert_keyframe_right), Actions (Animation), ActionCollection (Krita)
 #: krita/krita.action:2131
@@ -11039,7 +11039,7 @@ msgctxt "action"
 msgid ""
 "Insert keyframes to the right of selection, moving the tail of animation to "
 "the right."
-msgstr ""
+msgstr "הסרת תמוניות מפתח מימין לבחירה, תוך הזזת קצה ההנפשה ימינה."
 
 #. i18n: context: text @ Action (insert_multiple_keyframes), Actions (Animation), ActionCollection (Krita)
 #: krita/krita.action:2143
@@ -11053,7 +11053,7 @@ msgstr "הוספת כמה תמוניות מפתח"
 #, kde-format
 msgctxt "action"
 msgid "Insert several keyframes based on user parameters."
-msgstr ""
+msgstr "הוספת מספר תמוניות מפתח לפי משתני המשתמש."
 
 #. i18n: context: text @ Action (remove_frames_and_pull), Actions (Animation), ActionCollection (Krita)
 #: krita/krita.action:2155
@@ -11067,7 +11067,7 @@ msgstr "הסרת תמונית ומשיכה"
 #, kde-format
 msgctxt "action"
 msgid "Remove keyframes moving the tail of animation to the left"
-msgstr ""
+msgstr "להסיר תמוניות מפתח תוך הזזת קצה ההנפשה שמאלה"
 
 #. i18n: context: text @ Action (remove_frames), Actions (Animation), ActionCollection (Krita)
 #: krita/krita.action:2167
@@ -11081,7 +11081,7 @@ msgstr "הסרת תמונית מפתח"
 #, kde-format
 msgctxt "action"
 msgid "Remove keyframes without moving anything around"
-msgstr ""
+msgstr "הסרת תמוניות מפתח מבלי להזיז שום דבר לשום מקום"
 
 #. i18n: context: text @ Action (insert_column_left), Actions (Animation), ActionCollection (Krita)
 #: krita/krita.action:2179
@@ -11097,7 +11097,7 @@ msgctxt "action"
 msgid ""
 "Insert column to the left of selection, moving the tail of animation to the "
 "right"
-msgstr ""
+msgstr "הסרת עמודה משמאל לבחירה, תוך הזזת קצה ההנפשה ימינה"
 
 #. i18n: context: text @ Action (insert_column_right), Actions (Animation), ActionCollection (Krita)
 #: krita/krita.action:2191
@@ -11113,7 +11113,7 @@ msgctxt "action"
 msgid ""
 "Insert column to the right of selection, moving the tail of animation to the "
 "right"
-msgstr ""
+msgstr "הסרת עמודה מימין לבחירה, תוך הזזת קצה ההנפשה ימינה"
 
 #. i18n: context: text @ Action (insert_multiple_columns), Actions (Animation), ActionCollection (Krita)
 #: krita/krita.action:2203
@@ -11127,7 +11127,7 @@ msgstr "הוספת כמה עמודות"
 #, kde-format
 msgctxt "action"
 msgid "Insert several columns based on user parameters."
-msgstr ""
+msgstr "הוספת מספר עמודות לפי משתני המשתמש."
 
 #. i18n: context: text @ Action (remove_columns_and_pull), Actions (Animation), ActionCollection (Krita)
 #: krita/krita.action:2215
@@ -11141,7 +11141,7 @@ msgstr "הסרת עמודה ומשיכה"
 #, kde-format
 msgctxt "action"
 msgid "Remove columns moving the tail of animation to the left"
-msgstr ""
+msgstr "להסיר עמודות תוך הזזת קצה ההנפשה שמאלה"
 
 #. i18n: context: text @ Action (remove_columns), Actions (Animation), ActionCollection (Krita)
 #: krita/krita.action:2227
@@ -11155,7 +11155,7 @@ msgstr "הסרת עמודה"
 #, kde-format
 msgctxt "action"
 msgid "Remove columns without moving anything around"
-msgstr ""
+msgstr "הסרת עמודות מבלי להזיז שום דבר לשום מקום"
 
 #. i18n: context: text @ Action (insert_hold_frame), Actions (Animation), ActionCollection (Krita)
 #: krita/krita.action:2239
@@ -11337,7 +11337,7 @@ msgstr "פינוי מטמון"
 #, kde-format
 msgctxt "action"
 msgid "Clear entire animation cache. Useful for debugging."
-msgstr ""
+msgstr "פינוי כל מטמון ההנפשה. שימושי לניפוי שגיאות."
 
 #. i18n: context: text @ Action (copy_frames), Actions (Animation), ActionCollection (Krita)
 #: krita/krita.action:2395
@@ -11379,7 +11379,7 @@ msgstr "הפיכה לייחודי"
 #, kde-format
 msgctxt "action"
 msgid "Convert clones to unique keyframe instances."
-msgstr ""
+msgstr "המרת כפילויות למופעים ייחודיים של תמוניות מפתח."
 
 #. i18n: context: text @ Action (cut_frames), Actions (Animation), ActionCollection (Krita)
 #: krita/krita.action:2431
@@ -11496,7 +11496,7 @@ msgstr "הפעלת השכבה הבאה"
 #, kde-format
 msgctxt "action"
 msgid "Activate next sibling layer, skipping over groups."
-msgstr ""
+msgstr "הפעלת השכבה האחאית הבאה, תוך דילוג על קבוצות."
 
 #. i18n: context: toolTip @ Action (activateNextSiblingLayer), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (activateNextSiblingLayer), Actions (Layers), ActionCollection (Krita)
@@ -11525,7 +11525,7 @@ msgstr "הפעלת השכבה הקודמת"
 #, kde-format
 msgctxt "action"
 msgid "Activate previous sibling layer, skipping over groups."
-msgstr ""
+msgstr "הפעלת השכבה האחאית הקודמת, תוך דילוג על קבוצות."
 
 #. i18n: context: toolTip @ Action (activatePreviousSiblingLayer), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (activatePreviousSiblingLayer), Actions (Layers), ActionCollection (Krita)
@@ -16764,7 +16764,7 @@ msgid ""
 "Parsing error in the main document at line %1, column %2\n"
 "Error message: %3"
 msgstr ""
-"שגיאת פענוח במסמך הראשי בשורה %1, עמודה %2\n"
+"שגיאת פיענוח במסמך הראשי בשורה %1, עמודה %2\n"
 "הודעת שגיאה: %3"
 
 #: libs/flake/KoPathShapeFactory.cpp:23
@@ -17091,7 +17091,7 @@ msgstr "טגלית"
 #, kde-format
 msgctxt "@title"
 msgid "Hanunoo"
-msgstr ""
+msgstr "האנונו"
 
 #: libs/flake/text/data/KoUnicodeBlockData.cpp:67
 #, kde-format
@@ -17121,7 +17121,7 @@ msgstr "מונגולית"
 #, kde-format
 msgctxt "@title"
 msgid "Unified Canadian Aboriginal Syllabics Extended"
-msgstr ""
+msgstr "הברות קנדיות ילידיות מאוחדות מורחבות"
 
 #: libs/flake/text/data/KoUnicodeBlockData.cpp:72
 #, kde-format
@@ -17157,7 +17157,7 @@ msgstr "מברשות"
 #, kde-format
 msgctxt "@title"
 msgid "Tai Tham"
-msgstr ""
+msgstr "טאי טם"
 
 #: libs/flake/text/data/KoUnicodeBlockData.cpp:78
 #, fuzzy, kde-format
@@ -17896,7 +17896,7 @@ msgstr "בחירה"
 #, kde-format
 msgctxt "@title"
 msgid "Shavian"
-msgstr ""
+msgstr "שווית"
 
 #: libs/flake/text/data/KoUnicodeBlockData.cpp:201
 #, kde-format
@@ -17908,7 +17908,7 @@ msgstr "אוסמאניה"
 #, kde-format
 msgctxt "@title"
 msgid "Osage"
-msgstr ""
+msgstr "אוסייג׳"
 
 #: libs/flake/text/data/KoUnicodeBlockData.cpp:203
 #, kde-format
@@ -17926,7 +17926,7 @@ msgstr "אלבנית קווקזית"
 #, kde-format
 msgctxt "@title"
 msgid "Vithkuqi"
-msgstr ""
+msgstr "ויתקוצ׳י"
 
 #: libs/flake/text/data/KoUnicodeBlockData.cpp:206
 #, kde-format
@@ -17962,7 +17962,7 @@ msgstr "ארמית ממלכתית"
 #, kde-format
 msgctxt "@title"
 msgid "Palmyrene"
-msgstr ""
+msgstr "תדמורית"
 
 #: libs/flake/text/data/KoUnicodeBlockData.cpp:212
 #, kde-format
@@ -20446,30 +20446,30 @@ msgid "Character Variant %1"
 msgstr "הבא %1 נוכחי קדימה"
 
 #: libs/flake/text/KoSvgTextShape.cpp:169
-#: libs/flake/text/KoSvgTextShape.cpp:2610
+#: libs/flake/text/KoSvgTextShape.cpp:2640
 #, kde-format
 msgctxt "Default text for the text shape"
 msgid "Placeholder Text"
 msgstr "טקסט ממלא מקום"
 
-#: libs/flake/text/KoSvgTextShape.cpp:2589
+#: libs/flake/text/KoSvgTextShape.cpp:2619
 #, kde-format
 msgctxt "Text label in SVG Text Tool"
 msgid "Text"
 msgstr "טקסט"
 
-#: libs/flake/text/KoSvgTextShape.cpp:2591
-#: libs/flake/text/KoSvgTextShape.cpp:2599
+#: libs/flake/text/KoSvgTextShape.cpp:2621
+#: libs/flake/text/KoSvgTextShape.cpp:2629
 #, kde-format
 msgid "SVG Text Shape"
 msgstr "צורת טקסט SVG"
 
-#: libs/flake/text/KoSvgTextShape.cpp:2597
+#: libs/flake/text/KoSvgTextShape.cpp:2627
 #, kde-format
 msgid "SVG Text"
 msgstr "טקסט SVG"
 
-#: libs/flake/text/KoSvgTextShape.cpp:2620
+#: libs/flake/text/KoSvgTextShape.cpp:2650
 #, kde-format
 msgctxt "Default text for the text shape"
 msgid "<text>Placeholder Text</text>"
@@ -54335,7 +54335,7 @@ msgstr ""
 #: plugins/impex/jxl/kis_wdg_options_jpegxl.ui:220
 #, kde-format
 msgid "Decoding speed"
-msgstr ""
+msgstr "מהירות פיענוח"
 
 #. i18n: ectx: property (text), widget (QLabel, lblSlowest)
 #: plugins/impex/jxl/kis_wdg_options_jpegxl.ui:229
@@ -54544,9 +54544,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, lblEpf)
 #: plugins/impex/jxl/kis_wdg_options_jpegxl.ui:531
-#, fuzzy, kde-format
+#, kde-format
 msgid "Edge preserving filter strength"
-msgstr "מימדים"
+msgstr "שגיאה בשימור עוצמת הסינון"
 
 #. i18n: ectx: property (text), widget (QLabel, lblMax)
 #: plugins/impex/jxl/kis_wdg_options_jpegxl.ui:555
@@ -54554,7 +54554,7 @@ msgstr "מימדים"
 #: plugins/paintops/defaultpaintops/duplicate/kis_duplicateop_settings_widget.cpp:46
 #, kde-format
 msgid "Strong"
-msgstr "חזק"
+msgstr "חזקה"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, lblNone1)
 #: plugins/impex/jxl/kis_wdg_options_jpegxl.ui:565
@@ -54963,6 +54963,11 @@ msgid ""
 "\n"
 "Do you want to select another location?"
 msgstr ""
+"לא ניתן לטעון תמונת סימוכין שמקושרת לקובץ חיצוני.\n"
+"\n"
+"נתיב: %1\n"
+"\n"
+"לבחור מקום אחר?"
 
 #: plugins/impex/libkra/kis_kra_load_visitor.cpp:148
 #: plugins/impex/libkra/kis_kra_loader.cpp:697
@@ -55263,14 +55268,14 @@ msgid "Failed to save the vector selection data for layer %1."
 msgstr "יצירת שכבה חדשה"
 
 #: plugins/impex/libkra/kis_kra_save_visitor.cpp:521
-#, fuzzy, kde-format
+#, kde-format
 msgid "The metadata backend failed to save the metadata for %1"
-msgstr "יצירת שכבה חדשה"
+msgstr "מנגנון נתוני העל נכשל בשמירת נתוני העל עבור %1"
 
 #: plugins/impex/libkra/kis_kra_save_visitor.cpp:532
-#, fuzzy, kde-format
+#, kde-format
 msgid "Could not write for %1 metadata to the file."
-msgstr "לא ניתן להוסיף שכבה לתמונה"
+msgstr "לא ניתן לכתוב עבור נתוני על מסוג %1 לקובץ."
 
 #: plugins/impex/libkra/kis_kra_saver.cpp:216
 #, kde-format
@@ -55282,19 +55287,19 @@ msgstr "לא ניתן לייצא משאב להטמעה: %1"
 #, kde-format
 msgctxt "Error message when saving a .kra file"
 msgid "Could not write resource: %1"
-msgstr "לא ניתן לכתוב משאבים: %1"
+msgstr "לא ניתן לכתוב משאב: %1"
 
 #: plugins/impex/libkra/kis_kra_saver.cpp:243
 #, kde-format
 msgctxt "Error message when saving a .kra file"
 msgid "Written resource is empty: %1"
-msgstr ""
+msgstr "המשאב הכתוב ריק: %1"
 
 #: plugins/impex/libkra/kis_kra_saver.cpp:249
 #, kde-format
 msgctxt "Error message when saving a .kra file"
 msgid "Written resource is incomplete: %1"
-msgstr ""
+msgstr "המשאב הכתוב חלקי: %1"
 
 #: plugins/impex/libkra/kis_kra_saver.cpp:266
 #: plugins/impex/libkra/kis_kra_saver.cpp:288
@@ -55397,18 +55402,18 @@ msgid ""
 "Parsing error in %1 at line %2, column %3\n"
 "Error message: %4"
 msgstr ""
-"שגיאת פענוח ב־%1, בשורה %2, עמודה %3\n"
+"שגיאת פיענוח ב־%1, בשורה %2, עמודה %3\n"
 "הודעת שגיאה: %4"
 
 #: plugins/impex/libkra/kra_converter.cpp:362
 #, kde-format
 msgid "The format is not supported or the file is corrupted"
-msgstr ""
+msgstr "תסדיר הקובץ הזה לא נתמך או שהקובץ פגום"
 
 #: plugins/impex/libkra/kra_converter.cpp:373
 #, kde-format
 msgid "The file is too new for this version of Krita (%1)."
-msgstr ""
+msgstr "הקובץ הזה חדש מדי לגרסה הזאת של Krita ‏(%1)."
 
 #: plugins/impex/libkra/kra_converter.cpp:379
 #, kde-format
@@ -55424,7 +55429,7 @@ msgstr "הקובץ לא מכיל תמונה."
 #: plugins/impex/pdf/kis_pdf_import.cpp:78
 #, kde-format
 msgid "A password is required to read that pdf"
-msgstr ""
+msgstr "יש למלא סיסמה כדי לקרוא את ה־pdf הזה"
 
 #: plugins/impex/pdf/kis_pdf_import.cpp:87
 #, kde-format
@@ -55594,16 +55599,13 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, interlacing)
 #: plugins/impex/png/kis_wdg_options_png.ui:132
-#, fuzzy, kde-format
+#, kde-format
 msgid "Interlacing"
-msgstr "כפתור איפוס"
+msgstr "שזירה"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel4_2)
 #: plugins/impex/png/kis_wdg_options_png.ui:143
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "The compression will take a long time; saving the file will be slow."
-#| msgid "Small File Size"
+#, kde-format
 msgctxt "The compression will take a long time; saving the file will be slow."
 msgid "Small file size"
 msgstr "גודל קובץ קטן"
@@ -55731,14 +55733,14 @@ msgstr "אפשרויות WebP"
 #, kde-format
 msgctxt "The compression will take a long time; saving the file will be slow."
 msgid "Highest quality"
-msgstr ""
+msgstr "האיכות הכי גבוהה"
 
 #. i18n: ectx: property (text), widget (QLabel, textLabel2)
 #: plugins/impex/qimageio/kis_wdg_options_qimageio.ui:65
 #, kde-format
 msgctxt "The file will save fast but will not be compressed a lot"
 msgid "Lowest quality"
-msgstr "האיכות הנמוכה ביותר"
+msgstr "האיכות הכי נמוכה"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, textLabel1)
 #. i18n: ectx: property (toolTip), widget (KisDoubleSliderSpinBox, imageQuality)
@@ -55833,61 +55835,61 @@ msgstr "&שכבה"
 #, kde-format
 msgctxt "@item:inlistbox Quality"
 msgid "VNG"
-msgstr ""
+msgstr "VNG"
 
 #: plugins/impex/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:324
 #, kde-format
 msgctxt "@item:inlistbox Quality"
 msgid "PPG"
-msgstr ""
+msgstr "PPG"
 
 #: plugins/impex/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:325
 #, kde-format
 msgctxt "@item:inlistbox Quality"
 msgid "AHD"
-msgstr ""
+msgstr "AHD"
 
 #: plugins/impex/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:328
 #, kde-format
 msgctxt "@item:inlistbox Quality"
 msgid "DCB"
-msgstr ""
+msgstr "DCB"
 
 #: plugins/impex/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:329
 #, kde-format
 msgctxt "@item:inlistbox Quality"
 msgid "AHD v2"
-msgstr ""
+msgstr "AHD v2"
 
 #: plugins/impex/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:330
 #, kde-format
 msgctxt "@item:inlistbox Quality"
 msgid "AFD"
-msgstr ""
+msgstr "AFD"
 
 #: plugins/impex/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:331
 #, kde-format
 msgctxt "@item:inlistbox Quality"
 msgid "VCD"
-msgstr ""
+msgstr "VCD"
 
 #: plugins/impex/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:332
 #, kde-format
 msgctxt "@item:inlistbox Quality"
 msgid "VCD & AHD"
-msgstr ""
+msgstr "VCD ו־AHD"
 
 #: plugins/impex/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:333
 #, kde-format
 msgctxt "@item:inlistbox Quality"
 msgid "LMMSE"
-msgstr ""
+msgstr "LMMSE"
 
 #: plugins/impex/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:335
 #, kde-format
 msgctxt "@item:inlistbox Quality"
 msgid "AMaZE"
-msgstr ""
+msgstr "AMaZE"
 
 #: plugins/impex/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:352
 #, kde-format
@@ -56070,7 +56072,7 @@ msgstr "ערבול"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Rebuild"
-msgstr ""
+msgstr "בנייה מחדש"
 
 #: plugins/impex/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:501
 #, kde-format
@@ -56545,22 +56547,22 @@ msgid "None"
 msgstr "ללא"
 
 #: plugins/impex/tiff/kis_dlg_options_tiff.cpp:39
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "TIFF options"
 msgid "JPEG DCT compression"
-msgstr "אפשרויות עירוב"
+msgstr "דחיסת DCT של JPEG"
 
 #: plugins/impex/tiff/kis_dlg_options_tiff.cpp:41
 #, kde-format
 msgctxt "TIFF options"
 msgid "Deflate (ZIP)"
-msgstr ""
+msgstr "Deflate (ZIP)"
 
 #: plugins/impex/tiff/kis_dlg_options_tiff.cpp:44
 #, kde-format
 msgctxt "TIFF options"
 msgid "Lempel-Ziv & Welch"
-msgstr ""
+msgstr "למפל-זיו וולץ׳"
 
 #: plugins/impex/tiff/kis_dlg_options_tiff.cpp:46
 #, kde-format
@@ -56600,7 +56602,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "TIFF image with PSD data"
-msgstr ""
+msgstr "תמונת TIFF עם נתוני PSD"
 
 #: plugins/impex/tiff/kis_tiff_import.cc:1580
 #, kde-format
@@ -56654,13 +56656,13 @@ msgstr "דחיסת שכבות"
 #: plugins/impex/tiff/kis_wdg_options_tiff.ui:99
 #, kde-format
 msgid "RLE"
-msgstr ""
+msgstr "RLE"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, kComboBoxPSDCompressionType)
 #: plugins/impex/tiff/kis_wdg_options_tiff.ui:104
 #, kde-format
 msgid "ZIP"
-msgstr ""
+msgstr "ZIP"
 
 #. i18n: ectx: property (text), widget (QCheckBox, alpha)
 #: plugins/impex/tiff/kis_wdg_options_tiff.ui:134
@@ -56692,13 +56694,13 @@ msgstr "הכי מהיר"
 #, kde-format
 msgid ""
 "These settings determine how much information is lost during compression"
-msgstr ""
+msgstr "ההגדרות האלו קובעות כמה פרטים הולכים לאיבוד במהלך הדחיסה"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBoxDeflate)
 #: plugins/impex/tiff/kis_wdg_options_tiff.ui:329
-#, fuzzy, kde-format
+#, kde-format
 msgid "Deflate Compression Options"
-msgstr "אפשרויות דחיסת "
+msgstr "אפשרויות דחיסת Deflate"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #. i18n: ectx: property (text), widget (QLabel, label_3)
@@ -56758,7 +56760,7 @@ msgstr "לאורך"
 #, kde-format
 msgctxt "WebP presets"
 msgid "Outdoor photo"
-msgstr ""
+msgstr "תמונת חוץ"
 
 #: plugins/impex/webp/kis_wdg_options_webp.cpp:38
 #, kde-format

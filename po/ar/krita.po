@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-23 00:41+0000\n"
-"PO-Revision-Date: 2026-04-09 11:01+0400\n"
+"POT-Creation-Date: 2026-04-24 00:41+0000\n"
+"PO-Revision-Date: 2026-04-23 10:18+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -20417,30 +20417,30 @@ msgid "Character Variant %1"
 msgstr "تنويعة المحرف %1"
 
 #: libs/flake/text/KoSvgTextShape.cpp:169
-#: libs/flake/text/KoSvgTextShape.cpp:2610
+#: libs/flake/text/KoSvgTextShape.cpp:2640
 #, kde-format
 msgctxt "Default text for the text shape"
 msgid "Placeholder Text"
 msgstr "نص مبدئي"
 
-#: libs/flake/text/KoSvgTextShape.cpp:2589
+#: libs/flake/text/KoSvgTextShape.cpp:2619
 #, kde-format
 msgctxt "Text label in SVG Text Tool"
 msgid "Text"
 msgstr "نص"
 
-#: libs/flake/text/KoSvgTextShape.cpp:2591
-#: libs/flake/text/KoSvgTextShape.cpp:2599
+#: libs/flake/text/KoSvgTextShape.cpp:2621
+#: libs/flake/text/KoSvgTextShape.cpp:2629
 #, kde-format
 msgid "SVG Text Shape"
 msgstr "شكل SVG نصّيّ"
 
-#: libs/flake/text/KoSvgTextShape.cpp:2597
+#: libs/flake/text/KoSvgTextShape.cpp:2627
 #, kde-format
 msgid "SVG Text"
 msgstr "‏SVG نصّيّ"
 
-#: libs/flake/text/KoSvgTextShape.cpp:2620
+#: libs/flake/text/KoSvgTextShape.cpp:2650
 #, kde-format
 msgctxt "Default text for the text shape"
 msgid "<text>Placeholder Text</text>"
@@ -35627,10 +35627,9 @@ msgstr ""
 "موقع آخر."
 
 #: libs/ui/KisImportExportFilter.cpp:179
-#, fuzzy, kde-format
-#| msgid "The file could not be opened."
+#, kde-format
 msgid "%1 could not be opened"
-msgstr "لا أستطيع فتح الملف."
+msgstr "لا يمكن فتح %1"
 
 #: libs/ui/KisImportExportFilter.cpp:191
 #, kde-format
@@ -38994,16 +38993,13 @@ msgstr ""
 
 #: libs/ui/widgets/kis_custom_image_widget.cc:434
 #: plugins/dockers/logdocker/LogDockerDock.cpp:112
-#, fuzzy, kde-format
-#| msgid ""
-#| "Could not save %1.\n"
-#| "Reason: %2"
+#, kde-format
 msgid ""
 "Could not save %1.\n"
 "Reason: %2."
 msgstr ""
 "تعذر حفظ %1.\n"
-"السبب: %2"
+"السبب: %2."
 
 #: libs/ui/widgets/kis_custom_image_widget.cc:536
 #, kde-format

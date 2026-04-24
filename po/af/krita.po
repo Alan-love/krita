@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita VERSION\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-23 00:41+0000\n"
+"POT-Creation-Date: 2026-04-24 00:41+0000\n"
 "PO-Revision-Date: 2002-11-07 11:41+0200\n"
 "Last-Translator: WEB-Translator <http://kde.af.org.za>\n"
 "Language-Team: AFRIKAANS <AF@lia.org.za>\n"
@@ -20412,30 +20412,30 @@ msgid "Character Variant %1"
 msgstr "Boonste Huidige %1"
 
 #: libs/flake/text/KoSvgTextShape.cpp:169
-#: libs/flake/text/KoSvgTextShape.cpp:2610
+#: libs/flake/text/KoSvgTextShape.cpp:2640
 #, fuzzy, kde-format
 msgctxt "Default text for the text shape"
 msgid "Placeholder Text"
 msgstr "Voeg by Teks"
 
-#: libs/flake/text/KoSvgTextShape.cpp:2589
+#: libs/flake/text/KoSvgTextShape.cpp:2619
 #, fuzzy, kde-format
 msgctxt "Text label in SVG Text Tool"
 msgid "Text"
 msgstr "Patrone"
 
-#: libs/flake/text/KoSvgTextShape.cpp:2591
-#: libs/flake/text/KoSvgTextShape.cpp:2599
+#: libs/flake/text/KoSvgTextShape.cpp:2621
+#: libs/flake/text/KoSvgTextShape.cpp:2629
 #, fuzzy, kde-format
 msgid "SVG Text Shape"
 msgstr "Skerpheid:"
 
-#: libs/flake/text/KoSvgTextShape.cpp:2597
+#: libs/flake/text/KoSvgTextShape.cpp:2627
 #, fuzzy, kde-format
 msgid "SVG Text"
 msgstr "Patrone"
 
-#: libs/flake/text/KoSvgTextShape.cpp:2620
+#: libs/flake/text/KoSvgTextShape.cpp:2650
 #, kde-format
 msgctxt "Default text for the text shape"
 msgid "<text>Placeholder Text</text>"

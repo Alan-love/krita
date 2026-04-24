@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-23 00:41+0000\n"
-"PO-Revision-Date: 2026-04-21 05:44+0200\n"
+"POT-Creation-Date: 2026-04-24 00:41+0000\n"
+"PO-Revision-Date: 2026-04-23 06:39+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -15581,19 +15581,17 @@ msgstr "რბილი"
 
 #. i18n: context: text @ Action (enable_sap), Actions (Select), ActionCollection (Menu)
 #: krita/kritamenu.action:1609
-#, fuzzy, kde-format
-#| msgid "Enable Selection Actions Bar"
+#, kde-format
 msgctxt "action"
 msgid "Enable Selection Actions Bar"
 msgstr "მონიშვნის ქმედებების პანელის ჩართვა"
 
 #. i18n: context: text @ Action (configure_sap), Actions (Select), ActionCollection (Menu)
 #: krita/kritamenu.action:1621
-#, fuzzy, kde-format
-#| msgid "Enable Selection Actions Bar"
+#, kde-format
 msgctxt "action"
 msgid "Configure selection actions bar"
-msgstr "მონიშვნის ქმედებების პანელის ჩართვა"
+msgstr "მონიშვნის ქმედებების პანელის მორგება"
 
 #. i18n: context: text @ Actions (Filter), ActionCollection (Menu)
 #: krita/kritamenu.action:1634
@@ -20477,30 +20475,30 @@ msgid "Character Variant %1"
 msgstr "სიმბოლოს ვარიანტი %1"
 
 #: libs/flake/text/KoSvgTextShape.cpp:169
-#: libs/flake/text/KoSvgTextShape.cpp:2610
+#: libs/flake/text/KoSvgTextShape.cpp:2640
 #, kde-format
 msgctxt "Default text for the text shape"
 msgid "Placeholder Text"
 msgstr "ადგილმჭერი ტექსტი"
 
-#: libs/flake/text/KoSvgTextShape.cpp:2589
+#: libs/flake/text/KoSvgTextShape.cpp:2619
 #, kde-format
 msgctxt "Text label in SVG Text Tool"
 msgid "Text"
 msgstr "ტექსტი"
 
-#: libs/flake/text/KoSvgTextShape.cpp:2591
-#: libs/flake/text/KoSvgTextShape.cpp:2599
+#: libs/flake/text/KoSvgTextShape.cpp:2621
+#: libs/flake/text/KoSvgTextShape.cpp:2629
 #, kde-format
 msgid "SVG Text Shape"
 msgstr "SVG ტექსტის მოხაზულობა"
 
-#: libs/flake/text/KoSvgTextShape.cpp:2597
+#: libs/flake/text/KoSvgTextShape.cpp:2627
 #, kde-format
 msgid "SVG Text"
 msgstr "SVG ტექსტი"
 
-#: libs/flake/text/KoSvgTextShape.cpp:2620
+#: libs/flake/text/KoSvgTextShape.cpp:2650
 #, kde-format
 msgctxt "Default text for the text shape"
 msgid "<text>Placeholder Text</text>"
@@ -28557,7 +28555,7 @@ msgstr "&პროფილები:"
 #: libs/ui/forms/wdgapplyprofile.ui:88
 #, kde-format
 msgid "Rendering intent determines the bias in the color conversion."
-msgstr ""
+msgstr "რენდერის განზრახვა განსაზღვრავს მიკერძოებას ფერების გარდაქმნისას."
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #. i18n: ectx: property (title), widget (QGroupBox, grpRenderIntent)
@@ -31647,6 +31645,9 @@ msgid ""
 "p><p><span style=\" font-weight:600;\">Recommended value:</span> 2500&nbsp;"
 "px</p></body></html>"
 msgstr ""
+"<html><head/><body><p>ზომის ლიმიტი, რის შემდეგაც კადრები დაპატარავდება</"
+"p><p><span style=\" font-weight:600;\">რეკომენდებული მნიშვნელობაა:</span> "
+"2500&nbsp;px</p></body></html>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, chkUseRegionOfInterest)
 #: libs/ui/forms/wdgperformancesettings.ui:506
@@ -31655,6 +31656,8 @@ msgid ""
 "<html><head/><body><p>When the image is too big, render only currently "
 "visible part of it</p></body></html>"
 msgstr ""
+"<html><head/><body><p>როცა გამოსახულება მეტისმეტად დიდია, მოხდება, მხოლოდ, "
+"მისი ხილული ნაწილის რენდერი</p></body></html>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkUseRegionOfInterest)
 #: libs/ui/forms/wdgperformancesettings.ui:509
@@ -31679,6 +31682,8 @@ msgid ""
 "<html><head/><body><p>Automatically prerender animation cache in background "
 "when the user is idle</p></body></html>"
 msgstr ""
+"<html><head/><body><p>ანიმაციის კეშის ავტომატური პრერენდერი ფონურად, როცა "
+"მომხმარებელი უქმედაა</p></body></html>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkBackgroundCacheGeneration)
 #: libs/ui/forms/wdgperformancesettings.ui:532
@@ -34444,10 +34449,9 @@ msgid "Crop to Selection"
 msgstr "მონიშნულამდე ამოჭრა"
 
 #: libs/ui/kis_selection_actions_panel.cpp:115
-#, fuzzy, kde-format
-#| msgid "Enable Selection Actions Bar"
+#, kde-format
 msgid "Disable selection actions bar"
-msgstr "მონიშვნის ქმედებების პანელის ჩართვა"
+msgstr "მონიშვნის ქმედებების პანელის გამორთვა"
 
 #: libs/ui/kis_selection_manager.cc:638
 #, kde-format
@@ -45929,6 +45933,8 @@ msgstr "ფართო"
 msgctxt "@info:tooltip"
 msgid "While typically defines a looser algorithm, currently same as auto."
 msgstr ""
+"მიუხედავად იმისა, რომ ჩვეულებრივ განსაზღვრავს უფრო რბილ ალგორითმს, ამჟამად "
+"იგივეა, რაც ავტომატური."
 
 #: plugins/dockers/textproperties/qml/LineBreak.qml:82
 #, kde-format
@@ -45937,6 +45943,8 @@ msgid ""
 "Same as auto. Soft breaks will be allowed before small kana if text language "
 "is Japanese."
 msgstr ""
+"იგივეა, რაც ავტომატი. რბილი გამოტოვებები დაშვებული იქნება პატარა კანამდე, თუ "
+"ტექსტის ენა იაპონურია."
 
 #: plugins/dockers/textproperties/qml/LineBreak.qml:83
 #, kde-format
@@ -46851,7 +46859,7 @@ msgstr "ხაზგასმის მდებარეობა"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Specify the position of the underline for text-decoration."
-msgstr ""
+msgstr "მიუთითეთ ხაზგასმის მდებარეობა text-decoration-ისთვის."
 
 #: plugins/dockers/textproperties/qml/UnderlinePosition.qml:17
 #, kde-format
@@ -49130,6 +49138,10 @@ msgid ""
 "bar and in toolbars as required. A string to use KDE's image loading system, "
 "or a custom QPixmap or QIcon, or None."
 msgstr ""
+"ამ ქმედებასთან ასოცირებული ხატულა. ის ნაჩვენები იქნება ტექსტის გვერდით "
+"მენიუს ზოლში და ხელსაწყოთა ზოლში, როცა საჭიროა. სტრიქონი KDE-ის "
+"გამოსახულების ჩატვირთვის სისტემისტვის, ან მორგებული QPixma-ისთვის, ან QIcon-"
+"ისთვის, ან არაფერი."
 
 #. i18n: ectx: property (whatsThis), widget (QLabel, shortcut)
 #: plugins/extensions/pykrita/plugin/info.ui:41

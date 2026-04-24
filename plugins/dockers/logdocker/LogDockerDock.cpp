@@ -29,14 +29,134 @@
 #include "KisMainWindow.h"
 #include "kis_config.h"
 
-MessageSender *LogDockerDock::s_messageSender {new MessageSender()};
+#include <QThread>
+#include <QMutex>
+#include <QWaitCondition>
+#include <QGlobalStatic>
+#include <KisStaticInitializer.h>
+
 QTextCharFormat LogDockerDock::s_debug;
 QTextCharFormat LogDockerDock::s_info;
 QTextCharFormat LogDockerDock::s_warning;
 QTextCharFormat LogDockerDock::s_critical;
 QTextCharFormat LogDockerDock::s_fatal;
 
-static QtMessageHandler s_originalMessageHandler{nullptr};
+KIS_DECLARE_STATIC_INITIALIZER {
+    qRegisterMetaType<QtMsgType>("QtMsgType");
+}
+
+/**
+ * A background thread that receives all the debug messages from 
+ * the main thread and resends them forward using qt-signals. We
+ * cannot resend the message in the same thread, because the a 
+ * qDebug() message can come form the qt-signaling code, which
+ * can cause deadlocks.
+ */
+class MessageForwarderThread : public QThread
+{
+    Q_OBJECT
+public:
+    void run() override {
+        while (1) {
+            QMutexLocker locker(&m_mutex);
+            m_waitCondition.wait(&m_mutex);
+            if (m_exitFlag) break;
+
+            while (!m_messages.empty()) {
+                auto message = m_messages.dequeue();
+                Q_EMIT sigDeliverMessage(message.first, message.second);
+            }
+        }
+    }
+
+    void pushMessage(QtMsgType type, const QString &message) {
+        QMutexLocker locker(&m_mutex);
+        m_messages.enqueue(std::make_pair(type, message));
+        locker.unlock();
+        m_waitCondition.wakeAll();
+    }
+
+    void pushExitFlag() {
+        QMutexLocker locker(&m_mutex);
+        m_exitFlag = true;
+        locker.unlock();
+        m_waitCondition.wakeAll();
+    }
+
+Q_SIGNALS:
+    void sigDeliverMessage(QtMsgType type, const QString &message);
+
+
+private:
+    QMutex m_mutex;
+    QWaitCondition m_waitCondition;
+    QQueue<std::pair<QtMsgType, QString>> m_messages;
+    bool m_exitFlag {false};
+};
+
+/**
+ * A forward declaration of the handler that will be passed to Qt as
+ * a message handler. The handler will use MessageHandler object
+ * below to post the actual messages.
+ */
+void kritaLoggerMessageHandler(QtMsgType type, const QMessageLogContext &context, const QString &msg);
+
+/**
+ * MessageHandler is the main object that handles management of the debug
+ * message delivery. It creates a backgroud thread and set up all the 
+ * connections when requested.
+ * 
+ * MessageHandler is a singleton, i.e. it will be reused by **all**
+ * the logging dockers we have in any of Krita's windows.
+ */
+class MessageHandler : public QObject
+{
+    Q_OBJECT
+public:
+    ~MessageHandler() {
+        setLoggingEnabled(false);
+    }
+
+    void setLoggingEnabled(bool value) {
+        if (value == isLoggingEnabled()) return;
+        
+        if (value) {
+            const QtMessageHandler oldHandler = qInstallMessageHandler(kritaLoggerMessageHandler);
+            m_originalMessageHandler = oldHandler;
+            m_forwarderThread.reset(new MessageForwarderThread());
+            connect(m_forwarderThread.get(), &MessageForwarderThread::sigDeliverMessage, this, &MessageHandler::sigDeliverMessage);
+            m_forwarderThread->start();
+        } else {
+            qInstallMessageHandler(nullptr);
+            m_originalMessageHandler = nullptr;
+            m_forwarderThread->pushExitFlag();
+            m_forwarderThread->wait();
+            m_forwarderThread.reset();
+        }
+    }
+
+    bool isLoggingEnabled() const {
+        return m_originalMessageHandler;
+    }
+
+Q_SIGNALS:
+    void sigDeliverMessage(QtMsgType type, const QString &message);
+
+public:
+    QtMessageHandler m_originalMessageHandler {nullptr};
+    std::unique_ptr<MessageForwarderThread> m_forwarderThread;
+};
+
+Q_GLOBAL_STATIC(MessageHandler, s_messageHandlerObject)
+
+void kritaLoggerMessageHandler(QtMsgType type, const QMessageLogContext &context, const QString &message)
+{
+    KIS_SAFE_ASSERT_RECOVER_RETURN(s_messageHandlerObject->m_forwarderThread);
+    KIS_SAFE_ASSERT_RECOVER_RETURN(s_messageHandlerObject->m_originalMessageHandler);
+    
+    s_messageHandlerObject->m_forwarderThread->pushMessage(type, message);
+    s_messageHandlerObject->m_originalMessageHandler(type, context, message);
+}
 
 LogDockerDock::LogDockerDock( )
     : QDockWidget(i18n("Log Viewer"))
@@ -59,8 +179,7 @@ LogDockerDock::LogDockerDock( )
     bnSettings->setIcon(koIcon("configure-thicker"));
     connect(bnSettings, SIGNAL(clicked(bool)), SLOT(settings()));
 
-    qRegisterMetaType<QtMsgType>("QtMsgType");
-    connect(s_messageSender, SIGNAL(emitMessage(QtMsgType,QString)), this, SLOT(insertMessage(QtMsgType,QString)), Qt::AutoConnection);
+    connect(s_messageHandlerObject, SIGNAL(sigDeliverMessage(QtMsgType,QString)), this, SLOT(insertMessage(QtMsgType,QString)), Qt::AutoConnection);
 
     changeTheme();
 }
@@ -78,18 +197,14 @@ void LogDockerDock::setViewManager(KisViewManager *kisview)
 void LogDockerDock::toggleLogging(bool toggle)
 {
     KisConfig(false).writeEntry<bool>("logviewer_enabled", toggle);
+    
     if (toggle) {
-        const QtMessageHandler oldHandler = qInstallMessageHandler(messageHandler);
-        if (!s_originalMessageHandler) {
-            s_originalMessageHandler = oldHandler;
-        }
         applyCategories();
-    }
-    else {
-        qInstallMessageHandler(nullptr);
+    } else {
         QLoggingCategory::setFilterRules(QString());
     }
 
+    s_messageHandlerObject->setLoggingEnabled(toggle);
 }
 
 void LogDockerDock::clearLog()
@@ -280,14 +395,6 @@ void LogDockerDock::applyCategories()
     QLoggingCategory::setFilterRules(filters.join("\n"));
 }
 
-void LogDockerDock::messageHandler(QtMsgType type, const QMessageLogContext &context, const QString &msg)
-{
-    s_messageSender->sendMessage(type, msg);
-    if (s_originalMessageHandler) {
-        s_originalMessageHandler(type, context, msg);
-    }
-}
-
 void LogDockerDock::insertMessage(QtMsgType type, const QString &msg)
 {
     QTextDocument *doc = txtLogViewer->document();
@@ -338,7 +445,4 @@ void LogDockerDock::changeTheme()
     s_fatal.setFontWeight(QFont::Bold);
 }
 
-void MessageSender::sendMessage(QtMsgType type, const QString &msg)
-{
-    Q_EMIT emitMessage(type, msg);
-}
+#include <LogDockerDock.moc>

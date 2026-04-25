@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-24 00:41+0000\n"
+"POT-Creation-Date: 2026-04-25 00:43+0000\n"
 "PO-Revision-Date: 2025-11-17 18:44+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -9621,7 +9621,7 @@ msgstr "顯示全域選取區域遮罩"
 #. i18n: context: text @ Actions (Filters), ActionCollection (Krita)
 #. i18n: context: text @ Actions (Filters), ActionCollection (Krita)
 #. i18n: context: text @ Actions (Filters), ActionCollection (Krita)
-#: krita/krita.action:1039 plugins/dockers/logdocker/LogDockerDock.cpp:152
+#: krita/krita.action:1039 plugins/dockers/logdocker/LogDockerDock.cpp:267
 #: plugins/filters/asccdl/asccdl.action:4
 #: plugins/filters/colorsfilters/colorsfilters.action:4
 #: plugins/filters/convertheightnormalmap/convertheightnormalmap.action:4
@@ -24129,7 +24129,7 @@ msgstr "本機資源"
 #: plugins/assistants/Assistants/kis_assistant_tool.cc:1581
 #: plugins/assistants/Assistants/kis_assistant_tool.cc:1584
 #: plugins/dockers/gamutmask/gamutmask_dock.cpp:293
-#: plugins/dockers/logdocker/LogDockerDock.cpp:111
+#: plugins/dockers/logdocker/LogDockerDock.cpp:226
 #: plugins/dockers/storyboarddocker/DlgExportStoryboard.cpp:175
 #: plugins/dockers/storyboarddocker/DlgExportStoryboard.cpp:178
 #: plugins/dockers/storyboarddocker/DlgExportStoryboard.cpp:187
@@ -24366,7 +24366,7 @@ msgstr "含未儲存更動"
 #: libs/resources/KisResourceModel.cpp:128
 #: libs/resources/KisTagResourceModel.cpp:653
 #: libs/ui/animation/VideoImportDialog.ui:149
-#: plugins/dockers/logdocker/LogDockerDock.cpp:196
+#: plugins/dockers/logdocker/LogDockerDock.cpp:311
 #: plugins/impex/jpeg/kis_wdg_options_jpeg.ui:262
 #: plugins/impex/jxl/kis_wdg_options_jpegxl.ui:1019
 #: plugins/impex/webp/kis_wdg_options_webp.ui:818
@@ -26242,7 +26242,7 @@ msgstr "匯入影片動畫"
 #: libs/ui/forms/wdgcolorsettings.ui:40 libs/ui/forms/wdggeneralsettings.ui:311
 #: libs/ui/forms/wdgperformancesettings.ui:49 libs/ui/KoDocumentInfoDlg.cpp:91
 #: libs/ui/KoDocumentInfoDlg.cpp:92
-#: plugins/dockers/logdocker/LogDockerDock.cpp:128
+#: plugins/dockers/logdocker/LogDockerDock.cpp:243
 #: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:103
 #: plugins/generators/gradient/KisGradientGeneratorConfigWidget.ui:49
 #: plugins/impex/jxl/kis_wdg_options_jpegxl.ui:34
@@ -27879,7 +27879,7 @@ msgid "Canvas Input"
 msgstr "畫布輸入"
 
 #: libs/ui/dialogs/kis_dlg_preferences.cc:2589
-#: plugins/dockers/logdocker/LogDockerDock.cpp:200
+#: plugins/dockers/logdocker/LogDockerDock.cpp:315
 #, kde-format
 msgid "Color Management"
 msgstr "色彩管理"
@@ -30413,7 +30413,7 @@ msgstr "擴張空白佔位符"
 
 #. i18n: ectx: attribute (title), widget (QWidget, Tools)
 #: libs/ui/forms/wdggeneralsettings.ui:979
-#: plugins/dockers/logdocker/LogDockerDock.cpp:144
+#: plugins/dockers/logdocker/LogDockerDock.cpp:259
 #, kde-format
 msgid "Tools"
 msgstr "工具"
@@ -39281,7 +39281,7 @@ msgstr ""
 "框。"
 
 #: libs/ui/widgets/kis_custom_image_widget.cc:434
-#: plugins/dockers/logdocker/LogDockerDock.cpp:112
+#: plugins/dockers/logdocker/LogDockerDock.cpp:227
 #, fuzzy, kde-format
 #| msgid ""
 #| "Could not save %1\n"
@@ -44094,85 +44094,85 @@ msgstr "檢視或修改圖層屬性"
 msgid "Delete the layer or mask"
 msgstr "刪除圖層或遮罩"
 
-#: plugins/dockers/logdocker/LogDockerDock.cpp:42
+#: plugins/dockers/logdocker/LogDockerDock.cpp:162
 #, kde-format
 msgid "Log Viewer"
 msgstr "紀錄檢視器"
 
-#: plugins/dockers/logdocker/LogDockerDock.cpp:121
+#: plugins/dockers/logdocker/LogDockerDock.cpp:236
 #, kde-format
 msgid "Log Settings"
 msgstr "紀錄設定"
 
-#: plugins/dockers/logdocker/LogDockerDock.cpp:132
+#: plugins/dockers/logdocker/LogDockerDock.cpp:247
 #, kde-format
 msgid "Resource Management"
 msgstr "資源管理"
 
-#: plugins/dockers/logdocker/LogDockerDock.cpp:136
+#: plugins/dockers/logdocker/LogDockerDock.cpp:251
 #, kde-format
 msgid "Image Core"
 msgstr "影像核心"
 
-#: plugins/dockers/logdocker/LogDockerDock.cpp:140
+#: plugins/dockers/logdocker/LogDockerDock.cpp:255
 #, kde-format
 msgid "Registries"
 msgstr "註冊項"
 
-#: plugins/dockers/logdocker/LogDockerDock.cpp:148
+#: plugins/dockers/logdocker/LogDockerDock.cpp:263
 #, kde-format
 msgid "Tile Engine"
 msgstr "分塊引擎"
 
-#: plugins/dockers/logdocker/LogDockerDock.cpp:156
+#: plugins/dockers/logdocker/LogDockerDock.cpp:271
 #, kde-format
 msgid "Plugin Management"
 msgstr "外掛程式管理"
 
-#: plugins/dockers/logdocker/LogDockerDock.cpp:160
+#: plugins/dockers/logdocker/LogDockerDock.cpp:275
 #, kde-format
 msgid "User Interface"
 msgstr "使用者介面"
 
-#: plugins/dockers/logdocker/LogDockerDock.cpp:164
+#: plugins/dockers/logdocker/LogDockerDock.cpp:279
 #, kde-format
 msgid "File loading and saving"
 msgstr "檔案載入和儲存"
 
-#: plugins/dockers/logdocker/LogDockerDock.cpp:168
+#: plugins/dockers/logdocker/LogDockerDock.cpp:283
 #, kde-format
 msgid "Mathematics and calculations"
 msgstr "數學和計算"
 
-#: plugins/dockers/logdocker/LogDockerDock.cpp:172
+#: plugins/dockers/logdocker/LogDockerDock.cpp:287
 #, fuzzy, kde-format
 #| msgid "Image Rendering"
 msgid "Image Rendering"
 msgstr "影像繪製"
 
-#: plugins/dockers/logdocker/LogDockerDock.cpp:176
+#: plugins/dockers/logdocker/LogDockerDock.cpp:291
 #, kde-format
 msgid "Scripting"
 msgstr "指令稿處理"
 
-#: plugins/dockers/logdocker/LogDockerDock.cpp:180
+#: plugins/dockers/logdocker/LogDockerDock.cpp:295
 #, kde-format
 msgid "Input handling"
 msgstr "輸入處理"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab2)
-#: plugins/dockers/logdocker/LogDockerDock.cpp:184
+#: plugins/dockers/logdocker/LogDockerDock.cpp:299
 #: plugins/extensions/pykrita/plugin/info.ui:17
 #, kde-format
 msgid "Actions"
 msgstr "操作"
 
-#: plugins/dockers/logdocker/LogDockerDock.cpp:188
+#: plugins/dockers/logdocker/LogDockerDock.cpp:303
 #, kde-format
 msgid "Tablet Handling"
 msgstr "數位板處理"
 
-#: plugins/dockers/logdocker/LogDockerDock.cpp:192
+#: plugins/dockers/logdocker/LogDockerDock.cpp:307
 #, kde-format
 msgid "GPU Canvas"
 msgstr "GPU 畫布"
@@ -46231,7 +46231,7 @@ msgid "Unicode-Bidi"
 msgstr ""
 
 #: plugins/dockers/textproperties/qml/Direction.qml:136
-#: plugins/dockers/textproperties/qml/FontStyle.qml:339
+#: plugins/dockers/textproperties/qml/FontStyle.qml:386
 #: plugins/dockers/textproperties/qml/LineBreak.qml:81
 #: plugins/dockers/textproperties/qml/OTCaps.qml:77
 #: plugins/dockers/textproperties/qml/OTEastAsian.qml:100
@@ -46473,66 +46473,98 @@ msgid ""
 "weight, bold, optical-size, variation"
 msgstr ""
 
-#: plugins/dockers/textproperties/qml/FontStyle.qml:284
+#. i18n: ectx: property (text), widget (QCheckBox, chkBoldKeyword)
+#. i18n: ectx: property (text), widget (QCheckBox, chkBoldElement)
+#. i18n: ectx: property (text), widget (QCheckBox, chkBoldAttribute)
+#. i18n: ectx: property (text), widget (QCheckBox, chkBoldValue)
+#. i18n: ectx: property (text), widget (QCheckBox, chkBoldComment)
+#: plugins/dockers/textproperties/qml/FontStyle.qml:283
+#: plugins/python/comics_project_management_tools/comics_export_dialog.py:362
+#: plugins/tools/svgtexttool/WdgSvgTextSettings.ui:33
+#: plugins/tools/svgtexttool/WdgSvgTextSettings.ui:61
+#: plugins/tools/svgtexttool/WdgSvgTextSettings.ui:89
+#: plugins/tools/svgtexttool/WdgSvgTextSettings.ui:117
+#: plugins/tools/svgtexttool/WdgSvgTextSettings.ui:145
+#, kde-format
+msgid "Bold"
+msgstr "粗體"
+
+#. i18n: ectx: property (text), widget (QCheckBox, chkItalicKeyword)
+#. i18n: ectx: property (text), widget (QCheckBox, chkItalicElement)
+#. i18n: ectx: property (text), widget (QCheckBox, chkItalicAttribute)
+#. i18n: ectx: property (text), widget (QCheckBox, chkItalicValue)
+#. i18n: ectx: property (text), widget (QCheckBox, chkItalicComment)
+#: plugins/dockers/textproperties/qml/FontStyle.qml:304
+#: plugins/python/comics_project_management_tools/comics_export_dialog.py:363
+#: plugins/tools/svgtexttool/WdgSvgTextSettings.ui:40
+#: plugins/tools/svgtexttool/WdgSvgTextSettings.ui:68
+#: plugins/tools/svgtexttool/WdgSvgTextSettings.ui:96
+#: plugins/tools/svgtexttool/WdgSvgTextSettings.ui:124
+#: plugins/tools/svgtexttool/WdgSvgTextSettings.ui:152
+#, kde-format
+msgid "Italic"
+msgstr "斜體"
+
+#: plugins/dockers/textproperties/qml/FontStyle.qml:331
 #, fuzzy, kde-format
 #| msgid "Height: "
 msgctxt "@label:slider"
 msgid "Weight: "
 msgstr "高度："
 
-#: plugins/dockers/textproperties/qml/FontStyle.qml:302
+#: plugins/dockers/textproperties/qml/FontStyle.qml:349
 #, kde-format
 msgctxt "@option:check"
 msgid "Synthesize Bold"
 msgstr ""
 
-#: plugins/dockers/textproperties/qml/FontStyle.qml:315
+#: plugins/dockers/textproperties/qml/FontStyle.qml:362
 #, fuzzy, kde-format
 #| msgid "Width: "
 msgctxt "@label:slider"
 msgid "Width: "
 msgstr "寬度："
 
-#: plugins/dockers/textproperties/qml/FontStyle.qml:328
+#: plugins/dockers/textproperties/qml/FontStyle.qml:375
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Slant:"
 msgstr ""
 
-#: plugins/dockers/textproperties/qml/FontStyle.qml:340
+#: plugins/dockers/textproperties/qml/FontStyle.qml:387
 #, fuzzy, kde-format
 #| msgid "Italic"
 msgctxt "@label:inlistbox"
 msgid "Italic"
 msgstr "斜體"
 
-#: plugins/dockers/textproperties/qml/FontStyle.qml:341
+#: plugins/dockers/textproperties/qml/FontStyle.qml:388
 #, kde-format
 msgctxt "@label:inlistbox"
 msgid "Oblique"
 msgstr ""
 
-#: plugins/dockers/textproperties/qml/FontStyle.qml:362
+#: plugins/dockers/textproperties/qml/FontStyle.qml:409
 #, fuzzy, kde-format
 #| msgid "°"
 msgctxt "@item:valuesuffix"
 msgid "°"
 msgstr "°"
 
-#: plugins/dockers/textproperties/qml/FontStyle.qml:393
+#: plugins/dockers/textproperties/qml/FontStyle.qml:440
 #, kde-format
 msgctxt "@option:check"
 msgid "Synthesize Slant"
 msgstr ""
 
-#: plugins/dockers/textproperties/qml/FontStyle.qml:408
+#: plugins/dockers/textproperties/qml/FontStyle.qml:455
 #, fuzzy, kde-format
 #| msgid "Optimize"
 msgctxt "@option:check"
 msgid "Optical Size"
 msgstr "最佳化"
 
-#: plugins/dockers/textproperties/qml/FontStyle.qml:432
+#: plugins/dockers/textproperties/qml/FontStyle.qml:479
 #, kde-format
 msgid "No extra variable axes in this font"
 msgstr ""
@@ -62325,36 +62357,6 @@ msgstr "移除作者"
 #: plugins/python/comics_project_management_tools/comics_export_dialog.py:343
 msgid "Use font"
 msgstr "使用字型"
-
-#. i18n: ectx: property (text), widget (QCheckBox, chkBoldKeyword)
-#. i18n: ectx: property (text), widget (QCheckBox, chkBoldElement)
-#. i18n: ectx: property (text), widget (QCheckBox, chkBoldAttribute)
-#. i18n: ectx: property (text), widget (QCheckBox, chkBoldValue)
-#. i18n: ectx: property (text), widget (QCheckBox, chkBoldComment)
-#: plugins/python/comics_project_management_tools/comics_export_dialog.py:362
-#: plugins/tools/svgtexttool/WdgSvgTextSettings.ui:33
-#: plugins/tools/svgtexttool/WdgSvgTextSettings.ui:61
-#: plugins/tools/svgtexttool/WdgSvgTextSettings.ui:89
-#: plugins/tools/svgtexttool/WdgSvgTextSettings.ui:117
-#: plugins/tools/svgtexttool/WdgSvgTextSettings.ui:145
-#, kde-format
-msgid "Bold"
-msgstr "粗體"
-
-#. i18n: ectx: property (text), widget (QCheckBox, chkItalicKeyword)
-#. i18n: ectx: property (text), widget (QCheckBox, chkItalicElement)
-#. i18n: ectx: property (text), widget (QCheckBox, chkItalicAttribute)
-#. i18n: ectx: property (text), widget (QCheckBox, chkItalicValue)
-#. i18n: ectx: property (text), widget (QCheckBox, chkItalicComment)
-#: plugins/python/comics_project_management_tools/comics_export_dialog.py:363
-#: plugins/tools/svgtexttool/WdgSvgTextSettings.ui:40
-#: plugins/tools/svgtexttool/WdgSvgTextSettings.ui:68
-#: plugins/tools/svgtexttool/WdgSvgTextSettings.ui:96
-#: plugins/tools/svgtexttool/WdgSvgTextSettings.ui:124
-#: plugins/tools/svgtexttool/WdgSvgTextSettings.ui:152
-#, kde-format
-msgid "Italic"
-msgstr "斜體"
 
 #: plugins/python/comics_project_management_tools/comics_export_dialog.py:370
 msgid "Text Colors"

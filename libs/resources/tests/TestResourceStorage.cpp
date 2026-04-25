@@ -75,7 +75,7 @@ void TestResourceStorage ::testStorage()
 
     {
         KisResourceStorage storage("");
-        QVERIFY(storage.type() == KisResourceStorage::StorageType::Unknown);
+        QVERIFY(storage.type() == KisResourceStorage::StorageType::Memory);
         QVERIFY(!storage.valid());
     }
 }

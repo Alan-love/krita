@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-25 00:43+0000\n"
-"PO-Revision-Date: 2026-04-24 03:54+0200\n"
+"PO-Revision-Date: 2026-04-25 06:07+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -34655,6 +34655,10 @@ msgid ""
 "WARNING:\tOut of memory! Swapping has been started.\n"
 "\t\tPlease configure more RAM for Krita in Settings dialog"
 msgstr ""
+"\n"
+"\n"
+"გაფრთხილება:\tარასაკმარისი მეხსიერება! დაწყებულია სვოპის გამოყენება.\n"
+"\t\tმიანიჭეთ Krita-ს მეტი RAM მორგების დიალოგიდან"
 
 #: libs/ui/kis_statusbar.cc:338
 #, kde-format
@@ -45710,6 +45714,7 @@ msgstr "გამოთვლა"
 msgctxt "@info:tooltip"
 msgid "Calculate the x-height to font size ratio for the first font family."
 msgstr ""
+"x-height-ის ფონტის ზომასთან ფარდობის გამოთვლა პირველი ფონტის ოჯახისთვის."
 
 #: plugins/dockers/textproperties/qml/FontStyle.qml:13
 #, kde-format
@@ -45970,7 +45975,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "No particular adjustments are made to the line break algorithm"
-msgstr ""
+msgstr "ხაზის გადატანის ალგორითმში განსაკუთრებული ცვლილებები არ შეტანილა"
 
 #: plugins/dockers/textproperties/qml/LineBreak.qml:79
 #, kde-format
@@ -46032,6 +46037,7 @@ msgstr "ხაზის სიმაღლე"
 msgctxt "@info:tooltip"
 msgid "Line height controls the line height used for the range of text."
 msgstr ""
+"ხაზის სიმაღლე აკონტროლებს ტექსტის შუალედისთვის გამოყენებულ ხაზის სიმაღლეს."
 
 #: plugins/dockers/textproperties/qml/LineHeight.qml:21
 #, kde-format
@@ -46246,6 +46252,7 @@ msgstr "გლიფები: ლიგატურები"
 msgctxt "@info:tooltip"
 msgid "Enable or disable ligatures and contextual alternates on the text."
 msgstr ""
+"ტექსტზე ლიგატურებისა და კონტექსტური ალტერნატივების ჩართვა, ან გამორთვა."
 
 #: plugins/dockers/textproperties/qml/OTLigatures.qml:18
 #, kde-format
@@ -46411,6 +46418,8 @@ msgid ""
 "Revert property. Within the current selection, this property has different "
 "values."
 msgstr ""
+"თვისების დაბრუნება. მიმდინარე მონიშნულში ამ თვისებას სხვა მნიშვნელობები "
+"ჰქონდა."
 
 #: plugins/dockers/textproperties/qml/RevertPropertyButton.qml:23
 #, kde-format
@@ -46449,7 +46458,7 @@ msgstr "ტექსტის სწორება"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Text align sets the alignment for the given block of characters."
-msgstr ""
+msgstr "ტექსტის სწორება აყენებს სწორებას მითითებული სიმბოლოების ბლოკისთვის."
 
 #: plugins/dockers/textproperties/qml/TextAlign.qml:20
 #, kde-format
@@ -46565,6 +46574,8 @@ msgid ""
 "Text decoration allows drawing underlines, overlines and striking through "
 "text."
 msgstr ""
+"ტექსტის დეკორაცია ტექსტში ხაზგასმების, ხაზგადასმების და ხაზის ზემოდან "
+"გადასმების დახატვის საშუალებას გაძლევთ."
 
 #: plugins/dockers/textproperties/qml/TextDecoration.qml:18
 #, kde-format
@@ -46649,6 +46660,8 @@ msgid ""
 "Text indent allows setting indentation at the line start. Only works when "
 "the text is wrapping."
 msgstr ""
+"ტექსტის შეწევა ხაზის დასაწყისის შეწევის საშუალებას გაძლევთ. მუშაობს, მხოლოდ, "
+"მაშინ, როცა ხდება ტექსტის გადატანა."
 
 #: plugins/dockers/textproperties/qml/TextIndent.qml:20
 #, kde-format
@@ -46780,7 +46793,7 @@ msgstr "ტექსტის რენდერი"
 msgctxt "@info:tooltip"
 msgid ""
 "Text rendering controls the hinting and rendering style for the property"
-msgstr ""
+msgstr "ტექსტის რენდერი მართავს ჰინტინგს და რენდერის სტილს თვისებისთვის"
 
 #: plugins/dockers/textproperties/qml/TextRendering.qml:18
 #, kde-format
@@ -47054,6 +47067,8 @@ msgid ""
 "Word spacing controls the size of word-break characters, such as the space "
 "character."
 msgstr ""
+"სიტყვებს შორის ადგილი მართავს სიტყვების გაყოფის სიმბოლოების, მაგ: ჰარეს "
+"ზომას."
 
 #: plugins/dockers/textproperties/qml/WordSpacing.qml:20
 #, kde-format
@@ -47078,6 +47093,8 @@ msgid ""
 "Writing mode sets whether the text flows horizontally or vertically, and in "
 "the latter case, whether the block flows right to left or left to right."
 msgstr ""
+"წერის რეჟიმი აყენებს, ტექსტის დინება ჰორიზონტალურად ხდება, თუ ვერტიკალურად "
+"და პირველ შემთხვევაში ბლოკის მარჯვნიდან მარცხნივ დინება ხდება, თუ პირიქით."
 
 #: plugins/dockers/textproperties/qml/WritingMode.qml:18
 #, kde-format
@@ -53600,6 +53617,9 @@ msgid ""
 "p><r><ul>%1</ul></p><p><warning>these layers have <b>not</b> been saved to "
 "the final EXR file</warning></p>"
 msgstr ""
+"<p>შემდეგ ფენებს აქვთ ტიპი, რომლის მხარდაჭერაც EXR ფორმატს არ აქვს:</"
+"p><r><ul>%1</ul></p><p><warning>ამ ფენების შენახვა<b>not</b> საბოლოო EXR "
+"ფაილში არ მომხდარა</warning></p>"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, flatten)
 #. i18n: ectx: property (toolTip), widget (QCheckBox, chkFlatten)

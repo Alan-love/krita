@@ -688,6 +688,17 @@ bool LcmsColorProfileContainer::compareTRC(TransferCharacteristics characteristi
     return true;
 }
 
+#include <KoColorTransferFunctions.h>
+cmsToneCurve *perceptualQuantizerDummy() {
+    cmsFloat32Number CurveVals[1024];
+    for (int i = 0; i < 1024; i++) {
+        float val = float(i)/1023.0;
+        /// IMPORTANT: 125.0 is the maximum output of the curve and is controlled by the diffuse white!
+        CurveVals[i] = (removeSmpte2048Curve(val)/125.0);
+    }
+    return cmsBuildTabulatedToneCurveFloat(NULL, 1024, CurveVals);
+}
+
 cmsToneCurve *LcmsColorProfileContainer::transferFunction(TransferCharacteristics transferFunction)
 {
     cmsToneCurve *mainCurve;
@@ -762,10 +773,11 @@ cmsToneCurve *LcmsColorProfileContainer::transferFunction(TransferCharacteristic
     case TRC_LAB_L:
         mainCurve = cmsBuildParametricToneCurve(NULL, 4, labl_parameters);
         break;
+    case TRC_ITU_R_BT_2100_0_PQ:
+        return perceptualQuantizerDummy();
+        break;
     case TRC_SMPTE_ST_428_1:
         // Requires an a*X^y construction, not possible.
-    case TRC_ITU_R_BT_2100_0_PQ:
-        // Perceptual Quantizer
     case TRC_ITU_R_BT_2100_0_HLG:
         // Hybrid log gamma.
         qWarning() << "Cannot generate an icc profile with this transfer function, will generate a linear profile";

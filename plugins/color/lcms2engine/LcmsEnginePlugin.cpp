@@ -167,6 +167,11 @@ LcmsEnginePlugin::LcmsEnginePlugin(QObject *parent, const QVariantList &)
     KoColorProfile *rgbProfile = LcmsColorProfileContainer::createFromLcmsProfile(cmsCreate_sRGBProfile());
     registry->addProfile(rgbProfile);
 
+    // TODO: decide whether we want to do it like this.
+    QVector<double> rec2020Col;
+    KoColorProfile *rec2100pq = new IccColorProfile(rec2020Col, PRIMARIES_ITU_R_BT_2020_2_AND_2100_0, TRC_ITU_R_BT_2100_0_PQ);
+    registry->addProfile(rec2100pq);
+
     registry->add(new LcmsRGBP2020PQColorSpaceFactoryWrapper<RgbU8ColorSpaceFactory>());
     registry->add(new LcmsRGBP2020PQColorSpaceFactoryWrapper<RgbU16ColorSpaceFactory>());
 #ifdef HAVE_LCMS24

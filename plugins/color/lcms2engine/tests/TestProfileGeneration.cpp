@@ -13,6 +13,9 @@
 #include <KoColorConversions.h>
 #include <KoColorTransferFunctions.h>
 #include <kis_debug.h>
+#include <KoColorSpaceEngine.h>
+#include <KoColorProfile.h>
+
 #include <testpigment.h>
 
 void TestProfileGeneration::testTransferFunctions()
@@ -385,6 +388,19 @@ void TestProfileGeneration::testTransferFunctions()
 
     cmsFreeToneCurve(curve);
 
+}
+
+void TestProfileGeneration::testCICPwriting()
+{
+    QVector<double> colorants;
+    const KoColorProfile *profile = KoColorSpaceRegistry::instance()->profileFor(colorants, PRIMARIES_ITU_R_BT_2020_2_AND_2100_0, TRC_ITU_R_BT_2020_2_12bit);
+
+    QVERIFY(profile);
+
+    // TODO: write and reload the profile.
+
+    QVERIFY(profile->getColorPrimaries() == PRIMARIES_ITU_R_BT_2020_2_AND_2100_0);
+    QVERIFY(profile->getTransferCharacteristics() == TRC_ITU_R_BT_2020_2_12bit);
 }
 
 KISTEST_MAIN(TestProfileGeneration)

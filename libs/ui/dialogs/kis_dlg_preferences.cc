@@ -1389,7 +1389,7 @@ ColorSettingsTab::ColorSettingsTab(QWidget *parent, const char *name)
         containerSpace->setToolTip(i18nc("@info:tooltip", "This is the space preferred by the operating system."));
         m_preferredSpaceGraphicMode.addButton(containerSpace, PreferredSpace);
 
-        QRadioButton *masteringSpace = new QRadioButton(i18nc("@info:radiobutton", "Mastering Space"), this);
+        QRadioButton *masteringSpace = new QRadioButton(i18nc("@info:radiobutton", "Current Display"), this);
         colorDescriptionChoice->addWidget(masteringSpace);
         m_preferredSpaceGraphicMode.addButton(masteringSpace, MasteringSpace);
         masteringSpace->setToolTip(i18nc("@info:tooltip", "This is the space representing the currently active display."));
@@ -1406,6 +1406,9 @@ ColorSettingsTab::ColorSettingsTab(QWidget *parent, const char *name)
         m_preferredSpaceGraphic->setFixedSize(QSize(200, 200));
         updatePreferredSpaceGraphic();
         connect(&m_preferredSpaceGraphicMode, SIGNAL(buttonClicked(QAbstractButton*)), this, SLOT(updatePreferredSpaceGraphic()));
+        m_screenMigrationTracker.reset(new KisScreenMigrationTracker(this));
+        connect(m_screenMigrationTracker.data(), &KisScreenMigrationTracker::sigScreenChanged,
+                this, &ColorSettingsTab::updatePreferredSpaceGraphic);
 
         m_chkEnableCanvasColorSpaceManagement->setChecked(cfg.enableCanvasSurfaceColorSpaceManagement());
 

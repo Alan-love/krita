@@ -21,6 +21,7 @@
 #include "kis_cie_tongue_widget.h"
 #include "kis_global.h"
 #include <KisSqueezedComboBox.h>
+#include <KisScreenMigrationTracker.h>
 
 #include "ui_wdggeneralsettings.h"
 #include "ui_wdgdisplaysettings.h"
@@ -217,6 +218,7 @@ public:
     QList<QLabel*> m_monitorProfileLabels;
     QList<KisSqueezedComboBox*> m_monitorProfileWidgets;
     QScopedPointer<KisProofingConfigModel> m_proofModel;
+    QScopedPointer<KisScreenMigrationTracker> m_screenMigrationTracker;
 
     using CanvasSurfaceMode = KisConfig::CanvasSurfaceMode;
     using CanvasSurfaceBitDepthMode = KisConfig::CanvasSurfaceBitDepthMode;

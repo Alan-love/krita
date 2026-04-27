@@ -103,6 +103,8 @@ public:
     bool isSaturationCLUT;
     bool isMatrixShaper;
 
+    cmsVideoSignalType *cicpValues {nullptr};
+
     QByteArray uniqueId;
 };
 
@@ -296,6 +298,10 @@ bool LcmsColorProfileContainer::init()
             });
         } else {
             d->hasTRC = Private::LazyBool(Private::LazyBool::init_value_tag{}, {});
+        }
+
+        if (cmsIsTag(d->profile, cmsSigcicpTag)) {
+            d->cicpValues = ((cmsVideoSignalType *) cmsReadTag (d->profile, cmsSigcicpTag));
         }
 
         // Check if the profile can convert (something->this)
@@ -634,6 +640,22 @@ QByteArray LcmsColorProfileContainer::getProfileUniqueId() const
     }
 
     return d->uniqueId;
+}
+
+bool LcmsColorProfileContainer::hasCicpValues() const
+{
+    return (d->cicpValues);
+}
+
+ColorPrimaries LcmsColorProfileContainer::cicpPrimaries() const {
+    if (!d->cicpValues) return PRIMARIES_UNSPECIFIED;
+    return ColorPrimaries(d->cicpValues->ColourPrimaries);
+}
+
+TransferCharacteristics LcmsColorProfileContainer::cicpTransfer() const
+{
+    if (!d->cicpValues) return TRC_UNSPECIFIED;
+    return TransferCharacteristics(d->cicpValues->TransferCharacteristics);
 }
 
 bool LcmsColorProfileContainer::compareTRC(TransferCharacteristics characteristics, float error) const

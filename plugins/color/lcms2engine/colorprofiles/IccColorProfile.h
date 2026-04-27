@@ -66,6 +66,9 @@ public:
         virtual QVector <double> getEstimatedTRC() const = 0;
         virtual bool compareTRC(TransferCharacteristics characteristics, float error) const = 0;
         virtual QByteArray getProfileUniqueId() const = 0;
+        virtual bool hasCicpValues() const = 0;
+        virtual ColorPrimaries cicpPrimaries() const = 0;
+        virtual TransferCharacteristics cicpTransfer() const = 0;
     };
 public:
 

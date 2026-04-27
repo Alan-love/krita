@@ -163,6 +163,15 @@ IccColorProfile::IccColorProfile(const QVector<double> &colorants,
     cmsCIEXYZ media_blackpoint = {0.0, 0.0, 0.0};
     cmsWriteTag (iccProfile, cmsSigMediaBlackPointTag, &media_blackpoint);
 
+    if (colorPrimariesType < 256 && transferFunction < 256) {
+        cmsVideoSignalType cicpValues;
+        cicpValues.ColourPrimaries = quint8(colorPrimariesType);
+        cicpValues.TransferCharacteristics = quint8(transferFunction);
+        cicpValues.MatrixCoefficients = 0;
+        cicpValues.VideoFullRangeFlag = 1; // TODO: double check.
+        cmsWriteTag (iccProfile, cmsSigcicpTag, &cicpValues);
+    }
+
     //set the color profile info on the iccProfile;
     cmsMLU *mlu;
     mlu = cmsMLUalloc (NULL, 1);
@@ -450,6 +459,9 @@ bool IccColorProfile::init()
         setInfo(d->shared->lcmsProfile->info());
         setManufacturer(d->shared->lcmsProfile->manufacturer());
         setCopyright(d->shared->lcmsProfile->copyright());
+        if (d->shared->lcmsProfile->hasCicpValues()) {
+            setCharacteristics(d->shared->lcmsProfile->cicpPrimaries(), d->shared->lcmsProfile->cicpTransfer());
+        }
         if (d->shared->lcmsProfile->valid()) {
             d->shared->profileInfo = Private::LazyProfileInfo([this] () {
                 return d->calculateFloatUIMinMax();

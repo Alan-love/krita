@@ -95,6 +95,10 @@ public:
     QString info() const override;
     QByteArray getProfileUniqueId() const override;
 
+    bool hasCicpValues() const override;
+    ColorPrimaries cicpPrimaries() const override;
+    TransferCharacteristics cicpTransfer() const override;
+
     bool compareTRC(TransferCharacteristics characteristics, float error) const override;
 
     static cmsToneCurve* transferFunction(TransferCharacteristics transferFunction);

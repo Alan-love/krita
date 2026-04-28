@@ -139,12 +139,14 @@ IccColorProfile::IccColorProfile(const QVector<double> &colorants,
 
     if (colorants.size() == 2) {
         iccProfile = cmsCreateGrayProfile(&whitePoint, mainCurve);
+        // cleanup
+        cmsFreeToneCurve(mainCurve);
     } else /*if (colorants.size()>2 || colorPrimariesType != 2)*/ {
         // generate rgb profile.
         cmsToneCurve *curve[3];
         curve[0] = curve[1] = curve[2] = mainCurve;
         iccProfile = cmsCreateRGBProfile(&whitePoint, &primaries, curve);
-        cmsFreeToneCurve(curve[0]);
+        cmsFreeToneCurve(mainCurve);
     }
 
     if (!iccProfile) {
@@ -189,13 +191,12 @@ IccColorProfile::IccColorProfile(const QVector<double> &colorants,
     cmsWriteTag(iccProfile, cmsSigCopyrightTag, mlu);
     cmsMLUfree (mlu);
 
+    // Still setting this, as it also writes the non H.273 values.
     setCharacteristics(colorPrimariesType, transferFunction);
-
-    // cleanup
-    cmsFreeToneCurve(mainCurve);
 
     setRawData(LcmsColorProfileContainer::lcmsProfileToByteArray(iccProfile));
     cmsCloseProfile(iccProfile);
+
     setFileName(name.join(" ").split(" ").join("-")+".icc");
     init();
 }

@@ -144,6 +144,7 @@ IccColorProfile::IccColorProfile(const QVector<double> &colorants,
         cmsToneCurve *curve[3];
         curve[0] = curve[1] = curve[2] = mainCurve;
         iccProfile = cmsCreateRGBProfile(&whitePoint, &primaries, curve);
+        cmsFreeToneCurve(curve[0]);
     }
 
     if (!iccProfile) {
@@ -157,7 +158,12 @@ IccColorProfile::IccColorProfile(const QVector<double> &colorants,
 
     QStringList name;
     name.append("Krita");
-    name.append(KoColorProfile::getColorPrimariesName(colorPrimariesType));
+    if (colorPrimariesType == PRIMARIES_ITU_R_BT_2020_2_AND_2100_0
+        && (transferFunction == TRC_ITU_R_BT_2100_0_PQ || transferFunction == TRC_ITU_R_BT_2100_0_HLG)) {
+        name.append(QStringLiteral("Rec. 2100"));
+    } else {
+        name.append(KoColorProfile::getColorPrimariesName(colorPrimariesType));
+    }
     name.append(KoColorProfile::getTransferCharacteristicName(transferFunction));
 
     cmsCIEXYZ media_blackpoint = {0.0, 0.0, 0.0};
@@ -168,7 +174,7 @@ IccColorProfile::IccColorProfile(const QVector<double> &colorants,
         cicpValues.ColourPrimaries = quint8(colorPrimariesType);
         cicpValues.TransferCharacteristics = quint8(transferFunction);
         cicpValues.MatrixCoefficients = 0;
-        cicpValues.VideoFullRangeFlag = 1; // TODO: double check.
+        cicpValues.VideoFullRangeFlag = 0; // According to the H.273 spec, 0 is the default value.
         cmsWriteTag (iccProfile, cmsSigcicpTag, &cicpValues);
     }
 
@@ -184,6 +190,9 @@ IccColorProfile::IccColorProfile(const QVector<double> &colorants,
     cmsMLUfree (mlu);
 
     setCharacteristics(colorPrimariesType, transferFunction);
+
+    // cleanup
+    cmsFreeToneCurve(mainCurve);
 
     setRawData(LcmsColorProfileContainer::lcmsProfileToByteArray(iccProfile));
     cmsCloseProfile(iccProfile);

@@ -38,7 +38,7 @@ KisSharpnessOptionWidget::KisSharpnessOptionWidget(lager::cursor<KisSharpnessOpt
 
     QWidget *page = new QWidget;
 
-    QCheckBox *alignOutline = new QCheckBox(("Align the brush preview outline to the pixel grid"), page);
+    QCheckBox *alignOutline = new QCheckBox(i18n("Align the brush preview outline to the pixel grid"), page);
 
     QLabel* thresholdLbl = new QLabel(i18n("Soften edge:"), page);
     KisSliderSpinBox *softenEdge = new KisSliderSpinBox(page);

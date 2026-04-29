@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-25 00:43+0000\n"
+"POT-Creation-Date: 2026-04-29 00:43+0000\n"
 "PO-Revision-Date: 2010-05-20 14:01+0700\n"
 "Last-Translator: Phuwanat Sakornsakolpat <narachai@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -59413,6 +59413,11 @@ msgstr "ลวดลาย"
 #, fuzzy, kde-format
 msgid "Sharpness"
 msgstr "ความแหลม:"
+
+#: plugins/paintops/libpaintop/KisSharpnessOptionWidget.cpp:41
+#, kde-format
+msgid "Align the brush preview outline to the pixel grid"
+msgstr ""
 
 #: plugins/paintops/libpaintop/KisSharpnessOptionWidget.cpp:43
 #, fuzzy, kde-format

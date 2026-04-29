@@ -81,7 +81,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-25 00:43+0000\n"
+"POT-Creation-Date: 2026-04-29 00:43+0000\n"
 "PO-Revision-Date: 2026-04-03 21:49+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -61384,6 +61384,11 @@ msgstr "Степень рассеивания"
 msgid "Sharpness"
 msgstr "Резкость"
 
+#: plugins/paintops/libpaintop/KisSharpnessOptionWidget.cpp:41
+#, kde-format
+msgid "Align the brush preview outline to the pixel grid"
+msgstr "Выровнять предварительный просмотр контура кисти по пиксельной сетке"
+
 #: plugins/paintops/libpaintop/KisSharpnessOptionWidget.cpp:43
 #, kde-format
 msgid "Soften edge:"
@@ -71516,10 +71521,6 @@ msgstr ""
 
 #~ msgid "Not mirrored"
 #~ msgstr "Не отражено"
-
-#~ msgid "Align the brush preview outline to the pixel grid"
-#~ msgstr ""
-#~ "Выровнять предварительный просмотр контура кисти по пиксельной сетке"
 
 #~ msgid " s"
 #~ msgstr " с"

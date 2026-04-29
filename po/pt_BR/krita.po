@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-25 00:43+0000\n"
+"POT-Creation-Date: 2026-04-29 00:43+0000\n"
 "PO-Revision-Date: 2026-04-23 07:37-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -61062,6 +61062,11 @@ msgstr "Quantidade de dispersão"
 msgid "Sharpness"
 msgstr "Grau de detalhe"
 
+#: plugins/paintops/libpaintop/KisSharpnessOptionWidget.cpp:41
+#, fuzzy, kde-format
+msgid "Align the brush preview outline to the pixel grid"
+msgstr "Alinhe a silhueta da amostra de pincel com a grade pixelada"
+
 #: plugins/paintops/libpaintop/KisSharpnessOptionWidget.cpp:43
 #, kde-format
 msgid "Soften edge:"
@@ -71116,10 +71121,6 @@ msgstr ""
 
 #~ msgid "Not mirrored"
 #~ msgstr "Não espelhado"
-
-#, fuzzy
-#~ msgid "Align the brush preview outline to the pixel grid"
-#~ msgstr "Alinhe a silhueta da amostra de pincel com a grade pixelada"
 
 #~ msgid " s"
 #~ msgstr " s"

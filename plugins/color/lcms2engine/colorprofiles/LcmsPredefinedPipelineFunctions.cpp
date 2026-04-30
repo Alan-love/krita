@@ -47,7 +47,7 @@ static QTransform bradfordMatrix(double *src, double *dst) {
  * @param factor -- scaling factor.
  * @return transfrom representing a XYZ to RGB conversion.
  */
-static QTransform rgbMatrix(ColorPrimaries primaries, double factor = 1.0) {
+static QTransform rgbMatrix(ColorPrimaries primaries, double factor = 1.0, double *luma = nullptr) {
     const double mul = 1.0/factor;
     // Calculation: http://brucelindbloom.com/index.html?Eqn_RGB_XYZ_Matrix.html
     // Calculates XYZ with Y = 1.0
@@ -71,6 +71,11 @@ static QTransform rgbMatrix(ColorPrimaries primaries, double factor = 1.0) {
     };
 
     QGenericMatrix<1, 3, double> S = QGenericMatrix<3, 3, double>(inv) * QGenericMatrix<1, 3, double>(wp);
+    if (luma) {
+        luma[0] = S(0,0);
+        luma[1] = S(1,0);
+        luma[2] = S(2,0);
+    }
 
     // Apply scaling factor to normalize the Y and get the matrix.
     QTransform finalXYZMatrix(
@@ -94,6 +99,7 @@ static QTransform rgbMatrix(ColorPrimaries primaries, double factor = 1.0) {
 struct perceptualDummyHelper {
     bool toXYZ{false};
     int channels {3};
+    double *luma{nullptr};
     };
 
 /**
@@ -104,16 +110,36 @@ struct perceptualDummyHelper {
 cmsInt32Number samplePQDummyClut(const cmsUInt16Number In[], cmsUInt16Number Out[], void *Cargo) {
     struct perceptualDummyHelper *helper = (struct perceptualDummyHelper *) Cargo;
     const float scale = 3.7743;
+    const float pqScale = 125.0; /// Important: this normalizes the pq signal.
+    const float nominalPeak = 10000.0/500.0;/// HLG goes up to 1000, so we're scaling the pq down to that.
+    double coeff[] = {0.2126, 0.7152, 0.0722};
+    if (helper->luma) {
+        coeff[0] = helper->luma[0];
+        coeff[1] = helper->luma[1];
+        coeff[2] = helper->luma[2];
+    }
+    float lin[3];
     for (int i = 0; i < helper->channels; i++) {
         const float val = float(In[i])/65535.0;
-
+        if (helper->toXYZ) {
+            lin[i] = (removeSmpte2048Curve(val) / pqScale) * nominalPeak;
+        } else {
+            lin[i] = removeHLGCurve(val) * scale;
+        }
+    }
+    if (helper->toXYZ) {
+        // display to scene
+        applyHLGOOTF(lin, coeff);
+    } else {
+        // scene to display
+        removeHLGOOTF(lin, coeff);
+    }
+    for (int i = 0; i < helper->channels; i++) {
         cmsUInt16Number finalResult = In[i];
         if (helper->toXYZ) {
-            const float lin = removeSmpte2048Curve(val);
-            finalResult = qBound(0, qRound( applyHLGCurve(lin / scale) * 65535 ), 65535);
+            finalResult = qBound(0, qRound( applyHLGCurve(lin[i] / scale) * 65535 ), 65535);
         } else {
-            const float lin = removeHLGCurve(val) * scale;
-            finalResult = qBound(0, qRound( applySmpte2048Curve(lin) * 65535 ), 65535);
+            finalResult = qBound(0, qRound( applySmpte2048Curve((lin[i] / nominalPeak) * pqScale) * 65535 ), 65535);
         }
         Out[i] = finalResult;
     }
@@ -123,8 +149,11 @@ cmsInt32Number samplePQDummyClut(const cmsUInt16Number In[], cmsUInt16Number Out
 bool LcmsPredefinedPipelineFunctions::setPerceptualQuantizerAToBDummyPipeline(cmsHPROFILE iccProfile, cmsTagSignature tag, ColorPrimaries primaries)
 {
     // From profile space to XYZ.
-    const double factor = 2.0;
+    const double factor = 1.0;
     const int lutSize = 4;
+
+    double luma[3];
+    QTransform tf = rgbMatrix(primaries, factor, luma);
 
     // linear curves, obligatory for A2B with both matrix and clut: linear-clut-curves-matrix-linear.
     cmsPipeline *a2B = cmsPipelineAlloc(nullptr, 3, 3);
@@ -137,6 +166,7 @@ bool LcmsPredefinedPipelineFunctions::setPerceptualQuantizerAToBDummyPipeline(cm
     cmsStage *clutStage = cmsStageAllocCLut16bit(nullptr, lutSize, 3, 3, nullptr);
     perceptualDummyHelper helper;
     helper.toXYZ = true;
+    helper.luma = luma;
     cmsStageSampleCLut16bit(clutStage, &samplePQDummyClut, &helper, 0);
     cmsPipelineInsertStage(a2B, cmsAT_END, clutStage);
 
@@ -148,7 +178,6 @@ bool LcmsPredefinedPipelineFunctions::setPerceptualQuantizerAToBDummyPipeline(cm
 
     // matrix
 
-    QTransform tf = rgbMatrix(primaries, factor);
     double m[] = {
         tf.m11(), tf.m12(), tf.m13(),
         tf.m21(), tf.m22(), tf.m23(),
@@ -171,7 +200,7 @@ bool LcmsPredefinedPipelineFunctions::setPerceptualQuantizerAToBDummyPipeline(cm
 bool LcmsPredefinedPipelineFunctions::setPerceptualQuantizerBToADummyPipeline(cmsHPROFILE iccProfile, cmsTagSignature tag, ColorPrimaries primaries)
 {
     // From XYZ to profile space.
-    const double factor = 2.0;
+    const double factor = 1.0;
     const int lutSize = 4;
     cmsPipeline *b2A = cmsPipelineAlloc(nullptr, 3, 3);
 
@@ -182,7 +211,8 @@ bool LcmsPredefinedPipelineFunctions::setPerceptualQuantizerBToADummyPipeline(cm
     cmsPipelineInsertStage(b2A, cmsAT_END, lCurveStage);
 
     // matrix
-    QTransform tf = rgbMatrix(primaries, factor).inverted();
+    double luma[3];
+    QTransform tf = rgbMatrix(primaries, factor, luma).inverted();
     double m[] = {
         tf.m11(), tf.m12(), tf.m13(),
         tf.m21(), tf.m22(), tf.m23(),
@@ -200,6 +230,7 @@ bool LcmsPredefinedPipelineFunctions::setPerceptualQuantizerBToADummyPipeline(cm
     cmsStage *clutStage = cmsStageAllocCLut16bit(nullptr, lutSize, 3, 3, nullptr);
     perceptualDummyHelper helper;
     helper.toXYZ = false;
+    helper.luma = luma;
     cmsStageSampleCLut16bit(clutStage, &samplePQDummyClut, &helper, 0);
     cmsPipelineInsertStage(b2A, cmsAT_END, clutStage);
 

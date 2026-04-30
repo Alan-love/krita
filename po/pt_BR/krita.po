@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-29 00:43+0000\n"
-"PO-Revision-Date: 2026-04-23 07:37-0300\n"
+"PO-Revision-Date: 2026-04-29 06:58-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -61063,9 +61063,9 @@ msgid "Sharpness"
 msgstr "Grau de detalhe"
 
 #: plugins/paintops/libpaintop/KisSharpnessOptionWidget.cpp:41
-#, fuzzy, kde-format
+#, kde-format
 msgid "Align the brush preview outline to the pixel grid"
-msgstr "Alinhe a silhueta da amostra de pincel com a grade pixelada"
+msgstr "Alinha o contorno da pré-visualização do pincel à grade de pixels"
 
 #: plugins/paintops/libpaintop/KisSharpnessOptionWidget.cpp:43
 #, kde-format

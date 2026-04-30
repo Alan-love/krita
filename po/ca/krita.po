@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-29 00:43+0000\n"
-"PO-Revision-Date: 2026-04-26 15:15+0200\n"
+"PO-Revision-Date: 2026-04-29 10:14+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -61234,6 +61234,7 @@ msgstr "Agudesa"
 #, kde-format
 msgid "Align the brush preview outline to the pixel grid"
 msgstr ""
+"Alinea el contorn de la vista prèvia del pinzell a la quadrícula de píxels"
 
 #: plugins/paintops/libpaintop/KisSharpnessOptionWidget.cpp:43
 #, kde-format

@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-29 00:43+0000\n"
-"PO-Revision-Date: 2026-04-23 23:55+0100\n"
+"PO-Revision-Date: 2026-04-29 12:13+0100\n"
 "Last-Translator: Sofía Priego <spriego@darksylvania.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -61179,6 +61179,8 @@ msgstr "Nitidez"
 #, kde-format
 msgid "Align the brush preview outline to the pixel grid"
 msgstr ""
+"Alinear el contorno de la vista previa del pincel con la cuadrícula de "
+"píxeles"
 
 #: plugins/paintops/libpaintop/KisSharpnessOptionWidget.cpp:43
 #, kde-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-29 00:43+0000\n"
-"PO-Revision-Date: 2026-04-25 06:07+0200\n"
+"PO-Revision-Date: 2026-04-29 07:09+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -19703,7 +19703,7 @@ msgstr "Halant-ის ფორმები"
 #, kde-format
 msgctxt "@tooltip"
 msgid "Replaces consonants in Indic scripts with their halant forms."
-msgstr ""
+msgstr "ცვლის თანხმოვნებს ინდურ დამწერლობებში მათ ჰალანტურ ფორმებად."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:293
 #, kde-format
@@ -55116,6 +55116,8 @@ msgid ""
 "Set the progressive mode for the AC coefficients of VarDCT, using spectral "
 "progression from the DCT coefficients."
 msgstr ""
+"პროგრესული რეჟიმის დაყენება VarDCT-ის AC კოეფიციენტისთვის DCT "
+"კოეფიციენტებიდან მიღებული სპექტრული პროგრესიით."
 
 #. i18n: ectx: property (toolTip), widget (QLabel, lblQProgressiveAC)
 #: plugins/impex/jxl/kis_wdg_options_jpegxl.ui:704
@@ -55152,6 +55154,8 @@ msgstr "დაბალი გარჩევადობის DC"
 #, kde-format
 msgid "Set the progressive mode using lower-resolution DC images for VarDCT."
 msgstr ""
+"პროგრესული რეჟიმის დაყენება დაბალი გაფართოების მქონე DC გამოსახულების "
+"გამოყენებით VarDCT-ისთვის."
 
 #. i18n: ectx: attribute (title), widget (QWidget, modularEncodingParameters)
 #: plugins/impex/jxl/kis_wdg_options_jpegxl.ui:739
@@ -56630,6 +56634,8 @@ msgid ""
 "<title>Brightness</title><p>Specify the brightness level of output image. "
 "The default value is 1.0 (works in 8-bit mode only).</p>"
 msgstr ""
+"<title>სიკაშკაშე</title><p>მიუთითეთ გამოტანილი გამოსახულების სიკაშკაშის "
+"დონე. ნაგულისხმევი მნიშვნელობაა 1.0 (მუშაობს, მხოლოდ, 8-ბიტიან რეჟიმში).</p>"
 
 #: plugins/impex/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:565
 #, kde-format
@@ -56645,6 +56651,9 @@ msgid ""
 "pictures. If you set this option to off, the Black Point value will be "
 "automatically computed.</p>"
 msgstr ""
+"<title>შავი წერტილი</title><p>მითითებული შავი წერტილის მნიშვნელობის "
+"გამოყენება RAW სურათების დეკოდირებისთვის. თუ ამ პარამეტრს გამორთავთ, შავი "
+"წერტილის გამოთვლა ავტომატურად მოხდება.</p>"
 
 #: plugins/impex/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:573
 #, kde-format
@@ -56653,6 +56662,8 @@ msgid ""
 "<title>Black point value</title><p>Specify specific black point value of the "
 "output image.</p>"
 msgstr ""
+"<title>შავი წერტილის მნიშვნელობა</title><para>მიუთითეთ გამოტანილი "
+"გამოსახულების სპეციფიკური შავი წერტილის მნიშვნელობა.</para>"
 
 #: plugins/impex/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:576
 #, kde-format
@@ -56668,6 +56679,9 @@ msgid ""
 "pictures. If you set this option to off, the White Point value will be "
 "automatically computed.</p>"
 msgstr ""
+"<title>თეთრი წერტილი</title><p>მითითებული თეთრი წერტილის მნიშვნელობის "
+"გამოყენება RAW სურათების დეკოდირებისთვის. თუ ამ პარამეტრს გამორთავთ, თეთრი "
+"წერტილის გამოთვლა ავტომატურად მოხდება.</p>"
 
 #: plugins/impex/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:584
 #, kde-format
@@ -56676,6 +56690,8 @@ msgid ""
 "<title>White point value</title><p>Specify specific white point value of the "
 "output image.</p>"
 msgstr ""
+"<title>თეთრი წერტილის მნიშვნელობა</title><para>მიუთითეთ გამოტანილი "
+"გამოსახულების სპეციფიკური თეთრი წერტილის მნიშვნელობა.</para>"
 
 #: plugins/impex/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:623
 #, kde-format
@@ -59865,7 +59881,7 @@ msgstr "სიმკვეთრე"
 #: plugins/paintops/libpaintop/KisSharpnessOptionWidget.cpp:41
 #, kde-format
 msgid "Align the brush preview outline to the pixel grid"
-msgstr ""
+msgstr "ფუნჯის მინიატურის კონტურის სწორება პიქსელების ბადესთან"
 
 #: plugins/paintops/libpaintop/KisSharpnessOptionWidget.cpp:43
 #, kde-format
@@ -60596,6 +60612,8 @@ msgid ""
 "Select how the particles are distributed as a function of the distance from "
 "the center of the spray area."
 msgstr ""
+"აირჩიეთ, როგორ ხდება ნაწილაკების განაწილება შესხურების არეს ცენტრამდე "
+"მანძილის ფუნქციის სახით."
 
 #: plugins/paintops/spray/KisSprayOpOptionWidget.cpp:82
 #, kde-format
@@ -60603,6 +60621,8 @@ msgid ""
 "Activates the old behavior where the particles are more accumulated towards "
 "the center of the spray area."
 msgstr ""
+"გაააქტიურებს ძველ ქცევას, სადაც ნაწილაკები შესხურების არეს ცენტრისკენ უფრო "
+"მეტად გროვდება."
 
 #: plugins/paintops/spray/KisSprayOpOptionWidget.cpp:84
 #, kde-format
@@ -60651,6 +60671,8 @@ msgid ""
 "Set how many times should the curve repeat from the center to the border of "
 "the spray area."
 msgstr ""
+"დააყენეთ, რამდენჯერ მოხდება მრუდის გამეორება შესხურების არეს ცენტრიდან "
+"საზღვრამდე."
 
 #: plugins/paintops/spray/KisSprayOpOptionWidget.cpp:177
 #, kde-format
@@ -61336,6 +61358,8 @@ msgid ""
 "A PO file can contain translator's comments. If this is checked, the "
 "translations comments will be added as references into the ACBF file."
 msgstr ""
+"PO ფაილი, შეიძლება, მთარგმნელის კომენტარებს შეიცავდეს. თუ ეს ჩართულია, "
+"მთარგმნელის კომენტარები ACBF ფაილში მიმართვად დაემატება."
 
 #: plugins/python/comics_project_management_tools/comics_export_dialog.py:304
 msgid "ACBF UID:"
@@ -62189,6 +62213,8 @@ msgid ""
 "This allows you to select a generic comics project directory, in which a new "
 "folder will be made for the project using the given project name."
 msgstr ""
+"ეს საშუალებას გაძლევთ, აირჩიოთ ზოგადი კომიკსების პროექტის საქაღალდე, "
+"რომელშიც შეიქმნება ახალი საქაღალდე პროექტისთვის ამ პროექტის სახელით."
 
 #: plugins/python/comics_project_management_tools/comics_project_setup_wizard.py:111
 msgid "pages"
@@ -64030,6 +64056,8 @@ msgid ""
 "Includes the active layer in regions found from merging of layers with "
 "specific color labels"
 msgstr ""
+"ჩასვამს აქტიურ ფენას რეგიონებში, რომლებიც მითითებული ფერის ჭდეებით შერწყმული "
+"ფენებისგანაა შექმნილი"
 
 #: plugins/tools/basictools/kis_tool_fill.cc:671
 #, kde-format
@@ -64047,6 +64075,8 @@ msgid ""
 "Dragging will fill only regions similar in color to the initial region "
 "(useful for filling line-art)"
 msgstr ""
+"გადათრევა, მხოლოდ, შეავსებს რეგიონებს, რომლებიც საწყისი რეგიონის ფერის "
+"მსგავსია (სასარგებლოა ხაზით ნახატების შევსებისას)"
 
 #: plugins/tools/basictools/kis_tool_fill.cc:675
 #: plugins/tools/tool_enclose_and_fill/KisToolEncloseAndFill.cpp:580
@@ -64148,6 +64178,8 @@ msgid ""
 "Alt+Drag will move the origin of the currently displayed line around, Shift"
 "+Drag will force you to draw straight lines"
 msgstr ""
+"Alt+გადათრევა ამჟამად ნაჩვენები ხაზის წყაროს გადაიტანს. Shift+გადათრევა "
+"გაიძულებთ, სწორი ხაზები დახატოთ"
 
 #: plugins/tools/basictools/kis_tool_line.h:115
 #, kde-format

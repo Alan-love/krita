@@ -63,6 +63,7 @@ set ( lcmsengine_SRCS
 
     colorprofiles/LcmsColorProfileContainer.cpp
     colorprofiles/IccColorProfile.cpp
+    colorprofiles/LcmsPredefinedPipelineFunctions.cpp
     IccColorSpaceEngine.cpp
     LcmsColorSpace.cpp
     LcmsEnginePlugin.cpp

@@ -21,6 +21,7 @@
 #include <kis_assert.h>
 
 #include "LcmsColorProfileContainer.h"
+#include "LcmsPredefinedPipelineFunctions.h"
 
 #include <KisLazyStorage.h>
 #include <KisLazyValueWrapper.h>
@@ -170,6 +171,19 @@ IccColorProfile::IccColorProfile(const QVector<double> &colorants,
 
     cmsCIEXYZ media_blackpoint = {0.0, 0.0, 0.0};
     cmsWriteTag (iccProfile, cmsSigMediaBlackPointTag, &media_blackpoint);
+
+    if (transferFunction == TRC_ITU_R_BT_2100_0_PQ) {
+        LcmsPredefinedPipelineFunctions::setPerceptualQuantizerAToBDummyPipeline(iccProfile, cmsSigAToB0Tag, colorPrimariesType);
+        LcmsPredefinedPipelineFunctions::setPerceptualQuantizerBToADummyPipeline(iccProfile, cmsSigBToA0Tag, colorPrimariesType);
+        // Otherwise this is recognised as a matrix shaper...
+        cmsWriteTag(iccProfile, cmsSigRedColorantTag, nullptr);
+        cmsWriteTag(iccProfile, cmsSigGreenColorantTag, nullptr);
+        cmsWriteTag(iccProfile, cmsSigBlueColorantTag, nullptr);
+        cmsWriteTag(iccProfile, cmsSigRedTRCTag, nullptr);
+        cmsWriteTag(iccProfile, cmsSigGreenTRCTag, nullptr);
+        cmsWriteTag(iccProfile, cmsSigBlueTRCTag, nullptr);
+
+    }
 
     if (colorPrimariesType < 256 && transferFunction < 256) {
         cmsVideoSignalType cicpValues;

@@ -124,8 +124,7 @@ bool LcmsPredefinedPipelineFunctions::setPerceptualQuantizerAToBDummyPipeline(cm
 {
     // From profile space to XYZ.
     const double factor = 2.0;
-
-
+    const int lutSize = 4;
 
     // linear curves, obligatory for A2B with both matrix and clut: linear-clut-curves-matrix-linear.
     cmsPipeline *a2B = cmsPipelineAlloc(nullptr, 3, 3);
@@ -135,7 +134,7 @@ bool LcmsPredefinedPipelineFunctions::setPerceptualQuantizerAToBDummyPipeline(cm
     cmsStage *lCurveStage = cmsStageAllocToneCurves(nullptr, 3, linearCurves);
     cmsPipelineInsertStage(a2B, cmsAT_END, lCurveStage);
 
-    cmsStage *clutStage = cmsStageAllocCLut16bit(nullptr, 8, 3, 3, nullptr);
+    cmsStage *clutStage = cmsStageAllocCLut16bit(nullptr, lutSize, 3, 3, nullptr);
     perceptualDummyHelper helper;
     cmsStageSampleCLut16bit(clutStage, &samplePQDummyClut, &helper, 0);
     cmsPipelineInsertStage(a2B, cmsAT_END, clutStage);
@@ -171,6 +170,8 @@ bool LcmsPredefinedPipelineFunctions::setPerceptualQuantizerAToBDummyPipeline(cm
 bool LcmsPredefinedPipelineFunctions::setPerceptualQuantizerBToADummyPipeline(cmsHPROFILE iccProfile, cmsTagSignature tag, ColorPrimaries primaries)
 {
     // From XYZ to profile space.
+    const double factor = 2.0;
+    const int lutSize = 4;
     cmsPipeline *b2A = cmsPipelineAlloc(nullptr, 3, 3);
 
            // curves, linear
@@ -180,7 +181,7 @@ bool LcmsPredefinedPipelineFunctions::setPerceptualQuantizerBToADummyPipeline(cm
     cmsPipelineInsertStage(b2A, cmsAT_END, lCurveStage);
 
     // matrix
-    QTransform tf = rgbMatrix(primaries, 2.0).inverted();
+    QTransform tf = rgbMatrix(primaries, factor).inverted();
     double m[] = {
         tf.m11(), tf.m12(), tf.m13(),
         tf.m21(), tf.m22(), tf.m23(),
@@ -195,7 +196,7 @@ bool LcmsPredefinedPipelineFunctions::setPerceptualQuantizerBToADummyPipeline(cm
     cmsStage *curveStage = cmsStageAllocToneCurves(nullptr, 3, curve);
     cmsPipelineInsertStage(b2A, cmsAT_END, curveStage);
 
-    cmsStage *clutStage = cmsStageAllocCLut16bit(nullptr, 8, 3, 3, nullptr);
+    cmsStage *clutStage = cmsStageAllocCLut16bit(nullptr, lutSize, 3, 3, nullptr);
     perceptualDummyHelper helper;
     helper.toXYZ = false;
     cmsStageSampleCLut16bit(clutStage, &samplePQDummyClut, &helper, 0);

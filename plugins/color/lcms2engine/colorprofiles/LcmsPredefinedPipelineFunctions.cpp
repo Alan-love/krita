@@ -91,6 +91,34 @@ static QTransform rgbMatrix(ColorPrimaries primaries, double factor = 1.0) {
         );
 }
 
+struct perceptualDummyHelper {
+    bool toXYZ{false};
+    int channels {3};
+    };
+
+/**
+ * @brief samplePQDummyClut
+ * In this sampler, we convert the PQ data to linear and then to HLG. The benefit of HLG
+ * is that it sort of allows for tonemapping.
+ */
+cmsInt32Number samplePQDummyClut(const cmsUInt16Number In[], cmsUInt16Number Out[], void *Cargo) {
+    struct perceptualDummyHelper *helper = (struct perceptualDummyHelper *) Cargo;
+    const float scale = 3.7743;
+    for (int i = 0; i < helper->channels; i++) {
+        const float val = float(In[i])/65535.0;
+
+        cmsUInt16Number finalResult = In[i];
+        if (!helper->toXYZ) {
+            const float lin = removeSmpte2048Curve(val);
+            finalResult = qBound(0, qRound( applyHLGCurve(lin / scale) * 65535 ), 65535);
+        } else {
+            const float lin = removeHLGCurve(val) * scale;
+            finalResult = qBound(0, qRound( applySmpte2048Curve(lin) * 65535 ), 65535);
+        }
+        Out[i] = finalResult;
+    }
+    return true;
+};
 
 bool LcmsPredefinedPipelineFunctions::setPerceptualQuantizerAToBDummyPipeline(cmsHPROFILE iccProfile, cmsTagSignature tag, ColorPrimaries primaries)
 {
@@ -102,10 +130,19 @@ bool LcmsPredefinedPipelineFunctions::setPerceptualQuantizerAToBDummyPipeline(cm
     // linear curves, obligatory for A2B with both matrix and clut: linear-clut-curves-matrix-linear.
     cmsPipeline *a2B = cmsPipelineAlloc(nullptr, 3, 3);
 
+    cmsToneCurve *linearCurves[3];
+    linearCurves[0] = linearCurves[1] = linearCurves[2] = cmsBuildGamma(nullptr, 1.0);
+    cmsStage *lCurveStage = cmsStageAllocToneCurves(nullptr, 3, linearCurves);
+    cmsPipelineInsertStage(a2B, cmsAT_END, lCurveStage);
+
+    cmsStage *clutStage = cmsStageAllocCLut16bit(nullptr, 8, 3, 3, nullptr);
+    perceptualDummyHelper helper;
+    cmsStageSampleCLut16bit(clutStage, &samplePQDummyClut, &helper, 0);
+    cmsPipelineInsertStage(a2B, cmsAT_END, clutStage);
+
     // close to "PQ" curve
     cmsToneCurve *curve[3];
-    cmsFloat64Number para[] = {5.0, factor, 0};
-    curve[0] = curve[1] = curve[2] = cmsBuildParametricToneCurve(nullptr, 2, para);
+    curve[0] = curve[1] = curve[2] = cmsBuildGamma(nullptr, 2.2);
     cmsStage *curveStage = cmsStageAllocToneCurves(nullptr, 3, curve);
     cmsPipelineInsertStage(a2B, cmsAT_END, curveStage);
 
@@ -122,10 +159,7 @@ bool LcmsPredefinedPipelineFunctions::setPerceptualQuantizerAToBDummyPipeline(cm
     cmsPipelineInsertStage(a2B, cmsAT_END, matrixStage);
 
     // curves, linear
-    cmsToneCurve *linearCurves[3];
-    linearCurves[0] = linearCurves[1] = linearCurves[2] = cmsBuildGamma(nullptr, 1.0);
-    cmsStage *lCurveStage = cmsStageAllocToneCurves(nullptr, 3, linearCurves);
-    cmsPipelineInsertStage(a2B, cmsAT_END, lCurveStage);
+    cmsPipelineInsertStage(a2B, cmsAT_END, cmsStageDup(lCurveStage));
 
     bool success = cmsWriteTag(iccProfile, tag, a2B);
     cmsFreeToneCurve(curve[0]);
@@ -157,10 +191,17 @@ bool LcmsPredefinedPipelineFunctions::setPerceptualQuantizerBToADummyPipeline(cm
     cmsPipelineInsertStage(b2A, cmsAT_END, matrixStage);
     // pq curve
     cmsToneCurve *curve[3];
-    cmsFloat64Number para[] = {1/5.0, 0.5, 0};
-    curve[0] = curve[1] = curve[2] = cmsBuildParametricToneCurve(nullptr, 2, para);
+    curve[0] = curve[1] = curve[2] = cmsBuildGamma(nullptr, 1/2.2);
     cmsStage *curveStage = cmsStageAllocToneCurves(nullptr, 3, curve);
     cmsPipelineInsertStage(b2A, cmsAT_END, curveStage);
+
+    cmsStage *clutStage = cmsStageAllocCLut16bit(nullptr, 8, 3, 3, nullptr);
+    perceptualDummyHelper helper;
+    helper.toXYZ = false;
+    cmsStageSampleCLut16bit(clutStage, &samplePQDummyClut, &helper, 0);
+    cmsPipelineInsertStage(b2A, cmsAT_END, clutStage);
+
+    cmsPipelineInsertStage(b2A, cmsAT_END, cmsStageDup(lCurveStage));
 
     bool success = cmsWriteTag(iccProfile, tag, b2A);
     cmsFreeToneCurve(curve[0]);

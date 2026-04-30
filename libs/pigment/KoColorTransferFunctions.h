@@ -113,7 +113,7 @@ ALWAYS_INLINE float applyHLGCurve(float x) noexcept
         return (a * logf(12.0f * x - b) + c);
     } else {
         // return (sqrt(3.0) * powf(x, 0.5));
-        return (sqrtf(3.0f) * sqrtf(x));
+        return (sqrtf(3.0f * x));
     }
 }
 
@@ -124,7 +124,7 @@ ALWAYS_INLINE float removeHLGCurve(float x) noexcept
     const float c = 0.55991073f;
     if (x <= 0.5f) {
         // return (powf(x, 2.0) / 3.0);
-        return x * x * (1.f / 3.0f);
+        return (x * x) / 3.0f;
     } else {
         return (expf((x - c) * (1.f / a)) + b) * (1.f / 12.0f);
     }

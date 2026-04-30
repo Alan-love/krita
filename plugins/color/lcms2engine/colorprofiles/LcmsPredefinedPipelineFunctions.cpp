@@ -109,9 +109,9 @@ struct perceptualDummyHelper {
  */
 cmsInt32Number samplePQDummyClut(const cmsUInt16Number In[], cmsUInt16Number Out[], void *Cargo) {
     struct perceptualDummyHelper *helper = (struct perceptualDummyHelper *) Cargo;
-    const float scale = 3.7743;
+    const float scale = 3.7743; /// This scales everything so that diffuse white is at 75~%.
     const float pqScale = 125.0; /// Important: this normalizes the pq signal.
-    const float nominalPeak = 10000.0/500.0;/// HLG goes up to 1000, so we're scaling the pq down to that.
+    const float nominalPeak = 10000.0/1000.0;/// HLG goes up to 1000, so we're scaling the pq down to that.
     double coeff[] = {0.2126, 0.7152, 0.0722};
     if (helper->luma) {
         coeff[0] = helper->luma[0];

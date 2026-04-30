@@ -108,7 +108,7 @@ cmsInt32Number samplePQDummyClut(const cmsUInt16Number In[], cmsUInt16Number Out
         const float val = float(In[i])/65535.0;
 
         cmsUInt16Number finalResult = In[i];
-        if (!helper->toXYZ) {
+        if (helper->toXYZ) {
             const float lin = removeSmpte2048Curve(val);
             finalResult = qBound(0, qRound( applyHLGCurve(lin / scale) * 65535 ), 65535);
         } else {
@@ -136,6 +136,7 @@ bool LcmsPredefinedPipelineFunctions::setPerceptualQuantizerAToBDummyPipeline(cm
 
     cmsStage *clutStage = cmsStageAllocCLut16bit(nullptr, lutSize, 3, 3, nullptr);
     perceptualDummyHelper helper;
+    helper.toXYZ = true;
     cmsStageSampleCLut16bit(clutStage, &samplePQDummyClut, &helper, 0);
     cmsPipelineInsertStage(a2B, cmsAT_END, clutStage);
 

@@ -57,7 +57,8 @@ parts:
     source: .
     plugin: python
     python-packages:
-      - pyqt6
+      - PyQt6
+      - PyQt6-Qt6==6.10.2
       - PyQt6-sip
       - sip
   eigen:

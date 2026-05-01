@@ -61585,10 +61585,9 @@ msgid "Sharpness"
 msgstr "Netteté"
 
 #: plugins/paintops/libpaintop/KisSharpnessOptionWidget.cpp:41
-#, fuzzy, kde-format
-#| msgid "Align the brush preview outline to the pixel grid"
+#, kde-format
 msgid "Align the brush preview outline to the pixel grid"
-msgstr "Aligner le contour de l’aperçu de la brosse sur la grille de pixels"
+msgstr "Aligner le contour de l'aperçu de la brosse sur la grille de pixels"
 
 #: plugins/paintops/libpaintop/KisSharpnessOptionWidget.cpp:43
 #, kde-format

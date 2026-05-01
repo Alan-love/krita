@@ -22,7 +22,7 @@ msgstr ""
 "Project-Id-Version: Krita trunk\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-29 00:43+0000\n"
-"PO-Revision-Date: 2026-04-27 11:51+0200\n"
+"PO-Revision-Date: 2026-04-30 18:58+0200\n"
 "Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -60933,7 +60933,7 @@ msgstr "Ostrina"
 #: plugins/paintops/libpaintop/KisSharpnessOptionWidget.cpp:41
 #, kde-format
 msgid "Align the brush preview outline to the pixel grid"
-msgstr ""
+msgstr "Poravnaj oris predogleda čopiča z mrežo slikovnih točk"
 
 #: plugins/paintops/libpaintop/KisSharpnessOptionWidget.cpp:43
 #, kde-format

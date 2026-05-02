@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-29 00:43+0000\n"
-"PO-Revision-Date: 2026-04-29 07:09+0200\n"
+"PO-Revision-Date: 2026-05-01 05:01+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -19914,6 +19914,8 @@ msgid ""
 "Replaces 'JIS X 0213:2004' form kanji in Japanese fonts with the Hojo ('JIS "
 "X 0212-1990') forms."
 msgstr ""
+"ჩაანაცვლებს 'JIS X 0213:2004' ფორმის კანჯის იაპონურ ფონტებში ჰოჯოს ('JIS X "
+"0212-1990') ფორმებით."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:359
 #, kde-format
@@ -19928,6 +19930,8 @@ msgid ""
 "Replaces or respaces proportional or full-width glyphs with half-width "
 "glyphs."
 msgstr ""
+"ჩაანაცვლებს, ან გადაალაგებს პროპორციულ, ან სრული სიგანის მქონე გლიფებს "
+"ნახევარი სიგანის მქნე გლიფებით."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:363
 #, kde-format
@@ -20002,6 +20006,8 @@ msgctxt "@tooltip"
 msgid ""
 "Replaces sequences of leading class Hangul Jamo with a combined leading form."
 msgstr ""
+"ჩაანაცვლებს წამყვანი კლასის ჰანგული ჯამოს მიმდევრობებს კომბინირებული "
+"წამყვანი ფორმით."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:387
 #, kde-format
@@ -21261,6 +21267,8 @@ msgid ""
 "Adds pixels using the color of surrounding pixels. Produces smoother tonal "
 "gradations than Bilinear."
 msgstr ""
+"ამატებს პიქსელებს მიმდებარე პიქსელების ფერის გამოყენებით. წარმოქმნის უფრო "
+"გლუვ ტონალურ გრადაციებს, ვიდრე ორხაზოვანი."
 
 #: libs/image/kis_filter_strategy.h:86
 #: libs/ui/animation/KisDlgImportVideoAnimation.cpp:125
@@ -21274,6 +21282,8 @@ msgid ""
 "Replicate pixels in the image. Preserves all the original detail, but can "
 "produce jagged effects."
 msgstr ""
+"პიქსელების გამეორება სურათზე. ინარჩუნებს ყველა თავდაპირველ დეტალს, მაგრამ "
+"შეუძლია წარმოქმნას დაკბილული ეფექტი."
 
 #. i18n: ectx: property (text), item, widget (QComboBox, cmbSmoothingType)
 #: libs/image/kis_filter_strategy.h:108
@@ -21314,6 +21324,9 @@ msgid ""
 "Offers similar results than Bicubic, but maybe a little bit sharper. Can "
 "produce light and dark halos along strong edges."
 msgstr ""
+"გთავაზობთ მსგავს შედეგებს, ვიდრე ბიკუბური, მაგრამ შესაძლოა ცოტა უფრო "
+"მკვეთრს. შეუძლია, აწარმოოს მსუბუქი და მუქი შარავანდედები ძლიერი წიბოების "
+"გასწვრივ."
 
 #: libs/image/kis_filter_strategy.h:163
 #, kde-format
@@ -22212,6 +22225,8 @@ msgid ""
 "The image contains a Vector Layer with Shapes of type <b>%1</b>, which is "
 "not supported, these will not be saved."
 msgstr ""
+"სურათი შეიცავს ვექტორულ ფენას <b>%1</b> ტიპის ფორმებით, რომელიც მხარდაჭერილი "
+"არაა. მათი შენახვა არ მოხდება."
 
 #: libs/impex/ShapeLayerTypeCheck.h:120
 #, kde-format
@@ -22220,6 +22235,8 @@ msgid ""
 "The image contains a Vector Layer with Shapes of type <b>%1</b>, which is "
 "not supported, these will be saved as paths"
 msgstr ""
+"სურათი შეიცავს ვექტორულ ფენას <b>%1</b> ტიპის ფორმებით, რომელიც მხარდაჭერილი "
+"არაა. ისინი შეინახება ბილიკების სახით"
 
 #: libs/impex/sRGBProfileCheck.h:28
 #, kde-format
@@ -22533,6 +22550,9 @@ msgid ""
 "instance by merging the list of authors together, or keeping identical "
 "photographic information."
 msgstr ""
+"შერწყმის ეს სტრატეგია ცდილობს, იპოვოს საუკეთესო გამოსავალი შერწყმისთვის, "
+"მაგალითად, ავტორთა სიის გაერთიანებით, ან იდენტური ფოტოგრაფიული ინფორმაციის "
+"შენახვით."
 
 #: libs/metadata/kis_meta_data_value.cc:404
 #: libs/metadata/kis_meta_data_value.cc:443
@@ -26380,6 +26400,8 @@ msgid ""
 "You are activating wrap-around mode, but have not enabled OpenGL.\n"
 "To visualize wrap-around mode, enable OpenGL."
 msgstr ""
+"თქვენ ააქტიურებთ შეფუთვის რეჟიმს, მაგრამ არ ჩართეთ OpenGL.\n"
+"შეფუთვის რეჟიმის ვიზუალიზაციისთვის, ჩართეთ OpenGL."
 
 #: libs/ui/canvas/kis_canvas_controller.cpp:407
 #, kde-format
@@ -28546,6 +28568,9 @@ msgid ""
 "with it. If you do not select a profile, Krita will assume that the image "
 "data is encoded in the import profile defined in the Settings dialog."
 msgstr ""
+"გამოსახულების მონაცემებს, რომელთა ჩასმაც გსურთ, არ აქვს მასთან დაკავშირებული "
+"ICM პროფილი. თუ არ აირჩევთ პროფილს, Krita ჩათვლის, რომ გამოსახულების "
+"მონაცემები დაშიფრულია მორგების დიალოგში აღწერილ შემოტანილ პროფილში."
 
 #. i18n: ectx: property (text), widget (QLabel, lblProfile)
 #: libs/ui/forms/wdgapplyprofile.ui:60

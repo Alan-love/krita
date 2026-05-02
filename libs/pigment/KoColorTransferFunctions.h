@@ -97,7 +97,7 @@ ALWAYS_INLINE void removeHLGOOTF(float *rgb,
     const float luma = (rgb[0] * static_cast<float>(lumaCoefficients[0]))
         + (rgb[1] * static_cast<float>(lumaCoefficients[1]))
         + (rgb[2] * static_cast<float>(lumaCoefficients[2]));
-    const float multiplier = powf(luma, 1.0/((1.f - gamma) /(gamma))) ;
+    const float multiplier = powf(luma, gamma-1.f) ;
     rgb[0] *= multiplier;
     rgb[1] *= multiplier;
     rgb[2] *= multiplier;

@@ -32,6 +32,14 @@ slots:
     name: org.kde.krita
     bus: session
 parts:
+  openjpeg:
+    source: https://github.com/uclouvain/openjpeg.git
+    source-tag: v2.5.4
+    plugin: cmake
+    cmake-parameters:
+      - -DCMAKE_BUILD_TYPE=Release
+      - -DCMAKE_INSTALL_PREFIX=/usr
+      - -DBUILD_STATIC_LIBS=OFF
   xsimd:
     source: https://github.com/xtensor-stack/xsimd.git
     source-tag: 14.1.0
@@ -57,7 +65,7 @@ parts:
     source: .
     plugin: python
     python-packages:
-      - PyQt6
+      - PyQt6==6.10.2
       - PyQt6-Qt6==6.10.2
       - PyQt6-sip
       - sip
@@ -106,7 +114,6 @@ parts:
       - zlib1g-dev
       - liblcms2-dev
       - libcurl4-gnutls-dev
-      - libopenjp2-7-dev
       - libboost-dev
       - libgl1-mesa-dev
     stage-packages:
@@ -145,7 +152,6 @@ parts:
       - libxcb1
       - libxdmcp6
       - libmd4c0
-      - libopenjpip7
     cmake-parameters:
       - -DCMAKE_INSTALL_PREFIX=/usr
       - -DCMAKE_BUILD_TYPE=Release
@@ -194,6 +200,7 @@ parts:
       - pyqt6
       - kseexpr
       - xsimd
+      - openjpeg
     source: .
     source-type: local
     plugin: cmake
@@ -225,7 +232,6 @@ parts:
       - libmypaint-dev
       - libopencolorio-dev
       - libopenexr-dev
-      - libopenjp2-7-dev
       - libpng-dev
       - libpostproc-dev
       - libquazip5-dev
@@ -274,7 +280,6 @@ parts:
       - libmypaint-1.5-1
       - libopencolorio2.1t64
       - libopenexr-3-1-30
-      - libopenjp2-7
       - libpng16-16
       - libpython3.12
       - libtiff6

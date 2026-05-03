@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-04-29 00:43+0000\n"
-"PO-Revision-Date: 2026-05-01 15:09+0300\n"
+"PO-Revision-Date: 2026-05-02 19:42+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -7756,7 +7756,7 @@ msgid ""
 "Make the first selected text flow in shape. If there were already shapes it "
 "was flowing into, will add the shape to the chain."
 msgstr ""
-"Seçilen ilk metnin şekil içinde akmasını sağlayın. Halihazırda içine aktığı "
+"Seçilen ilk metnin şekil içinde akmasını sağlayın. Hâlihazırda içine aktığı "
 "şekiller varsa bu şekilleri zincire ekleyin."
 
 #. i18n: context: text @ Action (subtract_shape_from_flow_area), Actions (Interaction Tool), ActionCollection (Tools)
@@ -9280,7 +9280,7 @@ msgid ""
 "Disable the brush outline, or enable the previously used brush outline shape "
 "if already disabled"
 msgstr ""
-"Fırça ana hattını devre dışı bırak veya halihazırda devre dışı bırakılmışsa "
+"Fırça ana hattını devre dışı bırak veya hâlihazırda devre dışı bırakılmışsa "
 "bir önceki fırça ana hat şeklini etkinleştir"
 
 #. i18n: context: text @ Action (selection_tool_mode_add), Actions (Painting), ActionCollection (Krita)
@@ -24462,7 +24462,7 @@ msgid ""
 "overwrite it?\n"
 "Resource filename: %1"
 msgstr ""
-"Bu özkaynak, özkaynak klasöründe halihazırda var. Üzerine yazmak istiyor "
+"Bu özkaynak, özkaynak klasöründe hâlihazırda var. Üzerine yazmak istiyor "
 "musunuz?\n"
 "Özkaynak dosya adı: %1"
 
@@ -24493,7 +24493,7 @@ msgid ""
 "name for multiple resources?(If you decline now, the resource won't be "
 "renamed)."
 msgstr ""
-"Bu ad, başka bir özkaynak için halihazırda kullanılıyor. Aynı adı, birden "
+"Bu ad, başka bir özkaynak için hâlihazırda kullanılıyor. Aynı adı, birden "
 "çok özkaynak için kullanmak istiyor musunuz? (Şimdi reddederseniz özkaynak "
 "yeniden adlandırılmayacak)."
 
@@ -24523,7 +24523,7 @@ msgid ""
 "that resource?\n"
 "(If you decline now, nothing will be done)."
 msgstr ""
-"Bu dosya adı, başka bir özkaynak için halihazırda kullanılıyor. O özkaynağın "
+"Bu dosya adı, başka bir özkaynak için hâlihazırda kullanılıyor. O özkaynağın "
 "üzerine yazmak istiyor musunuz?\n"
 "(Şimdi reddederseniz bir şey yapılmayacak)."
 
@@ -24541,7 +24541,7 @@ msgid ""
 "name for multiple resources? (If you decline now, the resource won't be "
 "added)."
 msgstr ""
-"Bu ad, başka bir özkaynak için halihazırda kullanılıyor. Aynı adı, birden "
+"Bu ad, başka bir özkaynak için hâlihazırda kullanılıyor. Aynı adı, birden "
 "çok özkaynak için kullanmak istiyor musunuz? (Şimdi reddederseniz özkaynak "
 "eklenmeyecek)."
 
@@ -24579,7 +24579,7 @@ msgid ""
 "use the same name for multiple resources?\n"
 "If you cancel, your changes won't be saved."
 msgstr ""
-"Bu ad, başka bir özkaynak için halihazırda kullanılıyor. Üzerine yazmak ve "
+"Bu ad, başka bir özkaynak için hâlihazırda kullanılıyor. Üzerine yazmak ve "
 "aynı adı birden çok özkaynak için kullanmak istiyor musunuz?\n"
 "İptal ederseniz değişiklikleriniz kaydedilmeyecek."
 
@@ -24644,7 +24644,7 @@ msgid ""
 "Tag to be removed: %1\n"
 "Tag's unique name: %2"
 msgstr ""
-"Bu benzersiz adla başka bir künye halihazırda var. Yeniden adlandırmayı "
+"Bu benzersiz adla başka bir künye hâlihazırda var. Yeniden adlandırmayı "
 "sürdürmek için var olan künyenin kaldırılması gerekiyor. Sürdürmek istiyor "
 "musunuz?\n"
 "Kaldırılacak künye: %1\n"
@@ -24679,7 +24679,7 @@ msgstr "Künyenin üzerine yazılsın mı?"
 msgctxt "Question to the user in a dialog about creating a tag"
 msgid "A tag with this unique name already exists. Do you want to replace it?"
 msgstr ""
-"Bu benzersiz adla başka bir künye halihazırda var. Değiştirmek istiyor "
+"Bu benzersiz adla başka bir künye hâlihazırda var. Değiştirmek istiyor "
 "musunuz?"
 
 #: libs/resourcewidgets/KisTagChooserWidget.cpp:275
@@ -24776,7 +24776,7 @@ msgstr "Birleştirileni Kopyala"
 #, kde-format
 msgctxt "floating message"
 msgid "Selection is already in a vector format "
-msgstr "Seçim halihazırda vektör biçimde "
+msgstr "Seçim hâlihazırda vektör biçimde "
 
 #: libs/ui/actions/kis_selection_action_factories.cpp:514
 #: libs/ui/actions/kis_selection_action_factories.cpp:534
@@ -24788,13 +24788,13 @@ msgstr "Vektör Seçime Dönüştür"
 #, kde-format
 msgctxt "floating message"
 msgid "Selection is already in a raster format "
-msgstr "Seçim halihazırda raster biçimde "
+msgstr "Seçim hâlihazırda raster biçimde "
 
 #: libs/ui/actions/kis_selection_action_factories.cpp:576
 #, kde-format
 msgctxt "floating message"
 msgid "The shape already belongs to a selection"
-msgstr "Şekil halihazırda bir seçime ait"
+msgstr "Şekil hâlihazırda bir seçime ait"
 
 #: libs/ui/actions/kis_selection_action_factories.cpp:582
 msgctxt "(qtundo-format)"
@@ -24866,7 +24866,7 @@ msgid ""
 "                                                              Are you sure "
 "you want to overwrite the existing file?"
 msgstr ""
-"Videonuzu [%1] sunmak istediğiniz konumda halihazırda bir dosya var.\n"
+"Videonuzu [%1] sunmak istediğiniz konumda hâlihazırda bir dosya var.\n"
 "Var olan dosyanın üzerine yazmak istediğinizden emin misiniz?"
 
 #: libs/ui/animation/KisAnimationRender.cpp:153
@@ -26613,13 +26613,13 @@ msgstr "<html><head/><body><h1 align=\"center\">Geliştirenler</h1></p><p>"
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Serdar Soytetir, Emir SARI"
+msgstr "Serdar SOYTETİR, Emir SARI"
 
 #: libs/ui/dialogs/kis_about_application.cpp:67
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "tulliana@gmail.com, emir_sari@îcloud.com"
+msgstr "tulliana@gmail.com, emir_sari@icloud.com"
 
 #: libs/ui/dialogs/kis_about_application.cpp:72
 #, kde-format
@@ -27040,7 +27040,7 @@ msgid ""
 "There is already a layer style library with this name installed. Do you want "
 "to overwrite it?"
 msgstr ""
-"Bu adda başka bir katman biçemi kitaplığı halihazırda var. Üzerine yazmak "
+"Bu adda başka bir katman biçemi kitaplığı hâlihazırda var. Üzerine yazmak "
 "istiyor musunuz?"
 
 #: libs/ui/dialogs/kis_dlg_layer_style.cpp:1000
@@ -34105,7 +34105,7 @@ msgstr "Önceden Tanımlanmış Desenlere Ekle"
 #: libs/ui/kis_custom_pattern.cc:126
 #, kde-format
 msgid "This pattern already exists. Do you want to overwrite it?"
-msgstr "Bu desen halihazırda var. Üzerine yazmak istiyor musunuz?"
+msgstr "Bu desen hâlihazırda var. Üzerine yazmak istiyor musunuz?"
 
 #: libs/ui/kis_file_layer.cpp:134
 #, kde-format
@@ -35235,7 +35235,7 @@ msgstr ""
 "--new-image seçeneğini kullanarak yeni bir belge oluşturabilir veya var olan "
 "bir dosyayı açabilirsiniz.\n"
 "\n"
-"Bunun yerine, dosya katmanı Krita’nın halihazırda çalışan bir örneğinde açık "
+"Bunun yerine, dosya katmanı Krita’nın hâlihazırda çalışan bir örneğinde açık "
 "olan bir belgeye eklemek istiyorsanız ayarlarda ‘Krita’nın yalnızca bir "
 "örneğine izin ver’ onay kutusunu işaretleyin (Ayarlar → Genel → Pencere)."
 
@@ -39628,7 +39628,7 @@ msgstr "Ad ekle"
 #, kde-format
 msgid "File name already in use. Saving will overwrite the original Workspace."
 msgstr ""
-"Dosya adı halihazırda kullanımda. Kaydetmek, özgün çalışma alanının üzerine "
+"Dosya adı hâlihazırda kullanımda. Kaydetmek, özgün çalışma alanının üzerine "
 "yazacaktır."
 
 #: libs/ui/widgets/kis_workspace_chooser.cpp:204
@@ -39654,7 +39654,7 @@ msgstr "Pencere Düzeni"
 msgid ""
 "File name already in use. Saving will overwrite the original window layout."
 msgstr ""
-"Dosya adı halihazırda kullanımda. Kaydetmek, özgün pencere yerleşiminin "
+"Dosya adı hâlihazırda kullanımda. Kaydetmek, özgün pencere yerleşiminin "
 "üzerine yazacaktır."
 
 #: libs/ui/widgets/kis_workspace_chooser.cpp:281
@@ -39956,13 +39956,13 @@ msgstr "Gradyan adını girin:"
 #, kde-format
 msgctxt "@title:window"
 msgid "Name Already Exists"
-msgstr "Ad Halihazırda Var"
+msgstr "Ad Hâlihazırda Var"
 
 #: libs/ui/widgets/KoFillConfigWidget.cpp:655
 #: plugins/dockers/tasksetdocker/tasksetdocker_dock.cpp:207
 #, kde-format
 msgid "The name '%1' already exists, do you wish to overwrite it?"
-msgstr "“%1” adı halihazırda var, üzerine yazmak istiyor musunuz?"
+msgstr "“%1” adı hâlihazırda var, üzerine yazmak istiyor musunuz?"
 
 #. i18n: ectx: property (toolTip), widget (QToolButton, btnNoFill)
 #: libs/ui/widgets/KoFillConfigWidget.ui:38
@@ -41420,7 +41420,7 @@ msgid ""
 "some applications use.\n"
 "Do you really want to use it as a global shortcut as well?"
 msgstr ""
-"“%1” düğme kombinasyonu, halihazırda başka bir uygulamanın kullandığı “%2” "
+"“%1” düğme kombinasyonu, hâlihazırda başka bir uygulamanın kullandığı “%2” "
 "standart eylemi için de kullanılıyor.\n"
 "Onu bir global kısayol olarak da kullanmak istiyor musunuz?"
 
@@ -44561,7 +44561,7 @@ msgstr "Yavaş Çekim Videoyu Farklı Dışa Aktar"
 #: plugins/dockers/recorder/recorder_export.cpp:613
 #, kde-format
 msgid "The video file already exists. Do you wish to overwrite it?"
-msgstr "Video dosyası halihazırda var. Üzerine yazmak istiyor musunuz?"
+msgstr "Video dosyası hâlihazırda var. Üzerine yazmak istiyor musunuz?"
 
 #: plugins/dockers/recorder/recorder_export.cpp:618
 #, kde-format
@@ -44882,7 +44882,7 @@ msgid ""
 "Do you wish to continue?"
 msgstr ""
 "Seçili kayıtlar silinecek ve onlar için yeniden bir hızlandırılmış çekim "
-"dışa aktaramayacaksınız (halihazırda dışa aktarılan hızlandırılmış çekimler "
+"dışa aktaramayacaksınız (hâlihazırda dışa aktarılan hızlandırılmış çekimler "
 "korunacaktır).\n"
 "Sürdürmek istiyor musunuz?"
 
@@ -50299,7 +50299,7 @@ msgstr "%1 demeti yüklenemedi."
 msgid ""
 "There is already a bundle with this name installed. Do you want to overwrite "
 "it?"
-msgstr "Bu adda bir demet halihazırda var. Üzerine yazmak istiyor musunuz?"
+msgstr "Bu adda bir demet hâlihazırda var. Üzerine yazmak istiyor musunuz?"
 
 #: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:276
 #, kde-format
@@ -50402,7 +50402,7 @@ msgstr "Kaydetme konumu boş olamaz."
 #, kde-format
 msgctxt "In a dialog asking whether to overwrite a bundle (resource pack)"
 msgid "A bundle with this name already exists."
-msgstr "Bu adda bir demet halihazırda var."
+msgstr "Bu adda bir demet hâlihazırda var."
 
 #: plugins/extensions/resourcemanager/dlg_create_bundle.cpp:338
 #, kde-format
@@ -50619,7 +50619,7 @@ msgid ""
 "A resources bundle, an ASL or an ABR file with the same name already exists "
 "in the resources folder:"
 msgstr ""
-"Özkaynaklar klasöründe aynı adlı bir ASL veya bir ABR dosyası halihazırda "
+"Özkaynaklar klasöründe aynı adlı bir ASL veya bir ABR dosyası hâlihazırda "
 "var:"
 
 #: plugins/extensions/resourcemanager/ResourceImporter.cpp:120
@@ -62917,7 +62917,7 @@ msgid ""
 msgstr ""
 "Çizgi romanın var olan bir kaynağın uyarlanması olup olmadığı ve öyleyse bu "
 "kaynak hakkında nasıl bilgi bulunacağı. Dolayısıyla, uyarlanmış bir web "
-"çizgi romanı için resmi web sitesi URL’si buraya eklenmelidir."
+"çizgi romanı için resmî web sitesi URL’si buraya eklenmelidir."
 
 #: plugins/python/comics_project_management_tools/comics_metadata_dialog.py:419
 msgid "City:"
@@ -64147,7 +64147,7 @@ msgstr "Eklenti Üzerine Yaz"
 #: plugins/python/plugin_importer/plugin_importer_extension.py:48
 #, python-format
 msgid "The plugin \"%s\" already exists. Overwrite it?"
-msgstr "“%s” eklentisi halihazırda var. Üzerine yazılsın mı?"
+msgstr "“%s” eklentisi hâlihazırda var. Üzerine yazılsın mı?"
 
 #: plugins/python/plugin_importer/plugin_importer_extension.py:56
 msgid "The following plugins were imported:"
@@ -65135,7 +65135,7 @@ msgid ""
 "(useful for filling line-art)"
 msgstr ""
 "Sürükleme, yalnızca ilk bölgeye benzer renkli bölgeleri doldurur (çizgi "
-"resmi doldurmak için kullanışlıdır)"
+"sanatını doldurmak için kullanışlıdır)"
 
 #: plugins/tools/basictools/kis_tool_fill.cc:675
 #: plugins/tools/tool_enclose_and_fill/KisToolEncloseAndFill.cpp:580
@@ -66276,7 +66276,7 @@ msgid ""
 "A profile with that name already exists.\n"
 "Do you want to overwrite it?"
 msgstr ""
-"Bu adda başka bir profil halihazırda var.\n"
+"Bu adda başka bir profil hâlihazırda var.\n"
 "Üzerine yazmak istiyor musunuz?"
 
 #: plugins/tools/karbonplugins/tools/CalligraphyTool/KarbonCalligraphyOptionWidget.cpp:364

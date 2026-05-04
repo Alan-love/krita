@@ -29,7 +29,6 @@ public:
 
     SelectionMode selectionMode() const;
     SelectionAction selectionAction() const;
-    bool moveSelectedContent() const;
     bool antiAliasSelection() const;
     int growSelection() const;
     bool stopGrowingAtDarkestPixel() const;
@@ -49,7 +48,6 @@ public Q_SLOTS:
 
     void slotWidgetModeChanged(SelectionMode mode);
     void slotWidgetActionChanged(SelectionAction action);
-    void slotWidgetMoveSelectedContentChanged(bool value);
     void slotWidgetAntiAliasChanged(bool value);
     void slotWidgetGrowChanged(int value);
     void slotWidgetStopGrowingAtDarkestPixelChanged(bool value);

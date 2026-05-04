@@ -90,9 +90,11 @@
 #include <KisWidgetConnectionUtils.h>
 #include <dialogs/KisFrameRateLimitModel.h>
 #include <KisPlatformPluginInterfaceFactory.h>
+#ifdef Q_OS_LINUX
 #if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
 #include <surfacecolormanagement/KisSurfaceColorimetry.h>
 #include <KisColorimetryUtils.h>
+#endif
 #endif
 
 #include "slider_and_spin_box_sync.h"
@@ -1642,10 +1644,12 @@ void ColorSettingsTab::updateProofingDisplayInfo() {
 void ColorSettingsTab::updatePreferredSpaceGraphic()
 {
     if (!m_preferredSpaceGraphic) return;
+    if (!KisPlatformPluginInterfaceFactory::instance()->surfaceColorManagedByOS()) return;
     KisMainWindow *mainWindow = KisPart::instance()->currentMainwindow();
     QVector<double> colorants;
     QVector <double> whitePoint;
 
+#ifdef Q_OS_LINUX
 #if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
     KisRootSurfaceInfoProxy proxy(mainWindow);
     std::optional<KisSurfaceColorimetry::SurfaceDescription> currentDescription = proxy.currentSurfaceDescription();
@@ -1703,6 +1707,7 @@ void ColorSettingsTab::updatePreferredSpaceGraphic()
             m_preferredSpaceGraphic->setProfileDataAvailable(false);
         }
     }
+#endif
 #endif
     m_preferredSpaceGraphic->update();
 }

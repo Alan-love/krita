@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-29 00:43+0000\n"
+"POT-Creation-Date: 2026-05-05 00:42+0000\n"
 "PO-Revision-Date: 2026-04-23 14:05+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -21067,8 +21067,8 @@ msgstr "Розмір"
 #: libs/ui/forms/wdgrectangleconstraints.ui:178
 #: libs/ui/forms/wdgrectangleconstraints.ui:200 libs/ui/kis_paintop_box.cc:302
 #: libs/ui/widgets/kis_lod_availability_widget.cpp:72
-#: libs/ui/widgets/kis_selection_options.cc:196
-#: libs/ui/widgets/kis_selection_options.cc:211
+#: libs/ui/widgets/kis_selection_options.cc:201
+#: libs/ui/widgets/kis_selection_options.cc:216
 #: plugins/dockers/advancedcolorselector/wdg_color_selector_settings.ui:311
 #: plugins/dockers/advancedcolorselector/wdg_color_selector_settings.ui:540
 #: plugins/dockers/advancedcolorselector/wdg_color_selector_settings.ui:652
@@ -30704,7 +30704,7 @@ msgstr "Панель дій з позначеним"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, chkEnableSelectionActionBar)
 #: libs/ui/forms/wdggeneralsettings.ui:1118
-#: libs/ui/widgets/kis_selection_options.cc:177
+#: libs/ui/widgets/kis_selection_options.cc:178
 #, kde-format
 msgid ""
 "When enabled, any selections will produce a small floating panel of useful "
@@ -30715,7 +30715,7 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkEnableSelectionActionBar)
 #: libs/ui/forms/wdggeneralsettings.ui:1121
-#: libs/ui/widgets/kis_selection_options.cc:175
+#: libs/ui/widgets/kis_selection_options.cc:176
 #, kde-format
 msgid "Enable Selection Actions Bar"
 msgstr "Увімкнути панель дій із позначеним"
@@ -38396,6 +38396,13 @@ msgstr ""
 "Фільтрувати «%1»\n"
 "фільтрування «%1»"
 
+#: libs/ui/tool/strokes/move_selection_stroke_strategy.cpp:29
+msgctxt "(qtundo-format)"
+msgid "Move Selection"
+msgstr ""
+"Пересунути позначене\n"
+"пересування позначеного"
+
 #: libs/ui/toolbox/KoToolBox.cpp:360 libs/widgetutils/xmlgui/ktoolbar.cpp:346
 #, kde-format
 msgctxt "@item:inmenu Icon size"
@@ -39948,105 +39955,125 @@ msgstr "Рушій %1"
 msgid "No Preview for this engine"
 msgstr "Для цього рушія попереднього перегляду не передбачено"
 
-#: libs/ui/widgets/kis_selection_options.cc:188
+#: libs/ui/widgets/kis_selection_options.cc:190
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Move Selection"
+msgctxt "The move-selected-content checkbox in selection tool options"
+msgid "Move Selected Content"
+msgstr ""
+"Пересунути позначене\n"
+"пересування позначеного"
+
+#: libs/ui/widgets/kis_selection_options.cc:193
 #: plugins/tools/basictools/kis_tool_fill.cc:591
 #, kde-format
 msgctxt "The anti-alias checkbox in fill tool options"
 msgid "Anti-aliasing"
 msgstr "Згладжування"
 
-#: libs/ui/widgets/kis_selection_options.cc:193
+#: libs/ui/widgets/kis_selection_options.cc:198
 #, kde-format
 msgctxt "The 'grow/shrink' spinbox prefix in selection tools options"
 msgid "Grow: "
 msgstr "Збільшити: "
 
-#: libs/ui/widgets/kis_selection_options.cc:208
+#: libs/ui/widgets/kis_selection_options.cc:213
 #, kde-format
 msgctxt "The 'feather' spinbox prefix in selection tools options"
 msgid "Feather: "
 msgstr "Розтушування: "
 
-#: libs/ui/widgets/kis_selection_options.cc:228
+#: libs/ui/widgets/kis_selection_options.cc:233
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Pixel Selection"
 msgstr "Вибір пікселів"
 
-#: libs/ui/widgets/kis_selection_options.cc:230
+#: libs/ui/widgets/kis_selection_options.cc:235
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Vector Selection"
 msgstr "Векторний вибір"
 
-#: libs/ui/widgets/kis_selection_options.cc:233
-#: libs/ui/widgets/kis_selection_options.cc:476
+#: libs/ui/widgets/kis_selection_options.cc:238
+#: libs/ui/widgets/kis_selection_options.cc:500
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Replace"
 msgstr "Замінити"
 
-#: libs/ui/widgets/kis_selection_options.cc:235
-#: libs/ui/widgets/kis_selection_options.cc:491
+#: libs/ui/widgets/kis_selection_options.cc:240
+#: libs/ui/widgets/kis_selection_options.cc:515
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Intersect"
 msgstr "Перетнути"
 
-#: libs/ui/widgets/kis_selection_options.cc:237
-#: libs/ui/widgets/kis_selection_options.cc:481
+#: libs/ui/widgets/kis_selection_options.cc:242
+#: libs/ui/widgets/kis_selection_options.cc:505
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add"
 msgstr "Додати"
 
-#: libs/ui/widgets/kis_selection_options.cc:239
-#: libs/ui/widgets/kis_selection_options.cc:486
+#: libs/ui/widgets/kis_selection_options.cc:244
+#: libs/ui/widgets/kis_selection_options.cc:510
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtract"
 msgstr "Відняти"
 
-#: libs/ui/widgets/kis_selection_options.cc:241
-#: libs/ui/widgets/kis_selection_options.cc:496
+#: libs/ui/widgets/kis_selection_options.cc:246
+#: libs/ui/widgets/kis_selection_options.cc:520
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Symmetric Difference"
 msgstr "Симетрична різниця"
 
-#: libs/ui/widgets/kis_selection_options.cc:244
+#: libs/ui/widgets/kis_selection_options.cc:249
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Move Selection"
+msgctxt "@info:tooltip"
+msgid "Move Selected Content"
+msgstr ""
+"Пересунути позначене\n"
+"пересування позначеного"
+
+#: libs/ui/widgets/kis_selection_options.cc:252
 #, kde-format
 msgid "Smooths the edges of the selection"
 msgstr "Згладжувати краї позначеного"
 
-#: libs/ui/widgets/kis_selection_options.cc:246
+#: libs/ui/widgets/kis_selection_options.cc:254
 #, kde-format
 msgid "Grow or shrink the selection by the set amount"
 msgstr "Збільшити або зменшити позначену область за вказаним значенням"
 
-#: libs/ui/widgets/kis_selection_options.cc:248
+#: libs/ui/widgets/kis_selection_options.cc:256
 #: plugins/tools/basictools/kis_tool_fill.cc:663
 #: plugins/tools/tool_enclose_and_fill/KisToolEncloseAndFill.cpp:572
 #, kde-format
 msgid "Stop growing at the darkest and/or most opaque pixels"
 msgstr "Зупинити збільшення на найтемніших і/або найнепрозоріших пікселях"
 
-#: libs/ui/widgets/kis_selection_options.cc:250
+#: libs/ui/widgets/kis_selection_options.cc:258
 #, kde-format
 msgid "Blur the selection by the set amount"
 msgstr "Розмити позначену область за встановленою потужністю"
 
-#: libs/ui/widgets/kis_selection_options.cc:253
+#: libs/ui/widgets/kis_selection_options.cc:261
 #, kde-format
 msgid "Select regions found from the active layer"
 msgstr "Позначити області, виявлені на активному шарі"
 
-#: libs/ui/widgets/kis_selection_options.cc:255
+#: libs/ui/widgets/kis_selection_options.cc:263
 #, kde-format
 msgid "Select regions found from the merging of all layers"
 msgstr "Позначити області, виявлені у результаті об'єднання усіх шарів"
 
-#: libs/ui/widgets/kis_selection_options.cc:257
+#: libs/ui/widgets/kis_selection_options.cc:265
 #, kde-format
 msgid ""
 "Select regions found from the merging of layers with specific color labels"
@@ -40054,55 +40081,55 @@ msgstr ""
 "Позначити області, виявлені у результаті об'єднання шарів, вказаними "
 "кольоровими мітками"
 
-#: libs/ui/widgets/kis_selection_options.cc:265
+#: libs/ui/widgets/kis_selection_options.cc:273
 #, kde-format
 msgctxt "The 'mode' section label in selection tools options"
 msgid "Mode"
 msgstr "Режим"
 
-#: libs/ui/widgets/kis_selection_options.cc:272
+#: libs/ui/widgets/kis_selection_options.cc:280
 #, kde-format
 msgctxt "The 'action' section label in selection tools options"
 msgid "Action"
 msgstr "Дія"
 
-#: libs/ui/widgets/kis_selection_options.cc:279
+#: libs/ui/widgets/kis_selection_options.cc:287
 #, kde-format
 msgctxt "The 'reference' section label in selection tools options"
 msgid "Reference"
 msgstr "Еталон"
 
-#: libs/ui/widgets/kis_selection_options.cc:288
+#: libs/ui/widgets/kis_selection_options.cc:299
 #, kde-format
 msgctxt "The 'adjustments' section label in selection tools options"
 msgid "Adjustments"
 msgstr "Коригування"
 
-#: libs/ui/widgets/kis_selection_options.cc:477
+#: libs/ui/widgets/kis_selection_options.cc:501
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Replace (%1)"
 msgstr "Замінити (%1)"
 
-#: libs/ui/widgets/kis_selection_options.cc:482
+#: libs/ui/widgets/kis_selection_options.cc:506
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add (%1)"
 msgstr "Додати (%1)"
 
-#: libs/ui/widgets/kis_selection_options.cc:487
+#: libs/ui/widgets/kis_selection_options.cc:511
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtract (%1)"
 msgstr "Відняти (%1)"
 
-#: libs/ui/widgets/kis_selection_options.cc:492
+#: libs/ui/widgets/kis_selection_options.cc:516
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Intersect (%1)"
 msgstr "Перетнути (%1)"
 
-#: libs/ui/widgets/kis_selection_options.cc:498
+#: libs/ui/widgets/kis_selection_options.cc:522
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Symmetric Difference (%1)"
@@ -66306,13 +66333,6 @@ msgstr ""
 msgctxt "action"
 msgid "Freehand Path Tool"
 msgstr "Інструмент «Довільний контур»"
-
-#: plugins/tools/basictools/strokes/move_selection_stroke_strategy.cpp:29
-msgctxt "(qtundo-format)"
-msgid "Move Selection"
-msgstr ""
-"Пересунути позначене\n"
-"пересування позначеного"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, cbPalette)
 #: plugins/tools/basictools/wdgcolorsampler.ui:67

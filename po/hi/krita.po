@@ -33,7 +33,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-04-29 00:43+0000\n"
+"POT-Creation-Date: 2026-05-05 00:42+0000\n"
 "PO-Revision-Date: 2022-03-29 20:36+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -21283,8 +21283,8 @@ msgstr "आकार"
 #: libs/ui/forms/wdgrectangleconstraints.ui:178
 #: libs/ui/forms/wdgrectangleconstraints.ui:200 libs/ui/kis_paintop_box.cc:302
 #: libs/ui/widgets/kis_lod_availability_widget.cpp:72
-#: libs/ui/widgets/kis_selection_options.cc:196
-#: libs/ui/widgets/kis_selection_options.cc:211
+#: libs/ui/widgets/kis_selection_options.cc:201
+#: libs/ui/widgets/kis_selection_options.cc:216
 #: plugins/dockers/advancedcolorselector/wdg_color_selector_settings.ui:311
 #: plugins/dockers/advancedcolorselector/wdg_color_selector_settings.ui:540
 #: plugins/dockers/advancedcolorselector/wdg_color_selector_settings.ui:652
@@ -30650,7 +30650,7 @@ msgstr "चयन क्रियाएँ"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, chkEnableSelectionActionBar)
 #: libs/ui/forms/wdggeneralsettings.ui:1118
-#: libs/ui/widgets/kis_selection_options.cc:177
+#: libs/ui/widgets/kis_selection_options.cc:178
 #, kde-format
 msgid ""
 "When enabled, any selections will produce a small floating panel of useful "
@@ -30659,7 +30659,7 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkEnableSelectionActionBar)
 #: libs/ui/forms/wdggeneralsettings.ui:1121
-#: libs/ui/widgets/kis_selection_options.cc:175
+#: libs/ui/widgets/kis_selection_options.cc:176
 #, fuzzy, kde-format
 #| msgid "Selection Actions"
 msgid "Enable Selection Actions Bar"
@@ -38059,6 +38059,11 @@ msgctxt "(qtundo-format) Filter as an effect"
 msgid "Filter \"%1\""
 msgstr "फ़िल्टर \"%1\""
 
+#: libs/ui/tool/strokes/move_selection_stroke_strategy.cpp:29
+msgctxt "(qtundo-format)"
+msgid "Move Selection"
+msgstr "चयन खिसकाएँ"
+
 #: libs/ui/toolbox/KoToolBox.cpp:360 libs/widgetutils/xmlgui/ktoolbar.cpp:346
 #, kde-format
 msgctxt "@item:inmenu Icon size"
@@ -39423,7 +39428,15 @@ msgstr "%1 इंजन"
 msgid "No Preview for this engine"
 msgstr "इस इंजन के लिए पूर्वावलोकन नहीं है"
 
-#: libs/ui/widgets/kis_selection_options.cc:188
+#: libs/ui/widgets/kis_selection_options.cc:190
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Move Selection"
+msgctxt "The move-selected-content checkbox in selection tool options"
+msgid "Move Selected Content"
+msgstr "चयन खिसकाएँ"
+
+#: libs/ui/widgets/kis_selection_options.cc:193
 #: plugins/tools/basictools/kis_tool_fill.cc:591
 #, fuzzy, kde-format
 #| msgid "Anti-aliasing"
@@ -39431,7 +39444,7 @@ msgctxt "The anti-alias checkbox in fill tool options"
 msgid "Anti-aliasing"
 msgstr "एन्टी-अलियासिंग"
 
-#: libs/ui/widgets/kis_selection_options.cc:193
+#: libs/ui/widgets/kis_selection_options.cc:198
 #, fuzzy, kde-format
 #| msgctxt "Grow as in deform brush engine"
 #| msgid "Grow"
@@ -39439,123 +39452,131 @@ msgctxt "The 'grow/shrink' spinbox prefix in selection tools options"
 msgid "Grow: "
 msgstr "बढ़त"
 
-#: libs/ui/widgets/kis_selection_options.cc:208
+#: libs/ui/widgets/kis_selection_options.cc:213
 #, fuzzy, kde-format
 #| msgid "Feather..."
 msgctxt "The 'feather' spinbox prefix in selection tools options"
 msgid "Feather: "
 msgstr "पंख..."
 
-#: libs/ui/widgets/kis_selection_options.cc:228
+#: libs/ui/widgets/kis_selection_options.cc:233
 #, fuzzy, kde-format
 #| msgid "Pixel Selection"
 msgctxt "@info:tooltip"
 msgid "Pixel Selection"
 msgstr "पिक्सेल चयन"
 
-#: libs/ui/widgets/kis_selection_options.cc:230
+#: libs/ui/widgets/kis_selection_options.cc:235
 #, fuzzy, kde-format
 #| msgid "Vector Selection"
 msgctxt "@info:tooltip"
 msgid "Vector Selection"
 msgstr "सदिश चयन"
 
-#: libs/ui/widgets/kis_selection_options.cc:233
-#: libs/ui/widgets/kis_selection_options.cc:476
+#: libs/ui/widgets/kis_selection_options.cc:238
+#: libs/ui/widgets/kis_selection_options.cc:500
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Replace"
 msgstr "बदलें"
 
-#: libs/ui/widgets/kis_selection_options.cc:235
-#: libs/ui/widgets/kis_selection_options.cc:491
+#: libs/ui/widgets/kis_selection_options.cc:240
+#: libs/ui/widgets/kis_selection_options.cc:515
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Intersect"
 msgstr "प्रतिच्छेदन"
 
-#: libs/ui/widgets/kis_selection_options.cc:237
-#: libs/ui/widgets/kis_selection_options.cc:481
+#: libs/ui/widgets/kis_selection_options.cc:242
+#: libs/ui/widgets/kis_selection_options.cc:505
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add"
 msgstr "जोड़ें"
 
-#: libs/ui/widgets/kis_selection_options.cc:239
-#: libs/ui/widgets/kis_selection_options.cc:486
+#: libs/ui/widgets/kis_selection_options.cc:244
+#: libs/ui/widgets/kis_selection_options.cc:510
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtract"
 msgstr "घटाएँ"
 
-#: libs/ui/widgets/kis_selection_options.cc:241
-#: libs/ui/widgets/kis_selection_options.cc:496
+#: libs/ui/widgets/kis_selection_options.cc:246
+#: libs/ui/widgets/kis_selection_options.cc:520
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Symmetric Difference"
 msgstr "सममित भिन्नता"
 
-#: libs/ui/widgets/kis_selection_options.cc:244
+#: libs/ui/widgets/kis_selection_options.cc:249
+#, fuzzy, kde-format
+#| msgctxt "(qtundo-format)"
+#| msgid "Move Selection"
+msgctxt "@info:tooltip"
+msgid "Move Selected Content"
+msgstr "चयन खिसकाएँ"
+
+#: libs/ui/widgets/kis_selection_options.cc:252
 #, fuzzy, kde-format
 #| msgid "Set line width of actual selection"
 msgid "Smooths the edges of the selection"
 msgstr "वास्तविक चयन की लाइन चौड़ाई सेट करें"
 
-#: libs/ui/widgets/kis_selection_options.cc:246
+#: libs/ui/widgets/kis_selection_options.cc:254
 #, fuzzy, kde-format
 #| msgid "Grow/shrink selection: "
 msgid "Grow or shrink the selection by the set amount"
 msgstr "चयन फैलाएँ/सिकोड़ें : "
 
-#: libs/ui/widgets/kis_selection_options.cc:248
+#: libs/ui/widgets/kis_selection_options.cc:256
 #: plugins/tools/basictools/kis_tool_fill.cc:663
 #: plugins/tools/tool_enclose_and_fill/KisToolEncloseAndFill.cpp:572
 #, kde-format
 msgid "Stop growing at the darkest and/or most opaque pixels"
 msgstr ""
 
-#: libs/ui/widgets/kis_selection_options.cc:250
+#: libs/ui/widgets/kis_selection_options.cc:258
 #, kde-format
 msgid "Blur the selection by the set amount"
 msgstr ""
 
-#: libs/ui/widgets/kis_selection_options.cc:253
+#: libs/ui/widgets/kis_selection_options.cc:261
 #, fuzzy, kde-format
 msgid "Select regions found from the active layer"
 msgstr "सक्रिय चैनल का सेट चुनें."
 
-#: libs/ui/widgets/kis_selection_options.cc:255
+#: libs/ui/widgets/kis_selection_options.cc:263
 #, fuzzy, kde-format
 msgid "Select regions found from the merging of all layers"
 msgstr "वर्तमान परत या छवि से कोई रंग चुनें"
 
-#: libs/ui/widgets/kis_selection_options.cc:257
+#: libs/ui/widgets/kis_selection_options.cc:265
 #, kde-format
 msgid ""
 "Select regions found from the merging of layers with specific color labels"
 msgstr ""
 
-#: libs/ui/widgets/kis_selection_options.cc:265
+#: libs/ui/widgets/kis_selection_options.cc:273
 #, fuzzy, kde-format
 #| msgid "Mode"
 msgctxt "The 'mode' section label in selection tools options"
 msgid "Mode"
 msgstr "मोड"
 
-#: libs/ui/widgets/kis_selection_options.cc:272
+#: libs/ui/widgets/kis_selection_options.cc:280
 #, fuzzy, kde-format
 #| msgid "Action"
 msgctxt "The 'action' section label in selection tools options"
 msgid "Action"
 msgstr "क्रिया"
 
-#: libs/ui/widgets/kis_selection_options.cc:279
+#: libs/ui/widgets/kis_selection_options.cc:287
 #, fuzzy, kde-format
 msgctxt "The 'reference' section label in selection tools options"
 msgid "Reference"
 msgstr "प्राथमिकताएँ"
 
-#: libs/ui/widgets/kis_selection_options.cc:288
+#: libs/ui/widgets/kis_selection_options.cc:299
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "HSV Adjustment"
@@ -39563,31 +39584,31 @@ msgctxt "The 'adjustments' section label in selection tools options"
 msgid "Adjustments"
 msgstr "एचएसवी समायोजन"
 
-#: libs/ui/widgets/kis_selection_options.cc:477
+#: libs/ui/widgets/kis_selection_options.cc:501
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Replace (%1)"
 msgstr "प्रतिस्थापित (%1)"
 
-#: libs/ui/widgets/kis_selection_options.cc:482
+#: libs/ui/widgets/kis_selection_options.cc:506
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add (%1)"
 msgstr "जोड़ें (%1)"
 
-#: libs/ui/widgets/kis_selection_options.cc:487
+#: libs/ui/widgets/kis_selection_options.cc:511
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtract (%1)"
 msgstr "व्यवकलन (%1)"
 
-#: libs/ui/widgets/kis_selection_options.cc:492
+#: libs/ui/widgets/kis_selection_options.cc:516
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Intersect (%1)"
 msgstr "प्रतिच्छेदन (%1)"
 
-#: libs/ui/widgets/kis_selection_options.cc:498
+#: libs/ui/widgets/kis_selection_options.cc:522
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Symmetric Difference (%1)"
@@ -65542,11 +65563,6 @@ msgstr "बेजियर वक्र औज़ार। Shift-माउसक
 msgctxt "action"
 msgid "Freehand Path Tool"
 msgstr "मुक्तहस्त पथ औज़ार"
-
-#: plugins/tools/basictools/strokes/move_selection_stroke_strategy.cpp:29
-msgctxt "(qtundo-format)"
-msgid "Move Selection"
-msgstr "चयन खिसकाएँ"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, cbPalette)
 #: plugins/tools/basictools/wdgcolorsampler.ui:67

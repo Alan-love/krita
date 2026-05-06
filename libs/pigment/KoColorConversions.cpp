@@ -809,10 +809,10 @@ void YUVToRGB(const qreal y, const qreal u, const qreal v, qreal *r, qreal *g, q
 
 void LabToLCH(const qreal l, const qreal a, const qreal b, qreal *L, qreal *C, qreal *H)
 {
-    qreal atemp =  (a - 0.5)*10.0;//the multiplication is only so that we get out of floating-point maths
-    qreal btemp =  (b - 0.5)*10.0;
+    qreal atemp =  (a - 0.5);
+    qreal btemp =  (b - 0.5);
     *L=qBound(0.0,l,1.0);
-    *C=sqrt( pow(atemp,2.0) + pow(btemp,2.0) )*0.1;
+    *C=sqrt( (atemp*atemp) + (btemp*btemp) )*2;
     qreal hue = (atan2(btemp,atemp))* 180.0 / M_PI;
     
     if (hue<0.0) {
@@ -825,7 +825,7 @@ void LabToLCH(const qreal l, const qreal a, const qreal b, qreal *L, qreal *C, q
 
 void LCHToLab(const qreal L, const qreal C, const qreal H, qreal *l, qreal *a, qreal *b)
 {
-    qreal chroma = qBound(0.0,C,1.0);
+    qreal chroma = qBound(0.0,C,1.0)/2;
     qreal hue = (qBound(0.0,H,1.0)*360.0)* M_PI / 180.0;
     *l=qBound(0.0,L,1.0);
     *a=(chroma * cos(hue) ) + 0.5;

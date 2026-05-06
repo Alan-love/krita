@@ -142,6 +142,7 @@ public:
     KisCumulativeUndoData m_cumulativeUndoData;
     QButtonGroup m_sapPositionGroup;
     QButtonGroup m_sapBehaviourGroup;
+    QButtonGroup m_sapOrientationGroup;
 };
 
 

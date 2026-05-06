@@ -1364,5 +1364,85 @@ void KisWalkersTest::testGraphStructureChecksum()
     QCOMPARE(walker.checksumValid(), true);
 }
 
+void KisWalkersTest::testCroppedEmptyWalkers_data()
+{
+    const QRect cropRect(0,0,100,100);
+    std::optional<QPoint> noClone = std::nullopt;
+    const std::optional<QPoint> cloneNullOffset = QPoint();
+    const std::optional<QPoint> cloneRevealingOffset = QPoint(100,100);
+
+    QTest::addColumn<QString>("type");
+    QTest::addColumn<QRect>("dirtyRect");
+    QTest::addColumn<QRect>("cropRect");
+    QTest::addColumn<std::optional<QPoint>>("cloneOffset");
+    QTest::addColumn<bool>("expectedEmpty");
+
+    QTest::addRow("merge_empty") << "merge" << QRect(-100, -100, 10, 10) << cropRect << noClone <<true;
+    QTest::addRow("merge_nonempty") << "merge" << QRect(10, 10, 10, 10) << cropRect << noClone << false;
+
+    /// the presence of any clone makes the walker non-empty;
+    /// theoretically, we could also check if the clones
+    /// are cropped or not, but that is not implemented
+    QTest::addRow("merge_empty_clone") << "merge" << QRect(-100, -100, 10, 10) << cropRect << cloneNullOffset << false;
+    QTest::addRow("merge_empty_clone_reveal") << "merge" << QRect(-100, -100, 10, 10) << cropRect << cloneRevealingOffset << false;
+
+    QTest::addRow("subtree_empty") << "subtree" << QRect(-100, -100, 10, 10) << cropRect << noClone << true;
+    QTest::addRow("subtree_nonempty") << "subtree" << QRect(10, 10, 10, 10) << cropRect << noClone << false;
+
+    QTest::addRow("subtree_empty_clone") << "subtree" << QRect(-100, -100, 10, 10) << cropRect << cloneNullOffset << false;
+    QTest::addRow("subtree_empty_clone_reveal") << "subtree" << QRect(-100, -100, 10, 10) << cropRect << cloneRevealingOffset << false;
+
+    QTest::addRow("full_refresh_empty") << "full_refresh" << QRect(-100, -100, 10, 10) << cropRect << noClone << true;
+    QTest::addRow("full_refresh_nonempty") << "full_refresh" << QRect(10, 10, 10, 10) << cropRect << noClone << false;
+
+    QTest::addRow("full_refresh_empty_clone") << "full_refresh" << QRect(-100, -100, 10, 10) << cropRect << cloneNullOffset << false;
+    QTest::addRow("full_refresh_empty_clone_reveal") << "full_refresh" << QRect(-100, -100, 10, 10) << cropRect << cloneRevealingOffset << false;
+}
+
+Q_DECLARE_METATYPE(std::optional<QPoint>)
+
+void KisWalkersTest::testCroppedEmptyWalkers()
+{
+    QFETCH(QString, type);
+    QFETCH(QRect, dirtyRect);
+    QFETCH(QRect, cropRect);
+    QFETCH(std::optional<QPoint>, cloneOffset);
+    QFETCH(bool, expectedEmpty);
+
+    const QRect imageRect = cropRect;
+
+    const KoColorSpace * colorSpace = KoColorSpaceRegistry::instance()->rgb8();
+    KisImageSP image = new KisImage(0, imageRect.width(), imageRect.height(), colorSpace, "walker test");
+
+    KisLayerSP paintLayer1 = new KisPaintLayer(image, "paint1", OPACITY_OPAQUE_U8);
+
+    image->addNode(paintLayer1, image->rootLayer());
+
+    if (cloneOffset.has_value()) {
+        KisLayerSP cloneLayer1 = new KisCloneLayer(paintLayer1, image, "clone1", OPACITY_OPAQUE_U8);
+        cloneLayer1->setX(cloneOffset->x());
+        cloneLayer1->setY(cloneOffset->y());
+        image->addNode(cloneLayer1, image->rootLayer());
+
+    }
+
+    image->initialRefreshGraph();
+
+    std::unique_ptr<KisBaseRectsWalker> walker;
+
+    if (type == "merge") {
+        walker.reset(new KisMergeWalker(cropRect));
+    } else if (type == "subtree") {
+        walker.reset(new KisRefreshSubtreeWalker(cropRect));
+    } else if (type == "full_refresh") {
+        walker.reset(new KisFullRefreshWalker(cropRect));
+    } else {
+        qFatal("Unknown walker type!");
+    }
+
+    walker->collectRects(paintLayer1, dirtyRect);
+    QCOMPARE(walker->isEmpty(), expectedEmpty);
+}
+
 KISTEST_MAIN(KisWalkersTest)
 

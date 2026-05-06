@@ -231,7 +231,9 @@ void KisSimpleUpdateQueue::addJob(KisNodeSP node, const QVector<QRect> &rects,
         /* else if(type == KisBaseRectsWalker::UNSUPPORTED) fatalKrita; */
 
         walker->collectRects(node, rc);
-        walkers.append(walker);
+        if (!walker->isEmpty()) {
+            walkers.append(walker);
+        }
     }
 
     if (!walkers.isEmpty()) {

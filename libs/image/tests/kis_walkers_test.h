@@ -242,6 +242,8 @@ private Q_SLOTS:
     void testMasksOverlapping();
     void testRectsChecksum();
     void testGraphStructureChecksum();
+    void testCroppedEmptyWalkers_data();
+    void testCroppedEmptyWalkers();
 
 private:
     void verifyResult(KisBaseRectsWalker &walker, QStringList reference,

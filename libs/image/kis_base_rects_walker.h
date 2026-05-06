@@ -197,6 +197,15 @@ public:
         return m_mergeTask;
     }
 
+    /**
+     * Returns `false` if the walker will not perform any useful work,
+     * which may happen, when, for example, the crop rect fully cropped
+     * the requested rect
+     */
+    inline bool isEmpty() const {
+        return m_mergeTask.isEmpty() && m_cloneNotifications.isEmpty();
+    }
+
     // return a reference for efficiency reasons
     inline CloneNotificationsVector& cloneNotifications() {
         return m_cloneNotifications;
@@ -297,7 +306,7 @@ protected:
      * Used by KisFullRefreshWalker as it has a special changeRect strategy
      */
     inline void setExplicitChangeRect(const QRect &changeRect, bool changeRectVaries) {
-        m_resultChangeRect = changeRect;
+        m_resultChangeRect = cropThisRect(changeRect, cropRect());
         m_resultUncroppedChangeRect = changeRect;
         m_changeRectVaries = changeRectVaries;
     }

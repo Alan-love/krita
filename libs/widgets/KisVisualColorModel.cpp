@@ -442,7 +442,9 @@ void KisVisualColorModel::loadColorSpace(const KoColorSpace *cs)
         QVector <qreal> luma = cs->lumaCoefficients();
         memcpy(m_d->lumaRGB, luma.constData(), 3*sizeof(qreal));
         m_d->model = m_d->modelRGB;
-    } else if (!m_d->isLABlike) {
+    } else if (m_d->isLABlike) {
+        m_d->model = m_d->modelRGB;
+    } else {
         m_d->model = KisVisualColorModel::Channel;
     }
 

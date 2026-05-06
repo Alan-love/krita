@@ -135,6 +135,8 @@ private Q_SLOTS:
     void selectionActionsBarCheckboxChanged(int value);
 #endif
 
+    static void setButtonGroupEnabled(const QButtonGroup& buttonGroup, bool value);
+
 public:
     QButtonGroup m_pasteFormatGroup;
     KisCumulativeUndoData m_cumulativeUndoData;

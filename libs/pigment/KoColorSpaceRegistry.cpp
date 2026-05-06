@@ -725,14 +725,6 @@ const KoColorProfile *KoColorSpaceRegistry::profileFor(const QVector<double> &co
     return nullptr;
 }
 
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
-static QMap<QColorSpace::ColorModel, QString> mapQColorSpaceModelToId {
-    {QColorSpace::ColorModel::Rgb, RGBAColorModelID.id()},
-    {QColorSpace::ColorModel::Cmyk, CMYKAColorModelID.id()},
-    {QColorSpace::ColorModel::Gray, GrayAColorModelID.id()},
-};
-#endif
-
 static QMap<QColorSpace::Primaries, ColorPrimaries> mapQColorSpaceColorPrimaries {
     {QColorSpace::Primaries::SRgb, PRIMARIES_ITU_R_BT_709_5},
     {QColorSpace::Primaries::AdobeRgb, PRIMARIES_ADOBE_RGB_1998},

@@ -34,7 +34,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-05 00:42+0000\n"
+"POT-Creation-Date: 2026-05-06 00:43+0000\n"
 "PO-Revision-Date: 2024-02-07 14:53-0800\n"
 "Last-Translator: Jun Shiozawa <haresecret@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -21245,7 +21245,7 @@ msgstr "サイズ"
 #: libs/ui/dialogs/kis_dlg_layer_style.cpp:1417
 #: libs/ui/dialogs/kis_dlg_layer_style.cpp:1420
 #: libs/ui/dialogs/kis_dlg_layer_style.cpp:1483
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1857
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1970
 #: libs/ui/forms/wdgdisplaysettings.ui:379
 #: libs/ui/forms/wdggeneralsettings.ui:361
 #: libs/ui/forms/wdgrectangleconstraints.ui:59
@@ -21572,7 +21572,7 @@ msgid "<%1> (embedded)"
 msgstr "<%1> (埋め込み)"
 
 #: libs/image/kis_base_mask_generator.h:22
-#: libs/ui/dialogs/kis_dlg_preferences.cc:578
+#: libs/ui/dialogs/kis_dlg_preferences.cc:587
 #: libs/ui/kis_bookmarked_configurations_model.cc:54
 #, kde-format
 msgid "Default"
@@ -24193,7 +24193,7 @@ msgstr "ローカルリソース"
 #: libs/ui/animation/KisDlgImportVideoAnimation.cpp:702
 #: libs/ui/animation/KisDlgImportVideoAnimation.cpp:772
 #: libs/ui/dialogs/kis_dlg_layer_style.cpp:401
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1117
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1126
 #: libs/ui/input/kis_tablet_debugger.cpp:106 libs/ui/kis_clipboard.cc:779
 #: libs/ui/kis_custom_pattern.cc:126 libs/ui/kis_filter_manager.cc:234
 #: libs/ui/kis_filter_manager.cc:243 libs/ui/kis_layer_manager.cc:326
@@ -24487,8 +24487,8 @@ msgstr ""
 #. i18n: ectx: attribute (title), widget (QWidget, tab_hsx)
 #. i18n: ectx: property (text), widget (QLabel, lblCurrentRenderer)
 #: libs/resources/KisResourceStorage.h:117
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2244
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2248
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2357
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2361
 #: libs/ui/forms/wdgdisplaysettings.ui:77 libs/ui/KoDocumentInfo.cpp:37
 #: libs/widgets/KisDlgInternalColorSelector.cpp:336
 #: libs/widgets/WdgDlgInternalColorSelector.ui:89
@@ -25289,7 +25289,7 @@ msgstr ""
 "ムレートは 50 フレーム/秒に減少します。"
 
 #: libs/ui/animation/KisDlgAnimationRenderer.cpp:514
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2281
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2394
 #, kde-format
 msgid "Warning(s):"
 msgstr "警告:"
@@ -25800,7 +25800,7 @@ msgstr ""
 #: plugins/filters/colorsfilters/wdg_hsv_adjustment.ui:337
 #: plugins/filters/colorsfilters/wdg_perchannel.ui:346
 #: plugins/tools/basictools/wdgmultihandtool.ui:192
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:142
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:141
 #, kde-format
 msgid "Reset"
 msgstr "リセット"
@@ -26259,8 +26259,8 @@ msgstr "表示:"
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgDisplaySettings)
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_6)
 #: libs/ui/animation/VideoHDRMetadataOptionsDialog.ui:40
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2579
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2581
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2692
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2694
 #: libs/ui/forms/wdgcolorsettings.ui:172 libs/ui/forms/wdgdisplaysettings.ui:24
 #: plugins/dockers/advancedcolorselector/wdg_color_selector_settings.ui:444
 #: plugins/dockers/svgcollectiondocker/SvgSymbolCollectionDocker.cpp:234
@@ -26361,8 +26361,8 @@ msgstr "動画アニメーションインポート"
 #. i18n: ectx: attribute (title), widget (QWidget, general)
 #: libs/ui/animation/VideoImportDialog.ui:34
 #: libs/ui/animation/wdg_animationrenderer.ui:16
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2549
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2551
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2662
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2664
 #: libs/ui/forms/wdgcolorsettings.ui:40 libs/ui/forms/wdggeneralsettings.ui:311
 #: libs/ui/forms/wdgperformancesettings.ui:49 libs/ui/KoDocumentInfoDlg.cpp:91
 #: libs/ui/KoDocumentInfoDlg.cpp:92
@@ -27274,13 +27274,13 @@ msgstr "レイヤーのプロパティ"
 #: libs/ui/dialogs/kis_dlg_layer_style.cpp:1487
 #: libs/ui/dialogs/kis_dlg_layer_style.cpp:1490
 #: libs/ui/dialogs/kis_dlg_layer_style.cpp:1493
-#: libs/ui/dialogs/kis_dlg_preferences.cc:298
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1770
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1774
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1778
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1863
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2332
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2390 libs/ui/kis_paintop_box.cc:279
+#: libs/ui/dialogs/kis_dlg_preferences.cc:307
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1883
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1887
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1891
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1976
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2445
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2503 libs/ui/kis_paintop_box.cc:279
 #: libs/ui/kis_paintop_box.cc:280 libs/ui/widgets/kis_custom_image_widget.cc:96
 #: libs/ui/widgets/KisAutoLevelsWidget.cpp:19
 #: libs/widgets/kis_color_input.cpp:139 libs/widgets/kis_color_input.cpp:170
@@ -27434,106 +27434,106 @@ msgctxt "@title:window"
 msgid "Multiple Paste Sources Detected"
 msgstr "複数のリソース貼り付けを検出"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:218
+#: libs/ui/dialogs/kis_dlg_preferences.cc:227
 #, kde-format
 msgid "No Cursor"
 msgstr "カーソルなし"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:219
+#: libs/ui/dialogs/kis_dlg_preferences.cc:228
 #, kde-format
 msgid "Tool Icon"
 msgstr "ツールアイコン"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:220
+#: libs/ui/dialogs/kis_dlg_preferences.cc:229
 #, kde-format
 msgid "Arrow"
 msgstr "矢印"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:221
+#: libs/ui/dialogs/kis_dlg_preferences.cc:230
 #, kde-format
 msgid "Small Circle"
 msgstr "小型の円"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, cmbDecor)
-#: libs/ui/dialogs/kis_dlg_preferences.cc:222
+#: libs/ui/dialogs/kis_dlg_preferences.cc:231
 #: plugins/tools/tool_crop/wdg_tool_crop.ui:467
 #, kde-format
 msgid "Crosshair"
 msgstr "十字形"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:223
+#: libs/ui/dialogs/kis_dlg_preferences.cc:232
 #, kde-format
 msgid "Triangle Righthanded"
 msgstr "三角形 (右利き用)"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:224
+#: libs/ui/dialogs/kis_dlg_preferences.cc:233
 #, kde-format
 msgid "Triangle Lefthanded"
 msgstr "三角形 (左利き用)"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:225
+#: libs/ui/dialogs/kis_dlg_preferences.cc:234
 #, kde-format
 msgid "Black Pixel"
 msgstr "黒ドット"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:226
+#: libs/ui/dialogs/kis_dlg_preferences.cc:235
 #, kde-format
 msgid "White Pixel"
 msgstr "白ドット"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:229
+#: libs/ui/dialogs/kis_dlg_preferences.cc:238
 #, kde-format
 msgctxt "Display options label to not DISPLAY brush outline"
 msgid "No Outline"
 msgstr "輪郭線なし"
 
 # マウスカーソル形状の名称です
-#: libs/ui/dialogs/kis_dlg_preferences.cc:230
+#: libs/ui/dialogs/kis_dlg_preferences.cc:239
 #, kde-format
 msgid "Circle Outline"
 msgstr "ブラシ輪郭を円で表示"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:231
+#: libs/ui/dialogs/kis_dlg_preferences.cc:240
 #, kde-format
 msgid "Preview Outline"
 msgstr "ブラシ輪郭をその形状で表示"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:232
+#: libs/ui/dialogs/kis_dlg_preferences.cc:241
 #, kde-format
 msgid "Tilt Outline"
 msgstr "ブラシ輪郭にペンタブペンの傾きを表示"
 
 #. i18n: ectx: property (text), widget (QPushButton, bnEraser)
 #. i18n: ectx: property (text), widget (QCheckBox, eraserBox)
-#: libs/ui/dialogs/kis_dlg_preferences.cc:256
+#: libs/ui/dialogs/kis_dlg_preferences.cc:265
 #: plugins/paintops/libpaintop/forms/wdgCompositeOpOption.ui:88
 #: plugins/paintops/mypaint/wdgmypaintoptions.ui:41
 #, kde-format
 msgid "Eraser"
 msgstr "消しゴム"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:365
+#: libs/ui/dialogs/kis_dlg_preferences.cc:374
 #, fuzzy, kde-format
 #| msgid "Cut Off Disabled"
 msgctxt "touch painting"
 msgid "Auto (Disabled)"
 msgstr "すべてで適用"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:366
+#: libs/ui/dialogs/kis_dlg_preferences.cc:375
 #, fuzzy, kde-format
 #| msgid "Enabled"
 msgctxt "touch painting"
 msgid "Auto (Enabled)"
 msgstr "有効"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:367
+#: libs/ui/dialogs/kis_dlg_preferences.cc:376
 #, fuzzy, kde-format
 #| msgid "Enabled"
 msgctxt "touch painting"
 msgid "Enabled"
 msgstr "有効"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:368
+#: libs/ui/dialogs/kis_dlg_preferences.cc:377
 #, fuzzy, kde-format
 #| msgctxt "JPEG-XL encoder options"
 #| msgid "Disabled"
@@ -27541,69 +27541,69 @@ msgctxt "touch painting"
 msgid "Disabled"
 msgstr "無効"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:382
+#: libs/ui/dialogs/kis_dlg_preferences.cc:391
 #, kde-format
 msgid "On Touch Drag"
 msgstr "タッチ・ドラッグ"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:383
+#: libs/ui/dialogs/kis_dlg_preferences.cc:392
 #, kde-format
 msgid "On Click Drag"
 msgstr "クリック・ドラッグ"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:384
+#: libs/ui/dialogs/kis_dlg_preferences.cc:393
 #, kde-format
 msgid "On Middle-Click Drag"
 msgstr "ミドルクリック・ドラッグ"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:434
+#: libs/ui/dialogs/kis_dlg_preferences.cc:443
 #, kde-format
 msgid "All Supported Files"
 msgstr "サポートされているすべてのフォーマット"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:469
+#: libs/ui/dialogs/kis_dlg_preferences.cc:478
 #, kde-format
 msgid "Open default window"
 msgstr "標準ウィンドウを開く"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:470
+#: libs/ui/dialogs/kis_dlg_preferences.cc:479
 #, kde-format
 msgid "Load previous session"
 msgstr "直前のセッションを読み込む"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:471
+#: libs/ui/dialogs/kis_dlg_preferences.cc:480
 #, kde-format
 msgid "Show session manager"
 msgstr "セッションマネージャを表示"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:543
+#: libs/ui/dialogs/kis_dlg_preferences.cc:552
 #, kde-format
 msgid "You will need to Restart Krita for the changes to take an effect."
 msgstr "変更を反映するには、Krita の再起動が必要です"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:549
+#: libs/ui/dialogs/kis_dlg_preferences.cc:558
 #, kde-format
 msgid ""
 "Saving at a Location picked from the File Picker may slow down the startup!"
 msgstr ""
 "ファイルピッカーで選択した場所に保存すると、起動が遅くなることがあります!"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:581
+#: libs/ui/dialogs/kis_dlg_preferences.cc:590
 #, kde-format
 msgid "Internal Storage"
 msgstr "内部ストレージ"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:583
+#: libs/ui/dialogs/kis_dlg_preferences.cc:592
 #, kde-format
 msgid "SD-Card"
 msgstr "SD カード"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:621
+#: libs/ui/dialogs/kis_dlg_preferences.cc:630
 #, kde-format
 msgid "Choose Manually"
 msgstr "手動で選択"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:686
+#: libs/ui/dialogs/kis_dlg_preferences.cc:695
 #, kde-format
 msgctxt "@info resource folder"
 msgid ""
@@ -27628,61 +27628,61 @@ msgstr ""
 ">\n"
 "%2</p>"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1069
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1078
 #, fuzzy, kde-format
 #| msgid "None"
 msgctxt "Preview option for no color sampler"
 msgid "None"
 msgstr "なし"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1070
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1079
 #, fuzzy, kde-format
 #| msgid "Circle"
 msgctxt "Preview option for a circular/ring-shaped color sampler"
 msgid "Circle"
 msgstr "円"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1071
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1080
 #, fuzzy, kde-format
 #| msgid "Rectangle"
 msgctxt "Preview option for a rectangular color sampler left of the cursor"
 msgid "Rectangle Left"
 msgstr "矩形"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1072
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1081
 #, fuzzy, kde-format
 #| msgid "Rectangle"
 msgctxt "Preview option for a rectangular color sampler right of the cursor"
 msgid "Rectangle Right"
 msgstr "矩形"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1073
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1082
 #, fuzzy, kde-format
 #| msgid "Rectangle Tool"
 msgctxt "Preview option for a rectangular color sampler above the cursor"
 msgid "Rectangle Above"
 msgstr "矩形ツール"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1105
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1114
 #, kde-format
 msgid "Select a Background Image"
 msgstr "背景画像を選択"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1117
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1126
 #: libs/ui/KisTemplateCreateDia.cpp:390
 #, kde-format
 msgid "%1 is not a valid image file!"
 msgstr "%1 は有効な画像ファイルではありません!"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1137
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1146
 #, kde-format
 msgctxt "@info resource folder"
 msgid "<b>Warning:</b> this location is not writable."
 msgstr "<b>警告:</b> この場所には書き込み権限がありません。"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1275
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1488
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1589
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1284
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1530
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1631
 #, kde-format
 msgctxt ""
 "The number of the screen (ordinal) and shortened 'name' of the screen (model "
@@ -27690,18 +27690,18 @@ msgctxt ""
 msgid "Screen %1 (%2):"
 msgstr "スクリーン %1 (%2):"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1303
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1312
 #, kde-format
 msgid "Display's color space is managed by the operating system"
 msgstr ""
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1310
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1319
 #, fuzzy, kde-format
 #| msgid "Color Management"
 msgid "Enable canvas color management"
 msgstr "カラーマネジメント"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1313
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1322
 #, kde-format
 msgid ""
 "<p>Enabling canvas color management automatically creates a separate native "
@@ -27713,47 +27713,47 @@ msgid ""
 "\",         i.e. paper white proofing will become impossible</li></ol></p>"
 msgstr ""
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1333
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1342
 #, fuzzy, kde-format
 #| msgid "Uncalibrated color space"
 msgid "Canvas surface color space:"
 msgstr "未補正の色空間"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1336
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1345
 #, kde-format
 msgid "Preferred by operating system"
 msgstr ""
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1337
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1346
 #, kde-format
 msgid "Rec 709 Gamma 2.2"
 msgstr ""
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1338
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1347
 #, kde-format
 msgid "Rec 709 Linear"
 msgstr ""
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1339
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1348
 #, fuzzy, kde-format
 #| msgctxt "Color space name"
 #| msgid "Rec 2100 PQ"
 msgid "Rec 2020 PQ"
 msgstr "Rec 2100 PQ"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1340
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1349
 #, kde-format
 msgid "Unmanaged (testing only)"
 msgstr ""
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1343
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1352
 #, kde-format
 msgid ""
 "<p>Color space of the pixels that are transferred to the window compositor. "
 "Use \"preferred\" space unless you know what you are doing</p>"
 msgstr ""
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1350
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1359
 #, fuzzy, kde-format
 #| msgid "CMYK blending mode (needs restart):"
 msgid "Canvas surface bit depth (needs restart):"
@@ -27762,7 +27762,7 @@ msgstr "CMYK 混色モード (再起動が必要になります):"
 #. i18n: ectx: property (text), item, widget (QComboBox, patternValueModeComboBox)
 #. i18n: ectx: property (text), widget (QCheckBox, autoPrecisionCheckBox)
 #. i18n: ectx: property (text), widget (QCheckBox, chkAutoMidPoint)
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1353
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1362
 #: libs/ui/widgets/KisDitherWidget.ui:119
 #: plugins/paintops/libpaintop/forms/wdgbrushchooser.ui:72
 #: plugins/paintops/libpaintop/forms/wdgpredefinedbrushchooser.ui:257
@@ -27770,19 +27770,19 @@ msgstr "CMYK 混色モード (再起動が必要になります):"
 msgid "Auto"
 msgstr "自動"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1354
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1362
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1363
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1371
 #, kde-format
 msgid "8-bit"
 msgstr ""
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1355
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1362
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1364
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1371
 #, kde-format
 msgid "10-bit"
 msgstr ""
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1358
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1367
 #, kde-format
 msgid ""
 "<p>The bit depth of the color that is passed to the window compositor. You "
@@ -27790,32 +27790,64 @@ msgid ""
 "display</p>"
 msgstr ""
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1363
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1372
 #, fuzzy, kde-format
 #| msgid "Uncalibrated color space"
 msgid "Current canvas surface bit depth:"
 msgstr "未補正の色空間"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1370
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1380
 #, kde-format
 msgid ""
 "Color space preferred by the operating system:\n"
 "%1"
 msgstr ""
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1446
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1386
+#, fuzzy, kde-format
+#| msgid "Emboss Diagonal"
+msgid "Diagram:"
+msgstr "浮き出し (対角線)"
+
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1389
+#, fuzzy, kde-format
+#| msgid "Preferred Output Format:"
+msgctxt "@info:radiobutton"
+msgid "Preferred Space"
+msgstr "優先出力形式:"
+
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1391
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "This is the space preferred by the operating system."
+msgstr ""
+
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1394
+#, fuzzy, kde-format
+#| msgid "Current Display Format"
+msgctxt "@info:radiobutton"
+msgid "Current Display"
+msgstr "現在のディスプレイ形式"
+
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1397
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "This is the space representing the currently active display."
+msgstr ""
+
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1488
 #: libs/ui/widgets/kis_advanced_color_space_selector.cc:804
 #: libs/ui/widgets/kis_color_space_selector.cc:197
 #, kde-format
 msgid "Install Color Profiles"
 msgstr "色プロファイルをインストール"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1664
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1777
 #, kde-format
 msgid "Tablet Input API (currently active API: \"%1\")"
 msgstr ""
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1678
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1791
 #, kde-format
 msgid ""
 "Use tablet driver timestamps for brush speed (may cause severe artifacts "
@@ -27824,7 +27856,7 @@ msgstr ""
 "ブラシの速度計算にタブレットドライバのタイムスタンプを使用する (WinTab タブ"
 "レット API を使用している場合、かなり不自然な結果になる恐れがあります)"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1680
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1793
 #, kde-format
 msgid "Use tablet driver timestamps for brush speed"
 msgstr "ブラシの速度計算にタブレットドライバのタイムスタンプを使用する"
@@ -27832,7 +27864,7 @@ msgstr "ブラシの速度計算にタブレットドライバのタイムスタ
 #. i18n: This is meant to be used in a spinbox so keep the {n} in the text
 #. and it will be substituted by the number. The text before will be
 #. used as the prefix and the text after as the suffix
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1710
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1823
 #, kde-format
 msgid "Maximum brush speed: {n} px/ms"
 msgid_plural "Maximum brush speed: {n} px/ms"
@@ -27841,13 +27873,13 @@ msgstr[0] "ブラシの最大サイズ: {n} ピクセル/ミリ秒"
 #. i18n: This is meant to be used in a spinbox so keep the {n} in the text
 #. and it will be substituted by the number. The text before will be
 #. used as the prefix and the text after as the suffix
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1719
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1832
 #, kde-format
 msgid "Brush speed smoothing: {n} sample"
 msgid_plural "Brush speed smoothing: {n} samples"
 msgstr[0] "ブラシ速度の平滑化: サンプル数{n}"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1726
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1839
 #, fuzzy, kde-format
 #| msgctxt "Context: dynamic sensors"
 #| msgid "Tilt direction"
@@ -27855,13 +27887,13 @@ msgid "Pen tilt direction offset: "
 msgstr "傾きの方向"
 
 #. i18n: ectx: property (suffix), widget (KisIntParseSpinBox, intSwapSize)
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1824
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1937
 #: libs/ui/forms/wdgperformancesettings.ui:214
 #, kde-format
 msgid " GiB"
 msgstr " GiB"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1845
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1958
 #: libs/ui/dialogs/KisDlgConfigureCumulativeUndo.cpp:59
 #: libs/ui/dialogs/KisDlgConfigureCumulativeUndo.cpp:81
 #: libs/ui/dialogs/KisDlgConfigureCumulativeUndo.cpp:93
@@ -27870,30 +27902,30 @@ msgctxt "suffix for \"seconds\""
 msgid " sec"
 msgstr "秒"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1848
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1961
 #, kde-format
 msgid " fps"
 msgstr " fps"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2087
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2200
 #, kde-format
 msgctxt "canvas renderer"
 msgid "OpenGL"
 msgstr "OpenGL"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2088
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2201
 #, kde-format
 msgctxt "canvas renderer"
 msgid "Software Renderer (very slow)"
 msgstr "ソフトウェアレンダリング (とても遅い)"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2092
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2205
 #, kde-format
 msgctxt "canvas renderer"
 msgid "Direct3D 11 via ANGLE"
 msgstr "ANGLE による Direct3D 11"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2093
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2206
 #, fuzzy, kde-format
 #| msgctxt "canvas renderer"
 #| msgid "OpenGL ES"
@@ -27901,51 +27933,51 @@ msgctxt "canvas renderer"
 msgid "OpenGL via ANGLE"
 msgstr "OpenGL ES"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2095
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2208
 #, kde-format
 msgctxt "canvas renderer"
 msgid "OpenGL ES"
 msgstr "OpenGL ES"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2102
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2215
 #, kde-format
 msgctxt "canvas renderer"
 msgid "Unknown"
 msgstr "不明"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2122
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2235
 #, kde-format
 msgctxt "canvas renderer"
 msgid "Auto (%1)"
 msgstr "自動 (%1)"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2181
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2294
 #, fuzzy, kde-format
 #| msgid "Current"
 msgctxt "@item:inlistbox"
 msgid "GLX (current)"
 msgstr "カレント"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2182
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2295
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "GLX"
 msgstr ""
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2183
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2296
 #, fuzzy, kde-format
 #| msgid "Current"
 msgctxt "@item:inlistbox"
 msgid "EGL (current)"
 msgstr "カレント"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2184
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2297
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "EGL"
 msgstr ""
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2190
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2303
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -27953,141 +27985,141 @@ msgid ""
 "switching between EGL and GLX</p>"
 msgstr ""
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2230
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2343
 #, kde-format
 msgid "Display Id: %1"
 msgstr "Display Id: %1"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2231
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2344
 #, kde-format
 msgid "Display Name: %1 %2"
 msgstr "Display Name: %1 %2"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2232
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2345
 #, kde-format
 msgid "Min Luminance: %1"
 msgstr "最小輝度: %1"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2233
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2346
 #, kde-format
 msgid "Max Luminance: %1"
 msgstr "最大輝度: %1"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2234
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2347
 #, kde-format
 msgid "Max Full Frame Luminance: %1"
 msgstr "最大全フレーム輝度: %1"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2235
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2348
 #, kde-format
 msgid "Red Primary: %1, %2"
 msgstr "三原色 (赤): %1, %2"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2236
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2349
 #, kde-format
 msgid "Green Primary: %1, %2"
 msgstr "三原色 (緑): %1, %2"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2237
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2350
 #, kde-format
 msgid "Blue Primary: %1, %2"
 msgstr "三原色 (青): %1, %2"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2238
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2351
 #, kde-format
 msgid "White Point: %1, %2"
 msgstr "白色点: %1, %2"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2419
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2532
 #, kde-format
 msgid "<b>Warning:</b> current display doesn't support HDR rendering"
 msgstr ""
 "<b>警告:</b> 現在のディスプレイは HDR レンダリングをサポートしていません"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2542
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2655
 #, kde-format
 msgid "Configure Krita"
 msgstr "Krita の設定"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2559
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2672
 #, kde-format
 msgid "Keyboard Shortcuts"
 msgstr "キーボードショートカット"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2561
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2674
 #: libs/widgetutils/xmlgui/KisShortcutsEditor_p.cpp:282
 #, kde-format
 msgid "Shortcuts"
 msgstr "ショートカット"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2571
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2684
 #, kde-format
 msgid "Canvas Input Settings"
 msgstr "キャンバス入力の設定"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2572
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2685
 #, kde-format
 msgid "Canvas Input"
 msgstr "キャンバス入力"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2589
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2702
 #: plugins/dockers/logdocker/LogDockerDock.cpp:315
 #, kde-format
 msgid "Color Management"
 msgstr "カラーマネジメント"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2591
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2704
 #, kde-format
 msgctxt "Label of color as in Color Management"
 msgid "Color"
 msgstr "色"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2599
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2601
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2712
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2714
 #, kde-format
 msgid "Performance"
 msgstr "パフォーマンス"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2609
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2722
 #, kde-format
 msgid "Tablet settings"
 msgstr "タブレットの設定"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2611
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2724
 #, kde-format
 msgid "Tablet"
 msgstr "タブレット"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2619
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2732
 #, kde-format
 msgid "Canvas-only settings"
 msgstr "キャンバスのみ表示の設定"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2621
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2734
 #, kde-format
 msgid "Canvas-only"
 msgstr "キャンバスのみ表示"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2629
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2631
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2742
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2744
 #, kde-format
 msgid "Pop-up Palette"
 msgstr "ポップアップパレット"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2639
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2752
 #, kde-format
 msgctxt "@title:tab Author page"
 msgid "Author"
 msgstr "作者"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2641
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2754
 #: libs/ui/KoDocumentInfoDlg.cpp:114
 #: plugins/python/comics_project_management_tools/exporters/CPMT_EPUB_exporter.py:233
 #, kde-format
 msgid "Author"
 msgstr "作者"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2648
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2761
 #, kde-format
 msgctxt "@action:button"
 msgid "Restore Defaults"
@@ -36882,17 +36914,17 @@ msgstr "このテンプレートを使用する"
 msgid "You cannot drag and drop colors on the selected layer type."
 msgstr "選択されたレイヤーではドラッグ＆ドロップで色を指定できません。"
 
-#: libs/ui/KisView.cpp:757 libs/ui/tool/kis_tool_utils.cpp:456
+#: libs/ui/KisView.cpp:757 libs/ui/tool/kis_tool_utils.cpp:419
 #, kde-format
 msgid "Layer is locked and invisible."
 msgstr "レイヤーはロックされていてかつ非表示です"
 
-#: libs/ui/KisView.cpp:759 libs/ui/tool/kis_tool_utils.cpp:458
+#: libs/ui/KisView.cpp:759 libs/ui/tool/kis_tool_utils.cpp:421
 #, kde-format
 msgid "Layer is locked."
 msgstr "レイヤーはロックされています"
 
-#: libs/ui/KisView.cpp:761 libs/ui/tool/kis_tool_utils.cpp:460
+#: libs/ui/KisView.cpp:761 libs/ui/tool/kis_tool_utils.cpp:423
 #, kde-format
 msgid "Layer is invisible."
 msgstr "レイヤーは非表示です。"
@@ -38187,23 +38219,23 @@ msgstr ""
 "X: %1 px\n"
 "Y: %2 px"
 
-#: libs/ui/tool/kis_tool_utils.cpp:215 libs/ui/tool/kis_tool_utils.cpp:227
+#: libs/ui/tool/kis_tool_utils.cpp:213 libs/ui/tool/kis_tool_utils.cpp:225
 #: plugins/dockers/animation/KisAnimUtils.cpp:79
 msgctxt "(qtundo-format)"
 msgid "Clear"
 msgstr "クリア"
 
-#: libs/ui/tool/kis_tool_utils.cpp:324
+#: libs/ui/tool/kis_tool_utils.cpp:322
 #, kde-format
 msgid "Brush Size: %1 px"
 msgstr "ブラシのサイズ: %1 px"
 
-#: libs/ui/tool/kis_tool_utils.cpp:462
+#: libs/ui/tool/kis_tool_utils.cpp:425
 #, kde-format
 msgid "Layer can be painted in Wash Mode only."
 msgstr "レイヤーは水彩モードでのみ描画できます。"
 
-#: libs/ui/tool/kis_tool_utils.cpp:464
+#: libs/ui/tool/kis_tool_utils.cpp:427
 #, kde-format
 msgid "Group not editable."
 msgstr "グループは編集可能ではありません"
@@ -39499,12 +39531,12 @@ msgstr "ロック"
 msgid "Unlock (keep current settings)"
 msgstr "ロックを外す (現在の設定を維持)"
 
-#: libs/ui/widgets/kis_cie_tongue_widget.cpp:657
+#: libs/ui/widgets/kis_cie_tongue_widget.cpp:660
 #, kde-format
 msgid "Uncalibrated color space"
 msgstr "未補正の色空間"
 
-#: libs/ui/widgets/kis_cie_tongue_widget.cpp:663
+#: libs/ui/widgets/kis_cie_tongue_widget.cpp:666
 #, kde-format
 msgid "No profile available..."
 msgstr "利用可能なプロファイルがありません..."
@@ -65840,19 +65872,19 @@ msgstr ""
 msgid "Measure Tool"
 msgstr "計測ツール"
 
-#: plugins/tools/basictools/kis_tool_move.cc:294
+#: plugins/tools/basictools/kis_tool_move.cc:292
 #, kde-format
 msgctxt "floating message in move tool"
 msgid "X: %1 px, Y: %2 px"
 msgstr "X: %1 px, Y: %2 px"
 
-#: plugins/tools/basictools/kis_tool_move.cc:342
+#: plugins/tools/basictools/kis_tool_move.cc:340
 #, kde-format
 msgctxt "floating message in move tool"
 msgid "Selected area has no pixels"
 msgstr "選択した領域にピクセルがありません"
 
-#: plugins/tools/basictools/kis_tool_move.h:185
+#: plugins/tools/basictools/kis_tool_move.h:183
 #, kde-format
 msgid "Move Tool"
 msgstr "移動ツール"
@@ -69165,80 +69197,80 @@ msgstr ""
 "Library のサポートで Krita をコンパイルするか、スケール値を手動で編集するオプ"
 "ションウィジェットを使用してください。"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:124
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:123
 #, kde-format
 msgctxt "Warp Transform Tab Label"
 msgid "Warp"
 msgstr "格子点"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:125
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:124
 #, kde-format
 msgctxt "Liquify Transform Tab Label"
 msgid "Liquify"
 msgstr "ゆがみ"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:126
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:125
 #, kde-format
 msgctxt "Mesh Transform Tab Label"
 msgid "Mesh"
 msgstr "メッシュ"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:127
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:126
 #, kde-format
 msgctxt "Cage Transform Tab Label"
 msgid "Cage"
 msgstr "ケージ"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:128
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:127
 #, kde-format
 msgctxt "Free Transform Tab Label"
 msgid "Free"
 msgstr "自由"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:129
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:128
 #, kde-format
 msgctxt "Perspective Transform Tab Label"
 msgid "Perspective"
 msgstr "パースグリッド"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:132
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:131
 #, kde-format
 msgid "Mirror Horizontal"
 msgstr "水平方向に鏡像反転"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:133
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:132
 #, kde-format
 msgid "Mirror Vertical"
 msgstr "垂直方向に鏡像反転"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:134
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:133
 #, kde-format
 msgid "Rotate 90 degrees Clockwise"
 msgstr "画像を時計回りに90°回転"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:135
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:134
 #, kde-format
 msgid "Rotate 90 degrees CounterClockwise"
 msgstr "画像を反時計回りに90°回転"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:137
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:136
 #, fuzzy, kde-format
 #| msgctxt "(qtundo-format)"
 #| msgid "Keep Aspect Ratio"
 msgid "Keep Aspect Ratio"
 msgstr "アスペクト比を保つ"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:141
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:140
 #, kde-format
 msgid "Apply"
 msgstr "適用"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:427
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:426
 #, kde-format
 msgid "Transform Tool Actions"
 msgstr "変形ツール操作"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:941
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:937
 #, fuzzy, kde-format
 #| msgctxt "floating message in transformation tool"
 #| msgid "Cannot transform empty layer "
@@ -69246,7 +69278,7 @@ msgctxt "floating message in transformation tool"
 msgid "Cannot transform locked layers"
 msgstr "空のレイヤーを変形することはできません"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:947
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:943
 #, fuzzy, kde-format
 #| msgctxt "floating message in transformation tool"
 #| msgid "Cannot transform empty layer "
@@ -69254,7 +69286,7 @@ msgctxt "floating message in transformation tool"
 msgid "Cannot transform hidden layers"
 msgstr "空のレイヤーを変形することはできません"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:953
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:949
 #, fuzzy, kde-format
 #| msgctxt "floating message in transformation tool"
 #| msgid "Cannot transform empty layer "
@@ -69262,20 +69294,20 @@ msgctxt "floating message in transformation tool"
 msgid "Cannot use transform tool on this set of layers"
 msgstr "空のレイヤーを変形することはできません"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:969
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:965
 #, kde-format
 msgctxt "floating message in transformation tool"
 msgid "Layer type cannot use the transform tool"
 msgstr "普通のレイヤーは変形ツールを使用できません"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:976
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:972
 #, kde-format
 msgctxt "floating message in transformation tool"
 msgid "Layer type cannot use the transform tool. Use transform mask instead."
 msgstr ""
 "レイヤー形式は変形ツールを使用できません。代わりに変形マスクを使用します。"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:995
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:991
 #, kde-format
 msgctxt "floating message in transformation tool"
 msgid ""
@@ -69285,20 +69317,20 @@ msgstr ""
 "レイヤー形式は位置マスクを子として持っている場合があります。変換を行う前には"
 "削除してください。"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:1008
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:1004
 #, kde-format
 msgctxt "floating message in transformation tool"
 msgid "Selections are not used when editing transform masks "
 msgstr "変形マスクの編集中は選択は使用しません"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:1095
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:1134
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:1089
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:1128
 #, kde-format
 msgctxt "floating message in transformation tool"
 msgid "Cannot transform empty layer "
 msgstr "空のレイヤーを変形することはできません"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:1121
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:1115
 #, kde-format
 msgctxt "floating message in transformation tool"
 msgid ""
@@ -69308,7 +69340,7 @@ msgstr ""
 "表示されていないサブレイヤーも変形されます。変形させたくないサブレイヤーにつ"
 "いてはそのレイヤーをロックしてください。"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.h:373
+#: plugins/tools/tool_transform2/kis_tool_transform.h:370
 #, kde-format
 msgid "Transform a layer or a selection"
 msgstr "レイヤーまたは選択範囲を変形"

@@ -33,7 +33,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-05-05 00:42+0000\n"
+"POT-Creation-Date: 2026-05-06 00:43+0000\n"
 "PO-Revision-Date: 2022-03-29 20:36+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -21275,7 +21275,7 @@ msgstr "आकार"
 #: libs/ui/dialogs/kis_dlg_layer_style.cpp:1417
 #: libs/ui/dialogs/kis_dlg_layer_style.cpp:1420
 #: libs/ui/dialogs/kis_dlg_layer_style.cpp:1483
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1857
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1970
 #: libs/ui/forms/wdgdisplaysettings.ui:379
 #: libs/ui/forms/wdggeneralsettings.ui:361
 #: libs/ui/forms/wdgrectangleconstraints.ui:59
@@ -21602,7 +21602,7 @@ msgid "<%1> (embedded)"
 msgstr "<%1> (सन्निहित)"
 
 #: libs/image/kis_base_mask_generator.h:22
-#: libs/ui/dialogs/kis_dlg_preferences.cc:578
+#: libs/ui/dialogs/kis_dlg_preferences.cc:587
 #: libs/ui/kis_bookmarked_configurations_model.cc:54
 #, kde-format
 msgid "Default"
@@ -24216,7 +24216,7 @@ msgstr "स्थानीय संसाधन"
 #: libs/ui/animation/KisDlgImportVideoAnimation.cpp:702
 #: libs/ui/animation/KisDlgImportVideoAnimation.cpp:772
 #: libs/ui/dialogs/kis_dlg_layer_style.cpp:401
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1117
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1126
 #: libs/ui/input/kis_tablet_debugger.cpp:106 libs/ui/kis_clipboard.cc:779
 #: libs/ui/kis_custom_pattern.cc:126 libs/ui/kis_filter_manager.cc:234
 #: libs/ui/kis_filter_manager.cc:243 libs/ui/kis_layer_manager.cc:326
@@ -24510,8 +24510,8 @@ msgstr ""
 #. i18n: ectx: attribute (title), widget (QWidget, tab_hsx)
 #. i18n: ectx: property (text), widget (QLabel, lblCurrentRenderer)
 #: libs/resources/KisResourceStorage.h:117
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2244
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2248
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2357
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2361
 #: libs/ui/forms/wdgdisplaysettings.ui:77 libs/ui/KoDocumentInfo.cpp:37
 #: libs/widgets/KisDlgInternalColorSelector.cpp:336
 #: libs/widgets/WdgDlgInternalColorSelector.ui:89
@@ -25327,7 +25327,7 @@ msgid ""
 msgstr ""
 
 #: libs/ui/animation/KisDlgAnimationRenderer.cpp:514
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2281
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2394
 #, kde-format
 msgid "Warning(s):"
 msgstr "चेतावनियां"
@@ -25816,7 +25816,7 @@ msgstr ""
 #: plugins/filters/colorsfilters/wdg_hsv_adjustment.ui:337
 #: plugins/filters/colorsfilters/wdg_perchannel.ui:346
 #: plugins/tools/basictools/wdgmultihandtool.ui:192
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:142
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:141
 #, kde-format
 msgid "Reset"
 msgstr "रीसेट"
@@ -26296,8 +26296,8 @@ msgstr "मुख्य प्रदर्शक :"
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgDisplaySettings)
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_6)
 #: libs/ui/animation/VideoHDRMetadataOptionsDialog.ui:40
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2579
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2581
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2692
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2694
 #: libs/ui/forms/wdgcolorsettings.ui:172 libs/ui/forms/wdgdisplaysettings.ui:24
 #: plugins/dockers/advancedcolorselector/wdg_color_selector_settings.ui:444
 #: plugins/dockers/svgcollectiondocker/SvgSymbolCollectionDocker.cpp:234
@@ -26398,8 +26398,8 @@ msgstr "परत मिटाएं"
 #. i18n: ectx: attribute (title), widget (QWidget, general)
 #: libs/ui/animation/VideoImportDialog.ui:34
 #: libs/ui/animation/wdg_animationrenderer.ui:16
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2549
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2551
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2662
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2664
 #: libs/ui/forms/wdgcolorsettings.ui:40 libs/ui/forms/wdggeneralsettings.ui:311
 #: libs/ui/forms/wdgperformancesettings.ui:49 libs/ui/KoDocumentInfoDlg.cpp:91
 #: libs/ui/KoDocumentInfoDlg.cpp:92
@@ -27281,13 +27281,13 @@ msgstr "परत गुण"
 #: libs/ui/dialogs/kis_dlg_layer_style.cpp:1487
 #: libs/ui/dialogs/kis_dlg_layer_style.cpp:1490
 #: libs/ui/dialogs/kis_dlg_layer_style.cpp:1493
-#: libs/ui/dialogs/kis_dlg_preferences.cc:298
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1770
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1774
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1778
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1863
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2332
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2390 libs/ui/kis_paintop_box.cc:279
+#: libs/ui/dialogs/kis_dlg_preferences.cc:307
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1883
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1887
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1891
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1976
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2445
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2503 libs/ui/kis_paintop_box.cc:279
 #: libs/ui/kis_paintop_box.cc:280 libs/ui/widgets/kis_custom_image_widget.cc:96
 #: libs/ui/widgets/KisAutoLevelsWidget.cpp:19
 #: libs/widgets/kis_color_input.cpp:139 libs/widgets/kis_color_input.cpp:170
@@ -27440,174 +27440,174 @@ msgctxt "@title:window"
 msgid "Multiple Paste Sources Detected"
 msgstr "एकाधिक चिपकाने का स्रोतों का पता चला"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:218
+#: libs/ui/dialogs/kis_dlg_preferences.cc:227
 #, kde-format
 msgid "No Cursor"
 msgstr "बिना कर्सर"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:219
+#: libs/ui/dialogs/kis_dlg_preferences.cc:228
 #, kde-format
 msgid "Tool Icon"
 msgstr "औजार प्रतीक"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:220
+#: libs/ui/dialogs/kis_dlg_preferences.cc:229
 #, kde-format
 msgid "Arrow"
 msgstr "तीर"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:221
+#: libs/ui/dialogs/kis_dlg_preferences.cc:230
 #, kde-format
 msgid "Small Circle"
 msgstr "छोटा वृत्त"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, cmbDecor)
-#: libs/ui/dialogs/kis_dlg_preferences.cc:222
+#: libs/ui/dialogs/kis_dlg_preferences.cc:231
 #: plugins/tools/tool_crop/wdg_tool_crop.ui:467
 #, kde-format
 msgid "Crosshair"
 msgstr "लक्ष्य बिंदु"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:223
+#: libs/ui/dialogs/kis_dlg_preferences.cc:232
 #, kde-format
 msgid "Triangle Righthanded"
 msgstr "दाएँ हाथ का त्रिभुज"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:224
+#: libs/ui/dialogs/kis_dlg_preferences.cc:233
 #, kde-format
 msgid "Triangle Lefthanded"
 msgstr "बाएँ हाथ का त्रिभुज"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:225
+#: libs/ui/dialogs/kis_dlg_preferences.cc:234
 #, kde-format
 msgid "Black Pixel"
 msgstr "काला पिक्सेल"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:226
+#: libs/ui/dialogs/kis_dlg_preferences.cc:235
 #, kde-format
 msgid "White Pixel"
 msgstr "सफेद पिक्सेल"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:229
+#: libs/ui/dialogs/kis_dlg_preferences.cc:238
 #, kde-format
 msgctxt "Display options label to not DISPLAY brush outline"
 msgid "No Outline"
 msgstr "कोई सीमारेखा नहीं"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:230
+#: libs/ui/dialogs/kis_dlg_preferences.cc:239
 #, kde-format
 msgid "Circle Outline"
 msgstr "वृत्त सीमारेखा"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:231
+#: libs/ui/dialogs/kis_dlg_preferences.cc:240
 #, kde-format
 msgid "Preview Outline"
 msgstr "ब्रश रेखा पूर्वावलोकन :"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:232
+#: libs/ui/dialogs/kis_dlg_preferences.cc:241
 #, kde-format
 msgid "Tilt Outline"
 msgstr "झुकाव की रेखा"
 
 #. i18n: ectx: property (text), widget (QPushButton, bnEraser)
 #. i18n: ectx: property (text), widget (QCheckBox, eraserBox)
-#: libs/ui/dialogs/kis_dlg_preferences.cc:256
+#: libs/ui/dialogs/kis_dlg_preferences.cc:265
 #: plugins/paintops/libpaintop/forms/wdgCompositeOpOption.ui:88
 #: plugins/paintops/mypaint/wdgmypaintoptions.ui:41
 #, kde-format
 msgid "Eraser"
 msgstr "रबर"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:365
+#: libs/ui/dialogs/kis_dlg_preferences.cc:374
 #, fuzzy, kde-format
 msgctxt "touch painting"
 msgid "Auto (Disabled)"
 msgstr "दूरीः"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:366
+#: libs/ui/dialogs/kis_dlg_preferences.cc:375
 #, fuzzy, kde-format
 #| msgid "Enabled"
 msgctxt "touch painting"
 msgid "Auto (Enabled)"
 msgstr "सक्षम"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:367
+#: libs/ui/dialogs/kis_dlg_preferences.cc:376
 #, fuzzy, kde-format
 #| msgid "Enabled"
 msgctxt "touch painting"
 msgid "Enabled"
 msgstr "सक्षम"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:368
+#: libs/ui/dialogs/kis_dlg_preferences.cc:377
 #, fuzzy, kde-format
 msgctxt "touch painting"
 msgid "Disabled"
 msgstr "दूरीः"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:382
+#: libs/ui/dialogs/kis_dlg_preferences.cc:391
 #, kde-format
 msgid "On Touch Drag"
 msgstr "टच ड्रैग पर"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:383
+#: libs/ui/dialogs/kis_dlg_preferences.cc:392
 #, kde-format
 msgid "On Click Drag"
 msgstr "क्लिक ड्रैग पर"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:384
+#: libs/ui/dialogs/kis_dlg_preferences.cc:393
 #, kde-format
 msgid "On Middle-Click Drag"
 msgstr "मध्य क्लिक ड्रैग पर"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:434
+#: libs/ui/dialogs/kis_dlg_preferences.cc:443
 #, fuzzy, kde-format
 #| msgid "All supported formats"
 msgid "All Supported Files"
 msgstr "सभी समर्थित प्रारूप"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:469
+#: libs/ui/dialogs/kis_dlg_preferences.cc:478
 #, kde-format
 msgid "Open default window"
 msgstr "पूर्वन्यस्त विंडो खोलें"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:470
+#: libs/ui/dialogs/kis_dlg_preferences.cc:479
 #, kde-format
 msgid "Load previous session"
 msgstr "पिछले सत्र को लोड करें"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:471
+#: libs/ui/dialogs/kis_dlg_preferences.cc:480
 #, kde-format
 msgid "Show session manager"
 msgstr "सत्र प्रबंधक दिखाएँ"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:543
+#: libs/ui/dialogs/kis_dlg_preferences.cc:552
 #, fuzzy, kde-format
 #| msgid "Note: Krita will need to be restarted for changes to take effect"
 msgid "You will need to Restart Krita for the changes to take an effect."
 msgstr "टिप्पणी: परिवर्तनों को प्रभावी करने के लिए क्रिता को पुनरारंभ करना होगा"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:549
+#: libs/ui/dialogs/kis_dlg_preferences.cc:558
 #, kde-format
 msgid ""
 "Saving at a Location picked from the File Picker may slow down the startup!"
 msgstr ""
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:581
+#: libs/ui/dialogs/kis_dlg_preferences.cc:590
 #, fuzzy, kde-format
 msgid "Internal Storage"
 msgstr "इंटीग्रल चरण:"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:583
+#: libs/ui/dialogs/kis_dlg_preferences.cc:592
 #, kde-format
 msgid "SD-Card"
 msgstr ""
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:621
+#: libs/ui/dialogs/kis_dlg_preferences.cc:630
 #, fuzzy, kde-format
 #| msgid "User Manual"
 msgid "Choose Manually"
 msgstr "सहाय्य पुस्तिका"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:686
+#: libs/ui/dialogs/kis_dlg_preferences.cc:695
 #, kde-format
 msgctxt "@info resource folder"
 msgid ""
@@ -27622,62 +27622,62 @@ msgid ""
 "%2</p>"
 msgstr ""
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1069
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1078
 #, fuzzy, kde-format
 #| msgid "None"
 msgctxt "Preview option for no color sampler"
 msgid "None"
 msgstr "कोई नहीं"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1070
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1079
 #, fuzzy, kde-format
 #| msgid "Circle"
 msgctxt "Preview option for a circular/ring-shaped color sampler"
 msgid "Circle"
 msgstr "वृत्त"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1071
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1080
 #, fuzzy, kde-format
 #| msgid "Rectangle"
 msgctxt "Preview option for a rectangular color sampler left of the cursor"
 msgid "Rectangle Left"
 msgstr "चतुर्भुज"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1072
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1081
 #, fuzzy, kde-format
 #| msgid "Rectangle"
 msgctxt "Preview option for a rectangular color sampler right of the cursor"
 msgid "Rectangle Right"
 msgstr "चतुर्भुज"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1073
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1082
 #, fuzzy, kde-format
 #| msgid "Rectangle Tool"
 msgctxt "Preview option for a rectangular color sampler above the cursor"
 msgid "Rectangle Above"
 msgstr "चतुर्भुज औज़ार"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1105
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1114
 #, kde-format
 msgid "Select a Background Image"
 msgstr "एक पृष्ठभूमि छवि चुने"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1117
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1126
 #: libs/ui/KisTemplateCreateDia.cpp:390
 #, kde-format
 msgid "%1 is not a valid image file!"
 msgstr "%1 एक मान्य छवि फ़ाइल नहीं है!"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1137
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1146
 #, fuzzy, kde-format
 #| msgid "2. The resource location at %1 is not writable."
 msgctxt "@info resource folder"
 msgid "<b>Warning:</b> this location is not writable."
 msgstr "2. %1 पर संसाधन स्थान लिखने योग्य नहीं है।"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1275
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1488
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1589
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1284
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1530
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1631
 #, kde-format
 msgctxt ""
 "The number of the screen (ordinal) and shortened 'name' of the screen (model "
@@ -27685,18 +27685,18 @@ msgctxt ""
 msgid "Screen %1 (%2):"
 msgstr "स्क्रीन %1 (%2):"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1303
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1312
 #, kde-format
 msgid "Display's color space is managed by the operating system"
 msgstr ""
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1310
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1319
 #, fuzzy, kde-format
 #| msgid "Color Management"
 msgid "Enable canvas color management"
 msgstr "रंग प्रबंधन"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1313
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1322
 #, kde-format
 msgid ""
 "<p>Enabling canvas color management automatically creates a separate native "
@@ -27708,47 +27708,47 @@ msgid ""
 "\",         i.e. paper white proofing will become impossible</li></ol></p>"
 msgstr ""
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1333
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1342
 #, fuzzy, kde-format
 #| msgid "&Target color space:"
 msgid "Canvas surface color space:"
 msgstr "लक्ष्य रंग स्पेस: (&T)"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1336
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1345
 #, kde-format
 msgid "Preferred by operating system"
 msgstr ""
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1337
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1346
 #, kde-format
 msgid "Rec 709 Gamma 2.2"
 msgstr ""
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1338
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1347
 #, kde-format
 msgid "Rec 709 Linear"
 msgstr ""
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1339
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1348
 #, fuzzy, kde-format
 #| msgctxt "Color space name"
 #| msgid "Rec 2100 PQ"
 msgid "Rec 2020 PQ"
 msgstr "आरइसी. २१०० पीक्यू"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1340
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1349
 #, kde-format
 msgid "Unmanaged (testing only)"
 msgstr ""
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1343
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1352
 #, kde-format
 msgid ""
 "<p>Color space of the pixels that are transferred to the window compositor. "
 "Use \"preferred\" space unless you know what you are doing</p>"
 msgstr ""
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1350
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1359
 #, fuzzy, kde-format
 #| msgid "Brush Flow Mode (needs restart):"
 msgid "Canvas surface bit depth (needs restart):"
@@ -27757,7 +27757,7 @@ msgstr "ब्रश फ्लो मोड (क्रिता को पुन
 #. i18n: ectx: property (text), item, widget (QComboBox, patternValueModeComboBox)
 #. i18n: ectx: property (text), widget (QCheckBox, autoPrecisionCheckBox)
 #. i18n: ectx: property (text), widget (QCheckBox, chkAutoMidPoint)
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1353
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1362
 #: libs/ui/widgets/KisDitherWidget.ui:119
 #: plugins/paintops/libpaintop/forms/wdgbrushchooser.ui:72
 #: plugins/paintops/libpaintop/forms/wdgpredefinedbrushchooser.ui:257
@@ -27765,19 +27765,19 @@ msgstr "ब्रश फ्लो मोड (क्रिता को पुन
 msgid "Auto"
 msgstr "स्वतः"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1354
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1362
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1363
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1371
 #, kde-format
 msgid "8-bit"
 msgstr ""
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1355
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1362
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1364
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1371
 #, kde-format
 msgid "10-bit"
 msgstr ""
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1358
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1367
 #, kde-format
 msgid ""
 "<p>The bit depth of the color that is passed to the window compositor. You "
@@ -27785,39 +27785,71 @@ msgid ""
 "display</p>"
 msgstr ""
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1363
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1372
 #, fuzzy, kde-format
 #| msgid "&Target color space:"
 msgid "Current canvas surface bit depth:"
 msgstr "लक्ष्य रंग स्पेस: (&T)"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1370
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1380
 #, kde-format
 msgid ""
 "Color space preferred by the operating system:\n"
 "%1"
 msgstr ""
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1446
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1386
+#, fuzzy, kde-format
+#| msgid "Emboss Diagonal"
+msgid "Diagram:"
+msgstr "तिर्यक एम्बॉज़"
+
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1389
+#, fuzzy, kde-format
+#| msgid "Preferences"
+msgctxt "@info:radiobutton"
+msgid "Preferred Space"
+msgstr "प्राथमिकताएँ"
+
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1391
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "This is the space preferred by the operating system."
+msgstr ""
+
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1394
+#, fuzzy, kde-format
+#| msgid "Current Display Format"
+msgctxt "@info:radiobutton"
+msgid "Current Display"
+msgstr "वर्तमान प्रदर्शक फॉर्मेट"
+
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1397
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "This is the space representing the currently active display."
+msgstr ""
+
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1488
 #: libs/ui/widgets/kis_advanced_color_space_selector.cc:804
 #: libs/ui/widgets/kis_color_space_selector.cc:197
 #, kde-format
 msgid "Install Color Profiles"
 msgstr "रंग प्रोफ़ाइलें स्थापित करें"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1664
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1777
 #, kde-format
 msgid "Tablet Input API (currently active API: \"%1\")"
 msgstr ""
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1678
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1791
 #, kde-format
 msgid ""
 "Use tablet driver timestamps for brush speed (may cause severe artifacts "
 "when using WinTab tablet API)"
 msgstr ""
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1680
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1793
 #, kde-format
 msgid "Use tablet driver timestamps for brush speed"
 msgstr ""
@@ -27825,7 +27857,7 @@ msgstr ""
 #. i18n: This is meant to be used in a spinbox so keep the {n} in the text
 #. and it will be substituted by the number. The text before will be
 #. used as the prefix and the text after as the suffix
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1710
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1823
 #, fuzzy, kde-format
 #| msgid "Maximum brush size:"
 msgid "Maximum brush speed: {n} px/ms"
@@ -27836,7 +27868,7 @@ msgstr[1] "अधिकतम ब्रुश आकार :"
 #. i18n: This is meant to be used in a spinbox so keep the {n} in the text
 #. and it will be substituted by the number. The text before will be
 #. used as the prefix and the text after as the suffix
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1719
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1832
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Brush Smoothing: Disabled"
@@ -27845,19 +27877,19 @@ msgid_plural "Brush speed smoothing: {n} samples"
 msgstr[0] "ब्रश की चिकनाहट : निष्क्रिय"
 msgstr[1] "ब्रश की चिकनाहट : निष्क्रिय"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1726
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1839
 #, fuzzy, kde-format
 msgid "Pen tilt direction offset: "
 msgstr "संतृप्ति :"
 
 #. i18n: ectx: property (suffix), widget (KisIntParseSpinBox, intSwapSize)
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1824
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1937
 #: libs/ui/forms/wdgperformancesettings.ui:214
 #, kde-format
 msgid " GiB"
 msgstr "जीबी"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1845
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1958
 #: libs/ui/dialogs/KisDlgConfigureCumulativeUndo.cpp:59
 #: libs/ui/dialogs/KisDlgConfigureCumulativeUndo.cpp:81
 #: libs/ui/dialogs/KisDlgConfigureCumulativeUndo.cpp:93
@@ -27866,30 +27898,30 @@ msgctxt "suffix for \"seconds\""
 msgid " sec"
 msgstr " सेक."
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1848
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1961
 #, kde-format
 msgid " fps"
 msgstr " एफपीएस"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2087
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2200
 #, kde-format
 msgctxt "canvas renderer"
 msgid "OpenGL"
 msgstr "ओपन-जीएल"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2088
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2201
 #, kde-format
 msgctxt "canvas renderer"
 msgid "Software Renderer (very slow)"
 msgstr ""
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2092
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2205
 #, kde-format
 msgctxt "canvas renderer"
 msgid "Direct3D 11 via ANGLE"
 msgstr ""
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2093
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2206
 #, fuzzy, kde-format
 #| msgctxt "canvas renderer"
 #| msgid "OpenGL ES"
@@ -27897,51 +27929,51 @@ msgctxt "canvas renderer"
 msgid "OpenGL via ANGLE"
 msgstr "ओपन-जीएल ईएस"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2095
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2208
 #, kde-format
 msgctxt "canvas renderer"
 msgid "OpenGL ES"
 msgstr "ओपन-जीएल ईएस"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2102
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2215
 #, kde-format
 msgctxt "canvas renderer"
 msgid "Unknown"
 msgstr "अज्ञात"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2122
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2235
 #, kde-format
 msgctxt "canvas renderer"
 msgid "Auto (%1)"
 msgstr "स्वतः (%1)"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2181
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2294
 #, fuzzy, kde-format
 #| msgid "Current"
 msgctxt "@item:inlistbox"
 msgid "GLX (current)"
 msgstr "मौज़ूदा"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2182
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2295
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "GLX"
 msgstr ""
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2183
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2296
 #, fuzzy, kde-format
 #| msgid "Current"
 msgctxt "@item:inlistbox"
 msgid "EGL (current)"
 msgstr "मौज़ूदा"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2184
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2297
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "EGL"
 msgstr ""
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2190
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2303
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -27949,140 +27981,140 @@ msgid ""
 "switching between EGL and GLX</p>"
 msgstr ""
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2230
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2343
 #, kde-format
 msgid "Display Id: %1"
 msgstr "प्रदर्शक आइडी : %1"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2231
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2344
 #, kde-format
 msgid "Display Name: %1 %2"
 msgstr "प्रदर्शक का नाम : %1 %2"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2232
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2345
 #, kde-format
 msgid "Min Luminance: %1"
 msgstr "न्यूनतम ज्योतिर्मयता : %1"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2233
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2346
 #, kde-format
 msgid "Max Luminance: %1"
 msgstr "अधिकतम ज्योतिर्मयता : %1"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2234
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2347
 #, kde-format
 msgid "Max Full Frame Luminance: %1"
 msgstr ""
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2235
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2348
 #, kde-format
 msgid "Red Primary: %1, %2"
 msgstr "लाल प्राथमिक : %1, %2"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2236
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2349
 #, kde-format
 msgid "Green Primary: %1, %2"
 msgstr "हरा प्राथमिक : %1, %2"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2237
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2350
 #, kde-format
 msgid "Blue Primary: %1, %2"
 msgstr "नीला प्राथमिक : %1, %2"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2238
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2351
 #, kde-format
 msgid "White Point: %1, %2"
 msgstr "श्वेत बिन्दु : %1, %2"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2419
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2532
 #, kde-format
 msgid "<b>Warning:</b> current display doesn't support HDR rendering"
 msgstr ""
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2542
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2655
 #, kde-format
 msgid "Configure Krita"
 msgstr "क्रिता को विन्यस्त करें"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2559
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2672
 #, kde-format
 msgid "Keyboard Shortcuts"
 msgstr "कुंजीपटल शार्टकट"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2561
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2674
 #: libs/widgetutils/xmlgui/KisShortcutsEditor_p.cpp:282
 #, kde-format
 msgid "Shortcuts"
 msgstr "शॉर्टकट्स"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2571
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2684
 #, kde-format
 msgid "Canvas Input Settings"
 msgstr "कैनवास इन्पुट सेटिंग्स"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2572
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2685
 #, kde-format
 msgid "Canvas Input"
 msgstr "कैनवास इन्पुट"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2589
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2702
 #: plugins/dockers/logdocker/LogDockerDock.cpp:315
 #, kde-format
 msgid "Color Management"
 msgstr "रंग प्रबंधन"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2591
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2704
 #, kde-format
 msgctxt "Label of color as in Color Management"
 msgid "Color"
 msgstr "रंग"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2599
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2601
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2712
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2714
 #, kde-format
 msgid "Performance"
 msgstr "निष्पादन"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2609
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2722
 #, kde-format
 msgid "Tablet settings"
 msgstr "टैबलेट सेटिंग्स"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2611
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2724
 #, kde-format
 msgid "Tablet"
 msgstr "टेबलेट"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2619
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2732
 #, kde-format
 msgid "Canvas-only settings"
 msgstr "सिर्फ कैनवास सेटिंग्स"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2621
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2734
 #, kde-format
 msgid "Canvas-only"
 msgstr "सिर्फ कैनवास"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2629
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2631
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2742
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2744
 #, kde-format
 msgid "Pop-up Palette"
 msgstr "पॉप-आप रंग पट्टिका"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2639
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2752
 #, kde-format
 msgctxt "@title:tab Author page"
 msgid "Author"
 msgstr "चित्रकार"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2641
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2754
 #: libs/ui/KoDocumentInfoDlg.cpp:114
 #: plugins/python/comics_project_management_tools/exporters/CPMT_EPUB_exporter.py:233
 #, kde-format
 msgid "Author"
 msgstr "चित्रकार"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2648
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2761
 #, kde-format
 msgctxt "@action:button"
 msgid "Restore Defaults"
@@ -36713,17 +36745,17 @@ msgstr "इस टैम्प्लेट का उपयोग करें"
 msgid "You cannot drag and drop colors on the selected layer type."
 msgstr ""
 
-#: libs/ui/KisView.cpp:757 libs/ui/tool/kis_tool_utils.cpp:456
+#: libs/ui/KisView.cpp:757 libs/ui/tool/kis_tool_utils.cpp:419
 #, kde-format
 msgid "Layer is locked and invisible."
 msgstr "परत तालाबंद और अदृश्य है।"
 
-#: libs/ui/KisView.cpp:759 libs/ui/tool/kis_tool_utils.cpp:458
+#: libs/ui/KisView.cpp:759 libs/ui/tool/kis_tool_utils.cpp:421
 #, kde-format
 msgid "Layer is locked."
 msgstr "परत तालाबंद है।"
 
-#: libs/ui/KisView.cpp:761 libs/ui/tool/kis_tool_utils.cpp:460
+#: libs/ui/KisView.cpp:761 libs/ui/tool/kis_tool_utils.cpp:423
 #, kde-format
 msgid "Layer is invisible."
 msgstr "परत अदृश्य है।"
@@ -37991,23 +38023,23 @@ msgstr ""
 "X: %1 px,\n"
 "Y: %2 px"
 
-#: libs/ui/tool/kis_tool_utils.cpp:215 libs/ui/tool/kis_tool_utils.cpp:227
+#: libs/ui/tool/kis_tool_utils.cpp:213 libs/ui/tool/kis_tool_utils.cpp:225
 #: plugins/dockers/animation/KisAnimUtils.cpp:79
 msgctxt "(qtundo-format)"
 msgid "Clear"
 msgstr "साफ करें"
 
-#: libs/ui/tool/kis_tool_utils.cpp:324
+#: libs/ui/tool/kis_tool_utils.cpp:322
 #, kde-format
 msgid "Brush Size: %1 px"
 msgstr "ब्रुश आकार : %1 px"
 
-#: libs/ui/tool/kis_tool_utils.cpp:462
+#: libs/ui/tool/kis_tool_utils.cpp:425
 #, kde-format
 msgid "Layer can be painted in Wash Mode only."
 msgstr ""
 
-#: libs/ui/tool/kis_tool_utils.cpp:464
+#: libs/ui/tool/kis_tool_utils.cpp:427
 #, kde-format
 msgid "Group not editable."
 msgstr "समूह परत संपादन योग्य नहीं है।"
@@ -39154,12 +39186,12 @@ msgstr "लॉक"
 msgid "Unlock (keep current settings)"
 msgstr "अनलॉक करें (वर्तमान सेटिंग रखें)"
 
-#: libs/ui/widgets/kis_cie_tongue_widget.cpp:657
+#: libs/ui/widgets/kis_cie_tongue_widget.cpp:660
 #, kde-format
 msgid "Uncalibrated color space"
 msgstr "बिना कैलिब्रेटेड रंग स्थान"
 
-#: libs/ui/widgets/kis_cie_tongue_widget.cpp:663
+#: libs/ui/widgets/kis_cie_tongue_widget.cpp:666
 #, kde-format
 msgid "No profile available..."
 msgstr "कोई प्रोफ़ाइल उपलब्ध नहीं..."
@@ -65433,19 +65465,19 @@ msgstr ""
 msgid "Measure Tool"
 msgstr "मापक औज़ार"
 
-#: plugins/tools/basictools/kis_tool_move.cc:294
+#: plugins/tools/basictools/kis_tool_move.cc:292
 #, kde-format
 msgctxt "floating message in move tool"
 msgid "X: %1 px, Y: %2 px"
 msgstr "X: %1 px, Y: %2 px"
 
-#: plugins/tools/basictools/kis_tool_move.cc:342
+#: plugins/tools/basictools/kis_tool_move.cc:340
 #, kde-format
 msgctxt "floating message in move tool"
 msgid "Selected area has no pixels"
 msgstr ""
 
-#: plugins/tools/basictools/kis_tool_move.h:185
+#: plugins/tools/basictools/kis_tool_move.h:183
 #, kde-format
 msgid "Move Tool"
 msgstr "स्थानांतरण औज़ार"
@@ -68749,80 +68781,80 @@ msgid ""
 "Library support, or use options widget for editing scale values manually."
 msgstr ""
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:124
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:123
 #, kde-format
 msgctxt "Warp Transform Tab Label"
 msgid "Warp"
 msgstr "वार्प"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:125
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:124
 #, kde-format
 msgctxt "Liquify Transform Tab Label"
 msgid "Liquify"
 msgstr "द्रवीकरण"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:126
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:125
 #, kde-format
 msgctxt "Mesh Transform Tab Label"
 msgid "Mesh"
 msgstr "जाल"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:127
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:126
 #, kde-format
 msgctxt "Cage Transform Tab Label"
 msgid "Cage"
 msgstr "पिंजरा"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:128
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:127
 #, kde-format
 msgctxt "Free Transform Tab Label"
 msgid "Free"
 msgstr "मुफ़्त"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:129
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:128
 #, kde-format
 msgctxt "Perspective Transform Tab Label"
 msgid "Perspective"
 msgstr "परिप्रेक्ष्य"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:132
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:131
 #, kde-format
 msgid "Mirror Horizontal"
 msgstr "आड़ा प्रतिबिम्ब बनाएं"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:133
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:132
 #, kde-format
 msgid "Mirror Vertical"
 msgstr "खड़ा प्रतिबिम्ब बनाएं"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:134
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:133
 #, kde-format
 msgid "Rotate 90 degrees Clockwise"
 msgstr "घड़ी की दिशा में ९० डिग्री घुमाएँ"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:135
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:134
 #, kde-format
 msgid "Rotate 90 degrees CounterClockwise"
 msgstr "घड़ी की विपरीत दिशा में ९० डिग्री घुमाएँ"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:137
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:136
 #, fuzzy, kde-format
 #| msgctxt "(qtundo-format)"
 #| msgid "Keep Aspect Ratio"
 msgid "Keep Aspect Ratio"
 msgstr "अभिमुखता अनुपात बनाए रखें"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:141
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:140
 #, kde-format
 msgid "Apply"
 msgstr "लागू करें"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:427
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:426
 #, kde-format
 msgid "Transform Tool Actions"
 msgstr "रूपांतरण साधन क्रियाएं"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:941
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:937
 #, fuzzy, kde-format
 #| msgctxt "floating message in transformation tool"
 #| msgid "Cannot transform empty layer "
@@ -68830,7 +68862,7 @@ msgctxt "floating message in transformation tool"
 msgid "Cannot transform locked layers"
 msgstr "खाली परत का रूपांतरण नहीं हो सकता"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:947
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:943
 #, fuzzy, kde-format
 #| msgctxt "floating message in transformation tool"
 #| msgid "Cannot transform empty layer "
@@ -68838,7 +68870,7 @@ msgctxt "floating message in transformation tool"
 msgid "Cannot transform hidden layers"
 msgstr "खाली परत का रूपांतरण नहीं हो सकता"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:953
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:949
 #, fuzzy, kde-format
 #| msgctxt "floating message in transformation tool"
 #| msgid "Cannot transform empty layer "
@@ -68846,13 +68878,13 @@ msgctxt "floating message in transformation tool"
 msgid "Cannot use transform tool on this set of layers"
 msgstr "खाली परत का रूपांतरण नहीं हो सकता"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:969
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:965
 #, kde-format
 msgctxt "floating message in transformation tool"
 msgid "Layer type cannot use the transform tool"
 msgstr "परत का प्रकार रूपांतरण साधन का उपयोग नहीं कर सकता है।"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:976
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:972
 #, kde-format
 msgctxt "floating message in transformation tool"
 msgid "Layer type cannot use the transform tool. Use transform mask instead."
@@ -68860,7 +68892,7 @@ msgstr ""
 "परत का प्रकार रूपांतरण साधन का उपयोग नहीं कर सकता है। इसकी जगह रूपांतरण मास्क का "
 "इस्तेमाल करें।"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:995
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:991
 #, kde-format
 msgctxt "floating message in transformation tool"
 msgid ""
@@ -68868,20 +68900,20 @@ msgid ""
 "transformation."
 msgstr ""
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:1008
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:1004
 #, kde-format
 msgctxt "floating message in transformation tool"
 msgid "Selections are not used when editing transform masks "
 msgstr ""
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:1095
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:1134
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:1089
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:1128
 #, kde-format
 msgctxt "floating message in transformation tool"
 msgid "Cannot transform empty layer "
 msgstr "खाली परत का रूपांतरण नहीं हो सकता"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:1121
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:1115
 #, kde-format
 msgctxt "floating message in transformation tool"
 msgid ""
@@ -68889,7 +68921,7 @@ msgid ""
 "them to be transformed "
 msgstr ""
 
-#: plugins/tools/tool_transform2/kis_tool_transform.h:373
+#: plugins/tools/tool_transform2/kis_tool_transform.h:370
 #, kde-format
 msgid "Transform a layer or a selection"
 msgstr "परत या चयन ट्रांसफ़ॉर्म करें"
@@ -88131,9 +88163,6 @@ msgstr ""
 #~ msgctxt "(qtundo-format) @title:window"
 #~ msgid "Select a swap directory"
 #~ msgstr "कोई चतुर्भुजीय क्षेत्र चुनें"
-
-#~ msgid "Preferences"
-#~ msgstr "प्राथमिकताएँ"
 
 #, fuzzy
 #~| msgid "Preferences"

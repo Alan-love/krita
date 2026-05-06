@@ -128,7 +128,7 @@ private Q_SLOTS:
     void colorSamplePreviewThicknessChanged(qreal value);
     void colorSamplePreviewOutlineEnabledChanged(int value);
 
-    void selectionActionsBarBehaviorChanged(int index);
+    void selectionActionsBarBehaviorChanged(int buttonId);
 #if (QT_VERSION > QT_VERSION_CHECK(6, 7, 0))
     void selectionActionsBarCheckboxChanged(Qt::CheckState value);
 #else
@@ -141,6 +141,7 @@ public:
     QButtonGroup m_pasteFormatGroup;
     KisCumulativeUndoData m_cumulativeUndoData;
     QButtonGroup m_sapPositionGroup;
+    QButtonGroup m_sapBehaviourGroup;
 };
 
 

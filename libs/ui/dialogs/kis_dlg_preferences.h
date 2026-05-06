@@ -140,9 +140,7 @@ private Q_SLOTS:
 public:
     QButtonGroup m_pasteFormatGroup;
     KisCumulativeUndoData m_cumulativeUndoData;
-    QMap<KisConfig::SelectionActionsBarPosition, QPushButton*> m_sapPositionToButtonMap;
     QButtonGroup m_sapPositionGroup;
-
 };
 
 

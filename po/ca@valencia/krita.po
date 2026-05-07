@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-06 00:43+0000\n"
-"PO-Revision-Date: 2026-04-29 10:14+0200\n"
+"PO-Revision-Date: 2026-05-06 09:56+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -27595,41 +27595,33 @@ msgstr ""
 "%1"
 
 #: libs/ui/dialogs/kis_dlg_preferences.cc:1386
-#, fuzzy, kde-format
-#| msgid "Diagonal:"
+#, kde-format
 msgid "Diagram:"
-msgstr "Diagonal:"
+msgstr "Diagrama:"
 
 #: libs/ui/dialogs/kis_dlg_preferences.cc:1389
-#, fuzzy, kde-format
-#| msgid "Preferred Output Format:"
+#, kde-format
 msgctxt "@info:radiobutton"
 msgid "Preferred Space"
-msgstr "Format d'eixida preferit:"
+msgstr "«Espai» preferit"
 
 #: libs/ui/dialogs/kis_dlg_preferences.cc:1391
-#, fuzzy, kde-format
-#| msgid ""
-#| "Color space preferred by the operating system:\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "This is the space preferred by the operating system."
-msgstr ""
-"Espai de color preferit pel sistema operatiu:\n"
-"%1"
+msgstr "Este és l'espai preferit pel sistema operatiu."
 
 #: libs/ui/dialogs/kis_dlg_preferences.cc:1394
-#, fuzzy, kde-format
-#| msgid "Current Display Format"
+#, kde-format
 msgctxt "@info:radiobutton"
 msgid "Current Display"
-msgstr "Format de visualització actual"
+msgstr "Pantalla actual"
 
 #: libs/ui/dialogs/kis_dlg_preferences.cc:1397
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "This is the space representing the currently active display."
-msgstr ""
+msgstr "Este és l'espai que representa la pantalla activa actualment."
 
 #: libs/ui/dialogs/kis_dlg_preferences.cc:1488
 #: libs/ui/widgets/kis_advanced_color_space_selector.cc:804
@@ -35209,7 +35201,7 @@ msgstr ""
 "\n"
 "AVÍS:\tS'ha exhaurit la memòria! Ha començat l'ús de la memòria "
 "d'intercanvi.\n"
-"\t\tPer favor, configureu més RAM per a Krita en el diàleg de configuració"
+"\t\tConfigureu més RAM per a Krita en el diàleg de configuració"
 
 #: libs/ui/kis_statusbar.cc:338
 #, kde-format
@@ -39669,12 +39661,10 @@ msgid "No Preview for this engine"
 msgstr "No hi ha vista prèvia per a este motor"
 
 #: libs/ui/widgets/kis_selection_options.cc:190
-#, fuzzy, kde-format
-#| msgctxt "(qtundo-format)"
-#| msgid "Move Selection"
+#, kde-format
 msgctxt "The move-selected-content checkbox in selection tool options"
 msgid "Move Selected Content"
-msgstr "Mou selecció"
+msgstr "Mou el contingut seleccionat"
 
 #: libs/ui/widgets/kis_selection_options.cc:193
 #: plugins/tools/basictools/kis_tool_fill.cc:591
@@ -39743,12 +39733,10 @@ msgid "Symmetric Difference"
 msgstr "Diferència simètrica"
 
 #: libs/ui/widgets/kis_selection_options.cc:249
-#, fuzzy, kde-format
-#| msgctxt "(qtundo-format)"
-#| msgid "Move Selection"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Move Selected Content"
-msgstr "Mou selecció"
+msgstr "Mou el contingut seleccionat"
 
 #: libs/ui/widgets/kis_selection_options.cc:252
 #, kde-format
@@ -59833,7 +59821,7 @@ msgstr "Pèl"
 #, kde-format
 msgctxt "PaintOp instant preview limitation"
 msgid "Bristle Brush (the lines will be thinner than on preview)"
-msgstr "Pinzell de pèl (les línies seran més fines que a la vista prèvia)"
+msgstr "Pinzell de pèl (les línies seran més fines que en la vista prèvia)"
 
 #: plugins/paintops/hairy/KisHairyBristleOptionWidget.cpp:56
 #, kde-format
@@ -69951,7 +69939,7 @@ msgstr "Elimina d'una altra etiqueta"
 #, kde-format
 msgctxt "@option:check"
 msgid "Search in tag"
-msgstr "Busca a les etiquetes"
+msgstr "Busca en les etiquetes"
 
 #: qmlmodules/components/qml/ResourceView.qml:349
 #, kde-format

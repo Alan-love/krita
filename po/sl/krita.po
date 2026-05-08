@@ -22,7 +22,7 @@ msgstr ""
 "Project-Id-Version: Krita trunk\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-06 00:43+0000\n"
-"PO-Revision-Date: 2026-05-05 07:41+0200\n"
+"PO-Revision-Date: 2026-05-07 07:57+0200\n"
 "Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -27435,41 +27435,33 @@ msgstr ""
 "%1"
 
 #: libs/ui/dialogs/kis_dlg_preferences.cc:1386
-#, fuzzy, kde-format
-#| msgid "Diagonal:"
+#, kde-format
 msgid "Diagram:"
-msgstr "Diagonala:"
+msgstr "Diagram:"
 
 #: libs/ui/dialogs/kis_dlg_preferences.cc:1389
-#, fuzzy, kde-format
-#| msgid "Preferred Output Format:"
+#, kde-format
 msgctxt "@info:radiobutton"
 msgid "Preferred Space"
-msgstr "Želeni izhodni zapis:"
+msgstr "Prednostna površina"
 
 #: libs/ui/dialogs/kis_dlg_preferences.cc:1391
-#, fuzzy, kde-format
-#| msgid ""
-#| "Color space preferred by the operating system:\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "This is the space preferred by the operating system."
-msgstr ""
-"Barvni prostor, ki ga prednostno uporablja operacijski sistem:\n"
-"%1"
+msgstr "To je površina, ki jo prednostno uporablja operacijski sistem."
 
 #: libs/ui/dialogs/kis_dlg_preferences.cc:1394
-#, fuzzy, kde-format
-#| msgid "Current Display Format"
+#, kde-format
 msgctxt "@info:radiobutton"
 msgid "Current Display"
-msgstr "Trenutna oblika prikaza"
+msgstr "Trenutni zaslon"
 
 #: libs/ui/dialogs/kis_dlg_preferences.cc:1397
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "This is the space representing the currently active display."
-msgstr ""
+msgstr "To je površina, ki prikazuje trenutno aktivni zaslon."
 
 #: libs/ui/dialogs/kis_dlg_preferences.cc:1488
 #: libs/ui/widgets/kis_advanced_color_space_selector.cc:804

@@ -284,6 +284,42 @@ QImage KisVisualRectangleSelectorShape::renderAlphaMask() const
 {
     // Hi-DPI aware rendering requires that we determine the device pixel dimension;
     // actual widget size in device pixels is not accessible unfortunately, it might be 1px smaller...
+    KisVisualColorSelector::RenderMode mode = colorSelector()->renderMode();
+    if (isHueControl() && mode == KisVisualColorSelector::StaticBackground) {
+        return QImage();
+    }
+    qreal startRatio = 0.0;
+    qreal endRatio = 1.0;
+
+    if (mode == KisVisualColorSelector::CompositeBackground && isHueControl()) {
+        startRatio = 0.25;
+    }
+
+    return renderAlphaMaskImpl(startRatio, endRatio);
+}
+
+QImage KisVisualRectangleSelectorShape::renderStaticAlphaMask() const
+{
+    // Hi-DPI aware rendering requires that we determine the device pixel dimension;
+    // actual widget size in device pixels is not accessible unfortunately, it might be 1px smaller...
+    KisVisualColorSelector::RenderMode mode = colorSelector()->renderMode();
+    if (isHueControl() && mode == KisVisualColorSelector::DynamicBackground) {
+        return QImage();
+    }
+    qreal startRatio = 0.0;
+    qreal endRatio = 1.0;
+
+    if (mode == KisVisualColorSelector::CompositeBackground && isHueControl()) {
+        endRatio = 0.25;
+    }
+
+    return renderAlphaMaskImpl(startRatio, endRatio);
+}
+
+QImage KisVisualRectangleSelectorShape::renderAlphaMaskImpl(qreal ratioStart, qreal ratioEnd) const
+{
+    // Hi-DPI aware rendering requires that we determine the device pixel dimension;
+    // actual widget size in device pixels is not accessible unfortunately, it might be 1px smaller...
     const int deviceWidth = qCeil(width() * devicePixelRatioF());
     const int deviceHeight = qCeil(height() * devicePixelRatioF());
 
@@ -295,18 +331,29 @@ QImage KisVisualRectangleSelectorShape::renderAlphaMask() const
     painter.setBrush(Qt::white);
     painter.setPen(Qt::NoPen);
 
+    const int marginMajor = 3;
+    const int marginMinor = 2;
+
     if (getDimensions() == onedimensional) {
         if (m_type == KisVisualRectangleSelectorShape::vertical) {
-            painter.drawRect(2, 3, width() - 4, height() - 6);
+            const int barWidth = width() - (marginMinor*2);
+            const int start = (barWidth*ratioStart);
+            const int end = (barWidth*ratioEnd) - start;
+            painter.drawRect(start + marginMinor, marginMajor, end, height() - (2*marginMajor));
+
         } else if (m_type == KisVisualRectangleSelectorShape::horizontal) {
-            painter.drawRect(3, 2, width() - 6, height() - 4);
+            const int barWidth = height() - (marginMinor*2);
+            const int start = (barWidth*ratioStart);
+            const int end = (barWidth*ratioEnd) - start;
+            painter.drawRect(marginMajor, start + marginMinor, width() - (2*marginMajor), end);
+
         } else /*if (m_type == border || m_type == borderMirrored)*/ {
             painter.drawRect(2, 2, width() - 4, height() - 4);
             painter.setBrush(Qt::black);
             painter.drawRect(m_barWidth, m_barWidth, width() - 2 * m_barWidth, height() - 2 * m_barWidth);
         }
     } else {
-        painter.drawRect(3, 3, width() - 6, height() - 6);
+        painter.drawRect(marginMajor, marginMajor, width() - marginMajor*2, height() - marginMajor*2);
     }
 
     return alphaMask;

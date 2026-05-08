@@ -34,8 +34,10 @@ public:
 protected:
     QRect getAvailableSpace(QRect geom, bool stretch);
     QImage renderAlphaMask() const override;
+    QImage renderStaticAlphaMask() const override;
 
 private:
+    QImage renderAlphaMaskImpl(qreal ratioStart, qreal ratioEnd) const;
     QPointF convertShapeCoordinateToWidgetCoordinate(QPointF coordinate) const override;
     QPointF convertWidgetCoordinateToShapeCoordinate(QPointF coordinate) const override;
 

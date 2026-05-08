@@ -177,6 +177,9 @@ void WGColorSelectorDock::setCanvas(KoCanvasBase *canvas)
     if (m_canvas) {
         KoColorDisplayRendererInterface *dri = m_canvas->displayColorConverter()->displayRendererInterface();
         KisCanvasResourceProvider *resourceProvider = m_canvas->imageView()->resourceProvider();
+
+        m_colorHistory = resourceProvider->colorHistory();
+        m_history->setColorHistory(m_colorHistory);
         m_selector->setDisplayRenderer(dri);
         m_displayConfig->setDisplayConverter(m_canvas->displayColorConverter());
         m_commonColorSet->setImage(m_canvas->image());

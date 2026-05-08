@@ -26,6 +26,9 @@ public:
     KoColor color(int index) const;
     int size() const;
 
+    QList<KoColor> colorList();
+    void setFromColorList(const QList<KoColor> &colors);
+
 public Q_SLOTS:
     void clear();
 Q_SIGNALS:

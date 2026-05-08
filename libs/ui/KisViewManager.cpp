@@ -125,6 +125,7 @@
 #include <KisImageBarrierLock.h>
 #include <KisTextPropertiesManager.h>
 #include <kis_selection.h>
+#include <KisUniqueColorSet.h>
 
 #ifdef Q_OS_WIN
 #include "KisWindowsPackageUtils.h"
@@ -349,7 +350,8 @@ KisViewManager::KisViewManager(QWidget *parent, KisKActionCollection *_actionCol
     d->canvasResourceProvider.setFGColor(cfg.readKoColor("LastForeGroundColor",foreground));
     KoColor background(Qt::white, cs);
     d->canvasResourceProvider.setBGColor(cfg.readKoColor("LastBackGroundColor",background));
-    d->canvasResourceProvider.setColorHistory(cfg.readKoColors("LastColorHistory"));
+    KisUniqueColorSet *set = d->canvasResourceProvider.colorHistory();
+    set->setFromColorList(cfg.readKoColors("LastColorHistory"));
     d->textPropertyManager.setCanvasResourceProvider(&d->canvasResourceProvider);
 
     // Initialize the old imagesize plugin
@@ -366,7 +368,7 @@ KisViewManager::~KisViewManager()
     }
 
     if (canvasResourceProvider()) {
-        cfg.writeKoColors("LastColorHistory", canvasResourceProvider()->colorHistory());
+        cfg.writeKoColors("LastColorHistory", canvasResourceProvider()->colorHistory()->colorList());
     }
 
     cfg.writeEntry("baseLength", KisResourceItemChooserSync::instance()->baseLength());

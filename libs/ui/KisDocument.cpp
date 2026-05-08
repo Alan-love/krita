@@ -91,6 +91,7 @@
 #include <kis_idle_watcher.h>
 #include <kis_signal_auto_connection.h>
 #include <kis_canvas_widget_base.h>
+#include "KisUniqueColorSet.h"
 #include "kis_layer_utils.h"
 #include "kis_selection_mask.h"
 
@@ -309,6 +310,7 @@ public:
         , nserver(new KisNameServer(1))
         , imageIdleWatcher(2000 /*ms*/)
         , globalAssistantsColor(KisConfig(true).defaultAssistantsColor())
+        , colorHistory(new KisUniqueColorSet(_q))
         , batchMode(false)
     {
         if (QLocale().measurementSystem() == QLocale::ImperialSystem) {
@@ -397,7 +399,7 @@ public:
     qreal audioLevel = 1.0;
 
     QColor globalAssistantsColor;
-    QList<KoColor> colorHistory;
+    KisUniqueColorSet *colorHistory{nullptr};
 
     KisGridConfig gridConfig;
 
@@ -2947,7 +2949,7 @@ QColor KisDocument::assistantsGlobalColor()
     return d->globalAssistantsColor;
 }
 
-QList<KoColor> KisDocument::colorHistory()
+KisUniqueColorSet *KisDocument::colorHistory()
 {
     return d->colorHistory;
 }
@@ -2965,7 +2967,7 @@ QRectF KisDocument::documentBounds() const
     return bounds;
 }
 
-void KisDocument::setColorHistory(const QList<KoColor> &colors)
+void KisDocument::setColorHistory(KisUniqueColorSet *colors)
 {
-    d->colorHistory = colors;
+    d->colorHistory->setFromColorList(colors->colorList());
 }

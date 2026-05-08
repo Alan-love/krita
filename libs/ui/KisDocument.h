@@ -52,6 +52,7 @@ class KisGuidesConfig;
 class KisMirrorAxisConfig;
 class QDomDocument;
 class KisReferenceImagesLayer;
+class KisUniqueColorSet;
 
 #define KIS_MIME_TYPE "application/x-krita"
 
@@ -664,8 +665,8 @@ public:
     QColor assistantsGlobalColor();
 
     // Color history if per document (configuration dependent)
-    void setColorHistory(const QList<KoColor> &colors);
-    QList<KoColor> colorHistory();
+    void setColorHistory(KisUniqueColorSet *colors);
+    KisUniqueColorSet *colorHistory();
 
     /**
      * Get existing reference images layer or null if none exists.

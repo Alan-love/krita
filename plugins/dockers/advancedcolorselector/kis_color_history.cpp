@@ -6,6 +6,7 @@
  */
 
 #include "kis_color_history.h"
+#include "KisUniqueColorSet.h"
 #include "kis_canvas2.h"
 #include "KisViewManager.h"
 #include "kis_canvas_resource_provider.h"
@@ -95,9 +96,9 @@ void KisColorHistory::clearColorHistory()
 QList<KoColor> KisColorHistory::colorHistory()
 {
     if (m_history_per_document && m_document) {
-        return m_document->colorHistory();
+        return m_document->colorHistory()->colorList();
     } else if (m_resourceProvider) {
-        return m_resourceProvider->colorHistory();
+        return m_resourceProvider->colorHistory()->colorList();
     } else {
         return QList<KoColor>();
     }
@@ -106,7 +107,7 @@ QList<KoColor> KisColorHistory::colorHistory()
 void KisColorHistory::updateColorHistory(const QList<KoColor> &history)
 {
     if (m_history_per_document && m_document) {
-        m_document->setColorHistory(history);
+        m_document->colorHistory()->setFromColorList(history);
     }
 
     /**
@@ -114,7 +115,7 @@ void KisColorHistory::updateColorHistory(const QList<KoColor> &history)
      * option state is.
      */
     if (m_resourceProvider) {
-        m_resourceProvider->setColorHistory(history);
+        m_resourceProvider->colorHistory()->setFromColorList(history);
     }
 
     setColors(history);
@@ -133,7 +134,7 @@ void KisColorHistory::colorHistoryChanged(const QList<KoColor> &history)
     KIS_SAFE_ASSERT_RECOVER_RETURN(sender() != this);
 
     if (m_resourceProvider) {
-        m_resourceProvider->setColorHistory(history);
+        m_resourceProvider->colorHistory()->setFromColorList(history);
     }
     setColors(history);
 }

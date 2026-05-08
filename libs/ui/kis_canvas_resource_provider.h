@@ -31,6 +31,7 @@ class KoCanvasBase;
 class KisViewManager;
 
 class KisFilterConfiguration;
+class KisUniqueColorSet;
 
 #include <kis_abstract_perspective_grid.h>
 
@@ -57,8 +58,7 @@ public:
     KoColor fgColor() const;
     void setFGColor(const KoColor& c);
 
-    QList<KoColor> colorHistory() const;
-    void setColorHistory(const QList<KoColor>& colors);
+    KisUniqueColorSet *colorHistory() const;
 
     float HDRExposure() const;
     void setHDRExposure(float exposure);

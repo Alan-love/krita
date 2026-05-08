@@ -18,6 +18,7 @@
 #include <KoColorSpaceRegistry.h>
 #include <KoResource.h>
 #include <KoSvgTextPropertyData.h>
+#include <KisUniqueColorSet.h>
 
 #include <resources/KoPattern.h>
 #include <kis_paint_device.h>
@@ -108,22 +109,20 @@ KoColor KisCanvasResourceProvider::fgColor() const
     }
 }
 
-QList<KoColor> KisCanvasResourceProvider::colorHistory() const
+KisUniqueColorSet *KisCanvasResourceProvider::colorHistory() const
 {
     QVariant c = m_resourceManager->resource(KoCanvasResource::ColorHistory);
     if (c.isValid()) {
-        return c.value<QList<KoColor>>();
+        return dynamic_cast<KisUniqueColorSet *>(c.value<QObject*>());
     }
     else {
-        return QList<KoColor>();
+        qDebug() << "creating fresh colorset";
+        KisUniqueColorSet *set = new KisUniqueColorSet();
+        QVariant v;
+        v.setValue(set);
+        m_resourceManager->setResource(KoCanvasResource::ColorHistory, v);
+        return set;
     }
-}
-
-void KisCanvasResourceProvider::setColorHistory(const QList<KoColor>& colors)
-{
-    QVariant v;
-    v.setValue(colors);
-    m_resourceManager->setResource(KoCanvasResource::ColorHistory, v);
 }
 
 float KisCanvasResourceProvider::HDRExposure() const

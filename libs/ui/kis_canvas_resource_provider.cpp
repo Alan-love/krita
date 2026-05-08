@@ -72,6 +72,11 @@ void KisCanvasResourceProvider::setResourceManager(KoCanvasResourceProvider *res
     m_resourceManager->setResource(KoCanvasResource::EffectiveZoom, 1.0);
     m_resourceManager->setResource(KoCanvasResource::EffectivePhysicalZoom, 1.0);
 
+    KisUniqueColorSet *set = new KisUniqueColorSet(this);
+    QVariant vSet;
+    vSet.setValue(set);
+    m_resourceManager->setResource(KoCanvasResource::ColorHistory, vSet);
+
     connect(m_resourceManager, SIGNAL(canvasResourceChanged(int,QVariant)),
             this, SLOT(slotCanvasResourceChanged(int,QVariant)));
 
@@ -112,17 +117,7 @@ KoColor KisCanvasResourceProvider::fgColor() const
 KisUniqueColorSet *KisCanvasResourceProvider::colorHistory() const
 {
     QVariant c = m_resourceManager->resource(KoCanvasResource::ColorHistory);
-    if (c.isValid()) {
-        return dynamic_cast<KisUniqueColorSet *>(c.value<QObject*>());
-    }
-    else {
-        qDebug() << "creating fresh colorset";
-        KisUniqueColorSet *set = new KisUniqueColorSet();
-        QVariant v;
-        v.setValue(set);
-        m_resourceManager->setResource(KoCanvasResource::ColorHistory, v);
-        return set;
-    }
+    return dynamic_cast<KisUniqueColorSet *>(c.value<QObject*>());
 }
 
 float KisCanvasResourceProvider::HDRExposure() const

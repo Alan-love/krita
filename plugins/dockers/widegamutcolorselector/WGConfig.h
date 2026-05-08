@@ -206,6 +206,7 @@ extern const ColorPatches popupPatches;
 
 extern const GenericSetting<bool> proofToPaintingColors;
 extern const GenericSetting<bool> colorHistoryEnabled;
+extern const GenericSetting<bool> colorHistoryFromDocument;
 extern const GenericSetting<bool> commonColorsEnabled;
 extern const GenericSetting<bool> colorHistoryShowClearButton;
 extern const GenericSetting<bool> commonColorsAutoUpdate;

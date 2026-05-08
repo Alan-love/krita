@@ -6,6 +6,7 @@
 
 #include "WGColorSelectorDock.h"
 
+#include "KisDocument.h"
 #include "WGActionManager.h"
 #include "WGColorSelectorSettings.h"
 #include "WGColorPatches.h"
@@ -94,6 +95,7 @@ WGColorSelectorDock::WGColorSelectorDock()
 
     // eventually it should made be a global history, not specific to any plugin
     m_colorHistory = new KisUniqueColorSet(this);
+    m_documentColorHistory = new KisUniqueColorSet(this);
 
     m_history = new WGColorPatches(m_displayConfig, m_colorHistory, mainWidget);
     m_history->setPreset(WGColorPatches::History);
@@ -179,7 +181,8 @@ void WGColorSelectorDock::setCanvas(KoCanvasBase *canvas)
         KisCanvasResourceProvider *resourceProvider = m_canvas->imageView()->resourceProvider();
 
         m_colorHistory = resourceProvider->colorHistory();
-        m_history->setColorHistory(m_colorHistory);
+        m_documentColorHistory = m_canvas->imageView()->document()->colorHistory();
+        m_history->setColorHistory(m_colorHistoryFromDocument? m_documentColorHistory: m_colorHistory);
         m_selector->setDisplayRenderer(dri);
         m_displayConfig->setDisplayConverter(m_canvas->displayColorConverter());
         m_commonColorSet->setImage(m_canvas->image());
@@ -219,6 +222,10 @@ void WGColorSelectorDock::unsetCanvas()
     m_displayConfig->setDisplayConverter(0);
     m_selector->setDisplayRenderer(0);
     m_commonColorSet->setImage(KisImageSP());
+    if (m_colorHistoryFromDocument) {
+        m_colorHistory = new KisUniqueColorSet(this);
+        m_history->setColorHistory(m_colorHistory);
+    }
     m_canvas = 0;
 }
 
@@ -301,7 +308,11 @@ void WGColorSelectorDock::slotConfigurationChanged()
     m_selector->setProofColors(proofColors);
     m_displayConfig->setPreviewInPaintingCS(proofColors);
     m_shadeSelector->updateSettings();
+
+    m_colorHistoryFromDocument = cfg.get(WGConfig::colorHistoryFromDocument);
     m_history->updateSettings();
+    m_history->setColorHistory(m_colorHistoryFromDocument? m_documentColorHistory: m_colorHistory);
+
     m_commonColors->updateSettings();
     m_commonColorSet->setAutoUpdate(cfg.get(WGConfig::commonColorsAutoUpdate));
     // Quick settings menu
@@ -437,7 +448,11 @@ void WGColorSelectorDock::slotFGColorUsed(const KoColor &color)
     QColor lastCol = m_displayConfig->displayConverter()->toQColor(color);
     m_colorTooltip->setLastUsedColor(lastCol);
     m_actionManager->setLastUsedColor(color);
-    m_colorHistory->addColor(color);
+    if (m_colorHistoryFromDocument) {
+        m_documentColorHistory->addColor(color);
+    } else {
+        m_colorHistory->addColor(color);
+    }
 }
 
 void WGColorSelectorDock::slotSetNewColors()

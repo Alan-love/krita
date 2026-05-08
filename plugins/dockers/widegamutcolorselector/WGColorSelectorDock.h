@@ -90,7 +90,9 @@ private:
     KisVisualColorSelector *m_selector {0};
     KisColorSourceToggle *m_toggle {0};
     KisSignalCompressor *m_colorChangeCompressor;
-    KisUniqueColorSet *m_colorHistory;
+    KisUniqueColorSet *m_colorHistory{0};
+    KisUniqueColorSet *m_documentColorHistory{0};
+    bool m_colorHistoryFromDocument{false};
     KisGamutMaskToolbar *m_gamutToolbar;
     WGCommonColorSet *m_commonColorSet {0};
     WGActionManager *m_actionManager {0};

@@ -172,6 +172,7 @@ void WGColorPatches::setColorHistory(KisUniqueColorSet *history)
     }
     reconnectButtons(m_colors, history);
     m_colors = history;
+    m_contentWidget->update();
 }
 
 void WGColorPatches::updateIcons()

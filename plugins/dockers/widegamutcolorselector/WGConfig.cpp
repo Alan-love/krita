@@ -236,6 +236,7 @@ const ColorPatches popupPatches {
 
 const GenericSetting<bool> proofToPaintingColors {"proofToPaintingColors", false};
 const GenericSetting<bool> colorHistoryEnabled {"colorHistoryEnabled", true};
+const GenericSetting<bool> colorHistoryFromDocument {"colorHistoryFromDocument", false};
 const GenericSetting<bool> commonColorsEnabled {"commonColorsEnabled", true};
 const GenericSetting<bool> colorHistoryShowClearButton { "colorHistoryShowClearButton", false };
 const GenericSetting<bool> commonColorsAutoUpdate { "commonColorsAutoUpdate", false };

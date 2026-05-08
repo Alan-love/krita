@@ -113,6 +113,7 @@ void WGColorSelectorSettings::savePreferences() const
     cfg.setShadeSelectorLines(lineConfig);
     cfg.set(WGConfig::shadeSelectorLineHeight, m_ui->sbShadeLineHeight->value());
     // Color History
+    cfg.set(WGConfig::colorHistoryFromDocument, m_ui->chkColorHistoryDocument->isChecked());
     cfg.set(WGConfig::colorHistoryEnabled, m_ui->historyGroupBox->isChecked());
     cfg.set(WGConfig::colorHistory.orientation, m_ui->rbHistoryHorizontal->isChecked() ? Qt::Horizontal : Qt::Vertical);
     cfg.set(WGConfig::colorHistory.patchSize, { m_ui->sbHistoryPatchWidth->value(), m_ui->sbHistoryPatchHeight->value() });
@@ -189,6 +190,7 @@ void WGColorSelectorSettings::loadPreferencesImpl(bool defaults)
     m_ui->sbShadeLineCount->setValue(m_shadeLineConfig.size());
     m_ui->sbShadeLineHeight->setValue(cfg.get(WGConfig::shadeSelectorLineHeight, defaults));
     // Color History
+    m_ui->chkColorHistoryDocument->setChecked(cfg.get(WGConfig::colorHistoryFromDocument, defaults));
     m_ui->historyGroupBox->setChecked(cfg.get(WGConfig::colorHistoryEnabled, defaults));
     patchOrientation = cfg.get(WGConfig::colorHistory.orientation, defaults);
     if (patchOrientation == Qt::Horizontal) {

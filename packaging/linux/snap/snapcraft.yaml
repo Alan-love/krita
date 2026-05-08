@@ -214,7 +214,7 @@ parts:
       - -DBUILD_WITH_QT6=ON
       - -DALLOW_UNSTABLE=QT6
       - "-DCMAKE_FIND_ROOT_PATH=$CRAFT_STAGE\\;/snap/kde-qt6-core24-sdk/current\\;/snap/kf6-core24-sdk/current;/snap/kde-pyside6-core24-sdk/current\\;/usr"
-      - "-DCMAKE_PREFIX_PATH=$CRAFT_STAGE\\:/snap/kde-qt6-core24-sdk/current\\:/snap/kf6-core24-sdk/current\\:/snap/kde-pyside6-core24-sdk/current\\:/usr"
+      - "-DCMAKE_PREFIX_PATH=$CRAFT_STAGE/usr\\;/snap/kde-qt6-core24-sdk/current/usr\\;/snap/kf6-core24-sdk/current/usr\\;/snap/kde-pyside6-core24-sdk/current/usr\\;/usr"
     build-packages:
       - cmake
       - gettext
@@ -259,6 +259,8 @@ parts:
       - python3-dev
       - sip-tools
       - python3-sipbuild
+      - libxkbcommon-dev
+      - libxkbcommon0
     build-snaps:
       - ffmpeg-2404-sdk
       - kf6-core24-sdk/latest/beta
@@ -296,6 +298,7 @@ parts:
       - libsdl2-2.0-0
       - libmlt++7
       - libimath-3-1-29
+      - libxkbcommon0
     build-environment:
       - DICPATH: "$SNAP/usr/share/hunspell"
       - PYSIDE_DESIGNER_PLUGINS: /snap/kde-pyside6-core24-sdk/current/usr/lib/x86_64-linux-gnu/qt6/plugins/designer

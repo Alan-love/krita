@@ -12,6 +12,7 @@
 class QToolButton;
 class KisCanvasResourceProvider;
 class KisColorHistoryNotifier;
+class KisUniqueColorSet;
 
 class KisColorHistory : public KisColorPatches
 {
@@ -32,11 +33,11 @@ public Q_SLOTS:
     void updateUserSettings();
 
     // Receive notification that the color history changed in some selector
-    void colorHistoryChanged(const QList<KoColor> &history);
+    void colorHistoryChanged();
 
 private:
     // Get reference to the relevant color history, either from resource provider or document.
-    QList<KoColor> colorHistory();
+    KisUniqueColorSet *colorHistory();
 
     // Write the changed color history where it is stored, depending on the settings.
     void updateColorHistory(const QList<KoColor> &history);

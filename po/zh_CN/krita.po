@@ -27239,35 +27239,27 @@ msgstr ""
 "%1"
 
 #: libs/ui/dialogs/kis_dlg_preferences.cc:1386
-#, fuzzy, kde-format
-#| msgid "Diagonal:"
+#, kde-format
 msgid "Diagram:"
-msgstr "斜线："
+msgstr ""
 
 #: libs/ui/dialogs/kis_dlg_preferences.cc:1389
-#, fuzzy, kde-format
-#| msgid "Preferred Output Format:"
+#, kde-format
 msgctxt "@info:radiobutton"
 msgid "Preferred Space"
-msgstr "首选输出格式："
+msgstr ""
 
 #: libs/ui/dialogs/kis_dlg_preferences.cc:1391
-#, fuzzy, kde-format
-#| msgid ""
-#| "Color space preferred by the operating system:\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "This is the space preferred by the operating system."
 msgstr ""
-"操作系统首选色彩空间：\n"
-"%1"
 
 #: libs/ui/dialogs/kis_dlg_preferences.cc:1394
-#, fuzzy, kde-format
-#| msgid "Current Display Format"
+#, kde-format
 msgctxt "@info:radiobutton"
 msgid "Current Display"
-msgstr "当前显示格式"
+msgstr ""
 
 #: libs/ui/dialogs/kis_dlg_preferences.cc:1397
 #, kde-format
@@ -38969,7 +38961,7 @@ msgstr "此引擎没有预览"
 #, kde-format
 msgctxt "The move-selected-content checkbox in selection tool options"
 msgid "Move Selected Content"
-msgstr ""
+msgstr "移动选中的内容"
 
 #: libs/ui/widgets/kis_selection_options.cc:193
 #: plugins/tools/basictools/kis_tool_fill.cc:591
@@ -39041,7 +39033,7 @@ msgstr "互斥"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move Selected Content"
-msgstr ""
+msgstr "移动选中的内容"
 
 #: libs/ui/widgets/kis_selection_options.cc:252
 #, kde-format
@@ -60164,7 +60156,7 @@ msgstr "锐利度"
 #: plugins/paintops/libpaintop/KisSharpnessOptionWidget.cpp:41
 #, kde-format
 msgid "Align the brush preview outline to the pixel grid"
-msgstr ""
+msgstr "对齐笔刷预览轮廓到像素网格"
 
 #: plugins/paintops/libpaintop/KisSharpnessOptionWidget.cpp:43
 #, kde-format

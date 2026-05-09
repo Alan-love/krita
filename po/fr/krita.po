@@ -103,7 +103,7 @@ msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-06 00:43+0000\n"
-"PO-Revision-Date: 2026-05-03 16:28+0200\n"
+"PO-Revision-Date: 2026-05-07 18:22+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -27703,41 +27703,35 @@ msgstr ""
 "%1"
 
 #: libs/ui/dialogs/kis_dlg_preferences.cc:1386
-#, fuzzy, kde-format
-#| msgid "Diagonal:"
+#, kde-format
 msgid "Diagram:"
-msgstr "Diagonal :"
+msgstr "Diagramme :"
 
 #: libs/ui/dialogs/kis_dlg_preferences.cc:1389
-#, fuzzy, kde-format
-#| msgid "Preferences"
+#, kde-format
 msgctxt "@info:radiobutton"
 msgid "Preferred Space"
-msgstr "Préférences"
+msgstr "Espace colorimétrique préféré"
 
 #: libs/ui/dialogs/kis_dlg_preferences.cc:1391
-#, fuzzy, kde-format
-#| msgid ""
-#| "Color space preferred by the operating system:\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "This is the space preferred by the operating system."
 msgstr ""
-"Espace colorimétrique préféré par le système d'exploitation :\n"
-"%1"
+"Ceci est l'espace colorimétrique préféré par le système d'exploitation."
 
 #: libs/ui/dialogs/kis_dlg_preferences.cc:1394
-#, fuzzy, kde-format
-#| msgid "Current Display Format"
+#, kde-format
 msgctxt "@info:radiobutton"
 msgid "Current Display"
-msgstr "Format d'affichage actuel"
+msgstr "Affichage courant"
 
 #: libs/ui/dialogs/kis_dlg_preferences.cc:1397
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "This is the space representing the currently active display."
 msgstr ""
+"Ceci est l'espace colorimétrique représentant l'affichage actuellement actif."
 
 #: libs/ui/dialogs/kis_dlg_preferences.cc:1488
 #: libs/ui/widgets/kis_advanced_color_space_selector.cc:804
@@ -39904,12 +39898,10 @@ msgid "No Preview for this engine"
 msgstr "Pas d'aperçu pour ce moteur"
 
 #: libs/ui/widgets/kis_selection_options.cc:190
-#, fuzzy, kde-format
-#| msgctxt "(qtundo-format)"
-#| msgid "Move Selection"
+#, kde-format
 msgctxt "The move-selected-content checkbox in selection tool options"
 msgid "Move Selected Content"
-msgstr "Déplacer la sélection"
+msgstr "Déplacer le contenu sélectionné"
 
 #: libs/ui/widgets/kis_selection_options.cc:193
 #: plugins/tools/basictools/kis_tool_fill.cc:591
@@ -39978,12 +39970,10 @@ msgid "Symmetric Difference"
 msgstr "Différence symétrique"
 
 #: libs/ui/widgets/kis_selection_options.cc:249
-#, fuzzy, kde-format
-#| msgctxt "(qtundo-format)"
-#| msgid "Move Selection"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Move Selected Content"
-msgstr "Déplacer la sélection"
+msgstr "Déplacer le contenu sélectionné"
 
 #: libs/ui/widgets/kis_selection_options.cc:252
 #, kde-format

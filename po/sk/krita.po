@@ -27427,41 +27427,33 @@ msgstr ""
 "%1"
 
 #: libs/ui/dialogs/kis_dlg_preferences.cc:1386
-#, fuzzy, kde-format
-#| msgid "Diagonal:"
+#, kde-format
 msgid "Diagram:"
-msgstr "Diagonálne:"
+msgstr "Diagram:"
 
 #: libs/ui/dialogs/kis_dlg_preferences.cc:1389
-#, fuzzy, kde-format
-#| msgid "Preferences"
+#, kde-format
 msgctxt "@info:radiobutton"
 msgid "Preferred Space"
-msgstr "Vlastnosti"
+msgstr "Preferovaný priestor"
 
 #: libs/ui/dialogs/kis_dlg_preferences.cc:1391
-#, fuzzy, kde-format
-#| msgid ""
-#| "Color space preferred by the operating system:\n"
-#| "%1"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "This is the space preferred by the operating system."
-msgstr ""
-"Farebný priestor preferovaný operačným systémom:\n"
-"%1"
+msgstr "Toto je priestor preferovaný operačným systémom."
 
 #: libs/ui/dialogs/kis_dlg_preferences.cc:1394
-#, fuzzy, kde-format
-#| msgid "Current Display Format"
+#, kde-format
 msgctxt "@info:radiobutton"
 msgid "Current Display"
-msgstr "Aktuálna formát displeja"
+msgstr "Aktuálny displej"
 
 #: libs/ui/dialogs/kis_dlg_preferences.cc:1397
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "This is the space representing the currently active display."
-msgstr ""
+msgstr "Toto je priestor reprezentujúci aktuálne aktívny displej."
 
 #: libs/ui/dialogs/kis_dlg_preferences.cc:1488
 #: libs/ui/widgets/kis_advanced_color_space_selector.cc:804
@@ -39424,12 +39416,10 @@ msgid "No Preview for this engine"
 msgstr "Žiadny náhľad pre toto jadro aplikácie"
 
 #: libs/ui/widgets/kis_selection_options.cc:190
-#, fuzzy, kde-format
-#| msgctxt "(qtundo-format)"
-#| msgid "Move Selection"
+#, kde-format
 msgctxt "The move-selected-content checkbox in selection tool options"
 msgid "Move Selected Content"
-msgstr "Presunúť výber"
+msgstr "Presunúť vybraný obsah"
 
 #: libs/ui/widgets/kis_selection_options.cc:193
 #: plugins/tools/basictools/kis_tool_fill.cc:591
@@ -39498,12 +39488,10 @@ msgid "Symmetric Difference"
 msgstr "Symetrický rozdiel"
 
 #: libs/ui/widgets/kis_selection_options.cc:249
-#, fuzzy, kde-format
-#| msgctxt "(qtundo-format)"
-#| msgid "Move Selection"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Move Selected Content"
-msgstr "Presunúť výber"
+msgstr "Presunúť vybraný obsah"
 
 #: libs/ui/widgets/kis_selection_options.cc:252
 #, kde-format

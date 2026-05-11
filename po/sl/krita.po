@@ -22,7 +22,7 @@ msgstr ""
 "Project-Id-Version: Krita trunk\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-06 00:43+0000\n"
-"PO-Revision-Date: 2026-05-07 07:57+0200\n"
+"PO-Revision-Date: 2026-05-10 11:23+0200\n"
 "Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -58038,7 +58038,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label"
 msgid "Luminance:"
-msgstr "Osvetljenost:"
+msgstr "Svetilnost:"
 
 #: plugins/impex/raw/3rdparty/libkdcraw/src/dcrawsettingswidget.cpp:1004
 #, kde-format
@@ -58317,7 +58317,7 @@ msgstr "Privzeto"
 #, kde-format
 msgctxt "WebP presets"
 msgid "Portrait"
-msgstr "Pokončno"
+msgstr "Portret"
 
 #: plugins/impex/webp/kis_wdg_options_webp.cpp:37
 #, kde-format

@@ -27241,31 +27241,31 @@ msgstr ""
 #: libs/ui/dialogs/kis_dlg_preferences.cc:1386
 #, kde-format
 msgid "Diagram:"
-msgstr ""
+msgstr "图表："
 
 #: libs/ui/dialogs/kis_dlg_preferences.cc:1389
 #, kde-format
 msgctxt "@info:radiobutton"
 msgid "Preferred Space"
-msgstr ""
+msgstr "系统首选空间"
 
 #: libs/ui/dialogs/kis_dlg_preferences.cc:1391
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "This is the space preferred by the operating system."
-msgstr ""
+msgstr "这是操作系统首选的色彩空间。"
 
 #: libs/ui/dialogs/kis_dlg_preferences.cc:1394
 #, kde-format
 msgctxt "@info:radiobutton"
 msgid "Current Display"
-msgstr ""
+msgstr "当前显示器空间"
 
 #: libs/ui/dialogs/kis_dlg_preferences.cc:1397
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "This is the space representing the currently active display."
-msgstr ""
+msgstr "这是代表了当前活动显示器的色彩空间。"
 
 #: libs/ui/dialogs/kis_dlg_preferences.cc:1488
 #: libs/ui/widgets/kis_advanced_color_space_selector.cc:804

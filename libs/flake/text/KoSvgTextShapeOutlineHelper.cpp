@@ -127,7 +127,7 @@ void KoSvgTextShapeOutlineHelper::paintTextShape(QPainter *painter, const KoView
     KisHandlePalette handlePalette = d->renderInterface()->handlePaletteForDisplayColorSpace();
     KisHandlePainterHelper helper =
             KoShape::createHandlePainterHelperView(painter, text, converter, d->handleRadius, d->decorationThickness);
-    helper.setHandleStyle(KisHandleStyle::secondarySelection());
+    helper.setHandleStyle(KisHandleStyle::secondarySelection(handlePalette));
     if (contourModeActive) {
         if (d->drawOutline) {
 

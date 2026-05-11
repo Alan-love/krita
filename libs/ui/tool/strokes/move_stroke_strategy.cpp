@@ -362,7 +362,7 @@ void MoveStrokeStrategy::initStrokeCallback()
             [this] (KisNodeSP node) {
                 if (dynamic_cast<KisTransformMask*>(node.data())) {
                     m_d->strategy.emplace(node, new MoveTransformMaskStrategy(node));
-                } else if (node->paintDevice()) {
+                } else if (node->paintDevice() && node->paintDevice()->supportsWraproundMode() && node->paintDevice()->defaultBounds()->wrapAroundMode()) {
                     m_d->strategy.emplace(node, new MovePaintableNodeStrategy(node));
                 } else {
                     m_d->strategy.emplace(node, new MoveNormalNodeStrategy(node));

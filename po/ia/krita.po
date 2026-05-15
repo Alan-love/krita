@@ -55,7 +55,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-05-12 00:42+0000\n"
-"PO-Revision-Date: 2026-04-22 16:57+0200\n"
+"PO-Revision-Date: 2026-05-14 11:31+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -11008,10 +11008,10 @@ msgstr "Animation"
 #. i18n: context: text @ Action (previous_frame), Actions (Animation), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (previous_frame), Actions (Animation), ActionCollection (Krita)
 #: krita/krita.action:1908 krita/krita.action:1911
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "action"
 msgid "Previous Frame"
-msgstr "Precedente"
+msgstr "Previe quadro"
 
 #. i18n: context: toolTip @ Action (previous_frame), Actions (Animation), ActionCollection (Krita)
 #: krita/krita.action:1910
@@ -11025,10 +11025,10 @@ msgstr "Precedente"
 #. i18n: context: text @ Action (next_frame), Actions (Animation), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (next_frame), Actions (Animation), ActionCollection (Krita)
 #: krita/krita.action:1920 krita/krita.action:1923
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "action"
 msgid "Next Frame"
-msgstr "Remove strato (layer)"
+msgstr "Proxime quadro"
 
 #. i18n: context: toolTip @ Action (next_frame), Actions (Animation), ActionCollection (Krita)
 #: krita/krita.action:1922
@@ -33599,14 +33599,14 @@ msgid ""
 msgstr ""
 
 #: libs/ui/input/kis_change_frame_action.cpp:30
-#, fuzzy, kde-format
+#, kde-format
 msgid "Next Frame"
-msgstr "Remove strato (layer)"
+msgstr "Proxime quadro"
 
 #: libs/ui/input/kis_change_frame_action.cpp:31
-#, fuzzy, kde-format
+#, kde-format
 msgid "Previous Frame"
-msgstr "Precedente"
+msgstr "Previe quadro"
 
 #: libs/ui/input/kis_change_primary_setting_action.cpp:25
 #, fuzzy, kde-format

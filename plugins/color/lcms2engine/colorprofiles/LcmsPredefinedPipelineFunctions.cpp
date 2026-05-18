@@ -6,8 +6,8 @@
 #include "LcmsPredefinedPipelineFunctions.h"
 #include <KoColorTransferFunctions.h>
 #include <KoColorProfile.h>
-#include <QTransform>
-#include <QGenericMatrix>
+#include <QMatrix4x4>
+#include <QVector4D>
 
 /**
  * @brief bradfordMatrix
@@ -16,29 +16,36 @@
  * @param dst -- destionation white point XYZ
  * @return chromatic adaptation matrix.
  */
-static QTransform bradfordMatrix(double *src, double *dst) {
-    double bradford[] = {
-        0.8951000, 0.2664000, -0.1614000,
-        -0.7502000, 1.7135000, 0.0367000,
-        0.0389000, -0.0685000, 1.0296000
-    };
+static QMatrix4x4 bradfordMatrix(QVector4D src, QVector4D dst) {
 
-    QGenericMatrix<1, 3, double> srcLMS = QGenericMatrix<3, 3, double>(bradford) * QGenericMatrix<1, 3, double>(src);
-    QGenericMatrix<1, 3, double> dstLMS = QGenericMatrix<3, 3, double>(bradford) * QGenericMatrix<1, 3, double>(dst);
+    QVector4D srcLMS(src[0], src[1], src[2], 0.0);
+    QVector4D dstLMS(dst[0], dst[1], dst[2], 0.0);
 
-    QTransform adaptation (
-        dstLMS(0, 0)/srcLMS(0, 0), 0, 0,
-        0, dstLMS(1, 0)/srcLMS(1, 0), 0,
-        0, 0, dstLMS(2, 0)/srcLMS(2, 0)
+    const QMatrix4x4 bradfordMatrix(
+        0.8951000, 0.2664000, -0.1614000, 0.0,
+        -0.7502000, 1.7135000, 0.0367000, 0.0,
+        0.0389000, -0.0685000, 1.0296000, 0.0,
+        0.0, 0.0, 0.0, 1.0
+        );
+    const QMatrix4x4 bradfordMatrixInverted (
+        0.9869929, -0.1470543, 0.1599627, 0.0,
+        0.4323053, 0.5183603, 0.0492912, 0.0,
+        -0.0085287, 0.0400428, 0.9684867, 0.0,
+        0.0, 0.0, 0.0, 1.0
     );
 
-    QTransform bradfordInv (
-        0.9869929, -0.1470543, 0.1599627,
-        0.4323053, 0.5183603, 0.0492912,
-        -0.0085287, 0.0400428, 0.9684867
-        );
+    srcLMS = bradfordMatrix * srcLMS;
+    dstLMS = bradfordMatrix * dstLMS;
 
-    return bradfordInv * adaptation * bradfordInv.inverted();
+    const QMatrix4x4 adaptationMatrix (
+        dstLMS.x()/srcLMS.x(), 0, 0, 0,
+        0, dstLMS.y()/srcLMS.y(), 0, 0,
+        0, 0, dstLMS.z()/srcLMS.z(), 0,
+        0.0, 0.0, 0.0, 1.0
+    );
+
+
+    return bradfordMatrixInverted * adaptationMatrix * bradfordMatrix;
 }
 /**
  * @brief rgbMatrix
@@ -47,53 +54,42 @@ static QTransform bradfordMatrix(double *src, double *dst) {
  * @param factor -- scaling factor.
  * @return transfrom representing a XYZ to RGB conversion.
  */
-static QTransform rgbMatrix(ColorPrimaries primaries, double factor = 1.0, double *luma = nullptr) {
+static QMatrix4x4 rgbMatrix(ColorPrimaries primaries, double factor = 1.0, double *luma = nullptr) {
     const double mul = 1.0/factor;
     // Calculation: http://brucelindbloom.com/index.html?Eqn_RGB_XYZ_Matrix.html
     // Calculates XYZ with Y = 1.0
     QVector<double> col;
     KoColorProfile::colorantsForType(primaries, col);
-    QTransform initialXYZMatrix(
-        col[2]/col[3], col[4]/col[5], col[6]/col[7],
-        1.0, 1.0, 1.0,
-        (1.0-col[2]-col[3])/col[3], (1.0-col[4]-col[5])/col[5], (1.0-col[6]-col[7])/col[7]
+    QMatrix4x4 initialXYZMatrix(
+        col[2]/col[3], col[4]/col[5], col[6]/col[7], 0.0,
+        1.0, 1.0, 1.0, 0.0,
+        (1.0-col[2]-col[3])/col[3], (1.0-col[4]-col[5])/col[5], (1.0-col[6]-col[7])/col[7], 0.0,
+        0.0, 0.0, 0.0, 1.0
         );
-    QTransform invTf = initialXYZMatrix.inverted();
 
     // Calculate scaling factor with white point.
-    double wp [] = {
-        col[0]/col[1], 1.0, (1.0-col[0]-col[1])/col[1]
-    };
-    double inv[] = {
-        invTf.m11(), invTf.m12(), invTf.m13(),
-        invTf.m21(), invTf.m22(), invTf.m23(),
-        invTf.m31(), invTf.m32(), invTf.m33()
-    };
+    QVector4D wp(col[0]/col[1], 1.0, (1.0-col[0]-col[1])/col[1], 0.0);
 
-    QGenericMatrix<1, 3, double> S = QGenericMatrix<3, 3, double>(inv) * QGenericMatrix<1, 3, double>(wp);
+    QVector4D S = initialXYZMatrix.inverted() * wp;
     if (luma) {
-        luma[0] = S(0,0);
-        luma[1] = S(1,0);
-        luma[2] = S(2,0);
+        luma[0] = S.x();
+        luma[1] = S.y();
+        luma[2] = S.z();
     }
 
     // Apply scaling factor to normalize the Y and get the matrix.
-    QTransform finalXYZMatrix(
-        initialXYZMatrix.m11() * S(0, 0), initialXYZMatrix.m12() * S(1, 0), initialXYZMatrix.m13() * S(2, 0),
-        initialXYZMatrix.m21() * S(0, 0), initialXYZMatrix.m22() * S(1, 0), initialXYZMatrix.m23() * S(2, 0),
-        initialXYZMatrix.m31() * S(0, 0), initialXYZMatrix.m32() * S(1, 0), initialXYZMatrix.m33() * S(2, 0)
+    QMatrix4x4 finalXYZMatrix(
+        initialXYZMatrix(0, 0) * S.x(), initialXYZMatrix(0, 1) * S.y(), initialXYZMatrix(0, 2) * S.z(), 0.0,
+        initialXYZMatrix(1, 0) * S.x(), initialXYZMatrix(1, 1) * S.y(), initialXYZMatrix(1, 2) * S.z(), 0.0,
+        initialXYZMatrix(2, 0) * S.x(), initialXYZMatrix(2, 1) * S.y(), initialXYZMatrix(2, 2) * S.z(), 0.0,
+        0.0, 0.0, 0.0, 1.0
         );
     // Apply bradford white point adaptation.
-    double wpD50 [] = {
-        0.9642, 1.0, 0.8249
-    };
+    QVector4D wpD50(0.9642, 1.0, 0.8249, 0.0);
     finalXYZMatrix = bradfordMatrix(wp, wpD50) * finalXYZMatrix;
 
-    return QTransform(
-        finalXYZMatrix.m11() * mul, finalXYZMatrix.m12() * mul, finalXYZMatrix.m13() * mul,
-        finalXYZMatrix.m21() * mul, finalXYZMatrix.m22() * mul, finalXYZMatrix.m23() * mul,
-        finalXYZMatrix.m31() * mul, finalXYZMatrix.m32() * mul, finalXYZMatrix.m33() * mul
-        );
+    finalXYZMatrix.scale(mul);
+    return finalXYZMatrix;
 }
 
 struct perceptualDummyHelper {
@@ -153,7 +149,7 @@ bool LcmsPredefinedPipelineFunctions::setPerceptualQuantizerAToBDummyPipeline(cm
     const int lutSize = 4;
 
     double luma[3];
-    QTransform tf = rgbMatrix(primaries, factor, luma);
+    const QMatrix4x4 tf = rgbMatrix(primaries, factor, luma);
 
     // linear curves, obligatory for A2B with both matrix and clut: linear-clut-curves-matrix-linear.
     cmsPipeline *a2B = cmsPipelineAlloc(nullptr, 3, 3);
@@ -179,9 +175,9 @@ bool LcmsPredefinedPipelineFunctions::setPerceptualQuantizerAToBDummyPipeline(cm
     // matrix
 
     double m[] = {
-        tf.m11(), tf.m12(), tf.m13(),
-        tf.m21(), tf.m22(), tf.m23(),
-        tf.m31(), tf.m32(), tf.m33()
+        tf(0, 0), tf(0, 1), tf(0, 2),
+        tf(1, 0), tf(1, 1), tf(1, 2),
+        tf(2, 0), tf(2, 1), tf(2, 2)
     };
 
     cmsStage* matrixStage = cmsStageAllocMatrix(nullptr, 3, 3, m, nullptr);
@@ -212,11 +208,11 @@ bool LcmsPredefinedPipelineFunctions::setPerceptualQuantizerBToADummyPipeline(cm
 
     // matrix
     double luma[3];
-    QTransform tf = rgbMatrix(primaries, factor, luma).inverted();
+    const QMatrix4x4 tf = rgbMatrix(primaries, factor, luma).inverted();
     double m[] = {
-        tf.m11(), tf.m12(), tf.m13(),
-        tf.m21(), tf.m22(), tf.m23(),
-        tf.m31(), tf.m32(), tf.m33()
+        tf(0, 0), tf(0, 1), tf(0, 2),
+        tf(1, 0), tf(1, 1), tf(1, 2),
+        tf(2, 0), tf(2, 1), tf(2, 2)
     };
 
     cmsStage* matrixStage = cmsStageAllocMatrix(nullptr, 3, 3, m, nullptr);

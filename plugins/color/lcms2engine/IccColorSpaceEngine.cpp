@@ -13,6 +13,8 @@
 #include <kis_assert.h>
 
 #include "LcmsColorSpace.h"
+#include "LcmsRGBP2020PQColorSpace.h"
+#include "RgbU8ColorSpace.h"
 
 // -- KoLcmsColorConversionTransformation --
 
@@ -176,6 +178,7 @@ const KoColorProfile* IccColorSpaceEngine::addProfile(const QString &filename)
 
     if (profile->valid()) {
         dbgPigment << "Valid profile : " << profile->fileName() << profile->name();
+        setupSpecialTransforms(profile);
         registry->addProfile(profile);
     } else {
         dbgPigment << "Invalid profile : " << profile->fileName() << profile->name();
@@ -195,6 +198,7 @@ const KoColorProfile* IccColorSpaceEngine::addProfile(const QByteArray &data)
 
     if (profile->valid()) {
         dbgPigment << "Valid profile : " << profile->fileName() << profile->name();
+        setupSpecialTransforms(profile);
         registry->addProfile(profile);
     } else {
         dbgPigment << "Invalid profile : " << profile->fileName() << profile->name();
@@ -229,6 +233,7 @@ const KoColorProfile *IccColorSpaceEngine::getProfile(const QVector<double> &col
 
     if (profile->valid()) {
         dbgPigment << "Valid profile : " << profile->fileName() << profile->name();
+        setupSpecialTransforms(profile);
         registry->addProfile(profile);
     } else {
         dbgPigment << "Invalid profile : " << profile->fileName() << profile->name();
@@ -348,5 +353,23 @@ quint32 IccColorSpaceEngine::computeColorSpaceType(const KoColorSpace *cs) const
 bool IccColorSpaceEngine::supportsColorSpace(const QString &colorModelId, const QString &colorDepthId, const KoColorProfile *profile) const
 {
     Q_UNUSED(colorDepthId);
-    return colorModelId != RGBAColorModelID.id() || !profile || profile->name() != "High Dynamic Range UHDTV Wide Color Gamut Display (Rec. 2020) - SMPTE ST 2084 PQ EOTF";
+    return colorModelId != RGBAColorModelID.id() || !profile || profile->getTransferCharacteristics() != TRC_ITU_R_BT_2100_0_PQ;
+}
+
+void IccColorSpaceEngine::setupSpecialTransforms(const KoColorProfile *profile)
+{
+    KoColorSpaceRegistry *registry = KoColorSpaceRegistry::instance();
+    if (profile->getTransferCharacteristics() == TRC_ITU_R_BT_2100_0_PQ
+        && profile->getColorPrimaries() != PRIMARIES_UNSPECIFIED) {
+        QVector<double> colorants;
+        QString linear = registry->profileFor(colorants, profile->getColorPrimaries(), TRC_LINEAR)->name();
+        registry->add(new LcmsRGBP2020PQColorSpaceFactoryWrapper<RgbU8ColorSpaceFactory>(profile->name(), linear));
+        registry->add(new LcmsRGBP2020PQColorSpaceFactoryWrapper<RgbU16ColorSpaceFactory>(profile->name(), linear));
+#ifdef HAVE_LCMS24
+#ifdef HAVE_OPENEXR
+        registry->add(new LcmsRGBP2020PQColorSpaceFactoryWrapper<RgbF16ColorSpaceFactory>(profile->name(), linear));
+#endif
+#endif
+        registry->add(new LcmsRGBP2020PQColorSpaceFactoryWrapper<RgbF32ColorSpaceFactory>(profile->name(), linear));
+    }
 }

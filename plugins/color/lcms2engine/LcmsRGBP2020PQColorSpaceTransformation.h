@@ -124,13 +124,13 @@ template<class ParentColorSpace, class DstColorSpaceTraits = typename DstTraitsF
 class LcmsFromRGBP2020PQTransformationFactory : public KoColorConversionTransformationFactory
 {
 public:
-    LcmsFromRGBP2020PQTransformationFactory()
+    LcmsFromRGBP2020PQTransformationFactory(const QString &targetProfileName, const QString &linearProfileName)
         : KoColorConversionTransformationFactory(RGBAColorModelID.id(),
                                                  colorDepthIdForChannelType<typename ParentColorSpace::ColorSpaceTraits::channels_type>().id(),
-                                                 "High Dynamic Range UHDTV Wide Color Gamut Display (Rec. 2020) - SMPTE ST 2084 PQ EOTF",
+                                                 targetProfileName,
                                                  RGBAColorModelID.id(),
                                                  colorDepthIdForChannelType<typename DstColorSpaceTraits::channels_type>().id(),
-                                                 "Rec2020-elle-V4-g10.icc")
+                                                 linearProfileName)
     {
     }
 
@@ -153,13 +153,13 @@ template<class ParentColorSpace, class DstColorSpaceTraits = typename DstTraitsF
 class LcmsToRGBP2020PQTransformationFactory : public KoColorConversionTransformationFactory
 {
 public:
-    LcmsToRGBP2020PQTransformationFactory()
+    LcmsToRGBP2020PQTransformationFactory(const QString &targetProfileName, const QString &linearProfileName)
         : KoColorConversionTransformationFactory(RGBAColorModelID.id(),
                                                  colorDepthIdForChannelType<typename DstColorSpaceTraits::channels_type>().id(),
-                                                 "Rec2020-elle-V4-g10.icc",
+                                                 linearProfileName,
                                                  RGBAColorModelID.id(),
                                                  colorDepthIdForChannelType<typename ParentColorSpace::ColorSpaceTraits::channels_type>().id(),
-                                                 "High Dynamic Range UHDTV Wide Color Gamut Display (Rec. 2020) - SMPTE ST 2084 PQ EOTF")
+                                                 targetProfileName)
     {
     }
 
@@ -182,13 +182,13 @@ template<class ParentColorSpace, class DstColorSpaceTraits>
 class LcmsScaleRGBP2020PQTransformationFactory : public KoColorConversionTransformationFactory
 {
 public:
-    LcmsScaleRGBP2020PQTransformationFactory()
+    LcmsScaleRGBP2020PQTransformationFactory(const QString &targetProfileName)
         : KoColorConversionTransformationFactory(RGBAColorModelID.id(),
                                                  colorDepthIdForChannelType<typename ParentColorSpace::ColorSpaceTraits::channels_type>().id(),
-                                                 "High Dynamic Range UHDTV Wide Color Gamut Display (Rec. 2020) - SMPTE ST 2084 PQ EOTF",
+                                                 targetProfileName,
                                                  RGBAColorModelID.id(),
                                                  colorDepthIdForChannelType<typename DstColorSpaceTraits::channels_type>().id(),
-                                                 "High Dynamic Range UHDTV Wide Color Gamut Display (Rec. 2020) - SMPTE ST 2084 PQ EOTF")
+                                                 targetProfileName)
     {
         KIS_SAFE_ASSERT_RECOVER_NOOP(srcColorDepthId() != dstColorDepthId());
     }

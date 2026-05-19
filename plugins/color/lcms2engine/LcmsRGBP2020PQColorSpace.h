@@ -66,27 +66,27 @@ template<> struct NextTrait<KoBgrU16Traits> { using type = KoRgbF32Traits; };
  * space has exactly three outgoing edges for color conversion.
  */
 template<typename ParentColorSpace, typename CurrentTraits>
-void addInternalConversion(QList<KoColorConversionTransformationFactory*> &list, CurrentTraits*)
+void addInternalConversion(QList<KoColorConversionTransformationFactory*> &list, const QString &targetProfileName, CurrentTraits*)
 {
     // general case: add a converter and recurse for the next traits
-    list << new LcmsScaleRGBP2020PQTransformationFactory<ParentColorSpace, CurrentTraits>();
+    list << new LcmsScaleRGBP2020PQTransformationFactory<ParentColorSpace, CurrentTraits>(targetProfileName);
 
     using NextTraits = typename NextTrait<CurrentTraits>::type;
-    addInternalConversion<ParentColorSpace>(list, static_cast<NextTraits*>(0));
+    addInternalConversion<ParentColorSpace>(list, targetProfileName, static_cast<NextTraits*>(0));
 }
 
 template<typename ParentColorSpace>
-void addInternalConversion(QList<KoColorConversionTransformationFactory*> &list, typename ParentColorSpace::ColorSpaceTraits*)
+void addInternalConversion(QList<KoColorConversionTransformationFactory*> &list, const QString &targetProfileName, typename ParentColorSpace::ColorSpaceTraits*)
 {
     // exception: skip adding an edge to the same bit depth
 
     using CurrentTraits = typename ParentColorSpace::ColorSpaceTraits;
     using NextTraits = typename NextTrait<CurrentTraits>::type;
-    addInternalConversion<ParentColorSpace>(list, static_cast<NextTraits*>(0));
+    addInternalConversion<ParentColorSpace>(list, targetProfileName, static_cast<NextTraits*>(0));
 }
 
 template<typename ParentColorSpace>
-void addInternalConversion(QList<KoColorConversionTransformationFactory*> &, void*)
+void addInternalConversion(QList<KoColorConversionTransformationFactory*> &,  const QString &, void*)
 {
     // stop recursion
 }
@@ -95,6 +95,12 @@ template <class BaseColorSpaceFactory>
 class LcmsRGBP2020PQColorSpaceFactoryWrapper : public BaseColorSpaceFactory
 {
     typedef typename ColorSpaceFromFactory<BaseColorSpaceFactory>::type RelatedColorSpaceType;
+public:
+    LcmsRGBP2020PQColorSpaceFactoryWrapper(const QString &targetProfileName, const QString &linearProfileName)
+        : m_targetProfileName(targetProfileName), m_linearProfileName(linearProfileName) {
+
+    }
+private:
 
     KoColorSpace *createColorSpace(const KoColorProfile *p) const override
     {
@@ -116,19 +122,21 @@ class LcmsRGBP2020PQColorSpaceFactoryWrapper : public BaseColorSpaceFactory
          * p709-g10 F32 -> p2020-g10 U16 -> Rec2020-pq U16, which is incorrect and loses
          * all the HDR data
          */
-        list << new LcmsFromRGBP2020PQTransformationFactory<RelatedColorSpaceType, KoRgbF32Traits>();
-        list << new LcmsToRGBP2020PQTransformationFactory<RelatedColorSpaceType, KoRgbF32Traits>();
+        list << new LcmsFromRGBP2020PQTransformationFactory<RelatedColorSpaceType, KoRgbF32Traits>(m_targetProfileName, m_linearProfileName);
+        list << new LcmsToRGBP2020PQTransformationFactory<RelatedColorSpaceType, KoRgbF32Traits>(m_targetProfileName, m_linearProfileName);
 #ifdef HAVE_OPENEXR
-        list << new LcmsFromRGBP2020PQTransformationFactory<RelatedColorSpaceType, KoRgbF16Traits>();
-        list << new LcmsToRGBP2020PQTransformationFactory<RelatedColorSpaceType, KoRgbF16Traits>();
+        list << new LcmsFromRGBP2020PQTransformationFactory<RelatedColorSpaceType, KoRgbF16Traits>(m_targetProfileName, m_linearProfileName);
+        list << new LcmsToRGBP2020PQTransformationFactory<RelatedColorSpaceType, KoRgbF16Traits>(m_targetProfileName, m_linearProfileName);
 #endif
 
 
         // internally, we can convert to RGB U8 if needed
-        addInternalConversion<RelatedColorSpaceType>(list, static_cast<KoBgrU8Traits*>(0));
+        addInternalConversion<RelatedColorSpaceType>(list, m_targetProfileName, static_cast<KoBgrU8Traits*>(0));
 
         return list;
     }
+    QString m_targetProfileName;
+    QString m_linearProfileName;
 };
 
 #endif // LCMSRGBP2020PQCOLORSPACE_H

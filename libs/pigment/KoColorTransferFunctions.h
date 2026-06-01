@@ -80,7 +80,7 @@ ALWAYS_INLINE void applyHLGOOTF(float *rgb,
     const float luma = (rgb[0] * static_cast<float>(lumaCoefficients[0]))
         + (rgb[1] * static_cast<float>(lumaCoefficients[1]))
         + (rgb[2] * static_cast<float>(lumaCoefficients[2]));
-    const float a = powf(luma, (1.0-gamma)/gamma);
+    const float a = powf(luma, gamma);
     rgb[0] *= a;
     rgb[1] *= a;
     rgb[2] *= a;
@@ -97,7 +97,7 @@ ALWAYS_INLINE void removeHLGOOTF(float *rgb,
     const float luma = (rgb[0] * static_cast<float>(lumaCoefficients[0]))
         + (rgb[1] * static_cast<float>(lumaCoefficients[1]))
         + (rgb[2] * static_cast<float>(lumaCoefficients[2]));
-    const float multiplier = powf(luma, gamma-1.f) ;
+    const float multiplier = powf(luma, 1.0 / gamma) ;
     rgb[0] *= multiplier;
     rgb[1] *= multiplier;
     rgb[2] *= multiplier;
@@ -109,11 +109,14 @@ ALWAYS_INLINE float applyHLGCurve(float x) noexcept
     const float b = 0.28466892f;
     const float c = 0.55991073f;
 
+    /// This scales everything so that diffuse white is at 75~%,
+    /// as per BT.2408, pg 4-5, and BT. 2390 pg. 52-53.
+    const float scale =  (1.0 / 3.7743);
+
     if (x > 1.0f / 12.0f) {
-        return (a * logf(12.0f * x - b) + c);
+        return (a * logf(12.0f * (x*scale) - b) + c) ;
     } else {
-        // return (sqrt(3.0) * powf(x, 0.5));
-        return (sqrtf(3.0f * x));
+        return (sqrtf(3.0f * (x * scale)));
     }
 }
 
@@ -122,11 +125,14 @@ ALWAYS_INLINE float removeHLGCurve(float x) noexcept
     const float a = 0.17883277f;
     const float b = 0.28466892f;
     const float c = 0.55991073f;
+
+    const float scale = 3.7743;
+
     if (x <= 0.5f) {
         // return (powf(x, 2.0) / 3.0);
-        return (x * x) / 3.0f;
+        return ((x * x) / 3.0f) * scale;
     } else {
-        return (expf((x - c) * (1.f / a)) + b) * (1.f / 12.0f);
+        return ((expf((x - c) * (1.f / a)) + b) * (1.f / 12.0f)) * scale;
     }
 }
 
@@ -171,10 +177,12 @@ struct KoColorTransferFunctions {
         constexpr float b = 0.28466892f;
         constexpr float c = 0.55991073f;
 
+        constexpr float scale = 3.7743;
+
         const float_v x1 = x * x * (1.f / 3.0f);
         const float_v x2 =
             (xsimd::exp((x - c) * (1.f / a)) + b) * (1.f / 12.0f);
-        x = xsimd::select(x <= float_v(0.5f), x1, x2);
+        x = xsimd::select(x <= float_v(0.5f), x1, x2) * scale;
     }
 
     static ALWAYS_INLINE void removeSMPTE_ST_428Curve(float_v &x) noexcept

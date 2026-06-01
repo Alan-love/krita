@@ -105,9 +105,8 @@ struct perceptualDummyHelper {
  */
 cmsInt32Number samplePQDummyClut(const cmsUInt16Number In[], cmsUInt16Number Out[], void *Cargo) {
     struct perceptualDummyHelper *helper = (struct perceptualDummyHelper *) Cargo;
-    const float scale = 3.7743; /// This scales everything so that diffuse white is at 75~%.
     const float pqScale = 125.0; /// Important: this normalizes the pq signal.
-    const float nominalPeak = 10000.0/1000.0;/// HLG goes up to 1000, so we're scaling the pq down to that.
+    const float nominalPeak = 10000.0/392.0;/// See bt. 2390 pg. 52.
     double coeff[] = {0.2126, 0.7152, 0.0722};
     if (helper->luma) {
         coeff[0] = helper->luma[0];
@@ -120,20 +119,13 @@ cmsInt32Number samplePQDummyClut(const cmsUInt16Number In[], cmsUInt16Number Out
         if (helper->toXYZ) {
             lin[i] = (removeSmpte2048Curve(val) / pqScale) * nominalPeak;
         } else {
-            lin[i] = removeHLGCurve(val) * scale;
+            lin[i] = removeHLGCurve(val);
         }
-    }
-    if (helper->toXYZ) {
-        // display to scene
-        applyHLGOOTF(lin, coeff);
-    } else {
-        // scene to display
-        removeHLGOOTF(lin, coeff);
     }
     for (int i = 0; i < helper->channels; i++) {
         cmsUInt16Number finalResult = In[i];
         if (helper->toXYZ) {
-            finalResult = qBound(0, qRound( applyHLGCurve(lin[i] / scale) * 65535 ), 65535);
+            finalResult = qBound(0, qRound( applyHLGCurve(lin[i]) * 65535 ), 65535);
         } else {
             finalResult = qBound(0, qRound( applySmpte2048Curve((lin[i] / nominalPeak) * pqScale) * 65535 ), 65535);
         }

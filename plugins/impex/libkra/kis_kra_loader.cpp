@@ -337,9 +337,7 @@ KisImageSP KisKraLoader::loadXML(const QDomElement& imageElement)
 
             if(e.tagName() == COLORHISTORY) {
                 QList<KoColor> colors = loadKoColors(e);
-                KisUniqueColorSet *set = new KisUniqueColorSet();
-                set->setFromColorList(colors);
-                m_d->document->setColorHistory(set);
+                m_d->document->colorHistory()->setFromColorList(colors);
             }
 
             if(e.tagName() == GLOBALASSISTANTSCOLOR) {

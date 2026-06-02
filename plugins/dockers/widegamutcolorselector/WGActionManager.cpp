@@ -1,3 +1,4 @@
+
 /*
  * SPDX-FileCopyrightText: 2021 Mathias Wein <lynx.mw+kde@gmail.com>
  *
@@ -352,4 +353,13 @@ void WGActionManager::slotColorSelected(const KoColor &color)
 void WGActionManager::slotUpdateDocker()
 {
     m_docker->setChannelValues(m_colorModel->channelValues());
+}
+
+void WGActionManager::updateColorHistory()
+{
+    if (!m_colorHistoryPopup) return;
+    WGColorPatches *history = dynamic_cast<WGColorPatches*>(m_colorHistoryPopup->selectorWidget());
+    if (history) {
+        history->setColorHistory(m_docker->colorHistory());
+    }
 }

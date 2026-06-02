@@ -31,6 +31,14 @@ struct KisUniqueColorSet::ColorEntry
 
 struct KisUniqueColorSet::Private
 {
+    Private() {}
+    Private (const Private &rhs)
+        : colorHash(rhs.colorHash)
+        , history(rhs.history)
+        , maxSize(rhs.maxSize)
+        , key(rhs.key)
+    {}
+
     QHash<KoColor, KisUniqueColorSet::ColorEntry*> colorHash;
     std::deque<ColorEntry*> history;
     size_t maxSize {200};
@@ -39,7 +47,7 @@ struct KisUniqueColorSet::Private
 
 KisUniqueColorSet::KisUniqueColorSet(QObject *parent)
     : QObject(parent)
-    , d(new Private)
+    , d(new Private())
 { }
 
 KisUniqueColorSet::~KisUniqueColorSet()
@@ -47,6 +55,13 @@ KisUniqueColorSet::~KisUniqueColorSet()
     for (ColorEntry *entry: d->history) {
         delete entry;
     }
+}
+
+KisUniqueColorSet::KisUniqueColorSet(const KisUniqueColorSet &rhs)
+    : QObject(rhs.parent())
+    , d(new Private(*rhs.d))
+{
+
 }
 
 void KisUniqueColorSet::addColor(const KoColor &color)

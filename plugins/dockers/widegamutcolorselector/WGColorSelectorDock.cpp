@@ -183,6 +183,8 @@ void WGColorSelectorDock::setCanvas(KoCanvasBase *canvas)
         m_colorHistory = resourceProvider->colorHistory();
         m_documentColorHistory = m_canvas->imageView()->document()->colorHistory();
         m_history->setColorHistory(m_colorHistoryFromDocument? m_documentColorHistory: m_colorHistory);
+        m_actionManager->updateColorHistory();
+
         m_selector->setDisplayRenderer(dri);
         m_displayConfig->setDisplayConverter(m_canvas->displayColorConverter());
         m_commonColorSet->setImage(m_canvas->image());
@@ -222,10 +224,10 @@ void WGColorSelectorDock::unsetCanvas()
     m_displayConfig->setDisplayConverter(0);
     m_selector->setDisplayRenderer(0);
     m_commonColorSet->setImage(KisImageSP());
-    if (m_colorHistoryFromDocument) {
-        m_colorHistory = new KisUniqueColorSet(this);
-        m_history->setColorHistory(m_colorHistory);
-    }
+
+    m_documentColorHistory = nullptr;
+    //  m_colorHistory = nullptr;
+    m_history->setColorHistory(m_colorHistory);
     m_canvas = 0;
 }
 
@@ -312,6 +314,7 @@ void WGColorSelectorDock::slotConfigurationChanged()
     m_colorHistoryFromDocument = cfg.get(WGConfig::colorHistoryFromDocument);
     m_history->updateSettings();
     m_history->setColorHistory(m_colorHistoryFromDocument? m_documentColorHistory: m_colorHistory);
+    m_actionManager->updateColorHistory();
 
     m_commonColors->updateSettings();
     m_commonColorSet->setAutoUpdate(cfg.get(WGConfig::commonColorsAutoUpdate));

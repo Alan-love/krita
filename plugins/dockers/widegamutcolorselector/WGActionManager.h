@@ -37,6 +37,7 @@ public:
     void setCanvas(KisCanvas2* canvas, KisCanvas2* oldCanvas);
     void registerActions(KisViewManager *viewManager);
     void setLastUsedColor(const KoColor &col);
+    void updateColorHistory();
 private:
     void updateWidgetSize(QWidget *widget, int size);
     void showPopup(WGSelectorPopup *popup);
@@ -62,6 +63,7 @@ private Q_SLOTS:
     void slotColorPatchInteraction(bool active);
     void slotColorSelected(const KoColor &color);
     void slotUpdateDocker();
+
 Q_SIGNALS:
 private:
     WGColorSelectorDock *m_docker {0};

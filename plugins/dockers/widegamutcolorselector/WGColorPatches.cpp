@@ -516,7 +516,9 @@ void WGColorPatches::reconnectButtons(KisUniqueColorSet *oldSet, KisUniqueColorS
         if (oldSet) {
             clearButton->disconnect(oldSet);
         }
-        connect(clearButton, SIGNAL(clicked(bool)), newSet, SLOT(clear()));
+        if (newSet) {
+            connect(clearButton, SIGNAL(clicked(bool)), newSet, SLOT(clear()));
+        }
     }
     else if (m_preset == CommonColors && !m_buttonList.isEmpty()) {
         QToolButton *reloadButton = m_buttonList.first();

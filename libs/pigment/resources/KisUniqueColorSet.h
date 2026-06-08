@@ -22,7 +22,7 @@ public:
     explicit KisUniqueColorSet(QObject *parent = nullptr);
     ~KisUniqueColorSet() override;
 
-    KisUniqueColorSet(const KisUniqueColorSet &rhs);
+    KisUniqueColorSet(const KisUniqueColorSet &rhs, QObject *parent = nullptr);
 
     void addColor(const KoColor &color);
     KoColor color(int index) const;

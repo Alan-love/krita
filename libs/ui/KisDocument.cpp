@@ -330,7 +330,7 @@ public:
         , nserver(new KisNameServer(*rhs.nserver))
         , preActivatedNode(0) // the node is from another hierarchy!
         , imageIdleWatcher(2000 /*ms*/)
-        , colorHistory(rhs.colorHistory)
+        , colorHistory(new KisUniqueColorSet(*rhs.colorHistory, _q))
     {
         copyFromImpl(rhs, _q, CONSTRUCT);
         connect(&imageIdleWatcher, SIGNAL(startedIdleMode()), q, SLOT(slotPerformIdleRoutines()));
@@ -517,6 +517,7 @@ void KisDocument::Private::copyFromImpl(const Private &rhs, KisDocument *q, KisD
         q->setAudioTracks(rhs.audioTracks);
         q->setAudioVolume(rhs.audioLevel);
         q->setGridConfig(rhs.gridConfig);
+        q->setColorHistory(rhs.colorHistory);
     } else {
         // in CONSTRUCT mode, we cannot use the functions of KisDocument
         // because KisDocument does not yet have a pointer to us.

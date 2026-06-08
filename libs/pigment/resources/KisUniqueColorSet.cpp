@@ -57,8 +57,8 @@ KisUniqueColorSet::~KisUniqueColorSet()
     }
 }
 
-KisUniqueColorSet::KisUniqueColorSet(const KisUniqueColorSet &rhs)
-    : QObject(rhs.parent())
+KisUniqueColorSet::KisUniqueColorSet(const KisUniqueColorSet &rhs, QObject *parent)
+    : QObject(parent)
     , d(new Private(*rhs.d))
 {
 

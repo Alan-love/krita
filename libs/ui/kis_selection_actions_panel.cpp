@@ -35,6 +35,7 @@
 #include <kis_algebra_2d.h>
 #include <klocalizedstring.h>
 #include <ktoggleaction.h>
+#include <kconfiggroup.h>
 
 #include <QApplication>
 #include <QPainter>
@@ -106,6 +107,8 @@ struct KisSelectionActionsPanel::Private {
     Orientation orientation = Orientation::Horizontal;
     Position position = Position::Bottom;
     Behavior behavior = Behavior::FreeFloating;
+
+    const QString dragOffsetConfigName = "selectionActionBarDragOffset";
 };
 
 
@@ -137,7 +140,14 @@ KisSelectionActionsPanel::KisSelectionActionsPanel(KisViewManager *viewManager)
     connect(d->m_viewManager->canvasBase()->canvasController()->proxyObject, SIGNAL(canvasStateChanged()), SLOT(canvasStateChanged()));
 
 
-    configChanged();
+
+    KConfigGroup cfg = KSharedConfig::openConfig()->group("");
+    d->m_dragHandle.dragOffset = cfg.readEntry(d->dragOffsetConfigName, QPoint(0, 0));
+
+    configChanged(true);
+
+
+
 }
 
 KisSelectionActionsPanel::~KisSelectionActionsPanel()
@@ -368,10 +378,7 @@ bool KisSelectionActionsPanel::eventFilter(QObject *obj, QEvent *event)
     case QEvent::TouchEnd:
     case QEvent::TouchCancel:
         if (d->m_pressed) {
-            d->m_handleWidget->set_held(false);
-            d->m_pressed = false;
-            event->accept();
-            return true;
+            return handleRelease(event);
         }
         break;
 
@@ -697,6 +704,18 @@ bool KisSelectionActionsPanel::handleMove(QEvent *event, const QPoint &pos)
     return true;
 }
 
+bool KisSelectionActionsPanel::handleRelease(QEvent *event)
+{
+    d->m_handleWidget->set_held(false);
+    d->m_pressed = false;
+    event->accept();
+
+    KConfigGroup cfg = KSharedConfig::openConfig()->group("");
+    cfg.writeEntry(d->dragOffsetConfigName, d->m_dragHandle.dragOffset);
+
+    return true;
+}
+
 void KisSelectionActionsPanel::movePanelWidgets()
 {
     //This function gets called on panel creation, when dragHandle is not initialized, so we need to handle that
@@ -793,20 +812,28 @@ void KisSelectionActionsPanel::configureSelectionActionsPanel()
     a->trigger();
 }
 
-void KisSelectionActionsPanel::configChanged()
+void KisSelectionActionsPanel::configChanged(bool skipResettingOffset)
 {
     KisConfig cfg(true);
+    KConfigGroup silentCfg = KSharedConfig::openConfig()->group("");
+
 
     setHandleEnabled(cfg.selectionActionBarBehavior() != Behavior::Fixed);
+
+    bool resetOffset = false;
     if (d->orientation != cfg.selectionActionBarOrientation()) {
-        d->m_dragHandle.dragOffset = QPoint();
+        resetOffset = true;
         setOrientation(cfg.selectionActionBarOrientation());
     }
     d->behavior = cfg.selectionActionBarBehavior();
     if (d->position != cfg.selectionActionBarPosition()) {
-        // reset the drag offset on change of position
-        d->m_dragHandle.dragOffset = QPoint();
+        resetOffset = true;
         d->position = cfg.selectionActionBarPosition();
+    }
+
+    if (resetOffset && !skipResettingOffset) {
+        d->m_dragHandle.dragOffset = QPoint();
+        silentCfg.writeEntry(d->dragOffsetConfigName, QPoint());
     }
 
     if (d->behavior == Behavior::Fixed) {

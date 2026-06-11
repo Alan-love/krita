@@ -33,11 +33,14 @@ struct KisUniqueColorSet::Private
 {
     Private() {}
     Private (const Private &rhs)
-        : colorHash(rhs.colorHash)
-        , history(rhs.history)
-        , maxSize(rhs.maxSize)
+        : maxSize(rhs.maxSize)
         , key(rhs.key)
-    {}
+    {
+        for (auto it = rhs.history.begin(); it != rhs.history.end(); ++it) {
+            history.push_back(new ColorEntry(*(*it)));
+            colorHash.insert(history.back()->color, history.back());
+        }
+    }
 
     QHash<KoColor, KisUniqueColorSet::ColorEntry*> colorHash;
     std::deque<ColorEntry*> history;

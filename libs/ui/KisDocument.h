@@ -664,9 +664,30 @@ public:
     void setAssistantsGlobalColor(QColor color);
     QColor assistantsGlobalColor();
 
-    // Color history if per document (configuration dependent)
-    void setColorHistory(KisUniqueColorSet *colors);
-    KisUniqueColorSet *colorHistory();
+    /**
+     * Replaces the per-document history of the last-used colors,
+     * from the newest to oldest.
+     *
+     * The actual values are stored in the model returned by
+     * colorHistoryModel()
+     */
+    void setColorHistoryColors(const QList<KoColor> &colors);
+
+    /**
+     * Return the per-document history of the last-used colors,
+     * from the newest to oldest.
+     *
+     * The actual values are stored in the model returned by
+     * colorHistoryModel()
+     */
+    QList<KoColor> colorHistoryColors() const;
+
+    /**
+     * Return an internal model for managing the last used colors
+     * of the document. The model can be used to manipulate
+     * the colors and subscribe to updates.
+     */
+    KisUniqueColorSet *colorHistoryModel();
 
     /**
      * Get existing reference images layer or null if none exists.

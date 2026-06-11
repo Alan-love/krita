@@ -310,7 +310,6 @@ public:
         , nserver(new KisNameServer(1))
         , imageIdleWatcher(2000 /*ms*/)
         , globalAssistantsColor(KisConfig(true).defaultAssistantsColor())
-        , colorHistory(new KisUniqueColorSet(_q))
         , batchMode(false)
     {
         if (QLocale().measurementSystem() == QLocale::ImperialSystem) {
@@ -330,7 +329,7 @@ public:
         , nserver(new KisNameServer(*rhs.nserver))
         , preActivatedNode(0) // the node is from another hierarchy!
         , imageIdleWatcher(2000 /*ms*/)
-        , colorHistory(new KisUniqueColorSet(*rhs.colorHistory, _q))
+        , colorHistoryModel(rhs.colorHistoryModel)
     {
         copyFromImpl(rhs, _q, CONSTRUCT);
         connect(&imageIdleWatcher, SIGNAL(startedIdleMode()), q, SLOT(slotPerformIdleRoutines()));
@@ -399,7 +398,7 @@ public:
     qreal audioLevel = 1.0;
 
     QColor globalAssistantsColor;
-    KisUniqueColorSet *colorHistory{nullptr};
+    KisUniqueColorSet colorHistoryModel;
 
     KisGridConfig gridConfig;
 
@@ -517,7 +516,7 @@ void KisDocument::Private::copyFromImpl(const Private &rhs, KisDocument *q, KisD
         q->setAudioTracks(rhs.audioTracks);
         q->setAudioVolume(rhs.audioLevel);
         q->setGridConfig(rhs.gridConfig);
-        q->setColorHistory(rhs.colorHistory);
+        colorHistoryModel.setColorList(rhs.colorHistoryModel.colorList());
     } else {
         // in CONSTRUCT mode, we cannot use the functions of KisDocument
         // because KisDocument does not yet have a pointer to us.
@@ -2752,7 +2751,7 @@ bool KisDocument::newImage(const QString& name,
             /**
              * Preinitialize color history for new documents when possible
              */
-            setColorHistory(window->viewManager()->canvasResourceProvider()->colorHistory());
+            setColorHistoryColors(window->viewManager()->canvasResourceProvider()->colorHistoryColors());
         }
     }
 
@@ -2950,11 +2949,6 @@ QColor KisDocument::assistantsGlobalColor()
     return d->globalAssistantsColor;
 }
 
-KisUniqueColorSet *KisDocument::colorHistory()
-{
-    return d->colorHistory;
-}
-
 QRectF KisDocument::documentBounds() const
 {
     QRectF bounds = d->image->bounds();
@@ -2968,7 +2962,17 @@ QRectF KisDocument::documentBounds() const
     return bounds;
 }
 
-void KisDocument::setColorHistory(KisUniqueColorSet *colors)
+void KisDocument::setColorHistoryColors(const QList<KoColor> &colors)
 {
-    d->colorHistory->setFromColorList(colors->colorList());
+    d->colorHistoryModel.setColorList(colors);
+}
+
+QList<KoColor> KisDocument::colorHistoryColors() const
+{
+    return d->colorHistoryModel.colorList();
+}
+
+KisUniqueColorSet* KisDocument::colorHistoryModel()
+{
+    return &d->colorHistoryModel;
 }

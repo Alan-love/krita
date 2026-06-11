@@ -37,7 +37,7 @@ public:
     void setCanvas(KisCanvas2* canvas, KisCanvas2* oldCanvas);
     void registerActions(KisViewManager *viewManager);
     void setLastUsedColor(const KoColor &col);
-    void updateColorHistory();
+    void updateColorHistoryModel();
 private:
     void updateWidgetSize(QWidget *widget, int size);
     void showPopup(WGSelectorPopup *popup);

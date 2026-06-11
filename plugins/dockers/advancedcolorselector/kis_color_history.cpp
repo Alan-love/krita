@@ -40,6 +40,10 @@ KisColorHistory::KisColorHistory(QWidget *parent)
     setAdditionalButtons({m_clearButton});
 }
 
+KisColorHistory::~KisColorHistory()
+{
+}
+
 void KisColorHistory::unsetCanvas()
 {
     m_resourceProvider = 0;
@@ -56,24 +60,24 @@ void KisColorHistory::setCanvas(KisCanvas2 *canvas)
 
     if (m_resourceProvider) {
         m_resourceProvider->disconnect(this);
-        m_resourceProvider->colorHistory()->disconnect(this);
+        m_resourceProvider->colorHistoryModel()->disconnect(this);
     }
     if (m_document) {
-        m_document->colorHistory()->disconnect(this);
+        m_document->colorHistoryModel()->disconnect(this);
     }
 
     m_resourceProvider = canvas->imageView()->resourceProvider();
     m_document = canvas->viewManager()->document();
 
-    setColors(colorHistory()->colorList());
+    setColors(colorHistoryModel()->colorList());
 
     connect(m_resourceProvider, SIGNAL(sigFGColorUsed(KoColor)),
             this, SLOT(addColorToHistory(KoColor)), Qt::UniqueConnection);
 
     // Messy, but this whole plugin should be removed shortly in favour of the wide gamut selector.
     // We only really need this so the plugin will respond to the color history being cleared in the wide gamut selector.
-    connect(m_resourceProvider->colorHistory(), SIGNAL(sigReset()), this, SLOT(colorHistoryChanged()));
-    connect(m_document->colorHistory(), SIGNAL(sigReset()), this, SLOT(colorHistoryChanged()));
+    connect(m_resourceProvider->colorHistoryModel(), SIGNAL(sigReset()), this, SLOT(colorHistoryChanged()));
+    connect(m_document->colorHistoryModel(), SIGNAL(sigReset()), this, SLOT(colorHistoryChanged()));
 }
 
 KisColorSelectorBase *KisColorHistory::createPopup() const
@@ -89,35 +93,35 @@ void KisColorHistory::addColorToHistory(const KoColor &color)
     // don't add color in erase mode. See https://bugs.kde.org/show_bug.cgi?id=298940
     if (m_resourceProvider && m_resourceProvider->currentCompositeOp() == COMPOSITE_ERASE) return;
 
-    colorHistory()->addColor(color);
+    colorHistoryModel()->addColor(color);
 
-    updateColorHistory(colorHistory()->colorList());
-    s_color_history_change_notifier->notifyColorHistoryChanged(colorHistory()->colorList());
+    updateColorHistory(colorHistoryModel()->colorList());
+    s_color_history_change_notifier->notifyColorHistoryChanged(colorHistoryModel()->colorList());
 }
 
 void KisColorHistory::clearColorHistory()
 {
     QList<KoColor> empty;
-    colorHistory()->clear();
+    colorHistoryModel()->clear();
     updateColorHistory(empty);
     s_color_history_change_notifier->notifyColorHistoryChanged(empty);
 }
 
-KisUniqueColorSet *KisColorHistory::colorHistory()
+KisUniqueColorSet *KisColorHistory::colorHistoryModel()
 {
     if (m_history_per_document && m_document) {
-        return m_document->colorHistory();
+        return m_document->colorHistoryModel();
     } else if (m_resourceProvider) {
-        return m_resourceProvider->colorHistory();
+        return m_resourceProvider->colorHistoryModel();
     } else {
-        return new KisUniqueColorSet(this);
+        return m_fallbackColorHistoryModel.get();
     }
 }
 
 void KisColorHistory::updateColorHistory(const QList<KoColor> &history)
 {
     Q_UNUSED(history);
-    setColors(colorHistory()->colorList());
+    setColors(colorHistoryModel()->colorList());
 }
 
 void KisColorHistory::updateUserSettings()
@@ -125,13 +129,13 @@ void KisColorHistory::updateUserSettings()
 
     KisConfig config(true);
     m_history_per_document = config.colorHistoryPerDocument();
-    updateColorHistory(colorHistory()->colorList()); // Show with respect to the current strategy
+    updateColorHistory(colorHistoryModel()->colorList()); // Show with respect to the current strategy
 }
 
 void KisColorHistory::colorHistoryChanged()
 {
     KIS_SAFE_ASSERT_RECOVER_RETURN(sender() != this);
-    setColors(colorHistory()->colorList());
+    setColors(colorHistoryModel()->colorList());
 }
 
 void KisColorHistoryNotifier::notifyColorHistoryChanged(const QList<KoColor> &history)

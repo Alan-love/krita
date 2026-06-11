@@ -48,7 +48,7 @@ public:
     WGColorSelectorDock();
     const KisVisualColorModel& colorModel() const;
     KisDisplayColorConverter* displayColorConverter(bool rawPointer = false) const;
-    KisUniqueColorSet* colorHistory() const { return m_colorHistoryFromDocument? m_documentColorHistory: m_colorHistory; }
+    KisUniqueColorSet* colorHistoryModel() const;
 
     bool selectingBackground() const;
     /**
@@ -90,8 +90,9 @@ private:
     KisVisualColorSelector *m_selector {0};
     KisColorSourceToggle *m_toggle {0};
     KisSignalCompressor *m_colorChangeCompressor;
-    KisUniqueColorSet *m_colorHistory{0};
-    KisUniqueColorSet *m_documentColorHistory{0};
+    KisUniqueColorSet *m_globalColorHistoryModel{0};
+    KisUniqueColorSet *m_documentColorHistoryModel{0};
+    std::unique_ptr<KisUniqueColorSet> m_fallbackColorHistoryModel;
     bool m_colorHistoryFromDocument{false};
     KisGamutMaskToolbar *m_gamutToolbar;
     WGCommonColorSet *m_commonColorSet {0};

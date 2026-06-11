@@ -62,7 +62,6 @@
 #include "KisReferenceImagesLayer.h"
 #include "KisReferenceImage.h"
 #include <KoColorSet.h>
-#include <KisUniqueColorSet.h>
 
 #include "KisDocument.h"
 #include "kis_config.h"
@@ -337,7 +336,7 @@ KisImageSP KisKraLoader::loadXML(const QDomElement& imageElement)
 
             if(e.tagName() == COLORHISTORY) {
                 QList<KoColor> colors = loadKoColors(e);
-                m_d->document->colorHistory()->setFromColorList(colors);
+                m_d->document->setColorHistoryColors(colors);
             }
 
             if(e.tagName() == GLOBALASSISTANTSCOLOR) {

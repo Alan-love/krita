@@ -5,7 +5,6 @@
  */
 #include "kis_kra_saver.h"
 
-#include "KisUniqueColorSet.h"
 #include "kis_kra_tags.h"
 #include "kis_kra_save_visitor.h"
 #include "kis_kra_savexml_visitor.h"
@@ -697,7 +696,7 @@ void KisKraSaver::saveBackgroundColor(QDomDocument& doc, QDomElement& element, K
 void KisKraSaver::saveColorHistory(QDomDocument &doc, QDomElement &element)
 {
     QDomElement colorsElement = doc.createElement(COLORHISTORY);
-    saveKoColors(doc, colorsElement, m_d->doc->colorHistory()->colorList());
+    saveKoColors(doc, colorsElement, m_d->doc->colorHistoryColors());
 
     element.appendChild(colorsElement);
 }

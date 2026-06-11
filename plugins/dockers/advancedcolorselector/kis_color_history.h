@@ -19,6 +19,7 @@ class KisColorHistory : public KisColorPatches
     Q_OBJECT
 public:
     explicit KisColorHistory(QWidget *parent = 0);
+    ~KisColorHistory();
     void setCanvas(KisCanvas2 *canvas) override;
     void unsetCanvas() override;
 
@@ -37,7 +38,8 @@ public Q_SLOTS:
 
 private:
     // Get reference to the relevant color history, either from resource provider or document.
-    KisUniqueColorSet *colorHistory();
+    KisUniqueColorSet *colorHistoryModel();
+    std::unique_ptr<KisUniqueColorSet> m_fallbackColorHistoryModel;
 
     // Write the changed color history where it is stored, depending on the settings.
     void updateColorHistory(const QList<KoColor> &history);

@@ -35,12 +35,12 @@ WGColorPatches::WGColorPatches(WGSelectorDisplayConfigSP displayConfig, KisUniqu
     m_contentWidget->setAttribute(Qt::WA_StaticContents);
     // this prevents repainting the entire content widget when scrolling:
     m_contentWidget->setAutoFillBackground(true);
-    setColorHistory(history);
+    setColorHistoryModel(history);
 }
 
-KisUniqueColorSet *WGColorPatches::colorHistory() const
+KisUniqueColorSet *WGColorPatches::colorHistoryModel() const
 {
-    return m_colors;
+    return m_colorHistoryModel;
 }
 
 void WGColorPatches::updateSettings()
@@ -89,7 +89,7 @@ void WGColorPatches::updateSettings()
         delete m_buttonList.takeLast();
     }
     m_buttonList = buttons;
-    reconnectButtons(m_colors, m_colors);
+    reconnectButtons(m_colorHistoryModel, m_colorHistoryModel);
     updateIcons();
 
     // recalc metrics and resize content widget
@@ -158,20 +158,20 @@ void WGColorPatches::setAdditionalButtons(QList<QToolButton *> buttonList)
     resizeEvent(&dummyEvent);
 }
 
-void WGColorPatches::setColorHistory(KisUniqueColorSet *history)
+void WGColorPatches::setColorHistoryModel(KisUniqueColorSet *colorHistoryModel)
 {
-    if (m_colors) {
-        m_colors->disconnect(m_contentWidget);
+    if (m_colorHistoryModel) {
+        m_colorHistoryModel->disconnect(m_contentWidget);
     }
-    if (history) {
-        connect(history, SIGNAL(sigColorAdded(int)), m_contentWidget, SLOT(update()));
-        connect(history, SIGNAL(sigColorMoved(int,int)), m_contentWidget, SLOT(update()));
-        connect(history, SIGNAL(sigColorRemoved(int)), m_contentWidget, SLOT(update()));
-        connect(history, SIGNAL(sigReset()), m_contentWidget, SLOT(update()));
+    if (colorHistoryModel) {
+        connect(colorHistoryModel, SIGNAL(sigColorAdded(int)), m_contentWidget, SLOT(update()));
+        connect(colorHistoryModel, SIGNAL(sigColorMoved(int,int)), m_contentWidget, SLOT(update()));
+        connect(colorHistoryModel, SIGNAL(sigColorRemoved(int)), m_contentWidget, SLOT(update()));
+        connect(colorHistoryModel, SIGNAL(sigReset()), m_contentWidget, SLOT(update()));
         m_scrollValue = 0;
     }
-    reconnectButtons(m_colors, history);
-    m_colors = history;
+    reconnectButtons(m_colorHistoryModel, colorHistoryModel);
+    m_colorHistoryModel = colorHistoryModel;
     m_contentWidget->update();
 }
 
@@ -290,7 +290,7 @@ void WGColorPatches::mouseMoveEvent(QMouseEvent *event)
     if (event->buttons() & Qt::LeftButton) {
         int index = indexAt(event->pos());
         if (index >= 0 && index != m_mouseIndex) {
-            Q_EMIT sigColorChanged(m_colors->color(index));
+            Q_EMIT sigColorChanged(m_colorHistoryModel->color(index));
             m_mouseIndex = index;
         }
     }
@@ -302,7 +302,7 @@ void WGColorPatches::mousePressEvent(QMouseEvent *event)
         Q_EMIT sigColorInteraction(true);
         m_mouseIndex = indexAt(event->pos());
         if (m_mouseIndex >= 0) {
-            Q_EMIT sigColorChanged(m_colors->color(m_mouseIndex));
+            Q_EMIT sigColorChanged(m_colorHistoryModel->color(m_mouseIndex));
         }
     }
 }
@@ -344,7 +344,7 @@ void WGColorPatches::contentPaintEvent(QPaintEvent *event)
 {
     QRect updateRect = event->rect();
     //qDebug() << "WGColorPatches::conentPaintEvent region:" << event->region();
-    int numColors = m_colors ? m_colors->size() : 0;
+    int numColors = m_colorHistoryModel ? m_colorHistoryModel->size() : 0;
     if (numColors <= 0) {
         return;
     }
@@ -353,10 +353,10 @@ void WGColorPatches::contentPaintEvent(QPaintEvent *event)
     const KisDisplayColorConverter *converter = displayConverter();
 
     // this could be optimized a bit more...
-    for (int i = 0; i < qMin(m_patchCount, m_colors->size()); i++) {
+    for (int i = 0; i < qMin(m_patchCount, m_colorHistoryModel->size()); i++) {
         QRect patch = patchRect(i);
         if (patch.intersects(updateRect)) {
-            QColor qcolor = converter->toQColor(m_colors->color(i));
+            QColor qcolor = converter->toQColor(m_colorHistoryModel->color(i));
 
             painter.fillRect(patch, qcolor);
         }
@@ -395,7 +395,7 @@ QSize WGColorPatches::sizeHint() const
 
 int WGColorPatches::indexAt(const QPoint &widgetPos) const
 {
-    if(!m_colors || !m_contentWidget->rect().contains(widgetPos))
+    if(!m_colorHistoryModel || !m_contentWidget->rect().contains(widgetPos))
         return -1;
 
     QPoint pos = (m_orientation == Qt::Horizontal) ? widgetPos : transposed(widgetPos);
@@ -411,7 +411,7 @@ int WGColorPatches::indexAt(const QPoint &widgetPos) const
 
     //patchNr -= m_buttonList.size();
 
-    if (patchNr >= 0 && patchNr < qMin(m_patchCount, m_colors->size())) {
+    if (patchNr >= 0 && patchNr < qMin(m_patchCount, m_colorHistoryModel->size())) {
         return patchNr;
     }
     return -1;

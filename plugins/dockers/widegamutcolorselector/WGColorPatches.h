@@ -31,7 +31,7 @@ public:
 
     WGColorPatches(WGSelectorDisplayConfigSP displayConfig, KisUniqueColorSet *history, QWidget *parent = nullptr);
 
-    KisUniqueColorSet* colorHistory() const;
+    KisUniqueColorSet* colorHistoryModel() const;
     void updateSettings() override;
     void setPreset(Preset preset);
     QPoint popupOffset() const override;
@@ -39,7 +39,7 @@ public:
      * this class takes ownership of them and will delete them
      * they will be resized to the patchsize */
     void setAdditionalButtons(QList<QToolButton*> buttonList);
-    void setColorHistory(KisUniqueColorSet *history);
+    void setColorHistoryModel(KisUniqueColorSet *history);
 public Q_SLOTS:
     void updateIcons();
 protected:
@@ -61,7 +61,7 @@ protected:
     void reconnectButtons(KisUniqueColorSet *oldSet, KisUniqueColorSet *newSet);
 
 private:
-    QPointer<KisUniqueColorSet> m_colors;
+    QPointer<KisUniqueColorSet> m_colorHistoryModel;
     QList<QToolButton*> m_buttonList;
     Qt::Orientation m_orientation {Qt::Horizontal};
     const WGConfig::ColorPatches *m_configSource {0};

@@ -58,7 +58,30 @@ public:
     KoColor fgColor() const;
     void setFGColor(const KoColor& c);
 
-    KisUniqueColorSet *colorHistory() const;
+    /**
+     * Return an internal model for managing the global list
+     * of last used colors. The model can be used to manipulate
+     * the colors and subscribe to updates.
+     */
+    KisUniqueColorSet *colorHistoryModel() const;
+
+    /**
+     * Replaces the global history of the last-used colors,
+     * from the newest to oldest.
+     *
+     * The actual values are stored in the model returned by
+     * colorHistoryModel()
+     */
+    void setColorHistoryColors(const QList<KoColor> &colors);
+
+    /**
+     * Return the global history of the last-used colors,
+     * from the newest to oldest.
+     *
+     * The actual values are stored in the model returned by
+     * colorHistoryModel()
+     */
+    QList<KoColor> colorHistoryColors() const;
 
     float HDRExposure() const;
     void setHDRExposure(float exposure);

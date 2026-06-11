@@ -120,7 +120,7 @@ int KisUniqueColorSet::size() const
     return static_cast<int>(d->history.size());
 }
 
-QList<KoColor> KisUniqueColorSet::colorList()
+QList<KoColor> KisUniqueColorSet::colorList() const
 {
     QList<KoColor> colors;
     for (int i = 0; i < static_cast<int>(d->history.size()); i++) {
@@ -129,7 +129,7 @@ QList<KoColor> KisUniqueColorSet::colorList()
     return colors;
 }
 
-void KisUniqueColorSet::setFromColorList(const QList<KoColor> &colors)
+void KisUniqueColorSet::setColorList(const QList<KoColor> &colors)
 {
     clear();
     Q_FOREACH(KoColor c, colors) {

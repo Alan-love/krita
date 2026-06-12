@@ -26,6 +26,7 @@ KisColorHistory::KisColorHistory(QWidget *parent)
     , m_document(0)
     , m_resourceProvider(0)
 {
+    m_fallbackColorHistoryModel = std::make_unique<KisUniqueColorSet>(new KisUniqueColorSet(this));
     m_clearButton = new QToolButton(this);
     m_clearButton->setIcon(KisIconUtils::loadIcon("dialog-cancel-16"));
     m_clearButton->setToolTip(i18n("Clear all color history"));
@@ -109,9 +110,9 @@ void KisColorHistory::clearColorHistory()
 
 KisUniqueColorSet *KisColorHistory::colorHistoryModel()
 {
-    if (m_history_per_document && m_document) {
+    if (m_history_per_document && m_document && m_document->colorHistoryModel()) {
         return m_document->colorHistoryModel();
-    } else if (m_resourceProvider) {
+    } else if (m_resourceProvider && m_resourceProvider->colorHistoryModel()) {
         return m_resourceProvider->colorHistoryModel();
     } else {
         return m_fallbackColorHistoryModel.get();

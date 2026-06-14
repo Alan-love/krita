@@ -2,6 +2,7 @@
 
    SPDX-FileCopyrightText: 1999 Daniel M. Duley <mosfet@kde.org>
    SPDX-FileCopyrightText: 2006 Tobias Koenig <tokoe@kde.org>
+   SPDX-FileCopyrightText: 2026 Arkady Flury <arkady.flury@gmail.com>
 
    SPDX-License-Identifier: LGPL-2.0-only
 */
@@ -11,10 +12,13 @@
 
 #include <kritaui_export.h>
 #include <KoColorDisplayRendererInterface.h>
+
+
 #include <QWidget>
 
 class KoColor;
 class KoColorSpace;
+class KisCanvasResourceProvider;
 /**
  * @short A widget for selecting two related colors.
  *
@@ -48,6 +52,13 @@ class KRITAUI_EXPORT KoDualColorButton : public QWidget
       Foreground,
       Background
     };
+    QRect foregroundRect = QRect( 0, 0, 14, 14);
+    QRect backgroundRect = QRect( 14, 14, 28, 28);
+    QPixmap resetArrowPixmap;
+    QPixmap resetPixmap;
+    QPixmap arrowBitmap;
+
+    bool resetColours = false;
 
     /**
      * Constructs a new KoDualColorButton with the supplied foreground and
@@ -56,12 +67,10 @@ class KRITAUI_EXPORT KoDualColorButton : public QWidget
      * @param parent The parent widget of the KoDualColorButton.
      * @param dialogParent The parent widget of the color selection dialog.
      */
-    KoDualColorButton(const KoColor &foregroundColor, const KoColor &backgroundColor,
-                      QWidget *parent = 0, QWidget* dialogParent = 0 );
 
-    KoDualColorButton(const KoColor &foregroundColor, const KoColor &backgroundColor,
+    KoDualColorButton(KisCanvasResourceProvider *canvasResourceProvider,
                       const KoColorDisplayRendererInterface *displayRenderer,
-                      QWidget *parent = 0, QWidget* dialogParent = 0 );
+                      QWidget *parent = 0, QWidget* dialogParent = 0);
 
     /**
      * Destroys the KoDualColorButton.
@@ -73,6 +82,9 @@ class KRITAUI_EXPORT KoDualColorButton : public QWidget
      */
     KoColor foregroundColor() const;
 
+
+
+    
     /**
      * Returns the current background color.
      */
@@ -92,6 +104,16 @@ class KRITAUI_EXPORT KoDualColorButton : public QWidget
     QSize sizeHint() const override;
 
   public Q_SLOTS:
+    void updateArrows();
+    
+    void ResetColours();
+    void swapColours();
+
+    void setColorDialogState(Selection state);
+
+
+    virtual void paint_icons(QPainter &painter);
+    
     /**
      * Sets the foreground color.
      */
@@ -101,6 +123,9 @@ class KRITAUI_EXPORT KoDualColorButton : public QWidget
      * Sets the background color.
      */
     void setBackgroundColor( const KoColor &color );
+    
+    void foregroundSelect(bool usePlatformDialog);
+    void backgroundSelect(bool usePlatformDialog);
 
     void slotSetForegroundColorFromDialog (const KoColor color);
     void slotSetBackgroundColorFromDialog (const KoColor color);
@@ -113,7 +138,7 @@ class KRITAUI_EXPORT KoDualColorButton : public QWidget
      * set ColorSpace so we can lock the selector. Right now this'll be changed per view-change.
      * @param cs
      */
-    void setColorSpace(const KoColorSpace *cs);
+    void updateColorSpace();
 
     /**
      * @brief getColorFromDisplayRenderer
@@ -153,12 +178,11 @@ class KRITAUI_EXPORT KoDualColorButton : public QWidget
      * be at the top right, the reset control will always be at the bottom
      * left, and you must leave at least a 14x14 space in those corners.
      */
-    virtual void metrics( QRect &foregroundRect, QRect &backgroundRect );
 
     void paintEvent( QPaintEvent *event ) override;
-    void mousePressEvent( QMouseEvent *event ) override;
-    void mouseMoveEvent( QMouseEvent *event ) override;
-    void mouseReleaseEvent( QMouseEvent *event ) override;
+    virtual void mousePressEvent( QMouseEvent *event ) override;
+    virtual void mouseMoveEvent( QMouseEvent *event ) override;
+    virtual void mouseReleaseEvent( QMouseEvent *event ) override;
     void dragEnterEvent( QDragEnterEvent *event ) override;
     void dropEvent( QDropEvent *event ) override;
     void changeEvent(QEvent *event) override;
@@ -167,6 +191,8 @@ class KRITAUI_EXPORT KoDualColorButton : public QWidget
   private:
     class Private;
     Private *const d;
+
+
 };
 
 #endif

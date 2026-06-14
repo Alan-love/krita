@@ -816,11 +816,11 @@ void KisViewManager::createActions()
     d->showPixelGrid = actionManager()->createAction("view_pixel_grid");
     slotUpdatePixelGridAction();
 
-    d->toggleFgBg = actionManager()->createAction("toggle_fg_bg");
-    connect(d->toggleFgBg, SIGNAL(triggered(bool)), this, SLOT(slotToggleFgBg()));
+    // d->toggleFgBg = actionManager()->createAction("toggle_fg_bg");
+    // connect(d->toggleFgBg, SIGNAL(triggered(bool)), this, SLOT(slotToggleFgBg()));
 
-    d->resetFgBg =  actionManager()->createAction("reset_fg_bg");
-    connect(d->resetFgBg, SIGNAL(triggered(bool)), this, SLOT(slotResetFgBg()));
+    // d->resetFgBg =  actionManager()->createAction("reset_fg_bg");
+    // connect(d->resetFgBg, SIGNAL(triggered(bool)), this, SLOT(slotResetFgBg()));
 
     d->toggleBrushOutline =  actionManager()->createAction("toggle_brush_outline");
     connect(d->toggleBrushOutline, SIGNAL(triggered(bool)), this, SLOT(slotToggleBrushOutline()));

@@ -299,6 +299,10 @@ set(kritaui_LIB_SRCS
     widgets/kis_preset_live_preview_view.cpp
     widgets/KisScreenColorSampler.cpp
     widgets/KoDualColorButton.cpp
+    widgets/KoForegroundColour.cpp
+    widgets/KoBackgroundColour.cpp
+    widgets/KoSwapBgFgColours.cpp
+    widgets/KoResetBgFgColours.cpp
     widgets/KoStrokeConfigWidget.cpp
     widgets/KoFillConfigWidget.cpp
     widgets/KisLayerStyleAngleSelector.cpp

@@ -4,6 +4,18 @@
 -->
 <RCC>
     <qresource prefix="/">
+        <file>dark_reset_colour.svg</file>
+        <file>light_reset_colour.svg</file>
+        <file>dark_dual_colour.svg</file>
+        <file>light_dual_colour.svg</file>
+        <file>dark_forgound_colour.svg</file>
+        <file>light_forgound_colour.svg</file>
+        <file>dark_background_colour.svg</file>
+        <file>light_background_colour.svg</file>
+        <file>dark_swap_colour.svg</file>
+        <file>light_swap_colour.svg</file>
+        <file>swap_arrow.svg</file>
+        <file>reset_arrow.svg</file>
         <file>dark_preferences-desktop-locale.svg</file>
         <file>light_preferences-desktop-locale.svg</file>
         <file>dark_get_started.svg</file>

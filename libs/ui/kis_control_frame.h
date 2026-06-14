@@ -27,6 +27,10 @@ class KisDockerHud;
 class KisViewManager;
 class KisIconWidget;
 class KoDualColorButton;
+class KoForegroundColour;
+class KoBackgroundColour;
+class KoSwapBgFgColours;
+class KoResetBgFgColours;
 
 /**
  *   Control Frame - status display with access to
@@ -51,7 +55,7 @@ private Q_SLOTS:
     void slotSetPattern(KoPatternSP pattern);
     void slotSetGradient(KoAbstractGradientSP gradient);
     void updateGradientPreviewOnPopupButton(KoAbstractGradientSP gradient);
-    void slotUpdateDisplayRenderer();
+    void slotUpdateDisplayRenderer(KoDualColorButton* colourSelector);
 
 private:
 
@@ -81,6 +85,10 @@ private:
     KisIconWidget *m_dockerPopupButton {nullptr};
 
     KoDualColorButton *m_dual {nullptr};
+    KoForegroundColour *m_foreground {nullptr};
+    KoBackgroundColour *m_background {nullptr};
+    KoSwapBgFgColours *m_swap {nullptr};
+    KoResetBgFgColours *m_reset {nullptr};
     KoCheckerBoardPainter m_checkersPainter;
 
 };

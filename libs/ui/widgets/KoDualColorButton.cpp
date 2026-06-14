@@ -1,5 +1,6 @@
 /* This file is part of the KDE libraries
    SPDX-FileCopyrightText: 1999 Daniel M. Duley <mosfet@kde.org>
+   SPDX-FileCopyrightText: 2026 Arkady Flury <arkady.flury@gmail.com>
 
    SPDX-License-Identifier: LGPL-2.0-only
 */
@@ -11,13 +12,14 @@
 #include <kconfiggroup.h>
 #include <ksharedconfig.h>
 
-#include "dcolorarrow.xbm"
 #include "dcolorreset.xpm"
 
 #include <QColorDialog>
 #include "KisDlgInternalColorSelector.h"
 
 #include "kis_signals_blocker.h"
+#include <kis_icon.h>
+#include "kis_canvas_resource_provider.h"
 
 #include <QBrush>
 #include <QDrag>
@@ -28,8 +30,7 @@
 #include <QApplication>
 #include <kis_signal_auto_connection.h>
 
-
-class Q_DECL_HIDDEN KoDualColorButton::Private
+class KoDualColorButton::Private
 {
 public:
     Private(const KoColor &fgColor, const KoColor &bgColor,
@@ -40,39 +41,13 @@ public:
         , miniCtlFlag( false )
         , foregroundColor(fgColor)
         , backgroundColor(bgColor)
-
         , displayRenderer(_displayRenderer)
     {
-        updateArrows();
-        resetPixmap = QPixmap( (const char **)dcolorreset_xpm );
-
         popDialog = true;
-    }
-
-    void updateArrows() {
-        arrowBitmap = QPixmap(12,12);
-        arrowBitmap.fill(Qt::transparent);
-
-        QPainter p(&arrowBitmap);
-        p.setPen(dialogParent->palette().windowText().color());
-
-        // arrow pointing left
-        p.drawLine(0, 3, 7, 3);
-        p.drawLine(1, 2, 1, 4);
-        p.drawLine(2, 1, 2, 5);
-        p.drawLine(3, 0, 3, 6);
-
-        // arrow pointing down
-        p.drawLine(8, 4, 8, 11);
-        p.drawLine(5, 8, 11, 8);
-        p.drawLine(6, 9, 10, 9);
-        p.drawLine(7, 10, 9, 10);
     }
 
     QWidget* dialogParent;
 
-    QPixmap arrowBitmap;
-    QPixmap resetPixmap;
     bool dragFlag, miniCtlFlag;
     KoColor foregroundColor;
     KoColor backgroundColor;
@@ -91,6 +66,8 @@ public:
     void init(KoDualColorButton *q);
 };
 
+
+
 void KoDualColorButton::Private::init(KoDualColorButton *q)
 {
     if ( q->sizeHint().isValid() )
@@ -102,22 +79,14 @@ void KoDualColorButton::Private::init(KoDualColorButton *q)
     config.modal = false;
     colorSelectorDialog = new KisDlgInternalColorSelector(q, foregroundColor, config, caption, displayRenderer);
     connect(colorSelectorDialog, &KisDlgInternalColorSelector::finished, q, &KoDualColorButton::slotColorDialogClosed);
+
 }
 
-KoDualColorButton::KoDualColorButton(const KoColor &foregroundColor, const KoColor &backgroundColor, QWidget *parent, QWidget* dialogParent )
-    : QWidget( parent ),
-      d( new Private(foregroundColor, backgroundColor,
-                     dialogParent,
-                     KoDumbColorDisplayRenderer::instance()) )
-{
-    d->init(this);
-}
-
-KoDualColorButton::KoDualColorButton(const KoColor &foregroundColor, const KoColor &backgroundColor,
+KoDualColorButton::KoDualColorButton(KisCanvasResourceProvider *canvasResourceProvider,
                                      const KoColorDisplayRendererInterface *displayRenderer,
                                      QWidget *parent, QWidget* dialogParent)
     : QWidget( parent ),
-      d( new Private(foregroundColor, backgroundColor,
+      d( new Private(canvasResourceProvider->fgColor(),canvasResourceProvider->bgColor(),
                      dialogParent,
                      displayRenderer) )
 {
@@ -127,6 +96,33 @@ KoDualColorButton::KoDualColorButton(const KoColor &foregroundColor, const KoCol
 KoDualColorButton::~KoDualColorButton()
 {
     delete d;
+}
+
+void KoDualColorButton::updateArrows() {
+    resetPixmap = QPixmap( (const char **)dcolorreset_xpm );
+
+    QColor windowText = d->dialogParent->palette().windowText().color();
+
+    arrowBitmap = KisIconUtils::loadIcon("swap_arrow").pixmap(12,12);
+    
+    QPainter pen(&arrowBitmap);
+    
+    pen.setCompositionMode(QPainter::CompositionMode_SourceIn);
+    pen.fillRect(arrowBitmap.rect(),windowText);
+    pen.end();
+
+    resetArrowPixmap = KisIconUtils::loadIcon("reset_arrow").pixmap(10,12);
+    
+    pen.begin(&resetArrowPixmap);
+
+    pen.setCompositionMode(QPainter::CompositionMode_SourceIn);
+    pen.fillRect(resetArrowPixmap.rect(),windowText);
+    pen.end();
+}
+
+void KoDualColorButton::setColorDialogState(Selection state){
+    d->colorDialogState->selection = state;
+    d->tmpSelection = state;
 }
 
 KoColor KoDualColorButton::foregroundColor() const
@@ -175,7 +171,6 @@ void KoDualColorButton::setBackgroundColor( const KoColor &color )
         KisSignalsBlocker b(d->colorSelectorDialog);
         d->colorSelectorDialog->slotColorUpdated(color);
     }
-
     update();
 }
 
@@ -194,9 +189,9 @@ void KoDualColorButton::setDisplayRenderer(const KoColorDisplayRendererInterface
     }
 }
 
-void KoDualColorButton::setColorSpace(const KoColorSpace *cs)
+void KoDualColorButton::updateColorSpace()
 {
-    d->colorSelectorDialog->lockUsedColorSpace(cs);
+    d->colorSelectorDialog->lockUsedColorSpace(d->displayRenderer->getPaintingColorSpace());
 }
 
 QColor KoDualColorButton::getColorFromDisplayRenderer(KoColor c)
@@ -216,24 +211,20 @@ void KoDualColorButton::setPopDialog( bool popDialog )
     d->popDialog = popDialog;
 }
 
-void KoDualColorButton::metrics( QRect &foregroundRect, QRect &backgroundRect )
-{
-    foregroundRect = QRect( 0, 0, width() - 14, height() - 14 );
-    backgroundRect = QRect( 14, 14, width() - 14, height() - 14 );
-}
-
 void KoDualColorButton::paintEvent(QPaintEvent *)
 {
-    QRect foregroundRect;
-    QRect backgroundRect;
 
     QPainter painter( this );
 
-    metrics( foregroundRect, backgroundRect );
-
     QBrush defBrush = palette().brush( QPalette::Button );
+
     QBrush foregroundBrush( getColorFromDisplayRenderer(d->foregroundColor), Qt::SolidPattern );
     QBrush backgroundBrush( getColorFromDisplayRenderer(d->backgroundColor), Qt::SolidPattern );
+
+    if (resetColours) {
+        foregroundBrush = Qt::black;
+        backgroundBrush = Qt::white;
+    }
 
     qDrawShadeRect( &painter, backgroundRect, palette(), false, 1, 0,
                     isEnabled() ? &backgroundBrush : &defBrush );
@@ -243,9 +234,14 @@ void KoDualColorButton::paintEvent(QPaintEvent *)
 
     painter.setPen( palette().color( QPalette::Shadow ) );
 
-    painter.drawPixmap( foregroundRect.right() + 2, 1, d->arrowBitmap );
-    painter.drawPixmap( 1, foregroundRect.bottom() + 2, d->resetPixmap );
+    paint_icons(painter);
 }
+
+void KoDualColorButton::paint_icons(QPainter &painter){
+    painter.drawPixmap( foregroundRect.right() + 2, 1, arrowBitmap );
+    painter.drawPixmap( 1, foregroundRect.bottom() + 2, resetPixmap );
+}
+
 
 void KoDualColorButton::dragEnterEvent( QDragEnterEvent *event )
 {
@@ -255,20 +251,6 @@ void KoDualColorButton::dragEnterEvent( QDragEnterEvent *event )
 void KoDualColorButton::dropEvent( QDropEvent *event )
 {
     Q_UNUSED(event);
-    /*  QColor color = KColorMimeData::fromMimeData( event->mimeData() );
-
-  if ( color.isValid() ) {
-    if ( d->selection == Foreground ) {
-      d->foregroundColor = color;
-      Q_EMIT foregroundColorChanged( color );
-    } else {
-      d->backgroundColor = color;
-      Q_EMIT backgroundColorChanged( color );
-    }
-
-    update();
-  }
-*/
 }
 
 void KoDualColorButton::slotSetForegroundColorFromDialog(const KoColor color)
@@ -316,12 +298,42 @@ void KoDualColorButton::openBackgroundDialog()
     update();
 }
 
+void KoDualColorButton::backgroundSelect(bool usePlatformDialog)
+{
+    if( d->popDialog) {
+        if (usePlatformDialog) {
+            QColor c = d->backgroundColor.toQColor();
+            c = QColorDialog::getColor(c, this);
+            if (c.isValid()) {
+                d->backgroundColor = d->displayRenderer->approximateFromRenderedQColor(c);
+                Q_EMIT backgroundColorChanged(d->backgroundColor);
+            }
+        }
+        else {
+            openBackgroundDialog();
+        }
+    }
+}
+
+void KoDualColorButton::foregroundSelect(bool usePlatformDialog)
+{
+    if( d->popDialog) {
+        if (usePlatformDialog) {
+            QColor c = d->foregroundColor.toQColor();
+            c = QColorDialog::getColor(c, this);
+            if (c.isValid()) {
+                d->foregroundColor = d->displayRenderer->approximateFromRenderedQColor(c);
+                Q_EMIT foregroundColorChanged(d->foregroundColor);
+            }
+        }
+        else {
+            openForegroundDialog();
+        }
+    }
+}
+
 void KoDualColorButton::mousePressEvent( QMouseEvent *event )
 {
-    QRect foregroundRect;
-    QRect backgroundRect;
-
-    metrics( foregroundRect, backgroundRect );
 
     d->dragPosition = event->pos();
 
@@ -336,30 +348,37 @@ void KoDualColorButton::mousePressEvent( QMouseEvent *event )
         d->miniCtlFlag = false;
     }
     else if ( event->pos().x() > foregroundRect.width() ) {
-        // We handle the swap and reset controls as soon as the mouse is
-        // is pressed and ignore further events on this click (mosfet).
-
-        KoColor tmp = d->foregroundColor;
-        d->foregroundColor = d->backgroundColor;
-        d->backgroundColor = tmp;
-
-        Q_EMIT backgroundColorChanged( d->backgroundColor );
-        Q_EMIT foregroundColorChanged( d->foregroundColor );
+        swapColours();
 
         d->miniCtlFlag = true;
     }
     else if ( event->pos().x() < backgroundRect.x() ) {
-        d->foregroundColor = d->displayRenderer->approximateFromRenderedQColor(Qt::black);
-        d->backgroundColor = d->displayRenderer->approximateFromRenderedQColor(Qt::white);
-
-        Q_EMIT backgroundColorChanged( d->backgroundColor );
-        Q_EMIT foregroundColorChanged( d->foregroundColor );
-
+        ResetColours();
+        
         d->miniCtlFlag = true;
     }
     update();
 }
 
+
+void KoDualColorButton::ResetColours()
+{
+    d->foregroundColor = d->displayRenderer->approximateFromRenderedQColor(Qt::black);
+    d->backgroundColor = d->displayRenderer->approximateFromRenderedQColor(Qt::white);
+
+    Q_EMIT backgroundColorChanged( d->backgroundColor );
+    Q_EMIT foregroundColorChanged( d->foregroundColor );
+}
+
+void KoDualColorButton::swapColours()
+{
+    KoColor tmp = d->foregroundColor;
+    d->foregroundColor = d->backgroundColor;
+    d->backgroundColor = tmp;
+
+    Q_EMIT backgroundColorChanged( d->backgroundColor );
+    Q_EMIT foregroundColorChanged( d->foregroundColor );
+}
 
 void KoDualColorButton::mouseMoveEvent( QMouseEvent *event )
 {
@@ -386,28 +405,13 @@ void KoDualColorButton::mouseReleaseEvent( QMouseEvent *event )
 
     d->miniCtlFlag = false;
 
-    QRect foregroundRect;
-    QRect backgroundRect;
-    metrics( foregroundRect, backgroundRect );
 
     KConfigGroup cfg =  KSharedConfig::openConfig()->group("colorselector");
     bool usePlatformDialog = cfg.readEntry("UsePlatformColorDialog", false);
 
     if (foregroundRect.contains( event->pos())) {
         if (d->tmpSelection == Foreground) {
-            if (d->popDialog) {
-                if (usePlatformDialog) {
-                    QColor c = d->foregroundColor.toQColor();
-                    c = QColorDialog::getColor(c, this);
-                    if (c.isValid()) {
-                        d->foregroundColor = d->displayRenderer->approximateFromRenderedQColor(c);
-                        Q_EMIT foregroundColorChanged(d->foregroundColor);
-                    }
-                }
-                else {
-                    openForegroundDialog();
-                }
-            }
+            foregroundSelect(usePlatformDialog);
         }
         else {
             d->foregroundColor = d->backgroundColor;
@@ -416,19 +420,7 @@ void KoDualColorButton::mouseReleaseEvent( QMouseEvent *event )
     }
     else if (backgroundRect.contains( event->pos())) {
         if(d->tmpSelection == Background ) {
-            if( d->popDialog) {
-                if (usePlatformDialog) {
-                    QColor c = d->backgroundColor.toQColor();
-                    c = QColorDialog::getColor(c, this);
-                    if (c.isValid()) {
-                        d->backgroundColor = d->displayRenderer->approximateFromRenderedQColor(c);
-                        Q_EMIT backgroundColorChanged(d->backgroundColor);
-                    }
-                }
-                else {
-                    openBackgroundDialog();
-                }
-            }
+            backgroundSelect(usePlatformDialog);
         } else {
             d->backgroundColor = d->foregroundColor;
             Q_EMIT backgroundColorChanged( d->backgroundColor );
@@ -438,6 +430,9 @@ void KoDualColorButton::mouseReleaseEvent( QMouseEvent *event )
     update();
 }
 
+
+
+
 void KoDualColorButton::changeEvent(QEvent *event)
 {
     QWidget::changeEvent(event);
@@ -445,7 +440,7 @@ void KoDualColorButton::changeEvent(QEvent *event)
     switch (event->type()) {
     case QEvent::StyleChange:
     case QEvent::PaletteChange:
-        d->updateArrows();
+    updateArrows();
     default:
         break;
     }
@@ -454,9 +449,6 @@ void KoDualColorButton::changeEvent(QEvent *event)
 bool KoDualColorButton::event(QEvent *event)
 {
     if (event->type() == QEvent::ToolTip) {
-        QRect foregroundRect;
-        QRect backgroundRect;
-        metrics( foregroundRect, backgroundRect );
 
         const QHelpEvent *helpEvent = static_cast<QHelpEvent*>(event);
 
@@ -480,3 +472,4 @@ bool KoDualColorButton::event(QEvent *event)
     return QWidget::event(event);
 
 }
+

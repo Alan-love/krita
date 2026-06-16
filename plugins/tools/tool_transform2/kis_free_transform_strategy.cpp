@@ -129,9 +129,6 @@ struct KisFreeTransformStrategy::Private
 
     bool isTransforming {false};
 
-    // Snapshot modifiers so the camera-height toggle can react to the key being toggled mid-drag,
-    Qt::KeyboardModifiers perspectiveTriggerModifiers {Qt::NoModifier};
-
     QCursor getScaleCursor(const QPointF &handlePt);
     QCursor getShearCursor(const QPointF &start, const QPointF &end);
     void recalculateTransformations();
@@ -205,8 +202,6 @@ void KisFreeTransformStrategy::setTransformFunction(const QPointF &mousePos, boo
 
     if (perspectiveModifierActive && !m_d->transaction.shouldAvoidPerspectiveTransform()) {
         m_d->function = PERSPECTIVE;
-        m_d->perspectiveTriggerModifiers =
-            qApp->keyboardModifiers() & (Qt::ControlModifier | Qt::AltModifier | Qt::ShiftModifier | Qt::MetaModifier);
         return;
     }
 
@@ -456,12 +451,20 @@ bool KisFreeTransformStrategy::beginPrimaryAction(const QPointF &pt)
     return true;
 }
 
+void KisFreeTransformStrategy::continuePrimaryAction(const QPointF &pt, bool shiftModifierActive, bool altModifierActive)
+{
+    KIS_SAFE_ASSERT_RECOVER_NOOP(0 && "this override is not used in KisFreeTransformStrategy");
+}
+
 void KisFreeTransformStrategy::continuePrimaryAction(const QPointF &mousePos,
                                                      bool shiftModifierActive,
-                                                     bool altModifierActive)
+                                                     bool altModifierActive,
+                                                     bool hasOriginalModifiersSet)
 {
     // Note: "shiftModifierActive" just tells us if the shift key is being pressed
     // Note: "altModifierActive" just tells us if the alt key is being pressed
+    // Note: "hasOriginalModifiersSet" tells if the set of modifiers that triggered
+    //       the whole action is still pressed in the original form
 
     m_d->isTransforming = true;
     const QPointF anchorPoint = m_d->clickArgs.originalCenter() + m_d->clickArgs.rotationCenterOffset();
@@ -573,12 +576,7 @@ void KisFreeTransformStrategy::continuePrimaryAction(const QPointF &mousePos,
     break;
     case PERSPECTIVE:
     {
-        const Qt::KeyboardModifiers liveModifiers = qApp->keyboardModifiers();
-        const bool perspectiveStillHeld =
-            m_d->perspectiveTriggerModifiers != Qt::NoModifier &&
-            (liveModifiers & m_d->perspectiveTriggerModifiers) == m_d->perspectiveTriggerModifiers;
-
-        if (!perspectiveStillHeld) {
+        if (!hasOriginalModifiersSet) {
             m_d->function = CAMERAHEIGHT;
             m_d->clickArgs = m_d->currentArgs;
             m_d->clickPos = mousePos;
@@ -605,12 +603,7 @@ void KisFreeTransformStrategy::continuePrimaryAction(const QPointF &mousePos,
     }
     break;
     case CAMERAHEIGHT: {
-        const Qt::KeyboardModifiers liveModifiers = qApp->keyboardModifiers();
-        const bool perspectiveStillHeld =
-            m_d->perspectiveTriggerModifiers != Qt::NoModifier &&
-            (liveModifiers & m_d->perspectiveTriggerModifiers) == m_d->perspectiveTriggerModifiers;
-
-        if (perspectiveStillHeld) {
+        if (hasOriginalModifiersSet) {
             m_d->function = PERSPECTIVE;
             m_d->clickPos = mousePos;
             break;
@@ -630,9 +623,9 @@ void KisFreeTransformStrategy::continuePrimaryAction(const QPointF &mousePos,
         // Multiply normalized distance by mouse movement to calculate new camera height to add.
         heightDelta = heightDelta * scaledDy;
         qreal newHeight = currentHeight + heightDelta;
-        
+
         newHeight = qMax(300.0, qMin(20000.0, newHeight));
-        m_d->currentArgs.setCameraPos(QVector3D(0, 0, newHeight));        
+        m_d->currentArgs.setCameraPos(QVector3D(0, 0, newHeight));
     }
     break;
     case TOPSCALE:

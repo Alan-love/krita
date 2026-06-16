@@ -86,7 +86,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-13 00:41+0000\n"
+"POT-Creation-Date: 2026-06-16 00:42+0000\n"
 "PO-Revision-Date: 2026-01-19 18:02+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -22655,7 +22655,7 @@ msgstr "Tuo kuva"
 
 #. i18n.
 #: libs/image/kis_image.cc:737 libs/ui/kis_import_catcher.cc:50
-#: libs/ui/KisDocument.cpp:2709 plugins/impex/psd/psd_loader.cpp:221
+#: libs/ui/KisDocument.cpp:2711 plugins/impex/psd/psd_loader.cpp:221
 #, fuzzy, kde-format
 #| msgid "Background"
 msgctxt "Name for the bottom-most layer in the layerstack"
@@ -23151,13 +23151,13 @@ msgstr ""
 "Käännä valinta\n"
 "valinnan kääntäminen"
 
-#: libs/image/kis_selection_filters.cpp:930
+#: libs/image/kis_selection_filters.cpp:935
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Anti-Alias Selection"
 msgstr "Näytä valinta"
 
-#: libs/image/kis_selection_filters.cpp:1195
+#: libs/image/kis_selection_filters.cpp:1200
 msgctxt "(qtundo-format)"
 msgid "Grow Selection Until Darkest Pixel"
 msgstr ""
@@ -25361,9 +25361,9 @@ msgstr "Ladataan resursseja…"
 #: libs/ui/kis_node_manager.cpp:1381 libs/ui/KisApplication.cpp:1225
 #: libs/ui/KisApplication.cpp:1228 libs/ui/KisApplication.cpp:1244
 #: libs/ui/KisApplication.cpp:1276 libs/ui/KisApplication.cpp:1290
-#: libs/ui/KisApplication.cpp:1318 libs/ui/KisDocument.cpp:1055
-#: libs/ui/KisDocument.cpp:1070 libs/ui/KisDocument.cpp:2037
-#: libs/ui/KisDocument.cpp:2080 libs/ui/KisDocument.cpp:2091
+#: libs/ui/KisApplication.cpp:1318 libs/ui/KisDocument.cpp:1057
+#: libs/ui/KisDocument.cpp:1072 libs/ui/KisDocument.cpp:2039
+#: libs/ui/KisDocument.cpp:2082 libs/ui/KisDocument.cpp:2093
 #: libs/ui/KisMainWindow.cpp:997 libs/ui/KisMainWindow.cpp:1067
 #: libs/ui/KisMainWindow.cpp:1216 libs/ui/KisMainWindow.cpp:1313
 #: libs/ui/KisMainWindow.cpp:1997 libs/ui/KisMainWindow.cpp:2006
@@ -27866,8 +27866,8 @@ msgstr "Tiedosto"
 #: plugins/dockers/advancedcolorselector/wdg_color_selector_settings.ui:645
 #: plugins/dockers/advancedcolorselector/wdg_color_selector_settings.ui:888
 #: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:328
-#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:668
-#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:875
+#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:675
+#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:882
 #: plugins/generators/multigridpattern/wdgmultigridpatternoptions.ui:89
 #: plugins/impex/heightmap/kis_wdg_options_heightmap.ui:165
 #: plugins/impex/pdf/pdfimportwidgetbase.ui:167
@@ -27906,8 +27906,8 @@ msgstr "Leveys:"
 #: libs/ui/imagesize/wdg_layersize.ui:129
 #: plugins/dockers/advancedcolorselector/wdg_color_selector_settings.ui:868
 #: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:342
-#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:688
-#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:895
+#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:695
+#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:902
 #: plugins/impex/heightmap/kis_wdg_options_heightmap.ui:112
 #: plugins/impex/pdf/pdfimportwidgetbase.ui:199
 #: plugins/paintops/spray/wdgsprayshapeoptions.ui:133
@@ -28109,8 +28109,8 @@ msgstr "Versio:"
 #: libs/ui/widgets/KoFillConfigWidget.ui:275
 #: plugins/dockers/griddocker/grid_config_widget.ui:259
 #: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:284
-#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:631
-#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:838
+#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:628
+#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:845
 #: plugins/filters/halftone/KisHalftoneConfigPageWidget.cpp:36
 #: plugins/impex/webp/kis_wdg_options_webp.ui:451
 #: plugins/tools/tool_crop/wdg_tool_crop.ui:447
@@ -37524,45 +37524,45 @@ msgctxt "(qtundo-format)"
 msgid "Clone Document"
 msgstr "Avaa tiedosto"
 
-#: libs/ui/KisDocument.cpp:790
+#: libs/ui/KisDocument.cpp:792
 #, kde-format
 msgid "%1 cannot be written to. Please save under a different name."
 msgstr ""
 
-#: libs/ui/KisDocument.cpp:841
+#: libs/ui/KisDocument.cpp:843
 #, fuzzy, kde-format
 #| msgid "Failed to create an action."
 msgctxt "Saving error message"
 msgid "Failed to create a backup file"
 msgstr "Toiminnon luonti epäonnistui."
 
-#: libs/ui/KisDocument.cpp:858
+#: libs/ui/KisDocument.cpp:860
 #, fuzzy, kde-format
 #| msgid "Failed to create an action."
 msgctxt "Saving error message"
 msgid "Failed to create a numbered backup file"
 msgstr "Toiminnon luonti epäonnistui."
 
-#: libs/ui/KisDocument.cpp:880
+#: libs/ui/KisDocument.cpp:882
 #, fuzzy, kde-format
 #| msgid "Opening Document"
 msgid "Exporting Document..."
 msgstr "Avataan tiedostoa"
 
-#: libs/ui/KisDocument.cpp:881
+#: libs/ui/KisDocument.cpp:883
 #, fuzzy, kde-format
 #| msgid "Saving document..."
 msgid "Saving Document..."
 msgstr "Tiedostoa tallennetaan..."
 
-#: libs/ui/KisDocument.cpp:896
+#: libs/ui/KisDocument.cpp:898
 #, kde-format
 msgid ""
 "Could not start saving %1. Wait until the current save operation has "
 "finished."
 msgstr ""
 
-#: libs/ui/KisDocument.cpp:901
+#: libs/ui/KisDocument.cpp:903
 #, fuzzy, kde-format
 #| msgid ""
 #| "Could not save\n"
@@ -37572,7 +37572,7 @@ msgstr ""
 "Ei voitu tallentaa tiedostoa\n"
 "%1"
 
-#: libs/ui/KisDocument.cpp:906
+#: libs/ui/KisDocument.cpp:908
 #, fuzzy, kde-format
 #| msgid ""
 #| "Could not save\n"
@@ -37582,14 +37582,14 @@ msgstr ""
 "Ei voitu tallentaa tiedostoa\n"
 "%1"
 
-#: libs/ui/KisDocument.cpp:1049
+#: libs/ui/KisDocument.cpp:1051
 #, fuzzy, kde-format
 #| msgid "Error during autosave! Partition full?"
 msgctxt "%1 --- failing file name, %2 --- error message"
 msgid "Error during saving %1: %2"
 msgstr "Automaattitallennus epäonnistui! Onko osio täynnä?"
 
-#: libs/ui/KisDocument.cpp:1056
+#: libs/ui/KisDocument.cpp:1058
 #, fuzzy, kde-format
 #| msgid ""
 #| "Could not save\n"
@@ -37599,7 +37599,7 @@ msgstr ""
 "Ei voitu tallentaa tiedostoa\n"
 "%1"
 
-#: libs/ui/KisDocument.cpp:1073
+#: libs/ui/KisDocument.cpp:1075
 #, kde-format
 msgctxt ""
 "dialog box shown to the user if there were warnings while saving the "
@@ -37607,47 +37607,47 @@ msgctxt ""
 msgid "%1 has been saved but is incomplete."
 msgstr "%1 tallennettiin, mutta jäi kesken."
 
-#: libs/ui/KisDocument.cpp:1079
+#: libs/ui/KisDocument.cpp:1081
 #, kde-format
 msgctxt ""
 "dialog box shown to the user if there were warnings while saving the document"
 msgid "Some problems were encountered when saving."
 msgstr "Tallennettaessa kohdattiin ongelmia."
 
-#: libs/ui/KisDocument.cpp:1096
+#: libs/ui/KisDocument.cpp:1098
 #, fuzzy, kde-format
 msgid "Finished saving %1"
 msgstr "&Lopeta moniviiva"
 
-#: libs/ui/KisDocument.cpp:1537
+#: libs/ui/KisDocument.cpp:1539
 #, fuzzy, kde-format
 #| msgid "Autosaving..."
 msgid "Autosaving... %1"
 msgstr "Tallennetaan automaattisesti…"
 
-#: libs/ui/KisDocument.cpp:1545
+#: libs/ui/KisDocument.cpp:1547
 #, kde-format
 msgid "Autosaving..."
 msgstr "Tallennetaan automaattisesti…"
 
-#: libs/ui/KisDocument.cpp:1551
+#: libs/ui/KisDocument.cpp:1553
 #, kde-format
 msgid "Autosaving postponed: document is busy..."
 msgstr "Automaattitallennusta viivästettiin: tiedosto on varattu…"
 
-#: libs/ui/KisDocument.cpp:1694
+#: libs/ui/KisDocument.cpp:1696
 #, fuzzy, kde-format
 #| msgid "Error during autosave! Partition full?"
 msgctxt "%1 --- failing file name, %2 --- error message"
 msgid "Error during autosaving %1: %2"
 msgstr "Automaattitallennus epäonnistui! Onko osio täynnä?"
 
-#: libs/ui/KisDocument.cpp:1708
+#: libs/ui/KisDocument.cpp:1710
 #, fuzzy, kde-format
 msgid "Finished autosaving %1"
 msgstr "&Lopeta moniviiva"
 
-#: libs/ui/KisDocument.cpp:1965
+#: libs/ui/KisDocument.cpp:1967
 #, fuzzy, kde-format
 #| msgid ""
 #| "Malformed URL\n"
@@ -37659,42 +37659,42 @@ msgstr ""
 "Virheellinen verkko-osoite\n"
 "%1"
 
-#: libs/ui/KisDocument.cpp:2037
+#: libs/ui/KisDocument.cpp:2039
 #, kde-format
 msgid "File %1 does not exist."
 msgstr "Tiedostoa %1 ei ole olemassa."
 
-#: libs/ui/KisDocument.cpp:2066
+#: libs/ui/KisDocument.cpp:2068
 #, fuzzy, kde-format
 #| msgid "Opening Document"
 msgid "Opening document"
 msgstr "Avataan tiedostoa"
 
-#: libs/ui/KisDocument.cpp:2081
+#: libs/ui/KisDocument.cpp:2083
 #, fuzzy, kde-format
 #| msgid "Could not open '%1'."
 msgid "Could not open %1."
 msgstr "Ei voitu avata: ”%1”."
 
-#: libs/ui/KisDocument.cpp:2092
+#: libs/ui/KisDocument.cpp:2094
 #, kde-format
 msgid "There were problems opening %1."
 msgstr "Tiedostoa %1 avattaessa oli ongelmia."
 
-#: libs/ui/KisDocument.cpp:2230
+#: libs/ui/KisDocument.cpp:2232
 #, fuzzy, kde-format
 #| msgid "Not Filled"
 msgid "Not Saved"
 msgstr "Ei täyttöä"
 
-#: libs/ui/KisDocument.cpp:2716
+#: libs/ui/KisDocument.cpp:2718
 #, fuzzy, kde-format
 #| msgid "Background"
 msgctxt "Name of automatically created background color fill layer"
 msgid "Background Fill"
 msgstr "Tausta"
 
-#: libs/ui/KisDocument.cpp:2778
+#: libs/ui/KisDocument.cpp:2780
 #, kde-format
 msgctxt ""
 "progress dialog message when the user closes the document that is being saved"
@@ -38108,8 +38108,8 @@ msgstr "Syy:"
 #. i18n: ectx: property (title), widget (QGroupBox, ckCCAutoUpdate)
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
 #: libs/ui/KisImportExportManager.cpp:671
-#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:728
-#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:935
+#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:735
+#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:942
 #: plugins/paintops/libpaintop/forms/wdgtexturechooser.ui:57
 #, kde-format
 msgid "Options"
@@ -38754,37 +38754,37 @@ msgstr "Näyttövedostus pois päältä."
 msgid "Gamut Warnings turned off."
 msgstr "Toistoalavaroitus pois päältä."
 
-#: libs/ui/KisViewManager.cpp:810
+#: libs/ui/KisViewManager.cpp:811
 #, kde-format
 msgid "Active Author Profile"
 msgstr "Aktiivinen tekijäprofiili"
 
-#: libs/ui/KisViewManager.cpp:940
+#: libs/ui/KisViewManager.cpp:941
 #, fuzzy, kde-format
 #| msgctxt "@option:radio"
 #| msgid "%1 (Qt)"
 msgid "%1 (Copy)"
 msgstr "%1 (Qt)"
 
-#: libs/ui/KisViewManager.cpp:1066 libs/ui/KisViewManager.cpp:1134
+#: libs/ui/KisViewManager.cpp:1067 libs/ui/KisViewManager.cpp:1135
 #, kde-format
 msgid "Alternative names exhausted, try manually saving with a higher number"
 msgstr ""
 "Vaihtoehtoiset nimet lopussa: yritä tallentaa itse suuremmalle numerolle"
 
-#: libs/ui/KisViewManager.cpp:1066
+#: libs/ui/KisViewManager.cpp:1067
 #, kde-format
 msgctxt "@title:window"
 msgid "Couldn't save incremental version"
 msgstr "Ei voitu tallentaa täydentävää versiota"
 
-#: libs/ui/KisViewManager.cpp:1134
+#: libs/ui/KisViewManager.cpp:1135
 #, kde-format
 msgctxt "@title:window"
 msgid "Couldn't save incremental backup"
 msgstr "Ei voitu tallentaa täydentävää varmuuskopiota"
 
-#: libs/ui/KisViewManager.cpp:1418
+#: libs/ui/KisViewManager.cpp:1419
 #, kde-format
 msgid ""
 "Going into Canvas-Only mode.\n"
@@ -38793,14 +38793,14 @@ msgstr ""
 "Siirrytään vain kangas -tilaan.\n"
 "Palaa takaisin painamalla %1."
 
-#: libs/ui/KisViewManager.cpp:1488
+#: libs/ui/KisViewManager.cpp:1489
 #, fuzzy, kde-format
 #| msgid "Open Resource Folder"
 msgctxt "@title:window resource folder"
 msgid "Open Resource Folder"
 msgstr "Avaa resurssikansio"
 
-#: libs/ui/KisViewManager.cpp:1492
+#: libs/ui/KisViewManager.cpp:1493
 #, kde-format
 msgctxt "@info resource folder"
 msgid ""
@@ -38815,19 +38815,19 @@ msgid ""
 "%2</p>"
 msgstr ""
 
-#: libs/ui/KisViewManager.cpp:1507
+#: libs/ui/KisViewManager.cpp:1508
 #, kde-format
 msgctxt "@action:button resource folder"
 msgid "Open in &user AppData"
 msgstr "Avaa käyttäjän App&Dataan"
 
-#: libs/ui/KisViewManager.cpp:1508
+#: libs/ui/KisViewManager.cpp:1509
 #, kde-format
 msgctxt "@action:button resource folder"
 msgid "Open in &private app location"
 msgstr "Avaa sovelluksen &yksityiseen sijaintiin"
 
-#: libs/ui/KisViewManager.cpp:1656 libs/ui/KisViewManager.cpp:1674
+#: libs/ui/KisViewManager.cpp:1657 libs/ui/KisViewManager.cpp:1675
 #, kde-format
 msgctxt "choice for author profile"
 msgid "Anonymous"
@@ -42267,8 +42267,8 @@ msgstr "Painike"
 #: plugins/dockers/advancedcolorselector/wdg_color_selector_settings.ui:966
 #: plugins/dockers/storyboarddocker/wdgexportstoryboard.ui:264
 #: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:309
-#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:610
-#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:817
+#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:646
+#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:824
 #: plugins/extensions/clonesarray/wdg_clonesarray.ui:219
 #: plugins/tools/tool_transform2/wdg_tool_transform.ui:2194
 #, kde-format
@@ -44623,7 +44623,7 @@ msgstr "YCBCR16-histogrammi"
 msgid "YCbCr/F32 Histogram"
 msgstr "YCBCRF32-histogrammi"
 
-#: plugins/dockers/advancedcolorselector/kis_color_history.cpp:30
+#: plugins/dockers/advancedcolorselector/kis_color_history.cpp:32
 #, fuzzy, kde-format
 msgid "Clear all color history"
 msgstr "Sarakkeiden määrä"
@@ -44954,7 +44954,7 @@ msgstr "Paikkoja rivillä: "
 #. i18n: ectx: property (title), widget (QGroupBox, historyGroupBox)
 #. i18n: ectx: attribute (title), widget (QWidget, tab_ColorHistory)
 #: plugins/dockers/advancedcolorselector/wdg_color_selector_settings.ui:603
-#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:553
+#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:560
 #, kde-format
 msgid "Color History"
 msgstr "Värihistoria"
@@ -44989,8 +44989,8 @@ msgstr "Paikkoja enintään:"
 #: plugins/dockers/advancedcolorselector/wdg_color_selector_settings.ui:708
 #: plugins/dockers/advancedcolorselector/wdg_color_selector_settings.ui:925
 #: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:227
-#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:562
-#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:769
+#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:569
+#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:776
 #, kde-format
 msgid "Layout"
 msgstr "Asettelu"
@@ -45023,8 +45023,10 @@ msgstr "&Vaakasuuntainen"
 msgid "Allow scrolling"
 msgstr "Salli vieritys"
 
+#. i18n: ectx: property (text), widget (QCheckBox, chkColorHistoryDocument)
 #. i18n: ectx: property (text), widget (QCheckBox, lastUsedColorsPerDocument)
 #: plugins/dockers/advancedcolorselector/wdg_color_selector_settings.ui:821
+#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:553
 #, kde-format
 msgid "Separate color history for each document"
 msgstr ""
@@ -48072,8 +48074,8 @@ msgstr "US Letter"
 #. i18n: ectx: property (text), widget (QLabel, pageOrientationLabel)
 #: plugins/dockers/storyboarddocker/wdgexportstoryboard.ui:111
 #: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:233
-#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:568
-#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:775
+#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:575
+#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:782
 #, kde-format
 msgid "Orientation:"
 msgstr "Suunta:"
@@ -50440,8 +50442,8 @@ msgstr "Väripaikat"
 #. i18n: ectx: property (text), widget (QRadioButton, rbHistoryHorizontal)
 #. i18n: ectx: property (text), widget (QRadioButton, rbCommonColorsHorizontal)
 #: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:260
-#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:590
-#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:797
+#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:597
+#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:804
 #, kde-format
 msgid "hori&zontal"
 msgstr "&vaaka"
@@ -50450,8 +50452,8 @@ msgstr "&vaaka"
 #. i18n: ectx: property (text), widget (QRadioButton, rbHistoryVertical)
 #. i18n: ectx: property (text), widget (QRadioButton, rbCommonColorsVertical)
 #: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:270
-#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:600
-#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:807
+#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:607
+#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:814
 #, kde-format
 msgid "&vertical"
 msgstr "&pysty"
@@ -50460,8 +50462,8 @@ msgstr "&pysty"
 #. i18n: ectx: property (text), item, widget (QComboBox, cbScrolling)
 #. i18n: ectx: property (text), item, widget (QComboBox, cbCommonColorsScrolling)
 #: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:289
-#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:636
-#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:843
+#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:633
+#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:850
 #, fuzzy, kde-format
 #| msgid "Orientation"
 msgid "Along Orientation"
@@ -50471,8 +50473,8 @@ msgstr "Suunta"
 #. i18n: ectx: property (text), item, widget (QComboBox, cbScrolling)
 #. i18n: ectx: property (text), item, widget (QComboBox, cbCommonColorsScrolling)
 #: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:294
-#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:641
-#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:848
+#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:638
+#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:855
 #, fuzzy, kde-format
 #| msgid "Vertically"
 msgid "Laterally"
@@ -50482,8 +50484,8 @@ msgstr "Pystysuunnassa"
 #. i18n: ectx: property (text), widget (QLabel, label_12)
 #. i18n: ectx: property (text), widget (QLabel, label_23)
 #: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:302
-#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:649
-#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:856
+#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:617
+#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:863
 #, kde-format
 msgid "Scrolling:"
 msgstr "Vieritys:"
@@ -50492,8 +50494,8 @@ msgstr "Vieritys:"
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_6)
 #: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:322
-#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:659
-#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:866
+#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:666
+#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:873
 #, kde-format
 msgid "Patches"
 msgstr "Paikat"
@@ -50502,8 +50504,8 @@ msgstr "Paikat"
 #. i18n: ectx: property (text), widget (QLabel, label_15)
 #. i18n: ectx: property (text), widget (QLabel, label_21)
 #: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:356
-#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:695
-#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:902
+#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:702
+#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:909
 #, kde-format
 msgid "Max Patches:"
 msgstr "Paikkoja enintään:"
@@ -50555,7 +50557,7 @@ msgid "Line Height:"
 msgstr "Rivin korkeus:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, ckHistoryClearButton)
-#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:734
+#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:741
 #, fuzzy, kde-format
 #| msgctxt "left mouse button"
 #| msgid "left button"
@@ -50563,13 +50565,13 @@ msgid "Clear Button"
 msgstr "vasenta painiketta"
 
 #. i18n: ectx: property (title), widget (QGroupBox, commonColorsGroupBox)
-#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:760
+#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:767
 #, kde-format
 msgid "Colors fro&m Image"
 msgstr "Värit &kuvasta"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkBox)
-#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:941
+#: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:948
 #, kde-format
 msgid "Auto Update"
 msgstr "Automaattinen päivitys"
@@ -50776,13 +50778,13 @@ msgctxt "action"
 msgid "Shift hue of the selected color counter-clockwise"
 msgstr "Kierrä valitun värin sävyä vastapäivään"
 
-#: plugins/dockers/widegamutcolorselector/WGColorSelectorDock.cpp:48
+#: plugins/dockers/widegamutcolorselector/WGColorSelectorDock.cpp:49
 #, fuzzy, kde-format
 #| msgid "Hide Shade Selector"
 msgid "Wide Gamut Color Selector"
 msgstr "Piilota sävyvalitsin"
 
-#: plugins/dockers/widegamutcolorselector/WGColorSelectorDock.cpp:316
+#: plugins/dockers/widegamutcolorselector/WGColorSelectorDock.cpp:340
 #, fuzzy, kde-format
 #| msgctxt "Wide Gamut Color Selector"
 #| msgid "Configure..."
@@ -70920,7 +70922,7 @@ msgctxt "Region selection method in enclose and fill tool"
 msgid "Any surrounded by a specific color or transparency"
 msgstr "Kaikki tietyn värin tai läpinäkyvän ympäröimät"
 
-#: plugins/tools/tool_knife/CutThroughShapeStrategy.cpp:206
+#: plugins/tools/tool_knife/CutThroughShapeStrategy.cpp:256
 #: plugins/tools/tool_knife/RemoveGutterStrategy.cpp:219
 msgctxt "(qtundo-format)"
 msgid "Knife tool: cut through shapes"

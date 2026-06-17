@@ -17,9 +17,12 @@ class KisSelectionActionsPanelHandle : public QWidget
 public:
     KisSelectionActionsPanelHandle(int size, QWidget *parent);
     ~KisSelectionActionsPanelHandle();
+
     void draw(QPainter& painter, const KoColorDisplayRendererInterface *renderInterface);
     void set_held(bool held);
     void setOrientation(Orientation orientation);
+    void themeChanged();
+
 protected:
     void contextMenuEvent(QContextMenuEvent *event) override;
     void mousePressEvent(QMouseEvent* event) override;

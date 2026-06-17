@@ -36,6 +36,8 @@
 #include <klocalizedstring.h>
 #include <ktoggleaction.h>
 #include <kconfiggroup.h>
+#include <KisPart.h>
+#include <KisMainWindow.h>
 
 #include <QApplication>
 #include <QPainter>
@@ -151,14 +153,12 @@ KisSelectionActionsPanel::KisSelectionActionsPanel(KisViewManager *viewManager)
     connect(KisConfigNotifier::instance(), SIGNAL(configChanged()), SLOT(configChanged()));
     connect(d->m_viewManager->canvasBase()->canvasController()->proxyObject, SIGNAL(canvasStateChanged()), SLOT(canvasStateChanged()));
 
-
+    connect(KisPart::instance()->currentMainwindow(), SIGNAL(themeChanged()), this, SLOT(themeChanged()));
 
     KConfigGroup cfg = KSharedConfig::openConfig()->group("");
     d->m_dragHandle.dragOffset = cfg.readEntry(d->dragOffsetConfigName, QPoint(0, 0));
 
     configChanged(true);
-
-
 
 }
 
@@ -868,6 +868,14 @@ void KisSelectionActionsPanel::canvasStateChanged()
     }
 
     movePanelWidgets();
+}
+
+void KisSelectionActionsPanel::themeChanged()
+{
+    Q_FOREACH(KisSelectionActionsPanelButton* button, d->m_buttons) {
+        KisIconUtils::updateIcon(button);
+    }
+    d->m_handleWidget->themeChanged();
 }
 
 

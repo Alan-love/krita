@@ -43371,7 +43371,7 @@ msgstr "直方图"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Toggle logarithmic histogram."
-msgstr ""
+msgstr "显示对数直方图。"
 
 #: plugins/dockers/historydocker/HistoryDock.cpp:22
 #, kde-format

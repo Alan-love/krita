@@ -52,7 +52,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 00:42+0000\n"
+"POT-Creation-Date: 2026-06-20 00:41+0000\n"
 "PO-Revision-Date: 2025-10-26 23:39+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -68915,12 +68915,12 @@ msgstr "Behåll proportion"
 msgid "Apply"
 msgstr "Tillämpa"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:426
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:427
 #, kde-format
 msgid "Transform Tool Actions"
 msgstr "Transformeringsverktygsåtgärder"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:937
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:938
 #, fuzzy, kde-format
 #| msgctxt "floating message in transformation tool"
 #| msgid "Cannot transform empty layer "
@@ -68928,7 +68928,7 @@ msgctxt "floating message in transformation tool"
 msgid "Cannot transform locked layers"
 msgstr "Kan inte transformera tomt lager "
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:943
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:944
 #, fuzzy, kde-format
 #| msgctxt "floating message in transformation tool"
 #| msgid "Cannot transform empty layer "
@@ -68936,7 +68936,7 @@ msgctxt "floating message in transformation tool"
 msgid "Cannot transform hidden layers"
 msgstr "Kan inte transformera tomt lager "
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:949
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:950
 #, fuzzy, kde-format
 #| msgctxt "floating message in transformation tool"
 #| msgid "Cannot transform empty layer "
@@ -68944,13 +68944,13 @@ msgctxt "floating message in transformation tool"
 msgid "Cannot use transform tool on this set of layers"
 msgstr "Kan inte transformera tomt lager "
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:965
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:966
 #, kde-format
 msgctxt "floating message in transformation tool"
 msgid "Layer type cannot use the transform tool"
 msgstr "Lagertypen kan inte använda transformeringsverktyget"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:972
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:973
 #, kde-format
 msgctxt "floating message in transformation tool"
 msgid "Layer type cannot use the transform tool. Use transform mask instead."
@@ -68958,7 +68958,7 @@ msgstr ""
 "Lagertyp kan inte använda transformeringsverktyget. Använd "
 "transformeringsmasken istället."
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:991
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:992
 #, kde-format
 msgctxt "floating message in transformation tool"
 msgid ""
@@ -68968,20 +68968,20 @@ msgstr ""
 "Lagret har underliggande lager med transformeringsmasker. Inaktivera dem "
 "innan transformeringen utförs."
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:1004
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:1005
 #, kde-format
 msgctxt "floating message in transformation tool"
 msgid "Selections are not used when editing transform masks "
 msgstr "Markeringar används inte när transformeringsmasker redigeras "
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:1089
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:1128
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:1090
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:1129
 #, kde-format
 msgctxt "floating message in transformation tool"
 msgid "Cannot transform empty layer "
 msgstr "Kan inte transformera tomt lager "
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:1115
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:1116
 #, kde-format
 msgctxt "floating message in transformation tool"
 msgid ""

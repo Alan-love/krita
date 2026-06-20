@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-16 00:42+0000\n"
+"POT-Creation-Date: 2026-06-20 00:41+0000\n"
 "PO-Revision-Date: 2026-06-11 17:03+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -68805,12 +68805,12 @@ msgstr "保持寬高比"
 msgid "Apply"
 msgstr "套用"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:426
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:427
 #, kde-format
 msgid "Transform Tool Actions"
 msgstr "變形工具動作"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:937
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:938
 #, fuzzy, kde-format
 #| msgctxt "floating message in transformation tool"
 #| msgid "Cannot transform empty layer "
@@ -68818,7 +68818,7 @@ msgctxt "floating message in transformation tool"
 msgid "Cannot transform locked layers"
 msgstr "無法對空圖層進行變形操作"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:943
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:944
 #, fuzzy, kde-format
 #| msgctxt "floating message in transformation tool"
 #| msgid "Cannot transform empty layer "
@@ -68826,7 +68826,7 @@ msgctxt "floating message in transformation tool"
 msgid "Cannot transform hidden layers"
 msgstr "無法對空圖層進行變形操作"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:949
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:950
 #, fuzzy, kde-format
 #| msgctxt "floating message in transformation tool"
 #| msgid "Cannot transform empty layer "
@@ -68834,19 +68834,19 @@ msgctxt "floating message in transformation tool"
 msgid "Cannot use transform tool on this set of layers"
 msgstr "無法對空圖層進行變形操作"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:965
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:966
 #, kde-format
 msgctxt "floating message in transformation tool"
 msgid "Layer type cannot use the transform tool"
 msgstr "圖層類型不支援變形工具"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:972
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:973
 #, kde-format
 msgctxt "floating message in transformation tool"
 msgid "Layer type cannot use the transform tool. Use transform mask instead."
 msgstr "圖層類型不支援變形工具，請改用變形遮罩。"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:991
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:992
 #, kde-format
 msgctxt "floating message in transformation tool"
 msgid ""
@@ -68854,20 +68854,20 @@ msgid ""
 "transformation."
 msgstr "圖層含有帶變形遮罩的子圖層。在進行變形操作前，請先停用這些變形遮罩。"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:1004
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:1005
 #, kde-format
 msgctxt "floating message in transformation tool"
 msgid "Selections are not used when editing transform masks "
 msgstr "編輯變形遮罩時，選取區域不被使用"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:1089
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:1128
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:1090
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:1129
 #, kde-format
 msgctxt "floating message in transformation tool"
 msgid "Cannot transform empty layer "
 msgstr "無法對空圖層進行變形操作"
 
-#: plugins/tools/tool_transform2/kis_tool_transform.cc:1115
+#: plugins/tools/tool_transform2/kis_tool_transform.cc:1116
 #, kde-format
 msgctxt "floating message in transformation tool"
 msgid ""

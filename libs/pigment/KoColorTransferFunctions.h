@@ -111,13 +111,16 @@ ALWAYS_INLINE float applyHLGCurve(float x) noexcept
 
     /// This scales everything so that diffuse white is at 75~%,
     /// as per BT.2408, pg 4-5, and BT. 2390 pg. 52-53.
-    const float scale =  (1.0 / 3.7743);
+    const float scale =  (1.0f / 3.7743f);
 
-    if (x > 1.0f / 12.0f) {
-        return (a * logf(12.0f * (x*scale) - b) + c) ;
+    float val = x * scale;
+
+    if (val > 1.0f / 12.0f) {
+        val = (a * logf(12.0f * (val) - b) + c) ;
     } else {
-        return (sqrtf(3.0f * (x * scale)));
+        val = (sqrtf(3.0f * (val)));
     }
+    return qBound(0.0, val, 1.0);
 }
 
 ALWAYS_INLINE float removeHLGCurve(float x) noexcept
@@ -126,7 +129,7 @@ ALWAYS_INLINE float removeHLGCurve(float x) noexcept
     const float b = 0.28466892f;
     const float c = 0.55991073f;
 
-    const float scale = 3.7743;
+    const float scale = 3.7743f;
 
     if (x <= 0.5f) {
         // return (powf(x, 2.0) / 3.0);
@@ -177,7 +180,7 @@ struct KoColorTransferFunctions {
         constexpr float b = 0.28466892f;
         constexpr float c = 0.55991073f;
 
-        constexpr float scale = 3.7743;
+        constexpr float scale = 3.7743f;
 
         const float_v x1 = x * x * (1.f / 3.0f);
         const float_v x2 =

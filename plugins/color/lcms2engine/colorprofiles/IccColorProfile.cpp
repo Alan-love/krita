@@ -175,6 +175,7 @@ IccColorProfile::IccColorProfile(const QVector<double> &colorants,
     if (transferFunction == TRC_ITU_R_BT_2100_0_PQ) {
         LcmsPredefinedPipelineFunctions::setPerceptualQuantizerAToBDummyPipeline(iccProfile, cmsSigAToB0Tag, colorPrimariesType);
         LcmsPredefinedPipelineFunctions::setPerceptualQuantizerBToADummyPipeline(iccProfile, cmsSigBToA0Tag, colorPrimariesType);
+        LcmsPredefinedPipelineFunctions::setDiffuseWhitePerceptualQuantizer(iccProfile, 80.0);
         // Otherwise this is recognised as a matrix shaper...
         cmsWriteTag(iccProfile, cmsSigRedColorantTag, nullptr);
         cmsWriteTag(iccProfile, cmsSigGreenColorantTag, nullptr);

@@ -4,6 +4,7 @@
  * SPDX-License-Identifier: LGPL-2.1-or-later
  */
 #include "LcmsPredefinedPipelineFunctions.h"
+#include "kis_dom_utils.h"
 #include <KoColorTransferFunctions.h>
 #include <KoColorProfile.h>
 #include <QMatrix4x4>
@@ -96,6 +97,7 @@ struct perceptualDummyHelper {
     bool toXYZ{false};
     int channels {3};
     double *luma{nullptr};
+    double diffuseWhiteNits{80};
     };
 
 /**
@@ -106,13 +108,8 @@ struct perceptualDummyHelper {
 cmsInt32Number samplePQDummyClut(const cmsUInt16Number In[], cmsUInt16Number Out[], void *Cargo) {
     struct perceptualDummyHelper *helper = (struct perceptualDummyHelper *) Cargo;
     const float pqScale = 125.0; /// Important: this normalizes the pq signal.
-    const float nominalPeak = 10000.0/392.0;/// See bt. 2390 pg. 52.
-    double coeff[] = {0.2126, 0.7152, 0.0722};
-    if (helper->luma) {
-        coeff[0] = helper->luma[0];
-        coeff[1] = helper->luma[1];
-        coeff[2] = helper->luma[2];
-    }
+    const float nominalPeak = 10000.0/helper->diffuseWhiteNits;/// See bt. 2390 pg. 52.
+
     float lin[3];
     for (int i = 0; i < helper->channels; i++) {
         const float val = float(In[i])/65535.0;
@@ -134,7 +131,7 @@ cmsInt32Number samplePQDummyClut(const cmsUInt16Number In[], cmsUInt16Number Out
     return true;
 };
 
-bool LcmsPredefinedPipelineFunctions::setPerceptualQuantizerAToBDummyPipeline(cmsHPROFILE iccProfile, cmsTagSignature tag, ColorPrimaries primaries)
+bool LcmsPredefinedPipelineFunctions::setPerceptualQuantizerAToBDummyPipeline(cmsHPROFILE iccProfile, cmsTagSignature tag, ColorPrimaries primaries, double diffuseWhiteNits)
 {
     // From profile space to XYZ.
     const double factor = 1.0;
@@ -155,6 +152,7 @@ bool LcmsPredefinedPipelineFunctions::setPerceptualQuantizerAToBDummyPipeline(cm
     perceptualDummyHelper helper;
     helper.toXYZ = true;
     helper.luma = luma;
+    helper.diffuseWhiteNits = diffuseWhiteNits;
     cmsStageSampleCLut16bit(clutStage, &samplePQDummyClut, &helper, 0);
     cmsPipelineInsertStage(a2B, cmsAT_END, clutStage);
 
@@ -185,7 +183,7 @@ bool LcmsPredefinedPipelineFunctions::setPerceptualQuantizerAToBDummyPipeline(cm
     return success;
 }
 
-bool LcmsPredefinedPipelineFunctions::setPerceptualQuantizerBToADummyPipeline(cmsHPROFILE iccProfile, cmsTagSignature tag, ColorPrimaries primaries)
+bool LcmsPredefinedPipelineFunctions::setPerceptualQuantizerBToADummyPipeline(cmsHPROFILE iccProfile, cmsTagSignature tag, ColorPrimaries primaries, double diffuseWhiteNits)
 {
     // From XYZ to profile space.
     const double factor = 1.0;
@@ -219,6 +217,7 @@ bool LcmsPredefinedPipelineFunctions::setPerceptualQuantizerBToADummyPipeline(cm
     perceptualDummyHelper helper;
     helper.toXYZ = false;
     helper.luma = luma;
+    helper.diffuseWhiteNits = diffuseWhiteNits;
     cmsStageSampleCLut16bit(clutStage, &samplePQDummyClut, &helper, 0);
     cmsPipelineInsertStage(b2A, cmsAT_END, clutStage);
 
@@ -228,5 +227,41 @@ bool LcmsPredefinedPipelineFunctions::setPerceptualQuantizerBToADummyPipeline(cm
     cmsFreeToneCurve(curve[0]);
     cmsFreeToneCurve(linearCurves[0]);
     cmsPipelineFree(b2A);
+    return success;
+}
+
+bool LcmsPredefinedPipelineFunctions::setDiffuseWhitePerceptualQuantizer(cmsHPROFILE iccProfile, double diffuseWhiteNits)
+{
+    bool success = false;
+    cmsHANDLE dictionary = cmsDictAlloc(nullptr);
+
+
+
+    // https://registry.color.org/dicttype-metadata/crwl
+    cmsMLU *mluName = cmsMLUalloc (NULL, 1);
+    QString name("CRWL");
+    cmsMLUsetASCII (mluName, "en", "US", name.toLatin1());
+
+    // Hack to avoid having to figure out how to get the value.
+    int count = cmsMLUgetWide(mluName, "en", "US", nullptr, 0);
+    std::vector<wchar_t> nameArray(count);
+    cmsMLUgetWide(mluName, "en", "US", nameArray.data(), count);
+
+    cmsMLU *mluValue = cmsMLUalloc (NULL, 1);
+    QString value = KisDomUtils::toString(diffuseWhiteNits);
+    cmsMLUsetASCII (mluValue, "en", "US", value.toLatin1());
+    count = cmsMLUgetWide(mluValue, "en", "US", nullptr, 0);
+    std::vector<wchar_t> valArray(count);
+    cmsMLUgetWide(mluValue, "en", "US", valArray.data(), count);
+
+    success = cmsDictAddEntry(dictionary, nameArray.data(), valArray.data(), mluName, mluValue);
+
+    if (success) {
+        success = cmsWriteTag(iccProfile, cmsSigMetaTag, dictionary);
+    }
+
+    cmsMLUfree(mluName);
+    cmsMLUfree(mluValue);
+    cmsDictFree(dictionary);
     return success;
 }

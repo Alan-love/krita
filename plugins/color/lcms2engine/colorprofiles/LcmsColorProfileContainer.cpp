@@ -19,6 +19,7 @@
 
 #include <QDebug>
 
+#include "DebugPigment.h"
 #include "kis_debug.h"
 
 #include <KisLazyStorage.h>
@@ -315,6 +316,18 @@ bool LcmsColorProfileContainer::init()
         d->isSaturationCLUT = cmsIsCLUT(d->profile, INTENT_SATURATION, LCMS_USED_AS_INPUT);
         d->isAbsoluteCLUT = cmsIsCLUT(d->profile, INTENT_SATURATION, LCMS_USED_AS_INPUT);
         d->isRelativeCLUT = cmsIsCLUT(d->profile, INTENT_RELATIVE_COLORIMETRIC, LCMS_USED_AS_INPUT);
+
+        if (cmsIsTag(d->profile, cmsSigMetaTag)) {
+            dbgPigment << "icc profile has dictionary entries";
+
+            cmsHANDLE dictionary = (cmsHANDLE) cmsReadTag(d->profile, cmsSigMetaTag);
+            const cmsDICTentry *entry = cmsDictGetEntryList(dictionary);
+            while (entry) {
+                dbgPigment << QString::fromWCharArray(entry->Name, -1) << QString::fromWCharArray(entry->Value, -1);;
+                dbgPigment << entry->DisplayName << entry->DisplayValue;
+                entry = cmsDictNextEntry(entry);
+            }
+        }
 
         return true;
     }

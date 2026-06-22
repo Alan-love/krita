@@ -27,8 +27,14 @@ public:
  * but it is combined with cicp values in the profile.
  *****************/
 
-    static bool setPerceptualQuantizerAToBDummyPipeline(cmsHPROFILE iccProfile, cmsTagSignature tag, ColorPrimaries primaries);
-    static bool setPerceptualQuantizerBToADummyPipeline(cmsHPROFILE iccProfile, cmsTagSignature tag, ColorPrimaries primaries);
+    static bool setPerceptualQuantizerAToBDummyPipeline(cmsHPROFILE iccProfile, cmsTagSignature tag, ColorPrimaries primaries, double diffuseWhiteNits = 80.0);
+    static bool setPerceptualQuantizerBToADummyPipeline(cmsHPROFILE iccProfile, cmsTagSignature tag, ColorPrimaries primaries, double diffuseWhiteNits = 80.0);
+    /**
+     * @brief setDiffuseWhitePerceptualQuantizer
+     * This adds a dictionary with an CRWL entry to the profile.
+     * @return whether it was successfully written.
+     */
+    static bool setDiffuseWhitePerceptualQuantizer(cmsHPROFILE iccProfile, double diffuseWhiteNits = 80.0);
 
 };
 

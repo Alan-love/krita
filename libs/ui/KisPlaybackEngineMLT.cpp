@@ -152,6 +152,8 @@ struct KisPlaybackEngineMLT::Private {
         , playbackSpeed(1.0)
         , mute(false)
     {
+        qDebug() << "Initializing MLT Animation Playback Engine. MLT ver: " << QString(mlt_version_get_string());
+
         // Initialize MLT...
         repository.reset(Mlt::Factory::init());
 

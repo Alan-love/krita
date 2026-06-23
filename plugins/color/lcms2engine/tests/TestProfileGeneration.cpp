@@ -5,6 +5,8 @@
  */
 
 #include "TestProfileGeneration.h"
+#include "colorprofiles/LcmsColorProfileContainer.h"
+#include "colorprofiles/IccColorProfile.h"
 
 #include <QTest>
 #include <cmath>
@@ -344,7 +346,6 @@ void TestProfileGeneration::testTransferFunctions()
     }
 
     for (double value : inputValuesRaw) {
-        double cValue = value;
         /*
          * HLG
          * for 1  >=  Lc > 1 ÷ 12
@@ -359,30 +360,13 @@ void TestProfileGeneration::testTransferFunctions()
          *
          */
 
-        double a = 0.17883277;
-        double b = 0.28466892;
-        double c = 0.55991073;
-
-
-        if (value > 1.0/12.0) {
-            cValue = a*log(12*value-b) + c;
-        } else {
-            cValue = sqrt(3) * powf(value, 0.5);
-        }
 
         double cValue2 = applyHLGCurve(value);
 
-
-        double lValue = (exp(((cValue2 - c) / a)) + b) / 12.0;
-        if (cValue2 <= 0.5) {
-            lValue = powf(cValue2, 2.0) / 3.0;
-        }
-
-        double lValue2 = removeHLGCurve(cValue);
+        double lValue2 = removeHLGCurve(cValue2);
 
         //Not possible in icc v4
-        QVERIFY2(fabs(lValue - value) < 0.000001, QString("Values don't match for HLG: %1 %2").arg(value).arg(lValue).toLatin1());
-        QVERIFY2(fabs(lValue2 - value) < 0.000001, QString("Values don't match for HLG, 2: %1 %2").arg(value).arg(lValue2).toLatin1());
+        QVERIFY2(fabs(lValue2 - value) < 0.000001, QString("Values don't match for HLG: %1 %2").arg(value).arg(lValue2).toLatin1());
 
     }
 
@@ -390,17 +374,38 @@ void TestProfileGeneration::testTransferFunctions()
 
 }
 
+void TestProfileGeneration::testCICPwriting_data()
+{
+    QTest::addColumn<ColorPrimaries>("primaries");
+    QTest::addColumn<TransferCharacteristics>("transfer");
+
+    QTest::addRow("rec2020") << PRIMARIES_ITU_R_BT_2020_2_AND_2100_0 << TRC_ITU_R_BT_2020_2_12bit;
+    QTest::addRow("rec2100 PQ") << PRIMARIES_ITU_R_BT_2020_2_AND_2100_0 << TRC_ITU_R_BT_2100_0_PQ;
+    QTest::addRow("rec709") << PRIMARIES_ITU_R_BT_709_5 << TRC_ITU_R_BT_709_5;
+}
+
 void TestProfileGeneration::testCICPwriting()
 {
+    QFETCH(ColorPrimaries, primaries);
+    QFETCH(TransferCharacteristics, transfer);
     QVector<double> colorants;
-    const KoColorProfile *profile = KoColorSpaceRegistry::instance()->profileFor(colorants, PRIMARIES_ITU_R_BT_2020_2_AND_2100_0, TRC_ITU_R_BT_2020_2_12bit);
+    const KoColorProfile *profile = KoColorSpaceRegistry::instance()->profileFor(colorants, primaries, transfer);
 
     QVERIFY(profile);
 
     // TODO: write and reload the profile.
 
-    QVERIFY(profile->getColorPrimaries() == PRIMARIES_ITU_R_BT_2020_2_AND_2100_0);
-    QVERIFY(profile->getTransferCharacteristics() == TRC_ITU_R_BT_2020_2_12bit);
+    QVERIFY(profile->getColorPrimaries() == primaries);
+    QVERIFY(profile->getTransferCharacteristics() == transfer);
+
+    const IccColorProfile *icc = dynamic_cast<const IccColorProfile*>(profile);
+    QVERIFY(icc);
+    const LcmsColorProfileContainer *lcms = icc->asLcms();
+    QVERIFY(lcms);
+
+    QVERIFY(lcms->hasCicpValues());
+    QVERIFY(lcms->cicpPrimaries() == primaries);
+    QVERIFY(lcms->cicpTransfer() == transfer);
 }
 
 KISTEST_MAIN(TestProfileGeneration)

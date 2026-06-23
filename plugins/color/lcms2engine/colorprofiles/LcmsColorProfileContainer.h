@@ -13,6 +13,7 @@
 #include "IccColorProfile.h"
 
 #include <lcms2.h>
+#include "kritalcmsengine_export.h"
 
 #include <QByteArray>
 #include <QString>
@@ -20,7 +21,7 @@
 /**
  * This class contains an LCMS color profile. Don't use it outside LcmsColorSpace.
  */
-class LcmsColorProfileContainer : public IccColorProfile::Container
+class KRITALCMSENGINE_EXPORT LcmsColorProfileContainer : public IccColorProfile::Container
 {
     friend class IccColorProfile;
 protected:

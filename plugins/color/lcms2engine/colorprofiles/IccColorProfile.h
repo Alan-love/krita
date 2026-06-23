@@ -11,12 +11,14 @@
 #include "KoColorProfile.h"
 #include "KoChannelInfo.h"
 
+#include "kritalcmsengine_export.h"
+
 class LcmsColorProfileContainer;
 
 /**
  * This class contains an ICC color profile.
  */
-class IccColorProfile : public KoColorProfile
+class KRITALCMSENGINE_EXPORT IccColorProfile : public KoColorProfile
 {
 public:
 

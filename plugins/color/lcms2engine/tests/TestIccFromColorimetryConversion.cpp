@@ -219,14 +219,8 @@ void TestIccFromColorimetryConversion::testProfileConstruction()
 
     QVERIFY(profile);
 
-    if (QLatin1String(QTest::currentDataTag()) == "bt2020-pq") {
-        // we use a fake profile with a special color space for bt2020pq space, so
-        // just verify that the profile name is consistent
-        QCOMPARE(profile->name(), "High Dynamic Range UHDTV Wide Color Gamut Display (Rec. 2020) - SMPTE ST 2084 PQ EOTF");
-    } else {
-        QCOMPARE(profile->getColorPrimaries(), expectedPrimaries);
-        QCOMPARE(profile->getTransferCharacteristics(), expectedTransferFunction);
-    }
+    QCOMPARE(profile->getColorPrimaries(), expectedPrimaries);
+    QCOMPARE(profile->getTransferCharacteristics(), expectedTransferFunction);
 
     qDebug() << ppVar(profile->name()) << ppVar(profile->fileName());
 }

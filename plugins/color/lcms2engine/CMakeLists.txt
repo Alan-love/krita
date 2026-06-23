@@ -79,9 +79,12 @@ if (HAVE_LCMS24 AND OpenEXR_FOUND)
 endif ()
 
 
-
+kis_add_library(kritalcmsengine_static STATIC ${lcmsengine_SRCS})
 kis_add_library(kritalcmsengine MODULE ${lcmsengine_SRCS})
+generate_export_header(kritalcmsengine_static BASE_NAME kritalcmsengine)
 
-target_link_libraries(kritalcmsengine kritapigment kritawidgetutils KF${KF_MAJOR}::I18n KF${KF_MAJOR}::CoreAddons ${LCMS2_LIBRARIES} ${LINK_OPENEXR_LIB})
+target_link_libraries(kritalcmsengine_static kritapigment kritawidgetutils KF${KF_MAJOR}::I18n KF${KF_MAJOR}::CoreAddons ${LCMS2_LIBRARIES} ${LINK_OPENEXR_LIB})
+
+target_link_libraries(kritalcmsengine PRIVATE kritalcmsengine_static)
 install(TARGETS kritalcmsengine DESTINATION ${KRITA_PLUGIN_INSTALL_DIR})
 

@@ -108,7 +108,7 @@ struct perceptualDummyHelper {
 cmsInt32Number samplePQDummyClut(const cmsUInt16Number In[], cmsUInt16Number Out[], void *Cargo) {
     struct perceptualDummyHelper *helper = (struct perceptualDummyHelper *) Cargo;
     const float pqScale = 125.0; /// Important: this normalizes the pq signal.
-    const float nominalPeak = 10000.0/helper->diffuseWhiteNits;/// See bt. 2390 pg. 52.
+    const float nominalPeak = 10000.0/(helper->diffuseWhiteNits * 3.7743);/// scaling the nits value by the HLG scaling factor.
 
     float lin[3];
     for (int i = 0; i < helper->channels; i++) {

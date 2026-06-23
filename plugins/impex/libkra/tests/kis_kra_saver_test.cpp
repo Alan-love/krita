@@ -603,6 +603,14 @@ void KisKraSaverTest::testRoundTripCicp()
     doc2->image()->waitForDone();
     QVERIFY(doc2->image()->colorSpace()->profile()->getColorPrimaries() == primaries);
     QVERIFY(doc2->image()->colorSpace()->profile()->getTransferCharacteristics() == transfer);
+
+    // De-Duplication test.
+    QList<const KoColorProfile*> profiles = KoColorSpaceRegistry::instance()->profilesFor(cs->id());
+    QStringList tested;
+    Q_FOREACH(const KoColorProfile *profile, profiles) {
+        QVERIFY(!tested.contains(profile->name()));
+        tested.append(profile->name());
+    }
 }
 
 KISTEST_MAIN(KisKraSaverTest)

@@ -24,7 +24,7 @@ private Q_SLOTS:
     void testImportFromWriteonly();
     void testImportIncorrectFormat();
 
-
+    void testLoadingOldHdrProfileNoCicp();
 };
 
 #endif

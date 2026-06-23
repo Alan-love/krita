@@ -571,4 +571,38 @@ void KisKraSaverTest::testExportToReadonly()
     TestUtil::testExportToReadonly(KraMimetype);
 }
 
+void KisKraSaverTest::testRoundTripCicp_data()
+{
+    QTest::addColumn<ColorPrimaries>("primaries");
+    QTest::addColumn<TransferCharacteristics>("transfer");
+
+    QTest::addRow("rec2020") << PRIMARIES_ITU_R_BT_2020_2_AND_2100_0 << TRC_ITU_R_BT_2020_2_12bit;
+    QTest::addRow("rec2100 PQ") << PRIMARIES_ITU_R_BT_2020_2_AND_2100_0 << TRC_ITU_R_BT_2100_0_PQ;
+    QTest::addRow("rec709") << PRIMARIES_ITU_R_BT_709_5 << TRC_ITU_R_BT_709_5;
+}
+
+void KisKraSaverTest::testRoundTripCicp()
+{
+    QFETCH(ColorPrimaries, primaries);
+    QFETCH(TransferCharacteristics, transfer);
+    QVector<double> colorants;
+    const KoColorProfile *profile = KoColorSpaceRegistry::instance()->profileFor(colorants, primaries, transfer);
+
+    QRect imageRect(0,0,512,512);
+    const KoColorSpace * cs = KoColorSpaceRegistry::instance()->colorSpace(RGBAColorModelID.id(), Integer8BitsColorDepthID.id(), profile);
+
+    QScopedPointer<KisDocument> doc(KisPart::instance()->createDocument());
+    KisImageSP image = new KisImage(new KisSurrogateUndoStore(), imageRect.width(), imageRect.height(), cs, "test image");
+    doc->setCurrentImage(image);
+    const QString name = "roundtrip_cicp_test_"+QString::number(primaries)+"_"+QString::number(transfer)+".kra";
+    doc->exportDocumentSync(name, doc->mimeType());
+
+    QScopedPointer<KisDocument> doc2(KisPart::instance()->createDocument());
+    bool result = doc2->loadNativeFormat(name);
+    QVERIFY(result);
+    doc2->image()->waitForDone();
+    QVERIFY(doc2->image()->colorSpace()->profile()->getColorPrimaries() == primaries);
+    QVERIFY(doc2->image()->colorSpace()->profile()->getTransferCharacteristics() == transfer);
+}
+
 KISTEST_MAIN(KisKraSaverTest)

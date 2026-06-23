@@ -165,5 +165,54 @@ void KisPngTest::testSaveHDR()
                     KoColorSpaceRegistry::instance()->p2020PQProfile()));
 }
 
+void KisPngTest::testRoundtripCicpIccProfile_data()
+{
+    QTest::addColumn<ColorPrimaries>("primaries");
+    QTest::addColumn<TransferCharacteristics>("transfer");
+
+    QTest::addRow("rec2020") << PRIMARIES_ITU_R_BT_2020_2_AND_2100_0 << TRC_ITU_R_BT_2020_2_12bit;
+    QTest::addRow("rec2100 PQ") << PRIMARIES_ITU_R_BT_2020_2_AND_2100_0 << TRC_ITU_R_BT_2100_0_PQ;
+    QTest::addRow("rec709") << PRIMARIES_ITU_R_BT_709_5 << TRC_ITU_R_BT_709_5;
+}
+
+void KisPngTest::testRoundtripCicpIccProfile()
+{
+    QFETCH(ColorPrimaries, primaries);
+    QFETCH(TransferCharacteristics, transfer);
+    QVector<double> colorants;
+    const KoColorProfile *profile = KoColorSpaceRegistry::instance()->profileFor(colorants, primaries, transfer);
+
+    QRect imageRect(0,0,512,512);
+    const KoColorSpace * cs = KoColorSpaceRegistry::instance()->colorSpace(RGBAColorModelID.id(), Integer8BitsColorDepthID.id(), profile);
+
+    QScopedPointer<KisDocument> doc(KisPart::instance()->createDocument());
+    doc->setFileBatchMode(true);
+    KisImageSP image = new KisImage(new KisSurrogateUndoStore(), imageRect.width(), imageRect.height(), cs, "test image");
+    doc->setCurrentImage(image);
+    const QString name = "roundtrip_cicp_test_"+QString::number(primaries)+"_"+QString::number(transfer)+".png";
+
+    KisPropertiesConfigurationSP exportConfiguration = new KisPropertiesConfiguration();
+    exportConfiguration->setProperty("saveSRGBProfile", false);
+    exportConfiguration->setProperty("forceSRGB", false);
+    doc->exportDocumentSync(name, "image/png", exportConfiguration);
+
+    //---//
+
+    QScopedPointer<KisDocument> doc2(KisPart::instance()->createDocument());
+    KisImportExportManager manager(doc2.data());
+    doc2->setFileBatchMode(true);
+
+    KisImportExportErrorCode loadingStatus =
+        manager.importDocument(name, QString());
+
+    QVERIFY(loadingStatus.isOk());
+
+    KisImageSP image2 = doc2->image();
+    image2->initialRefreshGraph();
+    image2->waitForDone();
+    QVERIFY(image2->colorSpace()->profile()->getColorPrimaries() == primaries);
+    QVERIFY(image2->colorSpace()->profile()->getTransferCharacteristics() == transfer);
+}
+
 KISTEST_MAIN(KisPngTest)
 

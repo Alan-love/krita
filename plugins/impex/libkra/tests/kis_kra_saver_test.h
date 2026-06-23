@@ -37,6 +37,9 @@ private Q_SLOTS:
 
     void testExportToReadonly();
 
+    void testRoundTripCicp_data();
+    void testRoundTripCicp();
+
 };
 
 #endif

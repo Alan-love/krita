@@ -34,7 +34,6 @@ public:
 
     bool supportsColorSpace(const QString& colorModelId, const QString& colorDepthId, const KoColorProfile *profile) const override;
 private:
-    void setupSpecialTransforms(const KoColorProfile *profile);
     struct Private;
     Private *const d;
 };

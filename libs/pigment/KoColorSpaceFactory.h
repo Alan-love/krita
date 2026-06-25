@@ -120,6 +120,18 @@ public:
      */
     const KoColorSpace *grabColorSpace(const KoColorProfile *profile);
 
+    /**
+     * @brief colorConversionLinksFromProfile
+     * Sometimes, we need to generate special color conversion links based on
+     * the properties of the profile. The Perceptual Quantizer profiles are an
+     * example of this. This function is called inside the color conversion system.
+     * @param profile -- the profile for which to create the links for.
+     */
+    virtual QList<KoColorConversionTransformationFactory*> colorConversionLinksFromProfile(const KoColorProfile *profile) const {
+        Q_UNUSED(profile)
+        return QList<KoColorConversionTransformationFactory*>();
+    }
+
 protected:
     /**
      * creates a color space using the given profile.

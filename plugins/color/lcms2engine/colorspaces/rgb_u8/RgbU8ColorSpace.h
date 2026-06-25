@@ -104,6 +104,8 @@ public:
     {
         return "sRGB-elle-V2-srgbtrc.icc";
     }
+
+    QList<KoColorConversionTransformationFactory*> colorConversionLinksFromProfile(const KoColorProfile *profile) const override;
 };
 
 #endif // KO_STRATEGY_COLORSPACE_RGB_H_

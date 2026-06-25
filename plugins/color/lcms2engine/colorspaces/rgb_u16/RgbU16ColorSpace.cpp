@@ -11,6 +11,7 @@
 
 #include <klocalizedstring.h>
 
+#include "LcmsRGBP2020PQColorSpace.h"
 #include "compositeops/KoCompositeOps.h"
 #include "compositeops/RgbCompositeOps.h"
 #include "dithering/KisRgbDitherOpFactory.h"
@@ -111,4 +112,19 @@ void RgbU16ColorSpace::fillGrayBrushWithColorAndLightnessWithStrength(quint8* ds
 void RgbU16ColorSpace::modulateLightnessByGrayBrush(quint8 *dst, const QRgb *brush, qreal strength, qint32 nPixels) const
 {
    modulateLightnessByGrayBrushRGB<KoBgrU16Traits>(dst, brush, strength, nPixels);
+}
+
+QList<KoColorConversionTransformationFactory *> RgbU16ColorSpaceFactory::colorConversionLinksFromProfile(const KoColorProfile *profile) const
+{
+    if (profile->getTransferCharacteristics() == TRC_ITU_R_BT_2100_0_PQ
+        && profile->getColorPrimaries() != PRIMARIES_UNSPECIFIED) {
+
+        KoColorSpaceRegistry *registry = KoColorSpaceRegistry::instance();
+        QVector<double> colorants;
+        QString linear = registry->profileFor(colorants, profile->getColorPrimaries(), TRC_LINEAR)->name();
+
+        KoColorSpaceFactory *factory = new LcmsRGBP2020PQColorSpaceFactoryWrapper<RgbU16ColorSpaceFactory>(profile->name(), linear);
+        return factory->colorConversionLinks();
+    }
+    return QList<KoColorConversionTransformationFactory*>();
 }

@@ -171,18 +171,17 @@ LcmsEnginePlugin::LcmsEnginePlugin(QObject *parent, const QVariantList &)
     QVector<double> rec2020Col;
     KoColorProfile *rec2100pq = new IccColorProfile(rec2020Col, PRIMARIES_ITU_R_BT_2020_2_AND_2100_0, TRC_ITU_R_BT_2100_0_PQ);
 
-    QString linear = "Rec2020-elle-V4-g10.icc";
     registry->addProfileAlias("High Dynamic Range UHDTV Wide Color Gamut Display (Rec. 2020) - SMPTE ST 2084 PQ EOTF", rec2100pq->name());
-    QString target = rec2100pq->name();
-    registry->add(new LcmsRGBP2020PQColorSpaceFactoryWrapper<RgbU8ColorSpaceFactory>(target, linear));
-    registry->add(new LcmsRGBP2020PQColorSpaceFactoryWrapper<RgbU16ColorSpaceFactory>(target, linear));
-#ifdef HAVE_LCMS24
-#ifdef HAVE_OPENEXR
-    registry->add(new LcmsRGBP2020PQColorSpaceFactoryWrapper<RgbF16ColorSpaceFactory>(target, linear));
-#endif
-#endif
-    registry->add(new LcmsRGBP2020PQColorSpaceFactoryWrapper<RgbF32ColorSpaceFactory>(target, linear));
     registry->addProfile(rec2100pq);
+
+    registry->add(new RgbU8ColorSpaceFactory());
+    registry->add(new RgbU16ColorSpaceFactory());
+    #ifdef HAVE_LCMS24
+    #ifdef HAVE_OPENEXR
+        registry->add(new RgbF16ColorSpaceFactory());
+    #endif
+    #endif
+    registry->add(new RgbF32ColorSpaceFactory());
 
     KoHistogramProducerFactoryRegistry::instance()->add(
         new KoBasicHistogramProducerFactory<KoBasicU8HistogramProducer>

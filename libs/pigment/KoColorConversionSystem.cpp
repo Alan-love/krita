@@ -59,6 +59,7 @@ void KoColorConversionSystem::insertColorSpace(const KoColorSpaceFactory* csf)
     const QList<const KoColorProfile*> profiles = d->registryInterface->profilesFor(csf);
     QString modelId = csf->colorModelId().id();
     QString depthId = csf->colorDepthId().id();
+    QList<KoColorConversionTransformationFactory*> cctfs;
     if (profiles.isEmpty()) { // There is no profile for this CS, create a node without profile name if the color engine isn't icc-based
         if (csf->colorSpaceEngine() != "icc") {
             Node* n = nodeFor(modelId, depthId, "default");
@@ -71,6 +72,7 @@ void KoColorConversionSystem::insertColorSpace(const KoColorSpaceFactory* csf)
         // Initialise the nodes
         Q_FOREACH (const KoColorProfile* profile, profiles) {
             Node* n = nodeFor(modelId, depthId, profile->name());
+            cctfs.append(csf->colorConversionLinksFromProfile(profile));
             n->init(csf);
             if (!csf->colorSpaceEngine().isEmpty()) {
                 KoColorSpaceEngine* engine = KoColorSpaceEngineRegistry::instance()->get(csf->colorSpaceEngine());
@@ -91,7 +93,7 @@ void KoColorConversionSystem::insertColorSpace(const KoColorSpaceFactory* csf)
         }
     }
     // Construct a link for "custom" transformation
-    const QList<KoColorConversionTransformationFactory*> cctfs = csf->colorConversionLinks();
+    cctfs.append(csf->colorConversionLinks());
     Q_FOREACH (KoColorConversionTransformationFactory* cctf, cctfs) {
         Node* srcNode = nodeFor(cctf->srcColorModelId(), cctf->srcColorDepthId(), cctf->srcProfile());
         Q_ASSERT(srcNode);
@@ -132,7 +134,8 @@ void KoColorConversionSystem::insertColorProfile(const KoColorProfile* _profile)
                 connectToEngine(n, engineNode);
             }
         }
-        const QList<KoColorConversionTransformationFactory*> cctfs = factory->colorConversionLinks();
+        QList<KoColorConversionTransformationFactory*> cctfs = factory->colorConversionLinks();
+        cctfs.append(factory->colorConversionLinksFromProfile(_profile));
         Q_FOREACH (KoColorConversionTransformationFactory* cctf, cctfs) {
             Node* srcNode = nodeFor(cctf->srcColorModelId(), cctf->srcColorDepthId(), cctf->srcProfile());
             Q_ASSERT(srcNode);

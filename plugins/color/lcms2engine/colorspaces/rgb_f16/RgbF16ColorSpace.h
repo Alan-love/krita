@@ -107,6 +107,8 @@ public:
         return true;
     }
 
+    QList<KoColorConversionTransformationFactory*> colorConversionLinksFromProfile(const KoColorProfile *profile) const override;
+
 };
 
 #endif

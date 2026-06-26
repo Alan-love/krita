@@ -57,7 +57,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: koffice/krita.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-20 00:41+0000\n"
+"POT-Creation-Date: 2026-06-26 00:43+0000\n"
 "PO-Revision-Date: 2026-05-02 13:49+0000\n"
 "Last-Translator: Aindriú Mac Giolla Eoin <aindriu80@yahoo.com>\n"
 "Language-Team: Irish <http://weblate.amgelocalnet.duckdns.org/projects/kde-"
@@ -21059,8 +21059,8 @@ msgstr "Méid"
 #: libs/ui/forms/wdgrectangleconstraints.ui:178
 #: libs/ui/forms/wdgrectangleconstraints.ui:200 libs/ui/kis_paintop_box.cc:302
 #: libs/ui/widgets/kis_lod_availability_widget.cpp:72
-#: libs/ui/widgets/kis_selection_options.cc:201
-#: libs/ui/widgets/kis_selection_options.cc:216
+#: libs/ui/widgets/kis_selection_options.cc:196
+#: libs/ui/widgets/kis_selection_options.cc:211
 #: plugins/dockers/advancedcolorselector/wdg_color_selector_settings.ui:311
 #: plugins/dockers/advancedcolorselector/wdg_color_selector_settings.ui:540
 #: plugins/dockers/advancedcolorselector/wdg_color_selector_settings.ui:652
@@ -30563,7 +30563,7 @@ msgstr "Barra Gníomhartha Roghnúcháin"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, chkEnableSelectionActionBar)
 #: libs/ui/forms/wdggeneralsettings.ui:1118
-#: libs/ui/widgets/kis_selection_options.cc:178
+#: libs/ui/widgets/kis_selection_options.cc:177
 #, kde-format
 msgid ""
 "When enabled, any selections will produce a small floating panel of useful "
@@ -30574,7 +30574,7 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkEnableSelectionActionBar)
 #: libs/ui/forms/wdggeneralsettings.ui:1121
-#: libs/ui/widgets/kis_selection_options.cc:176
+#: libs/ui/widgets/kis_selection_options.cc:175
 #, kde-format
 msgid "Enable Selection Actions Bar"
 msgstr "Cumasaigh Barra Gníomhartha Roghnúcháin"
@@ -38176,11 +38176,6 @@ msgctxt "(qtundo-format) Filter as an effect"
 msgid "Filter \"%1\""
 msgstr "Scagaire \"%1\""
 
-#: libs/ui/tool/strokes/move_selection_stroke_strategy.cpp:29
-msgctxt "(qtundo-format)"
-msgid "Move Selection"
-msgstr "Bog an Roghnú"
-
 #: libs/ui/toolbox/KoToolBox.cpp:360 libs/widgetutils/xmlgui/ktoolbar.cpp:346
 #, kde-format
 msgctxt "@item:inmenu Icon size"
@@ -39727,117 +39722,105 @@ msgstr "Inneall %1"
 msgid "No Preview for this engine"
 msgstr "Gan Réamhamharc don inneall seo"
 
-#: libs/ui/widgets/kis_selection_options.cc:190
-#, fuzzy, kde-format
-msgctxt "The move-selected-content checkbox in selection tool options"
-msgid "Move Selected Content"
-msgstr "Gan Roghnúchán"
-
-#: libs/ui/widgets/kis_selection_options.cc:193
+#: libs/ui/widgets/kis_selection_options.cc:188
 #: plugins/tools/basictools/kis_tool_fill.cc:591
 #, kde-format
 msgctxt "The anti-alias checkbox in fill tool options"
 msgid "Anti-aliasing"
 msgstr "Frith-ailiasú"
 
-#: libs/ui/widgets/kis_selection_options.cc:198
+#: libs/ui/widgets/kis_selection_options.cc:193
 #, kde-format
 msgctxt "The 'grow/shrink' spinbox prefix in selection tools options"
 msgid "Grow: "
 msgstr "Fás: "
 
-#: libs/ui/widgets/kis_selection_options.cc:213
+#: libs/ui/widgets/kis_selection_options.cc:208
 #, kde-format
 msgctxt "The 'feather' spinbox prefix in selection tools options"
 msgid "Feather: "
 msgstr "Cleite: "
 
-#: libs/ui/widgets/kis_selection_options.cc:233
+#: libs/ui/widgets/kis_selection_options.cc:228
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Pixel Selection"
 msgstr "Roghnú Picteilíní"
 
-#: libs/ui/widgets/kis_selection_options.cc:235
+#: libs/ui/widgets/kis_selection_options.cc:230
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Vector Selection"
 msgstr "Roghnú Veicteoir"
 
-#: libs/ui/widgets/kis_selection_options.cc:238
-#: libs/ui/widgets/kis_selection_options.cc:500
+#: libs/ui/widgets/kis_selection_options.cc:233
+#: libs/ui/widgets/kis_selection_options.cc:477
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Replace"
 msgstr "Athsholáthair"
 
-#: libs/ui/widgets/kis_selection_options.cc:240
-#: libs/ui/widgets/kis_selection_options.cc:515
+#: libs/ui/widgets/kis_selection_options.cc:235
+#: libs/ui/widgets/kis_selection_options.cc:492
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Intersect"
 msgstr "Trasnaigh"
 
-#: libs/ui/widgets/kis_selection_options.cc:242
-#: libs/ui/widgets/kis_selection_options.cc:505
+#: libs/ui/widgets/kis_selection_options.cc:237
+#: libs/ui/widgets/kis_selection_options.cc:482
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add"
 msgstr "Cuir leis"
 
-#: libs/ui/widgets/kis_selection_options.cc:244
-#: libs/ui/widgets/kis_selection_options.cc:510
+#: libs/ui/widgets/kis_selection_options.cc:239
+#: libs/ui/widgets/kis_selection_options.cc:487
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtract"
 msgstr "Dealaigh"
 
-#: libs/ui/widgets/kis_selection_options.cc:246
-#: libs/ui/widgets/kis_selection_options.cc:520
+#: libs/ui/widgets/kis_selection_options.cc:241
+#: libs/ui/widgets/kis_selection_options.cc:497
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Symmetric Difference"
 msgstr "Difríocht Siméadrach"
 
-#: libs/ui/widgets/kis_selection_options.cc:249
-#, fuzzy, kde-format
-msgctxt "@info:tooltip"
-msgid "Move Selected Content"
-msgstr "Gan Roghnúchán"
-
-#: libs/ui/widgets/kis_selection_options.cc:252
+#: libs/ui/widgets/kis_selection_options.cc:244
 #, kde-format
 msgid "Smooths the edges of the selection"
 msgstr "Réidhíonn sé imill an roghnúcháin"
 
-#: libs/ui/widgets/kis_selection_options.cc:254
+#: libs/ui/widgets/kis_selection_options.cc:246
 #, kde-format
 msgid "Grow or shrink the selection by the set amount"
 msgstr "Méadaigh nó laghdaigh an roghnúchán faoin méid socraithe"
 
-#: libs/ui/widgets/kis_selection_options.cc:256
+#: libs/ui/widgets/kis_selection_options.cc:248
 #: plugins/tools/basictools/kis_tool_fill.cc:663
 #: plugins/tools/tool_enclose_and_fill/KisToolEncloseAndFill.cpp:572
 #, kde-format
 msgid "Stop growing at the darkest and/or most opaque pixels"
 msgstr "Stop ag fás ag na picteilíní is dorcha agus/nó is teimhní"
 
-#: libs/ui/widgets/kis_selection_options.cc:258
+#: libs/ui/widgets/kis_selection_options.cc:250
 #, kde-format
 msgid "Blur the selection by the set amount"
 msgstr "Doiléir an roghnúchán leis an méid socraithe"
 
-#: libs/ui/widgets/kis_selection_options.cc:261
+#: libs/ui/widgets/kis_selection_options.cc:253
 #, kde-format
 msgid "Select regions found from the active layer"
 msgstr "Roghnaigh réigiúin a fuarthas ón tsraith ghníomhach"
 
-#: libs/ui/widgets/kis_selection_options.cc:263
+#: libs/ui/widgets/kis_selection_options.cc:255
 #, kde-format
 msgid "Select regions found from the merging of all layers"
 msgstr "Roghnaigh réigiúin a fuarthas ó chumasc na sraitheanna uile"
 
-#: libs/ui/widgets/kis_selection_options.cc:265
+#: libs/ui/widgets/kis_selection_options.cc:257
 #, kde-format
 msgid ""
 "Select regions found from the merging of layers with specific color labels"
@@ -39845,55 +39828,55 @@ msgstr ""
 "Roghnaigh réigiúin a fuarthas ó chumasc sraitheanna le lipéid dathanna "
 "sonracha"
 
-#: libs/ui/widgets/kis_selection_options.cc:273
+#: libs/ui/widgets/kis_selection_options.cc:265
 #, kde-format
 msgctxt "The 'mode' section label in selection tools options"
 msgid "Mode"
 msgstr "Mód"
 
-#: libs/ui/widgets/kis_selection_options.cc:280
+#: libs/ui/widgets/kis_selection_options.cc:272
 #, kde-format
 msgctxt "The 'action' section label in selection tools options"
 msgid "Action"
 msgstr "Gníomh"
 
-#: libs/ui/widgets/kis_selection_options.cc:287
+#: libs/ui/widgets/kis_selection_options.cc:279
 #, kde-format
 msgctxt "The 'reference' section label in selection tools options"
 msgid "Reference"
 msgstr "Tagairt"
 
-#: libs/ui/widgets/kis_selection_options.cc:300
+#: libs/ui/widgets/kis_selection_options.cc:290
 #, kde-format
 msgctxt "The 'adjustments' section label in selection tools options"
 msgid "Adjustments"
 msgstr "Coigeartuithe"
 
-#: libs/ui/widgets/kis_selection_options.cc:501
+#: libs/ui/widgets/kis_selection_options.cc:478
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Replace (%1)"
 msgstr "Ionadaigh (%1)"
 
-#: libs/ui/widgets/kis_selection_options.cc:506
+#: libs/ui/widgets/kis_selection_options.cc:483
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add (%1)"
 msgstr "Cuir leis (%1)"
 
-#: libs/ui/widgets/kis_selection_options.cc:511
+#: libs/ui/widgets/kis_selection_options.cc:488
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtract (%1)"
 msgstr "Bain (%1)"
 
-#: libs/ui/widgets/kis_selection_options.cc:516
+#: libs/ui/widgets/kis_selection_options.cc:493
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Intersect (%1)"
 msgstr "Trasnú (%1)"
 
-#: libs/ui/widgets/kis_selection_options.cc:522
+#: libs/ui/widgets/kis_selection_options.cc:499
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Symmetric Difference (%1)"
@@ -66211,6 +66194,11 @@ msgctxt "action"
 msgid "Freehand Path Tool"
 msgstr "Uirlis Cosáin Saorláimhe"
 
+#: plugins/tools/basictools/strokes/move_selection_stroke_strategy.cpp:29
+msgctxt "(qtundo-format)"
+msgid "Move Selection"
+msgstr "Bog an Roghnú"
+
 #. i18n: ectx: property (toolTip), widget (QCheckBox, cbPalette)
 #: plugins/tools/basictools/wdgcolorsampler.ui:67
 #, kde-format
@@ -70241,6 +70229,16 @@ msgstr ""
 "Athraigh idir raon iomlán agus fo-raon.\n"
 "Raon iomlán: [%1, %2]\n"
 "Fo-raon: [%3, %4]"
+
+#, fuzzy
+#~ msgctxt "The move-selected-content checkbox in selection tool options"
+#~ msgid "Move Selected Content"
+#~ msgstr "Gan Roghnúchán"
+
+#, fuzzy
+#~ msgctxt "@info:tooltip"
+#~ msgid "Move Selected Content"
+#~ msgstr "Gan Roghnúchán"
 
 #, fuzzy
 #~| msgid "Orientation:"

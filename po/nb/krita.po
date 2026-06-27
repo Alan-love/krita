@@ -67597,17 +67597,3 @@ msgid ""
 "Full range: [%1, %2]\n"
 "Subrange: [%3, %4]"
 msgstr ""
-
-#, fuzzy
-#~| msgctxt "(qtundo-format)"
-#~| msgid "Move Selection"
-#~ msgctxt "The move-selected-content checkbox in selection tool options"
-#~ msgid "Move Selected Content"
-#~ msgstr "Flytt utvalget"
-
-#, fuzzy
-#~| msgctxt "(qtundo-format)"
-#~| msgid "Move Selection"
-#~ msgctxt "@info:tooltip"
-#~ msgid "Move Selected Content"
-#~ msgstr "Flytt utvalget"

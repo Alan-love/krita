@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-26 00:43+0000\n"
+"POT-Creation-Date: 2026-06-28 00:41+0000\n"
 "PO-Revision-Date: 2024-04-07 19:45+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -13302,36 +13302,36 @@ msgstr "Скриптове"
 msgid "Setti&ngs"
 msgstr "&Настройки"
 
-#: krita/krita5.xmlgui:412 libs/widgetutils/xmlgui/khelpmenu.cpp:133
+#: krita/krita5.xmlgui:415 libs/widgetutils/xmlgui/khelpmenu.cpp:133
 #: libs/widgetutils/xmlgui/ui_standards.xmlgui:177
 #, kde-format
 msgid "&Help"
 msgstr "&Помощ"
 
-#: krita/krita5.xmlgui:431 libs/ui/kis_file_layer.cpp:129
+#: krita/krita5.xmlgui:434 libs/ui/kis_file_layer.cpp:129
 #: plugins/python/scripter/uicontroller.py:105
 #: plugins/tools/svgtexttool/svgtexttool.xmlgui:40
 #, kde-format
 msgid "File"
 msgstr "Файл"
 
-#: krita/krita5.xmlgui:437
+#: krita/krita5.xmlgui:440
 #, kde-format
 msgid "Edit"
 msgstr "Редактиране"
 
-#: krita/krita5.xmlgui:442
+#: krita/krita5.xmlgui:445
 #, kde-format
 msgid "Brushes and Stuff"
 msgstr "Четки и материали"
 
-#: krita/krita5.xmlgui:459
+#: krita/krita5.xmlgui:462
 #, fuzzy, kde-format
 #| msgid "Custom color"
 msgid "Custom toolbar 1"
 msgstr "Персонализиран цвят"
 
-#: krita/krita5.xmlgui:462
+#: krita/krita5.xmlgui:465
 #, fuzzy, kde-format
 #| msgid "Custom color"
 msgid "Custom toolbar 2"
@@ -16287,6 +16287,79 @@ msgctxt "action"
 msgid "Workspaces"
 msgstr "Работно пространство"
 
+#. i18n: context: text @ Actions (Resources), ActionCollection (Supporter Benefits)
+#: krita/kritamenu_android.action:4
+#, fuzzy, kde-format
+#| msgid "Resources"
+msgctxt "action"
+msgid "Resources"
+msgstr "Ресурси"
+
+#. i18n: context: text @ Action (manage_supporter_bundles), Actions (Resources), ActionCollection (Supporter Benefits)
+#: krita/kritamenu_android.action:7
+#, fuzzy, kde-format
+#| msgctxt "action"
+#| msgid "Manage Resources..."
+msgctxt "action"
+msgid "Get More Resources..."
+msgstr "Управление на ресурси..."
+
+#. i18n: context: toolTip @ Action (manage_supporter_bundles), Actions (Resources), ActionCollection (Supporter Benefits)
+#. i18n: context: iconText @ Action (manage_supporter_bundles), Actions (Resources), ActionCollection (Supporter Benefits)
+#. i18n: context: toolTip @ Action (manage_supporter_bundles), Actions (Resources), ActionCollection (Supporter Benefits)
+#. i18n: context: iconText @ Action (manage_supporter_bundles), Actions (Resources), ActionCollection (Supporter Benefits)
+#: krita/kritamenu_android.action:9 krita/kritamenu_android.action:10
+#, fuzzy, kde-format
+#| msgid "Manage Resources"
+msgctxt "action"
+msgid "Get More Resources"
+msgstr "Управление на ресурси"
+
+#. i18n: context: text @ Actions (Management), ActionCollection (Supporter Benefits)
+#: krita/kritamenu_android.action:19
+#, fuzzy, kde-format
+#| msgid "Color Management"
+msgctxt "action"
+msgid "Management"
+msgstr "Управление на цветовете"
+
+#. i18n: context: text @ Action (manage_donations), Actions (Management), ActionCollection (Supporter Benefits)
+#: krita/kritamenu_android.action:22
+#, fuzzy, kde-format
+#| msgid "Manage recordings..."
+msgctxt "action"
+msgid "Manage Supporter Benefits..."
+msgstr "Управление на записите..."
+
+#. i18n: context: toolTip @ Action (manage_donations), Actions (Management), ActionCollection (Supporter Benefits)
+#. i18n: context: iconText @ Action (manage_donations), Actions (Management), ActionCollection (Supporter Benefits)
+#. i18n: context: toolTip @ Action (manage_donations), Actions (Management), ActionCollection (Supporter Benefits)
+#. i18n: context: iconText @ Action (manage_donations), Actions (Management), ActionCollection (Supporter Benefits)
+#: krita/kritamenu_android.action:24 krita/kritamenu_android.action:25
+#, kde-format
+msgctxt "action"
+msgid "Manage Supporter Benefits"
+msgstr ""
+
+#. i18n: context: text @ Action (manage_subscriptions), Actions (Management), ActionCollection (Supporter Benefits)
+#: krita/kritamenu_android.action:34
+#, fuzzy, kde-format
+#| msgid "Manage recordings..."
+msgctxt "action"
+msgid "Manage Subscriptions..."
+msgstr "Управление на записите..."
+
+#. i18n: context: toolTip @ Action (manage_subscriptions), Actions (Management), ActionCollection (Supporter Benefits)
+#. i18n: context: iconText @ Action (manage_subscriptions), Actions (Management), ActionCollection (Supporter Benefits)
+#. i18n: context: toolTip @ Action (manage_subscriptions), Actions (Management), ActionCollection (Supporter Benefits)
+#. i18n: context: iconText @ Action (manage_subscriptions), Actions (Management), ActionCollection (Supporter Benefits)
+#: krita/kritamenu_android.action:36 krita/kritamenu_android.action:37
+#, fuzzy, kde-format
+#| msgid "Description"
+msgctxt "action"
+msgid "Manage Subscriptions"
+msgstr "Описание"
+
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgSplash)
 #. i18n: ectx: property (windowTitle), widget (QDialog, KisRecoverNamedAutosaveDialog)
 #: krita/main.cc:719 libs/ui/dialogs/KisRecoverNamedAutosaveDialog.ui:21
@@ -16306,8 +16379,8 @@ msgctxt "@info:credit"
 msgid "© 1999–2026 The Krita Developers"
 msgstr ""
 
-#: krita/main.cc:820 libs/ui/KisApplication.cpp:506
-#: libs/ui/KisApplication.cpp:830
+#: krita/main.cc:820 libs/ui/KisApplication.cpp:510
+#: libs/ui/KisApplication.cpp:839
 #, kde-format
 msgctxt "@title:window"
 msgid "Krita: Warning"
@@ -21140,8 +21213,8 @@ msgstr "Размер"
 #: plugins/dockers/griddocker/grid_config_widget.ui:442
 #: plugins/dockers/griddocker/grid_config_widget.ui:654
 #: plugins/dockers/griddocker/grid_config_widget.ui:717
-#: plugins/dockers/recorder/recorder_export.ui:478
-#: plugins/dockers/recorder/recorder_export.ui:516
+#: plugins/dockers/recorder/recorder_export.ui:281
+#: plugins/dockers/recorder/recorder_export.ui:319
 #: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:479
 #: plugins/filters/blur/kis_wdg_gaussian_blur.cpp:34
 #: plugins/filters/blur/kis_wdg_gaussian_blur.cpp:42
@@ -21806,7 +21879,7 @@ msgstr ""
 
 #: libs/image/kis_layer_properties_icons.cpp:30
 #: libs/resources/KisResourceModel.cpp:116
-#: libs/resources/KisStorageModel.cpp:473
+#: libs/resources/KisStorageModel.cpp:512
 #: libs/resources/KisTagResourceModel.cpp:641
 #: plugins/extensions/dbexplorer/DlgDbExplorer.cpp:111
 #, kde-format
@@ -21958,7 +22031,7 @@ msgstr "Обработване"
 #: libs/image/kis_psd_layer_style.cpp:106
 #: libs/ui/dialogs/KisDlgCreateNewDocument.cpp:32
 #: libs/ui/dialogs/KisDlgCreateNewDocument.cpp:38
-#: libs/ui/KisApplicationArguments.cpp:384 libs/ui/KisMainWindow.cpp:1440
+#: libs/ui/KisApplicationArguments.cpp:384 libs/ui/KisMainWindow.cpp:1445
 #: plugins/impex/libkra/kis_kra_saver.cpp:89
 #, kde-format
 msgid "Unnamed"
@@ -22737,8 +22810,8 @@ msgctxt "description of a file type"
 msgid "Radiance RGBE Image"
 msgstr ""
 
-#: libs/libkis/Document.cpp:986 libs/ui/KisMainWindow.cpp:2137
-#: libs/ui/KisMainWindow.cpp:2218
+#: libs/libkis/Document.cpp:986 libs/ui/KisMainWindow.cpp:2182
+#: libs/ui/KisMainWindow.cpp:2263
 #, kde-format
 msgid "Import frames"
 msgstr "Импортиране на кадри"
@@ -24152,23 +24225,23 @@ msgstr "Ресурси"
 #: libs/ui/kis_custom_pattern.cc:126 libs/ui/kis_filter_manager.cc:234
 #: libs/ui/kis_filter_manager.cc:243 libs/ui/kis_layer_manager.cc:326
 #: libs/ui/kis_layer_manager.cc:1044 libs/ui/kis_node_manager.cpp:1318
-#: libs/ui/kis_node_manager.cpp:1381 libs/ui/KisApplication.cpp:1225
-#: libs/ui/KisApplication.cpp:1228 libs/ui/KisApplication.cpp:1244
-#: libs/ui/KisApplication.cpp:1276 libs/ui/KisApplication.cpp:1290
-#: libs/ui/KisApplication.cpp:1318 libs/ui/KisDocument.cpp:1057
+#: libs/ui/kis_node_manager.cpp:1381 libs/ui/KisApplication.cpp:1240
+#: libs/ui/KisApplication.cpp:1243 libs/ui/KisApplication.cpp:1259
+#: libs/ui/KisApplication.cpp:1291 libs/ui/KisApplication.cpp:1305
+#: libs/ui/KisApplication.cpp:1333 libs/ui/KisDocument.cpp:1057
 #: libs/ui/KisDocument.cpp:1072 libs/ui/KisDocument.cpp:2039
 #: libs/ui/KisDocument.cpp:2082 libs/ui/KisDocument.cpp:2093
-#: libs/ui/KisMainWindow.cpp:997 libs/ui/KisMainWindow.cpp:1067
-#: libs/ui/KisMainWindow.cpp:1216 libs/ui/KisMainWindow.cpp:1313
-#: libs/ui/KisMainWindow.cpp:1997 libs/ui/KisMainWindow.cpp:2006
-#: libs/ui/KisMainWindow.cpp:2145 libs/ui/KisMainWindow.cpp:2206
-#: libs/ui/KisMainWindow.cpp:2225 libs/ui/KisMainWindow.cpp:2858
+#: libs/ui/KisMainWindow.cpp:1002 libs/ui/KisMainWindow.cpp:1072
+#: libs/ui/KisMainWindow.cpp:1221 libs/ui/KisMainWindow.cpp:1318
+#: libs/ui/KisMainWindow.cpp:2042 libs/ui/KisMainWindow.cpp:2051
+#: libs/ui/KisMainWindow.cpp:2190 libs/ui/KisMainWindow.cpp:2251
+#: libs/ui/KisMainWindow.cpp:2270 libs/ui/KisMainWindow.cpp:2903
 #: libs/ui/KisPart.cpp:555 libs/ui/KisPart.cpp:558
 #: libs/ui/KisReferenceImage.cpp:192 libs/ui/KisRemoteFileFetcher.cpp:40
 #: libs/ui/KisRemoteFileFetcher.cpp:64 libs/ui/KisRemoteFileFetcher.cpp:91
 #: libs/ui/KisTemplateCreateDia.cpp:284 libs/ui/KisTemplateCreateDia.cpp:390
 #: libs/ui/KisView.cpp:679 libs/ui/KisView.cpp:1166
-#: libs/ui/KisWelcomePageWidget.cpp:723 libs/ui/KisWindowLayoutResource.cpp:390
+#: libs/ui/KisWelcomePageWidget.cpp:719 libs/ui/KisWindowLayoutResource.cpp:390
 #: libs/ui/opengl/KisOpenGLCanvasRenderer.cpp:335
 #: libs/ui/widgets/kis_custom_image_widget.cc:291
 #: libs/ui/widgets/kis_custom_image_widget.cc:433
@@ -24186,12 +24259,12 @@ msgstr "Ресурси"
 #: plugins/extensions/imagesplit/imagesplit.cpp:74
 #: plugins/extensions/imagesplit/imagesplit.cpp:76
 #: plugins/extensions/qmic/QMic.cpp:54 plugins/extensions/qmic/QMic.cpp:79
-#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:196
-#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:201
-#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:228
-#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:294
-#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:354
-#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:359
+#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:206
+#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:211
+#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:238
+#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:304
+#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:372
+#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:377
 #: plugins/extensions/resourcemanager/dlg_create_bundle.cpp:217
 #: plugins/extensions/resourcemanager/dlg_create_bundle.cpp:319
 #: plugins/extensions/resourcemanager/dlg_create_bundle.cpp:326
@@ -24299,7 +24372,7 @@ msgid "Could not synchronize %1 with the database"
 msgstr ""
 
 #: libs/resources/KisResourceModel.cpp:98
-#: libs/resources/KisStorageModel.cpp:463
+#: libs/resources/KisStorageModel.cpp:502
 #: libs/resources/KisTagResourceModel.cpp:623
 #: plugins/extensions/dbexplorer/DlgDbExplorer.cpp:82
 #: plugins/extensions/dbexplorer/DlgDbExplorer.cpp:104
@@ -24317,7 +24390,7 @@ msgid "Storage ID"
 msgstr "Стил на шрифта"
 
 #: libs/resources/KisResourceModel.cpp:102
-#: libs/resources/KisStorageModel.cpp:477
+#: libs/resources/KisStorageModel.cpp:516
 #: libs/resources/KisTagResourceModel.cpp:627
 #: plugins/extensions/dbexplorer/DlgDbExplorer.cpp:108
 #: plugins/python/filtermanager/components/filtermanagertreemodel.py:23
@@ -24361,7 +24434,7 @@ msgid "Status"
 msgstr "Състояние"
 
 #: libs/resources/KisResourceModel.cpp:112
-#: libs/resources/KisStorageModel.cpp:467
+#: libs/resources/KisStorageModel.cpp:506
 #: libs/resources/KisTagResourceModel.cpp:637
 #: libs/resourcewidgets/KisIconToolTip.cpp:115
 #, kde-format
@@ -24586,7 +24659,7 @@ msgctxt "resource type"
 msgid "Style Presets"
 msgstr "Редактиране на настройките"
 
-#: libs/resources/KisStorageModel.cpp:465
+#: libs/resources/KisStorageModel.cpp:504
 #: libs/widgets/KoConfigAuthorPage.cpp:89
 #: plugins/extensions/dbexplorer/DlgDbExplorer.cpp:105
 #: plugins/extensions/metadataeditor/kis_meta_data_model.cpp:97
@@ -24596,20 +24669,20 @@ msgstr "Редактиране на настройките"
 msgid "Type"
 msgstr "Вид"
 
-#: libs/resources/KisStorageModel.cpp:469
+#: libs/resources/KisStorageModel.cpp:508
 #: plugins/extensions/dbexplorer/DlgDbExplorer.cpp:88
 #, kde-format
 msgid "Creation Date"
 msgstr "Дата на създаване"
 
-#: libs/resources/KisStorageModel.cpp:471
+#: libs/resources/KisStorageModel.cpp:510
 #, kde-format
 msgid "Preinstalled"
 msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_2)
 #. i18n: ectx: property (title), widget (QGroupBox, iconPanel)
-#: libs/resources/KisStorageModel.cpp:475
+#: libs/resources/KisStorageModel.cpp:514
 #: plugins/extensions/dbexplorer/DlgDbExplorer.cpp:112
 #: plugins/extensions/dbexplorer/WdgDbExplorer.ui:75
 #: plugins/extensions/resourcemanager/WdgDlgResourceManager.ui:163
@@ -24733,7 +24806,7 @@ msgid "Delete resource"
 msgstr "Изтриване на ресурс"
 
 #: libs/resourcewidgets/KisResourceItemChooser.cpp:339
-#: libs/ui/KisMainWindow.cpp:2655
+#: libs/ui/KisMainWindow.cpp:2700
 #: plugins/paintops/libpaintop/kis_predefined_brush_chooser.cpp:407
 #: qmlmodules/components/TagFilterProxyModelQmlWrapper.cpp:347
 #, kde-format
@@ -25149,6 +25222,53 @@ msgctxt "(qtundo-format)"
 msgid "Activate transform tool"
 msgstr "Активиране на инструмента за трансформиране"
 
+#: libs/ui/animation/KisAndroidMediaEncoderRunnable.cpp:88
+#, kde-format
+msgid "Android: %1"
+msgstr ""
+
+#: libs/ui/animation/KisAndroidMediaEncoderRunnable.cpp:103
+#, kde-format
+msgid "%1 (hardware)"
+msgstr ""
+
+#: libs/ui/animation/KisAndroidMediaEncoderRunnable.cpp:105
+#, kde-format
+msgid "%1 (software)"
+msgstr ""
+
+#: libs/ui/animation/KisAndroidMediaEncoderRunnable.cpp:277
+#, kde-format
+msgid "Unsupported video parameters, try lowering the video FPS or size"
+msgstr ""
+
+#: libs/ui/animation/KisAndroidMediaEncoderRunnable.cpp:283
+#, fuzzy, kde-format
+#| msgid "All supported formats"
+msgid "Unsupported format"
+msgstr "Всички поддържани формати"
+
+#: libs/ui/animation/KisAndroidMediaEncoderRunnable.cpp:367
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Krita: Internal Error"
+msgid "Internal error (%1)"
+msgstr "Krita: Вътрешна грешка"
+
+#: libs/ui/animation/KisAndroidMediaEncoderRunnable.cpp:902
+#, kde-format
+msgid "Encoder:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, lblOpenH264bitrate)
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: libs/ui/animation/KisAndroidMediaEncoderRunnable.cpp:906
+#: libs/ui/animation/video_export_options_dialog.ui:45
+#: libs/ui/animation/video_export_options_dialog.ui:223
+#, kde-format
+msgid "Bitrate:"
+msgstr "Битрейт:"
+
 #: libs/ui/animation/KisAnimationRender.cpp:47
 #, kde-format
 msgid ""
@@ -25197,7 +25317,7 @@ msgstr ""
 "Неуспешно изграждане кадрите на анимацията! Изходните файлове са непълни."
 
 #: libs/ui/animation/KisDlgAnimationRenderer.cpp:54
-#: libs/ui/KisMainWindow.cpp:2248
+#: libs/ui/KisMainWindow.cpp:2293
 #, kde-format
 msgid "Render Animation"
 msgstr "Изграждане на анимация"
@@ -25531,6 +25651,18 @@ msgctxt "Video information probing dialog. arg1: frame number."
 msgid "Loading video data... %1 frames examined."
 msgstr "Зареждане на видео данни... %1 кадъра са обработени"
 
+#: libs/ui/animation/KisMediaEncoderWrapper.cpp:132
+#, fuzzy, kde-format
+#| msgctxt "Shows up instead of the name when there's no profile"
+#| msgid "No Profile Found"
+msgid "No frame files found"
+msgstr "Не е намерен профил"
+
+#: libs/ui/animation/KisMediaEncoderWrapper.cpp:192
+#, kde-format
+msgid "No encoder for the selected format found"
+msgstr ""
+
 #: libs/ui/animation/KisVideoSaver.cpp:52
 #, fuzzy, kde-format
 #| msgid "Could not find %1"
@@ -25562,14 +25694,6 @@ msgstr ""
 #, kde-format
 msgid "Codec options"
 msgstr "Опции на кодеци"
-
-#. i18n: ectx: property (text), widget (QLabel, lblOpenH264bitrate)
-#. i18n: ectx: property (text), widget (QLabel, label_3)
-#: libs/ui/animation/video_export_options_dialog.ui:45
-#: libs/ui/animation/video_export_options_dialog.ui:223
-#, kde-format
-msgid "Bitrate:"
-msgstr "Битрейт:"
 
 #. i18n: ectx: property (text), widget (QLabel, lblCRFH264)
 #. i18n: ectx: property (text), widget (QLabel, lblCRFH265)
@@ -26219,10 +26343,12 @@ msgstr "Персонализиран"
 #. i18n: ectx: property (windowTitle), widget (QWidget, VideoHDRMetadataOptionsDialog)
 #. i18n: ectx: property (windowTitle), widget (QDialog, FilterDialog)
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgImportImageSequence)
+#. i18n: ectx: property (windowTitle), widget (QDialog, KisSupporterBundlesDialog)
 #: libs/ui/animation/VideoHDRMetadataOptionsDialog.ui:24
 #: libs/ui/dialogs/kis_dlg_hlg_import.ui:14 libs/ui/forms/wdgfilterdialog.ui:30
 #: libs/ui/forms/wdgimportimagesequence.ui:18
 #: libs/widgets/WdgDlgInternalColorSelector.ui:18
+#: plugins/extensions/resourcemanager/KisSupporterBundlesDialog.ui:14
 #, kde-format
 msgid "Dialog"
 msgstr "Диалогов прозорец"
@@ -26252,7 +26378,7 @@ msgstr "Показване"
 #. i18n: ectx: property (text), widget (QLabel, labelX)
 #: libs/ui/animation/VideoHDRMetadataOptionsDialog.ui:48
 #: libs/ui/kis_paintop_box.cc:319
-#: plugins/dockers/recorder/recorder_export.ui:497
+#: plugins/dockers/recorder/recorder_export.ui:300
 #: plugins/dockers/storyboarddocker/wdgexportstoryboard.ui:227
 #, kde-format
 msgid "x"
@@ -26681,7 +26807,7 @@ msgstr "Експортиране като видео"
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #. i18n: ectx: property (text), widget (QLabel, labelResolution)
 #: libs/ui/animation/wdg_animationrenderer.ui:198
-#: plugins/dockers/recorder/recorder_export.ui:554
+#: plugins/dockers/recorder/recorder_export.ui:92
 #, kde-format
 msgid "Render as:"
 msgstr ""
@@ -26695,7 +26821,7 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #. i18n: ectx: property (text), widget (QLabel, labelExportTo)
 #: libs/ui/animation/wdg_animationrenderer.ui:222
-#: plugins/dockers/recorder/recorder_export.ui:404
+#: plugins/dockers/recorder/recorder_export.ui:105
 #, kde-format
 msgid "Video location:"
 msgstr ""
@@ -27179,7 +27305,7 @@ msgid "Numerical"
 msgstr "Цифрено"
 
 #: libs/ui/dialogs/kis_dlg_import_image_sequence.cpp:141
-#: libs/ui/KisMainWindow.cpp:1181
+#: libs/ui/KisMainWindow.cpp:1186
 #, kde-format
 msgid "Import Images"
 msgstr "Импортиране на изображение"
@@ -27296,7 +27422,7 @@ msgctxt "@title:window"
 msgid "Enter new style name"
 msgstr ""
 
-#: libs/ui/dialogs/kis_dlg_layer_style.cpp:319 libs/ui/KisMainWindow.cpp:2666
+#: libs/ui/dialogs/kis_dlg_layer_style.cpp:319 libs/ui/KisMainWindow.cpp:2711
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Name:"
@@ -27321,7 +27447,7 @@ msgid "Could not load layer style library %1."
 msgstr "Библиотека от стилове на слой  %1 не може да се зареди."
 
 #: libs/ui/dialogs/kis_dlg_layer_style.cpp:416
-#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:246
+#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:256
 #, kde-format
 msgctxt "@title:window"
 msgid "Warning"
@@ -28145,7 +28271,7 @@ msgstr ""
 #: libs/ui/widgets/kis_canvas_drop.cpp:45
 #: plugins/dockers/compositiondocker/compositiondocker_dock.cpp:268
 #: plugins/dockers/gamutmask/forms/wdgGamutMaskChooser.ui:190
-#: plugins/dockers/recorder/recorder_export.ui:853
+#: plugins/dockers/recorder/recorder_export.ui:917
 #: plugins/dockers/recorder/recorder_snapshots_manager.ui:130
 #: plugins/generators/seexpr/wdgseexpr.ui:179
 #: plugins/python/krita_script_starter/bbdkss.ui:203
@@ -28427,6 +28553,53 @@ msgstr "Запазване на настройки на четка"
 msgid "Preset Icon Library"
 msgstr "Библиотека с икони за четки на Krita"
 
+#: libs/ui/dialogs/KisDonationManagementDialog.cpp:17
+#, fuzzy, kde-format
+#| msgid "Unsupported Key"
+msgid "Supporter Benefits"
+msgstr "Неподдържан клавиш"
+
+#: libs/ui/dialogs/KisDonationManagementDialog.cpp:27
+#, fuzzy, kde-format
+#| msgid "Description"
+msgid "Manage Subscriptions"
+msgstr "Описание"
+
+#: libs/ui/dialogs/KisDonationManagementDialog.cpp:114
+#, kde-format
+msgid "You have %1 supporter benefit:"
+msgid_plural "You have %1 supporter benefits:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: libs/ui/dialogs/KisDonationManagementDialog.cpp:122
+#, kde-format
+msgid "There is %1 supporter benefit available:"
+msgid_plural "There are %1 supporter benefits available:"
+msgstr[0] ""
+msgstr[1] ""
+
+#. i18n: ectx: property (windowTitle), widget (QDialog, KisDonationManagementDialog)
+#: libs/ui/dialogs/KisDonationManagementDialog.ui:14
+#, fuzzy, kde-format
+#| msgid "Locked"
+msgid "StackedWidget"
+msgstr "Заключен"
+
+#. i18n: ectx: property (text), widget (QLabel, m_lblNoBenefits)
+#: libs/ui/dialogs/KisDonationManagementDialog.ui:53
+#, kde-format
+msgid ""
+"No supporter benefits available on this version of Krita.\n"
+"You can still support Krita by donating."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, m_btnNoBenefitsSupport)
+#: libs/ui/dialogs/KisDonationManagementDialog.ui:63
+#, kde-format
+msgid "Donate"
+msgstr ""
+
 #: libs/ui/dialogs/KisProofingConfigModel.cpp:72
 #, fuzzy, kde-format
 #| msgid "Perceptual"
@@ -28604,7 +28777,7 @@ msgid "Start"
 msgstr "Начало"
 
 #. i18n: ectx: property (text), widget (QLabel, devBuildLabel)
-#: libs/ui/forms/KisWelcomePage.ui:164 libs/ui/KisWelcomePageWidget.cpp:612
+#: libs/ui/forms/KisWelcomePage.ui:164 libs/ui/KisWelcomePageWidget.cpp:608
 #, kde-format
 msgid "DEV BUILD"
 msgstr ""
@@ -28644,43 +28817,45 @@ msgid "Community"
 msgstr "Общност"
 
 #. i18n: ectx: property (text), widget (QLabel, manualLink)
-#: libs/ui/forms/KisWelcomePage.ui:435 libs/ui/KisWelcomePageWidget.cpp:364
+#: libs/ui/forms/KisWelcomePage.ui:435 libs/ui/KisWelcomePageWidget.cpp:367
 #, kde-format
 msgid "User Manual"
 msgstr "Ръководство за потребителя"
 
 #. i18n: ectx: property (text), widget (QLabel, supportKritaLink)
-#: libs/ui/forms/KisWelcomePage.ui:525 libs/ui/KisWelcomePageWidget.cpp:367
+#. i18n: ectx: property (text), widget (QPushButton, m_btnSupport)
+#: libs/ui/forms/KisWelcomePage.ui:525 libs/ui/KisWelcomePageWidget.cpp:370
+#: plugins/extensions/resourcemanager/KisSupporterBundleWidget.ui:173
 #, kde-format
 msgid "Support Krita"
 msgstr "Подкрепете Krita"
 
 #. i18n: ectx: property (text), widget (QLabel, poweredByKDELink)
-#: libs/ui/forms/KisWelcomePage.ui:615 libs/ui/KisWelcomePageWidget.cpp:376
+#: libs/ui/forms/KisWelcomePage.ui:615 libs/ui/KisWelcomePageWidget.cpp:379
 #, kde-format
 msgid "Powered by KDE"
 msgstr "Powered by KDE"
 
 #. i18n: ectx: property (text), widget (QLabel, sourceCodeLink)
-#: libs/ui/forms/KisWelcomePage.ui:705 libs/ui/KisWelcomePageWidget.cpp:373
+#: libs/ui/forms/KisWelcomePage.ui:705 libs/ui/KisWelcomePageWidget.cpp:376
 #, kde-format
 msgid "Source Code"
 msgstr "Изходен код"
 
 #. i18n: ectx: property (text), widget (QLabel, gettingStartedLink)
-#: libs/ui/forms/KisWelcomePage.ui:792 libs/ui/KisWelcomePageWidget.cpp:361
+#: libs/ui/forms/KisWelcomePage.ui:792 libs/ui/KisWelcomePageWidget.cpp:364
 #, kde-format
 msgid "Getting Started"
 msgstr "Първи стъпки"
 
 #. i18n: ectx: property (text), widget (QLabel, userCommunityLink)
-#: libs/ui/forms/KisWelcomePage.ui:879 libs/ui/KisWelcomePageWidget.cpp:358
+#: libs/ui/forms/KisWelcomePage.ui:879 libs/ui/KisWelcomePageWidget.cpp:361
 #, kde-format
 msgid "User Community"
 msgstr "Потребителска общност"
 
 #. i18n: ectx: property (text), widget (QLabel, kritaWebsiteLink)
-#: libs/ui/forms/KisWelcomePage.ui:966 libs/ui/KisWelcomePageWidget.cpp:370
+#: libs/ui/forms/KisWelcomePage.ui:966 libs/ui/KisWelcomePageWidget.cpp:373
 #, kde-format
 msgid "Krita Website"
 msgstr "Интернет страница на Krita"
@@ -28737,7 +28912,7 @@ msgid "Show details"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (KisClickableLabel, labelNoFeed)
-#: libs/ui/forms/KisWelcomePage.ui:1487 libs/ui/KisWelcomePageWidget.cpp:378
+#: libs/ui/forms/KisWelcomePage.ui:1487 libs/ui/KisWelcomePageWidget.cpp:381
 #, kde-format
 msgid ""
 "You can <a href=\"ignored\" style=\"color: COLOR_PLACEHOLDER; text-"
@@ -28749,7 +28924,7 @@ msgstr ""
 "езици с менюто по-горе"
 
 #. i18n: ectx: property (text), widget (QLabel, labelSupportText)
-#: libs/ui/forms/KisWelcomePage.ui:1636
+#: libs/ui/forms/KisWelcomePage.ui:1627
 #, fuzzy, kde-format
 #| msgid ""
 #| "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
@@ -28794,6 +28969,25 @@ msgstr ""
 "спонсори и членове <a href=\"https://fund.krita.org/\">фонда за развитие</a>."
 "</p></body></html>"
 
+#. i18n: ectx: property (text), widget (QLabel, lblAndroidSupporter)
+#: libs/ui/forms/KisWelcomePage.ui:1659
+#, kde-format
+msgid "Krita is made possible thanks to ongoing support from people like you!"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, bnAndroidSupporterManage)
+#: libs/ui/forms/KisWelcomePage.ui:1672
+#, kde-format
+msgid "Manage Supporter Benefits"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, bnAndroidSupport)
+#: libs/ui/forms/KisWelcomePage.ui:1717 libs/ui/KisWelcomePageWidget.cpp:833
+#, fuzzy, kde-format
+#| msgid "Support Krita"
+msgid "Support Krita!"
+msgstr "Подкрепете Krita"
+
 #. i18n: ectx: property (text), widget (QLabel, lblLastPrintedDesc)
 #: libs/ui/forms/koDocumentInfoAboutWidget.ui:28
 #, kde-format
@@ -28829,7 +29023,7 @@ msgstr "Лиценз/права:"
 #: libs/ui/widgets/KoFillConfigWidget.ui:222
 #: plugins/dockers/advancedcolorselector/wdg_color_selector_settings.ui:357
 #: plugins/dockers/griddocker/grid_config_widget.ui:90
-#: plugins/extensions/resourcemanager/wdgdlgbundlemanager.ui:282
+#: plugins/extensions/resourcemanager/wdgdlgbundlemanager.ui:274
 #: plugins/extensions/resourcemanager/wdgdlgembedtags.ui:58
 #: plugins/extensions/resourcemanager/WdgDlgResourceManager.ui:226
 #: plugins/flake/pathshapes/ellipse/EllipseShapeConfigWidget.ui:39
@@ -28857,7 +29051,7 @@ msgstr "Номер на версия:"
 #. i18n: ectx: property (text), widget (QLabel, label_6)
 #: libs/ui/forms/koDocumentInfoAboutWidget.ui:128
 #: plugins/extensions/dbexplorer/WdgDbExplorer.ui:200
-#: plugins/extensions/resourcemanager/wdgdlgbundlemanager.ui:415
+#: plugins/extensions/resourcemanager/wdgdlgbundlemanager.ui:407
 #, kde-format
 msgid "Created:"
 msgstr "Създаден:"
@@ -31704,7 +31898,7 @@ msgstr "Текущи настройки на четка"
 
 #. i18n: ectx: property (text), widget (QPushButton, updateBrushNameButton)
 #. i18n: ectx: property (toolTip), widget (QToolButton, bnSaveMask)
-#: libs/ui/forms/wdgpaintopsettings.ui:184 libs/ui/KisMainWindow.cpp:1042
+#: libs/ui/forms/wdgpaintopsettings.ui:184 libs/ui/KisMainWindow.cpp:1047
 #: libs/ui/widgets/kis_workspace_chooser.cpp:134
 #: libs/ui/widgets/kis_workspace_chooser.cpp:209
 #: plugins/dockers/gamutmask/forms/wdgGamutMaskChooser.ui:232
@@ -32302,21 +32496,25 @@ msgstr " в инструмента Преместване"
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgPopupPaletteSettings)
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgProofingOptions)
 #. i18n: ectx: property (windowTitle), widget (QWidget, KisAutoLevelsWidget)
+#. i18n: ectx: property (windowTitle), widget (QWidget, KisDonationManagementWidget)
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgFilterFastColorOverlay)
 #. i18n: ectx: property (windowTitle), widget (QWidget, TouchDockerWidget)
 #. i18n: ectx: property (windowTitle), widget (QWidget, QuickSettingsWidget)
 #. i18n: ectx: property (windowTitle), widget (QWidget, WGConfigWidget)
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgResourcePreview)
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgSide)
+#. i18n: ectx: property (windowTitle), widget (QWidget, KisSupporterBundleWidget)
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgTagPreview)
 #. i18n: ectx: property (windowTitle), widget (QWidget, KisResourceItemViewer)
 #: libs/ui/forms/WdgPopupPaletteSettings.ui:14
 #: libs/ui/forms/wdgproofingoptions.ui:14
 #: libs/ui/widgets/KisAutoLevelsWidget.ui:14
+#: libs/ui/widgets/KisDonationManagementWidget.ui:14
 #: plugins/dockers/touchdocker/TouchDockerWidget.ui:14
 #: plugins/dockers/widegamutcolorselector/WdgQuickSettings.ui:14
 #: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:14
 #: plugins/extensions/resourcemanager/kisresourceitemviewer.ui:16
+#: plugins/extensions/resourcemanager/KisSupporterBundleWidget.ui:14
 #: plugins/extensions/resourcemanager/wdgresourcepreview.ui:26
 #: plugins/extensions/resourcemanager/wdgside.ui:23
 #: plugins/extensions/resourcemanager/wdgtagpreview.ui:20
@@ -32563,7 +32761,7 @@ msgstr "Цвят на предупрежденията"
 #. i18n: ectx: property (toolTip), widget (QLabel, widthLabel)
 #. i18n: ectx: property (toolTip), widget (QSpinBox, spinScaleWidth)
 #: libs/ui/forms/wdgrectangleconstraints.ui:56
-#: plugins/dockers/recorder/recorder_export.ui:472
+#: plugins/dockers/recorder/recorder_export.ui:275
 #: plugins/tools/tool_crop/wdg_tool_crop.ui:278
 #: plugins/tools/tool_crop/wdg_tool_crop.ui:326
 #, kde-format
@@ -32580,7 +32778,7 @@ msgstr "Широчина: "
 #. i18n: ectx: property (toolTip), widget (QLabel, heightLabel)
 #. i18n: ectx: property (toolTip), widget (QSpinBox, spinScaleHeight)
 #: libs/ui/forms/wdgrectangleconstraints.ui:95
-#: plugins/dockers/recorder/recorder_export.ui:510
+#: plugins/dockers/recorder/recorder_export.ui:313
 #: plugins/tools/tool_crop/wdg_tool_crop.ui:228
 #: plugins/tools/tool_crop/wdg_tool_crop.ui:253
 #, kde-format
@@ -33078,7 +33276,7 @@ msgstr ""
 #: libs/ui/imagesize/wdg_canvassize.ui:135
 #: libs/ui/imagesize/wdg_imagesize.ui:342
 #: libs/ui/imagesize/wdg_layersize.ui:142
-#: plugins/dockers/recorder/recorder_export.ui:346
+#: plugins/dockers/recorder/recorder_export.ui:390
 #, kde-format
 msgid "Constrain proportions"
 msgstr "Запазване на пропорциите"
@@ -35170,19 +35368,7 @@ msgctxt "(qtundo-format)"
 msgid "Select Opaque"
 msgstr "Селектиране на непрозрачна област"
 
-#: libs/ui/kis_splash_screen.cpp:110
-#, kde-format
-msgctxt "Normal splash artist name"
-msgid "Tyson Tan"
-msgstr ""
-
-#: libs/ui/kis_splash_screen.cpp:158
-#, kde-format
-msgctxt "splash image credit"
-msgid "Artwork by: %1"
-msgstr "Художествено оформление от: %1"
-
-#: libs/ui/kis_splash_screen.cpp:182
+#: libs/ui/kis_splash_screen.cpp:167
 #, fuzzy, kde-format
 #| msgid "<html><head/><body><p><br/></p></body></html>"
 msgid ""
@@ -35190,26 +35376,26 @@ msgid ""
 "p>"
 msgstr "<html><head/><body><p><br/></p></body></html>"
 
-#: libs/ui/kis_splash_screen.cpp:225
+#: libs/ui/kis_splash_screen.cpp:210
 #, kde-format
 msgid "<p><span style=\" color:%1;\"><b>Using Krita</b></span></p>"
 msgstr ""
 
-#: libs/ui/kis_splash_screen.cpp:232
+#: libs/ui/kis_splash_screen.cpp:217
 #, kde-format
 msgid ""
 "<p><a href=\"https://krita.org/support-us/\"><span style=\" text-decoration: "
 "underline; color:%1;\">Support Krita's Development!</span></a></p>"
 msgstr ""
 
-#: libs/ui/kis_splash_screen.cpp:233
+#: libs/ui/kis_splash_screen.cpp:218
 #, kde-format
 msgid ""
 "<p><a href=\"https://krita.org/\"><span style=\" text-decoration: underline; "
 "color:%1;\">Krita Website</span></a></p>"
 msgstr ""
 
-#: libs/ui/kis_splash_screen.cpp:237
+#: libs/ui/kis_splash_screen.cpp:222
 #, kde-format
 msgid ""
 "<p><a href=\"https://docs.krita.org/en/user_manual/getting_started.html"
@@ -35217,45 +35403,57 @@ msgid ""
 "span></a></p>"
 msgstr ""
 
-#: libs/ui/kis_splash_screen.cpp:238
+#: libs/ui/kis_splash_screen.cpp:223
 #, kde-format
 msgid ""
 "<p><a href=\"https://docs.krita.org/\"><span style=\" text-decoration: "
 "underline; color:%1;\">Manual</span></a></p>"
 msgstr ""
 
-#: libs/ui/kis_splash_screen.cpp:240
+#: libs/ui/kis_splash_screen.cpp:225
 #, kde-format
 msgid "<p><span style=\" color:%1;\"><b>Coding Krita</b></span></p>"
 msgstr ""
 
-#: libs/ui/kis_splash_screen.cpp:241
+#: libs/ui/kis_splash_screen.cpp:226
 #, kde-format
 msgid ""
 "<p><a href=\"https://krita-artists.org\"><span style=\" text-decoration: "
 "underline; color:%1;\">User Community</span></a></p>"
 msgstr ""
 
-#: libs/ui/kis_splash_screen.cpp:242
+#: libs/ui/kis_splash_screen.cpp:227
 #, kde-format
 msgid ""
 "<p><a href=\"https://invent.kde.org/graphics/krita\"><span style=\" text-"
 "decoration: underline; color:%1;\">Source Code</span></a></p>"
 msgstr ""
 
-#: libs/ui/kis_splash_screen.cpp:243
+#: libs/ui/kis_splash_screen.cpp:228
 #, kde-format
 msgid ""
 "<p><a href=\"https://api.kde.org/krita/html/classKrita.html\"><span style=\" "
 "text-decoration: underline; color:%1;\">Scripting API</span></a></p>"
 msgstr ""
 
-#: libs/ui/kis_splash_screen.cpp:244
+#: libs/ui/kis_splash_screen.cpp:229
 #, kde-format
 msgid ""
 "<p><a href=\"https://scripting.krita.org/lessons/introduction\"><span style="
 "\" text-decoration: underline; color:%1;\">Scripting School</span></a></p>"
 msgstr ""
+
+#: libs/ui/kis_splash_screen.cpp:273
+#, kde-format
+msgctxt "Normal splash artist name"
+msgid "Tyson Tan"
+msgstr ""
+
+#: libs/ui/kis_splash_screen.cpp:294
+#, kde-format
+msgctxt "splash image credit"
+msgid "Artwork by: %1"
+msgstr "Художествено оформление от: %1"
 
 #: libs/ui/kis_statusbar.cc:231
 #, kde-format
@@ -35454,7 +35652,7 @@ msgstr ""
 "\n"
 "Krita ще се затвори сега."
 
-#: libs/ui/KisApplication.cpp:507
+#: libs/ui/KisApplication.cpp:511
 #, kde-format
 msgid ""
 "You are running a 32 bits build on a 64 bits Windows.\n"
@@ -35462,69 +35660,69 @@ msgid ""
 "Please download and install the x64 build instead."
 msgstr ""
 
-#: libs/ui/KisApplication.cpp:524
+#: libs/ui/KisApplication.cpp:528
 #, kde-format
 msgid "Initializing Globals..."
 msgstr "Инициализиране  глобални параметри..."
 
-#: libs/ui/KisApplication.cpp:556
+#: libs/ui/KisApplication.cpp:562
 #, kde-format
 msgid "Adding resource types..."
 msgstr "Добавяне на видове ресурси..."
 
-#: libs/ui/KisApplication.cpp:560
+#: libs/ui/KisApplication.cpp:566
 #, fuzzy, kde-format
 #| msgid "Loading Pages..."
 msgid "Loading plugins..."
 msgstr "Зареждане на страници..."
 
-#: libs/ui/KisApplication.cpp:566
+#: libs/ui/KisApplication.cpp:572
 #, fuzzy, kde-format
 #| msgid "Adding resource types..."
 msgid "Loading resources..."
 msgstr "Добавяне на видове ресурси..."
 
-#: libs/ui/KisApplication.cpp:575
+#: libs/ui/KisApplication.cpp:581
 #, kde-format
 msgid "Loading Main Window..."
 msgstr "Зареждане на основния прозорец..."
 
-#: libs/ui/KisApplication.cpp:607
+#: libs/ui/KisApplication.cpp:613
 #, fuzzy, kde-format
 #| msgid "Scanning..."
 msgid "Launching..."
 msgstr "Претърсване..."
 
-#: libs/ui/KisApplication.cpp:725
+#: libs/ui/KisApplication.cpp:734
 #, kde-format
 msgid "Mimetype not found, try using the -mimetype option"
 msgstr "Не е намерен видът по MIME. Опитайте с параметъра \"-mimetype\""
 
-#: libs/ui/KisApplication.cpp:786
+#: libs/ui/KisApplication.cpp:795
 #, kde-format
 msgid "Failed to render animation frames!"
 msgstr "Неуспешно изграждане кадрите на анимацията!"
 
-#: libs/ui/KisApplication.cpp:811 libs/ui/KisApplication.cpp:1084
+#: libs/ui/KisApplication.cpp:820 libs/ui/KisApplication.cpp:1099
 #, fuzzy, kde-format
 #| msgid "File Type"
 msgid "File layer"
 msgstr "Вид файл"
 
-#: libs/ui/KisApplication.cpp:819 libs/ui/KisApplication.cpp:824
-#: libs/ui/KisApplication.cpp:1078 libs/ui/KisApplication.cpp:1092
-#: libs/ui/KisApplication.cpp:1097
+#: libs/ui/KisApplication.cpp:828 libs/ui/KisApplication.cpp:833
+#: libs/ui/KisApplication.cpp:1093 libs/ui/KisApplication.cpp:1107
+#: libs/ui/KisApplication.cpp:1112
 #, kde-format
 msgctxt "@title:window"
 msgid "Krita:Warning"
 msgstr "Krita: Предупреждение"
 
-#: libs/ui/KisApplication.cpp:820 libs/ui/KisApplication.cpp:1093
+#: libs/ui/KisApplication.cpp:829 libs/ui/KisApplication.cpp:1108
 #, kde-format
 msgid "Cannot add %1 as a file layer: the file does not exist."
 msgstr ""
 
-#: libs/ui/KisApplication.cpp:825
+#: libs/ui/KisApplication.cpp:834
 #, kde-format
 msgid ""
 "Cannot add the file layer: no document is open.\n"
@@ -35537,7 +35735,7 @@ msgid ""
 "checkbox in the settings (Settings -> General -> Window)."
 msgstr ""
 
-#: libs/ui/KisApplication.cpp:831
+#: libs/ui/KisApplication.cpp:840
 #, kde-format
 msgid ""
 "Cannot add the file layer: no document is open.\n"
@@ -35545,32 +35743,32 @@ msgid ""
 "open an existing file."
 msgstr ""
 
-#: libs/ui/KisApplication.cpp:1079
+#: libs/ui/KisApplication.cpp:1094
 #, kde-format
 msgid "Couldn't open file %1"
 msgstr "Не може да се отвори файл %1"
 
-#: libs/ui/KisApplication.cpp:1098
+#: libs/ui/KisApplication.cpp:1113
 #, kde-format
 msgid "Cannot add the file layer: no document is open."
 msgstr ""
 
-#: libs/ui/KisApplication.cpp:1226
+#: libs/ui/KisApplication.cpp:1241
 #, kde-format
 msgid "No template found for: %1"
 msgstr "Не е открит шаблон за: %1"
 
-#: libs/ui/KisApplication.cpp:1229
+#: libs/ui/KisApplication.cpp:1244
 #, kde-format
 msgid "Too many templates found for: %1"
 msgstr "Открити са много шаблони за: %1"
 
-#: libs/ui/KisApplication.cpp:1245
+#: libs/ui/KisApplication.cpp:1260
 #, kde-format
 msgid "Template %1 failed to load."
 msgstr "Неуспешно зареждане на шаблон %1."
 
-#: libs/ui/KisApplication.cpp:1277
+#: libs/ui/KisApplication.cpp:1292
 #, kde-format
 msgid ""
 "Krita configurations reset!\n"
@@ -35585,7 +35783,7 @@ msgstr ""
 "\n"
 "Рестартирайте Крита, за да влязат в сила промените."
 
-#: libs/ui/KisApplication.cpp:1291
+#: libs/ui/KisApplication.cpp:1306
 #, kde-format
 msgid ""
 "Failed to clear %1\n"
@@ -35593,7 +35791,7 @@ msgid ""
 "Please make sure no other program is using the file and try again."
 msgstr ""
 
-#: libs/ui/KisApplication.cpp:1319
+#: libs/ui/KisApplication.cpp:1334
 #, fuzzy, kde-format
 #| msgctxt "In a dialog regarding overwriting a bundle (resource pack)"
 #| msgid "Do you want to overwrite the existing bundle?"
@@ -36316,62 +36514,62 @@ msgctxt "(qtundo-format)"
 msgid "Update layer thumbnails"
 msgstr "Дублиране на слой или маска"
 
-#: libs/ui/KisMainWindow.cpp:187
+#: libs/ui/KisMainWindow.cpp:189
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Styles"
 msgstr "Стилове"
 
-#: libs/ui/KisMainWindow.cpp:188
+#: libs/ui/KisMainWindow.cpp:190
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Dockers"
 msgstr "&Панели"
 
-#: libs/ui/KisMainWindow.cpp:189
+#: libs/ui/KisMainWindow.cpp:191
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Window"
 msgstr "&Прозорец"
 
-#: libs/ui/KisMainWindow.cpp:190
+#: libs/ui/KisMainWindow.cpp:192
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "New &View"
 msgstr "Нов &изглед"
 
-#: libs/ui/KisMainWindow.cpp:191
+#: libs/ui/KisMainWindow.cpp:193
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Wor&kspace"
 msgstr "Работна &среда"
 
-#: libs/ui/KisMainWindow.cpp:593
+#: libs/ui/KisMainWindow.cpp:598
 #, kde-format
 msgid "Show %1 Toolbar"
 msgstr "Показване на лентата с инстр&ументи %1"
 
-#: libs/ui/KisMainWindow.cpp:595
+#: libs/ui/KisMainWindow.cpp:600
 #, kde-format
 msgid "Hide %1 Toolbar"
 msgstr "Скриване на лента с инструменти %1"
 
-#: libs/ui/KisMainWindow.cpp:1039
+#: libs/ui/KisMainWindow.cpp:1044
 #, kde-format
 msgid "Save as %1"
 msgstr "Запазване като %1"
 
-#: libs/ui/KisMainWindow.cpp:1067
+#: libs/ui/KisMainWindow.cpp:1072
 #, kde-format
 msgid "The file %1 does not exist."
 msgstr "Файлът %1 не съществува."
 
-#: libs/ui/KisMainWindow.cpp:1181
+#: libs/ui/KisMainWindow.cpp:1186
 #, kde-format
 msgid "Open Images"
 msgstr "Отваряне на изображения"
 
-#: libs/ui/KisMainWindow.cpp:1314
+#: libs/ui/KisMainWindow.cpp:1319
 #, kde-format
 msgid ""
 "You are saving a file while the image is still rendering. The saved file may "
@@ -36380,29 +36578,29 @@ msgid ""
 "Please select a location where the original file will not be overridden!"
 msgstr ""
 
-#: libs/ui/KisMainWindow.cpp:1375
+#: libs/ui/KisMainWindow.cpp:1380
 #, kde-format
 msgid "Exporting"
 msgstr "Експортиране"
 
-#: libs/ui/KisMainWindow.cpp:1375
+#: libs/ui/KisMainWindow.cpp:1380
 #, kde-format
 msgid "Saving As"
 msgstr "Запазване като."
 
-#: libs/ui/KisMainWindow.cpp:1966
+#: libs/ui/KisMainWindow.cpp:2011
 #, kde-format
 msgid "Layers/Masks"
 msgstr "Слоеве/Маски"
 
-#: libs/ui/KisMainWindow.cpp:1992
-#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:191
-#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:347
+#: libs/ui/KisMainWindow.cpp:2037
+#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:201
+#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:365
 #, kde-format
 msgid "You don't have any resource bundles enabled."
 msgstr "Нямате активиран пакет с ресурси."
 
-#: libs/ui/KisMainWindow.cpp:1996
+#: libs/ui/KisMainWindow.cpp:2041
 #, kde-format
 msgid ""
 "\n"
@@ -36413,9 +36611,9 @@ msgstr ""
 "Няма инсталиран набор от четки. Моля, инсталирайте пакет със съответния "
 "набор преди да продължите.\n"
 
-#: libs/ui/KisMainWindow.cpp:2006
-#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:201
-#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:359
+#: libs/ui/KisMainWindow.cpp:2051
+#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:211
+#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:377
 #, kde-format
 msgid ""
 "\n"
@@ -36424,7 +36622,7 @@ msgstr ""
 "\n"
 "Налични са само локални ресурси."
 
-#: libs/ui/KisMainWindow.cpp:2145 libs/ui/KisMainWindow.cpp:2225
+#: libs/ui/KisMainWindow.cpp:2190 libs/ui/KisMainWindow.cpp:2270
 #, fuzzy, kde-format
 #| msgid ""
 #| "Could not render animation:\n"
@@ -36436,63 +36634,63 @@ msgstr ""
 "Изграждането на анимация е неуспешно:\n"
 "%1"
 
-#: libs/ui/KisMainWindow.cpp:2206
+#: libs/ui/KisMainWindow.cpp:2251
 #, fuzzy, kde-format
 #| msgid "Failed to render animation frames!"
 msgid "Failed to create new document. Animation import aborted."
 msgstr "Неуспешно изграждане кадрите на анимацията!"
 
-#: libs/ui/KisMainWindow.cpp:2646
+#: libs/ui/KisMainWindow.cpp:2691
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Import Workspace..."
 msgstr "&Импортиране на работна среда..."
 
-#: libs/ui/KisMainWindow.cpp:2661
+#: libs/ui/KisMainWindow.cpp:2706
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&New Workspace..."
 msgstr "&Нова работна среда..."
 
-#: libs/ui/KisMainWindow.cpp:2665
+#: libs/ui/KisMainWindow.cpp:2710
 #, kde-format
 msgctxt "@title:window"
 msgid "New Workspace..."
 msgstr "Нова работна среда..."
 
-#: libs/ui/KisMainWindow.cpp:2709
+#: libs/ui/KisMainWindow.cpp:2754
 #, fuzzy, kde-format
 #| msgctxt "@item:inmenu opened document, %1=index %2=document path"
 #| msgid "&%1 %2"
 msgid "&%1 %2"
 msgstr "&%1 %2"
 
-#: libs/ui/KisMainWindow.cpp:2712
+#: libs/ui/KisMainWindow.cpp:2757
 #, kde-format
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: libs/ui/KisMainWindow.cpp:2881
+#: libs/ui/KisMainWindow.cpp:2926
 #, kde-format
 msgid ""
 "The Krita LittleCMS color management plugin is not installed. Krita will "
 "quit now."
 msgstr ""
 
-#: libs/ui/KisMainWindow.cpp:2897
+#: libs/ui/KisMainWindow.cpp:2942
 #, fuzzy, kde-format
 #| msgid "Quit application"
 msgctxt "@title:window"
 msgid "Installation error"
 msgstr "Изход от приложението"
 
-#: libs/ui/KisMainWindow.cpp:3010
+#: libs/ui/KisMainWindow.cpp:3055
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Themes"
 msgstr "&Теми"
 
-#: libs/ui/KisMainWindow.cpp:3069
+#: libs/ui/KisMainWindow.cpp:3134
 #, fuzzy, kde-format
 #| msgid "Custom Pattern"
 msgid "Expanding Spacer"
@@ -37016,12 +37214,12 @@ msgctxt "choice for author profile"
 msgid "Anonymous"
 msgstr "Анонимен"
 
-#: libs/ui/KisWelcomePageWidget.cpp:157
+#: libs/ui/KisWelcomePageWidget.cpp:162
 #, kde-format
 msgid "Enable news and check for new releases"
 msgstr "Активиране на новини и проверка за нови версии"
 
-#: libs/ui/KisWelcomePageWidget.cpp:159
+#: libs/ui/KisWelcomePageWidget.cpp:164
 #, kde-format
 msgid ""
 "Show news about Krita: this needs internet to retrieve information from the "
@@ -37030,42 +37228,52 @@ msgstr ""
 "Показване на новини относно Krita: това изисква връзка с интернет за "
 "извличане на информацията от krita.org"
 
-#: libs/ui/KisWelcomePageWidget.cpp:162
+#: libs/ui/KisWelcomePageWidget.cpp:167
 #: plugins/python/comics_project_management_tools/comics_metadata_dialog.py:357
 #, kde-format
 msgid "Language"
 msgstr "Език"
 
-#: libs/ui/KisWelcomePageWidget.cpp:163
+#: libs/ui/KisWelcomePageWidget.cpp:168
 #, kde-format
 msgid "English news is always up to date."
 msgstr "Английските новини са винаги актуални."
 
-#: libs/ui/KisWelcomePageWidget.cpp:400
-#, kde-format
-msgid "Get your Krita Supporter Badge here!"
-msgstr ""
-
-#: libs/ui/KisWelcomePageWidget.cpp:635
+#: libs/ui/KisWelcomePageWidget.cpp:631
 #: plugins/dockers/presethistory/presethistory_dock.cpp:302
 #, kde-format
 msgid "Forget \"%1\""
 msgstr "Забравяне на \"%1\"?"
 
-#: libs/ui/KisWelcomePageWidget.cpp:742
+#: libs/ui/KisWelcomePageWidget.cpp:738
 #, kde-format
 msgid "New version of Krita is available."
 msgstr "Налична е nова версия на  Krita."
 
-#: libs/ui/KisWelcomePageWidget.cpp:771
+#: libs/ui/KisWelcomePageWidget.cpp:767
 #, fuzzy, kde-format
 #| msgid "An exception occurred while running the script."
 msgid "An error occurred during the update"
 msgstr "При изпълнението на скрипта възникна изключение."
 
-#: libs/ui/KisWelcomePageWidget.cpp:777
+#: libs/ui/KisWelcomePageWidget.cpp:773
 #, kde-format
 msgid "Restart is required."
+msgstr ""
+
+#: libs/ui/KisWelcomePageWidget.cpp:832
+#, kde-format
+msgid "Become a Supporter!"
+msgstr ""
+
+#: libs/ui/KisWelcomePageWidget.cpp:836
+#, kde-format
+msgid "Supporters get brush packs and more."
+msgstr ""
+
+#: libs/ui/KisWelcomePageWidget.cpp:837
+#, kde-format
+msgid "Contributions keep development going."
 msgstr ""
 
 #: libs/ui/KoDocumentInfoDlg.cpp:73
@@ -39873,7 +40081,7 @@ msgstr "Напред"
 #. i18n: ectx: property (title), widget (QGroupBox, BundleSelectedGroupBox)
 #: libs/ui/widgets/kis_utility_title_bar.cpp:20
 #: plugins/dockers/gamutmask/forms/wdgGamutMaskChooser.ui:137
-#: plugins/extensions/resourcemanager/wdgdlgbundlemanager.ui:166
+#: plugins/extensions/resourcemanager/wdgdlgbundlemanager.ui:158
 #, kde-format
 msgid "Title"
 msgstr "Заглавие"
@@ -40156,6 +40364,18 @@ msgstr "Налични свойства:"
 #| msgid "Current Layer"
 msgid "Current dockers"
 msgstr "Текущ слой"
+
+#: libs/ui/widgets/KisDonationManagementWidget.cpp:25
+#, fuzzy, kde-format
+#| msgid "Edit Resource Bundle"
+msgid "Download Resource Bundles"
+msgstr "Редактиране на пакета с ресурси"
+
+#: libs/ui/widgets/KisDonationManagementWidget.cpp:30
+#, fuzzy, kde-format
+#| msgid "Description"
+msgid "Manage Subscription"
+msgstr "Описание"
 
 #: libs/ui/widgets/KisGamutMaskToolbar.cpp:41
 #, kde-format
@@ -44957,7 +45177,7 @@ msgctxt "action"
 msgid "Export Timelapse..."
 msgstr ""
 
-#: plugins/dockers/recorder/recorder_export.cpp:93
+#: plugins/dockers/recorder/recorder_export.cpp:109
 #, kde-format
 msgctxt ""
 "This text is displayed instead of path to external tool in case of external "
@@ -44965,27 +45185,35 @@ msgctxt ""
 msgid "[NOT FOUND]"
 msgstr "[НЕ Е НАМЕРЕН]"
 
-#: plugins/dockers/recorder/recorder_export.cpp:94
+#: plugins/dockers/recorder/recorder_export.cpp:110
 #, kde-format
 msgid ""
 "FFmpeg executable location couldn't be detected, please install it or select "
 "its location manually"
 msgstr ""
 
-#: plugins/dockers/recorder/recorder_export.cpp:177
+#: plugins/dockers/recorder/recorder_export.cpp:231
 #, kde-format
 msgid "Abort encoding the timelapse video?"
 msgstr ""
 
-#: plugins/dockers/recorder/recorder_export.cpp:248
-#, kde-format
+#: plugins/dockers/recorder/recorder_export.cpp:318
+#, fuzzy, kde-format
+#| msgctxt "Status for the export of the video record"
+#| msgid "Starting FFmpeg..."
 msgctxt "Status for the export of the video record"
-msgid "Starting FFmpeg..."
+msgid "Starting exporter..."
 msgstr "Стартиране на FFmpeg..."
+
+#: plugins/dockers/recorder/recorder_export.cpp:437
+#, fuzzy, kde-format
+#| msgid "Export as video"
+msgid "Export Timelapse Video As"
+msgstr "Експортиране като видео"
 
 #. i18n: ectx: property (title), widget (QGroupBox, exportGroupBox)
 #. i18n: ectx: property (text), widget (QToolButton, btnExport)
-#: plugins/dockers/recorder/recorder_export.cpp:373
+#: plugins/dockers/recorder/recorder_export.cpp:528
 #: plugins/dockers/storyboarddocker/DlgExportStoryboard.cpp:29
 #: plugins/dockers/storyboarddocker/wdgexportstoryboard.ui:373
 #: plugins/dockers/storyboarddocker/wdgstoryboarddock.ui:21
@@ -44993,50 +45221,49 @@ msgstr "Стартиране на FFmpeg..."
 msgid "Export"
 msgstr "Експортиране"
 
-#: plugins/dockers/recorder/recorder_export.cpp:388
+#: plugins/dockers/recorder/recorder_export.cpp:545
 #, kde-format
 msgctxt "Can't export recording because nothing to export"
 msgid "No frames to export"
 msgstr ""
 
-#: plugins/dockers/recorder/recorder_export.cpp:392
+#: plugins/dockers/recorder/recorder_export.cpp:549
 #, fuzzy, kde-format
 #| msgid "Start Recording"
 msgctxt "General information about recording"
 msgid "Recording info"
 msgstr "Започване на записа"
 
-#: plugins/dockers/recorder/recorder_export.cpp:395
+#: plugins/dockers/recorder/recorder_export.cpp:552
 #, kde-format
 msgctxt "Pixel dimension suffix"
 msgid "px"
 msgstr "px"
 
-#: plugins/dockers/recorder/recorder_export.cpp:397
+#: plugins/dockers/recorder/recorder_export.cpp:554
 #, fuzzy, kde-format
 #| msgid "frame"
 msgctxt "The suffix after number of frames"
 msgid "frame(s)"
 msgstr "кадър"
 
-#: plugins/dockers/recorder/recorder_export.cpp:443
+#: plugins/dockers/recorder/recorder_export.cpp:614
 #, kde-format
 msgctxt "Can't browse frames of recording because no frames have been recorded"
 msgid "No frames to browse."
 msgstr ""
 
-#: plugins/dockers/recorder/recorder_export.cpp:549
+#: plugins/dockers/recorder/recorder_export.cpp:726
 #, kde-format
 msgid "Select FFmpeg Executable File"
 msgstr ""
 
-#: plugins/dockers/recorder/recorder_export.cpp:594
-#, fuzzy, kde-format
-#| msgid "Export as video"
-msgid "Export Timelapse Video As"
-msgstr "Експортиране като видео"
+#: plugins/dockers/recorder/recorder_export.cpp:806
+#, kde-format
+msgid "No frames to export."
+msgstr ""
 
-#: plugins/dockers/recorder/recorder_export.cpp:613
+#: plugins/dockers/recorder/recorder_export.cpp:820
 #, fuzzy, kde-format
 #| msgid ""
 #| "A profile with that name already exists.\n"
@@ -45046,22 +45273,18 @@ msgstr ""
 "Вече съществува профил с такова име.\n"
 "Искате ли да го презапишете?"
 
-#: plugins/dockers/recorder/recorder_export.cpp:618
-#, kde-format
-msgid "No frames to export."
-msgstr ""
-
-#: plugins/dockers/recorder/recorder_export.cpp:645
+#: plugins/dockers/recorder/recorder_export.cpp:848
 #, kde-format
 msgid "The timelapse video is being encoded..."
 msgstr ""
 
-#: plugins/dockers/recorder/recorder_export.cpp:660
-#, kde-format
-msgid "Export failed. FFmpeg message:"
-msgstr ""
+#: plugins/dockers/recorder/recorder_export.cpp:863
+#, fuzzy, kde-format
+#| msgid "Export filter layers"
+msgid "Export failed. Error message:"
+msgstr "Експортиране на филтър на слоеве"
 
-#: plugins/dockers/recorder/recorder_export.cpp:681
+#: plugins/dockers/recorder/recorder_export.cpp:886
 #, kde-format
 msgid ""
 "The recordings for this document will be deleted and you will not be able to "
@@ -45071,7 +45294,7 @@ msgid ""
 "Do you wish to continue?"
 msgstr ""
 
-#: plugins/dockers/recorder/recorder_export.cpp:688
+#: plugins/dockers/recorder/recorder_export.cpp:893
 #: plugins/dockers/recorder/recorder_snapshots_manager.cpp:236
 #, kde-format
 msgctxt "Label title, Snapshot directory deleting is in progress"
@@ -45090,23 +45313,50 @@ msgstr ""
 msgid "Open record directory"
 msgstr ""
 
-#. i18n: ectx: property (text), widget (QLabel, labelRealTimeCaptureNotion)
-#: plugins/dockers/recorder/recorder_export.ui:178
+#. i18n: ectx: property (toolTip), widget (QPushButton, buttonBrowseFfmpeg)
+#: plugins/dockers/recorder/recorder_export.ui:118
 #, kde-format
-msgid "Used for Capture Interval calculation"
+msgid "Setup ffmpeg executable location"
 msgstr ""
 
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, spinRate)
-#. i18n: ectx: property (suffix), widget (QSpinBox, spinLastFrameSec)
-#: plugins/dockers/recorder/recorder_export.ui:214
-#: plugins/dockers/recorder/recorderdocker.ui:183
+#. i18n: ectx: property (suffix), widget (QSpinBox, spinFirstFrameSec)
+#: plugins/dockers/recorder/recorder_export.ui:139
 #, kde-format
-msgctxt "Contraction of \"second\" for interval"
 msgid " sec."
 msgstr " сек."
 
+#. i18n: ectx: property (text), widget (QCheckBox, checkResize)
+#: plugins/dockers/recorder/recorder_export.ui:191
+#, kde-format
+msgid "Resize:"
+msgstr "Преоразмеряване:"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, buttonEditProfile)
+#: plugins/dockers/recorder/recorder_export.ui:218
+#, kde-format
+msgid "Edit video profile"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, labelFfmpegLocation)
+#: plugins/dockers/recorder/recorder_export.ui:225
+#, kde-format
+msgid "FFmpeg:"
+msgstr "FFmpeg:"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, buttonBrowseExport)
+#: plugins/dockers/recorder/recorder_export.ui:238
+#, kde-format
+msgid "Select a file location for the exported timelapse video"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, labelFps)
+#: plugins/dockers/recorder/recorder_export.ui:357
+#, kde-format
+msgid "Video FPS:"
+msgstr "Видео FPS:"
+
 #. i18n: ectx: property (toolTip), widget (QLabel, labelFpsInput)
-#: plugins/dockers/recorder/recorder_export.ui:243
+#: plugins/dockers/recorder/recorder_export.ui:371
 #, kde-format
 msgid ""
 "The speed of reading the input stream.\n"
@@ -45115,56 +45365,53 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, labelFpsInput)
-#: plugins/dockers/recorder/recorder_export.ui:246
+#: plugins/dockers/recorder/recorder_export.ui:374
 #, kde-format
 msgctxt "Input FPS of recorded timelapses."
 msgid "Input FPS:"
 msgstr "Входни FPS:"
 
-#. i18n: ectx: property (toolTip), widget (QPushButton, buttonLockFps)
-#: plugins/dockers/recorder/recorder_export.ui:259
-#, kde-format
-msgid "Use the same rate for Input FPS and Video FPS"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, labelFps)
-#: plugins/dockers/recorder/recorder_export.ui:289
-#, kde-format
-msgid "Video FPS:"
-msgstr "Видео FPS:"
-
-#. i18n: ectx: property (toolTip), widget (QPushButton, buttonEditProfile)
-#: plugins/dockers/recorder/recorder_export.ui:320
-#, kde-format
-msgid "Edit video profile"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLineEdit, editFfmpegPath)
-#: plugins/dockers/recorder/recorder_export.ui:333
-#, kde-format
-msgid "ffmpeg"
-msgstr "ffmpeg"
-
 #. i18n: ectx: property (toolTip), widget (QCheckBox, extendResultCheckBox)
-#: plugins/dockers/recorder/recorder_export.ui:378
+#: plugins/dockers/recorder/recorder_export.ui:480
 #, kde-format
 msgid "Extend the last frame in the exported video by the specified duration"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, extendResultCheckBox)
-#: plugins/dockers/recorder/recorder_export.ui:381
+#: plugins/dockers/recorder/recorder_export.ui:483
 #, kde-format
 msgid "Extend result for:"
 msgstr ""
 
-#. i18n: ectx: property (toolTip), widget (QPushButton, buttonBrowseExport)
-#: plugins/dockers/recorder/recorder_export.ui:390
+#. i18n: ectx: property (toolTip), widget (QPushButton, buttonLockFps)
+#: plugins/dockers/recorder/recorder_export.ui:492
 #, kde-format
-msgid "Select a file location for the exported timelapse video"
+msgid "Use the same rate for Input FPS and Video FPS"
 msgstr ""
 
+#. i18n: ectx: property (text), widget (QLabel, labelRealTimeCaptureNotion)
+#: plugins/dockers/recorder/recorder_export.ui:548
+#, kde-format
+msgid "Used for Capture Interval calculation"
+msgstr ""
+
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, spinRate)
+#. i18n: ectx: property (suffix), widget (QSpinBox, spinLastFrameSec)
+#: plugins/dockers/recorder/recorder_export.ui:584
+#: plugins/dockers/recorder/recorderdocker.ui:183
+#, kde-format
+msgctxt "Contraction of \"second\" for interval"
+msgid " sec."
+msgstr " сек."
+
+#. i18n: ectx: property (text), widget (QLineEdit, editFfmpegPath)
+#: plugins/dockers/recorder/recorder_export.ui:618
+#, kde-format
+msgid "ffmpeg"
+msgstr "ffmpeg"
+
 #. i18n: ectx: property (toolTip), widget (QCheckBox, resultPreviewCheckBox)
-#: plugins/dockers/recorder/recorder_export.ui:433
+#: plugins/dockers/recorder/recorder_export.ui:644
 #, kde-format
 msgid ""
 "Prepend a preview to the exported video.\n"
@@ -45172,78 +45419,71 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, resultPreviewCheckBox)
-#: plugins/dockers/recorder/recorder_export.ui:439
+#: plugins/dockers/recorder/recorder_export.ui:650
 #, fuzzy, kde-format
 #| msgid "Enable after:"
 msgid "Enable preview for:"
 msgstr "Активиране след:"
 
-#. i18n: ectx: property (toolTip), widget (QPushButton, buttonBrowseFfmpeg)
-#: plugins/dockers/recorder/recorder_export.ui:567
+#. i18n: ectx: property (text), widget (QLabel, lblWarnSizeText)
+#: plugins/dockers/recorder/recorder_export.ui:677
 #, kde-format
-msgid "Setup ffmpeg executable location"
+msgid ""
+"<strong>Warning:</strong> video with dimensions larger than 1920 pixels is "
+"not widely supported. The export may fail and some devices will not be able "
+"to play it."
 msgstr ""
 
-#. i18n: ectx: property (suffix), widget (QSpinBox, spinFirstFrameSec)
-#: plugins/dockers/recorder/recorder_export.ui:589
+#. i18n: ectx: property (text), widget (QLabel, lblWarnFpsText)
+#: plugins/dockers/recorder/recorder_export.ui:711
 #, kde-format
-msgid " sec."
-msgstr " сек."
-
-#. i18n: ectx: property (text), widget (QLabel, labelFfmpegLocation)
-#: plugins/dockers/recorder/recorder_export.ui:617
-#, kde-format
-msgid "FFmpeg:"
-msgstr "FFmpeg:"
-
-#. i18n: ectx: property (text), widget (QCheckBox, checkResize)
-#: plugins/dockers/recorder/recorder_export.ui:654
-#, kde-format
-msgid "Resize:"
-msgstr "Преоразмеряване:"
+msgid ""
+"<strong>Warning:</strong> video with FPS beyond 30 is not widely supported. "
+"The export may fail and some devices will not be able to play it."
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, labelTitleVideoDuration)
-#: plugins/dockers/recorder/recorder_export.ui:693
+#: plugins/dockers/recorder/recorder_export.ui:757
 #, kde-format
 msgid "Video duration:"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, labelDone)
-#: plugins/dockers/recorder/recorder_export.ui:943
+#: plugins/dockers/recorder/recorder_export.ui:1007
 #, kde-format
 msgctxt "Caption: Video exporting finished"
 msgid "Done!"
 msgstr "Готово!"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonWatchIt)
-#: plugins/dockers/recorder/recorder_export.ui:961
+#: plugins/dockers/recorder/recorder_export.ui:1025
 #, kde-format
 msgctxt "Watch the video which is just created"
 msgid "Watch it!"
 msgstr "Гледайте го!"
 
 #. i18n: ectx: property (text), widget (QLabel, labelWritten)
-#: plugins/dockers/recorder/recorder_export.ui:971
+#: plugins/dockers/recorder/recorder_export.ui:1035
 #, kde-format
 msgid "The timelapse video has been written to:"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonShowInFolder)
-#: plugins/dockers/recorder/recorder_export.ui:989
+#: plugins/dockers/recorder/recorder_export.ui:1053
 #, kde-format
 msgctxt "Open the folder when the new created video is placed"
 msgid "Show in folder"
 msgstr "Показване в папката"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonRemoveSnapshots)
-#: plugins/dockers/recorder/recorder_export.ui:1026
+#: plugins/dockers/recorder/recorder_export.ui:1090
 #, kde-format
 msgctxt "Open the folder when the new created video is placed"
 msgid "Remove recordings"
 msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, labelRenderTimeTitle)
-#: plugins/dockers/recorder/recorder_export.ui:1056
+#: plugins/dockers/recorder/recorder_export.ui:1120
 #, fuzzy, kde-format
 #| msgid "&Rendering intent:"
 msgctxt "How long it took to render the video"
@@ -45251,14 +45491,14 @@ msgid "Render time:"
 msgstr "&Предаване:"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonRestart)
-#: plugins/dockers/recorder/recorder_export.ui:1083
+#: plugins/dockers/recorder/recorder_export.ui:1147
 #, kde-format
 msgctxt "Button to restart the timelapse video configuring"
 msgid "Restart"
 msgstr "Рестартиране"
 
 #. i18n: ectx: property (text), widget (QPushButton, buttonDoneClose)
-#: plugins/dockers/recorder/recorder_export.ui:1090
+#: plugins/dockers/recorder/recorder_export.ui:1154
 #, kde-format
 msgctxt "Close dialog button"
 msgid "Close"
@@ -45660,39 +45900,39 @@ msgctxt "Title of the docker"
 msgid "Recorder"
 msgstr "Запис"
 
-#: plugins/dockers/recorder/recorderdocker_dock.cpp:478
+#: plugins/dockers/recorder/recorderdocker_dock.cpp:471
 #, kde-format
 msgid "Your system is not efficient enough for this feature"
 msgstr ""
 
-#: plugins/dockers/recorder/recorderdocker_dock.cpp:634
+#: plugins/dockers/recorder/recorderdocker_dock.cpp:629
 #, fuzzy, kde-format
 #| msgid "Select a directory to load..."
 msgid "Select a Directory for Recordings"
 msgstr "Избор на директория за зареждане..."
 
-#: plugins/dockers/recorder/recorderdocker_dock.cpp:755
-#: plugins/dockers/recorder/recorderdocker_dock.cpp:761
+#: plugins/dockers/recorder/recorderdocker_dock.cpp:750
+#: plugins/dockers/recorder/recorderdocker_dock.cpp:756
 #, fuzzy, kde-format
 #| msgid "Record"
 msgctxt "@title:window"
 msgid "Recorder"
 msgstr "Запис"
 
-#: plugins/dockers/recorder/recorderdocker_dock.cpp:756
+#: plugins/dockers/recorder/recorderdocker_dock.cpp:751
 #, kde-format
 msgid ""
 "The recorder has been stopped due to failure while writing a frame. Please "
 "check free disk space and start the recorder again."
 msgstr ""
 
-#: plugins/dockers/recorder/recorderdocker_dock.cpp:762
+#: plugins/dockers/recorder/recorderdocker_dock.cpp:757
 #, kde-format
 msgid ""
 "Krita was unable to stop the recorder probably. Please try to restart Krita."
 msgstr ""
 
-#: plugins/dockers/recorder/recorderdocker_dock.cpp:767
+#: plugins/dockers/recorder/recorderdocker_dock.cpp:762
 #, kde-format
 msgid ""
 "Low performance warning. The recorder is not able to write all the frames in "
@@ -45701,7 +45941,7 @@ msgid ""
 "filtering in the canvas acceleration settings."
 msgstr ""
 
-#: plugins/dockers/recorder/recorderdocker_dock.cpp:769
+#: plugins/dockers/recorder/recorderdocker_dock.cpp:764
 #, kde-format
 msgid ""
 "Low performance warning. The recorder is not able to write all the frames in "
@@ -50898,18 +51138,18 @@ msgid "Krita cannot launch the gmic-qt plugin. No bundled library found."
 msgstr ""
 "Krita не може да стартира плъгин gmic-qt. Не са намерени ресурсни библиотеки."
 
-#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:132
+#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:136
 #, kde-format
 msgid "Manage Resource Libraries"
 msgstr "Управление на ресурсните библиотеки"
 
-#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:139
+#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:143
 #, kde-format
 msgctxt "In bundle manager; press button to import a resource library"
 msgid "Import"
 msgstr "Импортиране"
 
-#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:144
+#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:148
 #, kde-format
 msgctxt ""
 "In bundle manager; press button to deactivate the resource library(remove "
@@ -50917,13 +51157,13 @@ msgctxt ""
 msgid "Deactivate"
 msgstr "Деактивиране"
 
-#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:148
+#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:152
 #, kde-format
 msgctxt "In bundle manager; press button to create a new bundle"
 msgid "Create Bundle"
 msgstr "Създаване на пакет с ресурси"
 
-#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:152
+#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:156
 #, fuzzy, kde-format
 #| msgctxt "(qtundo-format)"
 #| msgid "Edit Guides"
@@ -50931,8 +51171,8 @@ msgctxt "In bundle manager; press button to edit existing bundle"
 msgid "Edit Bundle"
 msgstr "Редактиране на водачите"
 
-#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:195
-#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:353
+#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:205
+#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:371
 #, kde-format
 msgid ""
 "\n"
@@ -50945,24 +51185,24 @@ msgstr ""
 "преди да продължите.\n"
 "Ако няма такъв пакет, импортирайте го преди да продължите. "
 
-#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:209
+#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:219
 #, kde-format
 msgid "Choose the resource library to import"
 msgstr "Изберете ресурсната библиотека за импортиране"
 
-#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:213
-#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:280
+#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:223
+#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:290
 #, kde-format
 msgid "Select the bundle"
 msgstr "Избиране на пакет с ресурси"
 
-#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:229
-#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:295
+#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:239
+#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:305
 #, kde-format
 msgid "Could not load bundle %1."
 msgstr "Пакетът %1 не може да се зареди."
 
-#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:247
+#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:257
 #, kde-format
 msgid ""
 "There is already a bundle with this name installed. Do you want to overwrite "
@@ -50970,13 +51210,13 @@ msgid ""
 msgstr ""
 "Вече съществува инсталиран пакет с това име. Искате ли да го презапишете?"
 
-#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:276
+#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:286
 #, fuzzy, kde-format
 #| msgid "Choose channels to blend"
 msgid "Choose the bundle to edit"
 msgstr "Избиране на канали за смесване"
 
-#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:411
+#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:429
 #, kde-format
 msgctxt ""
 "In bundle manager; press button to deactivate the bundle (remove resources "
@@ -50984,7 +51224,7 @@ msgctxt ""
 msgid "Deactivate"
 msgstr "Деактивиране"
 
-#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:416
+#: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:434
 #, kde-format
 msgctxt ""
 "In bundle manager; press button to activate the bundle (add resources from "
@@ -51177,6 +51417,261 @@ msgctxt ""
 msgid "What resource do you want to import these %1 files as?"
 msgstr "Като какъв ресурс искате да импортирате тези %1 файлове?"
 
+#: plugins/extensions/resourcemanager/KisSupporterBundlesDialog.cpp:20
+#, fuzzy, kde-format
+#| msgid "All supported formats"
+msgid "Supporter Bundles"
+msgstr "Всички поддържани формати"
+
+#: plugins/extensions/resourcemanager/KisSupporterBundlesDialog.cpp:55
+#, kde-format
+msgid "<strong>Error:</strong> %1"
+msgstr ""
+
+#: plugins/extensions/resourcemanager/KisSupporterBundlesDialog.cpp:96
+#, fuzzy, kde-format
+#| msgid "No picture available."
+msgid "No supporter bundles available."
+msgstr "Няма налично изображение."
+
+#: plugins/extensions/resourcemanager/KisSupporterBundlesDialog.cpp:108
+#, kde-format
+msgid ""
+"These bundles have been made available by their authors to help provide "
+"rewards for supporting Krita's development. They do not receive compensation "
+"for purchases and may make these bundles in other ways behind the links "
+"below."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, m_lblLoading)
+#: plugins/extensions/resourcemanager/KisSupporterBundlesDialog.ui:40
+#, kde-format
+msgid "Loading…"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, m_btnRetry)
+#: plugins/extensions/resourcemanager/KisSupporterBundlesDialog.ui:106
+#, fuzzy, kde-format
+#| msgid "Symmetry"
+msgid "Retry"
+msgstr "Симетрия"
+
+#: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:55
+#, kde-format
+msgid "Server responded with error %1."
+msgstr ""
+
+#: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:84
+#, fuzzy, kde-format
+#| msgid "Invalid File"
+msgid "Invalid checksums file."
+msgstr "Невалиден файл"
+
+#: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:92
+#, kde-format
+msgid "Invalid checksums version."
+msgstr ""
+
+#: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:117
+#, kde-format
+msgid "You have to update Krita to use this service."
+msgstr ""
+
+#: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:119
+#, kde-format
+msgid "This service is not available in your region."
+msgstr ""
+
+#: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:121
+#, kde-format
+msgid "This service is currently unavailable."
+msgstr ""
+
+#: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:123
+#, fuzzy, kde-format
+#| msgid "The document has been modified."
+msgid "This service has been discontinued."
+msgstr "Документът е променен."
+
+#: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:125
+#, fuzzy, kde-format
+#| msgid "Unknown error: %1"
+msgid "Unknown service error %1."
+msgstr "Неизвестна грешка: %1"
+
+#: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:184
+#, kde-format
+msgid "Not enough data."
+msgstr ""
+
+#: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:191
+#, fuzzy, kde-format
+#| msgid "Invalid value."
+msgid "Invalid version."
+msgstr "Невалидна стойност."
+
+#: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:199
+#, fuzzy, kde-format
+#| msgctxt "invalid profile name"
+#| msgid "Invalid name."
+msgid "Invalid checksum."
+msgstr "Неправилно име."
+
+#: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:205
+#, fuzzy, kde-format
+#| msgctxt "Warning message"
+#| msgid "Failed to add the resource."
+msgid "Failed to create directory %1."
+msgstr "Неуспешно добавяне на ресурс."
+
+#: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:212
+#, fuzzy, kde-format
+#| msgid "Could not load %1."
+msgid "Failed to open %1 for writing."
+msgstr "Неуспешно зареждане на %1"
+
+#: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:218
+#, fuzzy, kde-format
+#| msgid "Could not load %1."
+msgid "Failed to write %1."
+msgstr "Неуспешно зареждане на %1"
+
+#: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:317
+#, kde-format
+msgid "Failed to retrieve bundle checksums: %1"
+msgstr ""
+
+#: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:322
+#, fuzzy, kde-format
+#| msgctxt "a tooltip shown when a file layer cannot load its linked file"
+#| msgid "Failed to load linked file: %1"
+msgid "Failed to retrieve bundles: %1"
+msgstr "Неуспешно зареждане на свързан файл: %1"
+
+#: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:29
+#, fuzzy, kde-format
+#| msgid "Brush presets"
+msgid "%1 brush preset"
+msgid_plural "%1 brush presets"
+msgstr[0] "Настройки на четка"
+msgstr[1] "Настройки на четка"
+
+#: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:32
+#, fuzzy, kde-format
+#| msgid "Brush tips"
+msgid "%1 brush tips"
+msgid_plural "%1 brush tips"
+msgstr[0] "Върхове за четка"
+msgstr[1] "Върхове за четка"
+
+#: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:35
+#, kde-format
+msgid "%1 texture patterns"
+msgid_plural "%1 texture patterns"
+msgstr[0] ""
+msgstr[1] ""
+
+#: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:38
+#, kde-format
+msgid "%1 workspace layout"
+msgid_plural "%1 workspace layouts"
+msgstr[0] ""
+msgstr[1] ""
+
+#: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:53
+#, kde-format
+msgid "%1 (subscribed)"
+msgstr ""
+
+#: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:55
+#, fuzzy, kde-format
+#| msgid "%1 (Copy)"
+msgid "%1 (owned)"
+msgstr "%1 (Копиране)"
+
+#: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:83
+#, fuzzy, kde-format
+#| msgid "Contrast:"
+msgctxt "in-app purchases, prefix for a list of what a bundle contains"
+msgid "Contains:"
+msgstr "Контраст:"
+
+#: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:92
+#, fuzzy, kde-format
+#| msgid "No picture available."
+msgctxt "in-app purchases, a bundle that the user can't acquire"
+msgid "Not available."
+msgstr "Няма налично изображение."
+
+#: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:95
+#, fuzzy, kde-format
+#| msgid "Available"
+msgctxt ""
+"in-app purchases, prefix for a list of which purchases make a bundle "
+"available"
+msgid "Available with:"
+msgstr "Налични"
+
+#: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:138
+#, kde-format
+msgid "Downloading bundle…"
+msgstr ""
+
+#: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:139
+#: plugins/paintops/libpaintop/KisDynamicSensorFactoryFade.cpp:68
+#, kde-format
+msgid "%1"
+msgstr "%1"
+
+#: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:194
+#, fuzzy, kde-format
+#| msgid "Invalid File"
+msgid "Invalid bundle size"
+msgstr "Невалиден файл"
+
+#: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:202
+#, kde-format
+msgid "Invalid bundle checksum"
+msgstr ""
+
+#: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:206
+#, kde-format
+msgid "Activating bundle…"
+msgstr ""
+
+#: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:216
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Failed to import the resource"
+msgid "Failed to import bundle"
+msgstr "Неуспешно импортиране на ресурс"
+
+#: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:241
+#, fuzzy, kde-format
+#| msgid "Could not load profile: %1."
+msgid "Bundle download failed: %1"
+msgstr "Грешка при зареждане на профила: %1."
+
+#: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:241
+#, fuzzy, kde-format
+#| msgctxt "action"
+#| msgid "Convert to Shape"
+msgid "Download failed"
+msgstr "Преобразуване във фигура"
+
+#. i18n: ectx: property (text), widget (QPushButton, m_btnGet)
+#: plugins/extensions/resourcemanager/KisSupporterBundleWidget.ui:147
+#, fuzzy, kde-format
+#| msgid "Down"
+msgid "Download"
+msgstr "Преместване надолу"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: plugins/extensions/resourcemanager/KisSupporterBundleWidget.ui:196
+#, kde-format
+msgid "✔ Owned"
+msgstr ""
+
 #: plugins/extensions/resourcemanager/page_bundle_saver.cpp:95
 #, kde-format
 msgid "Select a directory to save the bundle"
@@ -51209,7 +51704,7 @@ msgstr "Име на пакет:"
 #. i18n: ectx: property (text), widget (QLabel, author)
 #. i18n: ectx: property (text), widget (QLabel, label_3)
 #: plugins/extensions/resourcemanager/pagemetadatainfo.ui:95
-#: plugins/extensions/resourcemanager/wdgdlgbundlemanager.ui:308
+#: plugins/extensions/resourcemanager/wdgdlgbundlemanager.ui:300
 #, kde-format
 msgid "Author:"
 msgstr "Автор:"
@@ -51217,7 +51712,7 @@ msgstr "Автор:"
 #. i18n: ectx: property (text), widget (QLabel, label)
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: plugins/extensions/resourcemanager/pagemetadatainfo.ui:130
-#: plugins/extensions/resourcemanager/wdgdlgbundlemanager.ui:389
+#: plugins/extensions/resourcemanager/wdgdlgbundlemanager.ui:381
 #, kde-format
 msgid "Email:"
 msgstr "Електронна поща:"
@@ -51225,7 +51720,7 @@ msgstr "Електронна поща:"
 #. i18n: ectx: property (text), widget (QLabel, website)
 #. i18n: ectx: property (text), widget (QLabel, label_5)
 #: plugins/extensions/resourcemanager/pagemetadatainfo.ui:156
-#: plugins/extensions/resourcemanager/wdgdlgbundlemanager.ui:363
+#: plugins/extensions/resourcemanager/wdgdlgbundlemanager.ui:355
 #, kde-format
 msgid "Website:"
 msgstr "Уебсайт:"
@@ -51239,7 +51734,7 @@ msgstr "http://"
 #. i18n: ectx: property (text), widget (QLabel, license)
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: plugins/extensions/resourcemanager/pagemetadatainfo.ui:185
-#: plugins/extensions/resourcemanager/wdgdlgbundlemanager.ui:337
+#: plugins/extensions/resourcemanager/wdgdlgbundlemanager.ui:329
 #: plugins/python/comics_project_management_tools/comics_metadata_dialog.py:424
 #, kde-format
 msgid "License:"
@@ -51307,14 +51802,20 @@ msgctxt "Resource Importer file dialog title"
 msgid "Import Resources and Resource Libraries"
 msgstr "Импортиране на ресурсна библиотека"
 
-#: plugins/extensions/resourcemanager/resourcemanager.cpp:38
+#: plugins/extensions/resourcemanager/resourcemanager.cpp:41
 #, kde-format
 msgid "Manage Resource Libraries..."
 msgstr "Управление на ресурсните библиотеки..."
 
-#: plugins/extensions/resourcemanager/resourcemanager.cpp:42
+#: plugins/extensions/resourcemanager/resourcemanager.cpp:45
 #, kde-format
 msgid "Manage Resources..."
+msgstr "Управление на ресурси..."
+
+#: plugins/extensions/resourcemanager/resourcemanager.cpp:50
+#, fuzzy, kde-format
+#| msgid "Manage Resources..."
+msgid "Get More Resources..."
 msgstr "Управление на ресурси..."
 
 #: plugins/extensions/resourcemanager/resourcemanager.xmlgui:5
@@ -51322,33 +51823,41 @@ msgstr "Управление на ресурси..."
 msgid "&Resources"
 msgstr "&Ресурси"
 
-#. i18n: ectx: property (toolTip), widget (QPushButton, bnEdit)
-#: plugins/extensions/resourcemanager/wdgdlgbundlemanager.ui:92
-#, fuzzy, kde-format
-#| msgid "Import a resource library"
-msgid "Edit a resource library"
-msgstr "Импортиране на ресурсна библиотека"
-
-#. i18n: ectx: property (toolTip), widget (QPushButton, bnNew)
-#: plugins/extensions/resourcemanager/wdgdlgbundlemanager.ui:108
-#, kde-format
-msgid "Create a resource library"
-msgstr "Създаване на ресурсна библиотека"
-
 #. i18n: ectx: property (toolTip), widget (QPushButton, bnAdd)
-#: plugins/extensions/resourcemanager/wdgdlgbundlemanager.ui:128
+#: plugins/extensions/resourcemanager/wdgdlgbundlemanager.ui:80
 #, kde-format
 msgid "Import a resource library"
 msgstr "Импортиране на ресурсна библиотека"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, bnToggle)
-#: plugins/extensions/resourcemanager/wdgdlgbundlemanager.ui:148
+#: plugins/extensions/resourcemanager/wdgdlgbundlemanager.ui:99
 #, kde-format
 msgid "Delete a resource library"
 msgstr "Изтриване на ресурсна библиотека"
 
+#. i18n: ectx: property (toolTip), widget (QPushButton, bnNew)
+#: plugins/extensions/resourcemanager/wdgdlgbundlemanager.ui:118
+#, kde-format
+msgid "Create a resource library"
+msgstr "Създаване на ресурсна библиотека"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, bnEdit)
+#: plugins/extensions/resourcemanager/wdgdlgbundlemanager.ui:137
+#, fuzzy, kde-format
+#| msgid "Import a resource library"
+msgid "Edit a resource library"
+msgstr "Импортиране на ресурсна библиотека"
+
+#. i18n: ectx: property (text), widget (QPushButton, bnSupport)
+#: plugins/extensions/resourcemanager/wdgdlgbundlemanager.ui:147
+#, fuzzy, kde-format
+#| msgctxt "In bundle manager; press button to create a new bundle"
+#| msgid "Create Bundle"
+msgid "Get More Bundles"
+msgstr "Създаване на пакет с ресурси"
+
 #. i18n: ectx: property (text), widget (QLabel, label_7)
-#: plugins/extensions/resourcemanager/wdgdlgbundlemanager.ui:441
+#: plugins/extensions/resourcemanager/wdgdlgbundlemanager.ui:433
 #, kde-format
 msgid "Updated:"
 msgstr "Обновен:"
@@ -61016,11 +61525,6 @@ msgstr "Заобляне на ъгли"
 #| msgid "Offset"
 msgid "Angle Offset"
 msgstr "Отместване"
-
-#: plugins/paintops/libpaintop/KisDynamicSensorFactoryFade.cpp:68
-#, kde-format
-msgid "%1"
-msgstr "%1"
 
 #: plugins/paintops/libpaintop/KisDynamicSensorFactoryRegistry.cpp:25
 #, kde-format

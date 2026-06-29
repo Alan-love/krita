@@ -28953,7 +28953,8 @@ msgstr "Gérer les packs de ressources"
 
 #. i18n: ectx: property (text), widget (QPushButton, bnAndroidSupport)
 #: libs/ui/forms/KisWelcomePage.ui:1717 libs/ui/KisWelcomePageWidget.cpp:833
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Support Krita!"
 msgid "Support Krita!"
 msgstr "Soutenez Krita !"
 

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-28 00:41+0000\n"
-"PO-Revision-Date: 2026-06-13 03:40+0200\n"
+"PO-Revision-Date: 2026-06-28 06:31+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16288,47 +16288,41 @@ msgstr "სამუშაო სივრცეები"
 
 #. i18n: context: text @ Actions (Resources), ActionCollection (Supporter Benefits)
 #: krita/kritamenu_android.action:4
-#, fuzzy, kde-format
-#| msgid "Resources"
+#, kde-format
 msgctxt "action"
 msgid "Resources"
 msgstr "რესურსები"
 
 #. i18n: context: text @ Action (manage_supporter_bundles), Actions (Resources), ActionCollection (Supporter Benefits)
 #: krita/kritamenu_android.action:7
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "Manage Resources..."
+#, kde-format
 msgctxt "action"
 msgid "Get More Resources..."
-msgstr "რესურსების მართვა..."
+msgstr "მიიღეთ მეტი რესურსი..."
 
 #. i18n: context: toolTip @ Action (manage_supporter_bundles), Actions (Resources), ActionCollection (Supporter Benefits)
 #. i18n: context: iconText @ Action (manage_supporter_bundles), Actions (Resources), ActionCollection (Supporter Benefits)
 #. i18n: context: toolTip @ Action (manage_supporter_bundles), Actions (Resources), ActionCollection (Supporter Benefits)
 #. i18n: context: iconText @ Action (manage_supporter_bundles), Actions (Resources), ActionCollection (Supporter Benefits)
 #: krita/kritamenu_android.action:9 krita/kritamenu_android.action:10
-#, fuzzy, kde-format
-#| msgid "Storage Resources"
+#, kde-format
 msgctxt "action"
 msgid "Get More Resources"
-msgstr "შენახვის რესურსები"
+msgstr "მიიღეთ მეტი რესურსი"
 
 #. i18n: context: text @ Actions (Management), ActionCollection (Supporter Benefits)
 #: krita/kritamenu_android.action:19
-#, fuzzy, kde-format
-#| msgid "LUT Management"
+#, kde-format
 msgctxt "action"
 msgid "Management"
-msgstr "LUT-ის მართვა"
+msgstr "მართვა"
 
 #. i18n: context: text @ Action (manage_donations), Actions (Management), ActionCollection (Supporter Benefits)
 #: krita/kritamenu_android.action:22
-#, fuzzy, kde-format
-#| msgid "Manage recordings..."
+#, kde-format
 msgctxt "action"
 msgid "Manage Supporter Benefits..."
-msgstr "ჩანაწერების მართვა..."
+msgstr "მხარდამჭერის უპირატესობების მართვა..."
 
 #. i18n: context: toolTip @ Action (manage_donations), Actions (Management), ActionCollection (Supporter Benefits)
 #. i18n: context: iconText @ Action (manage_donations), Actions (Management), ActionCollection (Supporter Benefits)
@@ -16338,26 +16332,24 @@ msgstr "ჩანაწერების მართვა..."
 #, kde-format
 msgctxt "action"
 msgid "Manage Supporter Benefits"
-msgstr ""
+msgstr "მხარდამჭერის უპირატესობების მართვა"
 
 #. i18n: context: text @ Action (manage_subscriptions), Actions (Management), ActionCollection (Supporter Benefits)
 #: krita/kritamenu_android.action:34
-#, fuzzy, kde-format
-#| msgid "Manage recordings..."
+#, kde-format
 msgctxt "action"
 msgid "Manage Subscriptions..."
-msgstr "ჩანაწერების მართვა..."
+msgstr "გამოწერების მართვა..."
 
 #. i18n: context: toolTip @ Action (manage_subscriptions), Actions (Management), ActionCollection (Supporter Benefits)
 #. i18n: context: iconText @ Action (manage_subscriptions), Actions (Management), ActionCollection (Supporter Benefits)
 #. i18n: context: toolTip @ Action (manage_subscriptions), Actions (Management), ActionCollection (Supporter Benefits)
 #. i18n: context: iconText @ Action (manage_subscriptions), Actions (Management), ActionCollection (Supporter Benefits)
 #: krita/kritamenu_android.action:36 krita/kritamenu_android.action:37
-#, fuzzy, kde-format
-#| msgid "Description"
+#, kde-format
 msgctxt "action"
 msgid "Manage Subscriptions"
-msgstr "აღწერა"
+msgstr "გამოწერების მართვა"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgSplash)
 #. i18n: ectx: property (windowTitle), widget (QDialog, KisRecoverNamedAutosaveDialog)
@@ -24854,40 +24846,38 @@ msgstr "გარდაქმნის ხელსაწყოს გააქ�
 #: libs/ui/animation/KisAndroidMediaEncoderRunnable.cpp:88
 #, kde-format
 msgid "Android: %1"
-msgstr ""
+msgstr "Android: %1"
 
 #: libs/ui/animation/KisAndroidMediaEncoderRunnable.cpp:103
 #, kde-format
 msgid "%1 (hardware)"
-msgstr ""
+msgstr "%1 (აპარატურა)"
 
 #: libs/ui/animation/KisAndroidMediaEncoderRunnable.cpp:105
 #, kde-format
 msgid "%1 (software)"
-msgstr ""
+msgstr "%1 (პროგრამული)"
 
 #: libs/ui/animation/KisAndroidMediaEncoderRunnable.cpp:277
 #, kde-format
 msgid "Unsupported video parameters, try lowering the video FPS or size"
 msgstr ""
+"ვიდეოს მხარდაუჭერელი პარამეტრები. სცადეთ ვიდეოს FPS-ის, ან ზომის შემცირება"
 
 #: libs/ui/animation/KisAndroidMediaEncoderRunnable.cpp:283
-#, fuzzy, kde-format
-#| msgid "All supported formats"
+#, kde-format
 msgid "Unsupported format"
-msgstr "ყველა მხარდაჭერილი ფორმატი"
+msgstr "მხარდაუჭერელი ფორმატი"
 
 #: libs/ui/animation/KisAndroidMediaEncoderRunnable.cpp:367
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Intersect (%1)"
+#, kde-format
 msgid "Internal error (%1)"
-msgstr "კვეთა (%1)"
+msgstr "შიდა შეცდომა (%1)"
 
 #: libs/ui/animation/KisAndroidMediaEncoderRunnable.cpp:902
 #, kde-format
 msgid "Encoder:"
-msgstr ""
+msgstr "ენკოდერი:"
 
 #. i18n: ectx: property (text), widget (QLabel, lblOpenH264bitrate)
 #. i18n: ectx: property (text), widget (QLabel, label_3)
@@ -25291,16 +25281,14 @@ msgid "Loading video data... %1 frames examined."
 msgstr "მიმდინარეობს ვიდეომონაცემების ჩატვირთვა... დამუშავებულია %1 კადრი."
 
 #: libs/ui/animation/KisMediaEncoderWrapper.cpp:132
-#, fuzzy, kde-format
-#| msgctxt "Shows up instead of the name when there's no profile"
-#| msgid "No Profile Found"
+#, kde-format
 msgid "No frame files found"
-msgstr "პროფილი ვერ ვიპოვე"
+msgstr "ჩარჩოს ფაილები აღმოჩენილი არაა"
 
 #: libs/ui/animation/KisMediaEncoderWrapper.cpp:192
 #, kde-format
 msgid "No encoder for the selected format found"
-msgstr ""
+msgstr "არჩეული ფორმატისთვის ენკოდერი აღმოჩენილი არაა"
 
 #: libs/ui/animation/KisVideoSaver.cpp:52
 #, kde-format
@@ -28148,38 +28136,34 @@ msgid "Preset Icon Library"
 msgstr "პრესეტი ხატულების ბიბლიოთეკა"
 
 #: libs/ui/dialogs/KisDonationManagementDialog.cpp:17
-#, fuzzy, kde-format
-#| msgid "Unsupported unit"
+#, kde-format
 msgid "Supporter Benefits"
-msgstr "მხარდაუჭერელი ერთეული"
+msgstr "მხარდამჭერის უპირატესობები"
 
 #: libs/ui/dialogs/KisDonationManagementDialog.cpp:27
-#, fuzzy, kde-format
-#| msgid "Description"
+#, kde-format
 msgid "Manage Subscriptions"
-msgstr "აღწერა"
+msgstr "გამოწერების მართვა"
 
 #: libs/ui/dialogs/KisDonationManagementDialog.cpp:114
 #, kde-format
 msgid "You have %1 supporter benefit:"
 msgid_plural "You have %1 supporter benefits:"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "გაქვთ %1 მხარდამჭერის უპირატესობა:"
+msgstr[1] "გაქვთ %1 მხარდამჭერის უპირატესობა:"
 
 #: libs/ui/dialogs/KisDonationManagementDialog.cpp:122
 #, kde-format
 msgid "There is %1 supporter benefit available:"
 msgid_plural "There are %1 supporter benefits available:"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "არსებობს %1 მხარდამჭერის უპირატესობა:"
+msgstr[1] "არსებობს %1 მხარდამჭერის უპირატესობა:"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, KisDonationManagementDialog)
 #: libs/ui/dialogs/KisDonationManagementDialog.ui:14
-#, fuzzy, kde-format
-#| msgctxt "@label:inlistbox"
-#| msgid "Stacked"
+#, kde-format
 msgid "StackedWidget"
-msgstr "ჩალაგებული"
+msgstr "StackedWidget"
 
 #. i18n: ectx: property (text), widget (QLabel, m_lblNoBenefits)
 #: libs/ui/dialogs/KisDonationManagementDialog.ui:53
@@ -28188,12 +28172,14 @@ msgid ""
 "No supporter benefits available on this version of Krita.\n"
 "You can still support Krita by donating."
 msgstr ""
+"Krita-ის ამ ვერსიაზე მხარდამჭერის უპირატესობები აღმოჩენილი არაა.\n"
+"Krita-ის მხარდაჭერა ჯერ კიდევ შეგიძლიათ."
 
 #. i18n: ectx: property (text), widget (QPushButton, m_btnNoBenefitsSupport)
 #: libs/ui/dialogs/KisDonationManagementDialog.ui:63
 #, kde-format
 msgid "Donate"
-msgstr ""
+msgstr "შეწირვა"
 
 #: libs/ui/dialogs/KisProofingConfigModel.cpp:72
 #, kde-format
@@ -28244,6 +28230,8 @@ msgid ""
 "Use Rendering Intent, Blackpoint compensation and Adaptation set in the "
 "color management configuration."
 msgstr ""
+"გამოიყენეთ რენდერის დანიშნულება, შავი წერტილის კომპენსაცია და ადაპტაციის "
+"დაყენება ფერების მართვის მორგების ფანჯარაში."
 
 #: libs/ui/dialogs/KisProofingConfigModel.cpp:97
 #, kde-format
@@ -28252,6 +28240,8 @@ msgid ""
 "Simulate paper by using absolute colorimetric and disabling white point "
 "adaptation and blackpoint compensation."
 msgstr ""
+"ქაღალდის სიმულაცია აბსოლუტური კოლორიმეტრიის გამოყენებით, თეთრი წერტილის "
+"ადაპტაციის გამორთვით და შავი წერტილის კომპენსაციით."
 
 #: libs/ui/dialogs/KisProofingConfigModel.cpp:98
 #, kde-format
@@ -28520,25 +28510,38 @@ msgid ""
 "href=\"https://krita.org/en/sponsors/\">sponsors</a>, and <a href=\"https://"
 "fund.krita.org/\">development fund</a> members.</p></body></html>"
 msgstr ""
+"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+"REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css"
+"\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body>\n"
+"<p style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-"
+"right:0px; -qt-block-indent:0; text-indent:0px;\">Krita ღია კოდის მქონე "
+"საზოგადოების მიერ მართული პროგრამაა ციფრული ხელოვნებისთვის.<br />წინსვლა "
+"შესაძლებელია ჩვენი საზოგადოების <a href=\"https://docs.krita.org/en/"
+"contributors_manual.html\">მოხალისეების</a>, <a href=\"https://krita.org/en/"
+"sponsors/\">სპონსორების</a> და <a href=\"https://fund.krita.org/"
+"\">განვითარების ფონდის</a> წევრების მხარდაჭერით..</p></body></html>"
 
 #. i18n: ectx: property (text), widget (QLabel, lblAndroidSupporter)
 #: libs/ui/forms/KisWelcomePage.ui:1659
 #, kde-format
 msgid "Krita is made possible thanks to ongoing support from people like you!"
 msgstr ""
+"Krita-ის არსებობა შესაძლებელია თქვენნაირი ხალხიდან მიღებული მხარდაჭერით!"
 
 #. i18n: ectx: property (text), widget (QPushButton, bnAndroidSupporterManage)
 #: libs/ui/forms/KisWelcomePage.ui:1672
 #, kde-format
 msgid "Manage Supporter Benefits"
-msgstr ""
+msgstr "მხარდამჭერის უპირატესობების მართვა"
 
 #. i18n: ectx: property (text), widget (QPushButton, bnAndroidSupport)
 #: libs/ui/forms/KisWelcomePage.ui:1717 libs/ui/KisWelcomePageWidget.cpp:833
-#, fuzzy, kde-format
-#| msgid "Support Krita"
+#, kde-format
 msgid "Support Krita!"
-msgstr "Krita-ის მხარდაჭერა"
+msgstr "დაუჭირეთ მხარი Krita-ს!"
 
 #. i18n: ectx: property (text), widget (QLabel, lblLastPrintedDesc)
 #: libs/ui/forms/koDocumentInfoAboutWidget.ui:28
@@ -36603,17 +36606,17 @@ msgstr "აუცილებელია გადატვირთვა."
 #: libs/ui/KisWelcomePageWidget.cpp:832
 #, kde-format
 msgid "Become a Supporter!"
-msgstr ""
+msgstr "გახდი მხარდამჭერი!"
 
 #: libs/ui/KisWelcomePageWidget.cpp:836
 #, kde-format
 msgid "Supporters get brush packs and more."
-msgstr ""
+msgstr "მხარდამჭერები იღებენ ფუნჯის პაკეტებს და ა.შ."
 
 #: libs/ui/KisWelcomePageWidget.cpp:837
 #, kde-format
 msgid "Contributions keep development going."
-msgstr ""
+msgstr "მოხალისეები აგრძელებენ პროგრამის განვითარებას."
 
 #: libs/ui/KoDocumentInfoDlg.cpp:73
 #, kde-format
@@ -39572,16 +39575,14 @@ msgid "Current dockers"
 msgstr "მიმდინარე პანელები"
 
 #: libs/ui/widgets/KisDonationManagementWidget.cpp:25
-#, fuzzy, kde-format
-#| msgid "Edit Resource Bundle"
+#, kde-format
 msgid "Download Resource Bundles"
-msgstr "რესურსების ნაკრების ჩასწორება"
+msgstr "რესურსის პაკეტების გადმოწერა"
 
 #: libs/ui/widgets/KisDonationManagementWidget.cpp:30
-#, fuzzy, kde-format
-#| msgid "Description"
+#, kde-format
 msgid "Manage Subscription"
-msgstr "აღწერა"
+msgstr "გამოწერის მართვა"
 
 #: libs/ui/widgets/KisGamutMaskToolbar.cpp:41
 #, kde-format
@@ -44178,12 +44179,10 @@ msgid "Abort encoding the timelapse video?"
 msgstr "შევწყვიტო აჩქარებული ვიდეოს კოდირება?"
 
 #: plugins/dockers/recorder/recorder_export.cpp:318
-#, fuzzy, kde-format
-#| msgctxt "Status for the export of the video record"
-#| msgid "Starting FFmpeg..."
+#, kde-format
 msgctxt "Status for the export of the video record"
 msgid "Starting exporter..."
-msgstr "FFmpeg-ის გაშვება..."
+msgstr "გამტანის გაშვება..."
 
 #: plugins/dockers/recorder/recorder_export.cpp:437
 #, kde-format
@@ -44251,10 +44250,9 @@ msgid "The timelapse video is being encoded..."
 msgstr "მიმდინარეობს აჩქარებული ვიდეოს კოდირება..."
 
 #: plugins/dockers/recorder/recorder_export.cpp:863
-#, fuzzy, kde-format
-#| msgid "Export failed. FFmpeg message:"
+#, kde-format
 msgid "Export failed. Error message:"
-msgstr "გატანა ჩავარდა. FFmpeg-ის შეტყობინება:"
+msgstr "გატანა ჩავარდა. შეცდომის შეტყობინება:"
 
 #: plugins/dockers/recorder/recorder_export.cpp:886
 #, kde-format
@@ -50175,21 +50173,19 @@ msgid "What resource do you want to import these %1 files as?"
 msgstr "რა რესურსად გნებავთ ამ %1 ფაილების შემოტანა?"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesDialog.cpp:20
-#, fuzzy, kde-format
-#| msgid "All Supported Files"
+#, kde-format
 msgid "Supporter Bundles"
-msgstr "ყველა მხარდაჭერილი ფორმატი"
+msgstr "მხარდამჭერის პაკეტები"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesDialog.cpp:55
 #, kde-format
 msgid "<strong>Error:</strong> %1"
-msgstr ""
+msgstr "<strong>შეცდომა:</strong> %1"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesDialog.cpp:96
-#, fuzzy, kde-format
-#| msgid "No picture available."
+#, kde-format
 msgid "No supporter bundles available."
-msgstr "სურათი მიუწვდომელია."
+msgstr "მხარდამჭერების პაკეტები ხელმისაწვდომი არაა."
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesDialog.cpp:108
 #, kde-format
@@ -50199,182 +50195,165 @@ msgid ""
 "for purchases and may make these bundles in other ways behind the links "
 "below."
 msgstr ""
+"ეს პაკეტები ხელმისაწვდომი გახდა მათი ავტორების მიერ, რომ დაგვეხმარონ, "
+"მხარდაჭერა გავუწიოთ მათ, ვინც Krita-ის განვითარებაში გვეხმარება. ისინი არ "
+"იღებენ კომპენსაციას შეძენებით და შეუძლიათ, ეს პაკეტები ბმულებს მიღმა სხვა "
+"სახით გახადონ ხელმისაწვდომი."
 
 #. i18n: ectx: property (text), widget (QLabel, m_lblLoading)
 #: plugins/extensions/resourcemanager/KisSupporterBundlesDialog.ui:40
 #, kde-format
 msgid "Loading…"
-msgstr ""
+msgstr "ჩატვირთვა…"
 
 #. i18n: ectx: property (text), widget (QPushButton, m_btnRetry)
 #: plugins/extensions/resourcemanager/KisSupporterBundlesDialog.ui:106
-#, fuzzy, kde-format
-#| msgid "Symmetry"
+#, kde-format
 msgid "Retry"
-msgstr "სიმეტრია"
+msgstr "თავიდან ცდა"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:55
 #, kde-format
 msgid "Server responded with error %1."
-msgstr ""
+msgstr "სერვერმა დააბრუნა პასუხი შეცდომით %1."
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:84
-#, fuzzy, kde-format
-#| msgid "Invalid File"
+#, kde-format
 msgid "Invalid checksums file."
-msgstr "არასწორი ფაილი"
+msgstr "არასწორი საკონტროლო ჯამების ფაილი."
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:92
 #, kde-format
 msgid "Invalid checksums version."
-msgstr ""
+msgstr "არასწორი საკონტროლო ჯამების ვერსია."
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:117
 #, kde-format
 msgid "You have to update Krita to use this service."
-msgstr ""
+msgstr "ამ სერვისის გამოსაყენებლად Krita-ის განახლება დაგჭირდებათ."
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:119
 #, kde-format
 msgid "This service is not available in your region."
-msgstr ""
+msgstr "ეს სერვისი თქვენს რეგიონში ხელმისაწვდომი არაა."
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:121
 #, kde-format
 msgid "This service is currently unavailable."
-msgstr ""
+msgstr "ეს სერვისი, ამჟამად, ხელმისაწვდომი არაა."
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:123
-#, fuzzy, kde-format
-#| msgid "The document has been modified."
+#, kde-format
 msgid "This service has been discontinued."
-msgstr "დოკუმენტი შეცვლილია."
+msgstr "ეს მომსახურება შეწყდა."
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:125
-#, fuzzy, kde-format
-#| msgid "Unknown error: %1"
+#, kde-format
 msgid "Unknown service error %1."
-msgstr "უცნობი შეცდომა: %1"
+msgstr "უცნობი სერვისის შეცდომა %1."
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:184
 #, kde-format
 msgid "Not enough data."
-msgstr ""
+msgstr "არასაკმარისი მონაცემები."
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:191
-#, fuzzy, kde-format
-#| msgid "Invalid value."
+#, kde-format
 msgid "Invalid version."
-msgstr "არასწორი მნიშვნელობა."
+msgstr "არასწორი ვერსია."
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:199
-#, fuzzy, kde-format
-#| msgctxt "invalid profile name"
-#| msgid "Invalid name."
+#, kde-format
 msgid "Invalid checksum."
-msgstr "არასწორი სახელი."
+msgstr "საკონტროლო ჯამი არასწორია."
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:205
-#, fuzzy, kde-format
-#| msgctxt "Warning message"
-#| msgid "Failed to rename the resource."
+#, kde-format
 msgid "Failed to create directory %1."
-msgstr "რესურსის სახელის გადარქმევის შეცდომა."
+msgstr "საქაღალდის %1 შექმნა ჩავარდა."
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:212
-#, fuzzy, kde-format
-#| msgid "Failed to open %1."
+#, kde-format
 msgid "Failed to open %1 for writing."
-msgstr "%1-ის გახსნის შეცდომა."
+msgstr "'%1'-ის ჩასაწერად გახსნის შეცდომა."
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:218
-#, fuzzy, kde-format
-#| msgid "Failed to open %1."
+#, kde-format
 msgid "Failed to write %1."
-msgstr "%1-ის გახსნის შეცდომა."
+msgstr "%1-ში ჩაწერა ჩავარდა."
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:317
 #, kde-format
 msgid "Failed to retrieve bundle checksums: %1"
-msgstr ""
+msgstr "პაკეტის საკონტროლო ჯამების მღება ჩავარდა: %1"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:322
-#, fuzzy, kde-format
-#| msgctxt "a tooltip shown when a file layer cannot load its linked file"
-#| msgid "Failed to load linked file: %1"
+#, kde-format
 msgid "Failed to retrieve bundles: %1"
-msgstr "ჩატვირთვის შეცდომა მიბმული ფაილისთვის: %1"
+msgstr "პაკეტების მიღების შეცდომა: %1"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:29
-#, fuzzy, kde-format
-#| msgid "Brush presets"
+#, kde-format
 msgid "%1 brush preset"
 msgid_plural "%1 brush presets"
-msgstr[0] "ფუნჯის პრესეტები"
-msgstr[1] "ფუნჯის პრესეტები"
+msgstr[0] "%1 ფუნჯის პრესეტი"
+msgstr[1] "%1 ფუნჯის პრესეტი"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:32
-#, fuzzy, kde-format
-#| msgid "Brush tips"
+#, kde-format
 msgid "%1 brush tips"
 msgid_plural "%1 brush tips"
-msgstr[0] "ფუნჯის წვეროები"
-msgstr[1] "ფუნჯის წვეროები"
+msgstr[0] "%1 ფუნჯის წვერო"
+msgstr[1] "%1 ფუნჯის წვერო"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:35
-#, fuzzy, kde-format
-#| msgctxt "./krita/data/patterns/18_texture-bark.png"
-#| msgid "18 texture-bark"
+#, kde-format
 msgid "%1 texture patterns"
 msgid_plural "%1 texture patterns"
-msgstr[0] "18 ტექსტურა-მერქანი"
-msgstr[1] "18 ტექსტურა-მერქანი"
+msgstr[0] "%1 ტექსტური შაბლონი"
+msgstr[1] "%1 ტექსტური შაბლონი"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:38
 #, kde-format
 msgid "%1 workspace layout"
 msgid_plural "%1 workspace layouts"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 სამუშაო სივრცის განლაგება"
+msgstr[1] "%1 სამუშაო სივრცის განლაგება"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:53
 #, kde-format
 msgid "%1 (subscribed)"
-msgstr ""
+msgstr "%1 (გამოწერილია)"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:55
-#, fuzzy, kde-format
-#| msgid "%1 (Copy)"
+#, kde-format
 msgid "%1 (owned)"
-msgstr "%1 (ასლი)"
+msgstr "%1 (მფლობელი)"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:83
-#, fuzzy, kde-format
-#| msgid "Contrast:"
+#, kde-format
 msgctxt "in-app purchases, prefix for a list of what a bundle contains"
 msgid "Contains:"
-msgstr "კონტრასტი:"
+msgstr "შეიცავს:"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:92
-#, fuzzy, kde-format
-#| msgid "No picture available."
+#, kde-format
 msgctxt "in-app purchases, a bundle that the user can't acquire"
 msgid "Not available."
-msgstr "სურათი მიუწვდომელია."
+msgstr "ხელმისაწვდომი არაა."
 
 #: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:95
-#, fuzzy, kde-format
-#| msgid "Available"
+#, kde-format
 msgctxt ""
 "in-app purchases, prefix for a list of which purchases make a bundle "
 "available"
 msgid "Available with:"
-msgstr "ხელმისაწვდომია"
+msgstr "ხელმისაწვდომია რასთან:"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:138
 #, kde-format
 msgid "Downloading bundle…"
-msgstr ""
+msgstr "პაკეტის გადმოწერა…"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:139
 #: plugins/paintops/libpaintop/KisDynamicSensorFactoryFade.cpp:68
@@ -50383,52 +50362,46 @@ msgid "%1"
 msgstr "%1"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:194
-#, fuzzy, kde-format
-#| msgid "Invalid File"
+#, kde-format
 msgid "Invalid bundle size"
-msgstr "არასწორი ფაილი"
+msgstr "არასწორი პაკეტის ზომა"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:202
 #, kde-format
 msgid "Invalid bundle checksum"
-msgstr ""
+msgstr "არასწორი პაკეტის საკონტროლო ჯამი"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:206
 #, kde-format
 msgid "Activating bundle…"
-msgstr ""
+msgstr "პაკეტის გააქტიურება…"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:216
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Failed to import the resource"
+#, kde-format
 msgid "Failed to import bundle"
-msgstr "რესურსის შემოტანის შეცდომა"
+msgstr "პაკეტის შემოტანა ჩავარდა"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:241
-#, fuzzy, kde-format
-#| msgid "Could not load profile: %1."
+#, kde-format
 msgid "Bundle download failed: %1"
-msgstr "პროფილის ჩატვირთვა შეუძლებელია: %1."
+msgstr "პაკეტის გადმოწერა ჩავარდა: %1"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:241
-#, fuzzy, kde-format
-#| msgid "Conversion failed"
+#, kde-format
 msgid "Download failed"
-msgstr "გადაყვანა ჩავარდა"
+msgstr "გადმოწერის შეცდომა"
 
 #. i18n: ectx: property (text), widget (QPushButton, m_btnGet)
 #: plugins/extensions/resourcemanager/KisSupporterBundleWidget.ui:147
-#, fuzzy, kde-format
-#| msgid "Down"
+#, kde-format
 msgid "Download"
-msgstr "ქვემოთ"
+msgstr "გადმოწერა"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: plugins/extensions/resourcemanager/KisSupporterBundleWidget.ui:196
 #, kde-format
 msgid "✔ Owned"
-msgstr ""
+msgstr "✔ მფლობელი"
 
 #: plugins/extensions/resourcemanager/page_bundle_saver.cpp:95
 #, kde-format
@@ -50567,10 +50540,9 @@ msgid "Manage Resources..."
 msgstr "რესურსების მართვა..."
 
 #: plugins/extensions/resourcemanager/resourcemanager.cpp:50
-#, fuzzy, kde-format
-#| msgid "Manage Resources..."
+#, kde-format
 msgid "Get More Resources..."
-msgstr "რესურსების მართვა..."
+msgstr "მიიღეთ მეტი რესურსი..."
 
 #: plugins/extensions/resourcemanager/resourcemanager.xmlgui:5
 #, kde-format
@@ -50603,11 +50575,9 @@ msgstr "რესურსის ბიბლიოთეკის ჩასწ�
 
 #. i18n: ectx: property (text), widget (QPushButton, bnSupport)
 #: plugins/extensions/resourcemanager/wdgdlgbundlemanager.ui:147
-#, fuzzy, kde-format
-#| msgctxt "In bundle manager; press button to create a new bundle"
-#| msgid "Create Bundle"
+#, kde-format
 msgid "Get More Bundles"
-msgstr "ნაკრების შექმნა"
+msgstr "მიიღეთ მეტი პაკეტი"
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: plugins/extensions/resourcemanager/wdgdlgbundlemanager.ui:433

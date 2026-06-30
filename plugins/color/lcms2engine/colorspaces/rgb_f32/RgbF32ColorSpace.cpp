@@ -131,8 +131,12 @@ QList<KoColorConversionTransformationFactory *> RgbF32ColorSpaceFactory::colorCo
         QVector<double> colorants;
         QString linear = registry->profileFor(colorants, profile->getColorPrimaries(), TRC_LINEAR)->name();
 
-        KoColorSpaceFactory *factory = new LcmsRGBP2020PQColorSpaceFactoryWrapper<RgbF32ColorSpaceFactory>(profile->name(), linear);
-        return factory->colorConversionLinks();
+        LcmsRGBP2020PQColorSpaceFactoryWrapper<RgbF32ColorSpaceFactory> factory(profile->name(), linear);
+        return factory.colorConversionLinks();
+    } else if (profile->name() == "High Dynamic Range UHDTV Wide Color Gamut Display (Rec. 2020) - SMPTE ST 2084 PQ EOTF") {
+        KoColorSpaceRegistry *registry = KoColorSpaceRegistry::instance();
+        LcmsRGBP2020PQColorSpaceFactoryWrapper<RgbF32ColorSpaceFactory> factory(profile->name(), registry->p2020G10Profile()->name());
+        return factory.colorConversionLinks();
     }
     return QList<KoColorConversionTransformationFactory*>();
 }

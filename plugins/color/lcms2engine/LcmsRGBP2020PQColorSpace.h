@@ -100,13 +100,7 @@ public:
         : m_targetProfileName(targetProfileName), m_linearProfileName(linearProfileName) {
 
     }
-private:
-
-    KoColorSpace *createColorSpace(const KoColorProfile *p) const override
-    {
-        return new RelatedColorSpaceType(this->name(), p->clone());
-    }
-
+public:
     bool isHdr() const override {
         return this->colorDepthId() != Integer8BitsColorDepthID;
     }
@@ -135,6 +129,13 @@ private:
 
         return list;
     }
+
+private:
+    KoColorSpace *createColorSpace(const KoColorProfile *p) const override
+    {
+        return new RelatedColorSpaceType(this->name(), p->clone());
+    }
+
     QString m_targetProfileName;
     QString m_linearProfileName;
 };

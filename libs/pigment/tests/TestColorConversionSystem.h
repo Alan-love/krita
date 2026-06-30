@@ -40,8 +40,11 @@ private Q_SLOTS:
 
     void testCmykBitnessConversion();
 
+    void testRec2020PQConnectionPaths_data();
+    void testRec2020PQConnectionPaths();
+
 private:
-    std::vector<KoColorConversionSystem::NodeKey> calcPath(const std::vector<KoColorConversionSystem::NodeKey> &expectedPath);
+    std::vector<KoColorConversionSystem::NodeKey> calcPath(const std::vector<KoColorConversionSystem::NodeKey> &expectedPath, bool skipEngineNodes = true);
 
 private:
     QList< ModelDepthProfile > listModels;

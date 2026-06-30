@@ -170,9 +170,11 @@ LcmsEnginePlugin::LcmsEnginePlugin(QObject *parent, const QVariantList &)
     // TODO: decide whether we want to do it like this.
     QVector<double> rec2020Col;
     KoColorProfile *rec2100pq = new IccColorProfile(rec2020Col, PRIMARIES_ITU_R_BT_2020_2_AND_2100_0, TRC_ITU_R_BT_2100_0_PQ);
-
-    registry->addProfileAlias("High Dynamic Range UHDTV Wide Color Gamut Display (Rec. 2020) - SMPTE ST 2084 PQ EOTF", rec2100pq->name());
     registry->addProfile(rec2100pq);
+
+    // NOTE: we don't add an alias for the legacy PNG-based profile here
+    // (ITUR_2100_PQ_FULL.ICC), our color conversion system can detect it
+    // by its name and link properly
 
     registry->add(new RgbU8ColorSpaceFactory());
     registry->add(new RgbU16ColorSpaceFactory());

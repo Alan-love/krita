@@ -107,11 +107,13 @@ public:
 
     /**
      * Create a color profile from a memory array, if possible, otherwise return 0.
-     * This will replace the existing profile with the name in the KoColorSpaceRegistry
+     * If there is an existing profile with the same name, it will be used instead,
+     * and the binary data from \p rawData will be ignored
      *
      * This will call the descendant's createColorProfile()
      */
-    const KoColorProfile* colorProfile(const QByteArray& rawData, ProfileRegistrationInterface *registrationInterface) const;
+    using CustomProfileNameAlias = QHash<QString, QString>;
+    const KoColorProfile* colorProfile(const QByteArray& rawData, ProfileRegistrationInterface *registrationInterface, const CustomProfileNameAlias &customProfileNameAlias) const;
 
     /**
      * Create or reuse the existing colorspace for the given profile.

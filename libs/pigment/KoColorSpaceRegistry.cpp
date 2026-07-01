@@ -972,11 +972,16 @@ struct KoColorSpaceRegistry::Private::ProfileRegistrationInterface : public KoCo
 
 const KoColorProfile* KoColorSpaceRegistry::createColorProfile(const QString& colorModelId, const QString& colorDepthId, const QByteArray& rawData)
 {
+    return createColorProfile(colorModelId, colorDepthId, rawData, {});
+}
+
+const KoColorProfile* KoColorSpaceRegistry::createColorProfile(const QString & colorModelId, const QString & colorDepthId, const QByteArray& rawData, CustomProfileNameAlias customProfileNameAlias)
+{
     QWriteLocker l(&d->registrylock);
     KoColorSpaceFactory* factory_ = d->colorSpaceFactoryRegistry.get(d->colorSpaceIdImpl(colorModelId, colorDepthId));
 
     Private::ProfileRegistrationInterface interface(d);
-    return factory_->colorProfile(rawData, &interface);
+    return factory_->colorProfile(rawData, &interface, customProfileNameAlias);
 }
 
 QList<const KoColorSpace*> KoColorSpaceRegistry::allColorSpaces(ColorSpaceListVisibility visibility, ColorSpaceListProfilesSelection pSelection)

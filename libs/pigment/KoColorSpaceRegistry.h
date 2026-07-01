@@ -117,6 +117,9 @@ public:
      */
     const KoColorProfile *createColorProfile(const QString & colorModelId, const QString & colorDepthId, const QByteArray& rawData);
 
+    using CustomProfileNameAlias = QHash<QString, QString>;
+    const KoColorProfile *createColorProfile(const QString & colorModelId, const QString & colorDepthId, const QByteArray& rawData, CustomProfileNameAlias customProfileNameAlias);
+
     /**
      * Return a profile by its given name, or 0 if none registered.
      * @return a profile by its given name, or 0 if none registered.

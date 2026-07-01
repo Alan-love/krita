@@ -657,7 +657,7 @@ const KoColorProfile *KisKraLoadVisitor::loadProfile(const QString &location, co
         }
         else {
             // Create a colorspace with the embedded profile
-            const KoColorProfile *profile = KoColorSpaceRegistry::instance()->createColorProfile(colorModelId, colorDepthId, data);
+            const KoColorProfile *profile = KoColorSpaceRegistry::instance()->createColorProfile(colorModelId, colorDepthId, data, customProfileNameAliasForKra());
             m_profileCache[hash] = profile;
             result = profile;
         }
@@ -891,4 +891,14 @@ void KisKraLoadVisitor::loadDeprecatedFilter(KisFilterConfigurationSP cfg)
         cfg->setProperty("lockAspect", true);
         cfg->setProperty("transparency", false);
     }
+}
+
+QHash<QString, QString> KisKraLoadVisitor::customProfileNameAliasForKra()
+{
+    // replace the legacy profile with the new Rec2020PQ profile explicitly pinned
+    // to 80 nit Diffuse White
+    return {
+        {"High Dynamic Range UHDTV Wide Color Gamut Display (Rec. 2020) - SMPTE ST 2084 PQ EOTF",
+        "Krita Rec. 2100 Perceptual Quantizer"}
+    };
 }

@@ -52,11 +52,12 @@ KoColorSpaceFactory::~KoColorSpaceFactory()
     delete d;
 }
 
-const KoColorProfile *KoColorSpaceFactory::colorProfile(const QByteArray &rawData, KoColorSpaceFactory::ProfileRegistrationInterface *registrationInterface) const
+const KoColorProfile *KoColorSpaceFactory::colorProfile(const QByteArray& rawData, ProfileRegistrationInterface *registrationInterface, const CustomProfileNameAlias &customProfileNameAlias) const
 {
     KoColorProfile* colorProfile = createColorProfile(rawData);
     if (colorProfile && colorProfile->valid()) {
-        if (const KoColorProfile* existingProfile = registrationInterface->profileByName(colorProfile->name())) {
+        const QString effectiveProfileName = customProfileNameAlias.value(colorProfile->name(), colorProfile->name());
+        if (const KoColorProfile* existingProfile = registrationInterface->profileByName(effectiveProfileName)) {
             delete colorProfile;
             return existingProfile;
         }

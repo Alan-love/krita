@@ -56,6 +56,8 @@ public:
     QStringList errorMessages() const;
     QStringList warningMessages() const;
 
+    static QHash<QString, QString> customProfileNameAliasForKra();
+
 private:
 
     bool loadPaintDevice(KisPaintDeviceSP device, const QString& location);

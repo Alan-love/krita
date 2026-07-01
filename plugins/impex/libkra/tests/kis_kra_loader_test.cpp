@@ -192,7 +192,6 @@ void KisKraLoaderTest::testLoadingUncommonHdrProfileWithCicp()
     image->waitForDone();
     QVERIFY(image->colorSpace()->profile()->getColorPrimaries() == PRIMARIES_ITU_R_BT_2020_2_AND_2100_0);
     QVERIFY(image->colorSpace()->profile()->getTransferCharacteristics() == TRC_ITU_R_BT_2100_0_PQ);
-    qDebug() << image->colorSpace()->profile()->name();
     QVERIFY(image->colorSpace()->profile()->name().contains("180nits"));
 }
 

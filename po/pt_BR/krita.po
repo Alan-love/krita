@@ -18,8 +18,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-30 00:41+0000\n"
-"PO-Revision-Date: 2026-06-28 08:36-0300\n"
+"POT-Creation-Date: 2026-07-01 00:43+0000\n"
+"PO-Revision-Date: 2026-06-30 07:59-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -16379,32 +16379,27 @@ msgstr "Gerenciar inscrições"
 
 #. i18n: context: text @ Actions (Interface), ActionCollection (Supporter Benefits)
 #: krita/kritamenu_android.action:46
-#, fuzzy, kde-format
-#| msgid "User Interface"
+#, kde-format
 msgctxt "action"
 msgid "Interface"
-msgstr "Interface do Usuário"
+msgstr "Interface"
 
 #. i18n: context: text @ Action (change_interface_scale), Actions (Interface), ActionCollection (Supporter Benefits)
 #: krita/kritamenu_android.action:49
-#, fuzzy, kde-format
-#| msgctxt "(qtundo-format)"
-#| msgid "Change rectangle"
+#, kde-format
 msgctxt "action"
 msgid "Change Interface Scale..."
-msgstr "Alterar retângulo"
+msgstr "Alterar escala da interface..."
 
 #. i18n: context: toolTip @ Action (change_interface_scale), Actions (Interface), ActionCollection (Supporter Benefits)
 #. i18n: context: iconText @ Action (change_interface_scale), Actions (Interface), ActionCollection (Supporter Benefits)
 #. i18n: context: toolTip @ Action (change_interface_scale), Actions (Interface), ActionCollection (Supporter Benefits)
 #. i18n: context: iconText @ Action (change_interface_scale), Actions (Interface), ActionCollection (Supporter Benefits)
 #: krita/kritamenu_android.action:51 krita/kritamenu_android.action:52
-#, fuzzy, kde-format
-#| msgctxt "(qtundo-format)"
-#| msgid "Change rectangle"
+#, kde-format
 msgctxt "action"
 msgid "Change Interface Scale"
-msgstr "Alterar retângulo"
+msgstr "Alterar escala da interface"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgSplash)
 #. i18n: ectx: property (windowTitle), widget (QDialog, KisRecoverNamedAutosaveDialog)
@@ -43409,22 +43404,22 @@ msgstr "AutoKey em branco"
 msgid "AutoKey Duplicate"
 msgstr "Duplicar AutoKey"
 
-#: plugins/dockers/animation/KisAnimTimelineDocker.cpp:565
+#: plugins/dockers/animation/KisAnimTimelineDocker.cpp:635
 #, kde-format
 msgid "Enable to preserve playback timing."
 msgstr "Ative para preservar o tempo de reprodução."
 
-#: plugins/dockers/animation/KisAnimTimelineDocker.cpp:575
+#: plugins/dockers/animation/KisAnimTimelineDocker.cpp:645
 #, kde-format
 msgid "Effective FPS:\t%1"
 msgstr "FPS efetivo:\t%1"
 
-#: plugins/dockers/animation/KisAnimTimelineDocker.cpp:576
+#: plugins/dockers/animation/KisAnimTimelineDocker.cpp:646
 #, kde-format
 msgid "Real FPS:\t%1"
 msgstr "FPS real:\t%1"
 
-#: plugins/dockers/animation/KisAnimTimelineDocker.cpp:577
+#: plugins/dockers/animation/KisAnimTimelineDocker.cpp:647
 #, kde-format
 msgid "Frames dropped:\t%1%"
 msgstr "Quadros perdidos:\t%1%"

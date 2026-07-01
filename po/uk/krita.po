@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-30 00:41+0000\n"
-"PO-Revision-Date: 2026-06-28 15:54+0300\n"
+"POT-Creation-Date: 2026-07-01 00:43+0000\n"
+"PO-Revision-Date: 2026-06-30 20:03+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -16363,36 +16363,27 @@ msgstr "Організувати підписки"
 
 #. i18n: context: text @ Actions (Interface), ActionCollection (Supporter Benefits)
 #: krita/kritamenu_android.action:46
-#, fuzzy, kde-format
-#| msgid "User Interface"
+#, kde-format
 msgctxt "action"
 msgid "Interface"
-msgstr "Інтерфейс користувача"
+msgstr "Інтерфейс"
 
 #. i18n: context: text @ Action (change_interface_scale), Actions (Interface), ActionCollection (Supporter Benefits)
 #: krita/kritamenu_android.action:49
-#, fuzzy, kde-format
-#| msgctxt "(qtundo-format)"
-#| msgid "Change rectangle"
+#, kde-format
 msgctxt "action"
 msgid "Change Interface Scale..."
-msgstr ""
-"Змінити прямокутник\n"
-"зміну прямокутника"
+msgstr "Змінити масштабування інтерфейсу…"
 
 #. i18n: context: toolTip @ Action (change_interface_scale), Actions (Interface), ActionCollection (Supporter Benefits)
 #. i18n: context: iconText @ Action (change_interface_scale), Actions (Interface), ActionCollection (Supporter Benefits)
 #. i18n: context: toolTip @ Action (change_interface_scale), Actions (Interface), ActionCollection (Supporter Benefits)
 #. i18n: context: iconText @ Action (change_interface_scale), Actions (Interface), ActionCollection (Supporter Benefits)
 #: krita/kritamenu_android.action:51 krita/kritamenu_android.action:52
-#, fuzzy, kde-format
-#| msgctxt "(qtundo-format)"
-#| msgid "Change rectangle"
+#, kde-format
 msgctxt "action"
 msgid "Change Interface Scale"
-msgstr ""
-"Змінити прямокутник\n"
-"зміну прямокутника"
+msgstr "Змінити масштабування інтерфейсу"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgSplash)
 #. i18n: ectx: property (windowTitle), widget (QDialog, KisRecoverNamedAutosaveDialog)
@@ -43904,22 +43895,22 @@ msgstr "Автоключовий порожній"
 msgid "AutoKey Duplicate"
 msgstr "Автоключовий дублікат"
 
-#: plugins/dockers/animation/KisAnimTimelineDocker.cpp:565
+#: plugins/dockers/animation/KisAnimTimelineDocker.cpp:635
 #, kde-format
 msgid "Enable to preserve playback timing."
 msgstr "Увімкнути збереження тривалості відтворення."
 
-#: plugins/dockers/animation/KisAnimTimelineDocker.cpp:575
+#: plugins/dockers/animation/KisAnimTimelineDocker.cpp:645
 #, kde-format
 msgid "Effective FPS:\t%1"
 msgstr "Ефективна частота кадрів:\t%1"
 
-#: plugins/dockers/animation/KisAnimTimelineDocker.cpp:576
+#: plugins/dockers/animation/KisAnimTimelineDocker.cpp:646
 #, kde-format
 msgid "Real FPS:\t%1"
 msgstr "Справжня частота кадрів:\t%1"
 
-#: plugins/dockers/animation/KisAnimTimelineDocker.cpp:577
+#: plugins/dockers/animation/KisAnimTimelineDocker.cpp:647
 #, kde-format
 msgid "Frames dropped:\t%1%"
 msgstr "Викинутих кадрів:\t%1%"

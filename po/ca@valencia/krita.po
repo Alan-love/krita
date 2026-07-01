@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-30 00:41+0000\n"
-"PO-Revision-Date: 2026-06-28 12:11+0200\n"
+"POT-Creation-Date: 2026-07-01 00:43+0000\n"
+"PO-Revision-Date: 2026-06-30 09:51+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 26.04.2\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #. i18n: Display name of resource, see context: [path-to-resources]/[resource-type]/[resource-filename]
 #, kde-format
@@ -16393,32 +16393,27 @@ msgstr "Gestiona les subscripcions"
 
 #. i18n: context: text @ Actions (Interface), ActionCollection (Supporter Benefits)
 #: krita/kritamenu_android.action:46
-#, fuzzy, kde-format
-#| msgid "User Interface"
+#, kde-format
 msgctxt "action"
 msgid "Interface"
-msgstr "Interfície d'usuari"
+msgstr "Interfície"
 
 #. i18n: context: text @ Action (change_interface_scale), Actions (Interface), ActionCollection (Supporter Benefits)
 #: krita/kritamenu_android.action:49
-#, fuzzy, kde-format
-#| msgctxt "(qtundo-format)"
-#| msgid "Change rectangle"
+#, kde-format
 msgctxt "action"
 msgid "Change Interface Scale..."
-msgstr "Canvia el rectangle"
+msgstr "Canvia l'escala de la interfície…"
 
 #. i18n: context: toolTip @ Action (change_interface_scale), Actions (Interface), ActionCollection (Supporter Benefits)
 #. i18n: context: iconText @ Action (change_interface_scale), Actions (Interface), ActionCollection (Supporter Benefits)
 #. i18n: context: toolTip @ Action (change_interface_scale), Actions (Interface), ActionCollection (Supporter Benefits)
 #. i18n: context: iconText @ Action (change_interface_scale), Actions (Interface), ActionCollection (Supporter Benefits)
 #: krita/kritamenu_android.action:51 krita/kritamenu_android.action:52
-#, fuzzy, kde-format
-#| msgctxt "(qtundo-format)"
-#| msgid "Change rectangle"
+#, kde-format
 msgctxt "action"
 msgid "Change Interface Scale"
-msgstr "Canvia el rectangle"
+msgstr "Canvia l'escala de la interfície"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgSplash)
 #. i18n: ectx: property (windowTitle), widget (QDialog, KisRecoverNamedAutosaveDialog)
@@ -43530,22 +43525,22 @@ msgstr "Espai de la clau automàtica"
 msgid "AutoKey Duplicate"
 msgstr "Duplica la clau automàtica"
 
-#: plugins/dockers/animation/KisAnimTimelineDocker.cpp:565
+#: plugins/dockers/animation/KisAnimTimelineDocker.cpp:635
 #, kde-format
 msgid "Enable to preserve playback timing."
 msgstr "Activeu-la per a mantindre el cronometratge de la reproducció."
 
-#: plugins/dockers/animation/KisAnimTimelineDocker.cpp:575
+#: plugins/dockers/animation/KisAnimTimelineDocker.cpp:645
 #, kde-format
 msgid "Effective FPS:\t%1"
 msgstr "FPS efectius:\t%1"
 
-#: plugins/dockers/animation/KisAnimTimelineDocker.cpp:576
+#: plugins/dockers/animation/KisAnimTimelineDocker.cpp:646
 #, kde-format
 msgid "Real FPS:\t%1"
 msgstr "FPS reals:\t%1"
 
-#: plugins/dockers/animation/KisAnimTimelineDocker.cpp:577
+#: plugins/dockers/animation/KisAnimTimelineDocker.cpp:647
 #, kde-format
 msgid "Frames dropped:\t%1%"
 msgstr "Fotogrames descartats:\t%1\\%"

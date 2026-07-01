@@ -681,7 +681,7 @@ const KoColorProfile *KoColorSpaceRegistry::p2020G10Profile() const
 
 const KoColorProfile *KoColorSpaceRegistry::p2020PQProfile() const
 {
-    return profileByName("High Dynamic Range UHDTV Wide Color Gamut Display (Rec. 2020) - SMPTE ST 2084 PQ EOTF");
+    return profileByName("Krita Rec. 2100 Perceptual Quantizer");
 }
 
 const KoColorProfile *KoColorSpaceRegistry::p709G10Profile() const

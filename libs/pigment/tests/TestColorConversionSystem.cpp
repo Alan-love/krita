@@ -514,19 +514,27 @@ void TestColorConversionSystem::testRec2020PQConnectionPaths()
     using NodeKey = KoColorConversionSystem::NodeKey;
     QFETCH(std::vector<NodeKey>, expectedPath);
 
-    const QString additionalProfileName = "Krita Rec. 2100 Perceptual Quantizer 180nits";
+    auto loadExternalProfile = [](const QString &profileName, const QString &profileFileName) {
+        if (!KoColorSpaceRegistry::instance()->profileByName(profileName)) {
+            const QString profileFilePath = TestUtil::fetchDataFileLazy(profileFileName);
+            KIS_ASSERT(QFile::exists(profileFilePath));
 
-    if (!KoColorSpaceRegistry::instance()->profileByName(additionalProfileName)) {
-        const QString additionalProfileFileName = "rec2020pq-crwl-180nits-cicp.icc";
-        const QString additionalProfileFilePath = TestUtil::fetchDataFileLazy(additionalProfileFileName);
-        KIS_ASSERT(QFile::exists(additionalProfileFilePath));
-
-        {
-            KoColorSpaceEngine *iccEngine = KoColorSpaceEngineRegistry::instance()->get("icc");
-            KIS_ASSERT(iccEngine);
-            (void) iccEngine->addProfile(additionalProfileFilePath);
+            {
+                KoColorSpaceEngine *iccEngine = KoColorSpaceEngineRegistry::instance()->get("icc");
+                KIS_ASSERT(iccEngine);
+                (void)iccEngine->addProfile(profileFilePath);
+            }
         }
-    }
+    };
+
+    const QString additionalProfileName = "Krita Rec. 2100 Perceptual Quantizer 180nits";
+    const QString additionalProfileFileName = "rec2020pq-crwl-180nits-cicp.icc";
+
+    const QString legacyProfileName = "High Dynamic Range UHDTV Wide Color Gamut Display (Rec. 2020) - SMPTE ST 2084 PQ EOTF";
+    const QString legacyProfileFileName = "ITUR_2100_PQ_FULL.ICC";
+
+    loadExternalProfile(additionalProfileName, additionalProfileFileName);
+    loadExternalProfile(legacyProfileName, legacyProfileFileName);
 
     QCOMPARE(calcPath(expectedPath, false), expectedPath);
 }

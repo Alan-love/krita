@@ -25,6 +25,8 @@ private Q_SLOTS:
     void testImportFromWriteonly();
     void testExportToReadonly();
     void testImportIncorrectFormat();
+
+    void testLoadTiffWithLegacyPQProfile();
 };
 
 #endif

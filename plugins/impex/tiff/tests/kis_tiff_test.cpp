@@ -137,6 +137,31 @@ void KisTiffTest::testImportIncorrectFormat()
     TestUtil::testImportIncorrectFormat(TiffMimetype);
 }
 
+void KisTiffTest::testLoadTiffWithLegacyPQProfile()
+{
+    const QString tiffFilePath = TestUtil::fetchDataFileLazy("test-tiff-with-legacy-hdr-profile.tif");
+    KIS_ASSERT(QFile::exists(tiffFilePath));
+
+    QScopedPointer<KisDocument> doc(KisPart::instance()->createDocument());
+    KisImportExportManager manager(doc.data());
+    doc->setFileBatchMode(true);
+
+    KisImportExportErrorCode loadingStatus =
+        manager.importDocument(tiffFilePath, QString());
+
+    QVERIFY(loadingStatus.isOk());
+
+    /**
+     * A PNG with the legacy profile should use the default Krita profille
+     * for a PQ space with all the cicp information set properly. The embedded
+     * profile should be ignored.
+     */
+    const KoColorProfile *profile = doc->image()->colorSpace()->profile();
+
+    QCOMPARE(profile->name(), KoColorSpaceRegistry::instance()->p2020PQProfile()->name());
+    QCOMPARE(profile->getColorPrimaries(), PRIMARIES_ITU_R_BT_2020_2_AND_2100_0);
+    QCOMPARE(profile->getTransferCharacteristics(), TRC_ITU_R_BT_2100_0_PQ);
+}
 
 
 KISTEST_MAIN(KisTiffTest)

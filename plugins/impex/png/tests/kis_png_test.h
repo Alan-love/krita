@@ -19,6 +19,8 @@ private Q_SLOTS:
 
     void testRoundtripCicpIccProfile_data();
     void testRoundtripCicpIccProfile();
+
+    void testLoadPngWithLegacyProfile();
 };
 
 #endif

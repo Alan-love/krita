@@ -479,8 +479,8 @@ void KisKraLoader::loadBinaryData(KoStore * store, KisImageSP image, const QStri
 
             if (proofingProfileRes) {
                 const KoColorProfile *proofingProfile = KoColorSpaceRegistry::instance()->createColorProfile(proofingConfig->proofingModel, proofingConfig->proofingDepth, proofingData, KisKraLoadVisitor::customProfileNameAliasForKra());
-                if (proofingProfile->valid()){
-                    KoColorSpaceRegistry::instance()->addProfile(proofingProfile);
+                if (!proofingProfile || proofingProfile->valid()){
+                    warnKrita << "Failed to load a proofing profile!";
                 }
             }
         }

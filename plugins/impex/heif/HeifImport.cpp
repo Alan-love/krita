@@ -276,7 +276,6 @@ KisImportExportErrorCode HeifImport::convert(KisDocument *document, QIODevice *i
                     dbgFile << "icc profile loading failed:" << err.message;
                 } else {
                     profile = KoColorSpaceRegistry::instance()->createColorProfile(colorModel, colorDepth.id(), ba);
-                    KoColorSpaceRegistry::instance()->addProfile(profile);
                     colorModel = profile->colorModelID();
                 }
             } else {

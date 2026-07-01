@@ -1709,7 +1709,6 @@ const KoColorProfile *KoColorSet::Private::loadColorProfile(QScopedPointer<KoSto
         return nullptr;
     }
 
-    KoColorSpaceRegistry::instance()->addProfile(profile);
     return profile;
 }
 

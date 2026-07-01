@@ -418,6 +418,7 @@ void TestColorConversionSystem::testGrayAConversions()
 }
 
 using ExpectedPathVector = std::vector<KoColorConversionSystem::NodeKey>;
+Q_DECLARE_METATYPE(ExpectedPathVector)
 
 void TestColorConversionSystem::testRec2020PQConnectionPaths_data()
 {

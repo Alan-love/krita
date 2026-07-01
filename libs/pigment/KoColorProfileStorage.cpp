@@ -92,15 +92,33 @@ void KoColorProfileStorage::addProfileAlias(const QString &name, const QString &
     d->profileAlias[name] = to;
 }
 
+void KoColorProfileStorage::removeProfileAlias(const QString &name)
+{
+    QWriteLocker l(&d->lock);
+    d->profileAlias.remove(name);
+}
+
 QString KoColorProfileStorage::profileAlias(const QString &name) const
 {
     QReadLocker l(&d->lock);
-    return d->profileAlias.value(name, name);
+    /**
+     * Profile aliases are considered 'weak', i.e. they can
+     * be overridden by a read profile added to the storage.
+     */
+    return d->profileMap.contains(name) ? name : d->profileAlias.value(name, name);
 }
 
 const KoColorProfile *KoColorProfileStorage::profileByName(const QString &name) const
 {
     QReadLocker l(&d->lock);
+    /**
+     * Profile aliases are considered 'weak', i.e. they can
+     * be overridden by a read profile added to the storage.
+     */
+    if (d->profileMap.contains(name)) {
+        return d->profileMap[name];
+    }
+
     return d->profileMap.value(d->profileAlias.value(name, name), 0);
 }
 

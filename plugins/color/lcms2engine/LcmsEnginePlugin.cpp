@@ -167,14 +167,18 @@ LcmsEnginePlugin::LcmsEnginePlugin(QObject *parent, const QVariantList &)
     KoColorProfile *rgbProfile = LcmsColorProfileContainer::createFromLcmsProfile(cmsCreate_sRGBProfile());
     registry->addProfile(rgbProfile);
 
-    // TODO: decide whether we want to do it like this.
-    QVector<double> rec2020Col;
-    KoColorProfile *rec2100pq = new IccColorProfile(rec2020Col, PRIMARIES_ITU_R_BT_2020_2_AND_2100_0, TRC_ITU_R_BT_2100_0_PQ);
+    KoColorProfile *rec2100pq = new IccColorProfile({}, PRIMARIES_ITU_R_BT_2020_2_AND_2100_0, TRC_ITU_R_BT_2100_0_PQ);
     registry->addProfile(rec2100pq);
 
-    // NOTE: we don't add an alias for the legacy PNG-based profile here
-    // (ITUR_2100_PQ_FULL.ICC), our color conversion system can detect it
-    // by its name and link properly
+    /**
+     * By default we remap the legacy HDR profile into the new Rec2020PQ
+     * profile with CICP values. This profile will also have CRWL tag set
+     * to the official 203 nits. The legacy HDR profile loaded from older
+     * .kra files will have a different mapping to map to 80 nits used in
+     * Krita previously.
+     */
+    const QString legacyRec2020PQProfileName = "High Dynamic Range UHDTV Wide Color Gamut Display (Rec. 2020) - SMPTE ST 2084 PQ EOTF";
+    registry->addProfileAlias(legacyRec2020PQProfileName, rec2100pq->name());
 
     registry->add(new RgbU8ColorSpaceFactory());
     registry->add(new RgbU16ColorSpaceFactory());

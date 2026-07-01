@@ -104,8 +104,17 @@ public:
     /**
      * Create an alias to a profile with a different name. Then @ref profileByName
      * will return the profile @p to when passed @p name as a parameter.
+     *
+     * Aliases are considered 'weak'. If a real profile with the name \p name
+     * is present (or added), it shadows the existing alias. If such an explicit
+     * profile gets removed, then the alias takes its place again.
      */
     void addProfileAlias(const QString& name, const QString& to);
+
+    /**
+     * Remove profile alias \p name if exists
+     */
+    void removeProfileAlias(const QString& name);
 
     /**
      * @return the profile alias, or name if not aliased

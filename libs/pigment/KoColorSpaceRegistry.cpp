@@ -261,6 +261,11 @@ void KoColorSpaceRegistry::addProfileAlias(const QString& name, const QString& t
     d->profileStorage.addProfileAlias(name, to);
 }
 
+void KoColorSpaceRegistry::removeProfileAlias(const QString& name)
+{
+    d->profileStorage.removeProfileAlias(name);
+}
+
 QString KoColorSpaceRegistry::profileAlias(const QString& name) const
 {
     return d->profileStorage.profileAlias(name);

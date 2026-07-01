@@ -15,6 +15,10 @@ private Q_SLOTS:
     void testRgbU8();
     void testRgbU16();
     void testLab();
+
+    void testColorProfileAliasAddUnique();
+    void testColorProfileAliasAddWhenProfileExists();
+    void testColorProfileAliasOverrideByProfile();
 };
 
 #endif

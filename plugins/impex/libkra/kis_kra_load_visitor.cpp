@@ -899,6 +899,6 @@ QHash<QString, QString> KisKraLoadVisitor::customProfileNameAliasForKra()
     // to 80 nit Diffuse White
     return {
         {"High Dynamic Range UHDTV Wide Color Gamut Display (Rec. 2020) - SMPTE ST 2084 PQ EOTF",
-        "Krita Rec. 2100 Perceptual Quantizer"}
+        "Krita Rec. 2100 Perceptual Quantizer (80cd/m²)"}
     };
 }

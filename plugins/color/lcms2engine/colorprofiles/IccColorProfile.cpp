@@ -22,6 +22,7 @@
 
 #include "LcmsColorProfileContainer.h"
 #include "LcmsPredefinedPipelineFunctions.h"
+#include "kis_dom_utils.h"
 
 #include <KisLazyStorage.h>
 #include <KisLazyValueWrapper.h>
@@ -173,9 +174,10 @@ IccColorProfile::IccColorProfile(const QVector<double> &colorants,
     cmsWriteTag (iccProfile, cmsSigMediaBlackPointTag, &media_blackpoint);
 
     if (transferFunction == TRC_ITU_R_BT_2100_0_PQ) {
-        LcmsPredefinedPipelineFunctions::setPerceptualQuantizerAToBDummyPipeline(iccProfile, cmsSigAToB0Tag, colorPrimariesType);
-        LcmsPredefinedPipelineFunctions::setPerceptualQuantizerBToADummyPipeline(iccProfile, cmsSigBToA0Tag, colorPrimariesType);
-        LcmsPredefinedPipelineFunctions::setDiffuseWhitePerceptualQuantizer(iccProfile, 80.0);
+        double nits = 80.0;
+        LcmsPredefinedPipelineFunctions::setPerceptualQuantizerAToBDummyPipeline(iccProfile, cmsSigAToB0Tag, colorPrimariesType, nits);
+        LcmsPredefinedPipelineFunctions::setPerceptualQuantizerBToADummyPipeline(iccProfile, cmsSigBToA0Tag, colorPrimariesType, nits);
+        LcmsPredefinedPipelineFunctions::setDiffuseWhitePerceptualQuantizer(iccProfile, nits);
         // Otherwise this is recognised as a matrix shaper...
         cmsWriteTag(iccProfile, cmsSigRedColorantTag, nullptr);
         cmsWriteTag(iccProfile, cmsSigGreenColorantTag, nullptr);
@@ -183,6 +185,8 @@ IccColorProfile::IccColorProfile(const QVector<double> &colorants,
         cmsWriteTag(iccProfile, cmsSigRedTRCTag, nullptr);
         cmsWriteTag(iccProfile, cmsSigGreenTRCTag, nullptr);
         cmsWriteTag(iccProfile, cmsSigBlueTRCTag, nullptr);
+
+        name.append("("+KisDomUtils::toString(nits)+"cd/m²)");
 
     }
 
@@ -198,7 +202,7 @@ IccColorProfile::IccColorProfile(const QVector<double> &colorants,
     //set the color profile info on the iccProfile;
     cmsMLU *mlu;
     mlu = cmsMLUalloc (NULL, 1);
-    cmsMLUsetASCII (mlu, "en", "US", name.join(" ").toLatin1());
+    cmsMLUsetWide(mlu, "en", "US", name.join(" ").toStdWString().data());
     cmsWriteTag (iccProfile, cmsSigProfileDescriptionTag, mlu);
     cmsMLUfree (mlu);
     mlu = cmsMLUalloc (NULL, 1);
@@ -212,7 +216,7 @@ IccColorProfile::IccColorProfile(const QVector<double> &colorants,
     setRawData(LcmsColorProfileContainer::lcmsProfileToByteArray(iccProfile));
     cmsCloseProfile(iccProfile);
 
-    setFileName(name.join(" ").split(" ").join("-")+".icc");
+    setFileName(name.join(" ").remove("(").remove(")").replace("cd/m²", "nits").split(" ").join("-")+".icc");
     init();
 }
 

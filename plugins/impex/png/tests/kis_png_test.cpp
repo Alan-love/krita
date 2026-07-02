@@ -165,6 +165,9 @@ void KisPngTest::testSaveHDR()
                     KoColorSpaceRegistry::instance()->p2020PQProfile()));
 }
 
+Q_DECLARE_METATYPE(ColorPrimaries)
+Q_DECLARE_METATYPE(TransferCharacteristics)
+
 void KisPngTest::testRoundtripCicpIccProfile_data()
 {
     QTest::addColumn<ColorPrimaries>("primaries");

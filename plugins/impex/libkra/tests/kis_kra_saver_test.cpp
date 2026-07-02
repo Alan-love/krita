@@ -571,6 +571,9 @@ void KisKraSaverTest::testExportToReadonly()
     TestUtil::testExportToReadonly(KraMimetype);
 }
 
+Q_DECLARE_METATYPE(ColorPrimaries)
+Q_DECLARE_METATYPE(TransferCharacteristics)
+
 void KisKraSaverTest::testRoundTripCicp_data()
 {
     QTest::addColumn<ColorPrimaries>("primaries");

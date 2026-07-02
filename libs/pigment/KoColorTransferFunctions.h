@@ -120,7 +120,7 @@ ALWAYS_INLINE float applyHLGCurve(float x) noexcept
     } else {
         val = (sqrtf(3.0f * (val)));
     }
-    return qBound(0.0, val, 1.0);
+    return qBound(0.0f, val, 1.0f);
 }
 
 ALWAYS_INLINE float removeHLGCurve(float x) noexcept

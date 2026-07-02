@@ -374,6 +374,9 @@ void TestProfileGeneration::testTransferFunctions()
 
 }
 
+Q_DECLARE_METATYPE(ColorPrimaries)
+Q_DECLARE_METATYPE(TransferCharacteristics)
+
 void TestProfileGeneration::testCICPwriting_data()
 {
     QTest::addColumn<ColorPrimaries>("primaries");

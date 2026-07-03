@@ -18,8 +18,8 @@ For branch: `master`
 
 | Freeze type    | Status                                                               |
 |----------------|----------------------------------------------------------------------|
-| Feature Freeze | freeze, features are not allowed                                     |
-| String Freeze  | freeze, strings are not allowed                                      |
+| Feature Freeze | features are allowed                                                 |
+| String Freeze  | strings are allowed                                                  |
 
 
 ### User Manual

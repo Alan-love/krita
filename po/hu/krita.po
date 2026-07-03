@@ -57,8 +57,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOffice 1.6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-01 00:43+0000\n"
-"PO-Revision-Date: 2026-06-16 20:11+0200\n"
+"POT-Creation-Date: 2026-07-03 00:43+0000\n"
+"PO-Revision-Date: 2026-07-02 09:11+0200\n"
 "Last-Translator: Benedek Péter <benedekppeter@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -16335,47 +16335,41 @@ msgstr "Munkaterületek"
 
 #. i18n: context: text @ Actions (Resources), ActionCollection (Supporter Benefits)
 #: krita/kritamenu_android.action:4
-#, fuzzy, kde-format
-#| msgid "Resources"
+#, kde-format
 msgctxt "action"
 msgid "Resources"
-msgstr "Erőforrások"
+msgstr "Források"
 
 #. i18n: context: text @ Action (manage_supporter_bundles), Actions (Resources), ActionCollection (Supporter Benefits)
 #: krita/kritamenu_android.action:7
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "Manage Resources..."
+#, kde-format
 msgctxt "action"
 msgid "Get More Resources..."
-msgstr "Erőforrások kezelése..."
+msgstr "Még több forrás…"
 
 #. i18n: context: toolTip @ Action (manage_supporter_bundles), Actions (Resources), ActionCollection (Supporter Benefits)
 #. i18n: context: iconText @ Action (manage_supporter_bundles), Actions (Resources), ActionCollection (Supporter Benefits)
 #. i18n: context: toolTip @ Action (manage_supporter_bundles), Actions (Resources), ActionCollection (Supporter Benefits)
 #. i18n: context: iconText @ Action (manage_supporter_bundles), Actions (Resources), ActionCollection (Supporter Benefits)
 #: krita/kritamenu_android.action:9 krita/kritamenu_android.action:10
-#, fuzzy, kde-format
-#| msgid "Storage Resources"
+#, kde-format
 msgctxt "action"
 msgid "Get More Resources"
-msgstr "Tárolóerőforrások"
+msgstr "Még több forrás"
 
 #. i18n: context: text @ Actions (Management), ActionCollection (Supporter Benefits)
 #: krita/kritamenu_android.action:19
-#, fuzzy, kde-format
-#| msgid "LUT Management"
+#, kde-format
 msgctxt "action"
 msgid "Management"
-msgstr "LUT kezelése"
+msgstr "Kezelés"
 
 #. i18n: context: text @ Action (manage_donations), Actions (Management), ActionCollection (Supporter Benefits)
 #: krita/kritamenu_android.action:22
-#, fuzzy, kde-format
-#| msgid "Manage recordings..."
+#, kde-format
 msgctxt "action"
 msgid "Manage Supporter Benefits..."
-msgstr "Rögzítések kezelése..."
+msgstr "Támogatói extrák..."
 
 #. i18n: context: toolTip @ Action (manage_donations), Actions (Management), ActionCollection (Supporter Benefits)
 #. i18n: context: iconText @ Action (manage_donations), Actions (Management), ActionCollection (Supporter Benefits)
@@ -16385,55 +16379,48 @@ msgstr "Rögzítések kezelése..."
 #, kde-format
 msgctxt "action"
 msgid "Manage Supporter Benefits"
-msgstr ""
+msgstr "Támogatói extrák"
 
 #. i18n: context: text @ Action (manage_subscriptions), Actions (Management), ActionCollection (Supporter Benefits)
 #: krita/kritamenu_android.action:34
-#, fuzzy, kde-format
-#| msgid "Manage recordings..."
+#, kde-format
 msgctxt "action"
 msgid "Manage Subscriptions..."
-msgstr "Rögzítések kezelése..."
+msgstr "Támogatások kezelése..."
 
 #. i18n: context: toolTip @ Action (manage_subscriptions), Actions (Management), ActionCollection (Supporter Benefits)
 #. i18n: context: iconText @ Action (manage_subscriptions), Actions (Management), ActionCollection (Supporter Benefits)
 #. i18n: context: toolTip @ Action (manage_subscriptions), Actions (Management), ActionCollection (Supporter Benefits)
 #. i18n: context: iconText @ Action (manage_subscriptions), Actions (Management), ActionCollection (Supporter Benefits)
 #: krita/kritamenu_android.action:36 krita/kritamenu_android.action:37
-#, fuzzy, kde-format
-#| msgid "Description"
+#, kde-format
 msgctxt "action"
 msgid "Manage Subscriptions"
-msgstr "Leírás"
+msgstr "Támogatások kezelése"
 
 #. i18n: context: text @ Actions (Interface), ActionCollection (Supporter Benefits)
 #: krita/kritamenu_android.action:46
-#, fuzzy, kde-format
-#| msgid "User Interface"
+#, kde-format
 msgctxt "action"
 msgid "Interface"
-msgstr "Felhasználói felület"
+msgstr "Felület"
 
 #. i18n: context: text @ Action (change_interface_scale), Actions (Interface), ActionCollection (Supporter Benefits)
 #: krita/kritamenu_android.action:49
-#, fuzzy, kde-format
-#| msgctxt "(qtundo-format)"
-#| msgid "Change rectangle"
+#, kde-format
 msgctxt "action"
 msgid "Change Interface Scale..."
-msgstr "Téglalap módosítása"
+msgstr "Kezelőfelület méretezése..."
 
 #. i18n: context: toolTip @ Action (change_interface_scale), Actions (Interface), ActionCollection (Supporter Benefits)
 #. i18n: context: iconText @ Action (change_interface_scale), Actions (Interface), ActionCollection (Supporter Benefits)
 #. i18n: context: toolTip @ Action (change_interface_scale), Actions (Interface), ActionCollection (Supporter Benefits)
 #. i18n: context: iconText @ Action (change_interface_scale), Actions (Interface), ActionCollection (Supporter Benefits)
 #: krita/kritamenu_android.action:51 krita/kritamenu_android.action:52
-#, fuzzy, kde-format
-#| msgctxt "(qtundo-format)"
-#| msgid "Change rectangle"
+#, kde-format
 msgctxt "action"
 msgid "Change Interface Scale"
-msgstr "Téglalap módosítása"
+msgstr "Kezelőfelület méretezése"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgSplash)
 #. i18n: ectx: property (windowTitle), widget (QDialog, KisRecoverNamedAutosaveDialog)
@@ -22767,10 +22754,10 @@ msgstr "Érvénytelen érték."
 #: plugins/color/lcms2engine/colorspaces/lab_f32/LabF32ColorSpace.cpp:30
 #: plugins/color/lcms2engine/colorspaces/lab_u16/LabColorSpace.cpp:25
 #: plugins/color/lcms2engine/colorspaces/lab_u8/LabU8ColorSpace.cpp:25
-#: plugins/color/lcms2engine/colorspaces/rgb_f16/RgbF16ColorSpace.cpp:29
-#: plugins/color/lcms2engine/colorspaces/rgb_f32/RgbF32ColorSpace.cpp:33
-#: plugins/color/lcms2engine/colorspaces/rgb_u16/RgbU16ColorSpace.cpp:27
-#: plugins/color/lcms2engine/colorspaces/rgb_u8/RgbU8ColorSpace.cpp:33
+#: plugins/color/lcms2engine/colorspaces/rgb_f16/RgbF16ColorSpace.cpp:30
+#: plugins/color/lcms2engine/colorspaces/rgb_f32/RgbF32ColorSpace.cpp:34
+#: plugins/color/lcms2engine/colorspaces/rgb_u16/RgbU16ColorSpace.cpp:28
+#: plugins/color/lcms2engine/colorspaces/rgb_u8/RgbU8ColorSpace.cpp:34
 #: plugins/color/lcms2engine/colorspaces/xyz_f16/XyzF16ColorSpace.cpp:25
 #: plugins/color/lcms2engine/colorspaces/xyz_f32/XyzF32ColorSpace.cpp:30
 #: plugins/color/lcms2engine/colorspaces/xyz_u16/XyzU16ColorSpace.cpp:25
@@ -22869,10 +22856,10 @@ msgstr "RGB (8 bites egész/csatorna, nem kezelt)"
 
 #. i18n: ectx: property (text), widget (QLabel, label_15)
 #: libs/pigment/colorspaces/KoRgbU8ColorSpace.cpp:33
-#: plugins/color/lcms2engine/colorspaces/rgb_f16/RgbF16ColorSpace.cpp:28
-#: plugins/color/lcms2engine/colorspaces/rgb_f32/RgbF32ColorSpace.cpp:32
-#: plugins/color/lcms2engine/colorspaces/rgb_u16/RgbU16ColorSpace.cpp:24
-#: plugins/color/lcms2engine/colorspaces/rgb_u8/RgbU8ColorSpace.cpp:30
+#: plugins/color/lcms2engine/colorspaces/rgb_f16/RgbF16ColorSpace.cpp:29
+#: plugins/color/lcms2engine/colorspaces/rgb_f32/RgbF32ColorSpace.cpp:33
+#: plugins/color/lcms2engine/colorspaces/rgb_u16/RgbU16ColorSpace.cpp:25
+#: plugins/color/lcms2engine/colorspaces/rgb_u8/RgbU8ColorSpace.cpp:31
 #: plugins/filters/colorsfilters/wdg_color_balance.ui:352
 #: plugins/python/channels2layers/channels2layers.py:1400
 #, kde-format
@@ -22883,10 +22870,10 @@ msgstr "Kék"
 #. i18n: ectx: property (text), widget (QLabel, label_20)
 #. i18n: ectx: property (text), widget (QLabel, label_13)
 #: libs/pigment/colorspaces/KoRgbU8ColorSpace.cpp:34
-#: plugins/color/lcms2engine/colorspaces/rgb_f16/RgbF16ColorSpace.cpp:27
-#: plugins/color/lcms2engine/colorspaces/rgb_f32/RgbF32ColorSpace.cpp:31
-#: plugins/color/lcms2engine/colorspaces/rgb_u16/RgbU16ColorSpace.cpp:25
-#: plugins/color/lcms2engine/colorspaces/rgb_u8/RgbU8ColorSpace.cpp:31
+#: plugins/color/lcms2engine/colorspaces/rgb_f16/RgbF16ColorSpace.cpp:28
+#: plugins/color/lcms2engine/colorspaces/rgb_f32/RgbF32ColorSpace.cpp:32
+#: plugins/color/lcms2engine/colorspaces/rgb_u16/RgbU16ColorSpace.cpp:26
+#: plugins/color/lcms2engine/colorspaces/rgb_u8/RgbU8ColorSpace.cpp:32
 #: plugins/filters/colorsfilters/wdg_color_balance.ui:113
 #: plugins/filters/colorsfilters/wdg_color_balance.ui:235
 #: plugins/filters/colorsfilters/wdg_color_balance.ui:406
@@ -22896,10 +22883,10 @@ msgid "Green"
 msgstr "Zöld"
 
 #: libs/pigment/colorspaces/KoRgbU8ColorSpace.cpp:35
-#: plugins/color/lcms2engine/colorspaces/rgb_f16/RgbF16ColorSpace.cpp:26
-#: plugins/color/lcms2engine/colorspaces/rgb_f32/RgbF32ColorSpace.cpp:30
-#: plugins/color/lcms2engine/colorspaces/rgb_u16/RgbU16ColorSpace.cpp:26
-#: plugins/color/lcms2engine/colorspaces/rgb_u8/RgbU8ColorSpace.cpp:32
+#: plugins/color/lcms2engine/colorspaces/rgb_f16/RgbF16ColorSpace.cpp:27
+#: plugins/color/lcms2engine/colorspaces/rgb_f32/RgbF32ColorSpace.cpp:31
+#: plugins/color/lcms2engine/colorspaces/rgb_u16/RgbU16ColorSpace.cpp:27
+#: plugins/color/lcms2engine/colorspaces/rgb_u8/RgbU8ColorSpace.cpp:33
 #: plugins/python/channels2layers/channels2layers.py:1396
 #, kde-format
 msgid "Red"
@@ -23955,7 +23942,7 @@ msgstr "Ki"
 #: libs/pigment/resources/KoColorSet.cpp:1100
 #: libs/pigment/resources/KoColorSet.cpp:1447
 #: libs/pigment/resources/KoColorSet.cpp:1527
-#: libs/pigment/resources/KoColorSet.cpp:1945
+#: libs/pigment/resources/KoColorSet.cpp:1944
 #: libs/ui/actions/KisPasteActionFactories.cpp:392
 #: libs/ui/animation/KisDlgAnimationRenderer.cpp:542 libs/ui/KisView.cpp:1163
 #: plugins/generators/seexpr/kis_wdg_seexpr.cpp:34
@@ -24978,40 +24965,39 @@ msgstr "Transzformáció eszköz aktiválása"
 #: libs/ui/animation/KisAndroidMediaEncoderRunnable.cpp:88
 #, kde-format
 msgid "Android: %1"
-msgstr ""
+msgstr "Android: %1"
 
 #: libs/ui/animation/KisAndroidMediaEncoderRunnable.cpp:103
 #, kde-format
 msgid "%1 (hardware)"
-msgstr ""
+msgstr "%1 (hardver)"
 
 #: libs/ui/animation/KisAndroidMediaEncoderRunnable.cpp:105
 #, kde-format
 msgid "%1 (software)"
-msgstr ""
+msgstr "%1 (szoftver)"
 
 #: libs/ui/animation/KisAndroidMediaEncoderRunnable.cpp:277
 #, kde-format
 msgid "Unsupported video parameters, try lowering the video FPS or size"
 msgstr ""
+"Nem támogatott videóbeállítások. Próbáld meg csökkenteni a videó FPS-értékét "
+"vagy méretét"
 
 #: libs/ui/animation/KisAndroidMediaEncoderRunnable.cpp:283
-#, fuzzy, kde-format
-#| msgid "All supported formats"
+#, kde-format
 msgid "Unsupported format"
-msgstr "Minden támogatott formátum"
+msgstr "Nem támogatott formátum"
 
 #: libs/ui/animation/KisAndroidMediaEncoderRunnable.cpp:367
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Intersect (%1)"
+#, kde-format
 msgid "Internal error (%1)"
-msgstr "Metszet (%1)"
+msgstr "Belső hiba (%1)"
 
 #: libs/ui/animation/KisAndroidMediaEncoderRunnable.cpp:902
 #, kde-format
 msgid "Encoder:"
-msgstr ""
+msgstr "Kódoló:"
 
 #. i18n: ectx: property (text), widget (QLabel, lblOpenH264bitrate)
 #. i18n: ectx: property (text), widget (QLabel, label_3)
@@ -25419,16 +25405,14 @@ msgid "Loading video data... %1 frames examined."
 msgstr "Videoadatok betöltése... %1 képkocka megvizsgálva."
 
 #: libs/ui/animation/KisMediaEncoderWrapper.cpp:132
-#, fuzzy, kde-format
-#| msgctxt "Shows up instead of the name when there's no profile"
-#| msgid "No Profile Found"
+#, kde-format
 msgid "No frame files found"
-msgstr "Nem található profil"
+msgstr "Nem találhatók képkockafájlok"
 
 #: libs/ui/animation/KisMediaEncoderWrapper.cpp:192
 #, kde-format
 msgid "No encoder for the selected format found"
-msgstr ""
+msgstr "Nem található kódoló a kiválasztott formátumhoz"
 
 #: libs/ui/animation/KisVideoSaver.cpp:52
 #, kde-format
@@ -28353,38 +28337,34 @@ msgid "Preset Icon Library"
 msgstr "Előbeállítás-ikon könyvtár"
 
 #: libs/ui/dialogs/KisDonationManagementDialog.cpp:17
-#, fuzzy, kde-format
-#| msgid "Unsupported unit"
+#, kde-format
 msgid "Supporter Benefits"
-msgstr "Nem támogatott mértékegység"
+msgstr "Támogatói extrák"
 
 #: libs/ui/dialogs/KisDonationManagementDialog.cpp:27
-#, fuzzy, kde-format
-#| msgid "Description"
+#, kde-format
 msgid "Manage Subscriptions"
-msgstr "Leírás"
+msgstr "Támogatások kezelése"
 
 #: libs/ui/dialogs/KisDonationManagementDialog.cpp:114
 #, kde-format
 msgid "You have %1 supporter benefit:"
 msgid_plural "You have %1 supporter benefits:"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 támogatói extrád van:"
+msgstr[1] "%1 támogatói extráid vannak:"
 
 #: libs/ui/dialogs/KisDonationManagementDialog.cpp:122
 #, kde-format
 msgid "There is %1 supporter benefit available:"
 msgid_plural "There are %1 supporter benefits available:"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 támogatói extra érhető el:"
+msgstr[1] "%1 támogatói extrák érhetőek el:"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, KisDonationManagementDialog)
 #: libs/ui/dialogs/KisDonationManagementDialog.ui:14
-#, fuzzy, kde-format
-#| msgctxt "@label:inlistbox"
-#| msgid "Stacked"
+#, kde-format
 msgid "StackedWidget"
-msgstr "Halmozott"
+msgstr "StackedWidget"
 
 #. i18n: ectx: property (text), widget (QLabel, m_lblNoBenefits)
 #: libs/ui/dialogs/KisDonationManagementDialog.ui:53
@@ -28393,12 +28373,14 @@ msgid ""
 "No supporter benefits available on this version of Krita.\n"
 "You can still support Krita by donating."
 msgstr ""
+"A Krita ezen verziójában nem érhetők el támogatói extrák.\n"
+"Adományozással azonban továbbra is támogathatod a Kritát."
 
 #. i18n: ectx: property (text), widget (QPushButton, m_btnNoBenefitsSupport)
 #: libs/ui/dialogs/KisDonationManagementDialog.ui:63
 #, kde-format
 msgid "Donate"
-msgstr ""
+msgstr "Támogatás"
 
 #: libs/ui/dialogs/KisProofingConfigModel.cpp:72
 #, kde-format
@@ -28750,19 +28732,20 @@ msgstr ""
 #, kde-format
 msgid "Krita is made possible thanks to ongoing support from people like you!"
 msgstr ""
+"A Krita az olyan emberek folyamatos támogatásának köszönhetően létezhet, "
+"mint Ön!"
 
 #. i18n: ectx: property (text), widget (QPushButton, bnAndroidSupporterManage)
 #: libs/ui/forms/KisWelcomePage.ui:1672
 #, kde-format
 msgid "Manage Supporter Benefits"
-msgstr ""
+msgstr "Támogatói extrák"
 
 #. i18n: ectx: property (text), widget (QPushButton, bnAndroidSupport)
 #: libs/ui/forms/KisWelcomePage.ui:1717 libs/ui/KisWelcomePageWidget.cpp:844
-#, fuzzy, kde-format
-#| msgid "Support Krita"
+#, kde-format
 msgid "Support Krita!"
-msgstr "Krita támogatása"
+msgstr "Támogassa a Kritát!"
 
 #. i18n: ectx: property (text), widget (QLabel, lblLastPrintedDesc)
 #: libs/ui/forms/koDocumentInfoAboutWidget.ui:28
@@ -29857,7 +29840,7 @@ msgstr "Átfedés átlátszatlansága:"
 
 #. i18n: ectx: attribute (title), widget (QWidget, Miscellaneous)
 #: libs/ui/forms/wdgdisplaysettings.ui:524
-#: libs/ui/forms/wdggeneralsettings.ui:1260
+#: libs/ui/forms/wdggeneralsettings.ui:1247
 #, kde-format
 msgid "Miscellaneous"
 msgstr "Egyebek"
@@ -30417,7 +30400,7 @@ msgstr "Törtmértékű skálázási tényező engedélyezése"
 #. i18n: ectx: property (text), widget (QLabel, label_16)
 #. i18n: ectx: property (text), widget (QLabel, label_14)
 #: libs/ui/forms/wdggeneralsettings.ui:598
-#: libs/ui/forms/wdggeneralsettings.ui:1704
+#: libs/ui/forms/wdggeneralsettings.ui:1691
 #, kde-format
 msgid "(needs restart)"
 msgstr "(újraindítás szükséges)"
@@ -30759,76 +30742,76 @@ msgstr "Idővonal automatikus igazítása a lejátszási tartományhoz"
 
 #. i18n: ectx: attribute (title), widget (QWidget, Resources)
 #. i18n: ectx: attribute (title), widget (QWidget, tabResources)
-#: libs/ui/forms/wdggeneralsettings.ui:1204
+#: libs/ui/forms/wdggeneralsettings.ui:1191
 #: plugins/extensions/dbexplorer/WdgDbExplorer.ui:37
 #, kde-format
 msgid "Resources"
 msgstr "Erőforrások"
 
 #. i18n: ectx: property (text), widget (QLabel, label_15)
-#: libs/ui/forms/wdggeneralsettings.ui:1210
+#: libs/ui/forms/wdggeneralsettings.ui:1197
 #, kde-format
 msgid "Resource Folder:"
 msgstr "Erőforrásmappa:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_12)
-#: libs/ui/forms/wdggeneralsettings.ui:1314
+#: libs/ui/forms/wdggeneralsettings.ui:1301
 #, kde-format
 msgid "When Krita starts:"
 msgstr "A Krita indulásakor:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkSaveSessionOnQuit)
-#: libs/ui/forms/wdggeneralsettings.ui:1331
+#: libs/ui/forms/wdggeneralsettings.ui:1318
 #, kde-format
 msgid "Save session when Krita closes"
 msgstr "Munkamenet mentése a Krita bezárásakor"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_chkConvertOnImport)
-#: libs/ui/forms/wdggeneralsettings.ui:1338
+#: libs/ui/forms/wdggeneralsettings.ui:1325
 #, kde-format
 msgid "On importing images as layers, convert to the image colorspace"
 msgstr "Képek rétegként való importálásakor konvertálás a kép színterére"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label)
 #. i18n: ectx: property (toolTip), widget (KisIntParseSpinBox, m_undoStackSize)
-#: libs/ui/forms/wdggeneralsettings.ui:1351
-#: libs/ui/forms/wdggeneralsettings.ui:1361
+#: libs/ui/forms/wdggeneralsettings.ui:1338
+#: libs/ui/forms/wdggeneralsettings.ui:1348
 #, kde-format
 msgid "Only applies to new or newly opened images."
 msgstr "Csak az új vagy újonnan megnyitott képekre vonatkozik."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: libs/ui/forms/wdggeneralsettings.ui:1354
+#: libs/ui/forms/wdggeneralsettings.ui:1341
 #, kde-format
 msgid "Undo stack size:"
 msgstr "Visszavonási lista mérete:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkCumulativeUndo)
-#: libs/ui/forms/wdggeneralsettings.ui:1382
+#: libs/ui/forms/wdggeneralsettings.ui:1369
 #, kde-format
 msgid "Use cumulative undo"
 msgstr "Kumulatív visszavonás használata"
 
 #. i18n: ectx: property (text), widget (QPushButton, btnAdvancedCumulativeUndo)
-#: libs/ui/forms/wdggeneralsettings.ui:1402
+#: libs/ui/forms/wdggeneralsettings.ui:1389
 #, kde-format
 msgid "Advanced..."
 msgstr "Speciális..."
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkShowRootLayer)
-#: libs/ui/forms/wdggeneralsettings.ui:1411
+#: libs/ui/forms/wdggeneralsettings.ui:1398
 #, kde-format
 msgid "Show root layer"
 msgstr "Gyökérréteg megjelenítése"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkUsageLogging)
-#: libs/ui/forms/wdggeneralsettings.ui:1418
+#: libs/ui/forms/wdggeneralsettings.ui:1405
 #, kde-format
 msgid "Enable Logging for bug reports"
 msgstr "Naplózás engedélyezése a hibajelentésekhez"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_chkNativeFileDialog)
-#: libs/ui/forms/wdggeneralsettings.ui:1449
+#: libs/ui/forms/wdggeneralsettings.ui:1436
 #, kde-format
 msgid ""
 "Warning: if you enable this setting and the file dialogs do weird stuff, do "
@@ -30838,50 +30821,50 @@ msgstr ""
 "viselkednek, ne küldjön hibajelentést."
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_chkNativeFileDialog)
-#: libs/ui/forms/wdggeneralsettings.ui:1452
+#: libs/ui/forms/wdggeneralsettings.ui:1439
 #, kde-format
 msgid "Enable native file dialogs"
 msgstr "Natív fájlkezelő ablakok engedélyezése"
 
 #. i18n: ectx: property (text), widget (QLabel, label_18)
-#: libs/ui/forms/wdggeneralsettings.ui:1475
+#: libs/ui/forms/wdggeneralsettings.ui:1462
 #, kde-format
 msgid "(Warning: may not work correctly on some systems)"
 msgstr "(Figyelem: bizonyos rendszereken nem biztos, hogy megfelelően működik)"
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
-#: libs/ui/forms/wdggeneralsettings.ui:1485
+#: libs/ui/forms/wdggeneralsettings.ui:1472
 #, kde-format
 msgid "Maximum brush size:"
 msgstr "Maximális ecsetméret:"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, intMaxBrushSize)
-#: libs/ui/forms/wdggeneralsettings.ui:1513
+#: libs/ui/forms/wdggeneralsettings.ui:1500
 #, kde-format
 msgid "The maximum diameter of a brush in pixels."
 msgstr "Az ecset maximális átmérője pixelben."
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, intMaxBrushSize)
-#: libs/ui/forms/wdggeneralsettings.ui:1516
+#: libs/ui/forms/wdggeneralsettings.ui:1503
 #, kde-format
 msgctxt "pixel"
 msgid "px"
 msgstr "px"
 
 #. i18n: ectx: property (text), widget (QLabel, label_10)
-#: libs/ui/forms/wdggeneralsettings.ui:1551
+#: libs/ui/forms/wdggeneralsettings.ui:1538
 #, kde-format
 msgid "(Needs restart)"
 msgstr "(Újraindítás szükséges)"
 
 #. i18n: ectx: property (title), widget (QGroupBox, chkForcedFontDPI)
-#: libs/ui/forms/wdggeneralsettings.ui:1561
+#: libs/ui/forms/wdggeneralsettings.ui:1548
 #, kde-format
 msgid "Font DPI Workaround"
 msgstr "Betűméret DPI áthidaló megoldás"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label_17)
-#: libs/ui/forms/wdggeneralsettings.ui:1576
+#: libs/ui/forms/wdggeneralsettings.ui:1563
 #, kde-format
 msgid ""
 "In some Krita versions before 5.0 text size could be dependent on the "
@@ -30911,7 +30894,7 @@ msgstr ""
 "szükség konverzióra."
 
 #. i18n: ectx: property (text), widget (QLabel, label_17)
-#: libs/ui/forms/wdggeneralsettings.ui:1579
+#: libs/ui/forms/wdggeneralsettings.ui:1566
 #: plugins/python/comics_project_management_tools/comics_export_dialog.py:71
 #: plugins/python/comics_project_management_tools/comics_template_dialog.py:183
 #, kde-format
@@ -30919,7 +30902,7 @@ msgid "DPI:"
 msgstr "DPI:"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, intForcedFontDPI)
-#: libs/ui/forms/wdggeneralsettings.ui:1588
+#: libs/ui/forms/wdggeneralsettings.ui:1575
 #, kde-format
 msgid ""
 "In some versions of Krita before 4.4.3 text size could be dependent on the "
@@ -30937,56 +30920,56 @@ msgstr ""
 "használatára a betűtípusoknál, ha megadja az értéket ebben a mezőben."
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_51)
-#: libs/ui/forms/wdggeneralsettings.ui:1601
+#: libs/ui/forms/wdggeneralsettings.ui:1588
 #, kde-format
 msgid "Automatic layer naming"
 msgstr "Automatikus rétegnévadás"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkRenameMergedLayers)
-#: libs/ui/forms/wdggeneralsettings.ui:1607
+#: libs/ui/forms/wdggeneralsettings.ui:1594
 #, kde-format
 msgid "Append \"Merged\" to merged group layers"
 msgstr "Az \"Egyesített\" hozzáfűzése az egyesített csoportrétegekhez"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkRenamePastedLayers)
-#: libs/ui/forms/wdggeneralsettings.ui:1614
+#: libs/ui/forms/wdggeneralsettings.ui:1601
 #, kde-format
 msgid "Append \"(pasted)\" to pasted layers"
 msgstr "A \"(beillesztett)\" hozzáfűzése a beillesztett rétegekhez"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkRenameDuplicatedLayers)
-#: libs/ui/forms/wdggeneralsettings.ui:1621
+#: libs/ui/forms/wdggeneralsettings.ui:1608
 #, kde-format
 msgid "Prepend \"Copy of\" to duplicated layers"
 msgstr "\"Másolata\" előtag a duplikált rétegekhez"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkEnableLongPress)
-#: libs/ui/forms/wdggeneralsettings.ui:1631
+#: libs/ui/forms/wdggeneralsettings.ui:1618
 #, kde-format
 msgid "Long-press to open context menus"
 msgstr "Hosszú gombnyomás a helyi menük megnyitásához"
 
 #. i18n: ectx: property (title), widget (QGroupBox, m_groupBoxKineticScrollingSettings)
-#: libs/ui/forms/wdggeneralsettings.ui:1638
+#: libs/ui/forms/wdggeneralsettings.ui:1625
 #, kde-format
 msgid "Kinetic Scrolling (needs restart)"
 msgstr "Kinetikus görgetés (újraindítás szükséges)"
 
 #. i18n: ectx: property (text), widget (QLabel, labelKineticScrollingSensitivity)
-#: libs/ui/forms/wdggeneralsettings.ui:1653
+#: libs/ui/forms/wdggeneralsettings.ui:1640
 #, kde-format
 msgid "Sensitivity:"
 msgstr "Érzékenység:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_chkKineticScrollingHideScrollbars)
-#: libs/ui/forms/wdggeneralsettings.ui:1678
+#: libs/ui/forms/wdggeneralsettings.ui:1665
 #, kde-format
 msgid "Hide docker scrollbars if kinetic scrolling is enabled"
 msgstr ""
 "Dokkoló görgetősávjainak elrejtése, ha a kinetikus görgetés engedélyezve van"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, chkIgnoreHighFunctionKeys)
-#: libs/ui/forms/wdggeneralsettings.ui:1730
+#: libs/ui/forms/wdggeneralsettings.ui:1717
 #, kde-format
 msgid ""
 "Some applications may emulate presses of function keys with high numbers (e."
@@ -31002,7 +30985,7 @@ msgstr ""
 "ezt az opciót, de vegye figyelembe ezt a lehetséges problémát."
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkIgnoreHighFunctionKeys)
-#: libs/ui/forms/wdggeneralsettings.ui:1733
+#: libs/ui/forms/wdggeneralsettings.ui:1720
 #, kde-format
 msgid "Ignore high function keys (F13-F24)"
 msgstr "Magas funkciógombok figyelmen kívül hagyása (F13-F24)"
@@ -37042,17 +37025,17 @@ msgstr "Újraindítás szükséges."
 #: libs/ui/KisWelcomePageWidget.cpp:843
 #, kde-format
 msgid "Become a Supporter!"
-msgstr ""
+msgstr "Legyen a támogatónk!"
 
 #: libs/ui/KisWelcomePageWidget.cpp:847
 #, kde-format
 msgid "Supporters get brush packs and more."
-msgstr ""
+msgstr "Támogatóként ecsetkészleteket és sok más extrát kap."
 
 #: libs/ui/KisWelcomePageWidget.cpp:848
 #, kde-format
 msgid "Contributions keep development going."
-msgstr ""
+msgstr "A felajánlások teszik lehetővé a folyamatos fejlesztést."
 
 #: libs/ui/KoDocumentInfoDlg.cpp:73
 #, kde-format
@@ -40235,16 +40218,14 @@ msgid "Current dockers"
 msgstr "Jelenlegi dokkolók"
 
 #: libs/ui/widgets/KisDonationManagementWidget.cpp:25
-#, fuzzy, kde-format
-#| msgid "Edit Resource Bundle"
+#, kde-format
 msgid "Download Resource Bundles"
-msgstr "Erőforráscsomag szerkesztése"
+msgstr "Csomagok letöltése"
 
 #: libs/ui/widgets/KisDonationManagementWidget.cpp:30
-#, fuzzy, kde-format
-#| msgid "Description"
+#, kde-format
 msgid "Manage Subscription"
-msgstr "Leírás"
+msgstr "Előfizetés kezelése"
 
 #: libs/ui/widgets/KisGamutMaskToolbar.cpp:41
 #, kde-format
@@ -41352,10 +41333,11 @@ msgid ""
 "contributing. Further funds are used for legal support and organizing "
 "conferences and meetings.</p>"
 msgstr ""
-"<p>A KDE számos típusú hozzájárulásból profitál, beleértve a pénzügyit is. A "
-"forrásokat a tagok és mások közreműködés során felmerülő költségeinek "
-"megtérítésére használjuk. További összegeket fordítunk jogi támogatásra, "
-"valamint konferenciák és találkozók szervezésére.</p>"
+"<p>A KDE közösségét sokféleképpen lehet támogatni, így anyagi "
+"hozzájárulással is. A kapott támogatásokat arra használjuk, hogy megtérítsük "
+"a tagok és a közreműködők munkája során felmerülő költségeket. A további "
+"forrásokból a jogi hátteret biztosítjuk, valamint konferenciákat és "
+"találkozókat szervezünk.</p>"
 
 #: libs/widgetutils/xmlgui/kaboutkdedialog_p.cpp:125
 #, kde-format
@@ -42571,7 +42553,7 @@ msgstr "Cb"
 msgid "Cr"
 msgstr "Cr"
 
-#: plugins/color/lcms2engine/IccColorSpaceEngine.cpp:149
+#: plugins/color/lcms2engine/IccColorSpaceEngine.cpp:151
 #, kde-format
 msgid "ICC Engine"
 msgstr "ICC motor"
@@ -42591,92 +42573,92 @@ msgstr "L*a*b*/16 hisztogram"
 msgid "L*a*b*/32 Histogram"
 msgstr "L*a*b*/32 hisztogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:181
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:194
 #, kde-format
 msgid "RGBA/8 Histogram"
 msgstr "RGBA/8 hisztogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:185
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:198
 #, kde-format
 msgid "RGBA/16 Histogram"
 msgstr "RGBA/16 hisztogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:191
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:204
 #, kde-format
 msgid "RGBA/F16 Histogram"
 msgstr "RGBA/F16 hisztogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:197
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:210
 #, kde-format
 msgid "RGBA/F32 Histogram"
 msgstr "RGBA/F32 hisztogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:218
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:231
 #, kde-format
 msgid "GRAY/8 Histogram"
 msgstr "SZÜRKE/8 hisztogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:222
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:235
 #, kde-format
 msgid "GRAY/16 Histogram"
 msgstr "SZÜRKE/16 hisztogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:227
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:240
 #, kde-format
 msgid "GRAYF/F16 Histogram"
 msgstr "SZÜRKE/F16 hisztogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:233
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:246
 #, kde-format
 msgid "GRAY/F32 float Histogram"
 msgstr "SZÜRKE/F32 lebegőpontos hisztogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:243
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:256
 #, kde-format
 msgid "CMYK/8 Histogram"
 msgstr "CMYK/8 hisztogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:247
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:260
 #, kde-format
 msgid "CMYK/16 Histogram"
 msgstr "CMYK/16 hisztogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:251
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:264
 #, kde-format
 msgid "CMYK/F32 Histogram"
 msgstr "CMYK/F32 hisztogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:269
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:282
 #, kde-format
 msgid "XYZ/8 Histogram"
 msgstr "XYZ/8 hisztogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:273
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:286
 #, kde-format
 msgid "XYZ/16 Histogram"
 msgstr "XYZ/16 hisztogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:279
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:292
 #, kde-format
 msgid "XYZ/F16 Histogram"
 msgstr "XYZ/F16 hisztogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:285
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:298
 #, kde-format
 msgid "XYZF32 Histogram"
 msgstr "XYZF32 hisztogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:298
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:311
 #, kde-format
 msgid "YCbCr/8 Histogram"
 msgstr "YCbCr/8 hisztogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:302
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:315
 #, kde-format
 msgid "YCbCr/16 Histogram"
 msgstr "YCbCr/16 hisztogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:306
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:319
 #, kde-format
 msgid "YCbCr/F32 Histogram"
 msgstr "YCbCr/F32 hisztogram"
@@ -44891,12 +44873,10 @@ msgid "Abort encoding the timelapse video?"
 msgstr "Megszakítja a timelapse videó kódolását?"
 
 #: plugins/dockers/recorder/recorder_export.cpp:318
-#, fuzzy, kde-format
-#| msgctxt "Status for the export of the video record"
-#| msgid "Starting FFmpeg..."
+#, kde-format
 msgctxt "Status for the export of the video record"
 msgid "Starting exporter..."
-msgstr "FFmpeg indítása..."
+msgstr "Exportáló indítása…"
 
 #: plugins/dockers/recorder/recorder_export.cpp:437
 #, kde-format
@@ -44964,10 +44944,9 @@ msgid "The timelapse video is being encoded..."
 msgstr "A timelapse kódolása folyamatban..."
 
 #: plugins/dockers/recorder/recorder_export.cpp:863
-#, fuzzy, kde-format
-#| msgid "Export failed. FFmpeg message:"
+#, kde-format
 msgid "Export failed. Error message:"
-msgstr "Az exportálás sikertelen. FFmpeg üzenet:"
+msgstr "Az exportálás sikertelen. Hibaüzenet:"
 
 #: plugins/dockers/recorder/recorder_export.cpp:886
 #, kde-format
@@ -45128,6 +45107,9 @@ msgid ""
 "not widely supported. The export may fail and some devices will not be able "
 "to play it."
 msgstr ""
+"<strong>Figyelmeztetés:</strong> Az 1920 pixel szélességnél nagyobb méretű "
+"videók támogatása korlátozott. Az exportálás vagy a fájl lejátszása egyes "
+"eszközökön sikertelen lehet."
 
 #. i18n: ectx: property (text), widget (QLabel, lblWarnFpsText)
 #: plugins/dockers/recorder/recorder_export.ui:711
@@ -45136,6 +45118,9 @@ msgid ""
 "<strong>Warning:</strong> video with FPS beyond 30 is not widely supported. "
 "The export may fail and some devices will not be able to play it."
 msgstr ""
+"<strong>Figyelmeztetés:</strong> a 30 FPS feletti videók támogatottsága "
+"korlátozott. The export may fail and some devices will not be able to play "
+"it. Az exportálás vagy a fájl lejátszása egyes eszközökön sikertelen lehet."
 
 #. i18n: ectx: property (text), widget (QLabel, labelTitleVideoDuration)
 #: plugins/dockers/recorder/recorder_export.ui:757
@@ -50923,21 +50908,19 @@ msgid "What resource do you want to import these %1 files as?"
 msgstr "Milyen erőforrásként szeretné importálni ezeket a(z) %1 fájlokat?"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesDialog.cpp:20
-#, fuzzy, kde-format
-#| msgid "All Supported Files"
+#, kde-format
 msgid "Supporter Bundles"
-msgstr "Minden támogatott fájl"
+msgstr "Támogatói csomagok"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesDialog.cpp:55
 #, kde-format
 msgid "<strong>Error:</strong> %1"
-msgstr ""
+msgstr "<strong>Hiba:</strong> %1"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesDialog.cpp:96
-#, fuzzy, kde-format
-#| msgid "No picture available."
+#, kde-format
 msgid "No supporter bundles available."
-msgstr "Nincs elérhető kép."
+msgstr "Nem érhetők el támogatói csomagok."
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesDialog.cpp:108
 #, kde-format
@@ -50947,182 +50930,165 @@ msgid ""
 "for purchases and may make these bundles in other ways behind the links "
 "below."
 msgstr ""
+"Ezeket a csomagokat a készítőik azért tették elérhetővé, hogy jutalomként "
+"szolgáljanak a Krita fejlesztésének támogatásáért. Az alkotók nem kapnak "
+"anyagi ellenszolgáltatást a vásárlások után, és a csomagok az alábbi "
+"linkeken kívül más forrásból is elérhetőek lehetnek."
 
 #. i18n: ectx: property (text), widget (QLabel, m_lblLoading)
 #: plugins/extensions/resourcemanager/KisSupporterBundlesDialog.ui:40
 #, kde-format
 msgid "Loading…"
-msgstr ""
+msgstr "Betöltés…"
 
 #. i18n: ectx: property (text), widget (QPushButton, m_btnRetry)
 #: plugins/extensions/resourcemanager/KisSupporterBundlesDialog.ui:106
-#, fuzzy, kde-format
-#| msgid "Symmetry"
+#, kde-format
 msgid "Retry"
-msgstr "Szimmetria"
+msgstr "Újrapróbálkozás"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:55
 #, kde-format
 msgid "Server responded with error %1."
-msgstr ""
+msgstr "A szerver hibával válaszolt: %1."
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:84
-#, fuzzy, kde-format
-#| msgid "Invalid File"
+#, kde-format
 msgid "Invalid checksums file."
-msgstr "Érvénytelen fájl"
+msgstr "Érvénytelen ellenőrzőösszeg-fájl."
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:92
 #, kde-format
 msgid "Invalid checksums version."
-msgstr ""
+msgstr "Érvénytelen ellenőrzőösszeg-verzió."
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:117
 #, kde-format
 msgid "You have to update Krita to use this service."
-msgstr ""
+msgstr "A szolgáltatás igénybevételéhez a Krita frissítése szükséges."
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:119
 #, kde-format
 msgid "This service is not available in your region."
-msgstr ""
+msgstr "A szolgáltatás nem érhető el ebben a régióban."
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:121
 #, kde-format
 msgid "This service is currently unavailable."
-msgstr ""
+msgstr "A szolgáltatás jelenleg nem érhető el."
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:123
-#, fuzzy, kde-format
-#| msgid "The document has been modified."
+#, kde-format
 msgid "This service has been discontinued."
-msgstr "A dokumentum módosítva lett."
+msgstr "A szolgáltatás megszűnt."
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:125
-#, fuzzy, kde-format
-#| msgid "Unknown error: %1"
+#, kde-format
 msgid "Unknown service error %1."
-msgstr "Ismeretlen hiba: %1"
+msgstr "Ismeretlen szolgáltatáshiba: %1."
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:184
 #, kde-format
 msgid "Not enough data."
-msgstr ""
+msgstr "Nincs elég adat."
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:191
-#, fuzzy, kde-format
-#| msgid "Invalid value."
+#, kde-format
 msgid "Invalid version."
-msgstr "Érvénytelen érték."
+msgstr "Érvénytelen verzió."
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:199
-#, fuzzy, kde-format
-#| msgctxt "invalid profile name"
-#| msgid "Invalid name."
+#, kde-format
 msgid "Invalid checksum."
-msgstr "Érvénytelen név."
+msgstr "Érvénytelen ellenőrző-összeg."
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:205
-#, fuzzy, kde-format
-#| msgctxt "Warning message"
-#| msgid "Failed to rename the resource."
+#, kde-format
 msgid "Failed to create directory %1."
-msgstr "Az erőforrás átnevezése sikertelen."
+msgstr "Mappa létrehozása sikertelen: %1."
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:212
-#, fuzzy, kde-format
-#| msgid "Failed to open %1."
+#, kde-format
 msgid "Failed to open %1 for writing."
-msgstr "Nem sikerült megnyitni: %1."
+msgstr "A(z) %1 írásra való megnyitása sikertelen."
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:218
-#, fuzzy, kde-format
-#| msgid "Failed to open %1."
+#, kde-format
 msgid "Failed to write %1."
-msgstr "Nem sikerült megnyitni: %1."
+msgstr "A(z) %1 írása sikertelen."
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:317
 #, kde-format
 msgid "Failed to retrieve bundle checksums: %1"
-msgstr ""
+msgstr "Csomag-ellenőrzőösszegek lekérése sikertelen: %1"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:322
-#, fuzzy, kde-format
-#| msgctxt "a tooltip shown when a file layer cannot load its linked file"
-#| msgid "Failed to load linked file: %1"
+#, kde-format
 msgid "Failed to retrieve bundles: %1"
-msgstr "A csatolt fájl betöltése sikertelen: %1"
+msgstr "Csomagok lekérése sikertelen: %1"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:29
-#, fuzzy, kde-format
-#| msgid "Brush presets"
+#, kde-format
 msgid "%1 brush preset"
 msgid_plural "%1 brush presets"
-msgstr[0] "Ecsetkészletek"
-msgstr[1] "Ecsetkészletek"
+msgstr[0] "%1 ecsetkészlet"
+msgstr[1] "%1 ecsetkészletek"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:32
-#, fuzzy, kde-format
-#| msgid "Brush tips"
+#, kde-format
 msgid "%1 brush tips"
 msgid_plural "%1 brush tips"
-msgstr[0] "Ecsethegyek"
-msgstr[1] "Ecsethegyek"
+msgstr[0] "%1 ecsethegy"
+msgstr[1] "%1 ecsethegy"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:35
-#, fuzzy, kde-format
-#| msgctxt "./krita/data/patterns/18_texture-bark.png"
-#| msgid "18 texture-bark"
+#, kde-format
 msgid "%1 texture patterns"
 msgid_plural "%1 texture patterns"
-msgstr[0] "18 texture-bark"
-msgstr[1] "18 texture-bark"
+msgstr[0] "%1 textúramintázat"
+msgstr[1] "%1 textúramintázat"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:38
 #, kde-format
 msgid "%1 workspace layout"
 msgid_plural "%1 workspace layouts"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 munkaterület-elrendezés"
+msgstr[1] "%1 munkaterület-elrendezések"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:53
 #, kde-format
 msgid "%1 (subscribed)"
-msgstr ""
+msgstr "%1 (feliratkozva)"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:55
-#, fuzzy, kde-format
-#| msgid "%1 (Copy)"
+#, kde-format
 msgid "%1 (owned)"
-msgstr "%1 (másolat)"
+msgstr "%1 (saját tulajdonban)"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:83
-#, fuzzy, kde-format
-#| msgid "Contrast:"
+#, kde-format
 msgctxt "in-app purchases, prefix for a list of what a bundle contains"
 msgid "Contains:"
-msgstr "Kontraszt:"
+msgstr "Tartalom:"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:92
-#, fuzzy, kde-format
-#| msgid "No picture available."
+#, kde-format
 msgctxt "in-app purchases, a bundle that the user can't acquire"
 msgid "Not available."
-msgstr "Nincs elérhető kép."
+msgstr "Nem elérhető."
 
 #: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:95
-#, fuzzy, kde-format
-#| msgid "Available"
+#, kde-format
 msgctxt ""
 "in-app purchases, prefix for a list of which purchases make a bundle "
 "available"
 msgid "Available with:"
-msgstr "Elérhető"
+msgstr "Elérhetőség:"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:138
 #, kde-format
 msgid "Downloading bundle…"
-msgstr ""
+msgstr "Csomag letöltése…"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:139
 #: plugins/paintops/libpaintop/KisDynamicSensorFactoryFade.cpp:68
@@ -51131,52 +51097,46 @@ msgid "%1"
 msgstr "%1"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:194
-#, fuzzy, kde-format
-#| msgid "Invalid File"
+#, kde-format
 msgid "Invalid bundle size"
-msgstr "Érvénytelen fájl"
+msgstr "Érvénytelen csomagméret"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:202
 #, kde-format
 msgid "Invalid bundle checksum"
-msgstr ""
+msgstr "Érvénytelen csomag-ellenőrzőösszeg"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:206
 #, kde-format
 msgid "Activating bundle…"
-msgstr ""
+msgstr "Csomag aktiválása…"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:216
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Failed to import the resource"
+#, kde-format
 msgid "Failed to import bundle"
-msgstr "Az erőforrás importálása sikertelen"
+msgstr "A csomag importálása sikertelen"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:241
-#, fuzzy, kde-format
-#| msgid "Could not load profile: %1."
+#, kde-format
 msgid "Bundle download failed: %1"
-msgstr "A profil betöltése sikertelen: %1."
+msgstr "A csomag letöltése sikertelen: %1"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:241
-#, fuzzy, kde-format
-#| msgid "Conversion failed"
+#, kde-format
 msgid "Download failed"
-msgstr "Átalakítás sikertelen"
+msgstr "Letöltés sikertelen"
 
 #. i18n: ectx: property (text), widget (QPushButton, m_btnGet)
 #: plugins/extensions/resourcemanager/KisSupporterBundleWidget.ui:147
-#, fuzzy, kde-format
-#| msgid "Down"
+#, kde-format
 msgid "Download"
-msgstr "Le"
+msgstr "Letöltés"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: plugins/extensions/resourcemanager/KisSupporterBundleWidget.ui:196
 #, kde-format
 msgid "✔ Owned"
-msgstr ""
+msgstr "✔ Tulajdonosa"
 
 #: plugins/extensions/resourcemanager/page_bundle_saver.cpp:95
 #, kde-format
@@ -51315,10 +51275,9 @@ msgid "Manage Resources..."
 msgstr "Erőforrások kezelése..."
 
 #: plugins/extensions/resourcemanager/resourcemanager.cpp:50
-#, fuzzy, kde-format
-#| msgid "Manage Resources..."
+#, kde-format
 msgid "Get More Resources..."
-msgstr "Erőforrások kezelése..."
+msgstr "További források..."
 
 #: plugins/extensions/resourcemanager/resourcemanager.xmlgui:5
 #, kde-format
@@ -51351,11 +51310,9 @@ msgstr "Erőforrás-könyvtár szerkesztése"
 
 #. i18n: ectx: property (text), widget (QPushButton, bnSupport)
 #: plugins/extensions/resourcemanager/wdgdlgbundlemanager.ui:147
-#, fuzzy, kde-format
-#| msgctxt "In bundle manager; press button to create a new bundle"
-#| msgid "Create Bundle"
+#, kde-format
 msgid "Get More Bundles"
-msgstr "Csomag létrehozása"
+msgstr "További csomagok"
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: plugins/extensions/resourcemanager/wdgdlgbundlemanager.ui:433
@@ -70296,16 +70253,12 @@ msgstr ""
 "Teljes tartomány: [%1, %2]\n"
 "Részleges tartomány: [%3, %4]"
 
-#~ msgid "Get your Krita Supporter Badge here!"
-#~ msgstr "Szerezze meg a Krita támogatói jelvényét itt!"
+#~ msgctxt "Status for the export of the video record"
+#~ msgid "Starting FFmpeg..."
+#~ msgstr "FFmpeg indítása..."
 
-#~ msgctxt "The move-selected-content checkbox in selection tool options"
-#~ msgid "Move Selected Content"
-#~ msgstr "Kijelölt tartalom áthelyezése"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid "Move Selected Content"
-#~ msgstr "Kijelölt tartalom áthelyezése"
+#~ msgid "Export failed. FFmpeg message:"
+#~ msgstr "Az exportálás sikertelen. FFmpeg üzenet:"
 
 #~ msgid "Export Path:"
 #~ msgstr "Exportálási útvonal:"

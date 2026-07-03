@@ -82,8 +82,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-01 00:43+0000\n"
-"PO-Revision-Date: 2026-07-01 17:14+0300\n"
+"POT-Creation-Date: 2026-07-03 00:43+0000\n"
+"PO-Revision-Date: 2026-07-02 16:20+0300\n"
 "Last-Translator: Olesya Gerasimenko <goa@altlinux.org>\n"
 "Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
@@ -15642,7 +15642,7 @@ msgstr "Уменьшение выделения"
 #, kde-format
 msgctxt "action"
 msgid "&Border Selection..."
-msgstr "&Выделение границ"
+msgstr "&Выделение границ…"
 
 #. i18n: context: toolTip @ Action (borderselection), Actions (Select), ActionCollection (Menu)
 #. i18n: context: iconText @ Action (borderselection), Actions (Select), ActionCollection (Menu)
@@ -16705,8 +16705,8 @@ msgstr ""
 msgctxt "(qtundo-format)"
 msgid "Insert points"
 msgstr ""
-"Вставка точки\n"
-"вставку точки"
+"Вставка точек\n"
+"вставку точек"
 
 #: libs/flake/commands/KoPathPointMoveCommand.cpp:31
 #: libs/flake/commands/KoPathPointMoveCommand.cpp:47
@@ -22157,8 +22157,8 @@ msgstr "Видимый"
 msgctxt "(qtundo-format)"
 msgid "Merge Selection Masks"
 msgstr ""
-"Объединение выбранных масок\n"
-"объединение выбранных масок"
+"Объединение масок выделения\n"
+"объединение масок выделения"
 
 #: libs/image/kis_layer_utils.cpp:2170
 msgctxt "(qtundo-format)"
@@ -22227,8 +22227,8 @@ msgstr ""
 msgctxt "(qtundo-format)"
 msgid "Border Selection"
 msgstr ""
-"Обводка из выделения\n"
-"обводку из выделения"
+"Выделение границ\n"
+"выделение границ"
 
 #: libs/image/kis_selection_filters.cpp:499
 msgctxt "(qtundo-format)"
@@ -23011,8 +23011,8 @@ msgstr "Импорт кадров"
 msgctxt "(qtundo-format)"
 msgid "Scripted Brush Stroke"
 msgstr ""
-"Рукописные мазки кистью\n"
-"рукописные мазки кистью"
+"Сценарный мазок кистью\n"
+"сценарный мазок кистью"
 
 #: libs/metadata/kis_meta_data_filter_p.cc:39
 #, kde-format
@@ -23107,10 +23107,10 @@ msgstr "Недопустимое значение."
 #: plugins/color/lcms2engine/colorspaces/lab_f32/LabF32ColorSpace.cpp:30
 #: plugins/color/lcms2engine/colorspaces/lab_u16/LabColorSpace.cpp:25
 #: plugins/color/lcms2engine/colorspaces/lab_u8/LabU8ColorSpace.cpp:25
-#: plugins/color/lcms2engine/colorspaces/rgb_f16/RgbF16ColorSpace.cpp:29
-#: plugins/color/lcms2engine/colorspaces/rgb_f32/RgbF32ColorSpace.cpp:33
-#: plugins/color/lcms2engine/colorspaces/rgb_u16/RgbU16ColorSpace.cpp:27
-#: plugins/color/lcms2engine/colorspaces/rgb_u8/RgbU8ColorSpace.cpp:33
+#: plugins/color/lcms2engine/colorspaces/rgb_f16/RgbF16ColorSpace.cpp:30
+#: plugins/color/lcms2engine/colorspaces/rgb_f32/RgbF32ColorSpace.cpp:34
+#: plugins/color/lcms2engine/colorspaces/rgb_u16/RgbU16ColorSpace.cpp:28
+#: plugins/color/lcms2engine/colorspaces/rgb_u8/RgbU8ColorSpace.cpp:34
 #: plugins/color/lcms2engine/colorspaces/xyz_f16/XyzF16ColorSpace.cpp:25
 #: plugins/color/lcms2engine/colorspaces/xyz_f32/XyzF32ColorSpace.cpp:30
 #: plugins/color/lcms2engine/colorspaces/xyz_u16/XyzU16ColorSpace.cpp:25
@@ -23209,10 +23209,10 @@ msgstr "RGB (8 бит на канал, неуправляемый)"
 
 #. i18n: ectx: property (text), widget (QLabel, label_15)
 #: libs/pigment/colorspaces/KoRgbU8ColorSpace.cpp:33
-#: plugins/color/lcms2engine/colorspaces/rgb_f16/RgbF16ColorSpace.cpp:28
-#: plugins/color/lcms2engine/colorspaces/rgb_f32/RgbF32ColorSpace.cpp:32
-#: plugins/color/lcms2engine/colorspaces/rgb_u16/RgbU16ColorSpace.cpp:24
-#: plugins/color/lcms2engine/colorspaces/rgb_u8/RgbU8ColorSpace.cpp:30
+#: plugins/color/lcms2engine/colorspaces/rgb_f16/RgbF16ColorSpace.cpp:29
+#: plugins/color/lcms2engine/colorspaces/rgb_f32/RgbF32ColorSpace.cpp:33
+#: plugins/color/lcms2engine/colorspaces/rgb_u16/RgbU16ColorSpace.cpp:25
+#: plugins/color/lcms2engine/colorspaces/rgb_u8/RgbU8ColorSpace.cpp:31
 #: plugins/filters/colorsfilters/wdg_color_balance.ui:352
 #: plugins/python/channels2layers/channels2layers.py:1400
 #, kde-format
@@ -23223,10 +23223,10 @@ msgstr "Синий"
 #. i18n: ectx: property (text), widget (QLabel, label_20)
 #. i18n: ectx: property (text), widget (QLabel, label_13)
 #: libs/pigment/colorspaces/KoRgbU8ColorSpace.cpp:34
-#: plugins/color/lcms2engine/colorspaces/rgb_f16/RgbF16ColorSpace.cpp:27
-#: plugins/color/lcms2engine/colorspaces/rgb_f32/RgbF32ColorSpace.cpp:31
-#: plugins/color/lcms2engine/colorspaces/rgb_u16/RgbU16ColorSpace.cpp:25
-#: plugins/color/lcms2engine/colorspaces/rgb_u8/RgbU8ColorSpace.cpp:31
+#: plugins/color/lcms2engine/colorspaces/rgb_f16/RgbF16ColorSpace.cpp:28
+#: plugins/color/lcms2engine/colorspaces/rgb_f32/RgbF32ColorSpace.cpp:32
+#: plugins/color/lcms2engine/colorspaces/rgb_u16/RgbU16ColorSpace.cpp:26
+#: plugins/color/lcms2engine/colorspaces/rgb_u8/RgbU8ColorSpace.cpp:32
 #: plugins/filters/colorsfilters/wdg_color_balance.ui:113
 #: plugins/filters/colorsfilters/wdg_color_balance.ui:235
 #: plugins/filters/colorsfilters/wdg_color_balance.ui:406
@@ -23236,10 +23236,10 @@ msgid "Green"
 msgstr "Зелёный"
 
 #: libs/pigment/colorspaces/KoRgbU8ColorSpace.cpp:35
-#: plugins/color/lcms2engine/colorspaces/rgb_f16/RgbF16ColorSpace.cpp:26
-#: plugins/color/lcms2engine/colorspaces/rgb_f32/RgbF32ColorSpace.cpp:30
-#: plugins/color/lcms2engine/colorspaces/rgb_u16/RgbU16ColorSpace.cpp:26
-#: plugins/color/lcms2engine/colorspaces/rgb_u8/RgbU8ColorSpace.cpp:32
+#: plugins/color/lcms2engine/colorspaces/rgb_f16/RgbF16ColorSpace.cpp:27
+#: plugins/color/lcms2engine/colorspaces/rgb_f32/RgbF32ColorSpace.cpp:31
+#: plugins/color/lcms2engine/colorspaces/rgb_u16/RgbU16ColorSpace.cpp:27
+#: plugins/color/lcms2engine/colorspaces/rgb_u8/RgbU8ColorSpace.cpp:33
 #: plugins/python/channels2layers/channels2layers.py:1396
 #, kde-format
 msgid "Red"
@@ -24295,7 +24295,7 @@ msgstr "Выходной"
 #: libs/pigment/resources/KoColorSet.cpp:1100
 #: libs/pigment/resources/KoColorSet.cpp:1447
 #: libs/pigment/resources/KoColorSet.cpp:1527
-#: libs/pigment/resources/KoColorSet.cpp:1945
+#: libs/pigment/resources/KoColorSet.cpp:1944
 #: libs/ui/actions/KisPasteActionFactories.cpp:392
 #: libs/ui/animation/KisDlgAnimationRenderer.cpp:542 libs/ui/KisView.cpp:1163
 #: plugins/generators/seexpr/kis_wdg_seexpr.cpp:34
@@ -25593,8 +25593,8 @@ msgstr ""
 "\n"
 "Из-за этого система может быть перегружена.\n"
 "Если требуется отредактировать видео, содержащее более 100 кадров, "
-"рекомендуется использовать настоящий видеоредактор, например, Kdenlive "
-"(https://kdenlive.org)."
+"рекомендуется использовать настоящий видеоредактор (например, Kdenlive — "
+"https://kdenlive.org)."
 
 #: libs/ui/animation/KisDlgImportVideoAnimation.cpp:234
 #, kde-format
@@ -30252,7 +30252,7 @@ msgstr "Непрозрачность наложения:"
 
 #. i18n: ectx: attribute (title), widget (QWidget, Miscellaneous)
 #: libs/ui/forms/wdgdisplaysettings.ui:524
-#: libs/ui/forms/wdggeneralsettings.ui:1260
+#: libs/ui/forms/wdggeneralsettings.ui:1247
 #, kde-format
 msgid "Miscellaneous"
 msgstr "Разное"
@@ -30812,7 +30812,7 @@ msgstr "Включить нецелый коэффициент масштаби�
 #. i18n: ectx: property (text), widget (QLabel, label_16)
 #. i18n: ectx: property (text), widget (QLabel, label_14)
 #: libs/ui/forms/wdggeneralsettings.ui:598
-#: libs/ui/forms/wdggeneralsettings.ui:1704
+#: libs/ui/forms/wdggeneralsettings.ui:1691
 #, kde-format
 msgid "(needs restart)"
 msgstr "(требуется перезапуск)"
@@ -31155,32 +31155,32 @@ msgstr ""
 
 #. i18n: ectx: attribute (title), widget (QWidget, Resources)
 #. i18n: ectx: attribute (title), widget (QWidget, tabResources)
-#: libs/ui/forms/wdggeneralsettings.ui:1204
+#: libs/ui/forms/wdggeneralsettings.ui:1191
 #: plugins/extensions/dbexplorer/WdgDbExplorer.ui:37
 #, kde-format
 msgid "Resources"
 msgstr "Источники"
 
 #. i18n: ectx: property (text), widget (QLabel, label_15)
-#: libs/ui/forms/wdggeneralsettings.ui:1210
+#: libs/ui/forms/wdggeneralsettings.ui:1197
 #, kde-format
 msgid "Resource Folder:"
 msgstr "Папка ресурсов:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_12)
-#: libs/ui/forms/wdggeneralsettings.ui:1314
+#: libs/ui/forms/wdggeneralsettings.ui:1301
 #, kde-format
 msgid "When Krita starts:"
 msgstr "При запуске Krita:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkSaveSessionOnQuit)
-#: libs/ui/forms/wdggeneralsettings.ui:1331
+#: libs/ui/forms/wdggeneralsettings.ui:1318
 #, kde-format
 msgid "Save session when Krita closes"
 msgstr "Сохранять сеанс при закрытии Krita"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_chkConvertOnImport)
-#: libs/ui/forms/wdggeneralsettings.ui:1338
+#: libs/ui/forms/wdggeneralsettings.ui:1325
 #, kde-format
 msgid "On importing images as layers, convert to the image colorspace"
 msgstr ""
@@ -31189,44 +31189,44 @@ msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label)
 #. i18n: ectx: property (toolTip), widget (KisIntParseSpinBox, m_undoStackSize)
-#: libs/ui/forms/wdggeneralsettings.ui:1351
-#: libs/ui/forms/wdggeneralsettings.ui:1361
+#: libs/ui/forms/wdggeneralsettings.ui:1338
+#: libs/ui/forms/wdggeneralsettings.ui:1348
 #, kde-format
 msgid "Only applies to new or newly opened images."
 msgstr "Применяется только к новым и недавно открытым изображениям."
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: libs/ui/forms/wdggeneralsettings.ui:1354
+#: libs/ui/forms/wdggeneralsettings.ui:1341
 #, kde-format
 msgid "Undo stack size:"
 msgstr "Размер буфера отменяемых действий:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkCumulativeUndo)
-#: libs/ui/forms/wdggeneralsettings.ui:1382
+#: libs/ui/forms/wdggeneralsettings.ui:1369
 #, kde-format
 msgid "Use cumulative undo"
 msgstr "Использовать накопительную отмену"
 
 #. i18n: ectx: property (text), widget (QPushButton, btnAdvancedCumulativeUndo)
-#: libs/ui/forms/wdggeneralsettings.ui:1402
+#: libs/ui/forms/wdggeneralsettings.ui:1389
 #, kde-format
 msgid "Advanced..."
 msgstr "Дополнительно..."
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkShowRootLayer)
-#: libs/ui/forms/wdggeneralsettings.ui:1411
+#: libs/ui/forms/wdggeneralsettings.ui:1398
 #, kde-format
 msgid "Show root layer"
 msgstr "Показать главный слой"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkUsageLogging)
-#: libs/ui/forms/wdggeneralsettings.ui:1418
+#: libs/ui/forms/wdggeneralsettings.ui:1405
 #, kde-format
 msgid "Enable Logging for bug reports"
 msgstr "Включить журналирование для отчётов об ошибках"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, m_chkNativeFileDialog)
-#: libs/ui/forms/wdggeneralsettings.ui:1449
+#: libs/ui/forms/wdggeneralsettings.ui:1436
 #, kde-format
 msgid ""
 "Warning: if you enable this setting and the file dialogs do weird stuff, do "
@@ -31236,50 +31236,50 @@ msgstr ""
 "диалоговыми окнами, не сообщайте об ошибке в программе."
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_chkNativeFileDialog)
-#: libs/ui/forms/wdggeneralsettings.ui:1452
+#: libs/ui/forms/wdggeneralsettings.ui:1439
 #, kde-format
 msgid "Enable native file dialogs"
 msgstr "Включить системные файловые диалоги"
 
 #. i18n: ectx: property (text), widget (QLabel, label_18)
-#: libs/ui/forms/wdggeneralsettings.ui:1475
+#: libs/ui/forms/wdggeneralsettings.ui:1462
 #, kde-format
 msgid "(Warning: may not work correctly on some systems)"
 msgstr "(Внимание: может работать некорректно в некоторых системах)"
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
-#: libs/ui/forms/wdggeneralsettings.ui:1485
+#: libs/ui/forms/wdggeneralsettings.ui:1472
 #, kde-format
 msgid "Maximum brush size:"
 msgstr "Максимальный размер кисти:"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, intMaxBrushSize)
-#: libs/ui/forms/wdggeneralsettings.ui:1513
+#: libs/ui/forms/wdggeneralsettings.ui:1500
 #, kde-format
 msgid "The maximum diameter of a brush in pixels."
 msgstr "Максимально допустимый диаметр кисти в пикселах."
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, intMaxBrushSize)
-#: libs/ui/forms/wdggeneralsettings.ui:1516
+#: libs/ui/forms/wdggeneralsettings.ui:1503
 #, kde-format
 msgctxt "pixel"
 msgid "px"
 msgstr " пикс."
 
 #. i18n: ectx: property (text), widget (QLabel, label_10)
-#: libs/ui/forms/wdggeneralsettings.ui:1551
+#: libs/ui/forms/wdggeneralsettings.ui:1538
 #, kde-format
 msgid "(Needs restart)"
 msgstr "(Требуется перезапуск)"
 
 #. i18n: ectx: property (title), widget (QGroupBox, chkForcedFontDPI)
-#: libs/ui/forms/wdggeneralsettings.ui:1561
+#: libs/ui/forms/wdggeneralsettings.ui:1548
 #, kde-format
 msgid "Font DPI Workaround"
 msgstr "Обход проблемы с разрешением шрифта"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label_17)
-#: libs/ui/forms/wdggeneralsettings.ui:1576
+#: libs/ui/forms/wdggeneralsettings.ui:1563
 #, kde-format
 msgid ""
 "In some Krita versions before 5.0 text size could be dependent on the "
@@ -31310,7 +31310,7 @@ msgstr ""
 "потребности в преобразованиях уже не будет."
 
 #. i18n: ectx: property (text), widget (QLabel, label_17)
-#: libs/ui/forms/wdggeneralsettings.ui:1579
+#: libs/ui/forms/wdggeneralsettings.ui:1566
 #: plugins/python/comics_project_management_tools/comics_export_dialog.py:71
 #: plugins/python/comics_project_management_tools/comics_template_dialog.py:183
 #, kde-format
@@ -31318,7 +31318,7 @@ msgid "DPI:"
 msgstr "DPI:"
 
 #. i18n: ectx: property (toolTip), widget (QSpinBox, intForcedFontDPI)
-#: libs/ui/forms/wdggeneralsettings.ui:1588
+#: libs/ui/forms/wdggeneralsettings.ui:1575
 #, kde-format
 msgid ""
 "In some versions of Krita before 4.4.3 text size could be dependent on the "
@@ -31337,56 +31337,56 @@ msgstr ""
 "поле."
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_51)
-#: libs/ui/forms/wdggeneralsettings.ui:1601
+#: libs/ui/forms/wdggeneralsettings.ui:1588
 #, kde-format
 msgid "Automatic layer naming"
 msgstr "Автоматическое именование слоёв"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkRenameMergedLayers)
-#: libs/ui/forms/wdggeneralsettings.ui:1607
+#: libs/ui/forms/wdggeneralsettings.ui:1594
 #, kde-format
 msgid "Append \"Merged\" to merged group layers"
 msgstr "Добавить «Сведено» к сведённым групповым слоям"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkRenamePastedLayers)
-#: libs/ui/forms/wdggeneralsettings.ui:1614
+#: libs/ui/forms/wdggeneralsettings.ui:1601
 #, kde-format
 msgid "Append \"(pasted)\" to pasted layers"
 msgstr "Добавить «(вставлено)» к вставленным слоям"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkRenameDuplicatedLayers)
-#: libs/ui/forms/wdggeneralsettings.ui:1621
+#: libs/ui/forms/wdggeneralsettings.ui:1608
 #, kde-format
 msgid "Prepend \"Copy of\" to duplicated layers"
 msgstr "Добавить префикс «Копия» к дублированным слоям"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkEnableLongPress)
-#: libs/ui/forms/wdggeneralsettings.ui:1631
+#: libs/ui/forms/wdggeneralsettings.ui:1618
 #, kde-format
 msgid "Long-press to open context menus"
 msgstr "Длительное нажатие для открытия контекстных меню"
 
 #. i18n: ectx: property (title), widget (QGroupBox, m_groupBoxKineticScrollingSettings)
-#: libs/ui/forms/wdggeneralsettings.ui:1638
+#: libs/ui/forms/wdggeneralsettings.ui:1625
 #, kde-format
 msgid "Kinetic Scrolling (needs restart)"
 msgstr "Кинетическая прокрутка (требуется перезапуск)"
 
 #. i18n: ectx: property (text), widget (QLabel, labelKineticScrollingSensitivity)
-#: libs/ui/forms/wdggeneralsettings.ui:1653
+#: libs/ui/forms/wdggeneralsettings.ui:1640
 #, kde-format
 msgid "Sensitivity:"
 msgstr "Чувствительность:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_chkKineticScrollingHideScrollbars)
-#: libs/ui/forms/wdggeneralsettings.ui:1678
+#: libs/ui/forms/wdggeneralsettings.ui:1665
 #, kde-format
 msgid "Hide docker scrollbars if kinetic scrolling is enabled"
 msgstr ""
 "Скрыть полосы прокрутки на панели, если включена кинетическая прокрутка"
 
 #. i18n: ectx: property (toolTip), widget (QCheckBox, chkIgnoreHighFunctionKeys)
-#: libs/ui/forms/wdggeneralsettings.ui:1730
+#: libs/ui/forms/wdggeneralsettings.ui:1717
 #, kde-format
 msgid ""
 "Some applications may emulate presses of function keys with high numbers (e."
@@ -31403,7 +31403,7 @@ msgstr ""
 "потенциальную проблему."
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkIgnoreHighFunctionKeys)
-#: libs/ui/forms/wdggeneralsettings.ui:1733
+#: libs/ui/forms/wdggeneralsettings.ui:1720
 #, kde-format
 msgid "Ignore high function keys (F13-F24)"
 msgstr "Игнорировать высокие функциональные клавиши (F13-F24)"
@@ -35192,15 +35192,15 @@ msgstr ""
 msgctxt "(qtundo-format)"
 msgid "Raise Nodes"
 msgstr ""
-"Увеличение узлов\n"
-"увеличение узлов"
+"Поднятие узлов\n"
+"поднятие узлов"
 
 #: libs/ui/kis_node_manager.cpp:1092
 msgctxt "(qtundo-format)"
 msgid "Lower Nodes"
 msgstr ""
-"Уменьшение узлов\n"
-"уменьшение узлов"
+"Опускание узлов\n"
+"опускание узлов"
 
 #: libs/ui/kis_node_manager.cpp:1112
 msgctxt "(qtundo-format)"
@@ -43131,7 +43131,7 @@ msgstr "Cb"
 msgid "Cr"
 msgstr "Cr"
 
-#: plugins/color/lcms2engine/IccColorSpaceEngine.cpp:149
+#: plugins/color/lcms2engine/IccColorSpaceEngine.cpp:151
 #, kde-format
 msgid "ICC Engine"
 msgstr "Модуль ICC"
@@ -43151,92 +43151,92 @@ msgstr "Гистограмма L*a*b*/16"
 msgid "L*a*b*/32 Histogram"
 msgstr "Гистограмма L*a*b*/32"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:181
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:194
 #, kde-format
 msgid "RGBA/8 Histogram"
 msgstr "Гистограмма RGBA/8"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:185
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:198
 #, kde-format
 msgid "RGBA/16 Histogram"
 msgstr "Гистограмма RGBA/16"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:191
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:204
 #, kde-format
 msgid "RGBA/F16 Histogram"
 msgstr "Гистограмма RGBA/F16"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:197
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:210
 #, kde-format
 msgid "RGBA/F32 Histogram"
 msgstr "Гистограмма RGBA/F32"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:218
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:231
 #, kde-format
 msgid "GRAY/8 Histogram"
 msgstr "Гистограмма GRAY/8"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:222
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:235
 #, kde-format
 msgid "GRAY/16 Histogram"
 msgstr "Гистограмма GRAY/16"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:227
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:240
 #, kde-format
 msgid "GRAYF/F16 Histogram"
 msgstr "Гистограмма GRAYF/F16"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:233
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:246
 #, kde-format
 msgid "GRAY/F32 float Histogram"
 msgstr "Гистограмма GRAY/F32 плавающей точкой"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:243
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:256
 #, kde-format
 msgid "CMYK/8 Histogram"
 msgstr "Гистограмма CMYK/8"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:247
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:260
 #, kde-format
 msgid "CMYK/16 Histogram"
 msgstr "Гистограмма CMYK/16"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:251
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:264
 #, kde-format
 msgid "CMYK/F32 Histogram"
 msgstr "Гистограмма CMYK/F32"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:269
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:282
 #, kde-format
 msgid "XYZ/8 Histogram"
 msgstr "Гистограмма XYZ/8"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:273
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:286
 #, kde-format
 msgid "XYZ/16 Histogram"
 msgstr "Гистограмма XYZ/16"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:279
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:292
 #, kde-format
 msgid "XYZ/F16 Histogram"
 msgstr "Гистограмма XYZ/F16"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:285
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:298
 #, kde-format
 msgid "XYZF32 Histogram"
 msgstr "Гистограмма XYZF32"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:298
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:311
 #, kde-format
 msgid "YCbCr/8 Histogram"
 msgstr "Гистограмма YCbCr/8"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:302
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:315
 #, kde-format
 msgid "YCbCr/16 Histogram"
 msgstr "Гистограмма YCbCr/16"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:306
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:319
 #, kde-format
 msgid "YCbCr/F32 Histogram"
 msgstr "Гистограмма YCbCr/F32"
@@ -44203,17 +44203,17 @@ msgctxt "(qtundo-format)"
 msgid "Clone Keyframe"
 msgid_plural "Clone %1 Keyframes"
 msgstr[0] ""
-"Перемещение %1 ключевого кадра\n"
-"перемещение %1 ключевого кадра"
+"Клонирование %1 ключевого кадра\n"
+"клонирование %1 ключевого кадра"
 msgstr[1] ""
-"Перемещение %1 ключевых кадров\n"
-"перемещение %1 ключевых кадров"
+"Клонирование %1 ключевых кадров\n"
+"клонирование %1 ключевых кадров"
 msgstr[2] ""
-"Перемещение %1 ключевых кадров\n"
-"перемещение %1 ключевых кадров"
+"Клонирование %1 ключевых кадров\n"
+"клонирование %1 ключевых кадров"
 msgstr[3] ""
-"Перемещение ключевого кадра\n"
-"перемещение ключевого кадра"
+"Клонирование ключевого кадра\n"
+"клонирование ключевого кадра"
 
 #: plugins/dockers/animation/KisAnimUtils.cpp:427
 msgctxt "(qtundo-format)"
@@ -50891,7 +50891,7 @@ msgstr "Значение"
 #: plugins/extensions/modify_selection/dlg_border_selection.cc:20
 #, kde-format
 msgid "Border Selection"
-msgstr "Обводка из выделения"
+msgstr "Выделение границ"
 
 #: plugins/extensions/modify_selection/dlg_feather_selection.cc:20
 #, kde-format
@@ -67041,8 +67041,8 @@ msgstr "Выделенная область не имеет пикселов"
 msgctxt "(qtundo-format)"
 msgid "Multibrush Stroke"
 msgstr ""
-"Рисование мультикистью\n"
-"рисование мультикистью"
+"Мазок мультикистью\n"
+"мазок мультикистью"
 
 #: plugins/tools/basictools/kis_tool_multihand.cpp:449
 #, kde-format
@@ -67087,8 +67087,8 @@ msgstr ""
 msgctxt "(qtundo-format)"
 msgid "Draw Bezier Curve"
 msgstr ""
-"Кривая Безье\n"
-"кривую Безье"
+"Рисование кривой Безье\n"
+"рисование кривой Безье"
 
 #: plugins/tools/basictools/kis_tool_path.h:84
 #, kde-format
@@ -68252,8 +68252,8 @@ msgstr "Выделение контура"
 msgctxt "(qtundo-format)"
 msgid "Select by Bezier Curve"
 msgstr ""
-"Выделение по кривой Безье\n"
-"выделение по кривой Безье"
+"Выделение кривой Безье\n"
+"выделение кривой Безье"
 
 #: plugins/tools/selectiontools/kis_tool_select_polygonal.cc:41
 #, kde-format
@@ -68590,8 +68590,8 @@ msgstr ""
 msgctxt "(qtundo-format)"
 msgid "Change SvgTextTool"
 msgstr ""
-"Изменение SvgTextTool\n"
-"изменение SvgTextTool"
+"Изменение текста SVG\n"
+"изменение текста SVG"
 
 #: plugins/tools/svgtexttool/SvgTextChangeTransformsOnRange.cpp:20
 #: plugins/tools/svgtexttool/SvgTextChangeTransformsOnRange.cpp:31

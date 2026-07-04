@@ -261,6 +261,7 @@ parts:
       - python3-sipbuild
       - libxkbcommon-dev
       - libxkbcommon0
+      - libsharpyuv-dev
     build-snaps:
       - ffmpeg-2404-sdk
       - kf6-core24-sdk/latest/beta
@@ -299,9 +300,10 @@ parts:
       - libmlt++7
       - libimath-3-1-29
       - libxkbcommon0
+      - libsharpyuv0
     build-environment:
       - DICPATH: "$SNAP/usr/share/hunspell"
-      - PYSIDE_DESIGNER_PLUGINS: /snap/kde-pyside6-core24-sdk/current/usr/lib/x86_64-linux-gnu/qt6/plugins/designer
+      - PYSIDE_DESIGNER_PLUGINS: /snap/kde-pyside6-core24-sdk/current/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/qt6/plugins/designer
       - PYTHONPATH: $CRAFT_STAGE/usr/lib/python3.12:$CRAFT_STAGE/usr/lib/python3/dist-packages:/snap/kde-qt6-core24-sdk/current/usr/lib/python3.12:/snap/kde-qt6-core24-sdk/current/usr/lib/python3/dist-packages:/snap/kde-pyside6-core24-sdk/current/usr/lib/python3.12:/snap/kde-pyside6-core24-sdk/current/usr/lib/python3/dist-packages${PYTHONPATH:+:$PYTHONPATH}
     prime:
       - -usr/lib/*/cmake/*

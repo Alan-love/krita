@@ -447,9 +447,7 @@ GeneralTab::GeneralTab(QWidget *_parent, const char *_name)
     }
 
     selectionActionsBarBehaviorLabel->setEnabled(sapEnabled);
-
     setButtonGroupEnabled(m_sapBehaviourGroup, sapEnabled);
-    selectionActionsBarPositionLabel->setEnabled(sapEnabled);
 
     setButtonGroupEnabled(m_sapOrientationGroup, sapEnabled);
     selectionActionsBarOrientationLabel->setEnabled(sapEnabled);
@@ -486,7 +484,10 @@ GeneralTab::GeneralTab(QWidget *_parent, const char *_name)
         m_sapPositionGroup.button(cfg.selectionActionBarPosition())->setChecked(true);
     }
 
+
     setButtonGroupEnabled(m_sapPositionGroup, sapEnabled);
+    selectionActionsBarPositionLabel->setEnabled(sapEnabled);
+
     connect(&m_sapPositionGroup, SIGNAL(idClicked(int)), this, SLOT(selectionActionsBarPositionChanged(int)));
 
     //

@@ -58,7 +58,7 @@ msgstr ""
 "Project-Id-Version: KOffice 1.6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-03 00:43+0000\n"
-"PO-Revision-Date: 2026-07-02 09:11+0200\n"
+"PO-Revision-Date: 2026-07-06 17:27+0200\n"
 "Last-Translator: Benedek Péter <benedekppeter@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -18963,7 +18963,7 @@ msgstr "Nincs blokk"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "%1 glyph variants."
-msgstr "%1 karakter változat."
+msgstr "%1 karakterjel változat."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:24
 #, kde-format
@@ -18987,7 +18987,7 @@ msgstr "Kontextusfüggő alternatívák"
 #, kde-format
 msgctxt "@tooltip"
 msgid "Replaces glyphs depending on their context within a text."
-msgstr "Kicseréli a karaktereket a szövegkörnyezetük alapján."
+msgstr "Kicseréli a karakterkészlet-jeleket a szövegkörnyezetük alapján."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:33
 #, kde-format
@@ -19002,7 +19002,7 @@ msgid ""
 "Replaces sequences of glyphs with ligatures depending on their context "
 "within a text."
 msgstr ""
-"A karakter sorozatokat ligatúrákra cseréli a szövegkörnyezetük alapján."
+"A karakterjel sorozatokat ligatúrákra cseréli a szövegkörnyezetük alapján."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:37
 #, kde-format
@@ -19016,7 +19016,8 @@ msgctxt "@tooltip"
 msgid ""
 "Replaces glyphs with swashed glyphs depending on their context within a text."
 msgstr ""
-"Kicseréli a karaktereket díszített változatokra a szövegkörnyezetük alapján."
+"Kicseréli a karakterkészlet-jeleket díszített változatokra a "
+"szövegkörnyezetük alapján."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:41
 #, kde-format
@@ -19029,7 +19030,7 @@ msgstr "Tetszőleges ligatúrák"
 msgctxt "@tooltip"
 msgid ""
 "Replaces sequences of glyphs with ligatures intended for typographic effect."
-msgstr "A karakter sorozatokat tipográfiai hatású ligatúrákra cseréli."
+msgstr "A karakterjel sorozatokat tipográfiai hatású ligatúrákra cseréli."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:45
 #, kde-format
@@ -19041,7 +19042,7 @@ msgstr "Sorvégi karakterváltozatok"
 #, kde-format
 msgctxt "@tooltip"
 msgid "Replaces glyphs with their line-end forms."
-msgstr "Kicseréli a karaktereket a sorvégi alakjukra."
+msgstr "Kicseréli a karakterkészlet-jeleket a sorvégi alakjukra."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:49
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:53
@@ -19054,7 +19055,7 @@ msgstr "Történelmi alakok"
 #, kde-format
 msgctxt "@tooltip"
 msgid "Replaces glyphs with their historical forms."
-msgstr "Kicseréli a karaktereket a történelmi alakjukra."
+msgstr "Kicseréli a karakterkészlet-jeleket a történelmi alakjukra."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:54
 #, kde-format
@@ -19063,8 +19064,8 @@ msgid ""
 "Replaces sequences glyphs with ligatures that were in use in the past, but "
 "rare today."
 msgstr ""
-"A jelsorozatokat olyan ligatúrákra cseréli, amelyek régen használatosak "
-"voltak, de ma már ritkák."
+"A karakterkészlet-jeleket olyan ligatúrákra cseréli, amelyek régen "
+"használatosak voltak, de ma már ritkák."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:57
 #, kde-format
@@ -19076,7 +19077,8 @@ msgstr "Sorkizárási alternatívák"
 #, kde-format
 msgctxt "@tooltip"
 msgid "Replaces glyphs with their alternates meant for justification."
-msgstr "Kicseréli a karaktereket a sorkizáráshoz szánt változataikra."
+msgstr ""
+"Kicseréli a karakterkészlet-jeleket a sorkizáráshoz szánt változataikra."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:61
 #, kde-format
@@ -19088,7 +19090,7 @@ msgstr "Szabványos ligatúrák"
 #, kde-format
 msgctxt "@tooltip"
 msgid "Replaces sequences glyphs with common ligatures."
-msgstr "A jelsorozatokat gyakori ligatúrákra cseréli."
+msgstr "A karakterkészlet-jeleket gyakori ligatúrákra cseréli."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:65
 #, kde-format
@@ -19100,7 +19102,9 @@ msgstr "Bal oldali határok"
 #, kde-format
 msgctxt "@tooltip"
 msgid "This adjusts glyphs so there is no space at the left side."
-msgstr "Úgy igazítja a karaktereket, hogy ne legyen szóköz a bal oldalukon."
+msgstr ""
+"Úgy igazítja a karakterkészlet-jeleket, hogy ne legyen szóköz a bal "
+"oldalukon."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:69
 #, kde-format
@@ -19112,7 +19116,7 @@ msgstr "Honosított alakok"
 #, kde-format
 msgctxt "@tooltip"
 msgid "This replaces glyphs with language specific versions."
-msgstr "Kicseréli a karaktereket nyelvspecifikus változatokra."
+msgstr "Kicseréli a karakterkészlet-jeleket nyelvspecifikus változatokra."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:73
 #, kde-format
@@ -19127,20 +19131,20 @@ msgid ""
 "Adjusts glyphs so they align by their optical bounds. Doesn't do anything in "
 "Krita."
 msgstr ""
-"Úgy igazítja a karaktereket, hogy az optikai határuk mentén igazodjanak. A "
-"Kritában nincs hatása."
+"Úgy igazítja a karakterkészlet-jeleket, hogy az optikai határuk mentén "
+"igazodjanak. A Kritában nincs hatása."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:77
 #, kde-format
 msgctxt "@title"
 msgid "Ornaments"
-msgstr "Díszítőelemek"
+msgstr "Ornamentikák"
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:78
 #, kde-format
 msgctxt "@tooltip"
 msgid "Replaces glyphs with ornaments for decorative purposes."
-msgstr "Kicseréli a karaktereket díszítőelemekre."
+msgstr "Kicseréli a karakterkészlet-jeleket díszítőelemekre."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:81
 #, kde-format
@@ -19152,7 +19156,7 @@ msgstr "Véletlenszerű"
 #, kde-format
 msgctxt "@tooltip"
 msgid "Replaces glyphs with random alternates."
-msgstr "Kicseréli a karaktereket véletlenszerű változatokra."
+msgstr "Kicseréli a karakterkészlet-jeleket véletlenszerű változatokra."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:85
 #, kde-format
@@ -19164,7 +19168,9 @@ msgstr "Jobb oldali határok"
 #, kde-format
 msgctxt "@tooltip"
 msgid "This adjusts glyphs so there is no space at the right side."
-msgstr "Úgy igazítja a karaktereket, hogy ne legyen szóköz a jobb oldalukon."
+msgstr ""
+"Úgy igazítja a karakterkészlet-jeleket, hogy ne legyen szóköz a jobb "
+"oldalukon."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:89
 #, kde-format
@@ -19179,8 +19185,8 @@ msgid ""
 "Replaces glyphs with stylistic alternates that do not fit in other "
 "categories."
 msgstr ""
-"Kicseréli a karaktereket olyan stilisztikai változatokra, amelyek nem "
-"illenek más kategóriákba."
+"Kicseréli a karakterkészlet-jeleket olyan stilisztikai változatokra, amelyek "
+"nem illenek más kategóriákba."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:93
 #, kde-format
@@ -19192,7 +19198,7 @@ msgstr "Díszített"
 #, kde-format
 msgctxt "@tooltip"
 msgid "Replaces glyphs with swashed alternates."
-msgstr "Kicseréli a jeleket díszített változatokra."
+msgstr "Kicseréli a karakterkészlet-jeleket díszített változatokra."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:99
 #, kde-format
@@ -19207,8 +19213,9 @@ msgid ""
 "This composes or decomposes graphemes so that the resulting glyphs can later "
 "be recomposed. Commonly used to handle diacritics."
 msgstr ""
-"Összeállítja vagy szétbontja a grafémákat, hogy a kapott jelek később újra "
-"összeállíthatók legyenek. Gyakran használják mellékjelek kezelésére."
+"Összeállítja vagy szétbontja a karakterkészlet-jeleket, hogy a kapott "
+"karakterjelek később újra összeállíthatók legyenek. Gyakran használják "
+"mellékjelek kezelésére."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:103
 #, kde-format
@@ -19236,8 +19243,8 @@ msgid ""
 "This controls the positioning of mark glyphs on base glyphs. Commonly used "
 "for diacritics."
 msgstr ""
-"A jelölő karakterek alapkarakterekhez viszonyított helyzetét szabályozza. "
-"Gyakran használják mellékjelekhez."
+"A jelölő karakterkészlet-jelek alapkarakterekhez viszonyított helyzetét "
+"szabályozza. Gyakran használják mellékjelekhez."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:112
 #, kde-format
@@ -19246,8 +19253,8 @@ msgid ""
 "This controls the positioning of mark glyphs onto other mark glyphs. "
 "Commonly used for diacritics."
 msgstr ""
-"A jelölő karakterek más jelölő karakterekhez viszonyított helyzetét "
-"szabályozza. Gyakran használják mellékjelekhez."
+"A jelölő karakterkészlet-jelek más jelölő karakterkészlet-jelek viszonyított "
+"helyzetét szabályozza. Gyakran használják mellékjelekhez."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:115
 #, kde-format
@@ -19261,8 +19268,8 @@ msgctxt "@tooltip"
 msgid ""
 "Replaces glyphs contextually with alternates, required to make the font work."
 msgstr ""
-"Kontextusfüggő módon cseréli a karaktereket alternatívákra, ami szükséges a "
-"betűkészlet működéséhez."
+"Kontextusfüggő módon cseréli a karakterkészlet-jeleket alternatívákra, ami "
+"szükséges a betűkészlet működéséhez."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:119
 #, kde-format
@@ -19274,7 +19281,7 @@ msgstr "Kötelező ligatúrák"
 #, kde-format
 msgctxt "@tooltip"
 msgid "Replaces sequences of glyphs with required ligatures."
-msgstr "A karakter sorozatokat kötelező ligatúrákra cseréli."
+msgstr "A karakterjel sorozatokat kötelező ligatúrákra cseréli."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:123
 #, kde-format
@@ -19289,8 +19296,8 @@ msgid ""
 "Replaces glyphs in a variable font with ones suited for the current "
 "variation."
 msgstr ""
-"Kicseréli a karaktereket egy változó betűkészletben az aktuális variációnak "
-"megfelelőkre."
+"Kicseréli a karakterkészlet-jeleket egy változó betűkészletben az aktuális "
+"variációnak megfelelőkre."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:127
 #, kde-format
@@ -19423,7 +19430,8 @@ msgctxt "@tooltip"
 msgid ""
 "Replaces normal Greek script with glyphs intended for mathematical usage."
 msgstr ""
-"A normál görög betűket matematikai használatra szánt karakterekre cseréli."
+"A normál görög betűket matematikai használatra szánt karakterkészlet-jelekre "
+"cseréli."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:165
 #, kde-format
@@ -19506,7 +19514,8 @@ msgid ""
 "Replaces glyphs with forms that are suited for displaying the number in "
 "chemical formulas."
 msgstr ""
-"A karaktereket a kémiai képletek megjelenítésére alkalmas alakúra cseréli."
+"A karakterkészlet-jeleket a kémiai képletek megjelenítésére alkalmas alakúra "
+"cseréli."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:189
 #, kde-format
@@ -19518,7 +19527,8 @@ msgstr "Matematikai írásstílus-változatok"
 #, kde-format
 msgctxt "@tooltip"
 msgid "Replaces glyphs with ones more suited for super- and subscripts."
-msgstr "A karaktereket az alsó és felső indexekhez jobban illőkre cseréli."
+msgstr ""
+"A karakterkészlet-jeleket az alsó és felső indexekhez jobban illőkre cseréli."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:193
 #, kde-format
@@ -19530,7 +19540,7 @@ msgstr "Alsó index"
 #, kde-format
 msgctxt "@tooltip"
 msgid "Replaces glyphs with ones more suited for subscript."
-msgstr "A karaktereket az alsó indexhez jobban illőkre cseréli."
+msgstr "A karakterkészlet-jeleket az alsó indexhez jobban illőkre cseréli."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:197
 #, kde-format
@@ -19542,7 +19552,7 @@ msgstr "Felső index"
 #, kde-format
 msgctxt "@tooltip"
 msgid "Replaces glyphs with ones more suited for superscript."
-msgstr "A karaktereket a felső indexhez jobban illőkre cseréli."
+msgstr "A karakterkészlet-jeleket a felső indexhez jobban illőkre cseréli."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:201
 #, kde-format
@@ -19570,7 +19580,7 @@ msgid ""
 "help prevent confusion with similar glyphs like the letter 'O'."
 msgstr ""
 "A nulla számjegyet áthúzott nullára cseréli, ami segít elkerülni az "
-"összetévesztést a hasonló karakterekkel, például az 'O' betűvel."
+"összetévesztést a hasonló karakterkészlet-jelekkel, például az 'O' betűvel."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:211
 #, kde-format
@@ -19585,8 +19595,8 @@ msgid ""
 "Adjusts glyphs to work better with text that consists of only capitals or "
 "lining figures."
 msgstr ""
-"Úgy módosítja a jeleket, hogy jobban illeszkedjenek a csupa nagybetűből vagy "
-"kurrens számjegyekből álló szövegekhez."
+"Úgy módosítja a karakterkészlet-jeleket, hogy jobban illeszkedjenek a csupa "
+"nagybetűből vagy kurrens számjegyekből álló szövegekhez."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:215
 #, kde-format
@@ -19666,7 +19676,8 @@ msgstr "Címfelirat"
 #, kde-format
 msgctxt "@tooltip"
 msgid "Replaces glyphs with alternate forms suited for header text."
-msgstr "A jeleket a címsorokhoz alkalmas alternatív alakúra cseréli."
+msgstr ""
+"A karakterkészlet-jeleket a címsorokhoz alkalmas alternatív alakúra cseréli."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:239
 #, kde-format
@@ -19678,7 +19689,9 @@ msgstr "Unicase"
 #, kde-format
 msgctxt "@tooltip"
 msgid "Replaces both upper and lowercase glyphs with unicase glyphs."
-msgstr "A kis- és nagybetűket is közös magasságú (unicase) jelekre cseréli."
+msgstr ""
+"A kis- és nagybetűket is közös magasságú (unicase) karakterkészlet-jelekre "
+"cseréli."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:245
 #, kde-format
@@ -19779,7 +19792,8 @@ msgstr "Összekapcsolt alak Ro után"
 #, kde-format
 msgctxt "@tooltip"
 msgid "Controls glyphs following conjoined Ro in Khmer script."
-msgstr "Vezérli az összekapcsolt Ro-t követő jeleket a khmer írásban."
+msgstr ""
+"Vezérli az összekapcsolt Ro-t követő karakterkészlet-jeleket a khmer írásban."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:277
 #, kde-format
@@ -19902,8 +19916,8 @@ msgctxt "@tooltip"
 msgid ""
 "Replaces base glyphs and post-base glyphs with a ligature in Indic scripts."
 msgstr ""
-"Az alapjeleket és az alap utáni karakterjeleket egy ligatúrára cseréli az "
-"indi írásokban."
+"Az alap karakterkészlet-jeleket és az alap utáni karakterkészlet-jeleket egy "
+"ligatúrára cseréli az indi írásokban."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:313
 #, kde-format
@@ -19962,7 +19976,7 @@ msgid ""
 "Respaces full-width glyphs to be half-width depending on the context, common "
 "examples include CJK full-width brackets and other punctuation marks."
 msgstr ""
-"A szövegkörnyezettől függően a teljes szélességű karaktereket fél "
+"A szövegkörnyezettől függően a teljes szélességű karakterkészlet-jeleket fél "
 "szélességűre méretezi át; gyakori példák erre a CJK teljes szélességű "
 "zárójelek és egyéb írásjelek."
 
@@ -20002,8 +20016,8 @@ msgstr "Teljes szélesség"
 msgctxt "@tooltip"
 msgid "Replaces or respaces proportional glyphs with full-width glyphs."
 msgstr ""
-"A proporcionális jeleket teljes szélességű jelekre cseréli vagy ekként "
-"méretezi át."
+"A proporcionális karakterkészlet-jeleket teljes szélességű karakterjelekre "
+"cseréli vagy ekként méretezi át."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:344
 #, kde-format
@@ -20012,8 +20026,8 @@ msgid ""
 "Respaces full-width glyphs to be half-width, common examples include CJK "
 "full-width brackets and other punctuation marks."
 msgstr ""
-"A teljes szélességű jeleket fél szélességűre méretezi át; gyakori példák "
-"erre a CJK teljes szélességű zárójelek és egyéb írásjelek."
+"A teljes szélességű karakterkészlet-jeleket fél szélességűre méretezi át; "
+"gyakori példák erre a CJK teljes szélességű zárójelek és egyéb írásjelek."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:347
 #, kde-format
@@ -20072,8 +20086,8 @@ msgid ""
 "Replaces or respaces proportional or full-width glyphs with half-width "
 "glyphs."
 msgstr ""
-"A proporcionális vagy teljes szélességű karaktereket fél szélességű jelekre "
-"cseréli vagy ekként méretezi át."
+"A proporcionális vagy teljes szélességű karakterkészlet-jeleket fél "
+"szélességű karakterjelekre cseréli vagy ekként méretezi át."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:363
 #, kde-format
@@ -20085,7 +20099,9 @@ msgstr "Dőlt"
 #, kde-format
 msgctxt "@tooltip"
 msgid "Replaces Latin glyphs in a CJK font with their italic forms."
-msgstr "A CJK betűkészletben a latin karaktereket a dőlt alakjukra cseréli."
+msgstr ""
+"A CJK betűkészletben a latin karakterkészlet-jeleket a dőlt alakjukra "
+"cseréli."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:367
 #, kde-format
@@ -20181,8 +20197,8 @@ msgstr "Proporcionális alternatív szélességek"
 msgctxt "@tooltip"
 msgid "Respaces full-width glyphs to fit in a proportional context."
 msgstr ""
-"Úgy méretezi át a teljes szélességű karaktereket, hogy illeszkedjenek a "
-"proporcionális környezetbe."
+"Úgy méretezi át a teljes szélességű karakterkészlet-jeleket, hogy "
+"illeszkedjenek a proporcionális környezetbe."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:395
 #, kde-format
@@ -20208,7 +20224,9 @@ msgstr "Proporcionális szélességek"
 #, kde-format
 msgctxt "@tooltip"
 msgid "Replaces uniform-width glyphs with proportional glyphs."
-msgstr "Az azonos szélességű karaktereket proporcionális jelekre cseréli."
+msgstr ""
+"Az azonos szélességű karakterkészlet-jeleket proporcionális karakterjelekre "
+"cseréli."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:403
 #, kde-format
@@ -20220,7 +20238,7 @@ msgstr "Negyed szélesség"
 #, kde-format
 msgctxt "@tooltip"
 msgid "Replaces glyphs with quarter-width glyphs."
-msgstr "A karaktereket negyed szélességű jelekre cseréli."
+msgstr "A karakterkészlet-jeleket negyed szélességű jelekre cseréli."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:407
 #, kde-format
@@ -20235,8 +20253,8 @@ msgid ""
 "Replaces glyphs in CJK fonts with ones suited for the small text in ruby "
 "annotations."
 msgstr ""
-"A CJK betűkészletekben a karaktereket a ruby-annotációk apró szövegéhez "
-"alkalmasakra cseréli."
+"A CJK betűkészletekben a karakterkészlet-jeleket a ruby-annotációk apró "
+"szövegéhez alkalmasakra cseréli."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:411
 #, kde-format
@@ -20249,7 +20267,8 @@ msgstr "Egyszerűsített alakok"
 msgctxt "@tooltip"
 msgid "Replaces glyphs in CJK fonts with 'simplified' forms."
 msgstr ""
-"A CJK betűkészletekben a karaktereket 'egyszerűsített' alakokra cseréli."
+"A CJK betűkészletekben a karakterkészlet-jeleket 'egyszerűsített' alakokra "
+"cseréli."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:415
 #, kde-format
@@ -20291,7 +20310,9 @@ msgstr "Hagyományos alakok"
 #, kde-format
 msgctxt "@tooltip"
 msgid "Replaces glyphs in CJK fonts with 'traditional' forms."
-msgstr "A CJK betűkészletekben a karaktereket 'hagyományos' alakokra cseréli."
+msgstr ""
+"A CJK betűkészletekben a karakterkészlet-jeleket 'hagyományos' alakokra "
+"cseréli."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:427
 #, kde-format
@@ -20303,7 +20324,7 @@ msgstr "Harmad szélesség"
 #, kde-format
 msgctxt "@tooltip"
 msgid "Replaces glyphs with third-width glyphs."
-msgstr "A karaktereket harmad szélességű jelekre cseréli."
+msgstr "A karakterkészlet-jeleket harmad szélességű jelekre cseréli."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:431
 #, kde-format
@@ -20316,8 +20337,8 @@ msgstr "Alternatív függőleges metrika"
 msgctxt "@tooltip"
 msgid "Repositions glyphs so they look more appropriate in vertical layout."
 msgstr ""
-"Úgy pozicionálja át a karaktereket, hogy jobban mutassanak függőleges "
-"elrendezésben."
+"Úgy pozicionálja át a karakterkészlet-jeleket, hogy jobban mutassanak "
+"függőleges elrendezésben."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:435
 #, kde-format
@@ -20330,8 +20351,8 @@ msgstr "Alternatív fél szélesség"
 msgctxt "@tooltip"
 msgid "Repositions glyphs so they look more appropriate in horizontal layout."
 msgstr ""
-"Úgy pozicionálja át a karaktereket, hogy jobban mutassanak vízszintes "
-"elrendezésben."
+"Úgy pozicionálja át a karakterkészlet-jeleket, hogy jobban mutassanak "
+"vízszintes elrendezésben."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:439
 #, kde-format
@@ -20350,8 +20371,8 @@ msgstr "Függőleges alternatívák"
 msgctxt "@tooltip"
 msgid "Replaces glyphs in CJK fonts with ones suited for vertical writing."
 msgstr ""
-"A CJK betűkészletekben a karaktereket függőleges íráshoz alkalmasakra "
-"cseréli."
+"A CJK betűkészletekben a karakterkészlet-jeleket függőleges íráshoz "
+"alkalmasakra cseréli."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:447
 #, kde-format
@@ -20365,8 +20386,8 @@ msgctxt "@tooltip"
 msgid ""
 "Repositions glyphs so they are half-width in a vertical writing context."
 msgstr ""
-"Úgy pozicionálja át a karaktereket, hogy fél szélességűek legyenek "
-"függőleges írásnál."
+"Úgy pozicionálja át a karakterkészlet-jeleket, hogy fél szélességűek "
+"legyenek függőleges írásnál."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:451
 #, kde-format
@@ -20411,8 +20432,8 @@ msgctxt "@tooltip"
 msgid ""
 "Repositions glyphs so they are proportional in a vertical writing context."
 msgstr ""
-"Úgy pozicionálja át a karaktereket, hogy proporcionálisak legyenek "
-"függőleges írásnál."
+"Úgy pozicionálja át a karakterkészlet-jeleket, hogy proporcionálisak "
+"legyenek függőleges írásnál."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:463
 #, kde-format
@@ -20425,8 +20446,8 @@ msgstr "Függőleges alternatívák forgatáshoz"
 msgctxt "@tooltip"
 msgid "Replaces a subset of glyphs with rotated variants for vertical layout."
 msgstr ""
-"A karaktereket egy részét elforgatott változatokra cserél a függőleges "
-"elrendezéshez."
+"A karakterkészlet-jelek egy részét elforgatott változatokra cserél a "
+"függőleges elrendezéshez."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:467
 #, kde-format
@@ -20441,8 +20462,8 @@ msgid ""
 "Replaces all horizontal-script glyphs with rotated variants for vertical "
 "layout."
 msgstr ""
-"Minden vízszintes írású karaktert elforgatott változatra cserél a függőleges "
-"elrendezéshez."
+"Minden vízszintes írású karakterjelet elforgatott változatra cserél a "
+"függőleges elrendezéshez."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:473
 #, kde-format
@@ -20454,7 +20475,9 @@ msgstr "Kurzív pozicionálás"
 #, kde-format
 msgctxt "@tooltip"
 msgid "Adjusts the position of glyphs so they cursively connect."
-msgstr "Úgy módosítja a karakterek helyzetét, hogy kurzívan kapcsolódjanak."
+msgstr ""
+"Úgy módosítja a karakterkészlet-jelek helyzetét, hogy kurzívan "
+"kapcsolódjanak."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:477
 #, kde-format
@@ -20468,7 +20491,8 @@ msgctxt "@tooltip"
 msgid ""
 "Replaces the final glyph in a sequence of glyphs in a joined script with its "
 "end form."
-msgstr "Egy összekapcsolt jelsorozat utolsó tagját a záróalakjára cseréli."
+msgstr ""
+"Egy összekapcsolt karakterjel-sorozat utolsó tagját a záróalakjára cseréli."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:481
 #, kde-format
@@ -20482,7 +20506,8 @@ msgctxt "@tooltip"
 msgid ""
 "Replaces the Alaph glyph at the end of Syriac words with its appropriate "
 "form."
-msgstr "A szír szavak végén lévő Alaph jelet a megfelelő alakjára cseréli."
+msgstr ""
+"A szír szavak végén lévő Alaph karakterjelet a megfelelő alakjára cseréli."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:485
 #, kde-format
@@ -20497,8 +20522,8 @@ msgid ""
 "Replaces the Alaph glyph at the end of Syriac words with its appropriate "
 "form, when neither Terminal forms or Terminal forms 2 are applicable."
 msgstr ""
-"A szír szavak végén lévő Alaph jelet a megfelelő alakjára cseréli, ha sem az "
-"1., sem a 2. záróalak nem alkalmazható."
+"A szír szavak végén lévő Alaph karakterjelet a megfelelő alakjára cseréli, "
+"ha sem az 1., sem a 2. záróalak nem alkalmazható."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:489
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:493
@@ -20513,7 +20538,8 @@ msgctxt "@tooltip"
 msgid ""
 "Replaces the first glyph in a sequence of glyphs in a joined script with its "
 "start form."
-msgstr "Egy összekapcsolt jelsorozat első tagját a kezdőalakjára cseréli."
+msgstr ""
+"Egy összekapcsolt karakterjel-sorozat első tagját a kezdőalakjára cseréli."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:494
 #, kde-format
@@ -20521,19 +20547,22 @@ msgctxt "@tooltip"
 msgid ""
 "Replaces a glyph in a sequence of glyphs in a joined script with its "
 "isolated form."
-msgstr "Egy összekapcsolt karakter sorozat tagját az izolált alakjára cseréli."
+msgstr ""
+"Egy összekapcsolt karakterjel-sorozat tagját az izolált alakjára cseréli."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:497
 #, kde-format
 msgctxt "@title"
 msgid "Left-to-right glyph alternates"
-msgstr "Balról jobbra írású karakter-változatok"
+msgstr "Balról jobbra írású karakterjel-változatok"
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:498
 #, kde-format
 msgctxt "@tooltip"
 msgid "Replaces glyphs with their left-to-right alternates."
-msgstr "A karaktereket a balról jobbra íráshoz tartozó változataikra cseréli."
+msgstr ""
+"A karakterkészlet-jeleket a balról jobbra íráshoz tartozó változataikra "
+"cseréli."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:501
 #, kde-format
@@ -20545,7 +20574,7 @@ msgstr "Balról jobbra tükrözött alakok"
 #, kde-format
 msgctxt "@tooltip"
 msgid "Replaces glyphs with their left-to-right mirrored forms."
-msgstr "A karaktereket a balról jobbra tükrözött alakjukra cseréli."
+msgstr "A karakterkészlet-jeleket a balról jobbra tükrözött alakjukra cseréli."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:505
 #, kde-format
@@ -20560,8 +20589,8 @@ msgid ""
 "Replaces glyphs in the middle of a sequence of glyphs in a joined script "
 "with their medial forms."
 msgstr ""
-"Egy összekapcsolt karakter sorozat közepén lévő jeleket a köztes alakjukra "
-"cseréli."
+"Egy összekapcsolt karakterjel-sorozat közepén lévő karakterkészlet-jeleket a "
+"köztes alakjukra cseréli."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:509
 #, kde-format
@@ -20576,7 +20605,7 @@ msgid ""
 "Replaces the Alaph glyph in the middle of Syriac words with its appropriate "
 "form."
 msgstr ""
-"A szír szavak közepén lévő Alaph karaktert a megfelelő alakjára cseréli."
+"A szír szavak közepén lévő Alaph karakterjelet a megfelelő alakjára cseréli."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:513
 #, kde-format
@@ -20604,7 +20633,9 @@ msgstr "Jobbról balra írású karakter-változatok"
 #, kde-format
 msgctxt "@tooltip"
 msgid "Replaces glyphs with their right-to-left alternates."
-msgstr "A karaktereket a jobbról balra íráshoz tartozó változataikra cseréli."
+msgstr ""
+"A karakterkészlet-jeleket a jobbról balra íráshoz tartozó változataikra "
+"cseréli."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:521
 #, kde-format
@@ -20616,7 +20647,7 @@ msgstr "Jobbról balra tükrözött alakok"
 #, kde-format
 msgctxt "@tooltip"
 msgid "Replaces glyphs with their right-to-left mirrored forms."
-msgstr "A karaktereket a jobbról balra tükrözött alakjukra cseréli."
+msgstr "A karakterkészlet-jeleket a jobbról balra tükrözött alakjukra cseréli."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:525
 #, kde-format
@@ -20628,7 +20659,7 @@ msgstr "Nyújtható karakterek szétbontása"
 #, kde-format
 msgctxt "@tooltip"
 msgid "Replaces glyphs that need to stretch with stretchable glyphs."
-msgstr "A nyújtandó karaktereket nyújtható jelekre cseréli."
+msgstr "A nyújtandó karakterkészlet-jeleket nyújtható karakterjelekre cseréli."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:536
 #, kde-format
@@ -20641,7 +20672,7 @@ msgstr "%1. stilisztikai készlet"
 #, kde-format
 msgctxt "@tooltip"
 msgid "Replaces glyphs with alternates."
-msgstr "A karaktereket alternatív változataikra cseréli."
+msgstr "A karakterkészlet-jeleket alternatív változataikra cseréli."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:550
 #, kde-format
@@ -28649,7 +28680,7 @@ msgid ""
 "You don't seem to have any\n"
 "recently opened documents"
 msgstr ""
-"A legutóbb megnyitott dokumentumok\n"
+"A legutóbb megnyitott művek\n"
 "listája jelenleg üres"
 
 #. i18n: ectx: property (text), widget (QLabel, newsTitleLabel)
@@ -29678,7 +29709,7 @@ msgstr "Preferált kimeneti formátum:"
 #: libs/ui/forms/wdgdisplaysettings.ui:326
 #, kde-format
 msgid "Canvas Decorations"
-msgstr "Rajzvászon díszítései"
+msgstr "Rajzvászon dekorációk"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox)
 #: libs/ui/forms/wdgdisplaysettings.ui:332
@@ -30941,7 +30972,7 @@ msgstr "A \"(beillesztett)\" hozzáfűzése a beillesztett rétegekhez"
 #: libs/ui/forms/wdggeneralsettings.ui:1608
 #, kde-format
 msgid "Prepend \"Copy of\" to duplicated layers"
-msgstr "\"Másolata\" előtag a duplikált rétegekhez"
+msgstr "\"Másolata\" előtag hozzáfűzése a duplikált rétegekhez"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkEnableLongPress)
 #: libs/ui/forms/wdggeneralsettings.ui:1618
@@ -34004,7 +34035,7 @@ msgstr "Táblagép-események naplózása kikapcsolva"
 #: libs/ui/input/kis_tool_invocation_action.cpp:38
 #, kde-format
 msgid "Tool Invocation"
-msgstr "Eszközmeghívás"
+msgstr "Eszközhívás"
 
 #: libs/ui/input/kis_tool_invocation_action.cpp:39
 #, kde-format
@@ -34012,8 +34043,8 @@ msgid ""
 "The <i>Tool Invocation</i> action invokes the current tool, for example, "
 "using the brush tool, it will start painting."
 msgstr ""
-"Az <i>Eszközmeghívás</i> művelet meghívja az aktuális eszközt, például az "
-"ecset eszköz használatakor elkezdi a festést."
+"Az <i>Eszközhívás</i> művelet meghívja az aktuális eszközt, például az ecset "
+"eszköz használatakor elkezdi a festést."
 
 #: libs/ui/input/kis_tool_invocation_action.cpp:43
 #, kde-format
@@ -46971,7 +47002,7 @@ msgid ""
 "like glyph shape, upper- and lowercase and line breaking"
 msgstr ""
 "A szövegalakzat nyelve. A nyelv számos tulajdonságot befolyásol, mint a "
-"karakterformát, a kis- és nagybetűket, valamint a sortörést"
+"karakterjel-formát, a kis- és nagybetűket, valamint a sortörést"
 
 #: plugins/dockers/textproperties/qml/Language.qml:20
 #, kde-format
@@ -47160,7 +47191,7 @@ msgstr "Keresés..."
 #, kde-format
 msgctxt "@label"
 msgid "Glyphs: Capitals"
-msgstr "Glifek: Nagybetűk"
+msgstr "Karakterjelek: Nagybetűk"
 
 #: plugins/dockers/textproperties/qml/OTCaps.qml:16
 #, kde-format
@@ -47217,7 +47248,7 @@ msgstr "Címfeliratos nagybetűk"
 #, kde-format
 msgctxt "@label"
 msgid "Glyphs: East-Asian"
-msgstr "Glifek: Kelet-ázsiai"
+msgstr "Karakterjelek: Kelet-ázsiai"
 
 #: plugins/dockers/textproperties/qml/OTEastAsian.qml:16
 #, kde-format
@@ -47308,7 +47339,7 @@ msgstr "Ruby"
 #, kde-format
 msgctxt "@label"
 msgid "Glyphs: Ligatures"
-msgstr "Glifek: Ligatúrák"
+msgstr "Karakterjelek: Ligatúrák"
 
 #: plugins/dockers/textproperties/qml/OTLigatures.qml:16
 #, kde-format
@@ -47358,7 +47389,7 @@ msgstr "Környezetfüggő"
 #, kde-format
 msgctxt "@label"
 msgid "Glyphs: Numeric"
-msgstr "Glifek: Számjegyek"
+msgstr "Karakterjelek: Számjegyek"
 
 #: plugins/dockers/textproperties/qml/OTNumeric.qml:16
 #, kde-format
@@ -47449,7 +47480,7 @@ msgstr "Áthúzott nulla"
 #, kde-format
 msgctxt "@label"
 msgid "Glyphs: Position"
-msgstr "Glifek: Pozíció"
+msgstr "Karakterjelek: Pozíció"
 
 #: plugins/dockers/textproperties/qml/OTPosition.qml:16
 #, kde-format
@@ -67553,7 +67584,7 @@ msgstr "Hasonló szín kijelölőeszköz"
 #, kde-format
 msgctxt "@title:tab"
 msgid "Glyph Alternates"
-msgstr "Helyettesítő karakterjelek"
+msgstr "Helyettesítő karakterkészlet-jelek"
 
 #: plugins/tools/svgtexttool/glyphpalette/GlyphPalette.qml:47
 #, kde-format
@@ -67577,7 +67608,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "No glyph alternates available."
-msgstr "Nem érhetők el helyettesítő karakterjelek."
+msgstr "Nem érhetők el helyettesítő karakterkészlet-jelek."
 
 #: plugins/tools/svgtexttool/glyphpalette/GlyphPaletteDialog.cpp:32
 #, kde-format
@@ -68317,7 +68348,7 @@ msgid ""
 "Unicode Variations of glyphs, as well as a Character Map."
 msgstr ""
 "A Karakterjel-paletta megnyitása, mely hozzáférést biztosít az alternatív "
-"OpenType vagy Unicode glifavariációkhoz, valamint a karaktertáblához."
+"OpenType vagy Unicode karakterkészlet-jelekhez, valamint a karaktertáblához."
 
 #: plugins/tools/svgtexttool/SvgTextToolOptions.qml:240
 #, kde-format
@@ -68618,7 +68649,7 @@ msgstr "Igazolványkép"
 #: plugins/tools/tool_crop/wdg_tool_crop.ui:475
 #, kde-format
 msgid "Decoration:"
-msgstr "Díszítés:"
+msgstr "Dekoráció:"
 
 #: plugins/tools/tool_dyna/kis_tool_dyna.cpp:38
 msgctxt "(qtundo-format)"

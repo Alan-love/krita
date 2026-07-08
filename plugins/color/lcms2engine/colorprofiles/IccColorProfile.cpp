@@ -378,37 +378,34 @@ bool IccColorProfile::isLinear() const
         return d->shared->lcmsProfile->isLinear();
     return false;
 }
-QVector <qreal> IccColorProfile::getColorantsXYZ() const
+QVector <KoColorimetryUtils::XYZ> IccColorProfile::getColorantsXYZ() const
 {
     if (d->shared->lcmsProfile) {
         return d->shared->lcmsProfile->getColorantsXYZ();
     }
-    return QVector<qreal>(9);
+    return QVector<KoColorimetryUtils::XYZ>();
 }
-QVector <qreal> IccColorProfile::getColorantsxyY() const
+QVector<KoColorimetryUtils::xyY> IccColorProfile::getColorantsxyY() const
 {
     if (d->shared->lcmsProfile) {
         return d->shared->lcmsProfile->getColorantsxyY();
     }
-    return QVector<qreal>(9);
+    return QVector<KoColorimetryUtils::xyY>();
 }
-QVector <qreal> IccColorProfile::getWhitePointXYZ() const
+KoColorimetryUtils::XYZ IccColorProfile::getWhitePointXYZ() const
 {
-    QVector <qreal> d50Dummy(3);
-    d50Dummy << 0.9642 << 1.0000 << 0.8249;
+    KoColorimetryUtils::XYZ d50Dummy {0.9642, 1.0000, 0.8249};
     if (d->shared->lcmsProfile) {
-        return d->shared->lcmsProfile->getWhitePointXYZ();
+    return d->shared->lcmsProfile->getWhitePointXYZ();
     }
     return d50Dummy;
 }
-QVector <qreal> IccColorProfile::getWhitePointxyY() const
+KoColorimetryUtils::xyY IccColorProfile::getWhitePointxyY() const
 {
-    QVector <qreal> d50Dummy(3);
-    d50Dummy << 0.34773 << 0.35952 << 1.0;
     if (d->shared->lcmsProfile) {
         return d->shared->lcmsProfile->getWhitePointxyY();
     }
-    return d50Dummy;
+    return KoColorimetryUtils::xyY{0.34773, 0.35952, 1.0};
 }
 QVector <qreal> IccColorProfile::getEstimatedTRC() const
 {

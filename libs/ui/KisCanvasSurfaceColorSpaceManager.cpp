@@ -121,10 +121,10 @@ QString KisCanvasSurfaceColorSpaceManager::colorManagementReport() const
 
         {
             auto colVec = profile->getColorantsxyY();
-            KIS_SAFE_ASSERT_RECOVER_RETURN_VALUE(colVec.size() == 9, report);
-            KisColorimetryUtils::xyY colR{colVec[0], colVec[1], colVec[2]};
-            KisColorimetryUtils::xyY colG{colVec[3], colVec[4], colVec[5]};
-            KisColorimetryUtils::xyY colB{colVec[6], colVec[7], colVec[8]};
+            KIS_SAFE_ASSERT_RECOVER_RETURN_VALUE(colVec.size() == 3, report);
+            KoColorimetryUtils::xyY colR = colVec[0];
+            KoColorimetryUtils::xyY colG = colVec[1];
+            KoColorimetryUtils::xyY colB = colVec[2];
 
             str << "    red:  " << colR << Qt::endl;
             str << "    green:" << colG << Qt::endl;
@@ -132,9 +132,7 @@ QString KisCanvasSurfaceColorSpaceManager::colorManagementReport() const
         }
 
         {
-            auto whiteVec = profile->getWhitePointxyY();
-            KIS_SAFE_ASSERT_RECOVER_RETURN_VALUE(whiteVec.size() == 3, report);
-            KisColorimetryUtils::xyY white{whiteVec[0], whiteVec[1], whiteVec[2]};
+            KoColorimetryUtils::xyY white = profile->getWhitePointxyY();
 
             str << "    white: " << white << Qt::endl;
             str << Qt::endl;

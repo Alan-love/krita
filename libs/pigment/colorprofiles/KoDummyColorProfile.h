@@ -29,10 +29,10 @@ public:
     bool hasColorants() const override;
     bool hasTRC() const override;
     bool isLinear() const override;
-    QVector <double> getColorantsXYZ() const override;
-    QVector <double> getColorantsxyY() const override;
-    QVector <double> getWhitePointXYZ() const override;
-    QVector <double> getWhitePointxyY() const override;
+    QVector <KoColorimetryUtils::XYZ> getColorantsXYZ() const override;
+    QVector <KoColorimetryUtils::xyY> getColorantsxyY() const override;
+    KoColorimetryUtils::XYZ getWhitePointXYZ() const override;
+    KoColorimetryUtils::xyY getWhitePointxyY() const override;
     QVector <double> getEstimatedTRC() const override;
     bool compareTRC(TransferCharacteristics characteristics, float error) const override;
     void linearizeFloatValue(QVector <double> & Value) const override;

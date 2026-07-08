@@ -115,34 +115,34 @@ SurfaceDescription WaylandSurfaceDescription::toSurfaceDescription() const
         } else if (this->namedContainer) {
             switch (*this->namedContainer) {
             case QtWayland::wp_color_manager_v1::primaries_srgb:
-                masteringInfo.primaries = KisColorimetryUtils::Colorimetry::BT709;
+                masteringInfo.primaries = KoColorimetryUtils::Colorimetry::BT709;
                 break;
             case QtWayland::wp_color_manager_v1::primaries_pal_m:
-                masteringInfo.primaries = KisColorimetryUtils::Colorimetry::PAL_M;
+                masteringInfo.primaries = KoColorimetryUtils::Colorimetry::PAL_M;
                 break;
             case QtWayland::wp_color_manager_v1::primaries_pal:
-                masteringInfo.primaries = KisColorimetryUtils::Colorimetry::PAL;
+                masteringInfo.primaries = KoColorimetryUtils::Colorimetry::PAL;
                 break;
             case QtWayland::wp_color_manager_v1::primaries_ntsc:
-                masteringInfo.primaries = KisColorimetryUtils::Colorimetry::NTSC;
+                masteringInfo.primaries = KoColorimetryUtils::Colorimetry::NTSC;
                 break;
             case QtWayland::wp_color_manager_v1::primaries_generic_film:
-                masteringInfo.primaries = KisColorimetryUtils::Colorimetry::GenericFilm;
+                masteringInfo.primaries = KoColorimetryUtils::Colorimetry::GenericFilm;
                 break;
             case QtWayland::wp_color_manager_v1::primaries_bt2020:
-                masteringInfo.primaries = KisColorimetryUtils::Colorimetry::BT2020;
+                masteringInfo.primaries = KoColorimetryUtils::Colorimetry::BT2020;
                 break;
             case QtWayland::wp_color_manager_v1::primaries_cie1931_xyz:
-                masteringInfo.primaries = KisColorimetryUtils::Colorimetry::CIEXYZ;
+                masteringInfo.primaries = KoColorimetryUtils::Colorimetry::CIEXYZ;
                 break;
             case QtWayland::wp_color_manager_v1::primaries_dci_p3:
-                masteringInfo.primaries = KisColorimetryUtils::Colorimetry::DCIP3;
+                masteringInfo.primaries = KoColorimetryUtils::Colorimetry::DCIP3;
                 break;
             case QtWayland::wp_color_manager_v1::primaries_display_p3:
-                masteringInfo.primaries = KisColorimetryUtils::Colorimetry::DisplayP3;
+                masteringInfo.primaries = KoColorimetryUtils::Colorimetry::DisplayP3;
                 break;
             case QtWayland::wp_color_manager_v1::primaries_adobe_rgb:
-                masteringInfo.primaries = KisColorimetryUtils::Colorimetry::AdobeRGB;
+                masteringInfo.primaries = KoColorimetryUtils::Colorimetry::AdobeRGB;
                 break;
             }
         }
@@ -174,7 +174,7 @@ WaylandSurfaceDescription WaylandSurfaceDescription::fromSurfaceDescription(cons
 {
     WaylandSurfaceDescription desc;
 
-    using namespace KisColorimetryUtils;
+    using namespace KoColorimetryUtils;
     using namespace KisSurfaceColorimetry;
 
     if (std::holds_alternative<NamedPrimaries>(rhs.colorSpace.primaries)) {

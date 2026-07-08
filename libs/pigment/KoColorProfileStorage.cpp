@@ -197,14 +197,14 @@ QList<const KoColorProfile *> KoColorProfileStorage::profilesFor(const QVector<d
         }
 
         if (!colorants.isEmpty() && colorantType == PRIMARIES_UNSPECIFIED) {
-            QVector<qreal> wp = profile->getWhitePointxyY();
+            KoColorimetryUtils::xyY wp = profile->getWhitePointxyY();
             if (profile->hasColorants() && colorants.size() == 8) {
-                QVector<qreal> col = profile->getColorantsxyY();
-                if (col.size() < 8 || wp.size() < 2) {
+                QVector<KoColorimetryUtils::xyY> col = profile->getColorantsxyY();
+                if (col.size() < 3) {
                     // too few colorants, skip.
                     continue;
                 }
-                QVector<double> compare = {wp[0], wp[1], col[0], col[1], col[3], col[4], col[6], col[7]};
+                QVector<double> compare = {wp.x, wp.y, col[0].x, col[0].y, col[1].x, col[1].y, col[2].x, col[2].y};
 
                 for (int i = 0; i < compare.size(); i++) {
                     colorantMatch = std::fabs(compare[i] - colorants[i]) < error;
@@ -213,11 +213,11 @@ QList<const KoColorProfile *> KoColorProfileStorage::profilesFor(const QVector<d
                     }
                 }
             } else {
-                if (wp.size() < 2 || colorants.size() < 2) {
+                if (colorants.size() < 2) {
                     // too few colorants, skip.
                     continue;
                 }
-                if (std::fabs(wp[0] - colorants[0]) < error && std::fabs(wp[1] - colorants[1]) < error) {
+                if (std::fabs(wp.x - colorants[0]) < error && std::fabs(wp.y - colorants[1]) < error) {
                     colorantMatch = true;
                 }
             }

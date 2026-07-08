@@ -143,7 +143,7 @@ bool KisWaylandSurfaceColorManager::isReady() const
 bool KisWaylandSurfaceColorManager::supportsSurfaceDescription(const KisSurfaceColorimetry::SurfaceDescription &desc)
 {
     using feature = QtWayland::wp_color_manager_v1::feature;
-    using namespace KisColorimetryUtils;
+    using namespace KoColorimetryUtils;
 
     if (!m_waylandManager->isFeatureSupported(feature::feature_parametric)) {
         qWarning() << "KisWaylandSurfaceColorManager: feature_parametric is not supported";

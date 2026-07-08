@@ -55,7 +55,7 @@ KoColorSpace::KoColorSpace(const QString &id, const QString &name, KoMixColorsOp
     d->transfoFromLABA16 = 0;
     d->gamutXYY = QPolygonF();
     d->TRCXYY = QPolygonF();
-    d->colorants = QVector <qreal> (0);
+    d->colorants = QVector <KoColorimetryUtils::xyY> (0);
     d->lumaCoefficients = QVector <qreal> (0);
     d->iccEngine = 0;
     d->deletability = NotOwnedByRegistry;
@@ -202,7 +202,7 @@ QPolygonF KoColorSpace::estimatedTRCXYY() const
         // This is fixed to 5 since the maximum number of channels are 5 for CMYKA
         QVector <float> channelValuesF(5);//for getting the coordinates.
 
-        d->colorants.resize(3*colorChannelCount());
+        d->colorants = QVector<KoColorimetryUtils::xyY>(colorChannelCount());
 
         const int segments = 10;
         for (quint32 i=0; i<colorChannelCount(); i++) {
@@ -219,9 +219,9 @@ QPolygonF KoColorSpace::estimatedTRCXYY() const
                     }
                     if (j==0) {
                         colorantY = channelValuesF[1];
-                        d->colorants[3*i]   = channelValuesF[0]/(channelValuesF[0]+channelValuesF[1]+channelValuesF[2]);
-                        d->colorants[3*i+1] = channelValuesF[1]/(channelValuesF[0]+channelValuesF[1]+channelValuesF[2]);
-                        d->colorants[3*i+2] = channelValuesF[1];
+                        d->colorants[i].x = channelValuesF[0]/(channelValuesF[0]+channelValuesF[1]+channelValuesF[2]);
+                        d->colorants[i].y = channelValuesF[1]/(channelValuesF[0]+channelValuesF[1]+channelValuesF[2]);
+                        d->colorants[i].Y = channelValuesF[1];
                     }
                     d->TRCXYY << QPointF(channelValuesF[1]/colorantY, ((1.0/segments)*(segments-j)));
                 }
@@ -238,9 +238,9 @@ QPolygonF KoColorSpace::estimatedTRCXYY() const
 
                     if (j==0) {
                         colorantY = channelValuesF[1];
-                        d->colorants[3*i]   = channelValuesF[0]/(channelValuesF[0]+channelValuesF[1]+channelValuesF[2]);
-                        d->colorants[3*i+1] = channelValuesF[1]/(channelValuesF[0]+channelValuesF[1]+channelValuesF[2]);
-                        d->colorants[3*i+2] = channelValuesF[1];
+                        d->colorants[i].x = channelValuesF[0]/(channelValuesF[0]+channelValuesF[1]+channelValuesF[2]);
+                        d->colorants[i].y = channelValuesF[1]/(channelValuesF[0]+channelValuesF[1]+channelValuesF[2]);
+                        d->colorants[i].Y = channelValuesF[1];
                     }
                     d->TRCXYY << QPointF(channelValuesF[1]/colorantY, ((1.0/segments)*(j)));
                 }
@@ -266,7 +266,6 @@ QVector <qreal> KoColorSpace::lumaCoefficients() const
         } else {
             if (d->colorants.size() <= 0) {
                 if (profile() && profile()->hasColorants()) {
-                    d->colorants.resize(3 * colorChannelCount());
                     d->colorants = profile()->getColorantsxyY();
                 }
                 else {
@@ -274,16 +273,16 @@ QVector <qreal> KoColorSpace::lumaCoefficients() const
                     Q_UNUSED(p);
                 }
             }
-            if (d->colorants[2]<0 || d->colorants[5]<0 || d->colorants[8]<0) {
+            if (d->colorants.size() < 3 || d->colorants[0].Y<0 || d->colorants[1].Y<0 || d->colorants[2].Y<0) {
                 d->lumaCoefficients[0]=0.2126;
                 d->lumaCoefficients[1]=0.7152;
                 d->lumaCoefficients[2]=0.0722;
             } else {
                 // luma coefficients need to add up to 1.0
-                qreal sum = d->colorants[2] + d->colorants[5] + d->colorants[8];
-                d->lumaCoefficients[0] = d->colorants[2] / sum;
-                d->lumaCoefficients[1] = d->colorants[5] / sum;
-                d->lumaCoefficients[2] = d->colorants[8] / sum;
+                qreal sum = d->colorants[0].Y + d->colorants[1].Y + d->colorants[2].Y;
+                d->lumaCoefficients[0] = d->colorants[0].Y / sum;
+                d->lumaCoefficients[1] = d->colorants[1].Y / sum;
+                d->lumaCoefficients[2] = d->colorants[2].Y / sum;
             }
         }
         return d->lumaCoefficients;

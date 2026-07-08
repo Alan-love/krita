@@ -13,9 +13,9 @@
 #include <boost/operators.hpp>
 #include <QDebug>
 
-#include <kritasurfacecolormanagementapi_export.h>
+#include <kritapigment_export.h>
 
-namespace KisColorimetryUtils
+namespace KoColorimetryUtils
 {
 
 // these functions were taken from KWin's colorimetry code
@@ -28,7 +28,7 @@ struct XYZ;
 /**
  * xyY, with Y unspecified
  */
-struct KRITASURFACECOLORMANAGEMENTAPI_EXPORT xy {
+struct KRITAPIGMENT_EXPORT xy {
     double x;
     double y;
 
@@ -37,7 +37,7 @@ struct KRITASURFACECOLORMANAGEMENTAPI_EXPORT xy {
     bool operator==(const xy &other) const;
 };
 
-struct KRITASURFACECOLORMANAGEMENTAPI_EXPORT xyY {
+struct KRITAPIGMENT_EXPORT xyY {
     double x;
     double y;
     double Y;
@@ -46,7 +46,7 @@ struct KRITASURFACECOLORMANAGEMENTAPI_EXPORT xyY {
     bool operator==(const xyY &other) const;
 };
 
-struct KRITASURFACECOLORMANAGEMENTAPI_EXPORT XYZ {
+struct KRITAPIGMENT_EXPORT XYZ {
     double X;
     double Y;
     double Z;
@@ -67,7 +67,7 @@ struct KRITASURFACECOLORMANAGEMENTAPI_EXPORT XYZ {
  * Red, green and blue define the chromaticities ("absolute colors") of the red, green and blue LEDs on a display in xy coordinates
  * White defines the the chromaticity of the reference white in xy coordinates
  */
-class KRITASURFACECOLORMANAGEMENTAPI_EXPORT Colorimetry
+class KRITAPIGMENT_EXPORT Colorimetry
 {
 public:
     static const Colorimetry BT709;
@@ -144,10 +144,10 @@ private:
     QMatrix4x4 m_fromXYZ;
 };
 
-KRITASURFACECOLORMANAGEMENTAPI_EXPORT QDebug operator<<(QDebug debug, const xy &value);
-KRITASURFACECOLORMANAGEMENTAPI_EXPORT QDebug operator<<(QDebug debug, const xyY &value);
-KRITASURFACECOLORMANAGEMENTAPI_EXPORT QDebug operator<<(QDebug debug, const XYZ &value);
-KRITASURFACECOLORMANAGEMENTAPI_EXPORT QDebug operator<<(QDebug debug, const Colorimetry &value);
+KRITAPIGMENT_EXPORT QDebug operator<<(QDebug debug, const xy &value);
+KRITAPIGMENT_EXPORT QDebug operator<<(QDebug debug, const xyY &value);
+KRITAPIGMENT_EXPORT QDebug operator<<(QDebug debug, const XYZ &value);
+KRITAPIGMENT_EXPORT QDebug operator<<(QDebug debug, const Colorimetry &value);
 
 } // namespace KisColorimetryUtils
 

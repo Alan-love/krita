@@ -39,7 +39,7 @@ private Q_SLOTS:
     void fillCmbDepths(const KoID& idd);
     void fillLstProfiles();
     void fillDescription();
-    QString nameWhitePoint(QVector <double> whitePoint);
+    QString nameWhitePoint(KoColorimetryUtils::xyY whitePoint);
     void colorSpaceChanged();
     void installProfile();
 private:

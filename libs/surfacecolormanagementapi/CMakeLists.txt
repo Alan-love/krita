@@ -1,5 +1,4 @@
 set(kritasurfacecolormanagementapi_LIB_SRCS
-    KisColorimetryUtils.cpp
     surfacecolormanagement/KisOutputColorInfoInterface.cpp
     surfacecolormanagement/KisSurfaceColorimetry.cpp
     surfacecolormanagement/KisSurfaceColorimetryIccUtils.cpp

@@ -7,12 +7,13 @@
 #define KISSURFACECOLORIMETRY_H
 
 #include <boost/operators.hpp>
-#include <KisColorimetryUtils.h>
+#include <KoColorimetryUtils.h>
+#include <kritasurfacecolormanagementapi_export.h>
 
 
 namespace KisSurfaceColorimetry
 {
-    using namespace KisColorimetryUtils;
+    using namespace KoColorimetryUtils;
 
     enum class NamedPrimaries {
         primaries_unknown = 0,

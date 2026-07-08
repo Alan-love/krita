@@ -13,8 +13,8 @@ namespace KisSurfaceColorimetry
 {
 
 struct WaylandPrimaries : boost::equality_comparable<WaylandPrimaries> {
-    using xy = KisColorimetryUtils::xy;
-    using Colorimetry = KisColorimetryUtils::Colorimetry;
+    using xy = KoColorimetryUtils::xy;
+    using Colorimetry = KoColorimetryUtils::Colorimetry;
 
     xy red;
     xy green;
@@ -45,11 +45,11 @@ struct WaylandPrimaries : boost::equality_comparable<WaylandPrimaries> {
 };
 
 
-inline KisColorimetryUtils::xy xyFromWaylandXy(int32_t x, int32_t y) {
+inline KoColorimetryUtils::xy xyFromWaylandXy(int32_t x, int32_t y) {
     return {x / 1'000'000.0, y / 1'000'000.0};
 }
 
-inline std::pair<int32_t, int32_t> waylandXyFromXy(KisColorimetryUtils::xy value) {
+inline std::pair<int32_t, int32_t> waylandXyFromXy(KoColorimetryUtils::xy value) {
     return {std::rint(value.x * 1'000'000.0), std::rint(value.y * 1'000'000.0)};
 }
 

@@ -424,72 +424,60 @@ bool LcmsColorProfileContainer::isLinear() const
 {
     return *d->isLinear;
 }
-QVector <double> LcmsColorProfileContainer::getColorantsXYZ() const
+
+KoColorimetryUtils::XYZ fromCieXYZ(const cmsCIEXYZ &xyz) {
+    return KoColorimetryUtils::XYZ{xyz.X, xyz.Y, xyz.Z};
+}
+
+KoColorimetryUtils::xyY fromCIExyY(const cmsCIExyY &xyY) {
+    return KoColorimetryUtils::xyY{xyY.x, xyY.y, xyY.Y};
+}
+
+QVector <KoColorimetryUtils::XYZ> LcmsColorProfileContainer::getColorantsXYZ() const
 {
-    QVector <double> colorants(9);
-    colorants[0] = d->colorants.Red.X;
-    colorants[1] = d->colorants.Red.Y;
-    colorants[2] = d->colorants.Red.Z;
-    colorants[3] = d->colorants.Green.X;
-    colorants[4] = d->colorants.Green.Y;
-    colorants[5] = d->colorants.Green.Z;
-    colorants[6] = d->colorants.Blue.X;
-    colorants[7] = d->colorants.Blue.Y;
-    colorants[8] = d->colorants.Blue.Z;
+    QVector <KoColorimetryUtils::XYZ> colorants(9);
+
+    colorants.append(fromCieXYZ(d->colorants.Red));
+    colorants.append(fromCieXYZ(d->colorants.Green));
+    colorants.append(fromCieXYZ(d->colorants.Blue));
     return colorants;
 }
 
-QVector <double> LcmsColorProfileContainer::getColorantsxyY() const
+QVector<KoColorimetryUtils::xyY> LcmsColorProfileContainer::getColorantsxyY() const
 {
     cmsCIEXYZ temp1;
     cmsCIExyY temp2;
-    QVector <double> colorants(9);
+    QVector<KoColorimetryUtils::xyY> colorants;
 
     temp1.X = d->colorants.Red.X;
     temp1.Y = d->colorants.Red.Y;
     temp1.Z = d->colorants.Red.Z;
     cmsXYZ2xyY(&temp2, &temp1);
-    colorants[0] = temp2.x;
-    colorants[1] = temp2.y;
-    colorants[2] = temp2.Y;
+    colorants.append(fromCIExyY(temp2));
 
     temp1.X = d->colorants.Green.X;
     temp1.Y = d->colorants.Green.Y;
     temp1.Z = d->colorants.Green.Z;
     cmsXYZ2xyY(&temp2, &temp1);
-    colorants[3] = temp2.x;
-    colorants[4] = temp2.y;
-    colorants[5] = temp2.Y;
+    colorants.append(fromCIExyY(temp2));
 
     temp1.X = d->colorants.Blue.X;
     temp1.Y = d->colorants.Blue.Y;
     temp1.Z = d->colorants.Blue.Z;
     cmsXYZ2xyY(&temp2, &temp1);
-    colorants[6] = temp2.x;
-    colorants[7] = temp2.y;
-    colorants[8] = temp2.Y;
+    colorants.append(fromCIExyY(temp2));
 
     return colorants;
 }
 
-QVector <double> LcmsColorProfileContainer::getWhitePointXYZ() const
+KoColorimetryUtils::XYZ LcmsColorProfileContainer::getWhitePointXYZ() const
 {
-    QVector <double> tempWhitePoint(3);
-
-    tempWhitePoint[0] = d->mediaWhitePoint.X;
-    tempWhitePoint[1] = d->mediaWhitePoint.Y;
-    tempWhitePoint[2] = d->mediaWhitePoint.Z;
-
-    return tempWhitePoint;
+    return fromCieXYZ(d->mediaWhitePoint);
 }
 
-QVector <double> LcmsColorProfileContainer::getWhitePointxyY() const
+KoColorimetryUtils::xyY LcmsColorProfileContainer::getWhitePointxyY() const
 {
-    QVector <double> tempWhitePoint(3);
-    tempWhitePoint[0] = d->whitePoint.x;
-    tempWhitePoint[1] = d->whitePoint.y;
-    tempWhitePoint[2] = d->whitePoint.Y;
-    return tempWhitePoint;
+    return fromCIExyY(d->whitePoint);
 }
 
 QVector <double> LcmsColorProfileContainer::getEstimatedTRC() const

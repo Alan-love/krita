@@ -147,8 +147,8 @@ public:
     QPixmap         cietongue;
     QPixmap         gamutMap;
  
-    QVector <double> Primaries {9};
-    QVector <double> whitePoint {3};
+    QVector <KoColorimetryUtils::xyY> Primaries;
+    KoColorimetryUtils::xyY whitePoint;
     QPolygonF       gamut;
     model colorModel {model::RGBA};
 };
@@ -156,10 +156,7 @@ public:
 KisCIETongueWidget::KisCIETongueWidget(QWidget *parent) :
     QWidget(parent), d(new Private)
 {
-    d->Primaries.resize(9);
-    d->Primaries.fill(0.0);
-    d->whitePoint.resize(3);
-    d->whitePoint<<0.34773<<0.35952<<1.0;
+    d->whitePoint = {0.34773, 0.35952, 1.0};
     d->gamut = QPolygonF();
 }
 
@@ -173,11 +170,11 @@ int KisCIETongueWidget::grids(double val) const
     return (int) floor(val * d->gridside + 0.5);
 }
 
-void KisCIETongueWidget::setProfileData(QVector <double> p, QVector <double> w, bool profileData)
+void KisCIETongueWidget::setProfileData(QVector <KoColorimetryUtils::xyY> p, KoColorimetryUtils::xyY w, bool profileData)
 {
     d->profileDataAvailable = profileData;
     if (profileData){
-        d->Primaries= p;
+        d->Primaries = p;
         
         d->whitePoint = w;
         d->needUpdatePixmap = true;      
@@ -189,9 +186,9 @@ void KisCIETongueWidget::setGamut(QPolygonF gamut)
 {
     d->gamut=gamut;
 }
-void KisCIETongueWidget::setRGBData(QVector <double> whitepoint, QVector <double> colorants)
+void KisCIETongueWidget::setRGBData(KoColorimetryUtils::xyY whitepoint, QVector <KoColorimetryUtils::xyY> colorants)
 {
-    if (colorants.size()==9){
+    if (colorants.size()==3){
         d->Primaries= colorants;
         
         d->whitePoint = whitepoint;
@@ -202,62 +199,42 @@ void KisCIETongueWidget::setRGBData(QVector <double> whitepoint, QVector <double
         return;
     }
 }
-void KisCIETongueWidget::setCMYKData(QVector <double> whitepoint)
+void KisCIETongueWidget::setCMYKData(KoColorimetryUtils::xyY whitepoint)
 {
-    if (whitepoint.size()==3){
-        //d->Primaries= colorants;
-        
-        d->whitePoint = whitepoint;
-        d->needUpdatePixmap = true;
-        d->colorModel = KisCIETongueWidget::CMYKA;
-        d->profileDataAvailable = true;
-    } else {
-        return;
-    }
+    //d->Primaries= colorants;
+
+    d->whitePoint = whitepoint;
+    d->needUpdatePixmap = true;
+    d->colorModel = KisCIETongueWidget::CMYKA;
+    d->profileDataAvailable = true;
 }
-void KisCIETongueWidget::setXYZData(QVector <double> whitepoint)
+void KisCIETongueWidget::setXYZData(KoColorimetryUtils::xyY whitepoint)
 {
-    if (whitepoint.size()==3){
-        d->whitePoint = whitepoint;
-        d->needUpdatePixmap = true;
-        d->colorModel = KisCIETongueWidget::XYZA;
-        d->profileDataAvailable = true;
-    } else {
-        return;
-    }
+    d->whitePoint = whitepoint;
+    d->needUpdatePixmap = true;
+    d->colorModel = KisCIETongueWidget::XYZA;
+    d->profileDataAvailable = true;
 }
-void KisCIETongueWidget::setGrayData(QVector <double> whitepoint)
+void KisCIETongueWidget::setGrayData(KoColorimetryUtils::xyY whitepoint)
 {
-    if (whitepoint.size()==3){
-        d->whitePoint = whitepoint;
-        d->needUpdatePixmap = true;
-        d->colorModel = KisCIETongueWidget::GRAYA;
-        d->profileDataAvailable = true;
-    } else {
-        return;
-    }
+    d->whitePoint = whitepoint;
+    d->needUpdatePixmap = true;
+    d->colorModel = KisCIETongueWidget::GRAYA;
+    d->profileDataAvailable = true;
 }
-void KisCIETongueWidget::setLABData(QVector <double> whitepoint)
+void KisCIETongueWidget::setLABData(KoColorimetryUtils::xyY whitepoint)
 {
-    if (whitepoint.size()==3){
-        d->whitePoint = whitepoint;
-        d->needUpdatePixmap = true;
-        d->colorModel = KisCIETongueWidget::LABA;
-        d->profileDataAvailable = true;
-    } else {
-        return;
-    }
+    d->whitePoint = whitepoint;
+    d->needUpdatePixmap = true;
+    d->colorModel = KisCIETongueWidget::LABA;
+    d->profileDataAvailable = true;
 }
-void KisCIETongueWidget::setYCbCrData(QVector <double> whitepoint)
+void KisCIETongueWidget::setYCbCrData(KoColorimetryUtils::xyY whitepoint)
 {
-    if (whitepoint.size()==3){
-        d->whitePoint = whitepoint;
-        d->needUpdatePixmap = true;
-        d->colorModel = KisCIETongueWidget::YCbCrA;
-        d->profileDataAvailable = true;
-    } else {
-        return;
-    }
+    d->whitePoint = whitepoint;
+    d->needUpdatePixmap = true;
+    d->colorModel = KisCIETongueWidget::YCbCrA;
+    d->profileDataAvailable = true;
 }
 
 void KisCIETongueWidget::setProfileDataAvailable(bool dataAvailable)
@@ -475,22 +452,26 @@ void KisCIETongueWidget::drawSmallEllipse(QPointF xy, int r, int g, int b, int s
     d->painter.drawEllipse(icx + d->xBias- sz2/2, icy-sz2/2, sz2, sz2);
     d->painter.restore();
 }
+
+QPointF xyYToQPointF(KoColorimetryUtils::xyY xy) {
+    return QPointF(xy.x, xy.y);
+}
  
 void KisCIETongueWidget::drawColorantTriangle()
 {
     d->painter.save();
     d->painter.setPen(qRgb(80, 80, 80));
     d->painter.setRenderHint(QPainter::Antialiasing);
-    if (d->colorModel ==KisCIETongueWidget::RGBA) {
-        drawSmallEllipse((QPointF(d->Primaries[0],d->Primaries[1])),   255, 128, 128, 6);
-        drawSmallEllipse((QPointF(d->Primaries[3],d->Primaries[4])), 128, 255, 128, 6);
-        drawSmallEllipse((QPointF(d->Primaries[6],d->Primaries[7])),  128, 128, 255, 6);
+    if (d->colorModel ==KisCIETongueWidget::RGBA && d->Primaries.size() == 3) {
+        drawSmallEllipse(xyYToQPointF(d->Primaries[0]),   255, 128, 128, 6);
+        drawSmallEllipse(xyYToQPointF(d->Primaries[1]), 128, 255, 128, 6);
+        drawSmallEllipse(xyYToQPointF(d->Primaries[2]),  128, 128, 255, 6);
         
         int x1, y1, x2, y2, x3, y3;
  
-        mapPoint(x1, y1, (QPointF(d->Primaries[0],d->Primaries[1])) );
-        mapPoint(x2, y2, (QPointF(d->Primaries[3],d->Primaries[4])) );
-        mapPoint(x3, y3, (QPointF(d->Primaries[6],d->Primaries[7])) );
+        mapPoint(x1, y1, xyYToQPointF(d->Primaries[0]));
+        mapPoint(x2, y2, xyYToQPointF(d->Primaries[1]));
+        mapPoint(x3, y3, xyYToQPointF(d->Primaries[2]));
         
         biasedLine(x1, y1, x2, y2);
         biasedLine(x2, y2, x3, y3);
@@ -511,7 +492,7 @@ void KisCIETongueWidget::drawColorantTriangle()
  
 void KisCIETongueWidget::drawWhitePoint()
 {
-    drawSmallEllipse(QPointF (d->whitePoint[0],d->whitePoint[1]),  255, 255, 255, 8);
+    drawSmallEllipse(xyYToQPointF(d->whitePoint),  255, 255, 255, 8);
 }
 
 void KisCIETongueWidget::drawGamut()
@@ -531,13 +512,13 @@ void KisCIETongueWidget::drawGamut()
     if (d->colorModel == KisCIETongueWidget::RGBA) {
         gamutPaint.save();
         gamutPaint.setOpacity(0.5);
-        mapPoint(x, y, (QPointF(d->Primaries[0],d->Primaries[1])) );
+        mapPoint(x, y, xyYToQPointF(d->Primaries[0]) );
         path.moveTo(QPointF(x + d->xBias,y));
-        mapPoint(x, y, (QPointF(d->Primaries[3],d->Primaries[4])) );
+        mapPoint(x, y, xyYToQPointF(d->Primaries[1]) );
         path.lineTo(QPointF(x + d->xBias,y));
-        mapPoint(x, y, (QPointF(d->Primaries[6],d->Primaries[7])) );
+        mapPoint(x, y, xyYToQPointF(d->Primaries[2]) );
         path.lineTo(QPointF(x + d->xBias,y));
-        mapPoint(x, y, (QPointF(d->Primaries[0],d->Primaries[1])) );
+        mapPoint(x, y, xyYToQPointF(d->Primaries[0]) );
         path.lineTo(QPointF(x + d->xBias,y));
         gamutPaint.drawPath(path);
         gamutPaint.restore();
@@ -606,12 +587,12 @@ void KisCIETongueWidget::updatePixmap()
 
     d->painter.begin(&d->pixmap);
     //draw whitepoint and  colorants
-    if (d->whitePoint[2] > 0.0)
+    if (d->whitePoint.Y > 0.0)
     {
         drawWhitePoint();
     }
 
-    if (d->Primaries[2] != 0.0)
+    if (!d->Primaries.isEmpty())
     {
         drawColorantTriangle();
     }

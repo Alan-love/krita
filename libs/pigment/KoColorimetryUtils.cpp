@@ -5,11 +5,11 @@
  *  SPDX-License-Identifier: GPL-2.0-or-later
  */
 
-#include "KisColorimetryUtils.h"
+#include "KoColorimetryUtils.h"
 
 #include <QDebug>
 
-namespace KisColorimetryUtils
+namespace KoColorimetryUtils
 {
 
 QMatrix4x4 matrixFromColumns(const QVector3D &first, const QVector3D &second, const QVector3D &third)

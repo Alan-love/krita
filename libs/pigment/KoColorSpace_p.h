@@ -8,6 +8,7 @@
 #ifndef _KOCOLORSPACE_P_H_
 #define _KOCOLORSPACE_P_H_
 
+#include "KoColorimetryUtils.h"
 #include "KoColorSpace.h"
 #include "KoColorSpaceEngine.h"
 #include "KoColorConversionTransformation.h"
@@ -57,7 +58,7 @@ struct Q_DECL_HIDDEN KoColorSpace::Private {
     
     QPolygonF gamutXYY;
     QPolygonF TRCXYY;
-    QVector <qreal> colorants;
+    QVector <KoColorimetryUtils::xyY> colorants;
     QVector <qreal> lumaCoefficients;
 
     KoColorSpaceEngine *iccEngine;

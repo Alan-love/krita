@@ -33,6 +33,7 @@ set(kritapigment_SRCS
     KoColorSpaceEngine.cpp
     KoColorSpaceFactory.cpp
     KoColorSpaceMaths.cpp
+    KoColorimetryUtils.cpp
     KoCmykColorSpaceMaths.cpp
     KoLabColorSpaceMaths.cpp
     KoColorSpaceRegistry.cpp

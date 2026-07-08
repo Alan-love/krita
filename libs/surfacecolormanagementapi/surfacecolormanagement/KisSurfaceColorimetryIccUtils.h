@@ -11,7 +11,7 @@
 
 namespace KisSurfaceColorimetry
 {
-    using namespace KisColorimetryUtils;
+    using namespace KoColorimetryUtils;
 
     KRITASURFACECOLORMANAGEMENTAPI_EXPORT
     ColorPrimaries namedPrimariesToPigmentPrimaries(NamedPrimaries primaries);

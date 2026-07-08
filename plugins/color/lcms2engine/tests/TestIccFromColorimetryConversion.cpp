@@ -118,7 +118,7 @@ void TestIccFromColorimetryConversion::testRequestConstruction()
 
 void TestIccFromColorimetryConversion::testRequestConstructionCustomPrimaries()
 {
-    using KisColorimetryUtils::Colorimetry;
+    using KoColorimetryUtils::Colorimetry;
     using KisSurfaceColorimetry::ColorSpace;
     using KisSurfaceColorimetry::NamedTransferFunction;
 
@@ -177,7 +177,7 @@ void TestIccFromColorimetryConversion::testRequestConstructionCustomGamma()
     QFETCH(bool, isValid);
     QFETCH(TransferCharacteristics, expectedTransferFunction);
 
-    using KisColorimetryUtils::Colorimetry;
+    using KoColorimetryUtils::Colorimetry;
     using KisSurfaceColorimetry::ColorSpace;
     using KisSurfaceColorimetry::NamedTransferFunction;
     using KisSurfaceColorimetry::NamedPrimaries;
@@ -227,7 +227,7 @@ void TestIccFromColorimetryConversion::testProfileConstruction()
 
 void TestIccFromColorimetryConversion::testProfileConstructionCustomPrimaries()
 {
-    using KisColorimetryUtils::Colorimetry;
+    using KoColorimetryUtils::Colorimetry;
     using KisSurfaceColorimetry::ColorSpace;
     using KisSurfaceColorimetry::NamedTransferFunction;
 

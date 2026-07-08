@@ -83,10 +83,10 @@ public:
     bool hasColorants() const override;
     virtual bool hasTRC() const;
     bool isLinear() const;
-    QVector <double> getColorantsXYZ() const override;
-    QVector <double> getColorantsxyY() const override;
-    QVector <double> getWhitePointXYZ() const override;
-    QVector <double> getWhitePointxyY() const override;
+    QVector<KoColorimetryUtils::XYZ> getColorantsXYZ() const override;
+    QVector <KoColorimetryUtils::xyY> getColorantsxyY() const override;
+    KoColorimetryUtils::XYZ getWhitePointXYZ() const override;
+    KoColorimetryUtils::xyY getWhitePointxyY() const override;
     QVector <double> getEstimatedTRC() const override;
     virtual void LinearizeFloatValue(QVector <double> & Value) const;
     virtual void DelinearizeFloatValue(QVector <double> & Value) const;

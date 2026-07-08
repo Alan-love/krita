@@ -14,6 +14,7 @@
 
 #include "KoColorProfileConstants.h"
 #include "kritapigment_export.h"
+#include <KoColorimetryUtils.h>
 
 /**
  * Contains information needed for color transformation.
@@ -134,21 +135,21 @@ public:
      */
     virtual bool hasColorants() const = 0;
     /**
-     * @return a qvector <double>(9) with the RGB colorants in XYZ
+     * @return a qvector <KoColorimetryUtils::XYZ> with the RGB colorants in XYZ
      */
-    virtual QVector <qreal> getColorantsXYZ() const = 0;
+    virtual QVector <KoColorimetryUtils::XYZ> getColorantsXYZ() const = 0;
     /**
-     * @return a qvector <double>(9) with the RGB colorants in xyY
+     * @return a qvector <KoColorimetryUtils::xyY> with the colorants in xyY
      */
-    virtual QVector <qreal> getColorantsxyY() const = 0;
+    virtual QVector <KoColorimetryUtils::xyY> getColorantsxyY() const = 0;
     /**
-     * @return a qvector <double>(3) with the whitepoint in XYZ
+     * @return a KoColorimetryUtils::XYZ with the whitepoint in XYZ
      */
-    virtual QVector <qreal> getWhitePointXYZ() const = 0;
+    virtual KoColorimetryUtils::XYZ getWhitePointXYZ() const = 0;
     /**
-     * @return a qvector <double>(3) with the whitepoint in xyY
+     * @return a KoColorimetryUtils::xyY with the whitepoint in xyY
      */
-    virtual QVector <qreal> getWhitePointxyY() const = 0;
+    virtual KoColorimetryUtils::xyY getWhitePointxyY() const = 0;
     
     /**
      * @return estimated gamma for RGB and Grayscale profiles

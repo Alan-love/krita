@@ -14,7 +14,8 @@
 #define KIS_CIETONGUEWIDGET_H
  
 // Qt includes
- 
+
+#include "KoColorimetryUtils.h"
 #include <QWidget>
 #include <QColor>
 #include <QPaintEvent>
@@ -25,7 +26,7 @@
 #include <KoColorSpace.h>
   
 #include <kritaui_export.h>
- 
+
 class KRITAUI_EXPORT KisCIETongueWidget : public QWidget
 {
     Q_OBJECT
@@ -36,14 +37,14 @@ public:
     ~KisCIETongueWidget() override;
  
     //this expects a qvector <double> (9), qvector <double> (3) and whether or not there's profile data?;
-    void setProfileData(QVector <double> p, QVector <double> w, bool profileData = false);
+    void setProfileData(QVector<KoColorimetryUtils::xyY> p, KoColorimetryUtils::xyY w, bool profileData = false);
     void setGamut(QPolygonF gamut);
-    void setRGBData(QVector <double> whitepoint, QVector <double> colorants);
-    void setCMYKData(QVector <double> whitepoint);
-    void setXYZData(QVector <double> whitepoint);
-    void setGrayData(QVector <double> whitepoint);
-    void setLABData(QVector <double> whitepoint);
-    void setYCbCrData(QVector <double> whitepoint);
+    void setRGBData(KoColorimetryUtils::xyY whitepoint, QVector<KoColorimetryUtils::xyY> colorants);
+    void setCMYKData(KoColorimetryUtils::xyY whitepoint);
+    void setXYZData(KoColorimetryUtils::xyY whitepoint);
+    void setGrayData(KoColorimetryUtils::xyY whitepoint);
+    void setLABData(KoColorimetryUtils::xyY whitepoint);
+    void setYCbCrData(KoColorimetryUtils::xyY whitepoint);
     void setProfileDataAvailable(bool dataAvailable);
  
     void loadingStarted();

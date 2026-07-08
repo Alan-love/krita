@@ -81,18 +81,18 @@ ColorPrimaries KoColorProfile::getColorPrimaries() const
 {
     if (d->primaries == -1) {
         ColorPrimaries primaries = PRIMARIES_UNSPECIFIED;
-        QVector<qreal> wp = getWhitePointxyY();
+        KoColorimetryUtils::xyY wp = getWhitePointxyY();
 
         bool match = false;
         if (hasColorants()) {
-            QVector<qreal> col = getColorantsxyY();
+            QVector<KoColorimetryUtils::xyY> col = getColorantsxyY();
             if (col.size()<8) {
                 KIS_SAFE_ASSERT_RECOVER_RETURN_VALUE(col.size() < 8, PRIMARIES_UNSPECIFIED);
                 //too few colorants.
                 d->primaries = int(primaries);
                 return (primaries);
             }
-            QVector<double> colorants = {wp[0], wp[1], col[0], col[1], col[3], col[4], col[6], col[7]};
+            QVector<double> colorants = {wp.x, wp.y, col[0].x, col[0].y, col[1].x, col[1].y, col[2].x, col[2].y};
             QVector<double> compare;
 
             QVector<ColorPrimaries> primariesList = {PRIMARIES_ITU_R_BT_709_5, PRIMARIES_ITU_R_BT_601_6, PRIMARIES_ITU_R_BT_470_6_SYSTEM_M,

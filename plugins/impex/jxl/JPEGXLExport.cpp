@@ -406,22 +406,22 @@ KisImportExportErrorCode JPEGXLExport::convert(KisDocument *document, QIODevice 
                     break;
                 default:
                     warnFile << "Writing possibly non-roundtrip primaries!";
-                    const QVector<qreal> colorants = cs->profile()->getColorantsxyY();
+                    const QVector<KoColorimetryUtils::xyY> colorants = cs->profile()->getColorantsxyY();
                     cicpDescription.primaries = JXL_PRIMARIES_CUSTOM;
-                    cicpDescription.primaries_red_xy[0] = colorants[0];
-                    cicpDescription.primaries_red_xy[1] = colorants[1];
-                    cicpDescription.primaries_green_xy[0] = colorants[3];
-                    cicpDescription.primaries_green_xy[1] = colorants[4];
-                    cicpDescription.primaries_blue_xy[0] = colorants[6];
-                    cicpDescription.primaries_blue_xy[1] = colorants[7];
+                    cicpDescription.primaries_red_xy[0] = colorants[0].x;
+                    cicpDescription.primaries_red_xy[1] = colorants[0].y;
+                    cicpDescription.primaries_green_xy[0] = colorants[1].x;
+                    cicpDescription.primaries_green_xy[1] = colorants[1].y;
+                    cicpDescription.primaries_blue_xy[0] = colorants[2].x;
+                    cicpDescription.primaries_blue_xy[1] = colorants[2].y;
                     break;
                 }
 
                 // Unfortunately, Wolthera never wrote an enum for white points...
-                const QVector<qreal> whitePoint = image->colorSpace()->profile()->getWhitePointxyY();
+                const KoColorimetryUtils::xyY whitePoint = image->colorSpace()->profile()->getWhitePointxyY();
                 cicpDescription.white_point = JXL_WHITE_POINT_CUSTOM;
-                cicpDescription.white_point_xy[0] = whitePoint[0];
-                cicpDescription.white_point_xy[1] = whitePoint[1];
+                cicpDescription.white_point_xy[0] = whitePoint.x;
+                cicpDescription.white_point_xy[1] = whitePoint.y;
             }
 
             if (JXL_ENC_SUCCESS != JxlEncoderSetColorEncoding(enc.get(), &cicpDescription)) {

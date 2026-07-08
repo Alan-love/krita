@@ -93,8 +93,9 @@
 #ifdef Q_OS_LINUX
 #if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
 #include <surfacecolormanagement/KisSurfaceColorimetry.h>
-#include <KisColorimetryUtils.h>
+
 #endif
+#include <KoColorimetryUtils.h>
 #endif
 
 #include "slider_and_spin_box_sync.h"
@@ -1646,8 +1647,8 @@ void ColorSettingsTab::updatePreferredSpaceGraphic()
     if (!m_preferredSpaceGraphic) return;
     if (!KisPlatformPluginInterfaceFactory::instance()->surfaceColorManagedByOS()) return;
     KisMainWindow *mainWindow = KisPart::instance()->currentMainwindow();
-    QVector<double> colorants;
-    QVector <double> whitePoint;
+    QVector<KoColorimetryUtils::xyY> colorants;
+    KoColorimetryUtils::xyY whitePoint;
 
 #ifdef Q_OS_LINUX
 #if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
@@ -1657,34 +1658,30 @@ void ColorSettingsTab::updatePreferredSpaceGraphic()
         if (currentDescription) {
             if (std::holds_alternative<KisSurfaceColorimetry::Colorimetry>(currentDescription->colorSpace.primaries)) {
                 auto col = std::get<KisSurfaceColorimetry::Colorimetry>(currentDescription->colorSpace.primaries);
-                colorants << col.red().toxy().x << col.red().toxy().y << col.red().toxyY().Y
-                          << col.green().toxy().x << col.green().toxy().y << col.green().toxyY().Y
-                          << col.blue().toxy().x << col.blue().toxy().y << col.blue().toxyY().Y;
-                whitePoint << col.white().toxy().x << col.white().toxy().y << col.white().toxyY().Y;
+                colorants << col.red().toxyY() << col.green().toxyY() << col.blue().toxyY();
+                whitePoint = col.white().toxyY();
                 m_preferredSpaceGraphic->setRGBData(whitePoint, colorants);
             } else {
                 bool enable = true;
                 auto named = std::get<KisSurfaceColorimetry::NamedPrimaries>(currentDescription->colorSpace.primaries);
-                KisSurfaceColorimetry::Colorimetry col = KisColorimetryUtils::Colorimetry::BT709;
+                KisSurfaceColorimetry::Colorimetry col = KoColorimetryUtils::Colorimetry::BT709;
                 if (named == KisSurfaceColorimetry::NamedPrimaries::primaries_srgb) {
-                    col = KisColorimetryUtils::Colorimetry::BT709;
+                    col = KoColorimetryUtils::Colorimetry::BT709;
                 } else if (named == KisSurfaceColorimetry::NamedPrimaries::primaries_adobe_rgb) {
-                    col = KisColorimetryUtils::Colorimetry::AdobeRGB;
+                    col = KoColorimetryUtils::Colorimetry::AdobeRGB;
                 } else if (named == KisSurfaceColorimetry::NamedPrimaries::primaries_bt2020) {
-                    col = KisColorimetryUtils::Colorimetry::BT2020;
+                    col = KoColorimetryUtils::Colorimetry::BT2020;
                 } else if (named == KisSurfaceColorimetry::NamedPrimaries::primaries_dci_p3) {
-                    col = KisColorimetryUtils::Colorimetry::DCIP3;
+                    col = KoColorimetryUtils::Colorimetry::DCIP3;
                 } else if (named == KisSurfaceColorimetry::NamedPrimaries::primaries_display_p3) {
-                    col = KisColorimetryUtils::Colorimetry::DisplayP3;
+                    col = KoColorimetryUtils::Colorimetry::DisplayP3;
                 } else {
                     enable = false;
                 }
 
                 if (enable) {
-                    colorants << col.red().toxy().x << col.red().toxy().y << col.red().toxyY().Y
-                              << col.green().toxy().x << col.green().toxy().y << col.green().toxyY().Y
-                              << col.blue().toxy().x << col.blue().toxy().y << col.blue().toxyY().Y;
-                    whitePoint << col.white().toxy().x << col.white().toxy().y << col.white().toxyY().Y;
+                    colorants << col.red().toxyY() << col.green().toxyY() << col.blue().toxyY();
+                    whitePoint = col.white().toxyY();
                     m_preferredSpaceGraphic->setRGBData(whitePoint, colorants);
                 } else {
                     m_preferredSpaceGraphic->setProfileDataAvailable(false);
@@ -1697,10 +1694,8 @@ void ColorSettingsTab::updatePreferredSpaceGraphic()
     } else if(m_preferredSpaceGraphicMode.checkedId() == MasteringSpace) {
         if (currentDescription && currentDescription->masteringInfo) {
             auto col = currentDescription->masteringInfo->primaries;
-            colorants << col.red().toxy().x << col.red().toxy().y << col.red().toxyY().Y
-                      << col.green().toxy().x << col.green().toxy().y << col.green().toxyY().Y
-                      << col.blue().toxy().x << col.blue().toxy().y << col.blue().toxyY().Y;
-            whitePoint << col.white().toxy().x << col.white().toxy().y << col.white().toxyY().Y;
+            colorants << col.red().toxyY() << col.green().toxyY() << col.blue().toxyY();
+            whitePoint = col.white().toxyY();
 
             m_preferredSpaceGraphic->setRGBData(whitePoint, colorants);
         } else {

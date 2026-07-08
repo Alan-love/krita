@@ -163,19 +163,19 @@ void KisAdvancedColorSpaceSelector::fillDescription()
     if (!profileList.isEmpty()) {
         profileName = currentColorSpace()->profile()->name();
         if (currentColorSpace()->profile()->hasColorants()){
-            QVector <double> colorants = currentColorSpace()->profile()->getColorantsxyY();
-            QVector <double> whitepoint = currentColorSpace()->profile()->getWhitePointxyY();
+            QVector <KoColorimetryUtils::xyY> colorants = currentColorSpace()->profile()->getColorantsxyY();
+            KoColorimetryUtils::xyY whitepoint = currentColorSpace()->profile()->getWhitePointxyY();
             //QString text = currentColorSpace()->profile()->info() + " =" +
             d->colorSpaceSelector->lblXYZ_W->setText(nameWhitePoint(whitepoint));
-            d->colorSpaceSelector->lblXYZ_W->setToolTip(QString::number(whitepoint[0], 'f', 4) + ", " + QString::number(whitepoint[1], 'f', 4) + ", " + QString::number(whitepoint[2], 'f', 4));
+            d->colorSpaceSelector->lblXYZ_W->setToolTip(QString::number(whitepoint.x, 'f', 4) + ", " + QString::number(whitepoint.y, 'f', 4) + ", " + QString::number(whitepoint.Y, 'f', 4));
             d->colorSpaceSelector->TongueWidget->setToolTip("<html><head/><body><table><tr><th colspan='4'>"+i18nc("@info:tooltip","This profile has the following xyY colorants:")+"</th></tr><tr><td>"+
-               i18n("Red:")  +"</td><td>"+QString::number(colorants[0], 'f', 4) + "</td><td>" + QString::number(colorants[1], 'f', 4) + "</td><td>" + QString::number(colorants[2], 'f', 4)+"</td></tr><tr><td>"+
-               i18n("Green:")+"</td><td>"+QString::number(colorants[3], 'f', 4) + "</td><td>" + QString::number(colorants[4], 'f', 4) + "</td><td>" + QString::number(colorants[5], 'f', 4)+"</th></tr><tr><td>"+
-               i18n("Blue:") +"</td><td>"+QString::number(colorants[6], 'f', 4) + "</td><td>" + QString::number(colorants[7], 'f', 4) + "</td><td>" + QString::number(colorants[8], 'f', 4)+"</th></tr></table></body></html>");
+               i18n("Red:")  +"</td><td>"+QString::number(colorants[0].x, 'f', 4) + "</td><td>" + QString::number(colorants[0].y, 'f', 4) + "</td><td>" + QString::number(colorants[0].Y, 'f', 4)+"</td></tr><tr><td>"+
+               i18n("Green:")+"</td><td>"+QString::number(colorants[1].x, 'f', 4) + "</td><td>" + QString::number(colorants[1].y, 'f', 4) + "</td><td>" + QString::number(colorants[1].Y, 'f', 4)+"</th></tr><tr><td>"+
+               i18n("Blue:") +"</td><td>"+QString::number(colorants[2].x, 'f', 4) + "</td><td>" + QString::number(colorants[2].y, 'f', 4) + "</td><td>" + QString::number(colorants[2].Y, 'f', 4)+"</th></tr></table></body></html>");
         } else {
-            QVector <double> whitepoint2 = currentColorSpace()->profile()->getWhitePointxyY();
+            KoColorimetryUtils::xyY whitepoint2 = currentColorSpace()->profile()->getWhitePointxyY();
             d->colorSpaceSelector->lblXYZ_W->setText(nameWhitePoint(whitepoint2));
-            d->colorSpaceSelector->lblXYZ_W->setToolTip(QString::number(whitepoint2[0], 'f', 4) + ", " + QString::number(whitepoint2[1], 'f', 4) + ", " + QString::number(whitepoint2[2], 'f', 4));
+            d->colorSpaceSelector->lblXYZ_W->setToolTip(QString::number(whitepoint2.x, 'f', 4) + ", " + QString::number(whitepoint2.y, 'f', 4) + ", " + QString::number(whitepoint2.Y, 'f', 4));
             d->colorSpaceSelector->TongueWidget->setToolTip(notApplicableTooltip);
         }
     } else {
@@ -196,14 +196,9 @@ void KisAdvancedColorSpaceSelector::fillDescription()
         d->colorSpaceSelector->TRCwidget->setProfileDataAvailable(false);
     }
     else if (currentModelStr == "RGBA") {
-        QVector <qreal> colorants = currentColorSpace()->profile()->getColorantsxyY();
-        QVector <qreal> whitepoint = currentColorSpace()->profile()->getWhitePointxyY();
-        if (currentColorSpace()->profile()->hasColorants()){
-            d->colorSpaceSelector->TongueWidget->setRGBData(whitepoint, colorants);
-        } else {
-            colorants.fill(0.0);
-            d->colorSpaceSelector->TongueWidget->setRGBData(whitepoint, colorants);
-        }
+        QVector <KoColorimetryUtils::xyY> colorants = currentColorSpace()->profile()->getColorantsxyY();
+        KoColorimetryUtils::xyY whitepoint = currentColorSpace()->profile()->getWhitePointxyY();
+        d->colorSpaceSelector->TongueWidget->setRGBData(whitepoint, colorants);
         d->colorSpaceSelector->TongueWidget->setGamut(currentColorSpace()->gamutXYY());
         TransferCharacteristics detCharacteristics = currentColorSpace()->profile()->getTransferCharacteristics();
         QString detCharacteristicsStr =
@@ -249,7 +244,7 @@ void KisAdvancedColorSpaceSelector::fillDescription()
         }
     }
     else if (currentModelStr == "GRAYA") {
-        QVector <qreal> whitepoint = currentColorSpace()->profile()->getWhitePointxyY();
+        KoColorimetryUtils::xyY whitepoint = currentColorSpace()->profile()->getWhitePointxyY();
         d->colorSpaceSelector->TongueWidget->setGrayData(whitepoint);
         d->colorSpaceSelector->TongueWidget->setGamut(currentColorSpace()->gamutXYY());
         TransferCharacteristics detCharacteristics = currentColorSpace()->profile()->getTransferCharacteristics();
@@ -281,7 +276,7 @@ void KisAdvancedColorSpaceSelector::fillDescription()
         }
     }
     else if (currentModelStr == "CMYKA") {
-        QVector <qreal> whitepoint = currentColorSpace()->profile()->getWhitePointxyY();
+        KoColorimetryUtils::xyY whitepoint = currentColorSpace()->profile()->getWhitePointxyY();
         d->colorSpaceSelector->TongueWidget->setCMYKData(whitepoint);
         d->colorSpaceSelector->TongueWidget->setGamut(currentColorSpace()->gamutXYY());
         QString estimatedCurve = " Estimated curve: ";
@@ -329,7 +324,7 @@ void KisAdvancedColorSpaceSelector::fillDescription()
         } else {
             d->colorSpaceSelector->TRCwidget->setProfileDataAvailable(false);
         }
-        QVector <qreal> whitepoint = currentColorSpace()->profile()->getWhitePointxyY();
+        KoColorimetryUtils::xyY whitepoint = currentColorSpace()->profile()->getWhitePointxyY();
         d->colorSpaceSelector->TongueWidget->setXYZData(whitepoint);
         d->colorSpaceSelector->TongueWidget->setGamut(currentColorSpace()->gamutXYY());
         d->colorSpaceSelector->TRCwidget->setToolTip("<html><head/><body>"+estimatedGamma + QString::number(estimatedTRC[0])+"< br />"+estimatedCurve+"</body></html>");
@@ -351,13 +346,13 @@ void KisAdvancedColorSpaceSelector::fillDescription()
         } else {
             d->colorSpaceSelector->TRCwidget->setProfileDataAvailable(false);
         }
-        QVector <qreal> whitepoint = currentColorSpace()->profile()->getWhitePointxyY();
+        KoColorimetryUtils::xyY whitepoint = currentColorSpace()->profile()->getWhitePointxyY();
         d->colorSpaceSelector->TongueWidget->setLABData(whitepoint);
         d->colorSpaceSelector->TongueWidget->setGamut(currentColorSpace()->gamutXYY());
         d->colorSpaceSelector->TRCwidget->setToolTip("<html><head/><body>"+i18nc("@info:tooltip","This is assumed to be the L * TRC. ")+"<br />"+estimatedCurve+"</body></html>");
     }
     else if (currentModelStr == "YCbCrA") {
-        QVector <qreal> whitepoint = currentColorSpace()->profile()->getWhitePointxyY();
+        KoColorimetryUtils::xyY whitepoint = currentColorSpace()->profile()->getWhitePointxyY();
         d->colorSpaceSelector->TongueWidget->setYCbCrData(whitepoint);
         QString estimatedCurve = " Estimated curve: ";
         QPolygonF tonecurve;
@@ -683,50 +678,50 @@ void KisAdvancedColorSpaceSelector::fillDescription()
 
 }
 
-QString KisAdvancedColorSpaceSelector::nameWhitePoint(QVector <double> whitePoint) {
-    QString name=(QString::number(whitePoint[0]) + ", " + QString::number(whitePoint[1], 'f', 4));
+QString KisAdvancedColorSpaceSelector::nameWhitePoint(KoColorimetryUtils::xyY whitePoint) {
+    QString name=(QString::number(whitePoint.x) + ", " + QString::number(whitePoint.y, 'f', 4));
     //A   (0.451170, 0.40594) (2856K)(tungsten)
-    if ((whitePoint[0]>0.451170-0.005 && whitePoint[0]<0.451170 + 0.005) &&
-            (whitePoint[1]>0.40594-0.005 && whitePoint[1]<0.40594 + 0.005)){
+    if ((whitePoint.x>0.451170-0.005 && whitePoint.x<0.451170 + 0.005) &&
+            (whitePoint.y>0.40594-0.005 && whitePoint.y<0.40594 + 0.005)){
         name="A";
         return name;
     }
     //B   (0.34980, 0.35270) (4874K) (Direct Sunlight at noon)(obsolete)
     //C   (0.31039, 0.31905) (6774K) (average/north sky daylight)(obsolete)
     //D50 (0.34773, 0.35952) (5003K) (Horizon Light, default color of white paper, ICC profile standard illuminant)
-    if ((whitePoint[0]>0.34773-0.005 && whitePoint[0]<0.34773 + 0.005) &&
-            (whitePoint[1]>0.35952-0.005 && whitePoint[1]<0.35952 + 0.005)){
+    if ((whitePoint.x>0.34773-0.005 && whitePoint.x<0.34773 + 0.005) &&
+            (whitePoint.y>0.35952-0.005 && whitePoint.y<0.35952 + 0.005)){
         name="D50";
         return name;
     }
     //D55 (0.33411,	0.34877) (5503K) (Mid-morning / Mid-afternoon Daylight)
-    if ((whitePoint[0]>0.33411-0.001 && whitePoint[0]<0.33411 + 0.001) &&
-            (whitePoint[1]>0.34877-0.005 && whitePoint[1]<0.34877 + 0.005)){
+    if ((whitePoint.x>0.33411-0.001 && whitePoint.x<0.33411 + 0.001) &&
+            (whitePoint.y>0.34877-0.005 && whitePoint.y<0.34877 + 0.005)){
         name="D55";
         return name;
     }
     //D60 (0.3217, 0.3378) (~6000K) (ACES colorspace default)
-    if ((whitePoint[0]>0.3217-0.001 && whitePoint[0]<0.3217 + 0.001) &&
-            (whitePoint[1]>0.3378-0.005 && whitePoint[1]<0.3378 + 0.005)){
+    if ((whitePoint.x>0.3217-0.001 && whitePoint.x<0.3217 + 0.001) &&
+            (whitePoint.y>0.3378-0.005 && whitePoint.y<0.3378 + 0.005)){
         name="D60";
         return name;
     }
     //D65 (0.31382, 0.33100) (6504K) (Noon Daylight, default for computer and tv screens, sRGB default)
     //Elle's are old school with 0.3127 and 0.3289
-    if ((whitePoint[0]>0.31382-0.002 && whitePoint[0]<0.31382 + 0.002) &&
-            (whitePoint[1]>0.33100-0.005 && whitePoint[1]<0.33100 + 0.002)){
+    if ((whitePoint.x>0.31382-0.002 && whitePoint.x<0.31382 + 0.002) &&
+            (whitePoint.y>0.33100-0.005 && whitePoint.y<0.33100 + 0.002)){
         name="D65";
         return name;
     }
     //D75 (0.29968, 0.31740) (7504K) (North sky Daylight)
-    if ((whitePoint[0]>0.29968-0.001 && whitePoint[0]<0.29968 + 0.001) &&
-            (whitePoint[1]>0.31740-0.005 && whitePoint[1]<0.31740 + 0.005)){
+    if ((whitePoint.x>0.29968-0.001 && whitePoint.x<0.29968 + 0.001) &&
+            (whitePoint.y>0.31740-0.005 && whitePoint.y<0.31740 + 0.005)){
         name="D75";
         return name;
     }
     //E   (1/3, 1/3)         (5454K) (Equal Energy. CIERGB default)
-    if ((whitePoint[0]>(1.0/3.0)-0.001 && whitePoint[0]<(1.0/3.0) + 0.001) &&
-            (whitePoint[1]>(1.0/3.0)-0.001 && whitePoint[1]<(1.0/3.0) + 0.001)){
+    if ((whitePoint.x>(1.0/3.0)-0.001 && whitePoint.x<(1.0/3.0) + 0.001) &&
+            (whitePoint.y>(1.0/3.0)-0.001 && whitePoint.y<(1.0/3.0) + 0.001)){
         name="E";
         return name;
     }

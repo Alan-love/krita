@@ -19,6 +19,7 @@
 #include <KoColorConversions.h>
 #include <KoColorSpacePreserveLightnessUtils.h>
 #include <KoColorSpaceRegistry.h>
+#include <KoColorProfileQuery.h>
 #include <KoIntegerMaths.h>
 #include <kis_dom_utils.h>
 
@@ -135,8 +136,8 @@ QList<KoColorConversionTransformationFactory*> RgbU8ColorSpaceFactory::colorConv
         && profile->getColorPrimaries() != PRIMARIES_UNSPECIFIED) {
 
         KoColorSpaceRegistry *registry = KoColorSpaceRegistry::instance();
-        QVector<double> colorants;
-        QString linear = registry->profileFor(colorants, profile->getColorPrimaries(), TRC_LINEAR)->name();
+        KoColorProfileQuery query(profile->getColorPrimaries(), TRC_LINEAR);
+        QString linear = registry->profileFor(query)->name();
 
         LcmsRGBP2020PQColorSpaceFactoryWrapper<RgbU8ColorSpaceFactory> factory(profile->name(), linear);
         return factory.colorConversionLinks();

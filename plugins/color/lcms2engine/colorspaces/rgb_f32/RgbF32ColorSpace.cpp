@@ -19,6 +19,7 @@
 #include <KoColorSpaceMaths.h>
 #include <KoColorSpacePreserveLightnessUtils.h>
 #include <kis_dom_utils.h>
+#include <KoColorProfileQuery.h>
 
 RgbF32ColorSpace::RgbF32ColorSpace(const QString &name, KoColorProfile *p) :
     LcmsColorSpace<KoRgbF32Traits>(colorSpaceId(), name, TYPE_RGBA_FLT, cmsSigRgbData, p)
@@ -128,8 +129,8 @@ QList<KoColorConversionTransformationFactory *> RgbF32ColorSpaceFactory::colorCo
         && profile->getColorPrimaries() != PRIMARIES_UNSPECIFIED) {
 
         KoColorSpaceRegistry *registry = KoColorSpaceRegistry::instance();
-        QVector<double> colorants;
-        QString linear = registry->profileFor(colorants, profile->getColorPrimaries(), TRC_LINEAR)->name();
+        KoColorProfileQuery query(profile->getColorPrimaries(), TRC_LINEAR);
+        QString linear = registry->profileFor(query)->name();
 
         LcmsRGBP2020PQColorSpaceFactoryWrapper<RgbF32ColorSpaceFactory> factory(profile->name(), linear);
         return factory.colorConversionLinks();

@@ -10,6 +10,7 @@
 #include <klocalizedstring.h>
 
 #include <KoColorModelStandardIds.h>
+#include <KoColorProfileQuery.h>
 #include <kis_assert.h>
 
 #include "LcmsColorSpace.h"
@@ -207,26 +208,25 @@ const KoColorProfile* IccColorSpaceEngine::addProfile(const QByteArray &data)
     return profile;
 }
 
-const KoColorProfile *IccColorSpaceEngine::getProfile(const QVector<double> &colorants, ColorPrimaries colorPrimaries, TransferCharacteristics transferFunction)
+const KoColorProfile *IccColorSpaceEngine::getProfile(const KoColorProfileQuery &query)
 {
     KoColorSpaceRegistry *registry = KoColorSpaceRegistry::instance();
 
-    KIS_SAFE_ASSERT_RECOVER(
-        (!colorants.isEmpty() || colorPrimaries != PRIMARIES_UNSPECIFIED)
-        && transferFunction != TRC_UNSPECIFIED)
+    KoColorProfileQuery modifiedQuery = query;
+    KIS_SAFE_ASSERT_RECOVER(modifiedQuery.isValid())
     {
-        if (transferFunction == TRC_LINEAR) {
-            colorPrimaries = PRIMARIES_ITU_R_BT_2020_2_AND_2100_0;
+        if (modifiedQuery.transfer == TRC_LINEAR) {
+            modifiedQuery.primaries = PRIMARIES_ITU_R_BT_2020_2_AND_2100_0;
         } else {
-            colorPrimaries = PRIMARIES_ITU_R_BT_709_5;
+            modifiedQuery.primaries = PRIMARIES_ITU_R_BT_709_5;
         }
 
-        if (transferFunction == TRC_UNSPECIFIED) {
-            transferFunction = TRC_IEC_61966_2_1;
+        if (modifiedQuery.transfer == TRC_UNSPECIFIED) {
+            modifiedQuery.transfer = TRC_IEC_61966_2_1;
         }
     }
 
-    const KoColorProfile *profile = new IccColorProfile(colorants, colorPrimaries, transferFunction);
+    const KoColorProfile *profile = new IccColorProfile(modifiedQuery);
     Q_CHECK_PTR(profile);
 
     if (profile->valid()) {

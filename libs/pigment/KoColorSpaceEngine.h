@@ -12,6 +12,7 @@
 #include <KoColorProfileConstants.h>
 
 class KoColorProfile;
+struct KoColorProfileQuery;
 
 /**
  * A KoColorSpaceEngine is a class use to create color conversion
@@ -38,14 +39,10 @@ public:
     /**
      * @brief getProfile
      * This tries to generate a profile with the given characteristics and add it to the registry.
-     * @param colorants a double of xy (for xyY) values, this expects the first two as the white point,
-     * then the red, green and blue. Will only be used if primaries is unspecified.
-     * If there's only a whitepoint, a grayscale profile will be returned.
-     * @param colorPrimaries the color primaries type as defined in KoColorProfile.
-     * @param transferFunction the transfer function, as defined in KoColorProfile.
+     * @param query -- a KoColorProfileQuery to generate a profile for.
      * @return a profile that matches these characteristics.
      */
-    virtual const KoColorProfile* getProfile(const QVector<double> &colorants, ColorPrimaries colorPrimaries, TransferCharacteristics transferFunction) = 0;
+    virtual const KoColorProfile* getProfile(const KoColorProfileQuery &query) = 0;
     virtual void removeProfile(const QString &filename) = 0;
 
     /**

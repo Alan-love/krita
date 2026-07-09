@@ -14,6 +14,7 @@
 #include "kritalcmsengine_export.h"
 
 class LcmsColorProfileContainer;
+struct KoColorProfileQuery;
 
 /**
  * This class contains an ICC color profile.
@@ -76,9 +77,7 @@ public:
 
     explicit IccColorProfile(const QString &fileName = QString());
     explicit IccColorProfile(const QByteArray &rawData);
-    explicit IccColorProfile(const QVector<double> &colorants,
-                             const ColorPrimaries colorPrimariesType = PRIMARIES_UNSPECIFIED,
-                             const TransferCharacteristics transferFunction = TRC_LINEAR);
+    explicit IccColorProfile(const KoColorProfileQuery &query);
     IccColorProfile(const IccColorProfile &rhs);
     ~IccColorProfile() override;
 

@@ -20,6 +20,7 @@
 #include "dithering/KisRgbDitherOpFactory.h"
 #include <kis_dom_utils.h>
 #include <KoColorSpacePreserveLightnessUtils.h>
+#include <KoColorProfileQuery.h>
 
 RgbF16ColorSpace::RgbF16ColorSpace(const QString &name, KoColorProfile *p) :
     LcmsColorSpace<KoRgbF16Traits>(colorSpaceId(), name, TYPE_RGBA_HALF_FLT, cmsSigRgbData, p)
@@ -123,8 +124,8 @@ QList<KoColorConversionTransformationFactory *> RgbF16ColorSpaceFactory::colorCo
         && profile->getColorPrimaries() != PRIMARIES_UNSPECIFIED) {
 
         KoColorSpaceRegistry *registry = KoColorSpaceRegistry::instance();
-        QVector<double> colorants;
-        QString linear = registry->profileFor(colorants, profile->getColorPrimaries(), TRC_LINEAR)->name();
+        KoColorProfileQuery query(profile->getColorPrimaries(), TRC_LINEAR);
+        QString linear = registry->profileFor(query)->name();
 
         LcmsRGBP2020PQColorSpaceFactoryWrapper<RgbF16ColorSpaceFactory> factory(profile->name(), linear);
         return factory.colorConversionLinks();

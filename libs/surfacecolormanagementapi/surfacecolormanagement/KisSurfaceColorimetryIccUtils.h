@@ -8,6 +8,7 @@
 
 #include "KisSurfaceColorimetry.h"
 #include <KoColorProfileConstants.h>
+#include <KoColorProfileQuery.h>
 
 namespace KisSurfaceColorimetry
 {
@@ -19,19 +20,8 @@ namespace KisSurfaceColorimetry
     KRITASURFACECOLORMANAGEMENTAPI_EXPORT
     TransferCharacteristics namedTransferFunctionToPigmentTransferFunction(NamedTransferFunction transfer);
 
-    struct PigmentProfileRequest {
-        QVector<double> colorants;
-        ColorPrimaries colorPrimariesType = PRIMARIES_UNSPECIFIED;
-        TransferCharacteristics transferFunction = TRC_UNSPECIFIED;
-
-        inline bool isValid() const {
-            return transferFunction != TRC_UNSPECIFIED &&
-                (colorPrimariesType != PRIMARIES_UNSPECIFIED || colorants.size() == 8);
-        }
-    };
-
     KRITASURFACECOLORMANAGEMENTAPI_EXPORT
-    PigmentProfileRequest colorSpaceToRequest(ColorSpace cs);
+    KoColorProfileQuery colorSpaceToRequest(ColorSpace cs);
 }
 
 #endif /* KISSURFACECOLORIMETRYICCUTILS_H */

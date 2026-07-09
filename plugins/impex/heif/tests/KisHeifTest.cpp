@@ -11,6 +11,7 @@
 #include <simpletest.h>
 #include <QCoreApplication>
 #include <KoColorSpaceEngine.h>
+#include <KoColorProfileQuery.h>
 
 #include "filestest.h"
 
@@ -454,10 +455,7 @@ void KisHeifTest::testSaveRGB(int bitDepth)
 
     QString profileName;
 
-    QVector<double> colorants;
-    const KoColorProfile *testProfile = KoColorSpaceRegistry::instance()->profileFor(colorants
-                                                                                     , PRIMARIES_SMPTE_240M
-                                                                                     , TRC_SMPTE_240M);
+    const KoColorProfile *testProfile = KoColorSpaceRegistry::instance()->profileFor(KoColorProfileQuery(PRIMARIES_SMPTE_240M, TRC_SMPTE_240M));
     if (testProfile) {
         profileName = testProfile->name();
     }

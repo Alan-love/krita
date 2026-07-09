@@ -52,48 +52,44 @@ TransferCharacteristics namedTransferFunctionToPigmentTransferFunction(NamedTran
     }
 }
 
-PigmentProfileRequest colorSpaceToRequest(ColorSpace cs)
+KoColorProfileQuery colorSpaceToRequest(ColorSpace cs)
 {
-    PigmentProfileRequest request;
+    KoColorProfileQuery request;
 
     if (std::holds_alternative<NamedPrimaries>(cs.primaries)) {
-        request.colorPrimariesType =
+        request.primaries =
             namedPrimariesToPigmentPrimaries(std::get<NamedPrimaries>(cs.primaries));
     } else if (std::holds_alternative<Colorimetry>(cs.primaries)) {
         auto colorimetry = std::get<Colorimetry>(cs.primaries);
-        request.colorants = {
-            colorimetry.white().toxy().x, colorimetry.white().toxy().y,
-            colorimetry.red().toxy().x, colorimetry.red().toxy().y,
-            colorimetry.green().toxy().x, colorimetry.green().toxy().y,
-            colorimetry.blue().toxy().x, colorimetry.blue().toxy().y,
-        };
+        request.whitePoint = colorimetry.white().toxy();
+        request.rgbColorants << colorimetry.red().toxy() << colorimetry.green().toxy() << colorimetry.blue().toxy();
     }
 
     if (std::holds_alternative<NamedTransferFunction>(cs.transferFunction)) {
-        request.transferFunction =
+        request.transfer =
             namedTransferFunctionToPigmentTransferFunction(std::get<NamedTransferFunction>(cs.transferFunction));
     } else if (std::holds_alternative<uint32_t>(cs.transferFunction)) {
         auto gamma = std::get<uint32_t>(cs.transferFunction); // gamma * 10000
         if (gamma == 10000) {
-            request.transferFunction = TRC_LINEAR;
+            request.transfer = TRC_LINEAR;
         } else if (gamma == 18000) {
-            request.transferFunction = TRC_GAMMA_1_8;
+            request.transfer = TRC_GAMMA_1_8;
         } else if (gamma == 22000) {
-            request.transferFunction = TRC_ITU_R_BT_470_6_SYSTEM_M;
+            request.transfer = TRC_ITU_R_BT_470_6_SYSTEM_M;
         } else if (gamma == 24000) {
-            request.transferFunction = TRC_GAMMA_2_4;
+            request.transfer = TRC_GAMMA_2_4;
         } else if (gamma == 28000) {
-            request.transferFunction = TRC_ITU_R_BT_470_6_SYSTEM_B_G;
+            request.transfer = TRC_ITU_R_BT_470_6_SYSTEM_B_G;
         }
     }
 
     // any pq-space that is not bt2020pq is considered unsupported
 
-    if (request.transferFunction == TRC_ITU_R_BT_2100_0_PQ &&
-        request.colorPrimariesType != PRIMARIES_ITU_R_BT_2020_2_AND_2100_0) {
+    if (request.transfer == TRC_ITU_R_BT_2100_0_PQ &&
+        request.primaries != PRIMARIES_ITU_R_BT_2020_2_AND_2100_0) {
 
-        request.transferFunction = TRC_UNSPECIFIED;
-        request.colorants.clear();
+        request.transfer = TRC_UNSPECIFIED;
+        request.rgbColorants.clear();
     }
 
     return request;

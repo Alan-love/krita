@@ -14,6 +14,7 @@ class QByteArray;
 class QString;
 class KoColorProfile;
 class KoColorSpaceFactory;
+struct KoColorProfileQuery;
 
 /**
  * @brief The KoColorProfileStorage class is a "composite subclass" of
@@ -119,10 +120,8 @@ public:
      * @param error the margin of error with which the colorants get compared.
      * @return list of available profiles.
      */
-    QList<const KoColorProfile *> profilesFor(const QVector<double>& colorants,
-                                              ColorPrimaries colorantType,
-                                              TransferCharacteristics transferType,
-                                              double error = 0.00001);
+    QList<const KoColorProfile *> profilesFor(const KoColorProfileQuery &query,
+                                              double error = 0.0001);
 
 private:
     struct Private;

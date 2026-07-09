@@ -28,6 +28,7 @@
 #include <KoColorSpaceConstants.h>
 #include <KoColorSpaceRegistry.h>
 #include <KoColorTransferFunctions.h>
+#include <KoColorProfileQuery.h>
 #include <kis_assert.h>
 #include <kis_config.h>
 #include <kis_exif_info_visitor.h>
@@ -195,9 +196,9 @@ KisImportExportErrorCode HeifExport::convert(KisDocument *document, QIODevice *i
     }
 
     if (cs->hasHighDynamicRange() && convertToRec2020) {
-        const KoColorProfile *linear = KoColorSpaceRegistry::instance()->profileFor(QVector<double>(),
+        const KoColorProfile *linear = KoColorSpaceRegistry::instance()->profileFor(KoColorProfileQuery(
                                                                                    PRIMARIES_ITU_R_BT_2020_2_AND_2100_0,
-                                                                                   TRC_LINEAR);
+                                                                                   TRC_LINEAR));
         const KoColorSpace *linearRec2020 = KoColorSpaceRegistry::instance()->colorSpace("RGBA", "F32", linear);
         image->convertImageColorSpace(linearRec2020,
                                       KoColorConversionTransformation::internalRenderingIntent(),

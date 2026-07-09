@@ -59,17 +59,19 @@ static QMatrix4x4 rgbMatrix(ColorPrimaries primaries, double factor = 1.0, doubl
     const double mul = 1.0/factor;
     // Calculation: http://brucelindbloom.com/index.html?Eqn_RGB_XYZ_Matrix.html
     // Calculates XYZ with Y = 1.0
-    QVector<double> col;
-    KoColorProfile::colorantsForType(primaries, col);
+    KoColorimetryUtils::xy wpXY;
+    QVector<KoColorimetryUtils::xy> col;
+    KoColorProfile::colorantsForType(primaries, wpXY, col, true);
+
     QMatrix4x4 initialXYZMatrix(
-        col[2]/col[3], col[4]/col[5], col[6]/col[7], 0.0,
+        col[0].toXYZ().X, col[1].toXYZ().X, col[2].toXYZ().X, 0.0,
         1.0, 1.0, 1.0, 0.0,
-        (1.0-col[2]-col[3])/col[3], (1.0-col[4]-col[5])/col[5], (1.0-col[6]-col[7])/col[7], 0.0,
+        col[0].toXYZ().Z, col[1].toXYZ().Z, col[2].toXYZ().Z, 0.0,
         0.0, 0.0, 0.0, 1.0
         );
 
     // Calculate scaling factor with white point.
-    QVector4D wp(col[0]/col[1], 1.0, (1.0-col[0]-col[1])/col[1], 0.0);
+    QVector4D wp(wpXY.toXYZ().X, 1.0, wpXY.toXYZ().Z, 0.0);
 
     QVector4D S = initialXYZMatrix.inverted() * wp;
     if (luma) {

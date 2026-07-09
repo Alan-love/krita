@@ -17,6 +17,7 @@
 
 #include <KFormat>
 
+#include "KoColorProfileQuery.h"
 #include "KoFileDialog.h"
 
 #include <KisDocument.h>
@@ -300,7 +301,7 @@ QStringList KisDlgImportVideoAnimation::documentInfo() {
     QString profileColorSpace = RGBAColorModelID.id();
     QString profileName = KoColorSpaceRegistry::instance()->p709SRGBProfile()->name();
     if (m_videoInfo.colorTransfer != TRC_UNSPECIFIED && m_videoInfo.colorPrimaries != PRIMARIES_UNSPECIFIED) {
-        const KoColorProfile *profile = KoColorSpaceRegistry::instance()->profileFor(QVector<double>(), m_videoInfo.colorPrimaries, m_videoInfo.colorTransfer);
+        const KoColorProfile *profile = KoColorSpaceRegistry::instance()->profileFor(KoColorProfileQuery(m_videoInfo.colorPrimaries, m_videoInfo.colorTransfer));
         profileName = profile->name();
         profileColorSpace = profile->colorModelID();
     }

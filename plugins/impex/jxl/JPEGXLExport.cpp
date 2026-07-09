@@ -28,6 +28,7 @@
 #include <KoAlwaysInline.h>
 #include <KoColorModelStandardIds.h>
 #include <KoColorProfile.h>
+#include <KoColorProfileQuery.h>
 #include <KoColorSpace.h>
 #include <KoColorTransferFunctions.h>
 #include <KoConfig.h>
@@ -114,7 +115,7 @@ KisImportExportErrorCode JPEGXLExport::convert(KisDocument *document, QIODevice 
 
     if (cs->hasHighDynamicRange() && convertToRec2020) {
         const KoColorProfile *linear =
-            KoColorSpaceRegistry::instance()->profileFor({}, PRIMARIES_ITU_R_BT_2020_2_AND_2100_0, TRC_LINEAR);
+            KoColorSpaceRegistry::instance()->profileFor(KoColorProfileQuery(PRIMARIES_ITU_R_BT_2020_2_AND_2100_0, TRC_LINEAR));
         KIS_ASSERT_RECOVER(linear)
         {
             errFile << "Unable to find a working profile for Rec. 2020";

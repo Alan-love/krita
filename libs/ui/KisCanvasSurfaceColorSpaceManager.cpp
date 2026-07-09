@@ -8,6 +8,7 @@
 
 #include <KoColorProfile.h>
 #include <KoColorSpaceRegistry.h>
+#include <KoColorProfileQuery.h>
 
 #include <kis_config.h>
 
@@ -338,9 +339,7 @@ selectSurfaceDescription(KisConfig::CanvasSurfaceMode requestedSurfaceMode, cons
     {
         auto request = colorSpaceToRequest(requestedDescription->colorSpace);
         if (request.isValid()) {
-            profile = KoColorSpaceRegistry::instance()->profileFor(request.colorants,
-                                                                   request.colorPrimariesType,
-                                                                   request.transferFunction);
+            profile = KoColorSpaceRegistry::instance()->profileFor(request);
         }
     }
 
@@ -350,9 +349,7 @@ selectSurfaceDescription(KisConfig::CanvasSurfaceMode requestedSurfaceMode, cons
         if (this->interface->supportsSurfaceDescription(*requestedDescription)) {
             auto request = colorSpaceToRequest(requestedDescription->colorSpace);
             if (request.isValid()) {
-                profile = KoColorSpaceRegistry::instance()->profileFor(request.colorants,
-                                                                       request.colorPrimariesType,
-                                                                       request.transferFunction);
+                profile = KoColorSpaceRegistry::instance()->profileFor(request);
             }
         }
     }
@@ -363,9 +360,7 @@ selectSurfaceDescription(KisConfig::CanvasSurfaceMode requestedSurfaceMode, cons
         if (this->interface->supportsSurfaceDescription(*requestedDescription)) {
             auto request = colorSpaceToRequest(requestedDescription->colorSpace);
             if (request.isValid()) {
-                profile = KoColorSpaceRegistry::instance()->profileFor(request.colorants,
-                                                                       request.colorPrimariesType,
-                                                                       request.transferFunction);
+                profile = KoColorSpaceRegistry::instance()->profileFor(request);
             }
         }
     }
@@ -376,9 +371,7 @@ selectSurfaceDescription(KisConfig::CanvasSurfaceMode requestedSurfaceMode, cons
         if (this->interface->supportsSurfaceDescription(*requestedDescription)) {
             auto request = colorSpaceToRequest(requestedDescription->colorSpace);
             if (request.isValid()) {
-                profile = KoColorSpaceRegistry::instance()->profileFor(request.colorants,
-                                                                       request.colorPrimariesType,
-                                                                       request.transferFunction);
+                profile = KoColorSpaceRegistry::instance()->profileFor(request);
             }
         }
     }

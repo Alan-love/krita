@@ -7,6 +7,7 @@
  */
 
 #include "JPEGXLImport.h"
+#include <KoColorProfileQuery.h>
 
 #include <KisGlobalResourcesInterface.h>
 
@@ -648,7 +649,8 @@ JPEGXLImport::convert(KisDocument *document, QIODevice *io, KisPropertiesConfigu
                     d.m_intent = KoColorConversionTransformation::IntentPerceptual;
                 }
 
-                profile = KoColorSpaceRegistry::instance()->profileFor(colorants, colorPrimaries, transferFunction);
+                KoColorProfileQuery query(colorPrimaries, transferFunction);
+                profile = KoColorSpaceRegistry::instance()->profileFor(query);
 
                 dbgFile << "CICP profile data:" << colorants << colorPrimaries << transferFunction;
 

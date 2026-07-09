@@ -15,6 +15,7 @@
 #include "DebugPigment.h"
 #include "KoColorSpaceFactory.h"
 #include "KoColorProfile.h"
+#include "KoColorProfileQuery.h"
 #include "kis_assert.h"
 
 
@@ -172,52 +173,52 @@ QList<const KoColorProfile *> KoColorProfileStorage::profilesFor(const KoColorSp
     return profiles;
 }
 
-QList<const KoColorProfile *> KoColorProfileStorage::profilesFor(const QVector<double> &colorants, ColorPrimaries colorantType, TransferCharacteristics transferType, double error)
+QList<const KoColorProfile *> KoColorProfileStorage::profilesFor(const KoColorProfileQuery &query, double error)
 {
     QList<const KoColorProfile *> profiles;
 
-    if (colorants.isEmpty() && colorantType == PRIMARIES_UNSPECIFIED && transferType == TRC_UNSPECIFIED) {
+    if (!query.isValid()) {
         return profiles;
     }
 
     QReadLocker l(&d->lock);
     for (const KoColorProfile* profile : d->profileMap) {
-        bool colorantMatch = (colorants.isEmpty() || colorantType != PRIMARIES_UNSPECIFIED);
-        bool colorantTypeMatch = (colorantType == PRIMARIES_UNSPECIFIED);
-        bool transferMatch = (transferType == 2);
-        if (colorantType != PRIMARIES_UNSPECIFIED) {
-            if (int(profile->getColorPrimaries()) == colorantType) {
+        bool colorantMatch = (!query.rgbColorants.isEmpty() || query.primaries != PRIMARIES_UNSPECIFIED);
+        bool colorantTypeMatch = (query.primaries == PRIMARIES_UNSPECIFIED);
+        bool transferMatch = (query.transfer == TRC_UNSPECIFIED);
+        if (query.primaries != PRIMARIES_UNSPECIFIED) {
+            if (int(profile->getColorPrimaries()) == query.primaries) {
                 colorantTypeMatch = true;
             }
         }
-        if (transferType != TRC_UNSPECIFIED) {
-            if (int(profile->getTransferCharacteristics()) == transferType) {
+        if (query.transfer != TRC_UNSPECIFIED) {
+            if (int(profile->getTransferCharacteristics()) == query.transfer) {
                 transferMatch = true;
             }
         }
 
-        if (!colorants.isEmpty() && colorantType == PRIMARIES_UNSPECIFIED) {
+        if (!query.rgbColorants.isEmpty() && query.primaries == PRIMARIES_UNSPECIFIED) {
             KoColorimetryUtils::xyY wp = profile->getWhitePointxyY();
-            if (profile->hasColorants() && colorants.size() == 8) {
+            if (profile->getColorantsxyY().size() == query.rgbColorants.size()) {
                 QVector<KoColorimetryUtils::xyY> col = profile->getColorantsxyY();
-                if (col.size() < 3) {
+                if (col.isEmpty()) {
                     // too few colorants, skip.
                     continue;
                 }
-                QVector<double> compare = {wp.x, wp.y, col[0].x, col[0].y, col[1].x, col[1].y, col[2].x, col[2].y};
 
-                for (int i = 0; i < compare.size(); i++) {
-                    colorantMatch = std::fabs(compare[i] - colorants[i]) < error;
+                colorantMatch = (std::fabs(wp.x - query.whitePoint.x) < error) && (std::fabs(wp.y - query.whitePoint.y) < error);
+                if (!colorantMatch) {
+                    continue;
+                }
+
+                for (int i = 0; i < col.size(); i++) {
+                    colorantMatch = (std::fabs(col[i].x - query.rgbColorants[i].x) < error) && (std::fabs(col[i].y - query.rgbColorants[i].y) < error);
                     if (!colorantMatch) {
                         break;
                     }
                 }
             } else {
-                if (colorants.size() < 2) {
-                    // too few colorants, skip.
-                    continue;
-                }
-                if (std::fabs(wp.x - colorants[0]) < error && std::fabs(wp.y - colorants[1]) < error) {
+                if (std::fabs(wp.x - query.whitePoint.x) < error && std::fabs(wp.y - query.whitePoint.y) < error) {
                     colorantMatch = true;
                 }
             }

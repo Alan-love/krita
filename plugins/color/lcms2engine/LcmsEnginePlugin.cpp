@@ -24,6 +24,7 @@
 #include <kis_debug.h>
 
 #include "IccColorSpaceEngine.h"
+#include <KoColorProfileQuery.h>
 #include "colorprofiles/LcmsColorProfileContainer.h"
 
 #include "colorspaces/cmyk_u8/CmykU8ColorSpace.h"
@@ -167,7 +168,7 @@ LcmsEnginePlugin::LcmsEnginePlugin(QObject *parent, const QVariantList &)
     KoColorProfile *rgbProfile = LcmsColorProfileContainer::createFromLcmsProfile(cmsCreate_sRGBProfile());
     registry->addProfile(rgbProfile);
 
-    KoColorProfile *rec2100pq = new IccColorProfile({}, PRIMARIES_ITU_R_BT_2020_2_AND_2100_0, TRC_ITU_R_BT_2100_0_PQ);
+    KoColorProfile *rec2100pq = new IccColorProfile(KoColorProfileQuery(PRIMARIES_ITU_R_BT_2020_2_AND_2100_0, TRC_ITU_R_BT_2100_0_PQ));
     registry->addProfile(rec2100pq);
 
     /**

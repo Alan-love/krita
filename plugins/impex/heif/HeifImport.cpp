@@ -22,6 +22,7 @@
 #include <KoColorSpace.h>
 #include <KoColorSpaceEngine.h>
 #include <KoColorSpaceRegistry.h>
+#include <KoColorProfileQuery.h>
 #include <dialogs/kis_dlg_hlg_import.h>
 #include <kis_group_layer.h>
 #include <kis_image.h>
@@ -322,25 +323,23 @@ KisImportExportErrorCode HeifImport::convert(KisDocument *document, QIODevice *i
                     transferCharacteristic = TRC_ITU_R_BT_709_5;
                 }
 
-                const QVector<double> colorants = [&]() -> QVector<double> {
+                KoColorProfileQuery query(primaries, transferCharacteristic);
+                query.whitePoint = {static_cast<double>(nclx->color_primary_white_x),
+                                    static_cast<double>(nclx->color_primary_white_y)};
+                query.rgbColorants = [&]() -> QVector<KoColorimetryUtils::xy> {
                     if (primaries == PRIMARIES_UNSPECIFIED) {
                         return {};
                     } else {
-                        return {
-                            static_cast<double>(nclx->color_primary_white_x),
-                            static_cast<double>(nclx->color_primary_white_y),
-                            static_cast<double>(nclx->color_primary_red_x),
-                            static_cast<double>(nclx->color_primary_red_y),
-                            static_cast<double>(nclx->color_primary_green_x),
-                            static_cast<double>(nclx->color_primary_green_y),
-                            static_cast<double>(nclx->color_primary_blue_x),
-                            static_cast<double>(nclx->color_primary_blue_y)};
+                        return {{static_cast<double>(nclx->color_primary_red_x),
+                                 static_cast<double>(nclx->color_primary_red_y)},
+                                {static_cast<double>(nclx->color_primary_green_x),
+                                 static_cast<double>(nclx->color_primary_green_y)},
+                                {static_cast<double>(nclx->color_primary_blue_x),
+                                 static_cast<double>(nclx->color_primary_blue_y)}};
                     }
                 }();
 
-                profile = KoColorSpaceRegistry::instance()->profileFor(colorants,
-                                                                       primaries,
-                                                                       transferCharacteristic);
+                profile = KoColorSpaceRegistry::instance()->profileFor(query);
 
                 if (linearizePolicy != LinearizePolicy::KeepTheSame) {
                     colorDepth = Float32BitsColorDepthID;
@@ -372,9 +371,8 @@ KisImportExportErrorCode HeifImport::convert(KisDocument *document, QIODevice *i
         // Get the default profile if we haven't found one up till now.
         if (!profile) {
             if (colorModel == RGBAColorModelID.id()) {
-                profile = KoColorSpaceRegistry::instance()->profileFor(QVector<double>(),
-                                                                       PRIMARIES_ITU_R_BT_709_5,
-                                                                       TRC_IEC_61966_2_1);
+                profile = KoColorSpaceRegistry::instance()->profileFor(KoColorProfileQuery(PRIMARIES_ITU_R_BT_709_5,
+                                                                       TRC_IEC_61966_2_1));
             } else {
                 const QString colorSpaceId = KoColorSpaceRegistry::instance()->colorSpaceId(colorModel, colorDepth.id());
                 QString profileName = KoColorSpaceRegistry::instance()->defaultProfileForColorSpace(colorSpaceId);

@@ -110,10 +110,10 @@ void TestIccFromColorimetryConversion::testRequestConstruction()
 
     auto request = KisSurfaceColorimetry::colorSpaceToRequest(colorSpace);
 
-    QCOMPARE(request.isValid(), isValid);
-    QCOMPARE(request.colorPrimariesType, expectedPrimaries);
-    QCOMPARE(request.transferFunction, expectedTransferFunction);
-    QVERIFY(request.colorants.isEmpty());
+    QCOMPARE(request.isRgb(), isValid);
+    QCOMPARE(request.primaries, expectedPrimaries);
+    QCOMPARE(request.transfer, expectedTransferFunction);
+    QVERIFY(request.rgbColorants.isEmpty());
 }
 
 void TestIccFromColorimetryConversion::testRequestConstructionCustomPrimaries()
@@ -125,29 +125,36 @@ void TestIccFromColorimetryConversion::testRequestConstructionCustomPrimaries()
     ColorSpace  colorSpace;
     colorSpace.primaries = Colorimetry::BT709;
     colorSpace.transferFunction = NamedTransferFunction::transfer_function_srgb;
-    const QVector<double> expectedColorants = {
-        0.3127, 0.3290, // white
-        0.64, 0.33, // red
-        0.30, 0.60, // green
-        0.15, 0.06, // blue
+    const QVector<KoColorimetryUtils::xy> expectedColorants = {
+        {0.64, 0.33}, // red
+        {0.30, 0.60}, // green
+        {0.15, 0.06}, // blue
     };
+
+    KoColorimetryUtils::xy expectedWp = {0.3127, 0.3290};
 
     auto request = KisSurfaceColorimetry::colorSpaceToRequest(colorSpace);
 
     QCOMPARE(request.isValid(), true);
-    QCOMPARE(request.colorPrimariesType, PRIMARIES_UNSPECIFIED);
-    QCOMPARE(request.transferFunction, TRC_IEC_61966_2_1);
-    QCOMPARE(request.colorants.size(), expectedColorants.size());
+    QCOMPARE(request.primaries, PRIMARIES_UNSPECIFIED);
+    QCOMPARE(request.transfer, TRC_IEC_61966_2_1);
+    QCOMPARE(request.rgbColorants.size(), expectedColorants.size());
+
+    QVERIFY(expectedWp == request.whitePoint);
+
+    auto compareXY = [] (KoColorimetryUtils::xy lhs, KoColorimetryUtils::xy rhs) {
+        return lhs == rhs;
+    };
 
     auto it =
-        std::mismatch(request.colorants.begin(), request.colorants.end(),
-                      expectedColorants.begin(), qOverload<double, double>(qFuzzyCompare));
+        std::mismatch(request.rgbColorants.begin(), request.rgbColorants.end(),
+                      expectedColorants.begin(), compareXY);
 
-    if (it.first != request.colorants.end()) {
+    if (it.first != request.rgbColorants.end()) {
         qWarning() << Qt::fixed << qSetRealNumberPrecision(8)
             <<  "Failed to compare colorants array, result:" << *it.first << "expected:" <<*it.second;
         qWarning() << Qt::fixed << qSetRealNumberPrecision(8)
-            << "    " << ppVar(request.colorants);
+            << "    " << ppVar(request.rgbColorants);
         qWarning() << Qt::fixed << qSetRealNumberPrecision(8)
             << "    " << ppVar(expectedColorants);
         QFAIL("check failed");
@@ -189,9 +196,9 @@ void TestIccFromColorimetryConversion::testRequestConstructionCustomGamma()
     auto request = KisSurfaceColorimetry::colorSpaceToRequest(colorSpace);
 
     QCOMPARE(request.isValid(), isValid);
-    QCOMPARE(request.colorPrimariesType, TRC_ITU_R_BT_709_5);
-    QCOMPARE(request.transferFunction, expectedTransferFunction);
-    QVERIFY(request.colorants.isEmpty());
+    QCOMPARE(request.primaries, TRC_ITU_R_BT_709_5);
+    QCOMPARE(request.transfer, expectedTransferFunction);
+    QVERIFY(request.rgbColorants.isEmpty());
 
 }
 
@@ -213,9 +220,7 @@ void TestIccFromColorimetryConversion::testProfileConstruction()
     auto request = KisSurfaceColorimetry::colorSpaceToRequest(colorSpace);
     QVERIFY(request.isValid());
 
-    const KoColorProfile *profile = KoColorSpaceRegistry::instance()->profileFor(request.colorants,
-                                                                                 request.colorPrimariesType,
-                                                                                 request.transferFunction);
+    const KoColorProfile *profile = KoColorSpaceRegistry::instance()->profileFor(request);
 
     QVERIFY(profile);
 
@@ -239,9 +244,7 @@ void TestIccFromColorimetryConversion::testProfileConstructionCustomPrimaries()
 
     QCOMPARE(request.isValid(), true);
 
-    const KoColorProfile *profile = KoColorSpaceRegistry::instance()->profileFor(request.colorants,
-                                                                                 request.colorPrimariesType,
-                                                                                 request.transferFunction);
+    const KoColorProfile *profile = KoColorSpaceRegistry::instance()->profileFor(request);
 
     QVERIFY(profile);
     QCOMPARE(profile->getColorPrimaries(), PRIMARIES_ITU_R_BT_709_5);

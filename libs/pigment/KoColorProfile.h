@@ -216,9 +216,11 @@ public:
      * fills a QVector<float> with the xy values of the whitepoint and red, green, blue colorants for
      * a given predefined value. Will not change the vector when the primaries are set to 'undefined'.
      * @param primaries predefined value.
+     * @param whitePoint the white point to fill.
      * @param colorants the vector to fill.
+     * @param prequantized whether to get the prequantized values, these are used for precision when encoding to icc only.
      */
-    static void colorantsForType(ColorPrimaries primaries, QVector<double> &colorants);
+    static void colorantsForType(ColorPrimaries primaries, KoColorimetryUtils::xy &whitePoint, QVector<KoColorimetryUtils::xy> &colorants, const bool prequantized = false);
 
     /**
      * @brief getTransferCharacteristics

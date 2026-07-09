@@ -14,6 +14,7 @@
 #include <KoShapeContainer.h>
 #include <KoPathShape.h>
 
+#include <KoColorProfileQuery.h>
 #include "filter/kis_filter_registry.h"
 #include "filter/kis_filter_configuration.h"
 #include "filter/kis_filter.h"
@@ -589,7 +590,8 @@ void KisKraSaverTest::testRoundTripCicp()
     QFETCH(ColorPrimaries, primaries);
     QFETCH(TransferCharacteristics, transfer);
     QVector<double> colorants;
-    const KoColorProfile *profile = KoColorSpaceRegistry::instance()->profileFor(colorants, primaries, transfer);
+
+    const KoColorProfile *profile = KoColorSpaceRegistry::instance()->profileFor(KoColorProfileQuery(primaries, transfer));
 
     QRect imageRect(0,0,512,512);
     const KoColorSpace * cs = KoColorSpaceRegistry::instance()->colorSpace(RGBAColorModelID.id(), Integer8BitsColorDepthID.id(), profile);

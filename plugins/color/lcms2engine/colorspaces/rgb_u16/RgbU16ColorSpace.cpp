@@ -18,6 +18,7 @@
 #include "kis_dom_utils.h"
 #include <KoColorConversions.h>
 #include <KoColorSpacePreserveLightnessUtils.h>
+#include <KoColorProfileQuery.h>
 
 RgbU16ColorSpace::RgbU16ColorSpace(const QString &name, KoColorProfile *p) :
     LcmsColorSpace<KoBgrU16Traits>(colorSpaceId(), name, TYPE_BGRA_16, cmsSigRgbData, p)
@@ -120,8 +121,8 @@ QList<KoColorConversionTransformationFactory *> RgbU16ColorSpaceFactory::colorCo
         && profile->getColorPrimaries() != PRIMARIES_UNSPECIFIED) {
 
         KoColorSpaceRegistry *registry = KoColorSpaceRegistry::instance();
-        QVector<double> colorants;
-        QString linear = registry->profileFor(colorants, profile->getColorPrimaries(), TRC_LINEAR)->name();
+        KoColorProfileQuery query(profile->getColorPrimaries(), TRC_LINEAR);
+        QString linear = registry->profileFor(query)->name();
 
         LcmsRGBP2020PQColorSpaceFactoryWrapper<RgbU16ColorSpaceFactory> factory(profile->name(), linear);
         return factory.colorConversionLinks();

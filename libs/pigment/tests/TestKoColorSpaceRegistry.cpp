@@ -11,6 +11,7 @@
 #include <KoColorSpaceRegistry.h>
 #include <KoColorModelStandardIds.h>
 #include <KoColorProfile.h>
+#include <KoColorProfileQuery.h>
 #include <QColorSpace>
 
 TestBaseColorSpaceRegistry::TestBaseColorSpaceRegistry()
@@ -84,8 +85,8 @@ void TestBaseColorSpaceRegistry::testQColorSpaceConversionRoundtrip()
     QFETCH(int, primaries);
     QFETCH(int, transfer);
 
-    QVector<double> colorants;
-    const KoColorProfile *reference = KoColorSpaceRegistry::instance()->profileFor(colorants, ColorPrimaries(primaries), TransferCharacteristics(transfer));
+    KoColorProfileQuery query((ColorPrimaries(primaries)), TransferCharacteristics(transfer));
+    const KoColorProfile *reference = KoColorSpaceRegistry::instance()->profileFor(query);
     QVERIFY(reference);
 
     QColorSpace space = KoColorSpaceRegistry::instance()->QColorSpaceForProfile(reference);

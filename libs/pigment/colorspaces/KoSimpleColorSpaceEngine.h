@@ -24,10 +24,8 @@ public:
     const KoColorProfile* addProfile(const QByteArray &data) override { Q_UNUSED(data); return 0; }
     void removeProfile(const QString &profile ) override { Q_UNUSED(profile); }
 
-    const KoColorProfile * getProfile(const QVector<double> &colorants, ColorPrimaries colorPrimaries, TransferCharacteristics transferFunction) override {
-        Q_UNUSED(colorants);
-        Q_UNUSED(colorPrimaries);
-        Q_UNUSED(transferFunction);
+    const KoColorProfile * getProfile(const KoColorProfileQuery &query) override {
+        Q_UNUSED(query);
         return nullptr;
     }
 };

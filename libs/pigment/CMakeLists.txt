@@ -34,6 +34,7 @@ set(kritapigment_SRCS
     KoColorSpaceFactory.cpp
     KoColorSpaceMaths.cpp
     KoColorimetryUtils.cpp
+    KoColorProfileQuery.h
     KoCmykColorSpaceMaths.cpp
     KoLabColorSpaceMaths.cpp
     KoColorSpaceRegistry.cpp
@@ -80,6 +81,11 @@ if(MSVC OR (WIN32 AND "${CMAKE_CXX_COMPILER_ID}" STREQUAL "Intel"))
 endif()
 
 kis_add_library(kritapigment SHARED ${kritapigment_SRCS})
+
+target_sources(kritapigment
+  PRIVATE
+    KoColorProfileQuery.h
+)
 
 generate_export_header(kritapigment)
 

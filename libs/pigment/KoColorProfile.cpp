@@ -86,14 +86,16 @@ ColorPrimaries KoColorProfile::getColorPrimaries() const
         bool match = false;
         if (hasColorants()) {
             QVector<KoColorimetryUtils::xyY> col = getColorantsxyY();
-            if (col.size()<8) {
-                KIS_SAFE_ASSERT_RECOVER_RETURN_VALUE(col.size() < 8, PRIMARIES_UNSPECIFIED);
+            if (col.size()<3) {
+                KIS_SAFE_ASSERT_RECOVER_RETURN_VALUE(col.size() < 3, PRIMARIES_UNSPECIFIED);
                 //too few colorants.
                 d->primaries = int(primaries);
                 return (primaries);
             }
-            QVector<double> colorants = {wp.x, wp.y, col[0].x, col[0].y, col[1].x, col[1].y, col[2].x, col[2].y};
-            QVector<double> compare;
+            QVector<KoColorimetryUtils::xyY> colorants = col;
+            colorants.append(wp);
+            QVector<KoColorimetryUtils::xy> compare;
+            KoColorimetryUtils::xy wp2;
 
             QVector<ColorPrimaries> primariesList = {PRIMARIES_ITU_R_BT_709_5, PRIMARIES_ITU_R_BT_601_6, PRIMARIES_ITU_R_BT_470_6_SYSTEM_M,
                                                      PRIMARIES_ITU_R_BT_2020_2_AND_2100_0, PRIMARIES_SMPTE_EG_432_1, PRIMARIES_SMPTE_RP_431_2,
@@ -101,14 +103,16 @@ ColorPrimaries KoColorProfile::getColorPrimaries() const
                                                      PRIMARIES_ADOBE_RGB_1998, PRIMARIES_PROPHOTO, PRIMARIES_ITU_R_BT_470_6_SYSTEM_B_G};
 
             for (ColorPrimaries check: primariesList) {
-                colorantsForType(check, compare);
-                if (compare.size() <8) {
-                    KIS_SAFE_ASSERT_RECOVER(compare.size() < 8) { continue; }
+                colorantsForType(check, wp2, compare);
+                if (compare.size() <3) {
+                    KIS_SAFE_ASSERT_RECOVER(compare.size() < 3) { continue; }
                     //too few colorants, skip.
                 }
+                compare.append(wp2);
                 match = true;
                 for (int i=0; i<colorants.size(); i++) {
-                    match = std::fabs(colorants[i] - compare[i]) < 0.00001;
+                    match = std::fabs(colorants[i].x - compare[i].x) < 0.0001
+                        && std::fabs(colorants[i].y - compare[i].y) < 0.0001;
                     if (!match) {
                         break;
                     }
@@ -159,97 +163,122 @@ QString KoColorProfile::getColorPrimariesName(ColorPrimaries primaries)
     return QStringLiteral("Unspecified");
 }
 
-void KoColorProfile::colorantsForType(ColorPrimaries primaries, QVector<double> &colorants)
+void KoColorProfile::colorantsForType(ColorPrimaries primaries,
+                                      KoColorimetryUtils::xy &whitePoint,
+                                      QVector<KoColorimetryUtils::xy> &colorants,
+                                      const bool prequantized)
 {
+    KoColorimetryUtils::Colorimetry c = KoColorimetryUtils::Colorimetry::BT709;
     switch (ColorPrimaries(primaries)) {
     case PRIMARIES_UNSPECIFIED:
         break;
     case PRIMARIES_ITU_R_BT_470_6_SYSTEM_M:
         // Unquantized.
-        colorants = {0.310, 0.316};
-        colorants.append({0.67, 0.33});
-        colorants.append({0.21, 0.71});
-        colorants.append({0.14, 0.08});
+        c = KoColorimetryUtils::Colorimetry::PAL_M;
+        whitePoint = c.white().toxy();
+        colorants = {c.red().toxy(), c.green().toxy(), c.blue().toxy()};
         //Illuminant C
         break;
     case PRIMARIES_ITU_R_BT_470_6_SYSTEM_B_G:
         // Unquantized.
-        colorants = {0.3127, 0.3290};
-        colorants.append({0.64, 0.33});
-        colorants.append({0.29, 0.60});
-        colorants.append({0.1500, 0.06});
+        c = KoColorimetryUtils::Colorimetry::PAL;
+        whitePoint = c.white().toxy();
+        colorants = {c.red().toxy(), c.green().toxy(), c.blue().toxy()};
         break;
     case PRIMARIES_ITU_R_BT_601_6:
-        colorants = {0.3127, 0.3290};
-        colorants.append({0.630, 0.340});
-        colorants.append({0.310, 0.595});
-        colorants.append({0.155, 0.070});
+        c = KoColorimetryUtils::Colorimetry::NTSC;
+        whitePoint = c.white().toxy();
+        colorants = {c.red().toxy(), c.green().toxy(), c.blue().toxy()};
         break;
     case PRIMARIES_SMPTE_240M:
-        colorants = {0.3127, 0.3290};
-        colorants.append({0.630, 0.340});
+        whitePoint = {0.3127, 0.3290};
+        colorants = {{0.630, 0.340}};
         colorants.append({0.310, 0.595});
         colorants.append({0.155, 0.070});
         break;
     case PRIMARIES_GENERIC_FILM:
-        colorants = {0.310, 0.316};
-        colorants.append({0.681, 0.319});
-        colorants.append({0.243, 0.692});
-        colorants.append({0.145, 0.049});
+        c = KoColorimetryUtils::Colorimetry::GenericFilm;
+        whitePoint = c.white().toxy();
+        colorants = {c.red().toxy(), c.green().toxy(), c.blue().toxy()};
         //Illuminant C
         break;
     case PRIMARIES_ITU_R_BT_2020_2_AND_2100_0:
         //prequantization courtesy of Elle Stone.
-        colorants = {0.3127, 0.3290};
-        colorants.append({0.708012540607, 0.291993664388});
-        colorants.append({0.169991652439, 0.797007778423});
-        colorants.append({0.130997824007, 0.045996550894});
+
+        if (prequantized) {
+            whitePoint = {0.3127, 0.3290};
+            colorants = {{0.708012540607, 0.291993664388}};
+            colorants.append({0.169991652439, 0.797007778423});
+            colorants.append({0.130997824007, 0.045996550894});
+        } else {
+            c = KoColorimetryUtils::Colorimetry::BT2020;
+            whitePoint = c.white().toxy();
+            colorants = {c.red().toxy(), c.green().toxy(), c.blue().toxy()};
+        }
         break;
     case PRIMARIES_SMPTE_ST_428_1:
-        colorants = {1.0/3, 1.0/3};
-        colorants.append({1.0, 0});
-        colorants.append({0, 1.0});
-        colorants.append({0, 0});
+        c = KoColorimetryUtils::Colorimetry::CIEXYZ;
+        whitePoint = c.white().toxy();
+        colorants = {c.red().toxy(), c.green().toxy(), c.blue().toxy()};
         break;
     case PRIMARIES_SMPTE_RP_431_2:
-        colorants = {0.314, 0.351};
-        colorants.append({0.6800, 0.3200});
-        colorants.append({0.2650, 0.6900});
-        colorants.append({0.1500, 0.0600});
+        c = KoColorimetryUtils::Colorimetry::DCIP3;
+        whitePoint = c.white().toxy();
+        colorants = {c.red().toxy(), c.green().toxy(), c.blue().toxy()};
         break;
     case PRIMARIES_SMPTE_EG_432_1:
-        colorants = {0.3127, 0.3290};
-        colorants.append({0.6800, 0.3200});
-        colorants.append({0.2650, 0.6900});
-        colorants.append({0.1500, 0.0600});
+        c = KoColorimetryUtils::Colorimetry::DisplayP3;
+        whitePoint = c.white().toxy();
+        colorants = {c.red().toxy(), c.green().toxy(), c.blue().toxy()};
         break;
     case PRIMARIES_EBU_Tech_3213_E:
-        colorants = {0.3127, 0.3290};
-        colorants.append({0.63, 0.34});
+        whitePoint = {0.3127, 0.3290};
+        colorants = {{0.63, 0.34}};
         colorants.append({0.295, 0.605});
         colorants.append({0.155, 0.077});
         break;
     case PRIMARIES_PROPHOTO:
-        //prequantization courtesy of Elle Stone.
-        colorants = {0.3457, 0.3585};
-        colorants.append({0.7347, 0.2653});
-        colorants.append({0.1596, 0.8404});
-        colorants.append({0.0366, 0.0001});
+
+        if (prequantized) {
+            //prequantization courtesy of Elle Stone.
+            whitePoint = {0.3457, 0.3585};
+            colorants = {{0.7347, 0.2653}};
+            colorants.append({0.1596, 0.8404});
+            colorants.append({0.0366, 0.0001});
+        } else {
+            whitePoint = {0.3457, 0.3585};
+            colorants = {{0.734699, 0.265301}};
+            colorants.append({0.159597, 0.840403});
+            colorants.append({0.036598, 0.000105});
+        }
+
         break;
     case PRIMARIES_ADOBE_RGB_1998:
-        //prequantization courtesy of Elle Stone.
-        colorants = {0.3127, 0.3290};
-        colorants.append({0.639996511, 0.329996864});
-        colorants.append({0.210005295, 0.710004866});
-        colorants.append({0.149997606, 0.060003644});
+        if (prequantized) {
+            //prequantization courtesy of Elle Stone.
+            whitePoint = {0.3127, 0.3290};
+            colorants = {{0.639996511, 0.329996864}};
+            colorants.append({0.210005295, 0.710004866});
+            colorants.append({0.149997606, 0.060003644});
+        }  else {
+            c = KoColorimetryUtils::Colorimetry::AdobeRGB;
+            whitePoint = c.white().toxy();
+            colorants = {c.red().toxy(), c.green().toxy(), c.blue().toxy()};
+        }
         break;
     case PRIMARIES_ITU_R_BT_709_5:
     default:
-        // Prequantized colorants, courtesy of Elle Stone
-        colorants = {0.3127, 0.3290};
-        colorants.append({0.639998686, 0.330010138});
-        colorants.append({0.300003784, 0.600003357});
-        colorants.append({0.150002046, 0.059997204});
+        if (prequantized) {
+            // Prequantized colorants, courtesy of Elle Stone
+            whitePoint = {0.3127, 0.3290};
+            colorants = {{0.639998686, 0.330010138}};
+            colorants.append({0.300003784, 0.600003357});
+            colorants.append({0.150002046, 0.059997204});
+        }  else {
+            c = KoColorimetryUtils::Colorimetry::BT709;
+            whitePoint = c.white().toxy();
+            colorants = {c.red().toxy(), c.green().toxy(), c.blue().toxy()};
+        }
         break;
 
     }

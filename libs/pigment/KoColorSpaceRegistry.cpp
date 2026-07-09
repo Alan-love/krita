@@ -22,6 +22,7 @@
 #include "KoColorProfile.h"
 #include "KoColorConversionCache.h"
 #include "KoColorConversionSystem.h"
+#include "KoColorProfileQuery.h"
 
 #include "colorspaces/KoAlphaColorSpace.h"
 #include "colorspaces/KoLabColorSpace.h"
@@ -699,32 +700,32 @@ const KoColorProfile *KoColorSpaceRegistry::p709SRGBProfile() const
     return profileByName("sRGB-elle-V2-srgbtrc.icc");
 }
 
-const KoColorProfile *KoColorSpaceRegistry::profileFor(const QVector<double> &colorants, ColorPrimaries colorPrimaries, TransferCharacteristics transferFunction) const
+const KoColorProfile *KoColorSpaceRegistry::profileFor(const KoColorProfileQuery &query, const bool generate) const
 {
-    if (colorPrimaries == PRIMARIES_ITU_R_BT_709_5) {
-        if (transferFunction == TRC_IEC_61966_2_1) {
+    if (query.primaries == PRIMARIES_ITU_R_BT_709_5) {
+        if (query.transfer == TRC_IEC_61966_2_1) {
             return p709SRGBProfile();
-        } else if (transferFunction == TRC_LINEAR) {
+        } else if (query.transfer == TRC_LINEAR) {
             return p709G10Profile();
         }
     }
 
-    if (colorPrimaries == PRIMARIES_ITU_R_BT_2020_2_AND_2100_0) {
-        if (transferFunction == TRC_ITU_R_BT_2100_0_PQ) {
+    if (query.primaries == PRIMARIES_ITU_R_BT_2020_2_AND_2100_0) {
+        if (query.transfer == TRC_ITU_R_BT_2100_0_PQ) {
             return p2020PQProfile();
-        } else if (transferFunction == TRC_LINEAR) {
+        } else if (query.transfer == TRC_LINEAR) {
             return p2020G10Profile();
         }
     }
 
-    QList<const KoColorProfile*> list = d->profileStorage.profilesFor(colorants, colorPrimaries, transferFunction);
+    QList<const KoColorProfile*> list = d->profileStorage.profilesFor(query.primaries, query.transfer);
     if (!list.empty()) {
         return list.first();
     }
 
     KoColorSpaceEngine *engine = KoColorSpaceEngineRegistry::instance()->get("icc");
-    if (engine) {
-        return engine->getProfile(colorants, colorPrimaries, transferFunction);
+    if (engine && generate) {
+        return engine->getProfile(query);
     }
 
     return nullptr;
@@ -766,7 +767,7 @@ const KoColorProfile *KoColorSpaceRegistry::profileForQColorSpace(const QColorSp
         profile = createColorProfile(RGBAColorModelID.id(), Integer8BitsColorDepthID.id(), profileData);
     } else {
         QVector<double> colorants;
-        profile = profileFor(colorants, primaries, transfer);
+        profile = profileFor(KoColorProfileQuery(primaries, transfer));
     }
 #else
     // We want to test RGB before testing wether we are dealing with a LUT, because we want to funnel rec2020 pq into loading our profile.
@@ -780,9 +781,8 @@ const KoColorProfile *KoColorSpaceRegistry::profileForQColorSpace(const QColorSp
         ColorPrimaries primaries = mapQColorSpaceColorPrimaries.value(space.primaries(), PRIMARIES_UNSPECIFIED);
         TransferCharacteristics transfer = mapQColorSpaceColorTransfer.value(space.transferFunction(), TRC_UNSPECIFIED);
         // In qt6.9 we can get the 'primary points'.
-        QVector<double> colorants;
-        if (!profile && (!colorants.isEmpty() || primaries != PRIMARIES_UNSPECIFIED) && transfer != TRC_UNSPECIFIED) {
-            profile = profileFor(colorants, primaries, transfer);
+        if (!profile && (primaries != PRIMARIES_UNSPECIFIED) && transfer != TRC_UNSPECIFIED) {
+            profile = profileFor(KoColorProfileQuery(primaries, transfer));
         }
     } else if (space.colorModel() == QColorSpace::ColorModel::Gray) {
         TransferCharacteristics transfer = mapQColorSpaceColorTransfer.value(space.transferFunction(), TRC_UNSPECIFIED);
@@ -792,9 +792,10 @@ const KoColorProfile *KoColorSpaceRegistry::profileForQColorSpace(const QColorSp
 
         }
         QVector<double> colorants;
-        colorants << space.whitePoint().x() << space.whitePoint().y();
-        if (!profile && !colorants.isEmpty() && transfer != TRC_UNSPECIFIED) {
-            profile = profileFor(colorants, PRIMARIES_UNSPECIFIED, transfer);
+        KoColorProfileQuery query(PRIMARIES_UNSPECIFIED, transfer);
+        query.whitePoint = {space.whitePoint().x(), space.whitePoint().y()};
+        if (!profile && query.isValid()) {
+            profile = profileFor(query);
         }
     }
 #endif

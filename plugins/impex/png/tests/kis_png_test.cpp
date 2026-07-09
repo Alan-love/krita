@@ -10,6 +10,7 @@
 #include <simpletest.h>
 #include <QCoreApplication>
 
+#include <KoColorProfileQuery.h>
 #include "filestest.h"
 
 #include <testui.h>
@@ -183,7 +184,7 @@ void KisPngTest::testRoundtripCicpIccProfile()
     QFETCH(ColorPrimaries, primaries);
     QFETCH(TransferCharacteristics, transfer);
     QVector<double> colorants;
-    const KoColorProfile *profile = KoColorSpaceRegistry::instance()->profileFor(colorants, primaries, transfer);
+    const KoColorProfile *profile = KoColorSpaceRegistry::instance()->profileFor(KoColorProfileQuery(primaries, transfer));
 
     QRect imageRect(0,0,512,512);
     const KoColorSpace * cs = KoColorSpaceRegistry::instance()->colorSpace(RGBAColorModelID.id(), Integer8BitsColorDepthID.id(), profile);

@@ -18,6 +18,7 @@
 #include <QSharedPointer>
 
 #include <KoColorConversions.h>
+#include <KoColorProfileQuery.h>
 #include <kis_assert.h>
 
 #include "LcmsColorProfileContainer.h"
@@ -104,42 +105,41 @@ IccColorProfile::IccColorProfile(const QByteArray &rawData)
     init();
 }
 
-IccColorProfile::IccColorProfile(const QVector<double> &colorants,
-                                 const ColorPrimaries colorPrimariesType,
-                                 const TransferCharacteristics transferFunction)
+IccColorProfile::IccColorProfile(const KoColorProfileQuery &query)
 : KoColorProfile(QString()), d(new Private)
 {
     d->shared = QSharedPointer<Private::Shared>::create();
 
-    KIS_SAFE_ASSERT_RECOVER_RETURN(
-        (!colorants.isEmpty() || colorPrimariesType != PRIMARIES_UNSPECIFIED)
-        && transferFunction != TRC_UNSPECIFIED);
+    KIS_SAFE_ASSERT_RECOVER_RETURN(query.isValid());
 
     cmsCIExyY whitePoint;
 
-    QVector<double> modifiedColorants = colorants;
+    QVector<KoColorimetryUtils::xy> modifiedColorants = query.rgbColorants;
 
-    KoColorProfile::colorantsForType(colorPrimariesType, modifiedColorants);
+    KoColorimetryUtils::xy wp = query.whitePoint;
+
+    KoColorProfile::colorantsForType(query.primaries, wp, modifiedColorants, true);
+
 
     if (modifiedColorants.size()>=2) {
-        whitePoint.x = modifiedColorants[0];
-        whitePoint.y = modifiedColorants[1];
+        whitePoint.x = wp.x;
+        whitePoint.y = wp.y;
         whitePoint.Y = 1.0;
     }
 
-    cmsToneCurve *mainCurve = LcmsColorProfileContainer::transferFunction(transferFunction);
+    cmsToneCurve *mainCurve = LcmsColorProfileContainer::transferFunction(query.transfer);
 
     cmsCIExyYTRIPLE primaries;
 
-    if (modifiedColorants.size()>2 && modifiedColorants.size() <= 8) {
-        primaries = {{modifiedColorants[2], modifiedColorants[3], 1.0},
-                     {modifiedColorants[4], modifiedColorants[5], 1.0},
-                     {modifiedColorants[6], modifiedColorants[7], 1.0}};
+    if (modifiedColorants.size()>0 && modifiedColorants.size() <= 3) {
+        primaries = {{modifiedColorants[0].x, modifiedColorants[0].y, 1.0},
+                     {modifiedColorants[1].x, modifiedColorants[1].y, 1.0},
+                     {modifiedColorants[2].x, modifiedColorants[2].y, 1.0}};
     }
 
     cmsHPROFILE iccProfile = nullptr;
 
-    if (colorants.size() == 2) {
+    if (query.isGrayscale()) {
         iccProfile = cmsCreateGrayProfile(&whitePoint, mainCurve);
         // cleanup
         cmsFreeToneCurve(mainCurve);
@@ -153,30 +153,30 @@ IccColorProfile::IccColorProfile(const QVector<double> &colorants,
 
     if (!iccProfile) {
         qWarning() << "WARNING: LCMS failed to create a profile for the requested parameters";
-        qWarning().nospace() << "    transfer function: " << getTransferCharacteristicName(transferFunction) << " (" << transferFunction << ")";
-        qWarning().nospace() << "    named primaries:" << getColorPrimariesName(colorPrimariesType) << " (" << colorPrimariesType << ")";
-        qWarning() << "    requested colorants:" << colorants;
+        qWarning().nospace() << "    transfer function: " << getTransferCharacteristicName(query.transfer) << " (" << query.transfer << ")";
+        qWarning().nospace() << "    named primaries:" << getColorPrimariesName(query.primaries) << " (" << query.primaries << ")";
+        qWarning() << "    requested colorants:" << query.rgbColorants;
         // leave the profile in invalid state and return
         return;
     }
 
     QStringList name;
     name.append("Krita");
-    if (colorPrimariesType == PRIMARIES_ITU_R_BT_2020_2_AND_2100_0
-        && (transferFunction == TRC_ITU_R_BT_2100_0_PQ || transferFunction == TRC_ITU_R_BT_2100_0_HLG)) {
+    if (query.primaries == PRIMARIES_ITU_R_BT_2020_2_AND_2100_0
+        && (query.transfer == TRC_ITU_R_BT_2100_0_PQ || query.transfer == TRC_ITU_R_BT_2100_0_HLG)) {
         name.append(QStringLiteral("Rec. 2100"));
     } else {
-        name.append(KoColorProfile::getColorPrimariesName(colorPrimariesType));
+        name.append(KoColorProfile::getColorPrimariesName(query.primaries));
     }
-    name.append(KoColorProfile::getTransferCharacteristicName(transferFunction));
+    name.append(KoColorProfile::getTransferCharacteristicName(query.transfer));
 
     cmsCIEXYZ media_blackpoint = {0.0, 0.0, 0.0};
     cmsWriteTag (iccProfile, cmsSigMediaBlackPointTag, &media_blackpoint);
 
-    if (transferFunction == TRC_ITU_R_BT_2100_0_PQ) {
+    if (query.transfer == TRC_ITU_R_BT_2100_0_PQ) {
         double nits = 80.0;
-        LcmsPredefinedPipelineFunctions::setPerceptualQuantizerAToBDummyPipeline(iccProfile, cmsSigAToB0Tag, colorPrimariesType, nits);
-        LcmsPredefinedPipelineFunctions::setPerceptualQuantizerBToADummyPipeline(iccProfile, cmsSigBToA0Tag, colorPrimariesType, nits);
+        LcmsPredefinedPipelineFunctions::setPerceptualQuantizerAToBDummyPipeline(iccProfile, cmsSigAToB0Tag, query.primaries, nits);
+        LcmsPredefinedPipelineFunctions::setPerceptualQuantizerBToADummyPipeline(iccProfile, cmsSigBToA0Tag, query.primaries, nits);
         LcmsPredefinedPipelineFunctions::setDiffuseWhitePerceptualQuantizer(iccProfile, nits);
         // Otherwise this is recognised as a matrix shaper...
         cmsWriteTag(iccProfile, cmsSigRedColorantTag, nullptr);
@@ -190,10 +190,11 @@ IccColorProfile::IccColorProfile(const QVector<double> &colorants,
 
     }
 
-    if (colorPrimariesType < 256 && transferFunction < 256) {
+    // we need to not write when primaries are unspecified, because otherwise kocolorprofile's own matching mechanism breaks.
+    if (query.primaries < 256 && query.primaries != PRIMARIES_UNSPECIFIED && query.transfer < 256) {
         cmsVideoSignalType cicpValues;
-        cicpValues.ColourPrimaries = quint8(colorPrimariesType);
-        cicpValues.TransferCharacteristics = quint8(transferFunction);
+        cicpValues.ColourPrimaries = quint8(query.primaries);
+        cicpValues.TransferCharacteristics = quint8(query.transfer);
         cicpValues.MatrixCoefficients = 0;
         cicpValues.VideoFullRangeFlag = 0; // According to the H.273 spec, 0 is the default value.
         cmsWriteTag (iccProfile, cmsSigcicpTag, &cicpValues);
@@ -211,7 +212,9 @@ IccColorProfile::IccColorProfile(const QVector<double> &colorants,
     cmsMLUfree (mlu);
 
     // Still setting this, as it also writes the non H.273 values.
-    setCharacteristics(colorPrimariesType, transferFunction);
+    if (query.primaries != PRIMARIES_UNSPECIFIED) {
+        setCharacteristics(query.primaries, query.transfer);
+    }
 
     setRawData(LcmsColorProfileContainer::lcmsProfileToByteArray(iccProfile));
     cmsCloseProfile(iccProfile);

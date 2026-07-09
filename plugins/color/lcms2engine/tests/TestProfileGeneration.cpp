@@ -14,6 +14,7 @@
 
 #include <KoColorConversions.h>
 #include <KoColorTransferFunctions.h>
+#include <KoColorProfileQuery.h>
 #include <kis_debug.h>
 #include <KoColorSpaceEngine.h>
 #include <KoColorProfile.h>
@@ -391,8 +392,8 @@ void TestProfileGeneration::testCICPwriting()
 {
     QFETCH(ColorPrimaries, primaries);
     QFETCH(TransferCharacteristics, transfer);
-    QVector<double> colorants;
-    const KoColorProfile *profile = KoColorSpaceRegistry::instance()->profileFor(colorants, primaries, transfer);
+    KoColorProfileQuery query(primaries, transfer);
+    const KoColorProfile *profile = KoColorSpaceRegistry::instance()->profileFor(query);
 
     QVERIFY(profile);
 

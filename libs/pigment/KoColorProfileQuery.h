@@ -8,6 +8,7 @@
 
 #include <KoColorimetryUtils.h>
 #include <KoColorProfileConstants.h>
+#include <QDebug>
 
 /**
  * @brief The KoColorProfileQuery struct
@@ -44,5 +45,19 @@ struct KoColorProfileQuery {
             && !(whitePoint == KoColorimetryUtils::xy());
     }
 };
+
+inline QDebug operator<<(QDebug debug, const KoColorProfileQuery &value) {
+    QDebugStateSaver saver(debug);
+    debug.nospace() << "KoColorProfileQuery("
+                    << " WhitePoint:" << value.whitePoint
+                    << " rgbColorants:" << value.rgbColorants
+                    << " primariesType:" << value.primaries
+                    << " transferFunction:" << value.transfer
+                    << " isGreyscale:" << value.isGrayscale()
+                    << " isRgb:" << value.isRgb()
+                    << " isValid:" << value.isValid()
+                    << ")";
+    return debug;
+}
 
 #endif // KOCOLORPROFILEQUERY_H

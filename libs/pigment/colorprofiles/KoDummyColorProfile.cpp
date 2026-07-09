@@ -91,20 +91,12 @@ QVector<KoColorimetryUtils::XYZ> KoDummyColorProfile::getColorantsXYZ() const
 QVector<KoColorimetryUtils::xyY> KoDummyColorProfile::getColorantsxyY() const
 {
     QVector<KoColorimetryUtils::xyY> result;
-    /*
-    auto srgb = getColorantsXYZ();
-    result[0] = srgb[0] / (srgb[0] + srgb[1] + srgb[2]);
-    result[1] = srgb[1] / (srgb[0] + srgb[1] + srgb[2]);
-    result[2] = srgb[1];
 
-    result[3] = srgb[3] / (srgb[3] + srgb[4] + srgb[5]);
-    result[4] = srgb[4] / (srgb[3] + srgb[4] + srgb[5]);
-    result[5] = srgb[4];
+    QVector<KoColorimetryUtils::XYZ> srgb = getColorantsXYZ();
 
-    result[6] = srgb[6] / (srgb[6] + srgb[7] + srgb[8]);
-    result[7] = srgb[7] / (srgb[6] + srgb[7] + srgb[8]);
-    result[8] = srgb[7];
-*/
+    Q_FOREACH (KoColorimetryUtils::XYZ c, srgb) {
+        result.append(c.toxyY());
+    }
 
     return result;
 }

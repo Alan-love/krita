@@ -220,7 +220,7 @@ public:
      * @param colorants the vector to fill.
      * @param prequantized whether to get the prequantized values, these are used for precision when encoding to icc only.
      */
-    static void colorantsForType(ColorPrimaries primaries, KoColorimetryUtils::xy &whitePoint, QVector<KoColorimetryUtils::xy> &colorants, const bool prequantized = false);
+    static void colorantsForType(ColorPrimaries primaries, KoColorimetryUtils::xy &whitePoint, QList<KoColorimetryUtils::xy> &colorants, const bool prequantized = false);
 
     /**
      * @brief getTransferCharacteristics

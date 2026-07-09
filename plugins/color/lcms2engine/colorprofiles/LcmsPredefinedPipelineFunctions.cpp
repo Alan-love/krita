@@ -60,7 +60,7 @@ static QMatrix4x4 rgbMatrix(ColorPrimaries primaries, double factor = 1.0, doubl
     // Calculation: http://brucelindbloom.com/index.html?Eqn_RGB_XYZ_Matrix.html
     // Calculates XYZ with Y = 1.0
     KoColorimetryUtils::xy wpXY;
-    QVector<KoColorimetryUtils::xy> col;
+    QList<KoColorimetryUtils::xy> col;
     KoColorProfile::colorantsForType(primaries, wpXY, col, true);
 
     QMatrix4x4 initialXYZMatrix(

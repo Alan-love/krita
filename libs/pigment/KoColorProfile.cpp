@@ -94,7 +94,7 @@ ColorPrimaries KoColorProfile::getColorPrimaries() const
             }
             QVector<KoColorimetryUtils::xyY> colorants = col;
             colorants.append(wp);
-            QVector<KoColorimetryUtils::xy> compare;
+            QList<KoColorimetryUtils::xy> compare;
             KoColorimetryUtils::xy wp2;
 
             QVector<ColorPrimaries> primariesList = {PRIMARIES_ITU_R_BT_709_5, PRIMARIES_ITU_R_BT_601_6, PRIMARIES_ITU_R_BT_470_6_SYSTEM_M,
@@ -165,7 +165,7 @@ QString KoColorProfile::getColorPrimariesName(ColorPrimaries primaries)
 
 void KoColorProfile::colorantsForType(ColorPrimaries primaries,
                                       KoColorimetryUtils::xy &whitePoint,
-                                      QVector<KoColorimetryUtils::xy> &colorants,
+                                      QList<KoColorimetryUtils::xy> &colorants,
                                       const bool prequantized)
 {
     KoColorimetryUtils::Colorimetry c = KoColorimetryUtils::Colorimetry::BT709;

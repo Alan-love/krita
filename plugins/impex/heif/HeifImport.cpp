@@ -326,7 +326,7 @@ KisImportExportErrorCode HeifImport::convert(KisDocument *document, QIODevice *i
                 KoColorProfileQuery query(primaries, transferCharacteristic);
                 query.whitePoint = {static_cast<double>(nclx->color_primary_white_x),
                                     static_cast<double>(nclx->color_primary_white_y)};
-                query.rgbColorants = [&]() -> QVector<KoColorimetryUtils::xy> {
+                query.rgbColorants = [&]() -> QList<KoColorimetryUtils::xy> {
                     if (primaries == PRIMARIES_UNSPECIFIED) {
                         return {};
                     } else {

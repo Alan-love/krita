@@ -114,7 +114,7 @@ IccColorProfile::IccColorProfile(const KoColorProfileQuery &query)
 
     cmsCIExyY whitePoint;
 
-    QVector<KoColorimetryUtils::xy> modifiedColorants = query.rgbColorants;
+    QList<KoColorimetryUtils::xy> modifiedColorants = query.rgbColorants;
 
     KoColorimetryUtils::xy wp = query.whitePoint;
 

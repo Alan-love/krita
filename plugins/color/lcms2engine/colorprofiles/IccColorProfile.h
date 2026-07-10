@@ -64,6 +64,7 @@ public:
         virtual bool hasColorants() const = 0;
         virtual QVector <KoColorimetryUtils::XYZ> getColorantsXYZ() const = 0;
         virtual QVector <KoColorimetryUtils::xyY> getColorantsxyY() const = 0;
+        virtual std::optional<double> hdrReferenceWhite() const = 0;
         virtual KoColorimetryUtils::XYZ getWhitePointXYZ() const = 0;
         virtual KoColorimetryUtils::xyY getWhitePointxyY() const = 0;
         virtual QVector <double> getEstimatedTRC() const = 0;
@@ -109,6 +110,7 @@ public:
     QVector <KoColorimetryUtils::xyY> getColorantsxyY() const override;
     KoColorimetryUtils::XYZ getWhitePointXYZ() const override;
     KoColorimetryUtils::xyY getWhitePointxyY() const override;
+    std::optional<double> hdrReferenceWhite() const override;
     QVector <qreal> getEstimatedTRC() const override;
     bool compareTRC(TransferCharacteristics characteristics, float error) const override;
     void linearizeFloatValue(QVector <qreal> & Value) const override;

@@ -173,8 +173,8 @@ IccColorProfile::IccColorProfile(const KoColorProfileQuery &query)
     cmsCIEXYZ media_blackpoint = {0.0, 0.0, 0.0};
     cmsWriteTag (iccProfile, cmsSigMediaBlackPointTag, &media_blackpoint);
 
-    if (query.transfer == TRC_ITU_R_BT_2100_0_PQ) {
-        double nits = 80.0;
+    if (query.transfer == TRC_ITU_R_BT_2100_0_PQ && query.primaries != PRIMARIES_UNSPECIFIED) {
+        double nits = query.hdrReferenceWhite? *query.hdrReferenceWhite: 203.0;
         LcmsPredefinedPipelineFunctions::setPerceptualQuantizerAToBDummyPipeline(iccProfile, cmsSigAToB0Tag, query.primaries, nits);
         LcmsPredefinedPipelineFunctions::setPerceptualQuantizerBToADummyPipeline(iccProfile, cmsSigBToA0Tag, query.primaries, nits);
         LcmsPredefinedPipelineFunctions::setDiffuseWhitePerceptualQuantizer(iccProfile, nits);
@@ -409,6 +409,14 @@ KoColorimetryUtils::xyY IccColorProfile::getWhitePointxyY() const
         return d->shared->lcmsProfile->getWhitePointxyY();
     }
     return KoColorimetryUtils::xyY{0.34773, 0.35952, 1.0};
+}
+
+std::optional<double> IccColorProfile::hdrReferenceWhite() const
+{
+    if (d->shared->lcmsProfile) {
+        return d->shared->lcmsProfile->hdrReferenceWhite();
+    }
+    return std::nullopt;
 }
 QVector <qreal> IccColorProfile::getEstimatedTRC() const
 {

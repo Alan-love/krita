@@ -28,6 +28,8 @@ struct KoColorProfileQuery {
     ColorPrimaries primaries; /// CICP-compatible enum value representing the white point and primaries.
     TransferCharacteristics transfer; /// CICP-compatible enum value representing the transfer function.
 
+    std::optional<double> hdrReferenceWhite; /// Used for PQ profiles.
+
     inline bool isValid() const {
         return isGrayscale() || isRgb();
     }

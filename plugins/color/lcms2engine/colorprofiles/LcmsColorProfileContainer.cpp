@@ -21,6 +21,7 @@
 
 #include "DebugPigment.h"
 #include "kis_debug.h"
+#include "kis_dom_utils.h"
 
 #include <KisLazyStorage.h>
 #include <KisLazyValueWrapper.h>
@@ -84,6 +85,7 @@ public:
     bool adaptedFromD50;
     cmsCIEXYZ mediaWhitePoint;
     cmsCIExyY whitePoint;
+    std::optional<double> hdrReferenceWhite;
     cmsCIEXYZTRIPLE colorants;
     cmsToneCurve *redTRC {0};
     cmsToneCurve *greenTRC {0};
@@ -323,7 +325,15 @@ bool LcmsColorProfileContainer::init()
             cmsHANDLE dictionary = (cmsHANDLE) cmsReadTag(d->profile, cmsSigMetaTag);
             const cmsDICTentry *entry = cmsDictGetEntryList(dictionary);
             while (entry) {
-                dbgPigment << QString::fromWCharArray(entry->Name, -1) << QString::fromWCharArray(entry->Value, -1);;
+                QString name = QString::fromWCharArray(entry->Name, -1);
+                QString value =  QString::fromWCharArray(entry->Value, -1);
+                if (name.toLower() == "crwl") {
+                    // https://registry.color.org/dicttype-metadata/crwl
+                    double hdrReferenceWhite = KisDomUtils::toDouble(value);
+                    d->hdrReferenceWhite = std::make_optional(hdrReferenceWhite);
+
+                }
+                dbgPigment << name << value;
                 dbgPigment << entry->DisplayName << entry->DisplayValue;
                 entry = cmsDictNextEntry(entry);
             }
@@ -478,6 +488,11 @@ KoColorimetryUtils::XYZ LcmsColorProfileContainer::getWhitePointXYZ() const
 KoColorimetryUtils::xyY LcmsColorProfileContainer::getWhitePointxyY() const
 {
     return fromCIExyY(d->whitePoint);
+}
+
+std::optional<double> LcmsColorProfileContainer::hdrReferenceWhite() const
+{
+    return d->hdrReferenceWhite;
 }
 
 QVector <double> LcmsColorProfileContainer::getEstimatedTRC() const

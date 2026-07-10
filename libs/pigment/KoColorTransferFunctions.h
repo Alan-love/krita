@@ -35,7 +35,7 @@ static constexpr float multiplier16bit = 1.0f / max16bit;
 
 enum class ConversionPolicy { KeepTheSame, ApplyPQ, ApplyHLG, ApplySMPTE428 };
 
-ALWAYS_INLINE float applySmpte2048Curve(float x) noexcept
+ALWAYS_INLINE float applySmpte2048Curve(float x, float refWhite = 203.0) noexcept
 {
     const float m1 = 2610.0f / 4096.0f / 4.0f;
     const float m2 = 2523.0f / 4096.0f * 128.0f;
@@ -43,12 +43,12 @@ ALWAYS_INLINE float applySmpte2048Curve(float x) noexcept
     const float c2 = 2413.0f / 4096.0f * 32.0f;
     const float c3 = 2392.0f / 4096.0f * 32.0f;
     const float a4 = 1.0f;
-    const float x_p = powf(0.008f * std::max(0.0f, x), m1);
+    const float x_p = powf((refWhite/10000.0f) * std::max(0.0f, x), m1);
     const float res = powf((a1 + c2 * x_p) / (a4 + c3 * x_p), m2);
     return res;
 }
 
-ALWAYS_INLINE float removeSmpte2048Curve(float x) noexcept
+ALWAYS_INLINE float removeSmpte2048Curve(float x, float refWhite = 203.0) noexcept
 {
     const float m1_r = 4096.0f * 4.0f / 2610.0f;
     const float m2_r = 4096.0f / 2523.0f / 128.0f;
@@ -58,7 +58,7 @@ ALWAYS_INLINE float removeSmpte2048Curve(float x) noexcept
 
     const float x_p = powf(x, m2_r);
     const float res = powf(qMax(0.0f, x_p - a1) / (c2 - c3 * x_p), m1_r);
-    return res * 125.0f;
+    return res * (10000.0f/refWhite);
 }
 
 // From ITU Bt. 2390-8 pg. 31, this calculates the gamma for the nominal peak.
@@ -159,7 +159,7 @@ template<typename Arch>
 struct KoColorTransferFunctions {
     using float_v = typename KoStreamedMath<Arch>::float_v;
 
-    static ALWAYS_INLINE void removeSmpte2048Curve(float_v &x) noexcept
+    static ALWAYS_INLINE void removeSmpte2048Curve(float_v &x, float_v refWhite = 203.0) noexcept
     {
         constexpr float m1_r = 4096.0f * 4.0f / 2610.0f;
         constexpr float m2_r = 4096.0f / 2523.0f / 128.0f;
@@ -171,7 +171,7 @@ struct KoColorTransferFunctions {
         const float_v res =
             xsimd::pow(xsimd::max(float_v(0.0f), x_p - a1) / (c2 - c3 * x_p),
                        float_v(m1_r));
-        x = res * 125.0f;
+        x = res * (10000.0f/refWhite);
     }
 
     static ALWAYS_INLINE void removeHLGCurve(float_v &x) noexcept

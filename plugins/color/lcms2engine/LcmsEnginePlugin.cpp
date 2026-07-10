@@ -51,8 +51,6 @@
 #include "colorspaces/ycbcr_u16/YCbCrU16ColorSpace.h"
 #include "colorspaces/ycbcr_f32/YCbCrF32ColorSpace.h"
 
-#include "LcmsRGBP2020PQColorSpace.h"
-
 #include <KoConfig.h>
 
 #ifdef HAVE_OPENEXR
@@ -168,8 +166,15 @@ LcmsEnginePlugin::LcmsEnginePlugin(QObject *parent, const QVariantList &)
     KoColorProfile *rgbProfile = LcmsColorProfileContainer::createFromLcmsProfile(cmsCreate_sRGBProfile());
     registry->addProfile(rgbProfile);
 
-    KoColorProfile *rec2100pq = new IccColorProfile(KoColorProfileQuery(PRIMARIES_ITU_R_BT_2020_2_AND_2100_0, TRC_ITU_R_BT_2100_0_PQ));
-    registry->addProfile(rec2100pq);
+    KoColorProfileQuery query(PRIMARIES_ITU_R_BT_2020_2_AND_2100_0, TRC_ITU_R_BT_2100_0_PQ);
+    query.hdrReferenceWhite = std::make_optional(203.0);
+
+    KoColorProfile *rec2100pq203nits = new IccColorProfile(query);
+    registry->addProfile(rec2100pq203nits);
+
+    query.hdrReferenceWhite = std::make_optional(80.0);
+    KoColorProfile *rec2100pq80nits = new IccColorProfile(query);
+    registry->addProfile(rec2100pq80nits);
 
     /**
      * By default we remap the legacy HDR profile into the new Rec2020PQ
@@ -179,7 +184,7 @@ LcmsEnginePlugin::LcmsEnginePlugin(QObject *parent, const QVariantList &)
      * Krita previously.
      */
     const QString legacyRec2020PQProfileName = "High Dynamic Range UHDTV Wide Color Gamut Display (Rec. 2020) - SMPTE ST 2084 PQ EOTF";
-    registry->addProfileAlias(legacyRec2020PQProfileName, rec2100pq->name());
+    registry->addProfileAlias(legacyRec2020PQProfileName, rec2100pq203nits->name());
 
     registry->add(new RgbU8ColorSpaceFactory());
     registry->add(new RgbU16ColorSpaceFactory());

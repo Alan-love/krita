@@ -48,32 +48,51 @@ struct DstTraitsForSource<KoBgrU8Traits> {
 template <typename src_channel_type,
           typename dst_channel_type>
 struct RemoveSmpte2048Policy {
-    static ALWAYS_INLINE dst_channel_type process(src_channel_type value) {
+    static ALWAYS_INLINE dst_channel_type process(src_channel_type value, float refWhite) {
         return
             KoColorSpaceMaths<float, dst_channel_type>::scaleToA(
             removeSmpte2048Curve(
             KoColorSpaceMaths<src_channel_type, float>::scaleToA(
-            value)));
+            value), refWhite));
+    }
+
+    static ALWAYS_INLINE double getRefWhite(const KoColorSpace *src, const KoColorSpace *target) {
+        Q_UNUSED(target)
+        if (!src || !src->profile()) return 203.0;
+        return src->profile()->hdrReferenceWhite()? *src->profile()->hdrReferenceWhite(): 203.0;
     }
 };
 
 template <typename src_channel_type,
           typename dst_channel_type>
 struct ApplySmpte2048Policy {
-    static ALWAYS_INLINE dst_channel_type process(src_channel_type value) {
+    static ALWAYS_INLINE dst_channel_type process(src_channel_type value, float refWhite) {
         return
             KoColorSpaceMaths<float, dst_channel_type>::scaleToA(
             applySmpte2048Curve(
             KoColorSpaceMaths<src_channel_type, float>::scaleToA(
-            value)));
+            value), refWhite));
+    }
+
+    static ALWAYS_INLINE double getRefWhite(const KoColorSpace *src, const KoColorSpace *target) {
+        Q_UNUSED(src)
+        if (!target || !target->profile()) return 203.0;
+        return target->profile()->hdrReferenceWhite()? *target->profile()->hdrReferenceWhite(): 203.0;
     }
 };
 
 template <typename src_channel_type,
           typename dst_channel_type>
 struct NoopPolicy {
-    static ALWAYS_INLINE dst_channel_type process(src_channel_type value) {
+    static ALWAYS_INLINE dst_channel_type process(src_channel_type value, float refWhite) {
+        Q_UNUSED(refWhite)
         return KoColorSpaceMaths<src_channel_type, dst_channel_type>::scaleToA(value);
+    }
+
+    static ALWAYS_INLINE double getRefWhite(const KoColorSpace *src, const KoColorSpace *target) {
+        Q_UNUSED(src)
+        Q_UNUSED(target)
+        return 203.0;
     }
 };
 
@@ -105,10 +124,12 @@ struct ApplyRgbShaper : public KoColorConversionTransformation
         typedef typename DstCSTraits::channels_type dst_channel_type;
         typedef Policy<src_channel_type, dst_channel_type> ConcretePolicy;
 
+        const double refWhite = ConcretePolicy::getRefWhite(srcColorSpace(), dstColorSpace());
+
         for (int i = 0; i < nPixels; i++) {
-            dstPixel->red = ConcretePolicy::process(srcPixel->red);
-            dstPixel->green = ConcretePolicy::process(srcPixel->green);
-            dstPixel->blue = ConcretePolicy::process(srcPixel->blue);
+            dstPixel->red = ConcretePolicy::process(srcPixel->red, refWhite);
+            dstPixel->green = ConcretePolicy::process(srcPixel->green, refWhite);
+            dstPixel->blue = ConcretePolicy::process(srcPixel->blue, refWhite);
             dstPixel->alpha =
                 KoColorSpaceMaths<src_channel_type, dst_channel_type>::scaleToA(
                 srcPixel->alpha);

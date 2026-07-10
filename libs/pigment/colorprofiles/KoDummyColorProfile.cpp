@@ -111,6 +111,11 @@ KoColorimetryUtils::xyY KoDummyColorProfile::getWhitePointxyY() const
     return KoColorimetryUtils::xyY{0.34773, 0.35952, 1.0};
 }
 
+std::optional<double> KoDummyColorProfile::hdrReferenceWhite() const
+{
+    return std::nullopt;
+}
+
 QVector <double> KoDummyColorProfile::getEstimatedTRC() const
 
 {

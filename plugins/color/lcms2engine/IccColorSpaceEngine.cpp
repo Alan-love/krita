@@ -14,7 +14,6 @@
 #include <kis_assert.h>
 
 #include "LcmsColorSpace.h"
-#include "LcmsRGBP2020PQColorSpace.h"
 #include "RgbU8ColorSpace.h"
 
 // -- KoLcmsColorConversionTransformation --

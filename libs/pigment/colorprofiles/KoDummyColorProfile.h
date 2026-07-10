@@ -33,6 +33,7 @@ public:
     QVector <KoColorimetryUtils::xyY> getColorantsxyY() const override;
     KoColorimetryUtils::XYZ getWhitePointXYZ() const override;
     KoColorimetryUtils::xyY getWhitePointxyY() const override;
+    std::optional<double> hdrReferenceWhite() const override;
     QVector <double> getEstimatedTRC() const override;
     bool compareTRC(TransferCharacteristics characteristics, float error) const override;
     void linearizeFloatValue(QVector <double> & Value) const override;

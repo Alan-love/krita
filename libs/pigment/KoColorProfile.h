@@ -150,6 +150,15 @@ public:
      * @return a KoColorimetryUtils::xyY with the whitepoint in xyY
      */
     virtual KoColorimetryUtils::xyY getWhitePointxyY() const = 0;
+
+    /**
+     * @brief hdrReferenceWhite
+     * HDR reference white is only available for Perceptual Quantizer profiles that
+     * save this value in their dictionary. It is used to scale the value encoded
+     * by the perceptual quantizer curve. When missing, assume a value of 203.
+     * @return the HDR reference white in cd/m²
+     */
+    virtual std::optional<double> hdrReferenceWhite() const = 0;
     
     /**
      * @return estimated gamma for RGB and Grayscale profiles

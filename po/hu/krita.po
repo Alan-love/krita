@@ -57,7 +57,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOffice 1.6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-03 00:43+0000\n"
+"POT-Creation-Date: 2026-07-10 00:41+0000\n"
 "PO-Revision-Date: 2026-07-06 17:27+0200\n"
 "Last-Translator: Benedek Péter <benedekppeter@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -21103,7 +21103,7 @@ msgstr "Méret"
 #: libs/ui/dialogs/kis_dlg_layer_style.cpp:1417
 #: libs/ui/dialogs/kis_dlg_layer_style.cpp:1420
 #: libs/ui/dialogs/kis_dlg_layer_style.cpp:1483
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1970
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1965
 #: libs/ui/forms/wdgdisplaysettings.ui:379
 #: libs/ui/forms/wdggeneralsettings.ui:361
 #: libs/ui/forms/wdgrectangleconstraints.ui:59
@@ -21425,7 +21425,7 @@ msgid "<%1> (embedded)"
 msgstr "<%1> (beágyazott)"
 
 #: libs/image/kis_base_mask_generator.h:22
-#: libs/ui/dialogs/kis_dlg_preferences.cc:587
+#: libs/ui/dialogs/kis_dlg_preferences.cc:588
 #: libs/ui/kis_bookmarked_configurations_model.cc:54
 #, kde-format
 msgid "Default"
@@ -21454,7 +21454,7 @@ msgstr "Hermite"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, cmbSmoothingType)
 #: libs/image/kis_filter_strategy.h:72
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:122
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:123
 #: libs/ui/widgets/KoFillConfigWidget.ui:421
 #, kde-format
 msgid "Bicubic"
@@ -21470,7 +21470,7 @@ msgstr ""
 "simább tónusátmeneteket eredményez."
 
 #: libs/image/kis_filter_strategy.h:86
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:125
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:126
 #, kde-format
 msgid "Nearest Neighbor"
 msgstr "Legközelebbi szomszéd"
@@ -21486,7 +21486,7 @@ msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, cmbSmoothingType)
 #: libs/image/kis_filter_strategy.h:108
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:123
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:124
 #: libs/ui/canvas/kis_canvas_controller.cpp:420
 #: libs/ui/widgets/KoFillConfigWidget.ui:416
 #, kde-format
@@ -21515,7 +21515,7 @@ msgid "BSpline"
 msgstr "BSpline"
 
 #: libs/image/kis_filter_strategy.h:146
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:124
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:125
 #, kde-format
 msgid "Lanczos3"
 msgstr "Lanczos3"
@@ -22785,10 +22785,10 @@ msgstr "Érvénytelen érték."
 #: plugins/color/lcms2engine/colorspaces/lab_f32/LabF32ColorSpace.cpp:30
 #: plugins/color/lcms2engine/colorspaces/lab_u16/LabColorSpace.cpp:25
 #: plugins/color/lcms2engine/colorspaces/lab_u8/LabU8ColorSpace.cpp:25
-#: plugins/color/lcms2engine/colorspaces/rgb_f16/RgbF16ColorSpace.cpp:30
-#: plugins/color/lcms2engine/colorspaces/rgb_f32/RgbF32ColorSpace.cpp:34
-#: plugins/color/lcms2engine/colorspaces/rgb_u16/RgbU16ColorSpace.cpp:28
-#: plugins/color/lcms2engine/colorspaces/rgb_u8/RgbU8ColorSpace.cpp:34
+#: plugins/color/lcms2engine/colorspaces/rgb_f16/RgbF16ColorSpace.cpp:31
+#: plugins/color/lcms2engine/colorspaces/rgb_f32/RgbF32ColorSpace.cpp:35
+#: plugins/color/lcms2engine/colorspaces/rgb_u16/RgbU16ColorSpace.cpp:29
+#: plugins/color/lcms2engine/colorspaces/rgb_u8/RgbU8ColorSpace.cpp:35
 #: plugins/color/lcms2engine/colorspaces/xyz_f16/XyzF16ColorSpace.cpp:25
 #: plugins/color/lcms2engine/colorspaces/xyz_f32/XyzF32ColorSpace.cpp:30
 #: plugins/color/lcms2engine/colorspaces/xyz_u16/XyzU16ColorSpace.cpp:25
@@ -22887,10 +22887,10 @@ msgstr "RGB (8 bites egész/csatorna, nem kezelt)"
 
 #. i18n: ectx: property (text), widget (QLabel, label_15)
 #: libs/pigment/colorspaces/KoRgbU8ColorSpace.cpp:33
-#: plugins/color/lcms2engine/colorspaces/rgb_f16/RgbF16ColorSpace.cpp:29
-#: plugins/color/lcms2engine/colorspaces/rgb_f32/RgbF32ColorSpace.cpp:33
-#: plugins/color/lcms2engine/colorspaces/rgb_u16/RgbU16ColorSpace.cpp:25
-#: plugins/color/lcms2engine/colorspaces/rgb_u8/RgbU8ColorSpace.cpp:31
+#: plugins/color/lcms2engine/colorspaces/rgb_f16/RgbF16ColorSpace.cpp:30
+#: plugins/color/lcms2engine/colorspaces/rgb_f32/RgbF32ColorSpace.cpp:34
+#: plugins/color/lcms2engine/colorspaces/rgb_u16/RgbU16ColorSpace.cpp:26
+#: plugins/color/lcms2engine/colorspaces/rgb_u8/RgbU8ColorSpace.cpp:32
 #: plugins/filters/colorsfilters/wdg_color_balance.ui:352
 #: plugins/python/channels2layers/channels2layers.py:1400
 #, kde-format
@@ -22901,10 +22901,10 @@ msgstr "Kék"
 #. i18n: ectx: property (text), widget (QLabel, label_20)
 #. i18n: ectx: property (text), widget (QLabel, label_13)
 #: libs/pigment/colorspaces/KoRgbU8ColorSpace.cpp:34
-#: plugins/color/lcms2engine/colorspaces/rgb_f16/RgbF16ColorSpace.cpp:28
-#: plugins/color/lcms2engine/colorspaces/rgb_f32/RgbF32ColorSpace.cpp:32
-#: plugins/color/lcms2engine/colorspaces/rgb_u16/RgbU16ColorSpace.cpp:26
-#: plugins/color/lcms2engine/colorspaces/rgb_u8/RgbU8ColorSpace.cpp:32
+#: plugins/color/lcms2engine/colorspaces/rgb_f16/RgbF16ColorSpace.cpp:29
+#: plugins/color/lcms2engine/colorspaces/rgb_f32/RgbF32ColorSpace.cpp:33
+#: plugins/color/lcms2engine/colorspaces/rgb_u16/RgbU16ColorSpace.cpp:27
+#: plugins/color/lcms2engine/colorspaces/rgb_u8/RgbU8ColorSpace.cpp:33
 #: plugins/filters/colorsfilters/wdg_color_balance.ui:113
 #: plugins/filters/colorsfilters/wdg_color_balance.ui:235
 #: plugins/filters/colorsfilters/wdg_color_balance.ui:406
@@ -22914,10 +22914,10 @@ msgid "Green"
 msgstr "Zöld"
 
 #: libs/pigment/colorspaces/KoRgbU8ColorSpace.cpp:35
-#: plugins/color/lcms2engine/colorspaces/rgb_f16/RgbF16ColorSpace.cpp:27
-#: plugins/color/lcms2engine/colorspaces/rgb_f32/RgbF32ColorSpace.cpp:31
-#: plugins/color/lcms2engine/colorspaces/rgb_u16/RgbU16ColorSpace.cpp:27
-#: plugins/color/lcms2engine/colorspaces/rgb_u8/RgbU8ColorSpace.cpp:33
+#: plugins/color/lcms2engine/colorspaces/rgb_f16/RgbF16ColorSpace.cpp:28
+#: plugins/color/lcms2engine/colorspaces/rgb_f32/RgbF32ColorSpace.cpp:32
+#: plugins/color/lcms2engine/colorspaces/rgb_u16/RgbU16ColorSpace.cpp:28
+#: plugins/color/lcms2engine/colorspaces/rgb_u8/RgbU8ColorSpace.cpp:34
 #: plugins/python/channels2layers/channels2layers.py:1396
 #, kde-format
 msgid "Red"
@@ -24014,17 +24014,17 @@ msgstr "Helyi erőforrások"
 #: libs/ui/animation/KisDlgAnimationRenderer.cpp:761
 #: libs/ui/animation/KisDlgAnimationRenderer.cpp:767
 #: libs/ui/animation/KisDlgAnimationRenderer.cpp:770
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:64
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:172
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:289
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:567
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:588
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:595
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:662
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:702
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:772
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:65
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:173
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:290
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:568
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:589
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:596
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:663
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:703
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:773
 #: libs/ui/dialogs/kis_dlg_layer_style.cpp:401
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1126
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1127
 #: libs/ui/input/kis_tablet_debugger.cpp:106 libs/ui/kis_clipboard.cc:779
 #: libs/ui/kis_custom_pattern.cc:126 libs/ui/kis_filter_manager.cc:234
 #: libs/ui/kis_filter_manager.cc:243 libs/ui/kis_layer_manager.cc:326
@@ -24315,8 +24315,8 @@ msgstr "Néhány erőforrás hiányzik:"
 #. i18n: ectx: attribute (title), widget (QWidget, tab_hsx)
 #. i18n: ectx: property (text), widget (QLabel, lblCurrentRenderer)
 #: libs/resources/KisResourceStorage.h:117
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2357
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2361
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2352
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2356
 #: libs/ui/forms/wdgdisplaysettings.ui:77 libs/ui/KoDocumentInfo.cpp:37
 #: libs/widgets/KisDlgInternalColorSelector.cpp:336
 #: libs/widgets/WdgDlgInternalColorSelector.ui:89
@@ -25154,7 +25154,7 @@ msgstr ""
 "le lesz csökkentve 50 képkocka/másodpercre."
 
 #: libs/ui/animation/KisDlgAnimationRenderer.cpp:523
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2394
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2389
 #, kde-format
 msgid "Warning(s):"
 msgstr "Figyelmeztetés(ek):"
@@ -25182,47 +25182,47 @@ msgstr ""
 "A megadott FFmpeg érvénytelennek tűnik. Kérjük, válassza ki az FFmpeg "
 "futtatható fájljának helyes elérési útját a rendszerén."
 
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:39
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:40
 #, kde-format
 msgctxt "@title:window"
 msgid "Import Video Animation"
 msgstr "Videoanimáció importálása"
 
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:64
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:65
 #, kde-format
 msgid "FFMpeg not found! Please add a path to FFMpeg in the \"Advanced\" tab"
 msgstr ""
 "Az FFmpeg nem található! Kérjük, adja meg az FFmpeg útvonalát a \"Speciális"
 "\" lapon"
 
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:80
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:81
 #, kde-format
 msgctxt "FPS as a unit following a value, like 60 FPS"
 msgid " FPS"
 msgstr " FPS"
 
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:87
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:93
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:649
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:88
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:94
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:650
 #, kde-format
 msgctxt "Second as a unit following a value, like 60 s"
 msgid " s"
 msgstr " mp"
 
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:99
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:100
 #, kde-format
 msgctxt "Import video to New Document"
 msgid "New Document"
 msgstr "Új dokumentum"
 
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:102
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:103
 #, kde-format
 msgctxt "Import video to Current Document"
 msgid "Current Document"
 msgstr "Aktuális dokumentum"
 
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:105
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:614
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:106
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:615
 #, kde-format
 msgctxt "Video importer: fps of the document you're importing into"
 msgid ""
@@ -25232,26 +25232,26 @@ msgstr ""
 "<small>Dokumentum:\n"
 " %1 FPS</small>"
 
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:126
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:127
 #, kde-format
 msgctxt "An interpolation method"
 msgid "Spline"
 msgstr "Spline"
 
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:172
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:173
 #, kde-format
 msgid "Failed to create a work directory, make sure you have write permission"
 msgstr ""
 "A munkakönyvtár létrehozása sikertelen. Ellenőrizze, hogy van-e írási "
 "jogosultsága"
 
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:182
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:183
 #, kde-format
 msgctxt "Title for a messagebox"
 msgid "Krita"
 msgstr "Krita"
 
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:183
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:184
 #, kde-format
 msgid ""
 "Warning: you are trying to import more than 100 frames into Krita.\n"
@@ -25267,7 +25267,7 @@ msgstr ""
 "valódi videoszerkesztő, például a Kdenlive (https://kdenlive.org) "
 "használatát."
 
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:234
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:235
 #, kde-format
 msgctxt ""
 "FFMPEG animated video import message. arg1: frame progress number. arg2: "
@@ -25275,59 +25275,59 @@ msgctxt ""
 msgid "Extracted %1 frames from %2 video."
 msgstr "%1 képkocka kinyerve a(z) %2 videóból."
 
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:289
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:290
 #, kde-format
 msgid "Failed to export frames from video"
 msgstr "A képkockák exportálása a videóból sikertelen"
 
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:352
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:353
 #, kde-format
 msgid "Select your Video File"
 msgstr "Válassza ki a videófájlt"
 
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:378
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:379
 #, kde-format
 msgctxt "video importer: video file statistics"
 msgid "Width: %1 px"
 msgstr "Szélesség: %1 px"
 
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:379
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:380
 #, kde-format
 msgctxt "video importer: video file statistics"
 msgid "Height: %1 px"
 msgstr "Magasság: %1 px"
 
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:383
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:384
 #, kde-format
 msgctxt "video importer: video file statistics"
 msgid "Color Primaries: %1"
 msgstr "Szín-alapszínek: %1"
 
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:386
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:387
 #, kde-format
 msgctxt "video importer: video file statistics"
 msgid "Color Transfer: %1"
 msgstr "Színátvitel: %1"
 
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:389
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:390
 #, kde-format
 msgctxt "video importer: video file statistics"
 msgid "Duration: %1 s"
 msgstr "Időtartam: %1 mp"
 
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:390
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:391
 #, kde-format
 msgctxt "video importer: video file statistics"
 msgid "Frames: %1"
 msgstr "Képkocka: %1"
 
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:391
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:392
 #, kde-format
 msgctxt "video importer: video file statistics"
 msgid "FPS: %1"
 msgstr "FPS: %1"
 
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:395
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:396
 #, kde-format
 msgctxt "video importer: video file statistics"
 msgid ""
@@ -25337,7 +25337,7 @@ msgstr ""
 "*<font size='0.5em'><em>*Az FPS nem megfelelő a fájlban. Módosítva a teljes "
 "időtartam megjelenítéséhez</em></font>"
 
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:491
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:492
 #, kde-format
 msgctxt "part of warning in video importer."
 msgid ""
@@ -25347,14 +25347,14 @@ msgstr ""
 "<b>Figyelem:</b> %1 képkockát próbál importálni, de a maximálisan "
 "importálható mennyiség %2."
 
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:498
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:499
 #, kde-format
 msgctxt "part of warning in video importer."
 msgid "Use a <a href=\"https://kdenlive.org\">video editor</a> instead!"
 msgstr ""
 "Használjon inkább egy <a href=\"https://kdenlive.org\">videoszerkesztőt</a>!"
 
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:503
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:504
 #, kde-format
 msgctxt "part of warning in video importer."
 msgid ""
@@ -25363,7 +25363,7 @@ msgid ""
 msgstr ""
 "Nincs elég memória ennyi képkocka betöltéséhez, a számítógép túlterhelődik."
 
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:511
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:512
 #, kde-format
 msgctxt "part of warning in video importer."
 msgid ""
@@ -25372,7 +25372,7 @@ msgstr ""
 "Ez a rendelkezésre álló memória több mint felét lefoglalja, a szerkesztés "
 "nehézkes lesz."
 
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:520
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:521
 #, kde-format
 msgctxt "part of warning in video importer."
 msgid ""
@@ -25382,44 +25382,44 @@ msgstr ""
 "A Krita nem támogatja ezt a videó-átviteli görbét (%1), lineárisként lesz "
 "betöltve."
 
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:553
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:555
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:554
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:556
 #, kde-format
 msgid "Open FFProbe"
 msgstr "FFProbe megnyitása"
 
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:567
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:568
 #, kde-format
 msgid "FFProbe is invalid!"
 msgstr "Az FFProbe érvénytelen!"
 
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:574
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:576
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:575
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:577
 #, kde-format
 msgid "Open FFMpeg"
 msgstr "FFMpeg megnyitása"
 
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:588
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:589
 #, kde-format
 msgid "FFMpeg is invalid!"
 msgstr "Az FFMpeg érvénytelen!"
 
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:595
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:596
 #, kde-format
 msgid "No FFMpeg found!"
 msgstr "FFMpeg nem található!"
 
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:662
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:663
 #, kde-format
 msgid "Your FFMpeg version does not support this format"
 msgstr "Az Ön FFmpeg verziója nem támogatja ezt a formátumot"
 
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:702
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:703
 #, kde-format
 msgid "No video stream could be found!"
 msgstr "Nem található videofolyam!"
 
-#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:772
+#: libs/ui/animation/KisDlgImportVideoAnimation.cpp:773
 #, kde-format
 msgid "Failed to load video information"
 msgstr "A videoinformációk betöltése sikertelen"
@@ -26128,8 +26128,8 @@ msgstr "Mesterkijelző:"
 #. i18n: ectx: property (windowTitle), widget (QWidget, WdgDisplaySettings)
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_6)
 #: libs/ui/animation/VideoHDRMetadataOptionsDialog.ui:40
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2692
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2694
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2687
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2689
 #: libs/ui/forms/wdgcolorsettings.ui:172 libs/ui/forms/wdgdisplaysettings.ui:24
 #: plugins/dockers/advancedcolorselector/wdg_color_selector_settings.ui:444
 #: plugins/dockers/svgcollectiondocker/SvgSymbolCollectionDocker.cpp:234
@@ -26232,8 +26232,8 @@ msgstr "Videoanimáció importálása"
 #. i18n: ectx: attribute (title), widget (QWidget, general)
 #: libs/ui/animation/VideoImportDialog.ui:34
 #: libs/ui/animation/wdg_animationrenderer.ui:16
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2662
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2664
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2657
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2659
 #: libs/ui/forms/wdgcolorsettings.ui:40 libs/ui/forms/wdggeneralsettings.ui:311
 #: libs/ui/forms/wdgperformancesettings.ui:49 libs/ui/KoDocumentInfoDlg.cpp:91
 #: libs/ui/KoDocumentInfoDlg.cpp:92
@@ -27145,13 +27145,13 @@ msgstr "Réteg tulajdonságai"
 #: libs/ui/dialogs/kis_dlg_layer_style.cpp:1487
 #: libs/ui/dialogs/kis_dlg_layer_style.cpp:1490
 #: libs/ui/dialogs/kis_dlg_layer_style.cpp:1493
-#: libs/ui/dialogs/kis_dlg_preferences.cc:307
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1883
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1887
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1891
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1976
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2445
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2503 libs/ui/kis_paintop_box.cc:279
+#: libs/ui/dialogs/kis_dlg_preferences.cc:308
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1878
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1882
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1886
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1971
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2440
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2498 libs/ui/kis_paintop_box.cc:279
 #: libs/ui/kis_paintop_box.cc:280 libs/ui/widgets/kis_custom_image_widget.cc:96
 #: libs/ui/widgets/KisAutoLevelsWidget.cpp:19
 #: libs/widgets/kis_color_input.cpp:139 libs/widgets/kis_color_input.cpp:170
@@ -27304,170 +27304,170 @@ msgctxt "@title:window"
 msgid "Multiple Paste Sources Detected"
 msgstr "Több beillesztési forrás észlelhető"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:227
+#: libs/ui/dialogs/kis_dlg_preferences.cc:228
 #, kde-format
 msgid "No Cursor"
 msgstr "Nincs kurzor"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:228
+#: libs/ui/dialogs/kis_dlg_preferences.cc:229
 #, kde-format
 msgid "Tool Icon"
 msgstr "Eszközikon"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:229
+#: libs/ui/dialogs/kis_dlg_preferences.cc:230
 #, kde-format
 msgid "Arrow"
 msgstr "Nyíl"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:230
+#: libs/ui/dialogs/kis_dlg_preferences.cc:231
 #, kde-format
 msgid "Small Circle"
 msgstr "Kis kör"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, cmbDecor)
-#: libs/ui/dialogs/kis_dlg_preferences.cc:231
+#: libs/ui/dialogs/kis_dlg_preferences.cc:232
 #: plugins/tools/tool_crop/wdg_tool_crop.ui:467
 #, kde-format
 msgid "Crosshair"
 msgstr "Szálkereszt"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:232
+#: libs/ui/dialogs/kis_dlg_preferences.cc:233
 #, kde-format
 msgid "Triangle Righthanded"
 msgstr "Háromszög jobbkezes"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:233
+#: libs/ui/dialogs/kis_dlg_preferences.cc:234
 #, kde-format
 msgid "Triangle Lefthanded"
 msgstr "Háromszög balkezes"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:234
+#: libs/ui/dialogs/kis_dlg_preferences.cc:235
 #, kde-format
 msgid "Black Pixel"
 msgstr "Fekete pixel"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:235
+#: libs/ui/dialogs/kis_dlg_preferences.cc:236
 #, kde-format
 msgid "White Pixel"
 msgstr "Fehér pixel"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:238
+#: libs/ui/dialogs/kis_dlg_preferences.cc:239
 #, kde-format
 msgctxt "Display options label to not DISPLAY brush outline"
 msgid "No Outline"
 msgstr "Nincs körvonal"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:239
+#: libs/ui/dialogs/kis_dlg_preferences.cc:240
 #, kde-format
 msgid "Circle Outline"
 msgstr "Kör körvonala"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:240
+#: libs/ui/dialogs/kis_dlg_preferences.cc:241
 #, kde-format
 msgid "Preview Outline"
 msgstr "Előnézeti körvonal"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:241
+#: libs/ui/dialogs/kis_dlg_preferences.cc:242
 #, kde-format
 msgid "Tilt Outline"
 msgstr "Döntési körvonal"
 
 #. i18n: ectx: property (text), widget (QPushButton, bnEraser)
 #. i18n: ectx: property (text), widget (QCheckBox, eraserBox)
-#: libs/ui/dialogs/kis_dlg_preferences.cc:265
+#: libs/ui/dialogs/kis_dlg_preferences.cc:266
 #: plugins/paintops/libpaintop/forms/wdgCompositeOpOption.ui:88
 #: plugins/paintops/mypaint/wdgmypaintoptions.ui:41
 #, kde-format
 msgid "Eraser"
 msgstr "Radír"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:374
+#: libs/ui/dialogs/kis_dlg_preferences.cc:375
 #, kde-format
 msgctxt "touch painting"
 msgid "Auto (Disabled)"
 msgstr "Automatikus (kikapcsolva)"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:375
+#: libs/ui/dialogs/kis_dlg_preferences.cc:376
 #, kde-format
 msgctxt "touch painting"
 msgid "Auto (Enabled)"
 msgstr "Automatikus (engedélyezve)"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:376
+#: libs/ui/dialogs/kis_dlg_preferences.cc:377
 #, kde-format
 msgctxt "touch painting"
 msgid "Enabled"
 msgstr "Engedélyezve"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:377
+#: libs/ui/dialogs/kis_dlg_preferences.cc:378
 #, kde-format
 msgctxt "touch painting"
 msgid "Disabled"
 msgstr "Kikapcsolva"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:391
+#: libs/ui/dialogs/kis_dlg_preferences.cc:392
 #, kde-format
 msgid "On Touch Drag"
 msgstr "Érintéses húzáskor"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:392
+#: libs/ui/dialogs/kis_dlg_preferences.cc:393
 #, kde-format
 msgid "On Click Drag"
 msgstr "Kattintásos húzáskor"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:393
+#: libs/ui/dialogs/kis_dlg_preferences.cc:394
 #, kde-format
 msgid "On Middle-Click Drag"
 msgstr "Középső kattintásos húzáskor"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:443
+#: libs/ui/dialogs/kis_dlg_preferences.cc:444
 #, kde-format
 msgid "All Supported Files"
 msgstr "Minden támogatott fájl"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:478
+#: libs/ui/dialogs/kis_dlg_preferences.cc:479
 #, kde-format
 msgid "Open default window"
 msgstr "Alapértelmezett ablak megnyitása"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:479
+#: libs/ui/dialogs/kis_dlg_preferences.cc:480
 #, kde-format
 msgid "Load previous session"
 msgstr "Előző munkamenet betöltése"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:480
+#: libs/ui/dialogs/kis_dlg_preferences.cc:481
 #, kde-format
 msgid "Show session manager"
 msgstr "Munkamenet-kezelő megjelenítése"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:552
+#: libs/ui/dialogs/kis_dlg_preferences.cc:553
 #, kde-format
 msgid "You will need to Restart Krita for the changes to take an effect."
 msgstr "A módosítások érvénybe léptetéséhez újra kell indítania a Kritát."
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:558
+#: libs/ui/dialogs/kis_dlg_preferences.cc:559
 #, kde-format
 msgid ""
 "Saving at a Location picked from the File Picker may slow down the startup!"
 msgstr ""
 "A fájlválasztóból kiválasztott helyre való mentés lelassíthatja az indulást!"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:590
+#: libs/ui/dialogs/kis_dlg_preferences.cc:591
 #, kde-format
 msgid "Internal Storage"
 msgstr "Belső tárhely"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:592
+#: libs/ui/dialogs/kis_dlg_preferences.cc:593
 #, kde-format
 msgid "SD-Card"
 msgstr "SD-kártya"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:630
+#: libs/ui/dialogs/kis_dlg_preferences.cc:631
 #, kde-format
 msgid "Choose Manually"
 msgstr "Kézi választás"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:695
+#: libs/ui/dialogs/kis_dlg_preferences.cc:696
 #, kde-format
 msgctxt "@info resource folder"
 msgid ""
@@ -27492,56 +27492,56 @@ msgstr ""
 "<p><b>Privát alkalmazáshely</b> (<a href=\"copyprivate\">Másolás</a>):<br/>\n"
 "%2</p>"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1078
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1079
 #, kde-format
 msgctxt "Preview option for no color sampler"
 msgid "None"
 msgstr "Nincs"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1079
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1080
 #, kde-format
 msgctxt "Preview option for a circular/ring-shaped color sampler"
 msgid "Circle"
 msgstr "Kör"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1080
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1081
 #, kde-format
 msgctxt "Preview option for a rectangular color sampler left of the cursor"
 msgid "Rectangle Left"
 msgstr "Téglalap balra"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1081
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1082
 #, kde-format
 msgctxt "Preview option for a rectangular color sampler right of the cursor"
 msgid "Rectangle Right"
 msgstr "Téglalap jobbra"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1082
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1083
 #, kde-format
 msgctxt "Preview option for a rectangular color sampler above the cursor"
 msgid "Rectangle Above"
 msgstr "Téglalap felül"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1114
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1115
 #, kde-format
 msgid "Select a Background Image"
 msgstr "Háttérkép kiválasztása"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1126
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1127
 #: libs/ui/KisTemplateCreateDia.cpp:390
 #, kde-format
 msgid "%1 is not a valid image file!"
 msgstr "A(z) %1 nem érvényes képfájl!"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1146
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1147
 #, kde-format
 msgctxt "@info resource folder"
 msgid "<b>Warning:</b> this location is not writable."
 msgstr "<b>Figyelem:</b> ez a hely nem írható."
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1284
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1530
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1631
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1285
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1531
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1632
 #, kde-format
 msgctxt ""
 "The number of the screen (ordinal) and shortened 'name' of the screen (model "
@@ -27549,17 +27549,17 @@ msgctxt ""
 msgid "Screen %1 (%2):"
 msgstr "%1. képernyő (%2):"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1312
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1313
 #, kde-format
 msgid "Display's color space is managed by the operating system"
 msgstr "A kijelző színterét az operációs rendszer kezeli"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1319
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1320
 #, kde-format
 msgid "Enable canvas color management"
 msgstr "Rajzvászon színkezelésének engedélyezése"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1322
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1323
 #, kde-format
 msgid ""
 "<p>Enabling canvas color management automatically creates a separate native "
@@ -27579,37 +27579,37 @@ msgstr ""
 "beállítások használatára\" korlátozódik, azaz a papírfehér próbanyomat "
 "lehetetlenné válik</li></ol></p>"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1342
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1343
 #, kde-format
 msgid "Canvas surface color space:"
 msgstr "Vászonfelület színtere:"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1345
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1346
 #, kde-format
 msgid "Preferred by operating system"
 msgstr "Operációs rendszer által preferált"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1346
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1347
 #, kde-format
 msgid "Rec 709 Gamma 2.2"
 msgstr "Rec 709 Gamma 2.2"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1347
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1348
 #, kde-format
 msgid "Rec 709 Linear"
 msgstr "Rec 709 Lineáris"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1348
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1349
 #, kde-format
 msgid "Rec 2020 PQ"
 msgstr "Rec 2020 PQ"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1349
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1350
 #, kde-format
 msgid "Unmanaged (testing only)"
 msgstr "Kezeletlen (csak teszteléshez)"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1352
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1353
 #, kde-format
 msgid ""
 "<p>Color space of the pixels that are transferred to the window compositor. "
@@ -27618,7 +27618,7 @@ msgstr ""
 "<p>Ablakkezelőnek átadott pixelek színtere. Használja a \"preferált\" "
 "beállítást, hacsak nem tudja pontosan, mit csinál.</p>"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1359
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1360
 #, kde-format
 msgid "Canvas surface bit depth (needs restart):"
 msgstr "Rajzvászon felületének bitmélysége (újraindítás szükséges):"
@@ -27626,7 +27626,7 @@ msgstr "Rajzvászon felületének bitmélysége (újraindítás szükséges):"
 #. i18n: ectx: property (text), item, widget (QComboBox, patternValueModeComboBox)
 #. i18n: ectx: property (text), widget (QCheckBox, autoPrecisionCheckBox)
 #. i18n: ectx: property (text), widget (QCheckBox, chkAutoMidPoint)
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1362
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1363
 #: libs/ui/widgets/KisDitherWidget.ui:119
 #: plugins/paintops/libpaintop/forms/wdgbrushchooser.ui:72
 #: plugins/paintops/libpaintop/forms/wdgpredefinedbrushchooser.ui:257
@@ -27634,19 +27634,19 @@ msgstr "Rajzvászon felületének bitmélysége (újraindítás szükséges):"
 msgid "Auto"
 msgstr "Auto"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1363
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1371
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1364
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1372
 #, kde-format
 msgid "8-bit"
 msgstr "8 bit"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1364
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1371
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1365
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1372
 #, kde-format
 msgid "10-bit"
 msgstr "10 bit"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1367
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1368
 #, kde-format
 msgid ""
 "<p>The bit depth of the color that is passed to the window compositor. You "
@@ -27656,12 +27656,12 @@ msgstr ""
 "<p>Az ablakkezelőnek átadott szín bitmélysége. Érdemes 10 bites módba "
 "váltani, ha ki szeretné használni a kijelző HDR képességeit.</p>"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1372
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1373
 #, kde-format
 msgid "Current canvas surface bit depth:"
 msgstr "Rajzvászon felületének jelenlegi bitmélysége:"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1380
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1381
 #, kde-format
 msgid ""
 "Color space preferred by the operating system:\n"
@@ -27670,48 +27670,48 @@ msgstr ""
 "Az operációs rendszer által preferált színtér:\n"
 "%1"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1386
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1387
 #, kde-format
 msgid "Diagram:"
 msgstr "Diagram:"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1389
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1390
 #, kde-format
 msgctxt "@info:radiobutton"
 msgid "Preferred Space"
 msgstr "Előnyben részesített munkaszíntér"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1391
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1392
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "This is the space preferred by the operating system."
 msgstr "Ez az operációs rendszer által előnyben részesített színprofil."
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1394
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1395
 #, kde-format
 msgctxt "@info:radiobutton"
 msgid "Current Display"
 msgstr "Aktív kijelző"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1397
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1398
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "This is the space representing the currently active display."
 msgstr "Ez a terület a jelenleg aktív kijelzőt jelöli."
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1488
-#: libs/ui/widgets/kis_advanced_color_space_selector.cc:804
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1489
+#: libs/ui/widgets/kis_advanced_color_space_selector.cc:799
 #: libs/ui/widgets/kis_color_space_selector.cc:197
 #, kde-format
 msgid "Install Color Profiles"
 msgstr "Színprofilok telepítése"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1777
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1772
 #, kde-format
 msgid "Tablet Input API (currently active API: \"%1\")"
 msgstr "Táblagép beviteli API (jelenleg aktív API: \"%1\")"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1791
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1786
 #, kde-format
 msgid ""
 "Use tablet driver timestamps for brush speed (may cause severe artifacts "
@@ -27720,7 +27720,7 @@ msgstr ""
 "Táblagép-illesztőprogram időbélyegeinek használata az ecsetsebességhez "
 "(súlyos képhibákat okozhat WinTab táblagép API használatakor)"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1793
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1788
 #, kde-format
 msgid "Use tablet driver timestamps for brush speed"
 msgstr "Táblagép-illesztőprogram időbélyegeinek használata az ecsetsebességhez"
@@ -27728,7 +27728,7 @@ msgstr "Táblagép-illesztőprogram időbélyegeinek használata az ecsetsebess�
 #. i18n: This is meant to be used in a spinbox so keep the {n} in the text
 #. and it will be substituted by the number. The text before will be
 #. used as the prefix and the text after as the suffix
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1823
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1818
 #, kde-format
 msgid "Maximum brush speed: {n} px/ms"
 msgid_plural "Maximum brush speed: {n} px/ms"
@@ -27738,26 +27738,26 @@ msgstr[1] "Maximális ecsetsebesség: {n} px/ms"
 #. i18n: This is meant to be used in a spinbox so keep the {n} in the text
 #. and it will be substituted by the number. The text before will be
 #. used as the prefix and the text after as the suffix
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1832
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1827
 #, kde-format
 msgid "Brush speed smoothing: {n} sample"
 msgid_plural "Brush speed smoothing: {n} samples"
 msgstr[0] "Ecsetsebesség simítása: {n} minta"
 msgstr[1] "Ecsetsebesség simítása: {n} minta"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1839
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1834
 #, kde-format
 msgid "Pen tilt direction offset: "
 msgstr "Toll dőlésirányának eltolása: "
 
 #. i18n: ectx: property (suffix), widget (KisIntParseSpinBox, intSwapSize)
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1937
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1932
 #: libs/ui/forms/wdgperformancesettings.ui:214
 #, kde-format
 msgid " GiB"
 msgstr " GiB"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1958
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1953
 #: libs/ui/dialogs/KisDlgConfigureCumulativeUndo.cpp:59
 #: libs/ui/dialogs/KisDlgConfigureCumulativeUndo.cpp:81
 #: libs/ui/dialogs/KisDlgConfigureCumulativeUndo.cpp:93
@@ -27766,78 +27766,78 @@ msgctxt "suffix for \"seconds\""
 msgid " sec"
 msgstr " mp"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:1961
+#: libs/ui/dialogs/kis_dlg_preferences.cc:1956
 #, kde-format
 msgid " fps"
 msgstr " fps"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2200
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2195
 #, kde-format
 msgctxt "canvas renderer"
 msgid "OpenGL"
 msgstr "OpenGL"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2201
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2196
 #, kde-format
 msgctxt "canvas renderer"
 msgid "Software Renderer (very slow)"
 msgstr "Szoftveres renderelő (nagyon lassú)"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2205
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2200
 #, kde-format
 msgctxt "canvas renderer"
 msgid "Direct3D 11 via ANGLE"
 msgstr "Direct3D 11 ANGLE-n keresztül"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2206
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2201
 #, kde-format
 msgctxt "canvas renderer"
 msgid "OpenGL via ANGLE"
 msgstr "OpenGL ANGLE-n keresztül"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2208
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2203
 #, kde-format
 msgctxt "canvas renderer"
 msgid "OpenGL ES"
 msgstr "OpenGL ES"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2215
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2210
 #, kde-format
 msgctxt "canvas renderer"
 msgid "Unknown"
 msgstr "Ismeretlen"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2235
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2230
 #, kde-format
 msgctxt "canvas renderer"
 msgid "Auto (%1)"
 msgstr "Automatikus (%1)"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2294
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2289
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "GLX (current)"
 msgstr "GLX (jelenlegi)"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2295
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2290
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "GLX"
 msgstr "GLX"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2296
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2291
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "EGL (current)"
 msgstr "EGL (jelenlegi)"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2297
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2292
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "EGL"
 msgstr "EGL"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2303
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2298
 #, kde-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -27847,140 +27847,140 @@ msgstr ""
 "<p>Ha X11 vagy XWayland rendszeren használja a Kritát és lassulást "
 "tapasztal, próbáljon meg váltani az EGL és a GLX között</p>"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2343
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2338
 #, kde-format
 msgid "Display Id: %1"
 msgstr "Kijelzőazonosító: %1"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2344
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2339
 #, kde-format
 msgid "Display Name: %1 %2"
 msgstr "Kijelző neve: %1 %2"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2345
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2340
 #, kde-format
 msgid "Min Luminance: %1"
 msgstr "Min. fénysűrűség: %1"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2346
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2341
 #, kde-format
 msgid "Max Luminance: %1"
 msgstr "Max. fénysűrűség: %1"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2347
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2342
 #, kde-format
 msgid "Max Full Frame Luminance: %1"
 msgstr "Max. teljes képkockás fénysűrűség: %1"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2348
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2343
 #, kde-format
 msgid "Red Primary: %1, %2"
 msgstr "Vörös alapszín: %1, %2"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2349
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2344
 #, kde-format
 msgid "Green Primary: %1, %2"
 msgstr "Zöld alapszín: %1, %2"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2350
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2345
 #, kde-format
 msgid "Blue Primary: %1, %2"
 msgstr "Kék alapszín: %1, %2"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2351
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2346
 #, kde-format
 msgid "White Point: %1, %2"
 msgstr "Fehérpont: %1, %2"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2532
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2527
 #, kde-format
 msgid "<b>Warning:</b> current display doesn't support HDR rendering"
 msgstr "<b>Figyelem:</b> a jelenlegi kijelző nem támogatja a HDR renderelést"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2655
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2650
 #, kde-format
 msgid "Configure Krita"
 msgstr "Krita beállítása"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2672
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2667
 #, kde-format
 msgid "Keyboard Shortcuts"
 msgstr "Billentyűparancsok"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2674
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2669
 #: libs/widgetutils/xmlgui/KisShortcutsEditor_p.cpp:282
 #, kde-format
 msgid "Shortcuts"
 msgstr "Gyorsbillentyűk"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2684
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2679
 #, kde-format
 msgid "Canvas Input Settings"
 msgstr "Rajzvászon beviteli beállítások"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2685
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2680
 #, kde-format
 msgid "Canvas Input"
 msgstr "Rajzvászon bevitel"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2702
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2697
 #: plugins/dockers/logdocker/LogDockerDock.cpp:315
 #, kde-format
 msgid "Color Management"
 msgstr "Színkezelés"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2704
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2699
 #, kde-format
 msgctxt "Label of color as in Color Management"
 msgid "Color"
 msgstr "Szín"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2712
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2714
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2707
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2709
 #, kde-format
 msgid "Performance"
 msgstr "Teljesítmény"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2722
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2717
 #, kde-format
 msgid "Tablet settings"
 msgstr "Táblagép beállítások"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2724
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2719
 #, kde-format
 msgid "Tablet"
 msgstr "Táblagép"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2732
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2727
 #, kde-format
 msgid "Canvas-only settings"
 msgstr "Csak rajzvászon beállítások"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2734
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2729
 #, kde-format
 msgid "Canvas-only"
 msgstr "Csak rajzvászon"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2742
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2744
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2737
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2739
 #, kde-format
 msgid "Pop-up Palette"
 msgstr "Felugró paletta"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2752
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2747
 #, kde-format
 msgctxt "@title:tab Author page"
 msgid "Author"
 msgstr "Szerző"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2754
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2749
 #: libs/ui/KoDocumentInfoDlg.cpp:114
 #: plugins/python/comics_project_management_tools/exporters/CPMT_EPUB_exporter.py:233
 #, kde-format
 msgid "Author"
 msgstr "Szerző"
 
-#: libs/ui/dialogs/kis_dlg_preferences.cc:2761
+#: libs/ui/dialogs/kis_dlg_preferences.cc:2756
 #, kde-format
 msgctxt "@action:button"
 msgid "Restore Defaults"
@@ -29071,7 +29071,7 @@ msgstr ""
 #. i18n: ectx: property (text), item, widget (KComboBox, cmbMonitorIntent)
 #: libs/ui/forms/wdgapplyprofile.ui:100 libs/ui/forms/wdgcolorsettings.ui:208
 #: libs/ui/forms/wdgconvertcolorspace.ui:55
-#: libs/ui/widgets/kis_advanced_color_space_selector.cc:496
+#: libs/ui/widgets/kis_advanced_color_space_selector.cc:491
 #, kde-format
 msgid "Perceptual"
 msgstr "Érzékelési"
@@ -29110,7 +29110,7 @@ msgstr ""
 #. i18n: ectx: property (text), item, widget (KComboBox, cmbMonitorIntent)
 #: libs/ui/forms/wdgapplyprofile.ui:120 libs/ui/forms/wdgcolorsettings.ui:218
 #: libs/ui/forms/wdgconvertcolorspace.ui:99
-#: libs/ui/widgets/kis_advanced_color_space_selector.cc:505
+#: libs/ui/widgets/kis_advanced_color_space_selector.cc:500
 #, kde-format
 msgctxt "ICC profile rendering intent"
 msgid "Saturation"
@@ -29270,14 +29270,14 @@ msgstr "&Megjelenítési cél:"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, cmbMonitorIntent)
 #: libs/ui/forms/wdgcolorsettings.ui:213
-#: libs/ui/widgets/kis_advanced_color_space_selector.cc:499
+#: libs/ui/widgets/kis_advanced_color_space_selector.cc:494
 #, kde-format
 msgid "Relative Colorimetric"
 msgstr "Relatív színmérési"
 
 #. i18n: ectx: property (text), item, widget (KComboBox, cmbMonitorIntent)
 #: libs/ui/forms/wdgcolorsettings.ui:223
-#: libs/ui/widgets/kis_advanced_color_space_selector.cc:502
+#: libs/ui/widgets/kis_advanced_color_space_selector.cc:497
 #, kde-format
 msgid "Absolute Colorimetric"
 msgstr "Abszolút színmérési"
@@ -38799,43 +38799,43 @@ msgid ""
 msgstr ""
 "Ennek a színtérnek a tónusválasz-görbéje (TRC) lehet sRGB, L* vagy rec709."
 
-#: libs/ui/widgets/kis_advanced_color_space_selector.cc:313
+#: libs/ui/widgets/kis_advanced_color_space_selector.cc:308
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Estimated Gamma cannot be retrieved for CMYK."
 msgstr "A becsült gamma nem kérhető le CMYK esetén."
 
-#: libs/ui/widgets/kis_advanced_color_space_selector.cc:357
+#: libs/ui/widgets/kis_advanced_color_space_selector.cc:352
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "This is assumed to be the L * TRC. "
 msgstr "Ez feltehetően az L* TRC. "
 
-#: libs/ui/widgets/kis_advanced_color_space_selector.cc:378
+#: libs/ui/widgets/kis_advanced_color_space_selector.cc:373
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Estimated Gamma cannot be retrieved for YCbCr."
 msgstr "A becsült gamma nem kérhető le YCbCr esetén."
 
-#: libs/ui/widgets/kis_advanced_color_space_selector.cc:384
+#: libs/ui/widgets/kis_advanced_color_space_selector.cc:379
 #, kde-format
 msgctxt "About <Profilename>"
 msgid "About %1/%2"
 msgstr "Névjegy: %1/%2"
 
-#: libs/ui/widgets/kis_advanced_color_space_selector.cc:386
+#: libs/ui/widgets/kis_advanced_color_space_selector.cc:381
 #, kde-format
 msgctxt "ICC profile version"
 msgid "ICC Version: %1"
 msgstr "ICC verzió: %1"
 
-#: libs/ui/widgets/kis_advanced_color_space_selector.cc:389
+#: libs/ui/widgets/kis_advanced_color_space_selector.cc:384
 #, kde-format
 msgctxt "Who made the profile?"
 msgid "Manufacturer: %1"
 msgstr "Gyártó: %1"
 
-#: libs/ui/widgets/kis_advanced_color_space_selector.cc:394
+#: libs/ui/widgets/kis_advanced_color_space_selector.cc:389
 #, kde-format
 msgctxt ""
 "What is the copyright? These are from embedded strings from the icc profile, "
@@ -38843,7 +38843,7 @@ msgctxt ""
 msgid "Copyright: %1"
 msgstr "Copyright: %1"
 
-#: libs/ui/widgets/kis_advanced_color_space_selector.cc:402
+#: libs/ui/widgets/kis_advanced_color_space_selector.cc:397
 #, kde-format
 msgctxt "If the selected model is RGB"
 msgid ""
@@ -38862,7 +38862,7 @@ msgstr ""
 "festéshez ez javasolt, mivel később más színterekbe is konvertálható. Az RGB "
 "az ajánlott színtér a HDR-szerkesztéshez is."
 
-#: libs/ui/widgets/kis_advanced_color_space_selector.cc:408
+#: libs/ui/widgets/kis_advanced_color_space_selector.cc:403
 #, kde-format
 msgctxt "If the selected model is CMYK"
 msgid ""
@@ -38885,7 +38885,7 @@ msgstr ""
 "a színtérhez nem tudja lekérni a színezékeket vagy a TRC-t ehhez a "
 "területhez."
 
-#: libs/ui/widgets/kis_advanced_color_space_selector.cc:417
+#: libs/ui/widgets/kis_advanced_color_space_selector.cc:412
 #, kde-format
 msgctxt "If the selected model is XYZ"
 msgid ""
@@ -38903,7 +38903,7 @@ msgstr ""
 "ad. Az XYZ festéshez <b>nem</b> ajánlott, de kódoláshoz hasznos lehet. A "
 "tónusválasz-görbe feltételezetten lineáris."
 
-#: libs/ui/widgets/kis_advanced_color_space_selector.cc:424
+#: libs/ui/widgets/kis_advanced_color_space_selector.cc:419
 #, kde-format
 msgctxt "If the selected model is Grayscale"
 msgid ""
@@ -38920,7 +38920,7 @@ msgstr ""
 "tusrajzokhoz és szürkeárnyalatos képekhez. A Kritában egy képen belül is "
 "kombinálhatók a szürkeárnyalatos és az RGB-rétegek."
 
-#: libs/ui/widgets/kis_advanced_color_space_selector.cc:431
+#: libs/ui/widgets/kis_advanced_color_space_selector.cc:426
 #, kde-format
 msgctxt "If the selected model is LAB"
 msgid ""
@@ -38948,7 +38948,7 @@ msgstr ""
 "színtér <b>nem</b> ajánlott festéshez, sem exportáláshoz, leginkább "
 "utómunkálatok elvégzésére alkalmas. A TRC feltételezetten az L* TRC."
 
-#: libs/ui/widgets/kis_advanced_color_space_selector.cc:442
+#: libs/ui/widgets/kis_advanced_color_space_selector.cc:437
 #, kde-format
 msgctxt "If the selected model is YCbCr"
 msgid ""
@@ -38968,7 +38968,7 @@ msgstr ""
 "esetben a vörös és a kék telítettségét, amelyek telítetlen megfelelői rendre "
 "a zöld és a sárga."
 
-#: libs/ui/widgets/kis_advanced_color_space_selector.cc:453
+#: libs/ui/widgets/kis_advanced_color_space_selector.cc:448
 #, kde-format
 msgctxt "When the selected Bitdepth is 8"
 msgid ""
@@ -38982,7 +38982,7 @@ msgstr ""
 "emelve a csatornák számával. Használata webes célú vagy egyébként egyszerű "
 "képekhez javasolt."
 
-#: libs/ui/widgets/kis_advanced_color_space_selector.cc:459
+#: libs/ui/widgets/kis_advanced_color_space_selector.cc:454
 #, kde-format
 msgctxt "When the selected Bitdepth is 16"
 msgid ""
@@ -39005,7 +39005,7 @@ msgstr ""
 "optimalizálás letiltására, amikor 16 bit/csatornáról 8 bit/csatornára "
 "konvertál."
 
-#: libs/ui/widgets/kis_advanced_color_space_selector.cc:468
+#: libs/ui/widgets/kis_advanced_color_space_selector.cc:463
 #, kde-format
 msgctxt "When the selected Bitdepth is 16 bit float"
 msgid ""
@@ -39030,7 +39030,7 @@ msgstr ""
 "használatának gondos figyelését; amennyiben a számítógépe lassulna, "
 "használjon inkább 8 bitet."
 
-#: libs/ui/widgets/kis_advanced_color_space_selector.cc:477
+#: libs/ui/widgets/kis_advanced_color_space_selector.cc:472
 #, kde-format
 msgctxt "When the selected Bitdepth is 32bit float"
 msgid ""
@@ -39053,7 +39053,7 @@ msgstr ""
 "fájl RAM-használatának gondos figyelését; amennyiben a számítógépe lassulna, "
 "használjon inkább 8 bitet."
 
-#: libs/ui/widgets/kis_advanced_color_space_selector.cc:486
+#: libs/ui/widgets/kis_advanced_color_space_selector.cc:481
 #, kde-format
 msgctxt ""
 "When the selected Bitdepth is 64bit float, but this isn't actually available "
@@ -39077,12 +39077,12 @@ msgstr ""
 "kapacitást igényel. Javasoljuk a fájl RAM-használatának gondos figyelését; "
 "amennyiben a számítógépe lassulna, használjon inkább 8 bitet."
 
-#: libs/ui/widgets/kis_advanced_color_space_selector.cc:494
+#: libs/ui/widgets/kis_advanced_color_space_selector.cc:489
 #, kde-format
 msgid "The following conversion intents are possible: "
 msgstr "A következő konverziós célok lehetségesek: "
 
-#: libs/ui/widgets/kis_advanced_color_space_selector.cc:513
+#: libs/ui/widgets/kis_advanced_color_space_selector.cc:508
 #, kde-format
 msgctxt "These are Elle Stone's notes on her profiles that we ship."
 msgid ""
@@ -39098,7 +39098,7 @@ msgstr ""
 "Kérjük, olvassa el a <a href=\"https://ninedegreesbelow.com/photography/lcms-"
 "make-icc-profiles.html\">teljes dokumentációt</a> is.</i></p>"
 
-#: libs/ui/widgets/kis_advanced_color_space_selector.cc:521
+#: libs/ui/widgets/kis_advanced_color_space_selector.cc:516
 #, kde-format
 msgctxt "From Elle's notes."
 msgid ""
@@ -39114,7 +39114,7 @@ msgstr ""
 "színhelyes munkafolyamatot és a kiváló minőségű mozgóképek zökkenőmentes "
 "cseréjét, forrástól függetlenül.”</p>"
 
-#: libs/ui/widgets/kis_advanced_color_space_selector.cc:529
+#: libs/ui/widgets/kis_advanced_color_space_selector.cc:524
 #, kde-format
 msgctxt "From Elle's notes."
 msgid ""
@@ -39129,7 +39129,7 @@ msgstr ""
 "amely éppen csak kívül esik az ember által látható valós színek tartományán."
 "</p>"
 
-#: libs/ui/widgets/kis_advanced_color_space_selector.cc:536
+#: libs/ui/widgets/kis_advanced_color_space_selector.cc:531
 #, kde-format
 msgctxt "From Elle's notes."
 msgid ""
@@ -39158,7 +39158,7 @@ msgstr ""
 "Adobe RGB 1998 színtartománya ésszerű közelítést nyújt néhány mai "
 "csúcskategóriás, széles színtartományú monitorhoz.</p>"
 
-#: libs/ui/widgets/kis_advanced_color_space_selector.cc:550
+#: libs/ui/widgets/kis_advanced_color_space_selector.cc:545
 #, kde-format
 msgctxt "From Elle's notes."
 msgid ""
@@ -39189,7 +39189,7 @@ msgstr ""
 "profilt, hacsak nem akar meggyőződni arról, hogy a színtér valóban tartalmaz "
 "minden lehetséges valós színt.</p>"
 
-#: libs/ui/widgets/kis_advanced_color_space_selector.cc:565
+#: libs/ui/widgets/kis_advanced_color_space_selector.cc:560
 #, kde-format
 msgctxt "From Elle's notes."
 msgid ""
@@ -39212,7 +39212,7 @@ msgstr ""
 "alapszíneket a spektrális hullámhosszakból kell kiszámítani, ezért én is így "
 "tettem.</p>"
 
-#: libs/ui/widgets/kis_advanced_color_space_selector.cc:578
+#: libs/ui/widgets/kis_advanced_color_space_selector.cc:573
 #, kde-format
 msgctxt "From Elle's notes."
 msgid ""
@@ -39229,7 +39229,7 @@ msgstr ""
 "miatt bárki is ténylegesen az IdentityRGB munkatérben szeretne képeket "
 "szerkeszteni.</p>"
 
-#: libs/ui/widgets/kis_advanced_color_space_selector.cc:586
+#: libs/ui/widgets/kis_advanced_color_space_selector.cc:581
 #, kde-format
 msgctxt "From Elle's notes."
 msgid ""
@@ -39266,7 +39266,7 @@ msgstr ""
 "való átállás szokatlan lehet, legalábbis eleinte, ezért mérlegelnie kell a "
 "munkafolyamat megváltoztatásának előnyeit és hátrányait.</p>"
 
-#: libs/ui/widgets/kis_advanced_color_space_selector.cc:604
+#: libs/ui/widgets/kis_advanced_color_space_selector.cc:599
 #, kde-format
 msgctxt "From Elle's notes."
 msgid ""
@@ -39286,7 +39286,7 @@ msgstr ""
 "alkalmasabb általános RGB munkatérnek, mint a rendkívül szűk sRGB színtér.</"
 "p>"
 
-#: libs/ui/widgets/kis_advanced_color_space_selector.cc:613
+#: libs/ui/widgets/kis_advanced_color_space_selector.cc:608
 #, kde-format
 msgctxt "From Elle's notes."
 msgid ""
@@ -39323,7 +39323,7 @@ msgstr ""
 "összes többi RGB profillal együtt) egy mátrixprofil, a mátrixprofilok pedig "
 "nem rendelkeznek érzékelési leképzési táblázatokkal.</p>"
 
-#: libs/ui/widgets/kis_advanced_color_space_selector.cc:629
+#: libs/ui/widgets/kis_advanced_color_space_selector.cc:624
 #, kde-format
 msgctxt "From Elle's notes."
 msgid ""
@@ -39343,7 +39343,7 @@ msgstr ""
 "érdekes színtér, de röviddel a bevezetése után az Adobe inkább a ProPhotoRGB "
 "színtérre helyezte át a hangsúlyt.</p>"
 
-#: libs/ui/widgets/kis_advanced_color_space_selector.cc:637
+#: libs/ui/widgets/kis_advanced_color_space_selector.cc:632
 #, kde-format
 msgctxt "From Elle's notes."
 msgid ""
@@ -39363,7 +39363,7 @@ msgstr ""
 "szánt szürkeárnyalatos képek esetén a sRGB TRC-vel ellátott V2 Gray profil "
 "használata javasolt.</p>"
 
-#: libs/ui/widgets/kis_advanced_color_space_selector.cc:645
+#: libs/ui/widgets/kis_advanced_color_space_selector.cc:640
 #, kde-format
 msgctxt "From Elle's notes."
 msgid ""
@@ -39378,7 +39378,7 @@ msgstr ""
 "használhatók (16 bites lebegőpontos, 16 bites egész, 32 bites lebegőpontos, "
 "32 bites egész). Számos művelet jobb eredményt ad lineáris színtérben.</p>"
 
-#: libs/ui/widgets/kis_advanced_color_space_selector.cc:652
+#: libs/ui/widgets/kis_advanced_color_space_selector.cc:647
 #, kde-format
 msgctxt "From Elle's notes."
 msgid ""
@@ -39390,7 +39390,7 @@ msgstr ""
 "látás fényérzékelését. Bizonyos műveleteket ilyen színtérben érdemes "
 "végezni. Nagy bitmélységű képekhez mindenképp a V4 verziókat használja.</p>"
 
-#: libs/ui/widgets/kis_advanced_color_space_selector.cc:658
+#: libs/ui/widgets/kis_advanced_color_space_selector.cc:653
 #, kde-format
 msgctxt "From Elle's notes."
 msgid ""
@@ -39403,7 +39403,7 @@ msgstr ""
 "fényérzékeléséhez. A ProPhotoRGB 1.8-as gammájú TRC-je kevésbé közelíti meg "
 "az észlelésileg egyenletes szintet.</p>"
 
-#: libs/ui/widgets/kis_advanced_color_space_selector.cc:663
+#: libs/ui/widgets/kis_advanced_color_space_selector.cc:658
 #, kde-format
 msgctxt "From Elle's notes."
 msgid ""
@@ -39423,7 +39423,7 @@ msgstr ""
 "elkerülése érdekében. És természetesen ezen profilok lineáris gamma verziói "
 "nem használhatók 8 bites szerkesztéshez.</p>"
 
-#: libs/ui/widgets/kis_advanced_color_space_selector.cc:671
+#: libs/ui/widgets/kis_advanced_color_space_selector.cc:666
 #, kde-format
 msgctxt "From Elle's notes."
 msgid ""
@@ -39435,7 +39435,7 @@ msgstr ""
 "képszerkesztőkben, amelyek az LCMS-t használják színkezelő modulként. Ilyen "
 "például a Krita, a digiKam/showFoto és a GIMP 2.9.</p>"
 
-#: libs/ui/widgets/kis_advanced_color_space_selector.cc:676
+#: libs/ui/widgets/kis_advanced_color_space_selector.cc:671
 #, kde-format
 msgctxt "From Elle's notes."
 msgid ""
@@ -39503,12 +39503,12 @@ msgstr "Zárolás"
 msgid "Unlock (keep current settings)"
 msgstr "Feloldás (jelenlegi beállítások megtartása)"
 
-#: libs/ui/widgets/kis_cie_tongue_widget.cpp:660
+#: libs/ui/widgets/kis_cie_tongue_widget.cpp:641
 #, kde-format
 msgid "Uncalibrated color space"
 msgstr "Kalibrálatlan színtér"
 
-#: libs/ui/widgets/kis_cie_tongue_widget.cpp:666
+#: libs/ui/widgets/kis_cie_tongue_widget.cpp:647
 #, kde-format
 msgid "No profile available..."
 msgstr "Nincs elérhető profil..."
@@ -42584,112 +42584,112 @@ msgstr "Cb"
 msgid "Cr"
 msgstr "Cr"
 
-#: plugins/color/lcms2engine/IccColorSpaceEngine.cpp:151
+#: plugins/color/lcms2engine/IccColorSpaceEngine.cpp:152
 #, kde-format
 msgid "ICC Engine"
 msgstr "ICC motor"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:155
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:156
 #, kde-format
 msgid "L*a*b*/8 Histogram"
 msgstr "L*a*b*/8 hisztogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:159
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:160
 #, kde-format
 msgid "L*a*b*/16 Histogram"
 msgstr "L*a*b*/16 hisztogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:163
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:164
 #, kde-format
 msgid "L*a*b*/32 Histogram"
 msgstr "L*a*b*/32 hisztogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:194
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:195
 #, kde-format
 msgid "RGBA/8 Histogram"
 msgstr "RGBA/8 hisztogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:198
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:199
 #, kde-format
 msgid "RGBA/16 Histogram"
 msgstr "RGBA/16 hisztogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:204
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:205
 #, kde-format
 msgid "RGBA/F16 Histogram"
 msgstr "RGBA/F16 hisztogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:210
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:211
 #, kde-format
 msgid "RGBA/F32 Histogram"
 msgstr "RGBA/F32 hisztogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:231
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:232
 #, kde-format
 msgid "GRAY/8 Histogram"
 msgstr "SZÜRKE/8 hisztogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:235
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:236
 #, kde-format
 msgid "GRAY/16 Histogram"
 msgstr "SZÜRKE/16 hisztogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:240
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:241
 #, kde-format
 msgid "GRAYF/F16 Histogram"
 msgstr "SZÜRKE/F16 hisztogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:246
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:247
 #, kde-format
 msgid "GRAY/F32 float Histogram"
 msgstr "SZÜRKE/F32 lebegőpontos hisztogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:256
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:257
 #, kde-format
 msgid "CMYK/8 Histogram"
 msgstr "CMYK/8 hisztogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:260
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:261
 #, kde-format
 msgid "CMYK/16 Histogram"
 msgstr "CMYK/16 hisztogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:264
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:265
 #, kde-format
 msgid "CMYK/F32 Histogram"
 msgstr "CMYK/F32 hisztogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:282
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:283
 #, kde-format
 msgid "XYZ/8 Histogram"
 msgstr "XYZ/8 hisztogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:286
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:287
 #, kde-format
 msgid "XYZ/16 Histogram"
 msgstr "XYZ/16 hisztogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:292
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:293
 #, kde-format
 msgid "XYZ/F16 Histogram"
 msgstr "XYZ/F16 hisztogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:298
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:299
 #, kde-format
 msgid "XYZF32 Histogram"
 msgstr "XYZF32 hisztogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:311
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:312
 #, kde-format
 msgid "YCbCr/8 Histogram"
 msgstr "YCbCr/8 hisztogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:315
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:316
 #, kde-format
 msgid "YCbCr/16 Histogram"
 msgstr "YCbCr/16 hisztogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:319
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:320
 #, kde-format
 msgid "YCbCr/F32 Histogram"
 msgstr "YCbCr/F32 hisztogram"
@@ -43632,7 +43632,7 @@ msgstr "Előző képkockák"
 msgid "Next frames"
 msgstr "Következő képkockák"
 
-#: plugins/dockers/animation/KisTimeBasedItemModel.cpp:425
+#: plugins/dockers/animation/KisTimeBasedItemModel.cpp:423
 #, kde-format
 msgctxt "(qtundo-format)"
 msgid "Remove frame and shift"
@@ -43640,7 +43640,7 @@ msgid_plural "Remove %1 frames and shift"
 msgstr[0] "Képkocka eltávolítása és eltolás"
 msgstr[1] "%1 képkocka eltávolítása és eltolás"
 
-#: plugins/dockers/animation/KisTimeBasedItemModel.cpp:455
+#: plugins/dockers/animation/KisTimeBasedItemModel.cpp:453
 msgctxt "(qtundo-format)"
 msgid "Mirror Frames"
 msgstr "Képkockák tükrözése"
@@ -54997,7 +54997,7 @@ msgstr "A dokumentumban nem található színprofil."
 msgid "Unknown error: %1"
 msgstr "Ismeretlen hiba: %1"
 
-#: plugins/impex/heif/HeifExport.cpp:539
+#: plugins/impex/heif/HeifExport.cpp:540
 #, kde-format
 msgctxt "@tooltip"
 msgid ""
@@ -55007,7 +55007,7 @@ msgstr ""
 "A kép fényereje teljes felbontású lesz, míg a színesség mindkét irányban a "
 "felére csökken."
 
-#: plugins/impex/heif/HeifExport.cpp:540
+#: plugins/impex/heif/HeifExport.cpp:541
 #, kde-format
 msgctxt "@tooltip"
 msgid ""
@@ -55017,28 +55017,28 @@ msgstr ""
 "A kép fényereje teljes felbontású lesz, míg a színesség vízszintesen a "
 "felére csökken."
 
-#: plugins/impex/heif/HeifExport.cpp:541
+#: plugins/impex/heif/HeifExport.cpp:542
 #, kde-format
 msgctxt "@tooltip"
 msgid ""
 "Both brightness and colorfulness of the image will be at full resolution."
 msgstr "A kép fényereje és színessége is teljes felbontású lesz."
 
-#: plugins/impex/heif/HeifExport.cpp:555
+#: plugins/impex/heif/HeifExport.cpp:556
 #: plugins/impex/jxl/kis_wdg_options_jpegxl.cpp:204
 #, kde-format
 msgctxt "Color space name"
 msgid "Rec 2100 HLG"
 msgstr "Rec 2100 HLG"
 
-#: plugins/impex/heif/HeifExport.cpp:555
+#: plugins/impex/heif/HeifExport.cpp:556
 #: plugins/impex/jxl/kis_wdg_options_jpegxl.cpp:197
 #, kde-format
 msgctxt "Color space name"
 msgid "Rec 2100 PQ"
 msgstr "Rec 2100 PQ"
 
-#: plugins/impex/heif/HeifExport.cpp:556
+#: plugins/impex/heif/HeifExport.cpp:557
 #: plugins/impex/jxl/kis_wdg_options_jpegxl.cpp:199
 #, kde-format
 msgctxt "@tooltip"
@@ -55051,7 +55051,7 @@ msgstr ""
 "érzékelési kvantáló görbével (más néven SMPTE 2048 görbe) lesz kódolva. HDR "
 "képekhez ajánlott, ahol az abszolút fényerő fontos."
 
-#: plugins/impex/heif/HeifExport.cpp:558
+#: plugins/impex/heif/HeifExport.cpp:559
 #: plugins/impex/jxl/kis_wdg_options_jpegxl.cpp:206
 #, kde-format
 msgctxt "@tooltip"
@@ -55064,14 +55064,14 @@ msgstr ""
 "log-gamma (HLG) görbével lesz kódolva. Olyan HDR képekhez ajánlott, ahol a "
 "kijelző esetleg nem kezeli a HDR-t."
 
-#: plugins/impex/heif/HeifExport.cpp:564
+#: plugins/impex/heif/HeifExport.cpp:565
 #: plugins/impex/jxl/kis_wdg_options_jpegxl.cpp:213
 #, kde-format
 msgctxt "Color space option plus transfer function name"
 msgid "Keep colorants, encode PQ"
 msgstr "Színösszetevők megtartása, PQ kódolás"
 
-#: plugins/impex/heif/HeifExport.cpp:565
+#: plugins/impex/heif/HeifExport.cpp:566
 #: plugins/impex/jxl/kis_wdg_options_jpegxl.cpp:215
 #, kde-format
 msgctxt "@tooltip"
@@ -55084,14 +55084,14 @@ msgstr ""
 "néven SMPTE 2048 görbe) lesz kódolva. Olyan képekhez ajánlott, ahol az "
 "abszolút fényerő fontos."
 
-#: plugins/impex/heif/HeifExport.cpp:569
+#: plugins/impex/heif/HeifExport.cpp:570
 #: plugins/impex/jxl/kis_wdg_options_jpegxl.cpp:221
 #, kde-format
 msgctxt "Color space option plus transfer function name"
 msgid "Keep colorants, encode HLG"
 msgstr "Színösszetevők megtartása, HLG kódolás"
 
-#: plugins/impex/heif/HeifExport.cpp:570
+#: plugins/impex/heif/HeifExport.cpp:571
 #: plugins/impex/jxl/kis_wdg_options_jpegxl.cpp:223
 #, kde-format
 msgctxt "@tooltip"
@@ -55103,14 +55103,14 @@ msgstr ""
 "lesz kódolva. Olyan képernyőkre szánt képekhez ajánlott, amelyek nem kezelik "
 "a PQ-t"
 
-#: plugins/impex/heif/HeifExport.cpp:574
+#: plugins/impex/heif/HeifExport.cpp:575
 #: plugins/impex/jxl/kis_wdg_options_jpegxl.cpp:228
 #, kde-format
 msgctxt "Color space option plus transfer function name"
 msgid "Keep colorants, encode SMPTE ST 428"
 msgstr "Színösszetevők megtartása, SMPTE ST 428 kódolás"
 
-#: plugins/impex/heif/HeifExport.cpp:575
+#: plugins/impex/heif/HeifExport.cpp:576
 #: plugins/impex/jxl/kis_wdg_options_jpegxl.cpp:230
 #, kde-format
 msgctxt "@tooltip"
@@ -55123,13 +55123,13 @@ msgstr ""
 "Krita az ilyen képeket mindig lineáris lebegőpontosként nyitja meg, ez az "
 "opció ennek visszavonására szolgál"
 
-#: plugins/impex/heif/HeifExport.cpp:580
+#: plugins/impex/heif/HeifExport.cpp:581
 #, kde-format
 msgctxt "Color space option"
 msgid "No changes, clip"
 msgstr "Nincs változtatás, levágás"
 
-#: plugins/impex/heif/HeifExport.cpp:581
+#: plugins/impex/heif/HeifExport.cpp:582
 #, kde-format
 msgctxt "@tooltip"
 msgid ""
@@ -55604,7 +55604,7 @@ msgstr ""
 msgid "Sign with Author Profile Data"
 msgstr "Aláírás a szerzői profil adataival"
 
-#: plugins/impex/jxl/JPEGXLImport.cpp:377
+#: plugins/impex/jxl/JPEGXLImport.cpp:378
 #, kde-format
 msgctxt "JPEG-XL errors"
 msgid ""
@@ -55613,22 +55613,22 @@ msgstr ""
 "Direktszin-csatornákkal (spot color) rendelkező JPEG-XL kép észlelve, "
 "lapított kép importálása."
 
-#: plugins/impex/jxl/JPEGXLImport.cpp:680
-#: plugins/impex/jxl/JPEGXLImport.cpp:692
-#: plugins/impex/jxl/JPEGXLImport.cpp:708
-#: plugins/impex/jxl/JPEGXLImport.cpp:720
+#: plugins/impex/jxl/JPEGXLImport.cpp:682
+#: plugins/impex/jxl/JPEGXLImport.cpp:694
+#: plugins/impex/jxl/JPEGXLImport.cpp:710
+#: plugins/impex/jxl/JPEGXLImport.cpp:722
 #, kde-format
 msgctxt "JPEG-XL errors"
 msgid "Unable to read the image profile."
 msgstr "A képprofil olvasása sikertelen."
 
-#: plugins/impex/jxl/JPEGXLImport.cpp:863
+#: plugins/impex/jxl/JPEGXLImport.cpp:865
 #, kde-format
 msgctxt "JPEG-XL"
 msgid "Invalid JPEG-XL layer name length"
 msgstr "Érvénytelen JPEG-XL rétegnévhossz"
 
-#: plugins/impex/jxl/JPEGXLImport.cpp:927
+#: plugins/impex/jxl/JPEGXLImport.cpp:929
 #, kde-format
 msgctxt "JPEG-XL errors"
 msgid "The animation declares a frame rate of more than 240 FPS."

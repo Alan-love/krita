@@ -41,8 +41,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-10 00:41+0000\n"
-"PO-Revision-Date: 2026-06-18 08:58+0300\n"
+"POT-Creation-Date: 2026-07-11 00:41+0000\n"
+"PO-Revision-Date: 2026-07-10 10:40+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -23771,7 +23771,7 @@ msgstr "יציאה"
 #: libs/pigment/resources/KoColorSet.cpp:1527
 #: libs/pigment/resources/KoColorSet.cpp:1944
 #: libs/ui/actions/KisPasteActionFactories.cpp:392
-#: libs/ui/animation/KisDlgAnimationRenderer.cpp:542 libs/ui/KisView.cpp:1163
+#: libs/ui/animation/KisDlgAnimationRenderer.cpp:542 libs/ui/KisView.cpp:1167
 #: plugins/generators/seexpr/kis_wdg_seexpr.cpp:34
 #, kde-format
 msgid "Untitled"
@@ -23840,7 +23840,7 @@ msgstr "משאבים מקומיים"
 #: libs/ui/KisReferenceImage.cpp:192 libs/ui/KisRemoteFileFetcher.cpp:40
 #: libs/ui/KisRemoteFileFetcher.cpp:64 libs/ui/KisRemoteFileFetcher.cpp:91
 #: libs/ui/KisTemplateCreateDia.cpp:284 libs/ui/KisTemplateCreateDia.cpp:390
-#: libs/ui/KisView.cpp:679 libs/ui/KisView.cpp:1166
+#: libs/ui/KisView.cpp:683 libs/ui/KisView.cpp:1170
 #: libs/ui/KisWelcomePageWidget.cpp:730 libs/ui/KisWindowLayoutResource.cpp:390
 #: libs/ui/opengl/KisOpenGLCanvasRenderer.cpp:335
 #: libs/ui/widgets/kis_custom_image_widget.cc:291
@@ -24703,7 +24703,7 @@ msgid "Select All"
 msgstr "בחירה בהכול"
 
 #: libs/ui/actions/kis_selection_action_factories.cpp:243
-#: libs/ui/KisView.cpp:774
+#: libs/ui/KisView.cpp:778
 msgctxt "(qtundo-format)"
 msgid "Flood Fill Layer"
 msgstr "מילוי שכבה בהצפה"
@@ -24765,7 +24765,7 @@ msgid "Paste shapes"
 msgstr "הדבקת צורות"
 
 #: libs/ui/actions/KisPasteActionFactories.cpp:298
-#: libs/ui/actions/KisPasteActionFactories.cpp:399 libs/ui/KisView.cpp:589
+#: libs/ui/actions/KisPasteActionFactories.cpp:399 libs/ui/KisView.cpp:593
 #, kde-format
 msgid "(pasted)"
 msgstr "(מודבק)"
@@ -33813,7 +33813,7 @@ msgctxt "(qtundo-format)"
 msgid "Change File Layer"
 msgstr "החלפת שכבת קובץ"
 
-#: libs/ui/kis_clipboard.cc:780 libs/ui/KisView.cpp:680
+#: libs/ui/kis_clipboard.cc:780 libs/ui/KisView.cpp:684
 #, kde-format
 msgid ""
 "Could not open %2.\n"
@@ -36245,74 +36245,74 @@ msgstr "אין תמונה זמינה."
 msgid "Use This Template"
 msgstr "להשתמש בתבנית הזאת"
 
-#: libs/ui/KisView.cpp:749
+#: libs/ui/KisView.cpp:753
 #, kde-format
 msgid "You cannot drag and drop colors on the selected layer type."
 msgstr "לא ניתן לגרור צבעים בסוג השכבה הנבחר."
 
-#: libs/ui/KisView.cpp:757 libs/ui/tool/kis_tool_utils.cpp:419
+#: libs/ui/KisView.cpp:761 libs/ui/tool/kis_tool_utils.cpp:419
 #, kde-format
 msgid "Layer is locked and invisible."
 msgstr "השכבה נעולה ומוסתרת."
 
-#: libs/ui/KisView.cpp:759 libs/ui/tool/kis_tool_utils.cpp:421
+#: libs/ui/KisView.cpp:763 libs/ui/tool/kis_tool_utils.cpp:421
 #, kde-format
 msgid "Layer is locked."
 msgstr "השכבה נעולה."
 
-#: libs/ui/KisView.cpp:761 libs/ui/tool/kis_tool_utils.cpp:423
+#: libs/ui/KisView.cpp:765 libs/ui/tool/kis_tool_utils.cpp:423
 #, kde-format
 msgid "Layer is invisible."
 msgstr "השכבה גלויה."
 
-#: libs/ui/KisView.cpp:1167
+#: libs/ui/KisView.cpp:1171
 #, kde-format
 msgid ""
 "<p>The document <b>'%1'</b> has been modified.</p><p>Do you want to save it?"
 "</p>"
 msgstr "<p>המסמך <b>‚%1’</b> נערך.</p><p>לשמור אותו?</p>"
 
-#: libs/ui/KisView.cpp:1241
+#: libs/ui/KisView.cpp:1245
 #, kde-format
 msgid "Write Protected"
 msgstr "מוגן מפני כתיבה"
 
-#: libs/ui/KisView.cpp:1245
+#: libs/ui/KisView.cpp:1249
 #, fuzzy, kde-format
 msgid "Recovered"
 msgstr "מלבן"
 
-#: libs/ui/KisView.cpp:1347
+#: libs/ui/KisView.cpp:1351
 #, fuzzy, kde-format
 msgid "Soft Proofing doesn't work in floating point."
 msgstr "אלפא"
 
-#: libs/ui/KisView.cpp:1352
+#: libs/ui/KisView.cpp:1356
 #, fuzzy, kde-format
 msgid "Soft Proofing turned on."
 msgstr "אלפא"
 
-#: libs/ui/KisView.cpp:1354
+#: libs/ui/KisView.cpp:1358
 #, fuzzy, kde-format
 msgid "Soft Proofing turned off."
 msgstr "אלפא"
 
-#: libs/ui/KisView.cpp:1366
+#: libs/ui/KisView.cpp:1370
 #, fuzzy, kde-format
 msgid "Gamut Warnings don't work in floating point."
 msgstr "הדפסה אחרונה"
 
-#: libs/ui/KisView.cpp:1372
+#: libs/ui/KisView.cpp:1376
 #, fuzzy, kde-format
 msgid "Gamut Warnings turned on."
 msgstr "הדפסה אחרונה"
 
-#: libs/ui/KisView.cpp:1374
+#: libs/ui/KisView.cpp:1378
 #, fuzzy, kde-format
 msgid "But Soft Proofing is still off."
 msgstr "אלפא"
 
-#: libs/ui/KisView.cpp:1377
+#: libs/ui/KisView.cpp:1381
 #, fuzzy, kde-format
 msgid "Gamut Warnings turned off."
 msgstr "הדפסה אחרונה"
@@ -43926,10 +43926,10 @@ msgstr "מקליט"
 #: plugins/dockers/recorder/recorder.action:6
 #: plugins/dockers/recorder/recorder.action:7
 #: plugins/dockers/recorder/recorder.action:8
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "action"
 msgid "Record Timelapse"
-msgstr "מלבן"
+msgstr ""
 
 #. i18n: context: iconText @ Action (recorder_export), Actions (Recorder), ActionCollection (Recorder)
 #. i18n: context: toolTip @ Action (recorder_export), Actions (Recorder), ActionCollection (Recorder)
@@ -43940,10 +43940,10 @@ msgstr "מלבן"
 #: plugins/dockers/recorder/recorder.action:16
 #: plugins/dockers/recorder/recorder.action:17
 #: plugins/dockers/recorder/recorder.action:18
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "action"
 msgid "Export Timelapse..."
-msgstr "ייצ&וא..."
+msgstr ""
 
 #: plugins/dockers/recorder/recorder_export.cpp:109
 #, kde-format
@@ -43966,17 +43966,15 @@ msgid "Abort encoding the timelapse video?"
 msgstr ""
 
 #: plugins/dockers/recorder/recorder_export.cpp:318
-#, fuzzy, kde-format
-#| msgctxt "Status for the export of the video record"
-#| msgid "Starting FFmpeg..."
+#, kde-format
 msgctxt "Status for the export of the video record"
 msgid "Starting exporter..."
-msgstr "FFmpeg מופעל…"
+msgstr "המייצא מופעל…"
 
 #: plugins/dockers/recorder/recorder_export.cpp:437
-#, fuzzy, kde-format
+#, kde-format
 msgid "Export Timelapse Video As"
-msgstr "מיקום"
+msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, exportGroupBox)
 #. i18n: ectx: property (text), widget (QToolButton, btnExport)
@@ -44029,11 +44027,9 @@ msgid "No frames to export."
 msgstr "אין תמוניות לייצוא."
 
 #: plugins/dockers/recorder/recorder_export.cpp:820
-#, fuzzy, kde-format
+#, kde-format
 msgid "The video file already exists. Do you wish to overwrite it?"
-msgstr ""
-"כבר קיים מסמך בשם זה.\n"
-"האם ברצונך לכתוב עליו?"
+msgstr "הסרטון כבר קיים. לשכתב אותו?"
 
 #: plugins/dockers/recorder/recorder_export.cpp:848
 #, kde-format
@@ -44041,10 +44037,9 @@ msgid "The timelapse video is being encoded..."
 msgstr ""
 
 #: plugins/dockers/recorder/recorder_export.cpp:863
-#, fuzzy, kde-format
-#| msgid "Export failed. FFmpeg message:"
+#, kde-format
 msgid "Export failed. Error message:"
-msgstr "הייצוא נכשל. ההודעה מ־FFmpeg:"
+msgstr "הייצוא נכשל. הודעת שגיאה:"
 
 #: plugins/dockers/recorder/recorder_export.cpp:886
 #, kde-format
@@ -44058,10 +44053,10 @@ msgstr ""
 
 #: plugins/dockers/recorder/recorder_export.cpp:893
 #: plugins/dockers/recorder/recorder_snapshots_manager.cpp:236
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "Label title, Snapshot directory deleting is in progress"
 msgid "Cleaning up..."
-msgstr "העמוד הבא"
+msgstr "מתבצע ניקיון…"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, RecorderExport)
 #: plugins/dockers/recorder/recorder_export.ui:18
@@ -44714,10 +44709,10 @@ msgid "Create snapshot"
 msgstr "יצירת צילום מסך"
 
 #: plugins/dockers/snapshotdocker/SnapshotDocker.cpp:68
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Switch to selected snapshot"
-msgstr "&מברשת"
+msgstr "מעבר לתמונת המצב הנבחרת"
 
 #: plugins/dockers/snapshotdocker/SnapshotDocker.cpp:74
 #, kde-format
@@ -44726,9 +44721,9 @@ msgid "Remove selected snapshot"
 msgstr ""
 
 #: plugins/dockers/snapshotdocker/SnapshotDocker.cpp:81
-#, fuzzy, kde-format
+#, kde-format
 msgid "Snapshot Docker"
-msgstr "מקושר"
+msgstr "מעגן תמונות מצב"
 
 #: plugins/dockers/specificcolorselector/kis_specific_color_selector_widget.cc:70
 #, kde-format
@@ -44982,10 +44977,9 @@ msgstr "ייצוא סטוריבורד"
 
 #. i18n: ectx: property (title), widget (QGroupBox, pageSetupGroupBox)
 #: plugins/dockers/storyboarddocker/wdgexportstoryboard.ui:38
-#, fuzzy, kde-format
-#| msgid "Page Size:"
+#, kde-format
 msgid "Page Setup"
-msgstr "גודל עמוד:"
+msgstr "הגדרות עמוד"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, pageSizeComboBox)
 #: plugins/dockers/storyboarddocker/wdgexportstoryboard.ui:67
@@ -45043,17 +45037,15 @@ msgstr "כיוון:"
 
 #. i18n: ectx: property (title), widget (QGroupBox, boardLayoutGroupBox)
 #: plugins/dockers/storyboarddocker/wdgexportstoryboard.ui:141
-#, fuzzy, kde-format
-#| msgid "Board Layout:"
+#, kde-format
 msgid "Board Layout"
-msgstr "פריסת לוח:"
+msgstr "פריסת לוח"
 
 #. i18n: ectx: property (text), widget (QLabel, boardLayoutLabel)
 #: plugins/dockers/storyboarddocker/wdgexportstoryboard.ui:153
-#, fuzzy, kde-format
-#| msgid "Arrange"
+#, kde-format
 msgid "Arrange By:"
-msgstr "סידור"
+msgstr "סידור לפי:"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, boardLayoutComboBox)
 #: plugins/dockers/storyboarddocker/wdgexportstoryboard.ui:167
@@ -45075,10 +45067,9 @@ msgstr "תבנית SVG"
 
 #. i18n: ectx: property (text), widget (QLabel, gridLabel)
 #: plugins/dockers/storyboarddocker/wdgexportstoryboard.ui:196
-#, fuzzy, kde-format
-#| msgid "Columns:"
+#, kde-format
 msgid "Rows x Columns:"
-msgstr "עמודות:"
+msgstr "שורות × עמודות:"
 
 #. i18n: ectx: property (text), widget (QLabel, svgTemplatePathLabel)
 #: plugins/dockers/storyboarddocker/wdgexportstoryboard.ui:328
@@ -45303,10 +45294,10 @@ msgstr ""
 
 #: plugins/dockers/textproperties/qml/AlignmentBaseline.qml:84
 #: plugins/dockers/textproperties/qml/DominantBaseline.qml:82
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:inlistbox"
 msgid "Alphabetic"
-msgstr "גוו&ני אפור"
+msgstr "אלפביתי"
 
 #: plugins/dockers/textproperties/qml/AlignmentBaseline.qml:85
 #: plugins/dockers/textproperties/qml/DominantBaseline.qml:83
@@ -45317,10 +45308,10 @@ msgstr ""
 
 #: plugins/dockers/textproperties/qml/AlignmentBaseline.qml:86
 #: plugins/dockers/textproperties/qml/DominantBaseline.qml:84
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:inlistbox"
 msgid "Ideographic"
-msgstr "הוסף מעבר שורה"
+msgstr "אידיאוגרפי"
 
 #: plugins/dockers/textproperties/qml/AlignmentBaseline.qml:87
 #: plugins/dockers/textproperties/qml/DominantBaseline.qml:85
@@ -46356,10 +46347,10 @@ msgid "Historical"
 msgstr "היסטורי"
 
 #: plugins/dockers/textproperties/qml/OTLigatures.qml:125
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:check"
 msgid "Contextual"
-msgstr "זוויות:"
+msgstr "לפי הקשר"
 
 #: plugins/dockers/textproperties/qml/OTNumeric.qml:12
 #, kde-format
@@ -46397,10 +46388,10 @@ msgid "Lining"
 msgstr "הדפסה אחרונה"
 
 #: plugins/dockers/textproperties/qml/OTNumeric.qml:117
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:inlistbox"
 msgid "Oldstyle"
-msgstr "&תמונה"
+msgstr "סגנון ישן"
 
 #: plugins/dockers/textproperties/qml/OTNumeric.qml:131
 #, kde-format
@@ -46439,10 +46430,10 @@ msgid "Stacked"
 msgstr "מוערם"
 
 #: plugins/dockers/textproperties/qml/OTNumeric.qml:173
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:check"
 msgid "Ordinals"
-msgstr "אלכסוני"
+msgstr ""
 
 #: plugins/dockers/textproperties/qml/OTNumeric.qml:183
 #, kde-format
@@ -46491,10 +46482,10 @@ msgid "Revert property."
 msgstr "תבניות"
 
 #: plugins/dockers/textproperties/qml/TabSize.qml:14
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title:group"
 msgid "Tab Size"
-msgstr "&תמונה"
+msgstr "גודל טאב"
 
 #: plugins/dockers/textproperties/qml/TabSize.qml:18
 #, kde-format
@@ -46664,12 +46655,10 @@ msgid "Overline"
 msgstr "שינוי גודל תמונה"
 
 #: plugins/dockers/textproperties/qml/TextDecoration.qml:205
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "Strikethrough"
+#, kde-format
 msgctxt "@option:check"
 msgid "Line-through"
-msgstr "קו חוצה"
+msgstr "שורה מבעד"
 
 #: plugins/dockers/textproperties/qml/TextDecoration.qml:222
 #, kde-format
@@ -46708,11 +46697,10 @@ msgid "Wavy"
 msgstr "גלי"
 
 #: plugins/dockers/textproperties/qml/TextIndent.qml:14
-#, fuzzy, kde-format
-#| msgid "Left indent"
+#, kde-format
 msgctxt "@title:group"
 msgid "Text Indent"
-msgstr "הזחה שמאלית"
+msgstr "הזחת טקסט"
 
 #: plugins/dockers/textproperties/qml/TextIndent.qml:18
 #, kde-format
@@ -46723,19 +46711,18 @@ msgid ""
 msgstr ""
 
 #: plugins/dockers/textproperties/qml/TextIndent.qml:20
-#, fuzzy, kde-format
-#| msgid "Left indent"
+#, kde-format
 msgctxt ""
 "comma separated search terms for the text-indent property, matching is case-"
 "insensitive"
 msgid "text-indent"
-msgstr "הזחה שמאלית"
+msgstr "הזחת טקסט"
 
 #: plugins/dockers/textproperties/qml/TextIndent.qml:140
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:check"
 msgid "Hanging indentation"
-msgstr "עירוב:"
+msgstr "הזחה תלויה"
 
 #: plugins/dockers/textproperties/qml/TextIndent.qml:152
 #, kde-format
@@ -46756,28 +46743,28 @@ msgid "Character"
 msgstr "תו"
 
 #: plugins/dockers/textproperties/qml/TextProperties.qml:70
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title:tab"
 msgid "Preset"
-msgstr "מאפייני שכבה..."
+msgstr "ערכה"
 
 #: plugins/dockers/textproperties/qml/TextProperties.qml:134
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:button"
 msgid "Add Style Preset"
-msgstr "מאפייני שכבה..."
+msgstr "הוספת ערכת סגנון"
 
 #: plugins/dockers/textproperties/qml/TextProperties.qml:147
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:button"
 msgid "Edit Style Preset"
-msgstr "מאפייני שכבה..."
+msgstr "עריכת ערכת סגנון"
 
 #: plugins/dockers/textproperties/qml/TextProperties.qml:166
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:button"
 msgid "Clone Style Preset"
-msgstr "מקושר"
+msgstr "שכפול ערכת סגנון"
 
 #: plugins/dockers/textproperties/qml/TextPropertyBaseList.qml:308
 #, kde-format
@@ -46804,17 +46791,17 @@ msgid "Configure"
 msgstr "הגדרה"
 
 #: plugins/dockers/textproperties/qml/TextPropertyConfigDialog.qml:39
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Default Visibility:"
-msgstr "זוויות:"
+msgstr "חשיפת ברירת מחדל:"
 
 #: plugins/dockers/textproperties/qml/TextPropertyConfigDialog.qml:46
 #: plugins/dockers/textproperties/qml/TextPropertyConfigDialog.qml:107
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:inlistbox"
 msgid "When Relevant"
-msgstr "פ&תיחת מסמך אחרון"
+msgstr "כשתואם"
 
 #: plugins/dockers/textproperties/qml/TextPropertyConfigDialog.qml:47
 #: plugins/dockers/textproperties/qml/TextPropertyConfigDialog.qml:108
@@ -46878,10 +46865,10 @@ msgid "Optimize Speed"
 msgstr "מיטוב מהירות"
 
 #: plugins/dockers/textproperties/qml/TextRendering.qml:84
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Renders without antialiasing."
-msgstr "מאתחל..."
+msgstr "תיצוג ללא החלקת קצוות."
 
 #: plugins/dockers/textproperties/qml/TextRendering.qml:85
 #, kde-format
@@ -46896,10 +46883,10 @@ msgid "Uses 'light' hinting in horizontal and 'full' hinting in vertical."
 msgstr ""
 
 #: plugins/dockers/textproperties/qml/TextRendering.qml:87
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:inlistbox"
 msgid "Geometric Precision"
-msgstr "אפשרויות עירוב"
+msgstr "דיוק גאומטרי"
 
 #: plugins/dockers/textproperties/qml/TextRendering.qml:88
 #, kde-format
@@ -46972,11 +46959,10 @@ msgid "Full-size Kana"
 msgstr "קאנה בגודל מלא"
 
 #: plugins/dockers/textproperties/qml/UnderlinePosition.qml:12
-#, fuzzy, kde-format
-#| msgid "Vertical Position"
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "Underline Position"
-msgstr "מקום אנכי"
+msgstr "מקום קו תחתי"
 
 #: plugins/dockers/textproperties/qml/UnderlinePosition.qml:15
 #, kde-format
@@ -46993,29 +46979,28 @@ msgid "text-decoration-position, underline, left, right, under"
 msgstr ""
 
 #: plugins/dockers/textproperties/qml/UnderlinePosition.qml:93
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:inlistbox"
 msgid "Bottom"
-msgstr "יישור אוטומטי"
+msgstr "למטה"
 
 #: plugins/dockers/textproperties/qml/UnderlinePosition.qml:109
-#, fuzzy, kde-format
-#| msgid "Vertical Lines"
+#, kde-format
 msgctxt "@label:inlistbox"
 msgid "Vertical Left"
-msgstr "קווים אנכיים"
+msgstr "שמאלה אנכית"
 
 #: plugins/dockers/textproperties/qml/UnderlinePosition.qml:110
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:inlistbox"
 msgid "Vertical Right"
-msgstr "גל משולש"
+msgstr "ימינה אנכית"
 
 #: plugins/dockers/textproperties/qml/WhiteSpace.qml:12
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:spinbox"
 msgid "White Space"
-msgstr "מחליף צבעים"
+msgstr "רווח"
 
 #: plugins/dockers/textproperties/qml/WhiteSpace.qml:15
 #, kde-format
@@ -47034,10 +47019,10 @@ msgid "white-space, collapse, pre-formatted"
 msgstr ""
 
 #: plugins/dockers/textproperties/qml/WhiteSpace.qml:123
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:inlistbox"
 msgid "Pre"
-msgstr "שינוי גודל תמונה"
+msgstr "טרום"
 
 #: plugins/dockers/textproperties/qml/WhiteSpace.qml:124
 #, kde-format
@@ -47052,22 +47037,22 @@ msgid "Pre Wrap"
 msgstr ""
 
 #: plugins/dockers/textproperties/qml/WhiteSpace.qml:126
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:inlistbox"
 msgid "Break Spaces"
-msgstr "הסרת קבוצה"
+msgstr "קטיעת רווחים"
 
 #: plugins/dockers/textproperties/qml/WhiteSpace.qml:127
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:inlistbox"
 msgid "Pre Line"
-msgstr "מאתחל..."
+msgstr "טרום שורה"
 
 #: plugins/dockers/textproperties/qml/WordBreak.qml:12
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Word Break"
-msgstr "הוסף מעבר שורה"
+msgstr "קטיעת מילים"
 
 #: plugins/dockers/textproperties/qml/WordBreak.qml:16
 #, kde-format
@@ -47313,9 +47298,9 @@ msgstr "א&נכי"
 #: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:289
 #: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:633
 #: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:850
-#, fuzzy, kde-format
+#, kde-format
 msgid "Along Orientation"
-msgstr "עירוב:"
+msgstr "לאורך הכיוון"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, cbPopupScrolling)
 #. i18n: ectx: property (text), item, widget (QComboBox, cbScrolling)

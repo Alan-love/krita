@@ -52,8 +52,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-10 00:41+0000\n"
-"PO-Revision-Date: 2026-07-09 22:05+0200\n"
+"POT-Creation-Date: 2026-07-11 00:41+0000\n"
+"PO-Revision-Date: 2026-07-10 15:49+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -19405,7 +19405,7 @@ msgid ""
 "Replaces oldstyle figures with lining figures, which harmonize well with "
 "uppercase letters."
 msgstr ""
-"Ersätter hängande siffror med linjerade siffror, som harmoniserar bra med "
+"Ersätter gammaldags siffror med linjerade siffror, som harmoniserar bra med "
 "versaler."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:161
@@ -19456,7 +19456,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "Oldstyle Figures"
-msgstr "Figurer med gammal stil"
+msgstr "Siffror med gammaldags stil"
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:174
 #, kde-format
@@ -19465,7 +19465,7 @@ msgid ""
 "Replaces lining figures with oldstyle figures, which harmonize well with "
 "lowercase letters."
 msgstr ""
-"Ersätter linjerade siffror med hängande siffror, som harmoniserar bra med "
+"Ersätter linjerade siffror med gammaldags siffror, som harmoniserar bra med "
 "gemener."
 
 #: libs/flake/text/KoOpenTypeFeatureInfoFactory.cpp:177
@@ -23931,7 +23931,7 @@ msgstr "Ut"
 #: libs/pigment/resources/KoColorSet.cpp:1527
 #: libs/pigment/resources/KoColorSet.cpp:1944
 #: libs/ui/actions/KisPasteActionFactories.cpp:392
-#: libs/ui/animation/KisDlgAnimationRenderer.cpp:542 libs/ui/KisView.cpp:1163
+#: libs/ui/animation/KisDlgAnimationRenderer.cpp:542 libs/ui/KisView.cpp:1167
 #: plugins/generators/seexpr/kis_wdg_seexpr.cpp:34
 #, kde-format
 msgid "Untitled"
@@ -24000,7 +24000,7 @@ msgstr "Lokala resurser"
 #: libs/ui/KisReferenceImage.cpp:192 libs/ui/KisRemoteFileFetcher.cpp:40
 #: libs/ui/KisRemoteFileFetcher.cpp:64 libs/ui/KisRemoteFileFetcher.cpp:91
 #: libs/ui/KisTemplateCreateDia.cpp:284 libs/ui/KisTemplateCreateDia.cpp:390
-#: libs/ui/KisView.cpp:679 libs/ui/KisView.cpp:1166
+#: libs/ui/KisView.cpp:683 libs/ui/KisView.cpp:1170
 #: libs/ui/KisWelcomePageWidget.cpp:730 libs/ui/KisWindowLayoutResource.cpp:390
 #: libs/ui/opengl/KisOpenGLCanvasRenderer.cpp:335
 #: libs/ui/widgets/kis_custom_image_widget.cc:291
@@ -24862,7 +24862,7 @@ msgid "Select All"
 msgstr "Markera alla"
 
 #: libs/ui/actions/kis_selection_action_factories.cpp:243
-#: libs/ui/KisView.cpp:774
+#: libs/ui/KisView.cpp:778
 msgctxt "(qtundo-format)"
 msgid "Flood Fill Layer"
 msgstr "Fyll ut lager"
@@ -24924,7 +24924,7 @@ msgid "Paste shapes"
 msgstr "Klistra in former"
 
 #: libs/ui/actions/KisPasteActionFactories.cpp:298
-#: libs/ui/actions/KisPasteActionFactories.cpp:399 libs/ui/KisView.cpp:589
+#: libs/ui/actions/KisPasteActionFactories.cpp:399 libs/ui/KisView.cpp:593
 #, kde-format
 msgid "(pasted)"
 msgstr "(inklistrad)"
@@ -27596,11 +27596,13 @@ msgid ""
 "should switch into 10-bit mode if you want to use HDR capabilities of your "
 "display</p>"
 msgstr ""
+"<p>Bitdjupet för färgen som skickas till fönstersammansättningen. Du bör "
+"byta till 10-bitars läge om HDR-funktionerna på skärmen ska användas.</p>"
 
 #: libs/ui/dialogs/kis_dlg_preferences.cc:1373
 #, kde-format
 msgid "Current canvas surface bit depth:"
-msgstr ""
+msgstr "Nuvarande bitdjup för dukens arbetsyta:"
 
 #: libs/ui/dialogs/kis_dlg_preferences.cc:1381
 #, kde-format
@@ -27626,7 +27628,7 @@ msgstr "Föredragen rymd"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "This is the space preferred by the operating system."
-msgstr ""
+msgstr "Det här är rymden som föredras av operativsystemet."
 
 #: libs/ui/dialogs/kis_dlg_preferences.cc:1395
 #, kde-format
@@ -27639,6 +27641,7 @@ msgstr "Nuvarande bildskärm"
 msgctxt "@info:tooltip"
 msgid "This is the space representing the currently active display."
 msgstr ""
+"Det här är rymden som representerar skärmen som för närvarande är aktiv."
 
 #: libs/ui/dialogs/kis_dlg_preferences.cc:1489
 #: libs/ui/widgets/kis_advanced_color_space_selector.cc:799
@@ -27779,7 +27782,7 @@ msgstr "EGL (nuvarande)"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "EGL"
-msgstr ""
+msgstr "EGL"
 
 #: libs/ui/dialogs/kis_dlg_preferences.cc:2298
 #, kde-format
@@ -27788,6 +27791,8 @@ msgid ""
 "<p>If you are using Krita on X11 or XWayland and experience slowness, try "
 "switching between EGL and GLX</p>"
 msgstr ""
+"<p>Om du använder Krita på X11 eller XWayland och upplever långsamhet, "
+"försök att byta mellan EGL och GLX.</p>"
 
 #: libs/ui/dialogs/kis_dlg_preferences.cc:2338
 #, kde-format
@@ -28311,7 +28316,7 @@ msgstr "Ikonbibliotek för förinställningar"
 #: libs/ui/dialogs/KisDonationManagementDialog.cpp:17
 #, kde-format
 msgid "Supporter Benefits"
-msgstr ""
+msgstr "Supporterförmåner"
 
 #: libs/ui/dialogs/KisDonationManagementDialog.cpp:27
 #, kde-format
@@ -28322,15 +28327,15 @@ msgstr "Hantera prenumerationer"
 #, kde-format
 msgid "You have %1 supporter benefit:"
 msgid_plural "You have %1 supporter benefits:"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Du har %1 supporterförmån:"
+msgstr[1] "Du har %1 supporterförmåner:"
 
 #: libs/ui/dialogs/KisDonationManagementDialog.cpp:122
 #, kde-format
 msgid "There is %1 supporter benefit available:"
 msgid_plural "There are %1 supporter benefits available:"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Det finns %1 supporterförmån tillgänglig:"
+msgstr[1] "Det finns %1 supporterförmåner tillgängliga:"
 
 #. i18n: ectx: property (windowTitle), widget (QDialog, KisDonationManagementDialog)
 #: libs/ui/dialogs/KisDonationManagementDialog.ui:14
@@ -28345,6 +28350,8 @@ msgid ""
 "No supporter benefits available on this version of Krita.\n"
 "You can still support Krita by donating."
 msgstr ""
+"Inga supporterförmåner är tillgängliga på den här versionen av Krita.\n"
+"Du kan fortfarande stödja Krita genom att ge ett bidrag."
 
 #. i18n: ectx: property (text), widget (QPushButton, m_btnNoBenefitsSupport)
 #: libs/ui/dialogs/KisDonationManagementDialog.ui:63
@@ -28701,13 +28708,13 @@ msgstr ""
 #: libs/ui/forms/KisWelcomePage.ui:1659
 #, kde-format
 msgid "Krita is made possible thanks to ongoing support from people like you!"
-msgstr ""
+msgstr "Krita är möjlig tack vare kontinuerligt stöd från personer som du!"
 
 #. i18n: ectx: property (text), widget (QPushButton, bnAndroidSupporterManage)
 #: libs/ui/forms/KisWelcomePage.ui:1672
 #, kde-format
 msgid "Manage Supporter Benefits"
-msgstr ""
+msgstr "Hantera supporterförmåner"
 
 #. i18n: ectx: property (text), widget (QPushButton, bnAndroidSupport)
 #: libs/ui/forms/KisWelcomePage.ui:1717 libs/ui/KisWelcomePageWidget.cpp:844
@@ -30408,6 +30415,8 @@ msgid ""
 "Dynamically adjust outline to match the effective size of the brush. (For "
 "example, as brush size changes due to pen pressure.)"
 msgstr ""
+"Justera konturen dynamiskt så att den matchar penselns effektiva storlek. "
+"(Till exempel när penselstorleken ändras på grund av penntryck.)"
 
 #. i18n: ectx: property (text), widget (QCheckBox, m_changeBrushOutline)
 #. i18n: ectx: property (text), widget (QCheckBox, m_changeEraserBrushOutline)
@@ -30457,7 +30466,7 @@ msgstr "Raderingskonturfärg:"
 #: libs/ui/forms/wdggeneralsettings.ui:886
 #, kde-format
 msgid "Color Sampler Shape:"
-msgstr ""
+msgstr "Färghämtarens form:"
 
 #. i18n: ectx: property (text), widget (QLabel, m_lblColorSamplerPreviewSize)
 #. i18n: ectx: property (text), widget (QLabel, DiameterLbl)
@@ -32552,12 +32561,16 @@ msgid ""
 "was printed on a paper and viewed with the monitor as the only light source. "
 "This is standard behaviour for a ICC v4 workflow.</p></body></html>"
 msgstr ""
+"<html><head/><body><p>Aktiverar kromatisk anpassning för absolut "
+"återgivning. Det visar i praktiken hur färgerna skulle se ut om bilden "
+"trycktes på papper och visades med skärmen som enda ljuskälla. Det är "
+"normalt beteende för ett ICC v4-arbetsflöde.</p></body></html>"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkDoChromaticAdaptation)
 #: libs/ui/forms/wdgproofingoptions.ui:99
 #, kde-format
 msgid "Absolute Intent Chromatic Adaptation"
-msgstr ""
+msgstr "Absolut återgivning kromatisk adaption"
 
 #. i18n: ectx: property (text), widget (QLabel, lblGamutWarning)
 #: libs/ui/forms/wdgproofingoptions.ui:111
@@ -33008,6 +33021,8 @@ msgstr ""
 #, kde-format
 msgid "Treate F13 key as middle mouse button (workaround for OnePlus styluses)"
 msgstr ""
+"Använd F13-tangenten som musens mittenknapp (tillfällig lösning för OnePlus-"
+"pennor)"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkUseIgnoreHistoricTabletEventsWorkaround)
 #: libs/ui/forms/wdgtabletsettings.ui:208
@@ -33016,6 +33031,8 @@ msgid ""
 "Disregard tablet position history (workaround for jagged lines with Xiaomi "
 "styluses)"
 msgstr ""
+"Bortse från ritplattans positionshistorik (provisorisk lösning för ojämna "
+"linjer med Xiaomi-pennor)"
 
 #. i18n: ectx: property (toolTip), widget (KisSliderSpinBox, intMaxAllowedBrushSpeed)
 #: libs/ui/forms/wdgtabletsettings.ui:221
@@ -34253,7 +34270,7 @@ msgctxt "(qtundo-format)"
 msgid "Change File Layer"
 msgstr "Ändra arkivlager"
 
-#: libs/ui/kis_clipboard.cc:780 libs/ui/KisView.cpp:680
+#: libs/ui/kis_clipboard.cc:780 libs/ui/KisView.cpp:684
 #, kde-format
 msgid ""
 "Could not open %2.\n"
@@ -36752,27 +36769,27 @@ msgstr "Ingen bild tillgänglig."
 msgid "Use This Template"
 msgstr "Använd den här mallen"
 
-#: libs/ui/KisView.cpp:749
+#: libs/ui/KisView.cpp:753
 #, kde-format
 msgid "You cannot drag and drop colors on the selected layer type."
 msgstr "Det går inte att dra och släppa färger på den valda lagertypen."
 
-#: libs/ui/KisView.cpp:757 libs/ui/tool/kis_tool_utils.cpp:419
+#: libs/ui/KisView.cpp:761 libs/ui/tool/kis_tool_utils.cpp:419
 #, kde-format
 msgid "Layer is locked and invisible."
 msgstr "Lagret är låst och osynligt."
 
-#: libs/ui/KisView.cpp:759 libs/ui/tool/kis_tool_utils.cpp:421
+#: libs/ui/KisView.cpp:763 libs/ui/tool/kis_tool_utils.cpp:421
 #, kde-format
 msgid "Layer is locked."
 msgstr "Lagret är låst."
 
-#: libs/ui/KisView.cpp:761 libs/ui/tool/kis_tool_utils.cpp:423
+#: libs/ui/KisView.cpp:765 libs/ui/tool/kis_tool_utils.cpp:423
 #, kde-format
 msgid "Layer is invisible."
 msgstr "Lagret är osynligt."
 
-#: libs/ui/KisView.cpp:1167
+#: libs/ui/KisView.cpp:1171
 #, kde-format
 msgid ""
 "<p>The document <b>'%1'</b> has been modified.</p><p>Do you want to save it?"
@@ -36780,47 +36797,47 @@ msgid ""
 msgstr ""
 "<p>Dokumentet <b>\"%1\"</b> har blivit ändrat.</p><p>Vill du spara det?</p>"
 
-#: libs/ui/KisView.cpp:1241
+#: libs/ui/KisView.cpp:1245
 #, kde-format
 msgid "Write Protected"
 msgstr "Skrivskyddad"
 
-#: libs/ui/KisView.cpp:1245
+#: libs/ui/KisView.cpp:1249
 #, kde-format
 msgid "Recovered"
 msgstr "Återställd"
 
-#: libs/ui/KisView.cpp:1347
+#: libs/ui/KisView.cpp:1351
 #, kde-format
 msgid "Soft Proofing doesn't work in floating point."
 msgstr "Bildskärmskorrektur fungerar inte med flyttal."
 
-#: libs/ui/KisView.cpp:1352
+#: libs/ui/KisView.cpp:1356
 #, kde-format
 msgid "Soft Proofing turned on."
 msgstr "Bildskärmskorrektur på."
 
-#: libs/ui/KisView.cpp:1354
+#: libs/ui/KisView.cpp:1358
 #, kde-format
 msgid "Soft Proofing turned off."
 msgstr "Bildskärmskorrektur av."
 
-#: libs/ui/KisView.cpp:1366
+#: libs/ui/KisView.cpp:1370
 #, kde-format
 msgid "Gamut Warnings don't work in floating point."
 msgstr "Färgomfångsvarningar fungerar inte med flyttal."
 
-#: libs/ui/KisView.cpp:1372
+#: libs/ui/KisView.cpp:1376
 #, kde-format
 msgid "Gamut Warnings turned on."
 msgstr "Färgomfångsvarningar på."
 
-#: libs/ui/KisView.cpp:1374
+#: libs/ui/KisView.cpp:1378
 #, kde-format
 msgid "But Soft Proofing is still off."
 msgstr "Men bildskärmskorrektur är fortfarande av."
 
-#: libs/ui/KisView.cpp:1377
+#: libs/ui/KisView.cpp:1381
 #, kde-format
 msgid "Gamut Warnings turned off."
 msgstr "Färgomfångsvarningar av."
@@ -36959,17 +36976,17 @@ msgstr "Omstart krävs."
 #: libs/ui/KisWelcomePageWidget.cpp:843
 #, kde-format
 msgid "Become a Supporter!"
-msgstr ""
+msgstr "Bli en supporter!"
 
 #: libs/ui/KisWelcomePageWidget.cpp:847
 #, kde-format
 msgid "Supporters get brush packs and more."
-msgstr ""
+msgstr "Supportrar får penselpaket med mera."
 
 #: libs/ui/KisWelcomePageWidget.cpp:848
 #, kde-format
 msgid "Contributions keep development going."
-msgstr ""
+msgstr "Bidrag håller utvecklingen igång."
 
 #: libs/ui/KoDocumentInfoDlg.cpp:73
 #, kde-format
@@ -44791,7 +44808,7 @@ msgstr "Avbryt kodning av tidsförloppsvideo?"
 #, kde-format
 msgctxt "Status for the export of the video record"
 msgid "Starting exporter..."
-msgstr ""
+msgstr "Startar exportverktyg..."
 
 #: plugins/dockers/recorder/recorder_export.cpp:437
 #, kde-format
@@ -45023,6 +45040,9 @@ msgid ""
 "not widely supported. The export may fail and some devices will not be able "
 "to play it."
 msgstr ""
+"<strong>Varning:</strong> video med dimensioner större än 1920 bildpunkter "
+"har inte brett stöd. Exporten kan misslyckas och vissa enheter kan inte "
+"spela upp den."
 
 #. i18n: ectx: property (text), widget (QLabel, lblWarnFpsText)
 #: plugins/dockers/recorder/recorder_export.ui:711
@@ -45031,6 +45051,8 @@ msgid ""
 "<strong>Warning:</strong> video with FPS beyond 30 is not widely supported. "
 "The export may fail and some devices will not be able to play it."
 msgstr ""
+"Varning:</strong> video med mer än 30 bilder/s har inte brett stöd. Exporten "
+"kan misslyckas och vissa enheter kan inte spela upp den."
 
 #. i18n: ectx: property (text), widget (QLabel, labelTitleVideoDuration)
 #: plugins/dockers/recorder/recorder_export.ui:757
@@ -45918,7 +45940,7 @@ msgstr "Orientering:"
 #: plugins/dockers/storyboarddocker/wdgexportstoryboard.ui:141
 #, kde-format
 msgid "Board Layout"
-msgstr ""
+msgstr "Bildmanuslayout"
 
 #. i18n: ectx: property (text), widget (QLabel, boardLayoutLabel)
 #: plugins/dockers/storyboarddocker/wdgexportstoryboard.ui:153
@@ -46060,7 +46082,7 @@ msgstr "Proportionell (ch)"
 #, kde-format
 msgctxt "@label:inlistbox"
 msgid "Ideographic Advance (ic)"
-msgstr ""
+msgstr "Ideografisk (ic)"
 
 #: plugins/dockers/textproperties/CssQmlUnitConverter.cpp:278
 #, kde-format
@@ -46148,6 +46170,8 @@ msgid ""
 "Alignment baseline allows controlling how this range of text is aligned to "
 "the parent text."
 msgstr ""
+"Justeringsbaslinje gör det möjligt att bestämma hur textintervallet justera "
+"med överliggande text."
 
 #: plugins/dockers/textproperties/qml/AlignmentBaseline.qml:18
 #, kde-format
@@ -46155,7 +46179,7 @@ msgctxt ""
 "comma separated search terms for the alignment-baseline property, matching "
 "is case-insensitive"
 msgid "alignment-baseline, mojisoroe"
-msgstr ""
+msgstr "Justeringsbaslinje, mojisoroe"
 
 #: plugins/dockers/textproperties/qml/AlignmentBaseline.qml:82
 #, kde-format
@@ -46167,7 +46191,7 @@ msgstr "Baslinje"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Align to the baseline defined by Dominant Baseline."
-msgstr ""
+msgstr "Justera till baslinjen definierad av dominant baslinje."
 
 #: plugins/dockers/textproperties/qml/AlignmentBaseline.qml:84
 #: plugins/dockers/textproperties/qml/DominantBaseline.qml:82
@@ -46181,7 +46205,7 @@ msgstr "Alfabetisk"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Align to the baseline for scripts that align at the bottom."
-msgstr ""
+msgstr "Justera till baslinjen för skript som justeras i underkant."
 
 #: plugins/dockers/textproperties/qml/AlignmentBaseline.qml:86
 #: plugins/dockers/textproperties/qml/DominantBaseline.qml:84
@@ -46195,7 +46219,7 @@ msgstr "Ideografisk"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Align to the ideographic em box bottom."
-msgstr ""
+msgstr "Justera till den Ideografiska em-rutans underkant."
 
 #: plugins/dockers/textproperties/qml/AlignmentBaseline.qml:88
 #: plugins/dockers/textproperties/qml/DominantBaseline.qml:86
@@ -46209,7 +46233,7 @@ msgstr "Central"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Align to the ideographic em box center."
-msgstr ""
+msgstr "Justera till den Ideografiska em-rutans centrum."
 
 #: plugins/dockers/textproperties/qml/AlignmentBaseline.qml:90
 #: plugins/dockers/textproperties/qml/DominantBaseline.qml:88
@@ -46223,7 +46247,7 @@ msgstr "Hängande"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Align to the headstroke as used by North-Brahmic scripts."
-msgstr ""
+msgstr "Justera efter huvuddraget som används i nordbrāhmiskrift."
 
 #: plugins/dockers/textproperties/qml/AlignmentBaseline.qml:92
 #: plugins/dockers/textproperties/qml/DominantBaseline.qml:90
@@ -46241,6 +46265,8 @@ msgid ""
 "Align to the center between the alphabetic baseline and x-height when laying "
 "out horizontally, in vertical this is the central baseline."
 msgstr ""
+"Justera till mitten mellan den alfabetiska baslinjen och x-höjden vid "
+"horisontell layout, vertikalt är det den centrala baslinjen."
 
 #: plugins/dockers/textproperties/qml/AlignmentBaseline.qml:94
 #: plugins/dockers/textproperties/qml/DominantBaseline.qml:92
@@ -46255,40 +46281,42 @@ msgstr "Matematisk"
 msgctxt "@info:tooltip"
 msgid "Align to the mathematical baseline, so that operator symbols align."
 msgstr ""
+"Justera mot den matematiska baslinjen så att operatorsymboler är på samma "
+"nivå."
 
 #: plugins/dockers/textproperties/qml/AlignmentBaseline.qml:96
 #: plugins/dockers/textproperties/qml/DominantBaseline.qml:94
 #, kde-format
 msgctxt "@label:inlistbox"
 msgid "Text Top"
-msgstr ""
+msgstr "Textöverkant"
 
 #: plugins/dockers/textproperties/qml/AlignmentBaseline.qml:97
 #: plugins/dockers/textproperties/qml/DominantBaseline.qml:95
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Align to the ascender."
-msgstr ""
+msgstr "Justera till överhäng"
 
 #: plugins/dockers/textproperties/qml/AlignmentBaseline.qml:98
 #: plugins/dockers/textproperties/qml/DominantBaseline.qml:96
 #, kde-format
 msgctxt "@label:inlistbox"
 msgid "Text Bottom"
-msgstr ""
+msgstr "Textunderkant"
 
 #: plugins/dockers/textproperties/qml/AlignmentBaseline.qml:99
 #: plugins/dockers/textproperties/qml/DominantBaseline.qml:97
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Align to the descender."
-msgstr ""
+msgstr "Justera till underhäng"
 
 #: plugins/dockers/textproperties/qml/BaselineShift.qml:14
 #, kde-format
 msgctxt "@label"
 msgid "Baseline Shift"
-msgstr ""
+msgstr "Baslinjebyte"
 
 #: plugins/dockers/textproperties/qml/BaselineShift.qml:18
 #, kde-format
@@ -46297,6 +46325,8 @@ msgid ""
 "Baseline shift allows moving the text away from the baseline, either by "
 "predefined super and subscript values, or by a fixed amount."
 msgstr ""
+"Baslinjebyte gör det möjligt att flytta texten bort från baslinjen, antingen "
+"med fördefinierade upphöjt eller nedsänkt värde, eller med ett fast värde."
 
 #: plugins/dockers/textproperties/qml/BaselineShift.qml:20
 #, kde-format
@@ -46304,7 +46334,7 @@ msgctxt ""
 "comma separated search terms for the baseline-shift property, matching is "
 "case-insensitive"
 msgid "baseline-shift, superscript, subscript"
-msgstr ""
+msgstr "baslinjebyte, upphöjt, nedsänkt"
 
 #: plugins/dockers/textproperties/qml/BaselineShift.qml:131
 #: plugins/dockers/textproperties/qml/TextTransform.qml:104
@@ -46390,6 +46420,10 @@ msgid ""
 "ensure the style will maintain the same pixel size across different "
 "documents."
 msgstr ""
+"Normalt lagras stilar i punkter, vilket innebär att storlekarna i "
+"bildpunkter varierar beroende på dokumentets utskriftsupplösning. Aktivera "
+"alternativet för att säkerställa att stilen bibehåller samma "
+"bildpunktsstorlek i olika dokument."
 
 #: plugins/dockers/textproperties/qml/CssStylePresetEdit.qml:143
 #, kde-format
@@ -46438,6 +46472,7 @@ msgstr "Riktning"
 msgctxt "@info:tooltip"
 msgid "Direction sets whether the text is left-to-right or right-to-left."
 msgstr ""
+"Riktning anger om texten är från vänster till höger eller höger till vänster."
 
 #: plugins/dockers/textproperties/qml/Direction.qml:19
 #, kde-format
@@ -46446,6 +46481,7 @@ msgctxt ""
 "insensitive"
 msgid "right to left, rtl, direction, bidirectional, isolate, embed, override"
 msgstr ""
+"höger till vänster, htv, riktning, dubbelriktat, isolera, inbädda, överskrida"
 
 #: plugins/dockers/textproperties/qml/Direction.qml:107
 #, kde-format
@@ -46463,7 +46499,7 @@ msgstr "Höger till vänster"
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Unicode-Bidi"
-msgstr ""
+msgstr "Unicode-Bidi"
 
 #: plugins/dockers/textproperties/qml/Direction.qml:136
 #: plugins/dockers/textproperties/qml/FontStyle.qml:386
@@ -46504,7 +46540,7 @@ msgstr "Isolera"
 #, kde-format
 msgctxt "@label:inlistbox"
 msgid "Isolate-Override"
-msgstr ""
+msgstr "Isolera-överskrid"
 
 #: plugins/dockers/textproperties/qml/Direction.qml:141
 #, kde-format
@@ -46516,7 +46552,7 @@ msgstr "Vanlig text"
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Dominant Baseline"
-msgstr ""
+msgstr "Dominant baslinje"
 
 #: plugins/dockers/textproperties/qml/DominantBaseline.qml:16
 #, kde-format
@@ -46525,6 +46561,8 @@ msgid ""
 "Dominant baseline specifies how stretches of text of different sizes are "
 "aligned, it is also the default for Alignment Baseline."
 msgstr ""
+"Dominant baslinje anger hur textföljder av olika storlekar justeras. Det är "
+"också standardinställningen för Justeringsbaslinje."
 
 #: plugins/dockers/textproperties/qml/DominantBaseline.qml:18
 #, kde-format
@@ -46532,7 +46570,7 @@ msgctxt ""
 "comma separated search terms for the dominant-baseline property, matching is "
 "case-insensitive"
 msgid "dominant-baseline, mojisoroe"
-msgstr ""
+msgstr "dominant-baslinje, mojisoroe"
 
 #: plugins/dockers/textproperties/qml/DominantBaseline.qml:80
 #: plugins/dockers/textproperties/qml/LineBreak.qml:77
@@ -46551,6 +46589,8 @@ msgid ""
 "Aligns to alphabetic baseline when laying out horizontally, aligns to "
 "central baseline when laying out vertically."
 msgstr ""
+"Justerar till den alfabetiska baslinjen vid horisontell utläggning, justerar "
+"till den centrala baslinjen vid vertikal utläggning."
 
 #: plugins/dockers/textproperties/qml/FontFamily.qml:14
 #, kde-format
@@ -46566,6 +46606,10 @@ msgid ""
 "current text. The first font family is the primary font used, while each "
 "font family after that is used for fallback."
 msgstr ""
+"Teckensnittsfamiljen låter dig välja en lista med teckensnitt som ska "
+"användas för den aktuella texten. Den första teckensnittsfamiljen är det "
+"primära teckensnittet som används, medan varje teckensnittsfamilj efter den "
+"används som reserv."
 
 #: plugins/dockers/textproperties/qml/FontFamily.qml:21
 #, kde-format
@@ -46573,7 +46617,7 @@ msgctxt ""
 "comma separated search terms for the font-family property, matching is case-"
 "insensitive"
 msgid "font-family, typeface, font, fallback"
-msgstr ""
+msgstr "teckensnittsfamilj, typsnitt, teckensnitt, reserv"
 
 #: plugins/dockers/textproperties/qml/FontFamily.qml:149
 #, kde-format
@@ -46594,7 +46638,7 @@ msgstr "Lägg till reservfamilj"
 #, kde-format
 msgctxt "@label"
 msgid "Font Kerning"
-msgstr ""
+msgstr "Teckensnittskerning"
 
 #: plugins/dockers/textproperties/qml/FontKerning.qml:20
 #, kde-format
@@ -46603,6 +46647,8 @@ msgid ""
 "Turn font kerning on or off. Font kerning enables per-glyph spacing "
 "adjustments as determined by the font."
 msgstr ""
+"Sätt på eller stäng av teckensnittskerning. Teckensnittskerning möjliggör "
+"mellanrumsjusteringar per glyf enligt teckensnittet."
 
 #: plugins/dockers/textproperties/qml/FontKerning.qml:22
 #, kde-format
@@ -46610,7 +46656,7 @@ msgctxt ""
 "comma separated search terms for the font-kerning property, matching is case-"
 "insensitive"
 msgid "font-kerning, tracking"
-msgstr ""
+msgstr "teckensnittskerning, följning"
 
 #: plugins/dockers/textproperties/qml/FontSize.qml:14
 #, kde-format
@@ -46622,7 +46668,7 @@ msgstr "Teckenstorlek"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Font size allows setting the size of the characters."
-msgstr ""
+msgstr "Teckenstorlek gör det möjligt att ställa in storleken på tecken."
 
 #: plugins/dockers/textproperties/qml/FontSize.qml:21
 #, kde-format
@@ -46630,7 +46676,7 @@ msgctxt ""
 "comma separated search terms for the fontsize property, matching is case-"
 "insensitive"
 msgid "size, small, big, medium"
-msgstr ""
+msgstr "storlek, liten, stor, medel"
 
 #: plugins/dockers/textproperties/qml/FontSizeAdjust.qml:13
 #, kde-format
@@ -46644,6 +46690,8 @@ msgctxt "@info:tooltip"
 msgid ""
 "Font size adjust allows setting a ratio that the x-height must be matched by."
 msgstr ""
+"Teckenstorleksjustering gör det möjligt att ställa in ett förhållande som x-"
+"höjden måste matchas av."
 
 #: plugins/dockers/textproperties/qml/FontSizeAdjust.qml:19
 #, kde-format
@@ -46651,7 +46699,7 @@ msgctxt ""
 "comma separated search terms for the fontsize adjust property, matching is "
 "case-insensitive"
 msgid "size, small, big, medium, font-size-adjust"
-msgstr ""
+msgstr "storlek, liten, stor, medel, teckenstorleksjustering"
 
 #: plugins/dockers/textproperties/qml/FontSizeAdjust.qml:84
 #, kde-format
@@ -46664,6 +46712,8 @@ msgstr "Beräkna"
 msgctxt "@info:tooltip"
 msgid "Calculate the x-height to font size ratio for the first font family."
 msgstr ""
+"Beräkna förhållandet mellan x-höjd och teckenstorlek för den första "
+"teckensnittsfamiljen."
 
 #: plugins/dockers/textproperties/qml/FontStyle.qml:13
 #, kde-format
@@ -46678,6 +46728,8 @@ msgid ""
 "Font style allows setting the sub style of the given font family, such as "
 "italics and bold"
 msgstr ""
+"Teckenstil gör det möjligt att ställa in delstilen i den givna "
+"teckensnittsfamiljen, såsom kursiv och fetstil"
 
 #: plugins/dockers/textproperties/qml/FontStyle.qml:20
 #, kde-format
@@ -46688,6 +46740,8 @@ msgid ""
 "weight, width, style, italics, oblique, font-style, font-stretch, font-"
 "weight, bold, optical-size, variation"
 msgstr ""
+"vikt, bredd, stil, kursiv, oblik, typsnittsstil, typsnittsutsträckning, "
+"typsnittsvikt, fetstil, optisk storlek, variation"
 
 #. i18n: ectx: property (text), widget (QCheckBox, chkBoldKeyword)
 #. i18n: ectx: property (text), widget (QCheckBox, chkBoldElement)
@@ -46731,7 +46785,7 @@ msgstr "Vikt: "
 #, kde-format
 msgctxt "@option:check"
 msgid "Synthesize Bold"
-msgstr ""
+msgstr "Syntetisera fetstil"
 
 #: plugins/dockers/textproperties/qml/FontStyle.qml:362
 #, kde-format
@@ -46743,7 +46797,7 @@ msgstr "Bredd:"
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Slant:"
-msgstr ""
+msgstr "Lutning:"
 
 #: plugins/dockers/textproperties/qml/FontStyle.qml:387
 #, kde-format
@@ -46767,7 +46821,7 @@ msgstr "°"
 #, kde-format
 msgctxt "@option:check"
 msgid "Synthesize Slant"
-msgstr ""
+msgstr "Syntetisera lutning"
 
 #: plugins/dockers/textproperties/qml/FontStyle.qml:455
 #, kde-format
@@ -46778,7 +46832,7 @@ msgstr "Optisk storlek"
 #: plugins/dockers/textproperties/qml/FontStyle.qml:479
 #, kde-format
 msgid "No extra variable axes in this font"
-msgstr ""
+msgstr "Inga extra variabelaxlar i teckensnittet"
 
 #: plugins/dockers/textproperties/qml/HangingPunctuation.qml:12
 #, kde-format
@@ -46794,6 +46848,9 @@ msgid ""
 "as commas. This implementation only implements East-Asian style hanging "
 "punctuation."
 msgstr ""
+"Hängande skiljetecken möjliggör hängande inledande och avslutande "
+"skiljetecken såsom kommatecken. Den här implementeringen inför bara "
+"östasiatisk stil av hängande skiljetecken."
 
 #: plugins/dockers/textproperties/qml/HangingPunctuation.qml:18
 #, kde-format
@@ -46801,13 +46858,13 @@ msgctxt ""
 "comma separated search terms for the hanging-punctuation property, matching "
 "is case-insensitive"
 msgid "hanging-punctuation, burasagari"
-msgstr ""
+msgstr "hängande-skiljetecken, burasagari"
 
 #: plugins/dockers/textproperties/qml/HangingPunctuation.qml:115
 #, kde-format
 msgctxt "@option:check"
 msgid "Hang First"
-msgstr ""
+msgstr "Hängande först"
 
 #: plugins/dockers/textproperties/qml/HangingPunctuation.qml:124
 #, kde-format
@@ -46819,25 +46876,25 @@ msgstr "Radslut:"
 #, kde-format
 msgctxt "@label:inlistbox"
 msgid "No Hanging"
-msgstr ""
+msgstr "Inga hängande"
 
 #: plugins/dockers/textproperties/qml/HangingPunctuation.qml:133
 #, kde-format
 msgctxt "@label:inlistbox"
 msgid "Allow hanging commas"
-msgstr ""
+msgstr "Tillåt hängande kommatecken"
 
 #: plugins/dockers/textproperties/qml/HangingPunctuation.qml:134
 #, kde-format
 msgctxt "@label:inlistbox"
 msgid "Force hanging commas"
-msgstr ""
+msgstr "Tvinga hängande kommatecken"
 
 #: plugins/dockers/textproperties/qml/HangingPunctuation.qml:150
 #, kde-format
 msgctxt "@option:check"
 msgid "Hang Last"
-msgstr ""
+msgstr "Hängande sist"
 
 #: plugins/dockers/textproperties/qml/Language.qml:14
 #, kde-format
@@ -46852,6 +46909,8 @@ msgid ""
 "The language of this text shape. Language affects a number of properties, "
 "like glyph shape, upper- and lowercase and line breaking"
 msgstr ""
+"Språket i textformen. Språk påverkar ett antal egenskaper, som formen på "
+"glyfer, stora och små bokstäver och radbrytning"
 
 #: plugins/dockers/textproperties/qml/Language.qml:20
 #, kde-format
@@ -46859,13 +46918,13 @@ msgctxt ""
 "comma separated search terms for the language property, matching is case-"
 "insensitive"
 msgid "language, locale, bcp47"
-msgstr ""
+msgstr "språk, landsinställning, bcp47"
 
 #: plugins/dockers/textproperties/qml/Language.qml:218
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Store this language between sessions."
-msgstr ""
+msgstr "Lagra det här språket mellan sessioner."
 
 #: plugins/dockers/textproperties/qml/Language.qml:247
 #, kde-format
@@ -46884,7 +46943,7 @@ msgstr "Bokstavsmellanrum"
 msgctxt "@info:tooltip"
 msgid ""
 "Letter spacing controls the spacing between visible clusters of characters."
-msgstr ""
+msgstr "Bokstavsavstånd styr avståndet mellan synliga teckenkluster."
 
 #: plugins/dockers/textproperties/qml/LetterSpacing.qml:20
 #, kde-format
@@ -46892,7 +46951,7 @@ msgctxt ""
 "comma separated search terms for the letter-spacing property, matching is "
 "case-insensitive"
 msgid "letter-spacing, tracking, kerning"
-msgstr ""
+msgstr "bokstavsmellanrum, följning, kerning"
 
 #: plugins/dockers/textproperties/qml/LineBreak.qml:14
 #, kde-format
@@ -46907,6 +46966,8 @@ msgid ""
 "Line break allows choosing a strictness for the line breaking algorithm. "
 "Mostly used for CJK scripts, requires language being set."
 msgstr ""
+"Radbrytning gör det möjligt att välja hur strikt radbrytningsalgoritmen är. "
+"Används mest för CJK-skript, kräver att språket är inställt."
 
 #: plugins/dockers/textproperties/qml/LineBreak.qml:19
 #, kde-format
@@ -46914,25 +46975,27 @@ msgctxt ""
 "comma separated search terms for the line-break property, matching is case-"
 "insensitive"
 msgid "line-break, line breaking, strictness, kinsoku"
-msgstr ""
+msgstr "radbryt, radbrytning, strikt, kinsoku"
 
 #: plugins/dockers/textproperties/qml/LineBreak.qml:78
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "No particular adjustments are made to the line break algorithm"
-msgstr ""
+msgstr "Inga särskilda justeringar görs i radbrytningsalgoritmen"
 
 #: plugins/dockers/textproperties/qml/LineBreak.qml:79
 #, kde-format
 msgctxt "@label:inlistbox"
 msgid "Loose"
-msgstr ""
+msgstr "Fri"
 
 #: plugins/dockers/textproperties/qml/LineBreak.qml:80
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "While typically defines a looser algorithm, currently same as auto."
 msgstr ""
+"Medan det vanligtvis definierar en friare algoritm, är det för närvarande "
+"samma som automatisk."
 
 #: plugins/dockers/textproperties/qml/LineBreak.qml:82
 #, kde-format
@@ -46941,6 +47004,8 @@ msgid ""
 "Same as auto. Soft breaks will be allowed before small kana if text language "
 "is Japanese."
 msgstr ""
+"Samma som automatisk. Mjuka radbrytningar tillåts innan små kana om "
+"textspråket är japanska."
 
 #: plugins/dockers/textproperties/qml/LineBreak.qml:83
 #, kde-format
@@ -46952,7 +47017,7 @@ msgstr "Strikt"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Soft breaks will not be allowed before small kana."
-msgstr ""
+msgstr "Mjuka radbrytningar tillåts inte innan små kana."
 
 #: plugins/dockers/textproperties/qml/LineBreak.qml:85
 #, kde-format
@@ -46965,7 +47030,7 @@ msgstr "Var som helst"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Soft breaks will occur along any grapheme."
-msgstr ""
+msgstr "Mjuka radbrytningar sker längs vilken grafem som helst."
 
 #: plugins/dockers/textproperties/qml/LineHeight.qml:14
 #, kde-format
@@ -46977,7 +47042,7 @@ msgstr "Radhöjd"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Line height controls the line height used for the range of text."
-msgstr ""
+msgstr "Radhöjd styr radhöjden som används för textintervallet."
 
 #: plugins/dockers/textproperties/qml/LineHeight.qml:21
 #, kde-format
@@ -46985,7 +47050,7 @@ msgctxt ""
 "comma separated search terms for the line-height property, matching is case-"
 "insensitive"
 msgid "line-height, line-spacing"
-msgstr ""
+msgstr "radhöjd, radmellanrum"
 
 #: plugins/dockers/textproperties/qml/LineHeight.qml:134
 #, kde-format
@@ -47011,12 +47076,12 @@ msgctxt ""
 "comma separated search terms for the font-feature-settings property, "
 "matching is case-insensitive"
 msgid "font-feature-settings, OpenType"
-msgstr ""
+msgstr "teckensnittsinställningar, OpenType"
 
 #: plugins/dockers/textproperties/qml/OpenTypeFeatureSettings.qml:99
 #, kde-format
 msgid "No OpenType features are currently set."
-msgstr ""
+msgstr "Inga OpenType-funktioner är för närvarande inställda."
 
 #: plugins/dockers/textproperties/qml/OpenTypeFeatureSettings.qml:183
 #, kde-format
@@ -47035,13 +47100,13 @@ msgstr "Sök..."
 #, kde-format
 msgctxt "@label"
 msgid "Glyphs: Capitals"
-msgstr ""
+msgstr "Glyfer: Versaler"
 
 #: plugins/dockers/textproperties/qml/OTCaps.qml:16
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Enable OpenType features related to capitals."
-msgstr ""
+msgstr "Aktivera OpenType-funktioner relaterade till versaler."
 
 #: plugins/dockers/textproperties/qml/OTCaps.qml:18
 #, kde-format
@@ -47050,6 +47115,8 @@ msgctxt ""
 "case-insensitive"
 msgid "font-variant-caps, Small caps, Petite Caps, Unicase, Titling, Capitals"
 msgstr ""
+"teckensnittsvariant-kapitäler, Kapitäler, Små kapitäler, Unicase, "
+"Titelgivning, Versaler"
 
 #: plugins/dockers/textproperties/qml/OTCaps.qml:78
 #, kde-format
@@ -47085,19 +47152,19 @@ msgstr "Förenat skiftläge"
 #, kde-format
 msgctxt "@label:inlistbox"
 msgid "Titling Caps"
-msgstr ""
+msgstr "Titelkapitäler"
 
 #: plugins/dockers/textproperties/qml/OTEastAsian.qml:12
 #, kde-format
 msgctxt "@label"
 msgid "Glyphs: East-Asian"
-msgstr ""
+msgstr "Glyfer: Östasiatiska"
 
 #: plugins/dockers/textproperties/qml/OTEastAsian.qml:16
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Enable glyph forms related to East Asian text layout."
-msgstr ""
+msgstr "Aktivera former av glyfer relaterade till östasiatisk textlayout."
 
 #: plugins/dockers/textproperties/qml/OTEastAsian.qml:18
 #, kde-format
@@ -47108,6 +47175,8 @@ msgid ""
 "font-variant-east-asian, jis78, jis83, jis90, jis04, ruby, proportional, "
 "full-width"
 msgstr ""
+"teckensnittsvariant-östasiatisk, jis78, jis83, jis90, jis04, ruby, "
+"proportionell, fullbredd"
 
 #: plugins/dockers/textproperties/qml/OTEastAsian.qml:96
 #, kde-format
@@ -47179,13 +47248,15 @@ msgstr "Ruby"
 #, kde-format
 msgctxt "@label"
 msgid "Glyphs: Ligatures"
-msgstr ""
+msgstr "Glyfer: ligaturer"
 
 #: plugins/dockers/textproperties/qml/OTLigatures.qml:16
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Enable or disable ligatures and contextual alternates on the text."
 msgstr ""
+"Aktivera eller inaktivera ligaturer och sammanhangsberoende alternativ i "
+"texten."
 
 #: plugins/dockers/textproperties/qml/OTLigatures.qml:18
 #, kde-format
@@ -47196,6 +47267,8 @@ msgid ""
 "font-variant-ligatures, common-ligatures, discretionary-ligatures, "
 "historical-ligatures, contextual-alts"
 msgstr ""
+"teckensnittsvariant-ligaturer, vanliga-ligaturer, godtyckliga-ligaturer, "
+"historiska-ligaturer, sammanhangsberoende-alternativ"
 
 #: plugins/dockers/textproperties/qml/OTLigatures.qml:101
 #, kde-format
@@ -47207,7 +47280,7 @@ msgstr "Vanliga"
 #, kde-format
 msgctxt "@option:check"
 msgid "Discretionary"
-msgstr ""
+msgstr "Godtyckliga"
 
 #: plugins/dockers/textproperties/qml/OTLigatures.qml:117
 #, kde-format
@@ -47225,13 +47298,13 @@ msgstr "Sammanhangsberoende"
 #, kde-format
 msgctxt "@label"
 msgid "Glyphs: Numeric"
-msgstr ""
+msgstr "Glyfer: numeriska"
 
 #: plugins/dockers/textproperties/qml/OTNumeric.qml:16
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Enable number-related glyph forms on the text."
-msgstr ""
+msgstr "Aktivera nummerrelaterade former av glyfer i texten."
 
 #: plugins/dockers/textproperties/qml/OTNumeric.qml:18
 #, kde-format
@@ -47242,6 +47315,8 @@ msgid ""
 "font-variant-numeric, oldstyle numerals, lining numerals, ordinals, slashed "
 "zero, fractions"
 msgstr ""
+"teckensnittsvariant-numerisk, gammaldags siffror, linjerade siffror, "
+"ordningstal, genomstruken nolla, bråk"
 
 #: plugins/dockers/textproperties/qml/OTNumeric.qml:111
 #: plugins/dockers/textproperties/qml/TextDecoration.qml:245
@@ -47254,13 +47329,13 @@ msgstr "Stil:"
 #, kde-format
 msgctxt "@label:inlistbox"
 msgid "Lining"
-msgstr ""
+msgstr "Linjerad"
 
 #: plugins/dockers/textproperties/qml/OTNumeric.qml:117
 #, kde-format
 msgctxt "@label:inlistbox"
 msgid "Oldstyle"
-msgstr ""
+msgstr "Gammaldags"
 
 #: plugins/dockers/textproperties/qml/OTNumeric.qml:131
 #, kde-format
@@ -47278,7 +47353,7 @@ msgstr "Proportionell"
 #, kde-format
 msgctxt "@label:inlistbox"
 msgid "Tabular"
-msgstr ""
+msgstr "Tabell"
 
 #: plugins/dockers/textproperties/qml/OTNumeric.qml:151
 #, kde-format
@@ -47290,13 +47365,13 @@ msgstr "Bråkdelar:"
 #, kde-format
 msgctxt "@label:inlistbox"
 msgid "Diagonal"
-msgstr "Diagonal"
+msgstr "Diagonala"
 
 #: plugins/dockers/textproperties/qml/OTNumeric.qml:157
 #, kde-format
 msgctxt "@label:inlistbox"
 msgid "Stacked"
-msgstr ""
+msgstr "Staplade"
 
 #: plugins/dockers/textproperties/qml/OTNumeric.qml:173
 #, kde-format
@@ -47308,19 +47383,19 @@ msgstr "Ordningstal"
 #, kde-format
 msgctxt "@option:check"
 msgid "Slashed Zero"
-msgstr "Noll med snedstreck"
+msgstr "Genomstruken nolla"
 
 #: plugins/dockers/textproperties/qml/OTPosition.qml:12
 #, kde-format
 msgctxt "@label"
 msgid "Glyphs: Position"
-msgstr ""
+msgstr "Glyfer: Position"
 
 #: plugins/dockers/textproperties/qml/OTPosition.qml:16
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Enable super or subscripts on the text."
-msgstr ""
+msgstr "Aktivera upphöjt och nedsänkt i texten."
 
 #: plugins/dockers/textproperties/qml/OTPosition.qml:18
 #, kde-format
@@ -47328,13 +47403,13 @@ msgctxt ""
 "comma separated search terms for the font-variant-position property, "
 "matching is case-insensitive"
 msgid "font-variant-position, superscript, subscript"
-msgstr ""
+msgstr "teckensnittsvariant-position, upphöjt, nedsänkt"
 
 #: plugins/dockers/textproperties/qml/OverflowWrap.qml:28
 #, kde-format
 msgctxt "@title:group"
 msgid "Overflow Wrap:"
-msgstr ""
+msgstr "Överfyllnadsbrytning:"
 
 #: plugins/dockers/textproperties/qml/RevertPropertyButton.qml:22
 #, kde-format
@@ -47342,13 +47417,13 @@ msgctxt "@info:tooltip"
 msgid ""
 "Revert property. Within the current selection, this property has different "
 "values."
-msgstr ""
+msgstr "Omvänd egenskap. Inom aktuell markering har egenskapen olika värden."
 
 #: plugins/dockers/textproperties/qml/RevertPropertyButton.qml:23
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Revert property."
-msgstr ""
+msgstr "Omvänd egenskap."
 
 #: plugins/dockers/textproperties/qml/TabSize.qml:14
 #, kde-format
@@ -47361,6 +47436,7 @@ msgstr "Tabulatorstorlek"
 msgctxt "@info:tooltip"
 msgid "Tab size allows defining the size of tabulation characters."
 msgstr ""
+"Tabulatorstorlek gör det möjligt att definiera storleken på tabulatortecken."
 
 #: plugins/dockers/textproperties/qml/TabSize.qml:20
 #, kde-format
@@ -47368,7 +47444,7 @@ msgctxt ""
 "comma separated search terms for the tab-size property, matching is case-"
 "insensitive"
 msgid "tab-size"
-msgstr ""
+msgstr "tabulatorstorlek"
 
 #: plugins/dockers/textproperties/qml/TextAlign.qml:13
 #, kde-format
@@ -47380,7 +47456,7 @@ msgstr "Testjustering"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Text align sets the alignment for the given block of characters."
-msgstr ""
+msgstr "Testjustering ställer in justeringen för det givna blocket av tecken."
 
 #: plugins/dockers/textproperties/qml/TextAlign.qml:20
 #, kde-format
@@ -47388,7 +47464,7 @@ msgctxt ""
 "comma separated search terms for the text-align property, matching is case-"
 "insensitive"
 msgid "text-align, justification, text-anchor"
-msgstr ""
+msgstr "textjustering, justering, textförankring"
 
 #: plugins/dockers/textproperties/qml/TextAlign.qml:296
 #, kde-format
@@ -47443,13 +47519,13 @@ msgstr "Inpassad"
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Align Last:"
-msgstr ""
+msgstr "Justera sist:"
 
 #: plugins/dockers/textproperties/qml/TextAlign.qml:357
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Text Anchor:"
-msgstr ""
+msgstr "Textförankring:"
 
 #: plugins/dockers/textproperties/qml/TextAreaOptions.qml:14
 #, kde-format
@@ -47461,7 +47537,7 @@ msgstr "Textområde"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Options for modifying the text area padding and margins."
-msgstr ""
+msgstr "Alternativ för att ändra utfyllnad och marginaler i textområdet."
 
 #: plugins/dockers/textproperties/qml/TextAreaOptions.qml:20
 #, kde-format
@@ -47469,19 +47545,19 @@ msgctxt ""
 "comma separated search terms for the text-area property, matching is case-"
 "insensitive"
 msgid "text-in-shape, padding, margin"
-msgstr ""
+msgstr "text-i-form, utfyllnad, marginal"
 
 #: plugins/dockers/textproperties/qml/TextAreaOptions.qml:127
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Shape Padding: "
-msgstr ""
+msgstr "Formutfyllnad:"
 
 #: plugins/dockers/textproperties/qml/TextAreaOptions.qml:159
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Shape Margin: "
-msgstr ""
+msgstr "Formmarginal:"
 
 #: plugins/dockers/textproperties/qml/TextDecoration.qml:12
 #, kde-format
@@ -47496,6 +47572,8 @@ msgid ""
 "Text decoration allows drawing underlines, overlines and striking through "
 "text."
 msgstr ""
+"Textdekoration gör det möjligt att rita understruken, överstruken och "
+"genomstruken text."
 
 #: plugins/dockers/textproperties/qml/TextDecoration.qml:18
 #, kde-format
@@ -47503,13 +47581,13 @@ msgctxt ""
 "comma separated search terms for the text-decoration property, matching is "
 "case-insensitive"
 msgid "underline, overline, strikethrough, line-through"
-msgstr ""
+msgstr "understreck, överstreck, genomstruken, streck-igenom"
 
 #: plugins/dockers/textproperties/qml/TextDecoration.qml:167
 #, kde-format
 msgctxt "@title:group"
 msgid "Line:"
-msgstr "Linje:"
+msgstr "Streck:"
 
 #: plugins/dockers/textproperties/qml/TextDecoration.qml:177
 #, kde-format
@@ -47527,7 +47605,7 @@ msgstr "Överstruken"
 #, kde-format
 msgctxt "@option:check"
 msgid "Line-through"
-msgstr ""
+msgstr "Genomstruken"
 
 #: plugins/dockers/textproperties/qml/TextDecoration.qml:222
 #, kde-format
@@ -47545,7 +47623,7 @@ msgstr "Heldragen"
 #, kde-format
 msgctxt "@label:inlistbox"
 msgid "Dotted"
-msgstr ""
+msgstr "Prickad"
 
 #: plugins/dockers/textproperties/qml/TextDecoration.qml:257
 #, kde-format
@@ -47569,7 +47647,7 @@ msgstr "Vågig"
 #, kde-format
 msgctxt "@title:group"
 msgid "Text Indent"
-msgstr ""
+msgstr "Textindentering"
 
 #: plugins/dockers/textproperties/qml/TextIndent.qml:18
 #, kde-format
@@ -47578,6 +47656,8 @@ msgid ""
 "Text indent allows setting indentation at the line start. Only works when "
 "the text is wrapping."
 msgstr ""
+"Textindentering gör det möjligt att ställa in indentering vid radbörjan. "
+"Fungerar bara när texten radbryts."
 
 #: plugins/dockers/textproperties/qml/TextIndent.qml:20
 #, kde-format
@@ -47585,19 +47665,19 @@ msgctxt ""
 "comma separated search terms for the text-indent property, matching is case-"
 "insensitive"
 msgid "text-indent"
-msgstr ""
+msgstr "textindentering"
 
 #: plugins/dockers/textproperties/qml/TextIndent.qml:140
 #, kde-format
 msgctxt "@option:check"
 msgid "Hanging indentation"
-msgstr ""
+msgstr "Hängande indentering"
 
 #: plugins/dockers/textproperties/qml/TextIndent.qml:152
 #, kde-format
 msgctxt "@option:check"
 msgid "Indent after hardbreaks"
-msgstr ""
+msgstr "Indentering efter hård radbrytning"
 
 #: plugins/dockers/textproperties/qml/TextProperties.qml:64
 #, kde-format
@@ -47677,20 +47757,20 @@ msgstr "Om relevant"
 #, kde-format
 msgctxt "@label:inlistbox"
 msgid "When Set"
-msgstr ""
+msgstr "Om inställd"
 
 #: plugins/dockers/textproperties/qml/TextPropertyConfigDialog.qml:48
 #: plugins/dockers/textproperties/qml/TextPropertyConfigDialog.qml:109
 #, kde-format
 msgctxt "@label:inlistbox"
 msgid "Always Show"
-msgstr "visa alltid"
+msgstr "Visa alltid"
 
 #: plugins/dockers/textproperties/qml/TextPropertyConfigDialog.qml:106
 #, kde-format
 msgctxt "@label:inlistbox"
 msgid "Follow Default"
-msgstr ""
+msgstr "Följ standardvärde"
 
 #: plugins/dockers/textproperties/qml/TextPropertyConfigDialog.qml:110
 #, kde-format
@@ -47709,7 +47789,7 @@ msgstr "Textåtergivning"
 msgctxt "@info:tooltip"
 msgid ""
 "Text rendering controls the hinting and rendering style for the property"
-msgstr ""
+msgstr "Textåtergivning bestämmer egenskapens antydning och återgivningsstil"
 
 #: plugins/dockers/textproperties/qml/TextRendering.qml:18
 #, kde-format
@@ -47717,7 +47797,7 @@ msgctxt ""
 "comma separated search terms for the text-rendering property, matching is "
 "case-insensitive"
 msgid "text-rendering, hinting, anti-aliasing"
-msgstr ""
+msgstr "textåtergivning, antydning, kantutjämning"
 
 #: plugins/dockers/textproperties/qml/TextRendering.qml:82
 #, kde-format
@@ -47726,6 +47806,8 @@ msgid ""
 "Same as geometric precision, uses no hinting and avoid loading internal "
 "bitmaps."
 msgstr ""
+"Samma som geometrisk precision, använder ingen antydning och undviker att "
+"läsa in interna bitavbildningar."
 
 #: plugins/dockers/textproperties/qml/TextRendering.qml:83
 #, kde-format
@@ -47743,13 +47825,14 @@ msgstr "Återger utan kantutjämning."
 #, kde-format
 msgctxt "@label:inlistbox"
 msgid "Optimize Legibility"
-msgstr ""
+msgstr "Optimera läsbarhet"
 
 #: plugins/dockers/textproperties/qml/TextRendering.qml:86
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Uses 'light' hinting in horizontal and 'full' hinting in vertical."
 msgstr ""
+"Använder 'lätt' antydning horisontellt och 'fullständig' antydning vertikalt."
 
 #: plugins/dockers/textproperties/qml/TextRendering.qml:87
 #, kde-format
@@ -47763,6 +47846,8 @@ msgctxt "@info:tooltip"
 msgid ""
 "No hinting and avoids loading bitmap strikes unless the font has no paths."
 msgstr ""
+"Ingen antydning och undviker att läsa in bitavbildningar utom när "
+"teckensnittet inte har några konturer."
 
 #: plugins/dockers/textproperties/qml/TextTransform.qml:12
 #, kde-format
@@ -47778,6 +47863,9 @@ msgid ""
 "example, by setting them uppercase, or switching out half-width forms for "
 "full-width forms."
 msgstr ""
+"Texttransformering gör det möjligt att omvandla det givna textområdet, till "
+"exempel genom att ändra dem till stora bokstäver, eller byta former med "
+"halvbredd till fullbredd."
 
 #: plugins/dockers/textproperties/qml/TextTransform.qml:18
 #, kde-format
@@ -47788,18 +47876,20 @@ msgid ""
 "text-transform, uppercase, capitalization, lowercase, full-width, full-size "
 "kana"
 msgstr ""
+"texttransformering, stora bokstäver, små bokstäver, fullbredd, kana "
+"fullstorlek"
 
 #: plugins/dockers/textproperties/qml/TextTransform.qml:98
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Case:"
-msgstr ""
+msgstr "Skiftläge:"
 
 #: plugins/dockers/textproperties/qml/TextTransform.qml:105
 #, kde-format
 msgctxt "@label:inlistbox"
 msgid "Capitalize"
-msgstr ""
+msgstr "Inledande stor bokstav"
 
 #: plugins/dockers/textproperties/qml/TextTransform.qml:106
 #, kde-format
@@ -47817,13 +47907,13 @@ msgstr "Små bokstäver"
 #, kde-format
 msgctxt "@option:check"
 msgid "Full-width"
-msgstr ""
+msgstr "Full bredd"
 
 #: plugins/dockers/textproperties/qml/TextTransform.qml:136
 #, kde-format
 msgctxt "@option:check"
 msgid "Full-size Kana"
-msgstr ""
+msgstr "Kana med full storlek"
 
 #: plugins/dockers/textproperties/qml/UnderlinePosition.qml:12
 #, kde-format
@@ -47835,7 +47925,7 @@ msgstr "Understrecksposition"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Specify the position of the underline for text-decoration."
-msgstr ""
+msgstr "Ange understreckens position för textdekoration."
 
 #: plugins/dockers/textproperties/qml/UnderlinePosition.qml:17
 #, kde-format
@@ -47843,25 +47933,25 @@ msgctxt ""
 "comma separated search terms for the text-decoration-position property, "
 "matching is case-insensitive"
 msgid "text-decoration-position, underline, left, right, under"
-msgstr ""
+msgstr "textdekoration-position, understreck, vänster, höger, under"
 
 #: plugins/dockers/textproperties/qml/UnderlinePosition.qml:93
 #, kde-format
 msgctxt "@label:inlistbox"
 msgid "Bottom"
-msgstr "Längst ner"
+msgstr "Under"
 
 #: plugins/dockers/textproperties/qml/UnderlinePosition.qml:109
 #, kde-format
 msgctxt "@label:inlistbox"
 msgid "Vertical Left"
-msgstr "Vertikala till vänster"
+msgstr "Vertikalt till vänster"
 
 #: plugins/dockers/textproperties/qml/UnderlinePosition.qml:110
 #, kde-format
 msgctxt "@label:inlistbox"
 msgid "Vertical Right"
-msgstr "Vertikala till höger"
+msgstr "Vertikalt till höger"
 
 #: plugins/dockers/textproperties/qml/WhiteSpace.qml:12
 #, kde-format
@@ -47876,6 +47966,8 @@ msgid ""
 "The CSS white space rule controls how multiples of spaces are handled, and "
 "whether the text can wrap."
 msgstr ""
+"CSS-regeln för blanktecken bestämmer hur flera blanktecken hanteras, och om "
+"texten kan radbrytas."
 
 #: plugins/dockers/textproperties/qml/WhiteSpace.qml:17
 #, kde-format
@@ -47883,7 +47975,7 @@ msgctxt ""
 "comma separated search terms for the white-space property, matching is case-"
 "insensitive"
 msgid "white-space, collapse, pre-formatted"
-msgstr ""
+msgstr "blanktecken, dra ihop, förformaterad"
 
 #: plugins/dockers/textproperties/qml/WhiteSpace.qml:123
 #, kde-format
@@ -47895,25 +47987,25 @@ msgstr "Före"
 #, kde-format
 msgctxt "@label:inlistbox"
 msgid "No Wrap"
-msgstr ""
+msgstr "Ingen radbrytning"
 
 #: plugins/dockers/textproperties/qml/WhiteSpace.qml:125
 #, kde-format
 msgctxt "@label:inlistbox"
 msgid "Pre Wrap"
-msgstr ""
+msgstr "Radbryt före"
 
 #: plugins/dockers/textproperties/qml/WhiteSpace.qml:126
 #, kde-format
 msgctxt "@label:inlistbox"
 msgid "Break Spaces"
-msgstr ""
+msgstr "Radbryt mellanslag"
 
 #: plugins/dockers/textproperties/qml/WhiteSpace.qml:127
 #, kde-format
 msgctxt "@label:inlistbox"
 msgid "Pre Line"
-msgstr ""
+msgstr "Före rad"
 
 #: plugins/dockers/textproperties/qml/WordBreak.qml:12
 #, kde-format
@@ -47929,6 +48021,9 @@ msgid ""
 "break at words or also allow breaking at characters. Useful for Korean or "
 "Ethiopian."
 msgstr ""
+"Ordbrytning gör det möjligt att finjustera radbrytningen genom att välja om "
+"radbrytningen bara ska tillåtas vid ord eller även vid tecken. Användbart "
+"för koreanska eller etiopiska."
 
 #: plugins/dockers/textproperties/qml/WordBreak.qml:18
 #, kde-format
@@ -47936,19 +48031,20 @@ msgctxt ""
 "comma separated search terms for the word-break property, matching is case-"
 "insensitive"
 msgid "word-break, line breaking"
-msgstr ""
+msgstr "ordbrytning, radbrytning"
 
 #: plugins/dockers/textproperties/qml/WordBreak.qml:78
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "No additional adjustments are made to the regular line break algorithm."
 msgstr ""
+"Inga ytterligare justeringar görs av den vanliga radbrytningsalgoritmen."
 
 #: plugins/dockers/textproperties/qml/WordBreak.qml:79
 #, kde-format
 msgctxt "@label:inlistbox"
 msgid "Keep-all"
-msgstr ""
+msgstr "Behåll alla"
 
 #: plugins/dockers/textproperties/qml/WordBreak.qml:80
 #, kde-format
@@ -47956,12 +48052,14 @@ msgctxt "@info:tooltip"
 msgid ""
 "Soft breaks will only be allowed inside words, typically delimited by spaces."
 msgstr ""
+"Mjuka radbrytningar tillåts bara inne i ord, typiskt avgränsade av "
+"mellanslag."
 
 #: plugins/dockers/textproperties/qml/WordBreak.qml:81
 #, kde-format
 msgctxt "@label:inlistbox"
 msgid "Break-all"
-msgstr ""
+msgstr "Radbryt alla"
 
 #: plugins/dockers/textproperties/qml/WordSpacing.qml:14
 #, kde-format
@@ -47976,6 +48074,8 @@ msgid ""
 "Word spacing controls the size of word-break characters, such as the space "
 "character."
 msgstr ""
+"Ordmellanrum bestämmer storleken på radbrytningstecken, såsom "
+"mellanslagstecknet."
 
 #: plugins/dockers/textproperties/qml/WordSpacing.qml:20
 #, kde-format
@@ -47983,7 +48083,7 @@ msgctxt ""
 "comma separated search terms for the word-spacing property, matching is case-"
 "insensitive"
 msgid "word-spacing, tracking, white space,"
-msgstr ""
+msgstr "ordmellanrum, följning, blanktecken."
 
 #: plugins/dockers/textproperties/qml/WritingMode.qml:12
 #, kde-format
@@ -47998,6 +48098,9 @@ msgid ""
 "Writing mode sets whether the text flows horizontally or vertically, and in "
 "the latter case, whether the block flows right to left or left to right."
 msgstr ""
+"Skrivmetod anger om texten flödar horisontellt eller vertikalt, och i det "
+"senare fallet om blocket flödar från höger till vänster eller från vänster "
+"till höger."
 
 #: plugins/dockers/textproperties/qml/WritingMode.qml:18
 #, kde-format
@@ -48005,7 +48108,7 @@ msgctxt ""
 "comma separated search terms for the writing-mode property, matching is case-"
 "insensitive"
 msgid "writing-mode, horizontal, vertical, top-to-bottom"
-msgstr ""
+msgstr "skrivmetod, horisontell, vertikal, uppifrån och ner"
 
 #: plugins/dockers/textproperties/qml/WritingMode.qml:77
 #, kde-format
@@ -50759,6 +50862,9 @@ msgid ""
 "for purchases and may make these bundles in other ways behind the links "
 "below."
 msgstr ""
+"Packarna har gjorts tillgängliga av sina upphovsmän för att ge belöningar "
+"för att stödja Kritas utveckling. De får ingen ersättning för inköp och kan "
+"skapa packarna på andra sätt via länkarna nedan."
 
 #. i18n: ectx: property (text), widget (QLabel, m_lblLoading)
 #: plugins/extensions/resourcemanager/KisSupporterBundlesDialog.ui:40
@@ -50775,7 +50881,7 @@ msgstr "Försök igen"
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:55
 #, kde-format
 msgid "Server responded with error %1."
-msgstr ""
+msgstr "Servern svarade med felet %1."
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:84
 #, kde-format
@@ -50785,27 +50891,27 @@ msgstr "Ogiltig checksummefil."
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:92
 #, kde-format
 msgid "Invalid checksums version."
-msgstr ""
+msgstr "Ogiltig version av checksumma."
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:117
 #, kde-format
 msgid "You have to update Krita to use this service."
-msgstr ""
+msgstr "Du måste uppdatera Krita för att använda tjänsten."
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:119
 #, kde-format
 msgid "This service is not available in your region."
-msgstr ""
+msgstr "Tjänsten är inte tillgänglig i din region."
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:121
 #, kde-format
 msgid "This service is currently unavailable."
-msgstr ""
+msgstr "Tjänsten är för närvarande inte tillgänglig."
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:123
 #, kde-format
 msgid "This service has been discontinued."
-msgstr ""
+msgstr "Tjänsten har upphört."
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:125
 #, kde-format
@@ -50815,7 +50921,7 @@ msgstr "Okänt tjänstfel %1."
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:184
 #, kde-format
 msgid "Not enough data."
-msgstr ""
+msgstr "Inte tillräckligt med data."
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:191
 #, kde-format
@@ -50845,7 +50951,7 @@ msgstr "Misslyckades skriva %1."
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:317
 #, kde-format
 msgid "Failed to retrieve bundle checksums: %1"
-msgstr ""
+msgstr "Misslyckades hämta packarnas checksummor: %1"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundlesFetcher.cpp:322
 #, kde-format
@@ -50929,7 +51035,7 @@ msgstr "Ogiltig packestorlek"
 #: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:202
 #, kde-format
 msgid "Invalid bundle checksum"
-msgstr ""
+msgstr "Ogiltig checksumma för packe"
 
 #: plugins/extensions/resourcemanager/KisSupporterBundleWidget.cpp:206
 #, kde-format
@@ -50961,7 +51067,7 @@ msgstr "Ladda ner"
 #: plugins/extensions/resourcemanager/KisSupporterBundleWidget.ui:196
 #, kde-format
 msgid "✔ Owned"
-msgstr ""
+msgstr "✔ Ägd"
 
 #: plugins/extensions/resourcemanager/page_bundle_saver.cpp:95
 #, kde-format
@@ -57433,6 +57539,9 @@ msgid ""
 "While text shapes can be saved to psd, only basic features are supported. "
 "Advanced features, like text-on-path and opentype features will not be saved."
 msgstr ""
+"Även om textformer kan sparas i psd, stöds endast grundläggande funktioner. "
+"Avancerade funktioner, som text på kontur och OpenType-funktioner, sparas "
+"inte."
 
 #: plugins/impex/psd/psd_loader.cpp:184
 #, kde-format
@@ -57453,6 +57562,9 @@ msgid ""
 "not, they will be loaded as pixel data, which will be visually more accurate "
 "to the original file."
 msgstr ""
+"Hittade textobjekt. Vill du läsa in dem som redigerbara textformer? Om inte, "
+"läses de in som bildpunktsdata, vilket visuellt blir mer exakt jämfört med "
+"originalfilen."
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, KisWdgOptionsQImageIO)
 #: plugins/impex/qimageio/kis_wdg_options_qimageio.ui:18
@@ -66151,7 +66263,7 @@ msgstr "Uppdatera färg"
 #: plugins/tools/basictools/wdgcolorsampler.ui:281
 #, kde-format
 msgid "Style for the on-canvas popup to comparing sampled colors"
-msgstr ""
+msgstr "Stil för panelrutan på duken för jämförelse av hämtade färger"
 
 #. i18n: ectx: property (title), widget (QGroupBox, grpSelectionMethod)
 #: plugins/tools/basictools/wdgmovetool.ui:42
@@ -66384,7 +66496,7 @@ msgstr "Ändra flödesformtyp"
 #: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:771
 msgctxt "(qtundo-format)"
 msgid "Set Flow Shape as First"
-msgstr ""
+msgstr "Ställ in flödesform till först"
 
 #: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:773
 msgctxt "(qtundo-format)"
@@ -66399,7 +66511,7 @@ msgstr "Öka flödesformindex"
 #: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:777
 msgctxt "(qtundo-format)"
 msgid "Set Flow Shape as Last"
-msgstr ""
+msgstr "Ställ in flödesform till sist"
 
 #: plugins/tools/defaulttool/defaulttool/DefaultTool.cpp:1048
 #, kde-format
@@ -67351,7 +67463,7 @@ msgstr "Glyfalternativ"
 #, kde-format
 msgctxt "@title:tab"
 msgid "Character Map"
-msgstr ""
+msgstr "Teckenkarta"
 
 #: plugins/tools/svgtexttool/glyphpalette/GlyphPalette.qml:134
 #, kde-format
@@ -67361,12 +67473,14 @@ msgid ""
 "search is possible when prepended with \"U+\", (for example, U+0045 will "
 "search for 'E')"
 msgstr ""
+"Söker efter tecken som matchar den första bokstaven i strängen. Hexadecimal "
+"sökning är möjlig när \"U+\" läggs till (till exempel söker U+0045 efter 'E')"
 
 #: plugins/tools/svgtexttool/glyphpalette/GlyphPaletteAlts.qml:85
 #, kde-format
 msgctxt "@info"
 msgid "No glyph alternates available."
-msgstr ""
+msgstr "Inga glyfalternativ tillgängliga."
 
 #: plugins/tools/svgtexttool/glyphpalette/GlyphPaletteDialog.cpp:32
 #, kde-format
@@ -67404,7 +67518,7 @@ msgstr "Ändra SVG-textverktyg"
 #: plugins/tools/svgtexttool/SvgTextChangeTransformsOnRange.cpp:31
 msgctxt "(qtundo-format)"
 msgid "Adjust character transforms on text."
-msgstr ""
+msgstr "Justera teckentransformeringar i texten."
 
 #: plugins/tools/svgtexttool/SvgTextCursor.cpp:473
 #, kde-format
@@ -67823,7 +67937,7 @@ msgstr "Klistra in Rich text"
 #, kde-format
 msgctxt "action"
 msgid "Try to paste styled text if possible."
-msgstr ""
+msgstr "Försök klistra in text med stilar om möjligt."
 
 #. i18n: context: iconText @ Action (svg_paste_plain_text), Actions (Text Tool), ActionCollection (SVG Tools)
 #. i18n: context: text @ Action (svg_paste_plain_text), Actions (Text Tool), ActionCollection (SVG Tools)
@@ -67841,7 +67955,7 @@ msgstr "Klistra in vanlig text"
 #, kde-format
 msgctxt "action"
 msgid "Paste text without styling."
-msgstr "Klistra in text utan stiler."
+msgstr "Klistra in text utan stilar."
 
 #. i18n: context: iconText @ Action (svg_type_setting_move_selection_start_down_1_px), Actions (Text Tool), ActionCollection (SVG Tools)
 #: plugins/tools/svgtexttool/SvgTextTool.action:227
@@ -67865,6 +67979,7 @@ msgid ""
 "When type setting mode is active, move the start of the selection down by "
 "one pixel."
 msgstr ""
+"När typsättning är aktivt, flytta markeringens början neråt med en bildpunkt."
 
 #. i18n: context: iconText @ Action (svg_type_setting_move_selection_start_up_1_px), Actions (Text Tool), ActionCollection (SVG Tools)
 #: plugins/tools/svgtexttool/SvgTextTool.action:238
@@ -67888,6 +68003,7 @@ msgid ""
 "When type setting mode is active, move the start of the selection up by one "
 "pixel."
 msgstr ""
+"När typsättning är aktivt, flytta markeringens början uppåt med en bildpunkt."
 
 #. i18n: context: iconText @ Action (svg_type_setting_move_selection_start_left_1_px), Actions (Text Tool), ActionCollection (SVG Tools)
 #: plugins/tools/svgtexttool/SvgTextTool.action:249
@@ -67911,6 +68027,8 @@ msgid ""
 "When type setting mode is active, move the start of the selection left by "
 "one pixel."
 msgstr ""
+"När typsättning är aktivt, flytta markeringens början åt vänster med en "
+"bildpunkt."
 
 #. i18n: context: iconText @ Action (svg_type_setting_move_selection_start_right_1_px), Actions (Text Tool), ActionCollection (SVG Tools)
 #: plugins/tools/svgtexttool/SvgTextTool.action:260
@@ -67934,6 +68052,8 @@ msgid ""
 "When type setting mode is active, move the start of the selection right by "
 "one pixel."
 msgstr ""
+"När typsättning är aktivt, flytta markeringens början åt höger med en "
+"bildpunkt."
 
 #. i18n: context: iconText @ Action (svg_remove_transforms_from_range), Actions (Text Tool), ActionCollection (SVG Tools)
 #. i18n: context: text @ Action (svg_remove_transforms_from_range), Actions (Text Tool), ActionCollection (SVG Tools)
@@ -67951,7 +68071,7 @@ msgstr "Ta bort teckentransformer"
 #, kde-format
 msgctxt "action"
 msgid "Remove Character Transforms from the selection."
-msgstr ""
+msgstr "Ta bort teckentransformeringar från markeringen."
 
 #. i18n: context: iconText @ Action (svg_clear_formatting), Actions (Text Tool), ActionCollection (SVG Tools)
 #. i18n: context: text @ Action (svg_clear_formatting), Actions (Text Tool), ActionCollection (SVG Tools)
@@ -67969,7 +68089,7 @@ msgstr "Rensa formatering"
 #, kde-format
 msgctxt "action"
 msgid "Remove all set text properties from the selection."
-msgstr ""
+msgstr "Ta bort alla inställda textegenskaper från markeringen."
 
 #: plugins/tools/svgtexttool/SvgTextTool.cpp:315
 #, kde-format
@@ -68000,6 +68120,7 @@ msgctxt "@info:tooltip"
 msgid ""
 "Use the current properties in the text properties docker to create new texts."
 msgstr ""
+"Använd nuvarande egenskaper i textegenskapspanelen för att skapa nya texter."
 
 #: plugins/tools/svgtexttool/SvgTextToolOptions.qml:92
 #, kde-format
@@ -68019,6 +68140,8 @@ msgctxt "@info:tooltip"
 msgid ""
 "Open the Text Properties Docker to edit properties like font size and style."
 msgstr ""
+"Öppna textegenskapspanelen för att redigera egenskaper som teckenstorlek och "
+"stil."
 
 #: plugins/tools/svgtexttool/SvgTextToolOptions.qml:139
 #, kde-format
@@ -68036,7 +68159,7 @@ msgstr "Använd visuell markör"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Use the visual order for bidirectional text."
-msgstr ""
+msgstr "Använd den visuella ordningen för dubbelriktad text."
 
 #: plugins/tools/svgtexttool/SvgTextToolOptions.qml:161
 #, kde-format
@@ -68054,13 +68177,13 @@ msgstr "Klistra alltid in Rich text när inklistringsåtgärden används."
 #, kde-format
 msgctxt "@label:button"
 msgid "Type Setting Mode"
-msgstr ""
+msgstr "Typsättningsläge"
 
 #: plugins/tools/svgtexttool/SvgTextToolOptions.qml:191
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Enable type setting mode."
-msgstr ""
+msgstr "Aktivera typsättningsläge."
 
 #: plugins/tools/svgtexttool/SvgTextToolOptions.qml:202
 #, kde-format
@@ -68078,7 +68201,7 @@ msgstr "Redigera SVG-källkod"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Edit the currently selected text as SVG XML."
-msgstr ""
+msgstr "Redigera den markerade texten som SVG XML."
 
 #: plugins/tools/svgtexttool/SvgTextToolOptions.qml:221
 #, kde-format
@@ -68093,6 +68216,8 @@ msgid ""
 "Open the Glyph Palette, which provides access to alternative OpenType or "
 "Unicode Variations of glyphs, as well as a Character Map."
 msgstr ""
+"Öppna glyfpaletten, som ger tillgång till alternativa OpenType- eller "
+"Unicode-varianter av tecken, samt en teckenuppsättning."
 
 #: plugins/tools/svgtexttool/SvgTextToolOptions.qml:240
 #, kde-format

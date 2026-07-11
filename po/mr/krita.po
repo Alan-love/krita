@@ -56,7 +56,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-10 00:41+0000\n"
+"POT-Creation-Date: 2026-07-11 00:41+0000\n"
 "PO-Revision-Date: 2013-04-16 11:05+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
@@ -24546,7 +24546,7 @@ msgstr "आउटपुट"
 #: libs/pigment/resources/KoColorSet.cpp:1527
 #: libs/pigment/resources/KoColorSet.cpp:1944
 #: libs/ui/actions/KisPasteActionFactories.cpp:392
-#: libs/ui/animation/KisDlgAnimationRenderer.cpp:542 libs/ui/KisView.cpp:1163
+#: libs/ui/animation/KisDlgAnimationRenderer.cpp:542 libs/ui/KisView.cpp:1167
 #: plugins/generators/seexpr/kis_wdg_seexpr.cpp:34
 #, fuzzy, kde-format
 msgid "Untitled"
@@ -24616,7 +24616,7 @@ msgstr "संसाधन फाईल्स साफ करा"
 #: libs/ui/KisReferenceImage.cpp:192 libs/ui/KisRemoteFileFetcher.cpp:40
 #: libs/ui/KisRemoteFileFetcher.cpp:64 libs/ui/KisRemoteFileFetcher.cpp:91
 #: libs/ui/KisTemplateCreateDia.cpp:284 libs/ui/KisTemplateCreateDia.cpp:390
-#: libs/ui/KisView.cpp:679 libs/ui/KisView.cpp:1166
+#: libs/ui/KisView.cpp:683 libs/ui/KisView.cpp:1170
 #: libs/ui/KisWelcomePageWidget.cpp:730 libs/ui/KisWindowLayoutResource.cpp:390
 #: libs/ui/opengl/KisOpenGLCanvasRenderer.cpp:335
 #: libs/ui/widgets/kis_custom_image_widget.cc:291
@@ -25536,7 +25536,7 @@ msgid "Select All"
 msgstr "सर्व निवडा"
 
 #: libs/ui/actions/kis_selection_action_factories.cpp:243
-#: libs/ui/KisView.cpp:774
+#: libs/ui/KisView.cpp:778
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Flood Fill Layer"
@@ -25609,7 +25609,7 @@ msgid "Paste shapes"
 msgstr "आकार चिकटवा"
 
 #: libs/ui/actions/KisPasteActionFactories.cpp:298
-#: libs/ui/actions/KisPasteActionFactories.cpp:399 libs/ui/KisView.cpp:589
+#: libs/ui/actions/KisPasteActionFactories.cpp:399 libs/ui/KisView.cpp:593
 #, kde-format
 msgid "(pasted)"
 msgstr "(चिकटविले)"
@@ -34925,7 +34925,7 @@ msgctxt "(qtundo-format)"
 msgid "Change File Layer"
 msgstr "गाळणी बदला"
 
-#: libs/ui/kis_clipboard.cc:780 libs/ui/KisView.cpp:680
+#: libs/ui/kis_clipboard.cc:780 libs/ui/KisView.cpp:684
 #, fuzzy, kde-format
 msgid ""
 "Could not open %2.\n"
@@ -37394,77 +37394,77 @@ msgstr "घंटी : मार्गदर्शन उपलब्ध ना�
 msgid "Use This Template"
 msgstr "निर्माण करा (&C)"
 
-#: libs/ui/KisView.cpp:749
+#: libs/ui/KisView.cpp:753
 #, kde-format
 msgid "You cannot drag and drop colors on the selected layer type."
 msgstr ""
 
-#: libs/ui/KisView.cpp:757 libs/ui/tool/kis_tool_utils.cpp:419
+#: libs/ui/KisView.cpp:761 libs/ui/tool/kis_tool_utils.cpp:419
 #, kde-format
 msgid "Layer is locked and invisible."
 msgstr "स्तर कुलूपबंद व अदृश्य आहे."
 
-#: libs/ui/KisView.cpp:759 libs/ui/tool/kis_tool_utils.cpp:421
+#: libs/ui/KisView.cpp:763 libs/ui/tool/kis_tool_utils.cpp:421
 #, kde-format
 msgid "Layer is locked."
 msgstr "स्तर कुलूपबंद आहे."
 
-#: libs/ui/KisView.cpp:761 libs/ui/tool/kis_tool_utils.cpp:423
+#: libs/ui/KisView.cpp:765 libs/ui/tool/kis_tool_utils.cpp:423
 #, kde-format
 msgid "Layer is invisible."
 msgstr "स्तर अदृश्य आहे."
 
-#: libs/ui/KisView.cpp:1167
+#: libs/ui/KisView.cpp:1171
 #, kde-format
 msgid ""
 "<p>The document <b>'%1'</b> has been modified.</p><p>Do you want to save it?"
 "</p>"
 msgstr ""
 
-#: libs/ui/KisView.cpp:1241
+#: libs/ui/KisView.cpp:1245
 #, fuzzy, kde-format
 msgid "Write Protected"
 msgstr "गाळणी स्तराचे गुणधर्म"
 
-#: libs/ui/KisView.cpp:1245
+#: libs/ui/KisView.cpp:1249
 #, fuzzy, kde-format
 #| msgid "Recording"
 msgid "Recovered"
 msgstr "रेकॉर्डिंग"
 
-#: libs/ui/KisView.cpp:1347
+#: libs/ui/KisView.cpp:1351
 #, fuzzy, kde-format
 msgid "Soft Proofing doesn't work in floating point."
 msgstr "डेकोरेशन्स दर्शवा"
 
-#: libs/ui/KisView.cpp:1352
+#: libs/ui/KisView.cpp:1356
 #, fuzzy, kde-format
 msgid "Soft Proofing turned on."
 msgstr "डेकोरेशन्स दर्शवा"
 
-#: libs/ui/KisView.cpp:1354
+#: libs/ui/KisView.cpp:1358
 #, fuzzy, kde-format
 msgid "Soft Proofing turned off."
 msgstr "डेकोरेशन्स दर्शवा"
 
-#: libs/ui/KisView.cpp:1366
+#: libs/ui/KisView.cpp:1370
 #, fuzzy, kde-format
 #| msgid "Warning"
 msgid "Gamut Warnings don't work in floating point."
 msgstr "इशारा"
 
-#: libs/ui/KisView.cpp:1372
+#: libs/ui/KisView.cpp:1376
 #, fuzzy, kde-format
 #| msgid "Warning"
 msgid "Gamut Warnings turned on."
 msgstr "इशारा"
 
-#: libs/ui/KisView.cpp:1374
+#: libs/ui/KisView.cpp:1378
 #, fuzzy, kde-format
 msgid "But Soft Proofing is still off."
 msgstr "डेकोरेशन्स दर्शवा"
 
-#: libs/ui/KisView.cpp:1377
+#: libs/ui/KisView.cpp:1381
 #, fuzzy, kde-format
 #| msgid "Warning"
 msgid "Gamut Warnings turned off."

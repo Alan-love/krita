@@ -24,6 +24,8 @@
 #include "KisViewManager.h"
 #include "kis_image.h"
 #include "kis_node.h"
+#include "KisMainWindow.h"
+#include "KisPart.h"
 
 #include "kundo2command.h"
 #include "kis_config.h"
@@ -271,6 +273,7 @@ KisDisplayColorConverter::KisDisplayColorConverter(KoCanvasResourceProvider *res
     setDisplayFilter(QSharedPointer<KisDisplayFilter>(0));
     updatePalettes();
     connect(this, SIGNAL(displayConfigurationChanged()), this, SLOT(updatePalettes()));
+    connect(KisPart::instance()->currentMainwindow(), SIGNAL(themeChanged()), this, SLOT(updatePalettes()));
 }
 
 KisDisplayColorConverter::KisDisplayColorConverter()

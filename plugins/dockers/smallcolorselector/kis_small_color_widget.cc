@@ -54,6 +54,7 @@ struct KisSmallColorWidget::Private {
     int huePreferredHeight = 32;
     KisSliderSpinBox *dynamicRange = 0;
     qreal currentRelativeDynamicRange = 1.0;
+    qreal currenReferenceWhite = 80.0;
     KisDisplayColorConverter *displayColorConverter = KisDisplayColorConverter::dumbConverterInstance();
     KisSignalAutoConnectionsStore colorConverterConnections;
     bool hasHDR = false;
@@ -182,7 +183,7 @@ KisSmallColorWidget::KisSmallColorWidget(QWidget* parent)
         d->dynamicRange->setSingleStep(1);
         d->dynamicRange->setPageStep(100);
         d->dynamicRange->setSuffix("cd/m²");
-        d->dynamicRange->setValue(80.0 * d->currentRelativeDynamicRange);
+        d->dynamicRange->setValue(d->currenReferenceWhite * d->currentRelativeDynamicRange);
         connect(d->dynamicRange, SIGNAL(valueChanged(int)), SLOT(slotInitiateUpdateDynamicRange(int)));
     }
 
@@ -268,7 +269,7 @@ void KisSmallColorWidget::setColor(const KoColor &color)
         if (rangeCoeff < r || rangeCoeff < g || rangeCoeff < b) {
             rangeCoeff = std::max({r, g, b}) * 1.10f;
 
-            const int newMaxLuminance = qRound(80.0 * rangeCoeff);
+            const int newMaxLuminance = qRound(d->currenReferenceWhite * rangeCoeff);
             updateDynamicRange(newMaxLuminance);
             d->dynamicRange->setValue(newMaxLuminance);
         }
@@ -433,7 +434,7 @@ void KisSmallColorWidget::slotInitiateUpdateDynamicRange(int maxLuminance)
 void KisSmallColorWidget::updateDynamicRange(int maxLuminance)
 {
     const qreal oldRange = d->currentRelativeDynamicRange;
-    const qreal newRange = qreal(maxLuminance) / 80.0;
+    const qreal newRange = qreal(maxLuminance) / d->currenReferenceWhite;
 
     if (qFuzzyCompare(oldRange, newRange)) return;
 
@@ -490,6 +491,10 @@ void KisSmallColorWidget::slotDisplayConfigurationChanged()
                  cs->colorDepthId() == Float32BitsColorDepthID ||
                  cs->colorDepthId() == Float64BitsColorDepthID ||
                  cs->profile()->getTransferCharacteristics() == TRC_ITU_R_BT_2100_0_PQ);
+
+        if (d->hasHDR) {
+            d->currenReferenceWhite = cs->profile()->hdrReferenceWhite().value_or(80.0);
+        }
     }
 
     if (d->dynamicRange) {

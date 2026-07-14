@@ -713,7 +713,7 @@ KisMainWindow::~KisMainWindow()
     //    }
 
     /**
-     * Detructor of KisView accesses KisViewManager is multiple ways,
+     * Destructor of KisView accesses KisViewManager is multiple ways,
      * directly and via KoToolManager. Hence we should destroy all the
      * subwindows **before** we actually destroy the view manager.
      *

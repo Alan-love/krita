@@ -15,6 +15,7 @@
 #include "KoColorSpaceRegistry.h"
 #include "KoColor.h"
 #include "KoColorModelStandardIds.h"
+#include "KoColorProfileQuery.h"
 
 inline QString truncated(QString value) {
     value.truncate(24);
@@ -92,18 +93,41 @@ void testRoundTrip(const KoColorSpace *srcCS, const KoColorSpace *dstCS, SourceT
     QVERIFY(roundTripIsCorrect);
 }
 
-void testRoundTrip(const KoID &linearColorDepth, const KoID &pqColorDepth, SourceType sourceIsPQ)
+void testRoundTrip(const KoID &linearColorDepth, const KoID &pqColorDepth, bool nits80, SourceType sourceIsPQ)
 {
-    const KoColorProfile *p2020PQProfile = KoColorSpaceRegistry::instance()->p2020PQProfile();
+    KoColorProfileQuery query(PRIMARIES_ITU_R_BT_2020_2_AND_2100_0, TRC_ITU_R_BT_2100_0_PQ);
+    query.hdrReferenceWhite = std::make_optional(80.0);
+
+    const KoColorProfile *p2020PQProfile = nits80? KoColorSpaceRegistry::instance()->profileFor(query, false): KoColorSpaceRegistry::instance()->p2020PQProfile();
     const KoColorProfile *p2020G10Profile = KoColorSpaceRegistry::instance()->p2020G10Profile();
 
     const KoColorSpace *srcCS = KoColorSpaceRegistry::instance()->colorSpace(RGBAColorModelID.id(), linearColorDepth.id(), p2020G10Profile);
-    const KoColorSpace *dstCS = KoColorSpaceRegistry::instance()->colorSpace(RGBAColorModelID.id(), pqColorDepth.id(), p2020PQProfile);;
+    const KoColorSpace *dstCS = KoColorSpaceRegistry::instance()->colorSpace(RGBAColorModelID.id(), pqColorDepth.id(), p2020PQProfile);
 
     if (sourceIsPQ == HDR_PQ) {
         std::swap(srcCS, dstCS);
     }
 
+    testRoundTrip(srcCS, dstCS, sourceIsPQ);
+}
+
+void testRoundTripBetweenNits(const KoID &colorDepth1, const KoID &colorDepth2, bool flip80Nits, SourceType sourceIsPQ)
+{
+    KoColorProfileQuery query(PRIMARIES_ITU_R_BT_2020_2_AND_2100_0, TRC_ITU_R_BT_2100_0_PQ);
+    query.hdrReferenceWhite = std::make_optional(80.0);
+    const KoColorProfile *profile1 = KoColorSpaceRegistry::instance()->profileFor(query, false);
+    const KoColorProfile *profile2 = KoColorSpaceRegistry::instance()->p2020PQProfile();
+
+    if (flip80Nits) {
+        std::swap(profile1, profile2);
+    }
+
+    const KoColorSpace *srcCS = KoColorSpaceRegistry::instance()->colorSpace(RGBAColorModelID.id(), colorDepth1.id(), profile1);
+    const KoColorSpace *dstCS = KoColorSpaceRegistry::instance()->colorSpace(RGBAColorModelID.id(), colorDepth2.id(), profile2);
+
+    if (sourceIsPQ == HDR_PQ) {
+        std::swap(srcCS, dstCS);
+    }
     testRoundTrip(srcCS, dstCS, sourceIsPQ);
 }
 
@@ -113,9 +137,14 @@ void TestLcmsRGBP2020PQColorSpace::test()
     const KoColorProfile *p2020G10Profile = KoColorSpaceRegistry::instance()->p2020G10Profile();
     const KoColorProfile *p709G10Profile = KoColorSpaceRegistry::instance()->p709G10Profile();
 
+    KoColorProfileQuery query(PRIMARIES_ITU_R_BT_2020_2_AND_2100_0, TRC_ITU_R_BT_2100_0_PQ);
+    query.hdrReferenceWhite = std::make_optional(80.0);
+    const KoColorProfile *p2020PQ80Profile = KoColorSpaceRegistry::instance()->profileFor(query, false);
+
     QVERIFY(p2020PQProfile);
     QVERIFY(p2020G10Profile);
     QVERIFY(p709G10Profile);
+    QVERIFY(p2020PQ80Profile);
 
     QVector<KoID> linearModes;
     linearModes << Float16BitsColorDepthID;
@@ -129,13 +158,22 @@ void TestLcmsRGBP2020PQColorSpace::test()
 
     Q_FOREACH(const KoID &src, linearModes) {
         Q_FOREACH(const KoID &dst, pqModes) {
-            testRoundTrip(src, dst, HDR);
+            testRoundTrip(src, dst, false, HDR);
+            testRoundTrip(src, dst, true, HDR);
         }
     }
 
     Q_FOREACH(const KoID &src, linearModes) {
         Q_FOREACH(const KoID &dst, pqModes) {
-            testRoundTrip(src, dst, HDR_PQ);
+            testRoundTrip(src, dst, false, HDR_PQ);
+            testRoundTrip(src, dst, true, HDR_PQ);
+        }
+    }
+
+    Q_FOREACH(const KoID &src, pqModes) {
+        Q_FOREACH(const KoID &dst, pqModes) {
+            testRoundTripBetweenNits(src, dst, false, HDR_PQ);
+            testRoundTripBetweenNits(src, dst, true, HDR_PQ);
         }
     }
 }

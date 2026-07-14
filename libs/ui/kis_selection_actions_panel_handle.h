@@ -15,7 +15,7 @@ class KoColorDisplayRendererInterface;
 class KisSelectionActionsPanelHandle : public QWidget
 {
 public:
-    KisSelectionActionsPanelHandle(int size, QWidget *parent);
+    KisSelectionActionsPanelHandle(int size, Orientation orientation, QWidget *parent);
     ~KisSelectionActionsPanelHandle();
 
     void draw(QPainter& painter, const KoColorDisplayRendererInterface *renderInterface);

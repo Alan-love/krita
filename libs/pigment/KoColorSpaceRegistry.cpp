@@ -687,7 +687,7 @@ const KoColorProfile *KoColorSpaceRegistry::p2020G10Profile() const
 
 const KoColorProfile *KoColorSpaceRegistry::p2020PQProfile() const
 {
-    return profileByName("Krita Rec. 2100 Perceptual Quantizer (80cd/m²)");
+    return profileByName("Krita Rec. 2100 Perceptual Quantizer (203cd/m²)");
 }
 
 const KoColorProfile *KoColorSpaceRegistry::p709G10Profile() const
@@ -711,20 +711,23 @@ const KoColorProfile *KoColorSpaceRegistry::profileFor(const KoColorProfileQuery
     }
 
     if (query.primaries == PRIMARIES_ITU_R_BT_2020_2_AND_2100_0) {
-        if (query.transfer == TRC_ITU_R_BT_2100_0_PQ) {
+        if (query.transfer == TRC_ITU_R_BT_2100_0_PQ
+            && query.hdrReferenceWhite
+            && qFuzzyCompare(*query.hdrReferenceWhite, 203.0)) {
             return p2020PQProfile();
         } else if (query.transfer == TRC_LINEAR) {
             return p2020G10Profile();
         }
     }
 
-    QList<const KoColorProfile*> list = d->profileStorage.profilesFor(query.primaries, query.transfer);
+    QList<const KoColorProfile*> list = d->profileStorage.profilesFor(query);
     if (!list.empty()) {
         return list.first();
     }
 
     KoColorSpaceEngine *engine = KoColorSpaceEngineRegistry::instance()->get("icc");
-    if (engine && generate) {
+    // We're disabling custom generation of PQ profiles for now.
+    if (engine && generate && !(query.hdrReferenceWhite && query.transfer == TRC_ITU_R_BT_2100_0_PQ)) {
         return engine->getProfile(query);
     }
 
@@ -829,9 +832,13 @@ QColorSpace KoColorSpaceRegistry::QColorSpaceForProfile(const KoColorProfile *pr
         return QColorSpace(QColorSpace::SRgb);
     }
 #if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-    if (profile == p2020PQProfile()) {
+    if (profile == p2020PQProfile()
+        || (profile->getColorPrimaries() == PRIMARIES_ITU_R_BT_2020_2_AND_2100_0
+            && profile->getTransferCharacteristics() == TRC_ITU_R_BT_2100_0_PQ)) {
         return QColorSpace(QColorSpace::Bt2100Pq);
     }
+    // TODO: we'll need to fine tune the conversion between non "rec 2100" pq profiles and qcolorspace.
+    // Though, arguably, these probably don't show up in a QColorSpace way, and should roundtrip in the icc cicp values.
 #endif
     return QColorSpace::fromIccProfile(profile->rawData());
 }

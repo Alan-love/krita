@@ -107,8 +107,7 @@ struct KisSmallColorWidget::Private {
         if (result
                 && result->colorModelId() == RGBAColorModelID
                 && result->profile()
-                && KoColorSpaceRegistry::instance()->p2020PQProfile()
-                && result->profile()->uniqueId() == KoColorSpaceRegistry::instance()->p2020PQProfile()->uniqueId()) {
+                && result->profile()->getTransferCharacteristics() == TRC_ITU_R_BT_2100_0_PQ) {
 
             result = KoColorSpaceRegistry::instance()->
                     colorSpace(RGBAColorModelID.id(), Float32BitsColorDepthID.id(),
@@ -490,7 +489,7 @@ void KisSmallColorWidget::slotDisplayConfigurationChanged()
                 (cs->colorDepthId() == Float16BitsColorDepthID ||
                  cs->colorDepthId() == Float32BitsColorDepthID ||
                  cs->colorDepthId() == Float64BitsColorDepthID ||
-                 cs->profile()->uniqueId() == KoColorSpaceRegistry::instance()->p2020PQProfile()->uniqueId());
+                 cs->profile()->getTransferCharacteristics() == TRC_ITU_R_BT_2100_0_PQ);
     }
 
     if (d->dynamicRange) {

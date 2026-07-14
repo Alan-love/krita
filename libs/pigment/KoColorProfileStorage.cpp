@@ -186,6 +186,7 @@ QList<const KoColorProfile *> KoColorProfileStorage::profilesFor(const KoColorPr
         bool colorantMatch = (!query.rgbColorants.isEmpty() || query.primaries != PRIMARIES_UNSPECIFIED);
         bool colorantTypeMatch = (query.primaries == PRIMARIES_UNSPECIFIED);
         bool transferMatch = (query.transfer == TRC_UNSPECIFIED);
+        bool luminanceMatch = true;
         if (query.primaries != PRIMARIES_UNSPECIFIED) {
             if (int(profile->getColorPrimaries()) == query.primaries) {
                 colorantTypeMatch = true;
@@ -224,7 +225,11 @@ QList<const KoColorProfile *> KoColorProfileStorage::profilesFor(const KoColorPr
             }
         }
 
-        if (transferMatch && colorantMatch && colorantTypeMatch) {
+        if (query.hdrReferenceWhite && query.transfer == TRC_ITU_R_BT_2100_0_PQ) {
+            luminanceMatch = (profile->hdrReferenceWhite() && qFuzzyCompare(*profile->hdrReferenceWhite(), *query.hdrReferenceWhite));
+        }
+
+        if (transferMatch && colorantMatch && colorantTypeMatch && luminanceMatch) {
             profiles.push_back(profile);
         }
     }

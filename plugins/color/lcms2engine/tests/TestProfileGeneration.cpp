@@ -393,11 +393,12 @@ void TestProfileGeneration::testCICPwriting()
     QFETCH(ColorPrimaries, primaries);
     QFETCH(TransferCharacteristics, transfer);
     KoColorProfileQuery query(primaries, transfer);
+    if (transfer == TRC_ITU_R_BT_2100_0_PQ) {
+        query.hdrReferenceWhite = std::make_optional(203.0);
+    }
     const KoColorProfile *profile = KoColorSpaceRegistry::instance()->profileFor(query);
 
     QVERIFY(profile);
-
-    // TODO: write and reload the profile.
 
     QVERIFY(profile->getColorPrimaries() == primaries);
     QVERIFY(profile->getTransferCharacteristics() == transfer);
@@ -410,6 +411,25 @@ void TestProfileGeneration::testCICPwriting()
     QVERIFY(lcms->hasCicpValues());
     QVERIFY(lcms->cicpPrimaries() == primaries);
     QVERIFY(lcms->cicpTransfer() == transfer);
+}
+
+void TestProfileGeneration::testRetrieveNits_data()
+{
+    QTest::addColumn<double>("expectedReferenceWhite");
+    QTest::addRow("rec2100PQ 80nits") << 80.0;
+    QTest::addRow("rec2100PQ 203nits") << 203.0;
+}
+
+void TestProfileGeneration::testRetrieveNits()
+{
+    QFETCH(double, expectedReferenceWhite);
+    KoColorProfileQuery query(PRIMARIES_ITU_R_BT_2020_2_AND_2100_0, TRC_ITU_R_BT_2100_0_PQ);
+    query.hdrReferenceWhite = std::make_optional(expectedReferenceWhite);
+    const KoColorProfile *profile = KoColorSpaceRegistry::instance()->profileFor(query);
+
+    QVERIFY(profile);
+    QVERIFY(profile->hdrReferenceWhite());
+    QVERIFY(qFuzzyCompare(*profile->hdrReferenceWhite(), expectedReferenceWhite));
 }
 
 KISTEST_MAIN(TestProfileGeneration)

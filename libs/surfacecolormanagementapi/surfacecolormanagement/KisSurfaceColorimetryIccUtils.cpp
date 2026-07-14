@@ -92,6 +92,10 @@ KoColorProfileQuery colorSpaceToRequest(ColorSpace cs)
         request.rgbColorants.clear();
     }
 
+    if (request.transfer == TRC_ITU_R_BT_2100_0_PQ) {
+        request.hdrReferenceWhite = std::make_optional(double(cs.luminance->referenceLuminance));
+    }
+
     return request;
 }
 

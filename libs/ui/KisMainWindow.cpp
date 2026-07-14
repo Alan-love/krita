@@ -712,6 +712,22 @@ KisMainWindow::~KisMainWindow()
     //        }
     //    }
 
+    /**
+     * Detructor of KisView accesses KisViewManager is multiple ways,
+     * directly and via KoToolManager. Hence we should destroy all the
+     * subwindows **before** we actually destroy the view manager.
+     *
+     * Please note that we cannot just `close()` the subwindows, becasue
+     * they are deleted with deleteLater(), which may postpone their
+     * destruction till after KisViewManager's death.
+     */
+    Q_FOREACH (QMdiSubWindow *subwin, d->mdiArea->subWindowList()) {
+        if (subwin) {
+            (void) subwin->close();
+            delete subwin;
+        }
+    }
+
     // The doc and view might still exist (this is the case when closing the window)
     KisPart::instance()->removeMainWindow(this);
 

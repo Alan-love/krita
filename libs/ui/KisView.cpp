@@ -126,7 +126,7 @@ public:
     KisCanvasController canvasController;
     KisCanvas2 canvas;
     KisZoomManager zoomManager;
-    KisViewManager *viewManager {nullptr};
+    QPointer<KisViewManager> viewManager;
     KisNodeSP currentNode;
     KisPaintingAssistantsDecorationSP paintingAssistantsDecoration;
     KisReferenceImagesDecorationSP referenceImagesDecoration;

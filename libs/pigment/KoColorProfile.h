@@ -15,6 +15,7 @@
 #include "KoColorProfileConstants.h"
 #include "kritapigment_export.h"
 #include <KoColorimetryUtils.h>
+#include <optional>
 
 /**
  * Contains information needed for color transformation.

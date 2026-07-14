@@ -59,7 +59,7 @@ struct RemoveSmpte2048Policy {
     static ALWAYS_INLINE double getRefWhite(const KoColorSpace *src, const KoColorSpace *target) {
         Q_UNUSED(target)
         if (!src || !src->profile()) return 203.0;
-        return src->profile()->hdrReferenceWhite()? *src->profile()->hdrReferenceWhite(): 203.0;
+        return src->profile()->hdrReferenceWhite().value_or(203.0);
     }
 };
 
@@ -77,7 +77,7 @@ struct ApplySmpte2048Policy {
     static ALWAYS_INLINE double getRefWhite(const KoColorSpace *src, const KoColorSpace *target) {
         Q_UNUSED(src)
         if (!target || !target->profile()) return 203.0;
-        return target->profile()->hdrReferenceWhite()? *target->profile()->hdrReferenceWhite(): 203.0;
+        return target->profile()->hdrReferenceWhite().value_or(203.0);
     }
 };
 

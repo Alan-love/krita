@@ -129,6 +129,8 @@ void TestIccFromColorimetryConversion::testRequestConstruction()
     if (expectedReferenceWhite > 0.0) {
         QVERIFY(request.hdrReferenceWhite);
         QVERIFY(qFuzzyCompare(*request.hdrReferenceWhite, expectedReferenceWhite));
+    } else {
+        QVERIFY(!request.hdrReferenceWhite);
     }
     QVERIFY(request.rgbColorants.isEmpty());
 }
@@ -248,6 +250,8 @@ void TestIccFromColorimetryConversion::testProfileConstruction()
     if (expectedReferenceWhite > 0.0) {
         QVERIFY(profile->hdrReferenceWhite());
         QVERIFY(qFuzzyCompare(*profile->hdrReferenceWhite(), expectedReferenceWhite));
+    } else {
+        QVERIFY(!profile->hdrReferenceWhite());
     }
 
     qDebug() << ppVar(profile->name()) << ppVar(profile->fileName());

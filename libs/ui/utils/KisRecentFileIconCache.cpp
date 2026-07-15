@@ -7,9 +7,10 @@
 
 #include "KisRecentFileIconCache.h"
 
-#include <QtConcurrent>
+#include <QtConcurrentRun>
 #include <QApplication>
 #include <QGlobalStatic>
+#include <QFutureWatcher>
 
 #include "KisFileIconCreator.h"
 #include "KisRecentDocumentsModelWrapper.h"

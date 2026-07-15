@@ -6,7 +6,10 @@
 
 #include "kis_async_action_feedback.h"
 
-#include <QtConcurrent>
+#include <QApplication>
+#include <QEventLoop>
+#include <QFutureWatcher>
+#include <QtConcurrentRun>
 #include <QProgressDialog>
 
 

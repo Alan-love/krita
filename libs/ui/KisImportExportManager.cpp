@@ -22,7 +22,8 @@
 #include <QSaveFile>
 #include <QGroupBox>
 #include <QFuture>
-#include <QtConcurrent>
+#include <QtConcurrentRun>
+#include <QTemporaryFile>
 
 #include <klocalizedstring.h>
 #include <ksqueezedtextlabel.h>

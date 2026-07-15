@@ -22,7 +22,13 @@ struct KoColorProfileQuery {
         , transfer(transfer)
     {}
 
-    KoColorimetryUtils::xy whitePoint; /// The desired white point of the profile.
+    KoColorProfileQuery(const KoColorProfileQuery &rhs) = default;
+    KoColorProfileQuery(KoColorProfileQuery &&rhs) = default;
+
+    KoColorProfileQuery& operator=(const KoColorProfileQuery&rhs) = default;
+    KoColorProfileQuery& operator=(KoColorProfileQuery &&rhs) = default;
+
+    KoColorimetryUtils::xy whitePoint {0.0, 0.0}; /// The desired white point of the profile.
     QList<KoColorimetryUtils::xy> rgbColorants; /// Rgb Primaries of the profile. When empty, this is a query for a greyscale profile.
 
     ColorPrimaries primaries; /// CICP-compatible enum value representing the white point and primaries.
@@ -38,13 +44,13 @@ struct KoColorProfileQuery {
         return transfer != TRC_UNSPECIFIED
             && rgbColorants.isEmpty()
             && primaries == PRIMARIES_UNSPECIFIED
-            && !(whitePoint == KoColorimetryUtils::xy());
+            && !(whitePoint == KoColorimetryUtils::xy{0.0, 0.0});
     }
 
     inline bool isRgb() const {
         return transfer != TRC_UNSPECIFIED
-            && (primaries != PRIMARIES_UNSPECIFIED || !rgbColorants.isEmpty())
-            && !(whitePoint == KoColorimetryUtils::xy());
+            && (primaries != PRIMARIES_UNSPECIFIED
+                || (!rgbColorants.isEmpty() && !(whitePoint == KoColorimetryUtils::xy{0.0, 0.0})));
     }
 
     inline bool operator==(const KoColorProfileQuery &rhs) const {

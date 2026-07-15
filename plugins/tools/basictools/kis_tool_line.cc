@@ -462,7 +462,11 @@ void KisToolLine::showSize()
 {
     KisCanvas2 *kisCanvas =dynamic_cast<KisCanvas2*>(canvas());
     KIS_ASSERT(kisCanvas);
-    kisCanvas->viewManager()->showFloatingMessage(i18n("Length: %1 px", QString::number(QLineF(m_startPoint,m_endPoint).length(), 'f',1))
+    const QPointF lineVector = m_endPoint - m_startPoint;
+    const qreal angle = std::atan2(qAbs(lineVector.y()), qAbs(lineVector.x())) * 180.0 / M_PI;
+    kisCanvas->viewManager()->showFloatingMessage(i18nc("%1=length in pixels %2=angle in degrees", "Length: %1 px\nAngle: %2°",
+                                                         QString::number(QLineF(m_startPoint,m_endPoint).length(), 'f', 1),
+                                                         QString::number(angle, 'f', 1))
                                                         , QIcon(), 1000, KisFloatingMessage::High,  Qt::AlignLeft | Qt::TextWordWrap | Qt::AlignVCenter);
 }
 void KisToolLine::paintLine(QPainter& gc, const QRect&)

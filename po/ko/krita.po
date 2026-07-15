@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-14 00:41+0000\n"
+"POT-Creation-Date: 2026-07-15 00:42+0000\n"
 "PO-Revision-Date: 2024-08-20 23:32+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -23084,7 +23084,7 @@ msgstr "처리"
 #: libs/image/kis_psd_layer_style.cpp:106
 #: libs/ui/dialogs/KisDlgCreateNewDocument.cpp:32
 #: libs/ui/dialogs/KisDlgCreateNewDocument.cpp:38
-#: libs/ui/KisApplicationArguments.cpp:384 libs/ui/KisMainWindow.cpp:1461
+#: libs/ui/KisApplicationArguments.cpp:384 libs/ui/KisMainWindow.cpp:1477
 #: plugins/impex/libkra/kis_kra_saver.cpp:89
 #, kde-format
 msgid "Unnamed"
@@ -23874,8 +23874,8 @@ msgctxt "description of a file type"
 msgid "Radiance RGBE Image"
 msgstr "이미지 교체"
 
-#: libs/libkis/Document.cpp:986 libs/ui/KisMainWindow.cpp:2221
-#: libs/ui/KisMainWindow.cpp:2302
+#: libs/libkis/Document.cpp:986 libs/ui/KisMainWindow.cpp:2237
+#: libs/ui/KisMainWindow.cpp:2318
 #, kde-format
 msgid "Import frames"
 msgstr "프레임 가져오기"
@@ -25235,11 +25235,11 @@ msgstr "로컬 리소스"
 #: libs/ui/KisApplication.cpp:1344 libs/ui/KisDocument.cpp:1057
 #: libs/ui/KisDocument.cpp:1072 libs/ui/KisDocument.cpp:2039
 #: libs/ui/KisDocument.cpp:2082 libs/ui/KisDocument.cpp:2093
-#: libs/ui/KisMainWindow.cpp:1023 libs/ui/KisMainWindow.cpp:1093
-#: libs/ui/KisMainWindow.cpp:1237 libs/ui/KisMainWindow.cpp:1334
-#: libs/ui/KisMainWindow.cpp:2081 libs/ui/KisMainWindow.cpp:2090
-#: libs/ui/KisMainWindow.cpp:2229 libs/ui/KisMainWindow.cpp:2290
-#: libs/ui/KisMainWindow.cpp:2309 libs/ui/KisMainWindow.cpp:2951
+#: libs/ui/KisMainWindow.cpp:1039 libs/ui/KisMainWindow.cpp:1109
+#: libs/ui/KisMainWindow.cpp:1253 libs/ui/KisMainWindow.cpp:1350
+#: libs/ui/KisMainWindow.cpp:2097 libs/ui/KisMainWindow.cpp:2106
+#: libs/ui/KisMainWindow.cpp:2245 libs/ui/KisMainWindow.cpp:2306
+#: libs/ui/KisMainWindow.cpp:2325 libs/ui/KisMainWindow.cpp:2967
 #: libs/ui/KisPart.cpp:555 libs/ui/KisPart.cpp:558
 #: libs/ui/KisReferenceImage.cpp:192 libs/ui/KisRemoteFileFetcher.cpp:40
 #: libs/ui/KisRemoteFileFetcher.cpp:64 libs/ui/KisRemoteFileFetcher.cpp:91
@@ -25809,7 +25809,7 @@ msgid "Delete resource"
 msgstr "리소스 삭제"
 
 #: libs/resourcewidgets/KisResourceItemChooser.cpp:339
-#: libs/ui/KisMainWindow.cpp:2748
+#: libs/ui/KisMainWindow.cpp:2764
 #: plugins/paintops/libpaintop/kis_predefined_brush_chooser.cpp:407
 #: qmlmodules/components/TagFilterProxyModelQmlWrapper.cpp:347
 #, kde-format
@@ -26331,7 +26331,7 @@ msgstr ""
 "애니메이션 프레임을 렌더링할 수 없습니다! 출력 파일이 완전하지 않습니다."
 
 #: libs/ui/animation/KisDlgAnimationRenderer.cpp:54
-#: libs/ui/KisMainWindow.cpp:2332
+#: libs/ui/KisMainWindow.cpp:2348
 #, kde-format
 msgid "Render Animation"
 msgstr "애니메이션 렌더"
@@ -28399,7 +28399,7 @@ msgid "Numerical"
 msgstr "숫자 순서"
 
 #: libs/ui/dialogs/kis_dlg_import_image_sequence.cpp:141
-#: libs/ui/KisMainWindow.cpp:1202
+#: libs/ui/KisMainWindow.cpp:1218
 #, kde-format
 msgid "Import Images"
 msgstr "이미지 가져오기"
@@ -28516,7 +28516,7 @@ msgctxt "@title:window"
 msgid "Enter new style name"
 msgstr "새 스타일의 이름을 입력하십시오"
 
-#: libs/ui/dialogs/kis_dlg_layer_style.cpp:319 libs/ui/KisMainWindow.cpp:2759
+#: libs/ui/dialogs/kis_dlg_layer_style.cpp:319 libs/ui/KisMainWindow.cpp:2775
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Name:"
@@ -33065,7 +33065,7 @@ msgstr "현재 브러시 사전 설정"
 
 #. i18n: ectx: property (text), widget (QPushButton, updateBrushNameButton)
 #. i18n: ectx: property (toolTip), widget (QToolButton, bnSaveMask)
-#: libs/ui/forms/wdgpaintopsettings.ui:184 libs/ui/KisMainWindow.cpp:1068
+#: libs/ui/forms/wdgpaintopsettings.ui:184 libs/ui/KisMainWindow.cpp:1084
 #: libs/ui/widgets/kis_workspace_chooser.cpp:134
 #: libs/ui/widgets/kis_workspace_chooser.cpp:209
 #: plugins/dockers/gamutmask/forms/wdgGamutMaskChooser.ui:232
@@ -37891,22 +37891,22 @@ msgstr "%1 도구 모음 표시"
 msgid "Hide %1 Toolbar"
 msgstr "%1 도구 모음 숨기기"
 
-#: libs/ui/KisMainWindow.cpp:1065
+#: libs/ui/KisMainWindow.cpp:1081
 #, kde-format
 msgid "Save as %1"
 msgstr "%1(으)로 저장"
 
-#: libs/ui/KisMainWindow.cpp:1093
+#: libs/ui/KisMainWindow.cpp:1109
 #, kde-format
 msgid "The file %1 does not exist."
 msgstr "파일 %1이(가) 없습니다."
 
-#: libs/ui/KisMainWindow.cpp:1202
+#: libs/ui/KisMainWindow.cpp:1218
 #, kde-format
 msgid "Open Images"
 msgstr "이미지 열기"
 
-#: libs/ui/KisMainWindow.cpp:1335
+#: libs/ui/KisMainWindow.cpp:1351
 #, kde-format
 msgid ""
 "You are saving a file while the image is still rendering. The saved file may "
@@ -37919,29 +37919,29 @@ msgstr ""
 "\n"
 "원본 파일에 덮어쓰지 않을 위치를 지정하십시오!"
 
-#: libs/ui/KisMainWindow.cpp:1396
+#: libs/ui/KisMainWindow.cpp:1412
 #, kde-format
 msgid "Exporting"
 msgstr "내보내는 중"
 
-#: libs/ui/KisMainWindow.cpp:1396
+#: libs/ui/KisMainWindow.cpp:1412
 #, kde-format
 msgid "Saving As"
 msgstr "다른 이름으로 저장 중"
 
-#: libs/ui/KisMainWindow.cpp:2050
+#: libs/ui/KisMainWindow.cpp:2066
 #, kde-format
 msgid "Layers/Masks"
 msgstr "레이어/마스크"
 
-#: libs/ui/KisMainWindow.cpp:2076
+#: libs/ui/KisMainWindow.cpp:2092
 #: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:201
 #: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:365
 #, kde-format
 msgid "You don't have any resource bundles enabled."
 msgstr "활성화된 리소스 번들이 없습니다."
 
-#: libs/ui/KisMainWindow.cpp:2080
+#: libs/ui/KisMainWindow.cpp:2096
 #, kde-format
 msgid ""
 "\n"
@@ -37952,7 +37952,7 @@ msgstr ""
 "브러시 사전 설정이 없습니다. 브러시 사전 설정이 포함된 번들을 다시 활성화하십"
 "시오.\n"
 
-#: libs/ui/KisMainWindow.cpp:2090
+#: libs/ui/KisMainWindow.cpp:2106
 #: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:211
 #: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:377
 #, kde-format
@@ -37963,7 +37963,7 @@ msgstr ""
 "\n"
 "로컬 리소스만 사용할 수 있습니다."
 
-#: libs/ui/KisMainWindow.cpp:2229 libs/ui/KisMainWindow.cpp:2309
+#: libs/ui/KisMainWindow.cpp:2245 libs/ui/KisMainWindow.cpp:2325
 #, kde-format
 msgid ""
 "Could not finish import animation:\n"
@@ -37972,40 +37972,40 @@ msgstr ""
 "애니메이션 가져오기를 완료할 수 없음:\n"
 "%1"
 
-#: libs/ui/KisMainWindow.cpp:2290
+#: libs/ui/KisMainWindow.cpp:2306
 #, kde-format
 msgid "Failed to create new document. Animation import aborted."
 msgstr "새 문서를 만들 수 없습니다. 애니메이션 가져오기를 중단합니다."
 
-#: libs/ui/KisMainWindow.cpp:2739
+#: libs/ui/KisMainWindow.cpp:2755
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Import Workspace..."
 msgstr "작업 공간 가져오기(&I)..."
 
-#: libs/ui/KisMainWindow.cpp:2754
+#: libs/ui/KisMainWindow.cpp:2770
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&New Workspace..."
 msgstr "새 작업 공간(&N)..."
 
-#: libs/ui/KisMainWindow.cpp:2758
+#: libs/ui/KisMainWindow.cpp:2774
 #, kde-format
 msgctxt "@title:window"
 msgid "New Workspace..."
 msgstr "새 작업 공간..."
 
-#: libs/ui/KisMainWindow.cpp:2802
+#: libs/ui/KisMainWindow.cpp:2818
 #, kde-format
 msgid "&%1 %2"
 msgstr "&%1 %2"
 
-#: libs/ui/KisMainWindow.cpp:2805
+#: libs/ui/KisMainWindow.cpp:2821
 #, kde-format
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: libs/ui/KisMainWindow.cpp:2974
+#: libs/ui/KisMainWindow.cpp:2990
 #, kde-format
 msgid ""
 "The Krita LittleCMS color management plugin is not installed. Krita will "
@@ -38014,19 +38014,19 @@ msgstr ""
 "Krita LittleCMS 색 관리 플러그인이 설치되어 있지 않습니다. Krita를 종료합니"
 "다."
 
-#: libs/ui/KisMainWindow.cpp:2990
+#: libs/ui/KisMainWindow.cpp:3006
 #, kde-format
 msgctxt "@title:window"
 msgid "Installation error"
 msgstr "설치 오류"
 
-#: libs/ui/KisMainWindow.cpp:3103
+#: libs/ui/KisMainWindow.cpp:3119
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Themes"
 msgstr "테마(&T)"
 
-#: libs/ui/KisMainWindow.cpp:3189
+#: libs/ui/KisMainWindow.cpp:3205
 #, kde-format
 msgid "Expanding Spacer"
 msgstr "확장 가능한 구분자"

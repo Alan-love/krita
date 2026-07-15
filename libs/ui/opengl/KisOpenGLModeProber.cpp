@@ -14,6 +14,11 @@
 #include <QWindow>
 #include <QColorSpace>
 
+#ifdef HAVE_HDR
+// for fetching the legacy 80-nits PQ space
+#include <KoColorProfileQuery.h>
+#endif
+
 #ifdef HAVE_X11
 #include <qpa/qplatformnativeinterface.h>
 #endif
@@ -55,16 +60,20 @@ const KoColorProfile *KisOpenGLModeProber::rootSurfaceColorProfile() const
 {
     const KoColorProfile *profile = KoColorSpaceRegistry::instance()->p709SRGBProfile();
 
-    const auto surfaceColorSpace = 
+    const auto surfaceColorSpace =
         KisSurfaceColorSpaceWrapper::fromQtColorSpace(surfaceformatInUse().colorSpace());
-    
+
     if (surfaceColorSpace == KisSurfaceColorSpaceWrapper::sRGBColorSpace) {
         // use the default one!
 #ifdef HAVE_HDR
     } else if (surfaceColorSpace == KisSurfaceColorSpaceWrapper::scRGBColorSpace) {
         profile = KoColorSpaceRegistry::instance()->p709G10Profile();
     } else if (surfaceColorSpace == KisSurfaceColorSpaceWrapper::bt2020PQColorSpace) {
-        profile = KoColorSpaceRegistry::instance()->p2020PQProfile();
+        // On Windows we use the legacy PQ profile, explicitly pinned to
+        // 80 nits. It is baked in the Qt's source code
+        KoColorProfileQuery query(PRIMARIES_ITU_R_BT_2020_2_AND_2100_0, TRC_ITU_R_BT_2100_0_PQ);
+        query.hdrReferenceWhite = 80.0;
+        profile = KoColorSpaceRegistry::instance()->profileFor(query);
 #endif
     }
 

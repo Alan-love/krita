@@ -225,8 +225,13 @@ QList<const KoColorProfile *> KoColorProfileStorage::profilesFor(const KoColorPr
             }
         }
 
-        if (query.hdrReferenceWhite && query.transfer == TRC_ITU_R_BT_2100_0_PQ) {
-            luminanceMatch = (profile->hdrReferenceWhite() && qFuzzyCompare(*profile->hdrReferenceWhite(), *query.hdrReferenceWhite));
+        if (query.transfer == TRC_ITU_R_BT_2100_0_PQ) {
+            // by default we expect HDR profiles to have HDR Reference White point
+            // to set to 203 nits
+            // TODO: should we spit a warning if the reference white is not set
+            //       for a pq space?
+            const qreal requestedHdrReferenceWhite = query.hdrReferenceWhite.value_or(203.0);
+            luminanceMatch = (profile->hdrReferenceWhite() && qFuzzyCompare(*profile->hdrReferenceWhite(), requestedHdrReferenceWhite));
         }
 
         if (transferMatch && colorantMatch && colorantTypeMatch && luminanceMatch) {

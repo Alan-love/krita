@@ -415,21 +415,57 @@ void TestProfileGeneration::testCICPwriting()
 
 void TestProfileGeneration::testRetrieveNits_data()
 {
-    QTest::addColumn<double>("expectedReferenceWhite");
-    QTest::addRow("rec2100PQ 80nits") << 80.0;
-    QTest::addRow("rec2100PQ 203nits") << 203.0;
+    QTest::addColumn<ColorPrimaries>("primaries");
+    QTest::addColumn<TransferCharacteristics>("transfer");
+    QTest::addColumn<qreal>("requestedReferenceWhite");
+    QTest::addColumn<qreal>("expectedReferenceWhite");
+
+    // SDR profiles should have no hdr reference white value
+    QTest::addRow("rec709-srgbtrc") << PRIMARIES_ITU_R_BT_709_5 << TRC_IEC_61966_2_1 << -1.0 << -1.0;
+
+    // Scene-linear profiles should also have **no** reference white value, since it
+    // is meaningless for them, their value of 1.0 is pinned to the reference white point
+    QTest::addRow("rec2020-g10") << PRIMARIES_ITU_R_BT_2020_2_AND_2100_0 << TRC_LINEAR << -1.0 << -1.0;
+    QTest::addRow("rec709-g10") << PRIMARIES_ITU_R_BT_709_5 << TRC_LINEAR << -1.0 << -1.0;
+
+    // HDR profiles should have one
+
+    QTest::addRow("rec2100 PQ default nits") << PRIMARIES_ITU_R_BT_2020_2_AND_2100_0 << TRC_ITU_R_BT_2100_0_PQ << -1.0 << 203.0;
+    QTest::addRow("rec2100 PQ 80 nits") << PRIMARIES_ITU_R_BT_2020_2_AND_2100_0 << TRC_ITU_R_BT_2100_0_PQ << 80.0 << 80.0;
+    QTest::addRow("rec2100 PQ 203 nits") << PRIMARIES_ITU_R_BT_2020_2_AND_2100_0 << TRC_ITU_R_BT_2100_0_PQ << 203.0 << 203.0;
+
+    // Display P3 profile is generated on the fly
+    QTest::addRow("display-p3 srgbtrc") << PRIMARIES_SMPTE_EG_432_1 << TRC_IEC_61966_2_1 << -1.0 << -1.0;
+
+    // Display P3 PQ is also generated on the fly and should not cause any deadlocks
+    // when connection linear profiles are added to the registry
+    QTest::addRow("display-p3 PQ default nits") << PRIMARIES_SMPTE_EG_432_1 << TRC_ITU_R_BT_2100_0_PQ << -1.0 << 203.0;
+    QTest::addRow("display-p3 PQ 80 nits") << PRIMARIES_SMPTE_EG_432_1 << TRC_ITU_R_BT_2100_0_PQ << 80.0 << 80.0;
+    QTest::addRow("display-p3 PQ 203 nits") << PRIMARIES_SMPTE_EG_432_1 << TRC_ITU_R_BT_2100_0_PQ << 203.0 << 203.0;
 }
 
 void TestProfileGeneration::testRetrieveNits()
 {
-    QFETCH(double, expectedReferenceWhite);
-    KoColorProfileQuery query(PRIMARIES_ITU_R_BT_2020_2_AND_2100_0, TRC_ITU_R_BT_2100_0_PQ);
-    query.hdrReferenceWhite = std::make_optional(expectedReferenceWhite);
-    const KoColorProfile *profile = KoColorSpaceRegistry::instance()->profileFor(query);
-
+    QFETCH(ColorPrimaries, primaries);
+    QFETCH(TransferCharacteristics, transfer);
+    QFETCH(qreal, requestedReferenceWhite);
+    QFETCH(qreal, expectedReferenceWhite);
+    KoColorProfileQuery query(primaries, transfer);
+    if (requestedReferenceWhite > 0) {
+        query.hdrReferenceWhite = requestedReferenceWhite;
+    }
+    const KoColorProfile *profile = KoColorSpaceRegistry::instance()->profileForInternal(query, true);
     QVERIFY(profile);
-    QVERIFY(profile->hdrReferenceWhite());
-    QVERIFY(qFuzzyCompare(*profile->hdrReferenceWhite(), expectedReferenceWhite));
+
+    QCOMPARE(profile->getColorPrimaries(), primaries);
+    QCOMPARE(profile->getTransferCharacteristics(), transfer);
+
+    if (expectedReferenceWhite > 0) {
+        QVERIFY(profile->hdrReferenceWhite().has_value());
+        QCOMPARE(*profile->hdrReferenceWhite(), expectedReferenceWhite);
+    } else {
+        QVERIFY(!profile->hdrReferenceWhite().has_value());
+    }
 }
 
 KISTEST_MAIN(TestProfileGeneration)

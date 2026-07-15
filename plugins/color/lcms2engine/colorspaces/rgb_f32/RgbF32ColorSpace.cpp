@@ -122,6 +122,14 @@ void RgbF32ColorSpace::modulateLightnessByGrayBrush(quint8 *dst, const QRgb *bru
     modulateLightnessByGrayBrushRGB<KoRgbF32Traits>(dst, brush, strength, nPixels);
 }
 
+QList<KoColorProfileQuery> RgbF32ColorSpaceFactory::requiredConnectionProfiles(const KoColorProfile *profile) const
+{
+    if (profile->getTransferCharacteristics() == TRC_ITU_R_BT_2100_0_PQ
+        && profile->getColorPrimaries() != PRIMARIES_UNSPECIFIED) {
+        return {KoColorProfileQuery(profile->getColorPrimaries(), TRC_LINEAR)};
+    }
+    return {};
+}
 
 QList<KoColorConversionTransformationFactory *> RgbF32ColorSpaceFactory::colorConversionLinksFromProfile(const KoColorProfile *profile) const
 {
@@ -130,9 +138,13 @@ QList<KoColorConversionTransformationFactory *> RgbF32ColorSpaceFactory::colorCo
 
         KoColorSpaceRegistry *registry = KoColorSpaceRegistry::instance();
         KoColorProfileQuery query(profile->getColorPrimaries(), TRC_LINEAR);
-        QString linear = registry->profileFor(query)->name();
 
-        LcmsRGBP2020PQColorSpaceFactoryWrapper<RgbF32ColorSpaceFactory> factory(profile->name(), linear);
+        /// we cannot generate a profile at this stage, it should have been generated
+        /// by the registry thanks to the call to requiredConnectionProfiles()
+        const KoColorProfile *connectionProfile = registry->profileFor(query, false);
+        KIS_SAFE_ASSERT_RECOVER_RETURN_VALUE(connectionProfile, QList<KoColorConversionTransformationFactory *>());
+
+        LcmsRGBP2020PQColorSpaceFactoryWrapper<RgbF32ColorSpaceFactory> factory(profile->name(), connectionProfile->name());
         return factory.colorConversionLinks();
     } else if (profile->name() == "High Dynamic Range UHDTV Wide Color Gamut Display (Rec. 2020) - SMPTE ST 2084 PQ EOTF") {
         KoColorSpaceRegistry *registry = KoColorSpaceRegistry::instance();

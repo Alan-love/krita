@@ -8,6 +8,7 @@
 #define _KO_COLOR_CONVERSION_SYSTEM_H_
 
 class KoColorProfile;
+class KoColorProfileQuery;
 class KoColorSpace;
 class KoColorSpaceFactory;
 class KoColorSpaceEngine;
@@ -53,13 +54,67 @@ public:
      */
     KoColorConversionSystem(RegistryInterface *registryInterface);
     ~KoColorConversionSystem();
-    /**
-     * This function is called by the KoColorSpaceRegistry to add a new color space
-     * to the graph of transformation.
-     */
-    void insertColorSpace(const KoColorSpaceFactory*);
 
-    void insertColorProfile(const KoColorProfile*);
+    /**
+     * Add a color space to a graph of transformation. The new node will be
+     * added for each known compatible profile.
+     *
+     * Make sure you call `requiredConnectionProfilesFor(csf)` and add all
+     * the required connection profiles into the registry **before** inserting
+     * the actual color space \p csf. Otherwise the created node will not be
+     * able to connect itself into the graph (due to a missing connection
+     * point).
+     *
+     * \see requiredConnectionProfilesFor()
+     */
+    void insertColorSpace(const KoColorSpaceFactory *csf);
+
+    /**
+     * Add a profile to the graph of transformation. The new node will be added
+     * for each known color space compatible with this profile.
+     *
+     * Make sure you call `requiredConnectionProfilesFor(profile)` and add all
+     * the required connection profiles into the registry **before** inserting
+     * the actual profile \p profile. Otherwise the created node will not be
+     * able to connect itself into the graph (due to a missing connection
+     * point).
+     *
+     * \see requiredConnectionProfilesFor()
+     */
+    void insertColorProfile(const KoColorProfile *profile);
+
+    /**
+     * \return a list of connection profiles required for this color space
+     *
+     * Some color space nodes may require custom profiles to be connected
+     * to the color conversion system. I.e. Display P3 PQ space will require
+     * a Display P3 Linear profile to connect itself to the color conversion
+     * system through.
+     *
+     * This function returns a list of such connection profiles.
+     *
+     * Connection profiles should be requested and added to the registry
+     * **before** adding the color space \p csf into the color conversion system
+     * with insertColorSpace(csf).
+     */
+    QList<KoColorProfileQuery> requiredConnectionProfilesFor(const KoColorSpaceFactory* csf);
+
+    /**
+     * \return a list of connection profiles required for this profile
+     *
+     * Some color space nodes may require custom profiles to be connected
+     * to the color conversion system. I.e. Display P3 PQ space will require
+     * a Display P3 Linear profile to connect itself to the color conversion
+     * system through.
+     *
+     * This function returns a list of such connection profiles.
+     *
+     * Connection profiles should be requested and added to the registry
+     * **before** adding the profile \p profile into the color conversion system
+     * with insertColorProfile(csf).
+     */
+    QList<KoColorProfileQuery> requiredConnectionProfilesFor(const KoColorProfile* profile);
+
     /**
      * This function is called by the color space to create a color conversion
      * between two color space. This function search in the graph of transformations

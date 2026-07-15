@@ -105,6 +105,7 @@ public:
         return "sRGB-elle-V2-srgbtrc.icc";
     }
 
+    QList<KoColorProfileQuery> requiredConnectionProfiles(const KoColorProfile *profile) const override;
     QList<KoColorConversionTransformationFactory*> colorConversionLinksFromProfile(const KoColorProfile *profile) const override;
 };
 

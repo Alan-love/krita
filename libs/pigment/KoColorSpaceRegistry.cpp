@@ -42,8 +42,6 @@ Q_GLOBAL_STATIC(KoColorSpaceRegistry, s_instance)
 
 struct Q_DECL_HIDDEN KoColorSpaceRegistry::Private {
 
-    // interface for KoColorSpaceFactory
-    struct ProfileRegistrationInterface;
     // interface for KoColorConversionSystem
     struct ConversionSystemInterface;
 
@@ -233,6 +231,19 @@ KoColorSpaceRegistry::~KoColorSpaceRegistry()
 
 void KoColorSpaceRegistry::add(KoColorSpaceFactory* item)
 {
+    {
+        QReadLocker l(&d->registrylock);
+        auto connectionProfileRequests = d->colorConversionSystem->requiredConnectionProfilesFor(item);
+
+        // the actual connection profiles should be added without any lock held
+        l.unlock();
+
+        for (auto it = connectionProfileRequests.begin(); it != connectionProfileRequests.end(); ++it) {
+            const KoColorProfile *profile = this->profileFor(*it, true); // auto-generate all the required profiles
+            KIS_SAFE_ASSERT_RECOVER_NOOP(profile);
+        }
+    }
+
     QWriteLocker l(&d->registrylock);
     d->colorSpaceFactoryRegistry.add(item);
     d->colorConversionSystem->insertColorSpace(item);
@@ -319,6 +330,20 @@ void KoColorSpaceRegistry::addProfileToMap(KoColorProfile *p)
 void KoColorSpaceRegistry::addProfile(KoColorProfile *p)
 {
     if (!p->valid()) return;
+
+    {
+        QReadLocker l(&d->registrylock);
+        auto connectionProfileRequests = d->colorConversionSystem->requiredConnectionProfilesFor(p);
+
+        // the actual connection profiles should be added without any lock held
+        l.unlock();
+
+        for (auto it = connectionProfileRequests.begin(); it != connectionProfileRequests.end(); ++it) {
+            const KoColorProfile *profile = this->profileFor(*it, true); // auto-generate all the required profiles
+            KIS_SAFE_ASSERT_RECOVER_NOOP(profile);
+        }
+
+    }
 
     QWriteLocker locker(&d->registrylock);
     if (p->valid()) {
@@ -702,6 +727,14 @@ const KoColorProfile *KoColorSpaceRegistry::p709SRGBProfile() const
 
 const KoColorProfile *KoColorSpaceRegistry::profileFor(const KoColorProfileQuery &query, const bool generate) const
 {
+    // We're currently disabling on-the-fly generation of PQ profiles, because it can cause
+    // some issues with inconsistent hdr-reference-white value, i.e. the user of this
+    // code may get nits value he/she didn't expect
+    return profileForInternal(query, generate && query.transfer != TRC_ITU_R_BT_2100_0_PQ);
+}
+
+const KoColorProfile *KoColorSpaceRegistry::profileForInternal(const KoColorProfileQuery &query, const bool generate) const
+{
     if (query.primaries == PRIMARIES_ITU_R_BT_709_5) {
         if (query.transfer == TRC_IEC_61966_2_1) {
             return p709SRGBProfile();
@@ -726,8 +759,8 @@ const KoColorProfile *KoColorSpaceRegistry::profileFor(const KoColorProfileQuery
     }
 
     KoColorSpaceEngine *engine = KoColorSpaceEngineRegistry::instance()->get("icc");
-    // We're disabling custom generation of PQ profiles for now.
-    if (engine && generate && !(query.hdrReferenceWhite && query.transfer == TRC_ITU_R_BT_2100_0_PQ)) {
+
+    if (engine && generate) {
         return engine->getProfile(query);
     }
 
@@ -967,22 +1000,6 @@ QList<KoID> KoColorSpaceRegistry::listKeys() const
     return answer;
 }
 
-struct KoColorSpaceRegistry::Private::ProfileRegistrationInterface : public KoColorSpaceFactory::ProfileRegistrationInterface
-{
-    ProfileRegistrationInterface(KoColorSpaceRegistry::Private *_d) : d(_d) {}
-
-    const KoColorProfile* profileByName(const QString &profileName) const override {
-        return d->profileStorage.profileByName(profileName);
-    }
-
-    void registerNewProfile(KoColorProfile *profile) override {
-        d->profileStorage.addProfile(profile);
-        d->colorConversionSystem->insertColorProfile(profile);
-    }
-
-    KoColorSpaceRegistry::Private *d {nullptr};
-};
-
 const KoColorProfile* KoColorSpaceRegistry::createColorProfile(const QString& colorModelId, const QString& colorDepthId, const QByteArray& rawData)
 {
     return createColorProfile(colorModelId, colorDepthId, rawData, {});
@@ -990,11 +1007,26 @@ const KoColorProfile* KoColorSpaceRegistry::createColorProfile(const QString& co
 
 const KoColorProfile* KoColorSpaceRegistry::createColorProfile(const QString & colorModelId, const QString & colorDepthId, const QByteArray& rawData, CustomProfileNameAlias customProfileNameAlias)
 {
-    QWriteLocker l(&d->registrylock);
-    KoColorSpaceFactory* factory_ = d->colorSpaceFactoryRegistry.get(d->colorSpaceIdImpl(colorModelId, colorDepthId));
+    QReadLocker l(&d->registrylock);
 
-    Private::ProfileRegistrationInterface interface(d);
-    return factory_->colorProfile(rawData, &interface, customProfileNameAlias);
+    KoColorSpaceFactory* factory_ = d->colorSpaceFactoryRegistry.get(d->colorSpaceIdImpl(colorModelId, colorDepthId));
+    std::unique_ptr<KoColorProfile> profile(factory_->createColorProfile(rawData));
+
+    l.unlock();
+
+    if (profile && profile->valid()) {
+        const QString effectiveProfileName = customProfileNameAlias.value(profile->name(), profile->name());
+        if (const KoColorProfile* existingProfile = profileByName(effectiveProfileName)) {
+            return existingProfile;
+        }
+
+        const KoColorProfile *constProfile = profile.get();
+        this->addProfile(profile.release());
+
+        return constProfile;
+    }
+
+    return nullptr;
 }
 
 QList<const KoColorSpace*> KoColorSpaceRegistry::allColorSpaces(ColorSpaceListVisibility visibility, ColorSpaceListProfilesSelection pSelection)

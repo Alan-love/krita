@@ -127,6 +127,11 @@ public:
      */
     const KoColorProfile *createColorProfile(const QString & colorModelId, const QString & colorDepthId, const QByteArray& rawData);
 
+    /**
+     * Create a color profile from a memory array, if possible, otherwise return 0.
+     * If there is an existing profile with the same name, it will be used instead,
+     * and the binary data from \p rawData will be ignored
+     */
     using CustomProfileNameAlias = QHash<QString, QString>;
     const KoColorProfile *createColorProfile(const QString & colorModelId, const QString & colorDepthId, const QByteArray& rawData, CustomProfileNameAlias customProfileNameAlias);
 
@@ -419,6 +424,7 @@ private:
     friend class TestKoColorSpaceSanity;
     friend class TestColorConversionSystem;
     friend struct FriendOfColorSpaceRegistry;
+    friend class TestProfileGeneration;
 
     /**
      * @return a list with an instance of all color space with their default profile.
@@ -433,6 +439,8 @@ private:
      *          use it anywhere other than unittests!
      */
     const KoColorConversionSystem* colorConversionSystem() const;
+
+    const KoColorProfile *profileForInternal(const KoColorProfileQuery &query, const bool generate) const;
 
 private:
     KoColorSpaceRegistry(const KoColorSpaceRegistry&);

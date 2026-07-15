@@ -13,6 +13,7 @@
 #include "KoColorConversionAlphaTransformation.h"
 #include "KoColorConversionTransformation.h"
 #include "KoColorProfile.h"
+#include "KoColorProfileQuery.h"
 #include "KoColorSpace.h"
 #include "KoCopyColorConversionTransformation.h"
 #include "KoMultipleColorConversionTransformation.h"
@@ -52,6 +53,26 @@ KoColorConversionSystem::Node* KoColorConversionSystem::insertEngine(const KoCol
     return n;
 }
 
+QList<KoColorProfileQuery> KoColorConversionSystem::requiredConnectionProfilesFor(const KoColorSpaceFactory* csf)
+{
+    QList<KoColorProfileQuery> profileQueries;
+
+    const QList<const KoColorProfile*> existingProfiles = d->registryInterface->profilesFor(csf);
+    Q_FOREACH (const KoColorProfile* profile, existingProfiles) {
+        profileQueries.append(csf->requiredConnectionProfiles(profile));
+    }
+
+    // TODO: make a better 'unique' function without sorting
+    QList<KoColorProfileQuery> uniqueProfileQueries;
+    std::copy_if(profileQueries.begin(),
+                 profileQueries.end(),
+                 std::back_inserter(uniqueProfileQueries),
+                 [&](const KoColorProfileQuery &query) {
+                     return !uniqueProfileQueries.contains(query);
+                 });
+
+    return uniqueProfileQueries;
+}
 
 void KoColorConversionSystem::insertColorSpace(const KoColorSpaceFactory* csf)
 {
@@ -113,6 +134,27 @@ void KoColorConversionSystem::insertColorSpace(const KoColorSpaceFactory* csf)
             v->setFactoryFromSrc(cctf);
         }
     }
+}
+
+QList<KoColorProfileQuery> KoColorConversionSystem::requiredConnectionProfilesFor(const KoColorProfile* profile)
+{
+    QList<KoColorProfileQuery> profileQueries;
+
+    const QList< const KoColorSpaceFactory* >& factories = d->registryInterface->colorSpacesFor(profile);
+    Q_FOREACH (const KoColorSpaceFactory* factory, factories) {
+        profileQueries.append(factory->requiredConnectionProfiles(profile));
+    }
+
+    // TODO: make a better 'unique' function without sorting
+    QList<KoColorProfileQuery> uniqueProfileQueries;
+    std::copy_if(profileQueries.begin(),
+                 profileQueries.end(),
+                 std::back_inserter(uniqueProfileQueries),
+                 [&](const KoColorProfileQuery &query) {
+                     return !uniqueProfileQueries.contains(query);
+                 });
+
+    return uniqueProfileQueries;
 }
 
 void KoColorConversionSystem::insertColorProfile(const KoColorProfile* _profile)

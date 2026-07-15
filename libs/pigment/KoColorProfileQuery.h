@@ -46,6 +46,19 @@ struct KoColorProfileQuery {
             && (primaries != PRIMARIES_UNSPECIFIED || !rgbColorants.isEmpty())
             && !(whitePoint == KoColorimetryUtils::xy());
     }
+
+    inline bool operator==(const KoColorProfileQuery &rhs) const {
+        return whitePoint == rhs.whitePoint
+            && rgbColorants == rhs.rgbColorants
+            && primaries == rhs.primaries
+            && transfer == rhs.transfer
+            && hdrReferenceWhite == rhs.hdrReferenceWhite;
+    }
+
+    inline bool operator!=(const KoColorProfileQuery &rhs) const {
+        return !(*this == rhs);
+    }
+
 };
 
 inline QDebug operator<<(QDebug debug, const KoColorProfileQuery &value) {

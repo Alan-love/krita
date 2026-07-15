@@ -13,6 +13,7 @@
 #include "kritapigment_export.h"
 
 class KoColorProfile;
+class KoColorProfileQuery;
 class KoColorConversionTransformationFactory;
 
 /**
@@ -98,22 +99,10 @@ public:
      */
     virtual QString defaultProfile() const = 0;
 
-    struct ProfileRegistrationInterface
-    {
-        virtual ~ProfileRegistrationInterface() {}
-        virtual const KoColorProfile* profileByName(const QString &profileName) const = 0;
-        virtual void registerNewProfile(KoColorProfile *profile) = 0;
-    };
-
     /**
      * Create a color profile from a memory array, if possible, otherwise return 0.
-     * If there is an existing profile with the same name, it will be used instead,
-     * and the binary data from \p rawData will be ignored
-     *
-     * This will call the descendant's createColorProfile()
      */
-    using CustomProfileNameAlias = QHash<QString, QString>;
-    const KoColorProfile* colorProfile(const QByteArray& rawData, ProfileRegistrationInterface *registrationInterface, const CustomProfileNameAlias &customProfileNameAlias) const;
+    virtual KoColorProfile* createColorProfile(const QByteArray& rawData) const = 0;
 
     /**
      * Create or reuse the existing colorspace for the given profile.
@@ -134,12 +123,13 @@ public:
         return QList<KoColorConversionTransformationFactory*>();
     }
 
+    virtual QList<KoColorProfileQuery> requiredConnectionProfiles(const KoColorProfile *profile) const;
+
 protected:
     /**
      * creates a color space using the given profile.
      */
     virtual KoColorSpace *createColorSpace(const KoColorProfile *) const = 0;
-    virtual KoColorProfile* createColorProfile(const QByteArray& rawData) const = 0;
 private:
     struct Private;
     Private* const d;

@@ -12,13 +12,13 @@
 #include <QMutexLocker>
 
 #include "KoColorProfile.h"
+#include "KoColorProfileQuery.h"
 #include "KoColorSpace.h"
 #include "KoColorSpaceRegistry.h"
 
 #include "kis_assert.h"
 
 struct Q_DECL_HIDDEN KoColorSpaceFactory::Private {
-    QList<KoColorProfile*> colorprofiles;
     QHash<QString, KoColorSpace* > availableColorspaces;
     QMutex mutex;
 #ifndef NDEBUG
@@ -45,26 +45,7 @@ KoColorSpaceFactory::~KoColorSpaceFactory()
         errorPigment << it.value();
     }
 #endif
-    Q_FOREACH (KoColorProfile* profile, d->colorprofiles) {
-        KoColorSpaceRegistry::instance()->removeProfile(profile);
-        delete profile;
-    }
     delete d;
-}
-
-const KoColorProfile *KoColorSpaceFactory::colorProfile(const QByteArray& rawData, ProfileRegistrationInterface *registrationInterface, const CustomProfileNameAlias &customProfileNameAlias) const
-{
-    KoColorProfile* colorProfile = createColorProfile(rawData);
-    if (colorProfile && colorProfile->valid()) {
-        const QString effectiveProfileName = customProfileNameAlias.value(colorProfile->name(), colorProfile->name());
-        if (const KoColorProfile* existingProfile = registrationInterface->profileByName(effectiveProfileName)) {
-            delete colorProfile;
-            return existingProfile;
-        }
-        registrationInterface->registerNewProfile(colorProfile);
-        d->colorprofiles.append(colorProfile);
-    }
-    return colorProfile;
 }
 
 const KoColorSpace *KoColorSpaceFactory::grabColorSpace(const KoColorProfile * profile)
@@ -88,3 +69,8 @@ const KoColorSpace *KoColorSpaceFactory::grabColorSpace(const KoColorProfile * p
     return cs;
 }
 
+QList<KoColorProfileQuery> KoColorSpaceFactory::requiredConnectionProfiles(const KoColorProfile *profile) const
+{
+    Q_UNUSED(profile)
+    return {};
+}

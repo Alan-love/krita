@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-15 00:42+0000\n"
+"POT-Creation-Date: 2026-07-16 00:41+0000\n"
 "PO-Revision-Date: 2010-12-26 09:39+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
@@ -36484,7 +36484,7 @@ msgctxt "(qtundo-format)"
 msgid "Import animation"
 msgstr "ਡੌਕੂਮੈਂਟ ਇੰਪੋਰਟ"
 
-#: libs/ui/kis_async_action_feedback.cpp:79
+#: libs/ui/kis_async_action_feedback.cpp:82
 #, kde-format
 msgctxt ""
 "progress dialog message when the user has to wait for the image to become "
@@ -38581,32 +38581,32 @@ msgid ""
 "location."
 msgstr ""
 
-#: libs/ui/KisImportExportManager.cpp:302
+#: libs/ui/KisImportExportManager.cpp:303
 #, fuzzy, kde-format
 #| msgid "Import Document"
 msgctxt "@title:window"
 msgid "Open Audio"
 msgstr "ਡੌਕੂਮੈਂਟ ਇੰਪੋਰਟ"
 
-#: libs/ui/KisImportExportManager.cpp:401
+#: libs/ui/KisImportExportManager.cpp:402
 #, fuzzy, kde-format
 #| msgid "Import Document"
 msgid "Opening document..."
 msgstr "ਡੌਕੂਮੈਂਟ ਇੰਪੋਰਟ"
 
-#: libs/ui/KisImportExportManager.cpp:469
+#: libs/ui/KisImportExportManager.cpp:470
 #, fuzzy, kde-format
 #| msgid "Document"
 msgid "Saving document..."
 msgstr "ਡੌਕੂਮੈਂਟ"
 
-#: libs/ui/KisImportExportManager.cpp:563
+#: libs/ui/KisImportExportManager.cpp:564
 #, kde-format
 msgctxt "image conversion warning"
 msgid "The image contains <b>assistants</b>. The assistants will not be saved."
 msgstr ""
 
-#: libs/ui/KisImportExportManager.cpp:566
+#: libs/ui/KisImportExportManager.cpp:567
 #, kde-format
 msgctxt "image conversion warning"
 msgid ""
@@ -38614,13 +38614,13 @@ msgid ""
 "saved."
 msgstr ""
 
-#: libs/ui/KisImportExportManager.cpp:569
+#: libs/ui/KisImportExportManager.cpp:570
 #, kde-format
 msgctxt "image conversion warning"
 msgid "The image contains <b>guides</b>. The guides will not be saved."
 msgstr ""
 
-#: libs/ui/KisImportExportManager.cpp:572
+#: libs/ui/KisImportExportManager.cpp:573
 #, kde-format
 msgctxt "image conversion warning"
 msgid ""
@@ -38628,7 +38628,7 @@ msgid ""
 "will not be saved."
 msgstr ""
 
-#: libs/ui/KisImportExportManager.cpp:590
+#: libs/ui/KisImportExportManager.cpp:591
 #, kde-format
 msgctxt "image conversion warning"
 msgid ""
@@ -38636,7 +38636,7 @@ msgid ""
 "layer</b>. The image will be <b>flattened</b> before resizing."
 msgstr ""
 
-#: libs/ui/KisImportExportManager.cpp:594
+#: libs/ui/KisImportExportManager.cpp:595
 #, kde-format
 msgctxt "image conversion warning"
 msgid ""
@@ -38644,7 +38644,7 @@ msgid ""
 "mask</b>. The image will be <b>flattened</b> before resizing."
 msgstr ""
 
-#: libs/ui/KisImportExportManager.cpp:605
+#: libs/ui/KisImportExportManager.cpp:606
 #, kde-format
 msgctxt "image conversion warning"
 msgid ""
@@ -38652,37 +38652,37 @@ msgid ""
 "style</b>. The image will be <b>flattened</b> before resizing."
 msgstr ""
 
-#: libs/ui/KisImportExportManager.cpp:612
+#: libs/ui/KisImportExportManager.cpp:613
 #, kde-format
 msgid "Error: cannot save this image as a %1."
 msgstr ""
 
-#: libs/ui/KisImportExportManager.cpp:613
-#: libs/ui/KisImportExportManager.cpp:656
+#: libs/ui/KisImportExportManager.cpp:614
+#: libs/ui/KisImportExportManager.cpp:657
 #, fuzzy, kde-format
 #| msgid "Change Connection"
 msgid "Reasons:"
 msgstr "ਕੁਨੈਕਸ਼ਨ ਬਦਲੋ"
 
-#: libs/ui/KisImportExportManager.cpp:621
+#: libs/ui/KisImportExportManager.cpp:622
 #, fuzzy, kde-format
 #| msgid "Change Connection"
 msgctxt "@title:window"
 msgid "Krita: Export Error"
 msgstr "ਕੁਨੈਕਸ਼ਨ ਬਦਲੋ"
 
-#: libs/ui/KisImportExportManager.cpp:638
+#: libs/ui/KisImportExportManager.cpp:639
 #, kde-format
 msgctxt "Keep the extra space at the end of the sentence, please"
 msgid "Warning: saving as a %1 will lose information from your image.    "
 msgstr ""
 
-#: libs/ui/KisImportExportManager.cpp:650
+#: libs/ui/KisImportExportManager.cpp:651
 #, kde-format
 msgid "You will lose information when saving this image as a %1."
 msgstr ""
 
-#: libs/ui/KisImportExportManager.cpp:653
+#: libs/ui/KisImportExportManager.cpp:654
 #, fuzzy, kde-format
 #| msgid "Slide %1"
 msgid "Reason:"
@@ -38691,7 +38691,7 @@ msgstr "%1 ਸਲਾਈਡ"
 #. i18n: ectx: attribute (title), widget (QWidget, textureOptionsTab)
 #. i18n: ectx: property (title), widget (QGroupBox, ckCCAutoUpdate)
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
-#: libs/ui/KisImportExportManager.cpp:671
+#: libs/ui/KisImportExportManager.cpp:672
 #: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:735
 #: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:942
 #: plugins/paintops/libpaintop/forms/wdgtexturechooser.ui:57
@@ -38700,13 +38700,13 @@ msgstr "%1 ਸਲਾਈਡ"
 msgid "Options"
 msgstr "%1 ਚੋਣਾਂ"
 
-#: libs/ui/KisImportExportManager.cpp:679
+#: libs/ui/KisImportExportManager.cpp:680
 #, fuzzy, kde-format
 #| msgid "Delete shapes"
 msgid "Resize"
 msgstr "ਸ਼ਕਲਾਂ ਹਟਾਓ"
 
-#: libs/ui/KisImportExportManager.cpp:685
+#: libs/ui/KisImportExportManager.cpp:686
 #, fuzzy, kde-format
 #| msgid ""
 #| "Could not import\n"

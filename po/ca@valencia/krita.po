@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-15 00:42+0000\n"
+"POT-Creation-Date: 2026-07-16 00:41+0000\n"
 "PO-Revision-Date: 2026-07-09 09:40+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -34386,7 +34386,7 @@ msgctxt "(qtundo-format)"
 msgid "Import animation"
 msgstr "Importa una animació"
 
-#: libs/ui/kis_async_action_feedback.cpp:79
+#: libs/ui/kis_async_action_feedback.cpp:82
 #, kde-format
 msgctxt ""
 "progress dialog message when the user has to wait for the image to become "
@@ -36298,29 +36298,29 @@ msgstr ""
 "Falta el component %1 a %2. Intenteu guardar-lo una altra vegada a una altra "
 "ubicació."
 
-#: libs/ui/KisImportExportManager.cpp:302
+#: libs/ui/KisImportExportManager.cpp:303
 #, kde-format
 msgctxt "@title:window"
 msgid "Open Audio"
 msgstr "Obri l'àudio"
 
-#: libs/ui/KisImportExportManager.cpp:401
+#: libs/ui/KisImportExportManager.cpp:402
 #, kde-format
 msgid "Opening document..."
 msgstr "Obrint un document…"
 
-#: libs/ui/KisImportExportManager.cpp:469
+#: libs/ui/KisImportExportManager.cpp:470
 #, kde-format
 msgid "Saving document..."
 msgstr "S'està guardant el document…"
 
-#: libs/ui/KisImportExportManager.cpp:563
+#: libs/ui/KisImportExportManager.cpp:564
 #, kde-format
 msgctxt "image conversion warning"
 msgid "The image contains <b>assistants</b>. The assistants will not be saved."
 msgstr "La imatge conté <b>assistents</b>. Els assistents no es guardaran."
 
-#: libs/ui/KisImportExportManager.cpp:566
+#: libs/ui/KisImportExportManager.cpp:567
 #, kde-format
 msgctxt "image conversion warning"
 msgid ""
@@ -36330,13 +36330,13 @@ msgstr ""
 "La imatge conté <b>imatges de referència</b>. Les imatges de referència no "
 "es guardaran."
 
-#: libs/ui/KisImportExportManager.cpp:569
+#: libs/ui/KisImportExportManager.cpp:570
 #, kde-format
 msgctxt "image conversion warning"
 msgid "The image contains <b>guides</b>. The guides will not be saved."
 msgstr "La imatge conté <b>guies</b>. Les guies no es guardaran."
 
-#: libs/ui/KisImportExportManager.cpp:572
+#: libs/ui/KisImportExportManager.cpp:573
 #, kde-format
 msgctxt "image conversion warning"
 msgid ""
@@ -36346,7 +36346,7 @@ msgstr ""
 "La imatge conté una <b>configuració de quadrícula personalitzada</b>. La "
 "configuració no es guardarà."
 
-#: libs/ui/KisImportExportManager.cpp:590
+#: libs/ui/KisImportExportManager.cpp:591
 #, kde-format
 msgctxt "image conversion warning"
 msgid ""
@@ -36357,7 +36357,7 @@ msgstr ""
 "una <b>capa de filtre</b>. La imatge s'<b>aplanarà</b> abans de "
 "redimensionar."
 
-#: libs/ui/KisImportExportManager.cpp:594
+#: libs/ui/KisImportExportManager.cpp:595
 #, kde-format
 msgctxt "image conversion warning"
 msgid ""
@@ -36368,7 +36368,7 @@ msgstr ""
 "una <b>màscara de filtre</b>. La imatge s'<b>aplanarà</b> abans de "
 "redimensionar."
 
-#: libs/ui/KisImportExportManager.cpp:605
+#: libs/ui/KisImportExportManager.cpp:606
 #, kde-format
 msgctxt "image conversion warning"
 msgid ""
@@ -36379,35 +36379,35 @@ msgstr ""
 "un <b>estil de la capa</b>. La imatge s'<b>aplanarà</b> abans de "
 "redimensionar."
 
-#: libs/ui/KisImportExportManager.cpp:612
+#: libs/ui/KisImportExportManager.cpp:613
 #, kde-format
 msgid "Error: cannot save this image as a %1."
 msgstr "S'ha produït un error: No es pot guardar esta imatge com a %1."
 
-#: libs/ui/KisImportExportManager.cpp:613
-#: libs/ui/KisImportExportManager.cpp:656
+#: libs/ui/KisImportExportManager.cpp:614
+#: libs/ui/KisImportExportManager.cpp:657
 #, kde-format
 msgid "Reasons:"
 msgstr "Motius:"
 
-#: libs/ui/KisImportExportManager.cpp:621
+#: libs/ui/KisImportExportManager.cpp:622
 #, kde-format
 msgctxt "@title:window"
 msgid "Krita: Export Error"
 msgstr "Krita: S'ha produït un error d'exportació"
 
-#: libs/ui/KisImportExportManager.cpp:638
+#: libs/ui/KisImportExportManager.cpp:639
 #, kde-format
 msgctxt "Keep the extra space at the end of the sentence, please"
 msgid "Warning: saving as a %1 will lose information from your image.    "
 msgstr "Avís: En guardar com un %1 es perdrà informació de la imatge."
 
-#: libs/ui/KisImportExportManager.cpp:650
+#: libs/ui/KisImportExportManager.cpp:651
 #, kde-format
 msgid "You will lose information when saving this image as a %1."
 msgstr "En guardar com a %1 es perdrà informació de la imatge."
 
-#: libs/ui/KisImportExportManager.cpp:653
+#: libs/ui/KisImportExportManager.cpp:654
 #, kde-format
 msgid "Reason:"
 msgstr "Motiu:"
@@ -36415,7 +36415,7 @@ msgstr "Motiu:"
 #. i18n: ectx: attribute (title), widget (QWidget, textureOptionsTab)
 #. i18n: ectx: property (title), widget (QGroupBox, ckCCAutoUpdate)
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
-#: libs/ui/KisImportExportManager.cpp:671
+#: libs/ui/KisImportExportManager.cpp:672
 #: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:735
 #: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:942
 #: plugins/paintops/libpaintop/forms/wdgtexturechooser.ui:57
@@ -36423,12 +36423,12 @@ msgstr "Motiu:"
 msgid "Options"
 msgstr "Opcions"
 
-#: libs/ui/KisImportExportManager.cpp:679
+#: libs/ui/KisImportExportManager.cpp:680
 #, kde-format
 msgid "Resize"
 msgstr "Redimensiona"
 
-#: libs/ui/KisImportExportManager.cpp:685
+#: libs/ui/KisImportExportManager.cpp:686
 #, kde-format
 msgid "Also save your image as a Krita file."
 msgstr "També guarda la imatge com un fitxer de Krita."

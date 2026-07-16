@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-15 00:42+0000\n"
-"PO-Revision-Date: 2026-07-01 18:01+0400\n"
+"POT-Creation-Date: 2026-07-16 00:41+0000\n"
+"PO-Revision-Date: 2026-07-15 19:42+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #. i18n: Display name of resource, see context: [path-to-resources]/[resource-type]/[resource-filename]
 #, kde-format
@@ -34042,7 +34042,7 @@ msgctxt "(qtundo-format)"
 msgid "Import animation"
 msgstr "استيراد الحركة"
 
-#: libs/ui/kis_async_action_feedback.cpp:79
+#: libs/ui/kis_async_action_feedback.cpp:82
 #, kde-format
 msgctxt ""
 "progress dialog message when the user has to wait for the image to become "
@@ -34879,11 +34879,9 @@ msgid "Crop to Selection"
 msgstr "اقتصّ إلى التّحديد"
 
 #: libs/ui/kis_selection_actions_panel.cpp:99
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "Configure selection actions bar"
+#, kde-format
 msgid "Toggle pin selection actions bar"
-msgstr "اضبط شريط إجراءات التحديد"
+msgstr "أظهر/أخفِ شريط إجراءات تحديد الدبوس"
 
 #: libs/ui/kis_selection_actions_panel.cpp:155
 #, kde-format
@@ -35941,29 +35939,29 @@ msgid ""
 "location."
 msgstr "المكوِّن %1 مفقود في %2. حاول الحفظ مرة أخرى في موقع مختلف، من فضلك."
 
-#: libs/ui/KisImportExportManager.cpp:302
+#: libs/ui/KisImportExportManager.cpp:303
 #, kde-format
 msgctxt "@title:window"
 msgid "Open Audio"
 msgstr "افتح صوتًا..."
 
-#: libs/ui/KisImportExportManager.cpp:401
+#: libs/ui/KisImportExportManager.cpp:402
 #, kde-format
 msgid "Opening document..."
 msgstr "يفتح المستند..."
 
-#: libs/ui/KisImportExportManager.cpp:469
+#: libs/ui/KisImportExportManager.cpp:470
 #, kde-format
 msgid "Saving document..."
 msgstr "يحفظ المستند..."
 
-#: libs/ui/KisImportExportManager.cpp:563
+#: libs/ui/KisImportExportManager.cpp:564
 #, kde-format
 msgctxt "image conversion warning"
 msgid "The image contains <b>assistants</b>. The assistants will not be saved."
 msgstr "تحتوي الصّورة على <b>مساعِدات</b>. لن تُحفظ هذه المساعِدات."
 
-#: libs/ui/KisImportExportManager.cpp:566
+#: libs/ui/KisImportExportManager.cpp:567
 #, kde-format
 msgctxt "image conversion warning"
 msgid ""
@@ -35971,13 +35969,13 @@ msgid ""
 "saved."
 msgstr "تحتوي الصورة على <b>صور مرجعية</b>. لن تُحفَظ الصور المرجعية."
 
-#: libs/ui/KisImportExportManager.cpp:569
+#: libs/ui/KisImportExportManager.cpp:570
 #, kde-format
 msgctxt "image conversion warning"
 msgid "The image contains <b>guides</b>. The guides will not be saved."
 msgstr "تحتوي الصّورة على <b>أدلّة</b>. لن تُحفظ الأدلّة."
 
-#: libs/ui/KisImportExportManager.cpp:572
+#: libs/ui/KisImportExportManager.cpp:573
 #, kde-format
 msgctxt "image conversion warning"
 msgid ""
@@ -35985,7 +35983,7 @@ msgid ""
 "will not be saved."
 msgstr "تحتوي الصّورة على <b>ضبط شبكة مخصّص</b>. لن يُحفظ هذا الضّبط."
 
-#: libs/ui/KisImportExportManager.cpp:590
+#: libs/ui/KisImportExportManager.cpp:591
 #, kde-format
 msgctxt "image conversion warning"
 msgid ""
@@ -35995,7 +35993,7 @@ msgstr ""
 "تحاول إجراء تصدير متقدم مع صورة تحتوي على <b>طبقة مرشح</b>. ستُسَطَّح الصورة "
 "<b></b> قبل تغيير حجمها."
 
-#: libs/ui/KisImportExportManager.cpp:594
+#: libs/ui/KisImportExportManager.cpp:595
 #, kde-format
 msgctxt "image conversion warning"
 msgid ""
@@ -36005,7 +36003,7 @@ msgstr ""
 "تحاول إجراء تصدير متقدم مع صورة تحتوي على <b>قناع مرشح</b>. ستُسَطَّح الصورة "
 "<b></b> قبل تغيير حجمها."
 
-#: libs/ui/KisImportExportManager.cpp:605
+#: libs/ui/KisImportExportManager.cpp:606
 #, kde-format
 msgctxt "image conversion warning"
 msgid ""
@@ -36015,35 +36013,35 @@ msgstr ""
 "تحاول إجراء تصدير متقدم مع صورة تحتوي على <b>نمط طبقة</b>. ستُسَطَّح الصورة <b></"
 "b> قبل تغيير حجمها."
 
-#: libs/ui/KisImportExportManager.cpp:612
+#: libs/ui/KisImportExportManager.cpp:613
 #, kde-format
 msgid "Error: cannot save this image as a %1."
 msgstr "خطأ: تعذّر حفظ هذه الصّورة كَ‍ %1."
 
-#: libs/ui/KisImportExportManager.cpp:613
-#: libs/ui/KisImportExportManager.cpp:656
+#: libs/ui/KisImportExportManager.cpp:614
+#: libs/ui/KisImportExportManager.cpp:657
 #, kde-format
 msgid "Reasons:"
 msgstr "الأسباب:"
 
-#: libs/ui/KisImportExportManager.cpp:621
+#: libs/ui/KisImportExportManager.cpp:622
 #, kde-format
 msgctxt "@title:window"
 msgid "Krita: Export Error"
 msgstr "كريتا: خطأ تصدير"
 
-#: libs/ui/KisImportExportManager.cpp:638
+#: libs/ui/KisImportExportManager.cpp:639
 #, kde-format
 msgctxt "Keep the extra space at the end of the sentence, please"
 msgid "Warning: saving as a %1 will lose information from your image.    "
 msgstr "تحذير: الحفظ كـ %1 سيفقد معلومات من صورتك.    "
 
-#: libs/ui/KisImportExportManager.cpp:650
+#: libs/ui/KisImportExportManager.cpp:651
 #, kde-format
 msgid "You will lose information when saving this image as a %1."
 msgstr "ستفقد المعلومات بحفظ الصّورة كَ‍ %1."
 
-#: libs/ui/KisImportExportManager.cpp:653
+#: libs/ui/KisImportExportManager.cpp:654
 #, kde-format
 msgid "Reason:"
 msgstr "السبب:"
@@ -36051,7 +36049,7 @@ msgstr "السبب:"
 #. i18n: ectx: attribute (title), widget (QWidget, textureOptionsTab)
 #. i18n: ectx: property (title), widget (QGroupBox, ckCCAutoUpdate)
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
-#: libs/ui/KisImportExportManager.cpp:671
+#: libs/ui/KisImportExportManager.cpp:672
 #: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:735
 #: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:942
 #: plugins/paintops/libpaintop/forms/wdgtexturechooser.ui:57
@@ -36059,12 +36057,12 @@ msgstr "السبب:"
 msgid "Options"
 msgstr "خيارات"
 
-#: libs/ui/KisImportExportManager.cpp:679
+#: libs/ui/KisImportExportManager.cpp:680
 #, kde-format
 msgid "Resize"
 msgstr "تغيير المقاس"
 
-#: libs/ui/KisImportExportManager.cpp:685
+#: libs/ui/KisImportExportManager.cpp:686
 #, kde-format
 msgid "Also save your image as a Krita file."
 msgstr "وأيضًا احفظ الصّورة كملفّ كريتا."

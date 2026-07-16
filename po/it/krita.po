@@ -20,7 +20,7 @@
 # Simone Solinas <ksolsim@gmail.com>, 2008, 2009, 2010, 2011.
 # Vincenzo Reale <smart2128vr@gmail.com>, 2011, 2012, 2013, 2014, 2015, 2022, 2023.
 # Luigi Toscano <luigi.toscano@tiscali.it>, 2015.
-# SPDX-FileCopyrightText: 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Valter Mura <valtermura@gmail.com>
+# SPDX-FileCopyrightText: 2015-2026 Valter Mura <valtermura@gmail.com>
 #
 # Per i motivi/sfumature, vedere il seguente collegamento:
 # http://craik.shef.ac.uk/cpt-city/ggr/
@@ -32,8 +32,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-15 00:42+0000\n"
-"PO-Revision-Date: 2026-06-30 11:54+0200\n"
+"POT-Creation-Date: 2026-07-16 00:41+0000\n"
+"PO-Revision-Date: 2026-07-15 20:13+0200\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -41,7 +41,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.3\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #. i18n: Display name of resource, see context: [path-to-resources]/[resource-type]/[resource-filename]
 #, kde-format
@@ -34379,7 +34379,7 @@ msgctxt "(qtundo-format)"
 msgid "Import animation"
 msgstr "Importa animazione"
 
-#: libs/ui/kis_async_action_feedback.cpp:79
+#: libs/ui/kis_async_action_feedback.cpp:82
 #, kde-format
 msgctxt ""
 "progress dialog message when the user has to wait for the image to become "
@@ -35207,11 +35207,9 @@ msgid "Crop to Selection"
 msgstr "Ritaglia alla selezione"
 
 #: libs/ui/kis_selection_actions_panel.cpp:99
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "Configure selection actions bar"
+#, kde-format
 msgid "Toggle pin selection actions bar"
-msgstr "Configura barra Azioni di selezione"
+msgstr "Attiva/disattiva barra delle azioni di selezione di fissaggio"
 
 #: libs/ui/kis_selection_actions_panel.cpp:155
 #, kde-format
@@ -36283,30 +36281,30 @@ msgstr ""
 "Il componente %1 non si trova in %2. Riprova a salvarlo in una posizione "
 "diversa."
 
-#: libs/ui/KisImportExportManager.cpp:302
+#: libs/ui/KisImportExportManager.cpp:303
 #, kde-format
 msgctxt "@title:window"
 msgid "Open Audio"
 msgstr "Apri audio"
 
-#: libs/ui/KisImportExportManager.cpp:401
+#: libs/ui/KisImportExportManager.cpp:402
 #, kde-format
 msgid "Opening document..."
 msgstr "Apertura del documento..."
 
-#: libs/ui/KisImportExportManager.cpp:469
+#: libs/ui/KisImportExportManager.cpp:470
 #, kde-format
 msgid "Saving document..."
 msgstr "Salvataggio del documento..."
 
-#: libs/ui/KisImportExportManager.cpp:563
+#: libs/ui/KisImportExportManager.cpp:564
 #, kde-format
 msgctxt "image conversion warning"
 msgid "The image contains <b>assistants</b>. The assistants will not be saved."
 msgstr ""
 "L'immagine contiene <b>assistenti</b>. Gli assistenti non saranno salvati."
 
-#: libs/ui/KisImportExportManager.cpp:566
+#: libs/ui/KisImportExportManager.cpp:567
 #, kde-format
 msgctxt "image conversion warning"
 msgid ""
@@ -36316,13 +36314,13 @@ msgstr ""
 "L'immagine contiene <b>immagini di riferimento</b>. Le immagini di "
 "riferimento non saranno salvate."
 
-#: libs/ui/KisImportExportManager.cpp:569
+#: libs/ui/KisImportExportManager.cpp:570
 #, kde-format
 msgctxt "image conversion warning"
 msgid "The image contains <b>guides</b>. The guides will not be saved."
 msgstr "L'immagine contiene <b>guide</b>. Le guide non saranno salvate."
 
-#: libs/ui/KisImportExportManager.cpp:572
+#: libs/ui/KisImportExportManager.cpp:573
 #, kde-format
 msgctxt "image conversion warning"
 msgid ""
@@ -36332,7 +36330,7 @@ msgstr ""
 "L'immagine contiene una <b>configurazione di griglia personalizzata</b>. La "
 "configurazione non sarà salvata."
 
-#: libs/ui/KisImportExportManager.cpp:590
+#: libs/ui/KisImportExportManager.cpp:591
 #, kde-format
 msgctxt "image conversion warning"
 msgid ""
@@ -36343,7 +36341,7 @@ msgstr ""
 "<b>livello filtro</b>. L'immagine sarà <b>appiattita</b> prima del suo "
 "ridimensionamento."
 
-#: libs/ui/KisImportExportManager.cpp:594
+#: libs/ui/KisImportExportManager.cpp:595
 #, kde-format
 msgctxt "image conversion warning"
 msgid ""
@@ -36354,7 +36352,7 @@ msgstr ""
 "una <b>maschera filtro</b>. L'immagine sarà <b>appiattita</b> prima del suo "
 "ridimensionamento."
 
-#: libs/ui/KisImportExportManager.cpp:605
+#: libs/ui/KisImportExportManager.cpp:606
 #, kde-format
 msgctxt "image conversion warning"
 msgid ""
@@ -36365,24 +36363,24 @@ msgstr ""
 "uno <b>stile di livello</b>. L'immagine sarà <b>appiattita</b> prima del suo "
 "ridimensionamento."
 
-#: libs/ui/KisImportExportManager.cpp:612
+#: libs/ui/KisImportExportManager.cpp:613
 #, kde-format
 msgid "Error: cannot save this image as a %1."
 msgstr "Errore: impossibile salvare questa immagine come %1."
 
-#: libs/ui/KisImportExportManager.cpp:613
-#: libs/ui/KisImportExportManager.cpp:656
+#: libs/ui/KisImportExportManager.cpp:614
+#: libs/ui/KisImportExportManager.cpp:657
 #, kde-format
 msgid "Reasons:"
 msgstr "Motivi:"
 
-#: libs/ui/KisImportExportManager.cpp:621
+#: libs/ui/KisImportExportManager.cpp:622
 #, kde-format
 msgctxt "@title:window"
 msgid "Krita: Export Error"
 msgstr "Krita: errore di esportazione"
 
-#: libs/ui/KisImportExportManager.cpp:638
+#: libs/ui/KisImportExportManager.cpp:639
 #, kde-format
 msgctxt "Keep the extra space at the end of the sentence, please"
 msgid "Warning: saving as a %1 will lose information from your image.    "
@@ -36390,12 +36388,12 @@ msgstr ""
 "Attenzione: il salvataggio come %1 farà perdere informazioni "
 "all'immagine.    "
 
-#: libs/ui/KisImportExportManager.cpp:650
+#: libs/ui/KisImportExportManager.cpp:651
 #, kde-format
 msgid "You will lose information when saving this image as a %1."
 msgstr "Perderai informazioni se salvi questa immagine come %1."
 
-#: libs/ui/KisImportExportManager.cpp:653
+#: libs/ui/KisImportExportManager.cpp:654
 #, kde-format
 msgid "Reason:"
 msgstr "Motivo:"
@@ -36403,7 +36401,7 @@ msgstr "Motivo:"
 #. i18n: ectx: attribute (title), widget (QWidget, textureOptionsTab)
 #. i18n: ectx: property (title), widget (QGroupBox, ckCCAutoUpdate)
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
-#: libs/ui/KisImportExportManager.cpp:671
+#: libs/ui/KisImportExportManager.cpp:672
 #: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:735
 #: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:942
 #: plugins/paintops/libpaintop/forms/wdgtexturechooser.ui:57
@@ -36411,12 +36409,12 @@ msgstr "Motivo:"
 msgid "Options"
 msgstr "Opzioni"
 
-#: libs/ui/KisImportExportManager.cpp:679
+#: libs/ui/KisImportExportManager.cpp:680
 #, kde-format
 msgid "Resize"
 msgstr "Ridimensiona"
 
-#: libs/ui/KisImportExportManager.cpp:685
+#: libs/ui/KisImportExportManager.cpp:686
 #, kde-format
 msgid "Also save your image as a Krita file."
 msgstr "Salva anche la tua immagine come file Krita."

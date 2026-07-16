@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-15 00:42+0000\n"
-"PO-Revision-Date: 2026-07-01 05:24+0200\n"
+"POT-Creation-Date: 2026-07-16 00:41+0000\n"
+"PO-Revision-Date: 2026-07-15 06:02+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -33918,7 +33918,7 @@ msgctxt "(qtundo-format)"
 msgid "Import animation"
 msgstr "ანიმაციის შემოტანა"
 
-#: libs/ui/kis_async_action_feedback.cpp:79
+#: libs/ui/kis_async_action_feedback.cpp:82
 #, kde-format
 msgctxt ""
 "progress dialog message when the user has to wait for the image to become "
@@ -34746,11 +34746,9 @@ msgid "Crop to Selection"
 msgstr "მონიშნულამდე ამოჭრა"
 
 #: libs/ui/kis_selection_actions_panel.cpp:99
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "Configure selection actions bar"
+#, kde-format
 msgid "Toggle pin selection actions bar"
-msgstr "მონიშვნის ქმედებების პანელის მორგება"
+msgstr "გადასართავი მონიშნულის ქმედებების პანელზე"
 
 #: libs/ui/kis_selection_actions_panel.cpp:155
 #, kde-format
@@ -35788,30 +35786,30 @@ msgid ""
 msgstr ""
 "კომპონენტი %1 %2-ში აღმოჩენილი არაა. სცადეთ ფაილი სხვა ადგილას შეინახოთ."
 
-#: libs/ui/KisImportExportManager.cpp:302
+#: libs/ui/KisImportExportManager.cpp:303
 #, kde-format
 msgctxt "@title:window"
 msgid "Open Audio"
 msgstr "აუდიოს გახსნა"
 
-#: libs/ui/KisImportExportManager.cpp:401
+#: libs/ui/KisImportExportManager.cpp:402
 #, kde-format
 msgid "Opening document..."
 msgstr "დოკუმენტის გახსნა..."
 
-#: libs/ui/KisImportExportManager.cpp:469
+#: libs/ui/KisImportExportManager.cpp:470
 #, kde-format
 msgid "Saving document..."
 msgstr "დოკუმენტის შენახვა..."
 
-#: libs/ui/KisImportExportManager.cpp:563
+#: libs/ui/KisImportExportManager.cpp:564
 #, kde-format
 msgctxt "image conversion warning"
 msgid "The image contains <b>assistants</b>. The assistants will not be saved."
 msgstr ""
 "გამოსახულება შეიცავს <b>დამხმარეებს</b>. დამხმარეების შენახვა არ ხდება."
 
-#: libs/ui/KisImportExportManager.cpp:566
+#: libs/ui/KisImportExportManager.cpp:567
 #, kde-format
 msgctxt "image conversion warning"
 msgid ""
@@ -35821,14 +35819,14 @@ msgstr ""
 "გამოსახულება შეიცავს <b>მიმართულ გამოსახულებებს</b>. მიმართული "
 "გამოსახულებების შენახვა არ ხდება."
 
-#: libs/ui/KisImportExportManager.cpp:569
+#: libs/ui/KisImportExportManager.cpp:570
 #, kde-format
 msgctxt "image conversion warning"
 msgid "The image contains <b>guides</b>. The guides will not be saved."
 msgstr ""
 "გამოსახულება შეიცავს <b>მიმმართველებს</b>. მიმმართველების შენახვა არ ხდება."
 
-#: libs/ui/KisImportExportManager.cpp:572
+#: libs/ui/KisImportExportManager.cpp:573
 #, kde-format
 msgctxt "image conversion warning"
 msgid ""
@@ -35838,7 +35836,7 @@ msgstr ""
 "გამოსახულება შეიცავს <b>ბადის მორგებულ კონფიგურაციას</b>. კონფიგურაციის "
 "შენახვა არ მხოდება."
 
-#: libs/ui/KisImportExportManager.cpp:590
+#: libs/ui/KisImportExportManager.cpp:591
 #, kde-format
 msgctxt "image conversion warning"
 msgid ""
@@ -35848,7 +35846,7 @@ msgstr ""
 "მცდელობა, მოხდეს დამატებითი გატანა გამოსახულებით, რომელიც <b>ფილტრის ფენას</"
 "b> შეიცავს. ზომის შეცვლამდე მოხდება გამოსახულების<b>გაბრტყელება</b>."
 
-#: libs/ui/KisImportExportManager.cpp:594
+#: libs/ui/KisImportExportManager.cpp:595
 #, kde-format
 msgctxt "image conversion warning"
 msgid ""
@@ -35858,7 +35856,7 @@ msgstr ""
 "მცდელობა, მოხდეს დამატებითი გატანა გამოსახულებით, რომელიც <b>ფილტრის ნიღაბს</"
 "b> შეიცავს. ზომის შეცვლამდე მოხდება გამოსახულების<b>გაბრტყელება</b>."
 
-#: libs/ui/KisImportExportManager.cpp:605
+#: libs/ui/KisImportExportManager.cpp:606
 #, kde-format
 msgctxt "image conversion warning"
 msgid ""
@@ -35868,35 +35866,35 @@ msgstr ""
 "მცდელობა, მოხდეს დამატებითი გატანა გამოსახულებით, რომელიც <b>ფენის სტილს</b> "
 "შეიცავს. ზომის შეცვლამდე მოხდება გამოსახულების<b>გაბრტყელება</b>."
 
-#: libs/ui/KisImportExportManager.cpp:612
+#: libs/ui/KisImportExportManager.cpp:613
 #, kde-format
 msgid "Error: cannot save this image as a %1."
 msgstr "შეცდომა: გამოსახულების %1-ით შენახვა შეუძლებელია."
 
-#: libs/ui/KisImportExportManager.cpp:613
-#: libs/ui/KisImportExportManager.cpp:656
+#: libs/ui/KisImportExportManager.cpp:614
+#: libs/ui/KisImportExportManager.cpp:657
 #, kde-format
 msgid "Reasons:"
 msgstr "მიზეზები:"
 
-#: libs/ui/KisImportExportManager.cpp:621
+#: libs/ui/KisImportExportManager.cpp:622
 #, kde-format
 msgctxt "@title:window"
 msgid "Krita: Export Error"
 msgstr "Krita: გატანის შეცდონა"
 
-#: libs/ui/KisImportExportManager.cpp:638
+#: libs/ui/KisImportExportManager.cpp:639
 #, kde-format
 msgctxt "Keep the extra space at the end of the sentence, please"
 msgid "Warning: saving as a %1 will lose information from your image.    "
 msgstr "გაფრთხილება: გამოსახულების %1-ში შენახვისას ინფორმაციას დაკარგავთ.    "
 
-#: libs/ui/KisImportExportManager.cpp:650
+#: libs/ui/KisImportExportManager.cpp:651
 #, kde-format
 msgid "You will lose information when saving this image as a %1."
 msgstr "გამოსახულების %1-ში შენახვისას ინფორმაციას დაკარგავთ."
 
-#: libs/ui/KisImportExportManager.cpp:653
+#: libs/ui/KisImportExportManager.cpp:654
 #, kde-format
 msgid "Reason:"
 msgstr "მიზეზი:"
@@ -35904,7 +35902,7 @@ msgstr "მიზეზი:"
 #. i18n: ectx: attribute (title), widget (QWidget, textureOptionsTab)
 #. i18n: ectx: property (title), widget (QGroupBox, ckCCAutoUpdate)
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
-#: libs/ui/KisImportExportManager.cpp:671
+#: libs/ui/KisImportExportManager.cpp:672
 #: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:735
 #: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:942
 #: plugins/paintops/libpaintop/forms/wdgtexturechooser.ui:57
@@ -35912,12 +35910,12 @@ msgstr "მიზეზი:"
 msgid "Options"
 msgstr "მორგება"
 
-#: libs/ui/KisImportExportManager.cpp:679
+#: libs/ui/KisImportExportManager.cpp:680
 #, kde-format
 msgid "Resize"
 msgstr "ზომის შეცვლა"
 
-#: libs/ui/KisImportExportManager.cpp:685
+#: libs/ui/KisImportExportManager.cpp:686
 #, kde-format
 msgid "Also save your image as a Krita file."
 msgstr "თქვენი გამოსახულების შენახვა ასევე Krita-ის ფაილში."

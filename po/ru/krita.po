@@ -82,8 +82,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-15 00:42+0000\n"
-"PO-Revision-Date: 2026-07-02 16:20+0300\n"
+"POT-Creation-Date: 2026-07-16 00:41+0000\n"
+"PO-Revision-Date: 2026-07-15 15:35+0300\n"
 "Last-Translator: Olesya Gerasimenko <goa@altlinux.org>\n"
 "Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
@@ -15683,7 +15683,7 @@ msgstr "Включить панель действий выделения"
 #, kde-format
 msgctxt "action"
 msgid "Configure selection actions bar"
-msgstr "Настроить секции"
+msgstr "Настроить панель действий выделения"
 
 #. i18n: context: text @ Actions (Filter), ActionCollection (Menu)
 #: krita/kritamenu.action:1634
@@ -34705,7 +34705,7 @@ msgstr ""
 "Импорт анимации\n"
 "импорт анимации"
 
-#: libs/ui/kis_async_action_feedback.cpp:79
+#: libs/ui/kis_async_action_feedback.cpp:82
 #, kde-format
 msgctxt ""
 "progress dialog message when the user has to wait for the image to become "
@@ -35612,16 +35612,14 @@ msgid "Crop to Selection"
 msgstr "Кадрировать до выделения"
 
 #: libs/ui/kis_selection_actions_panel.cpp:99
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "Configure selection actions bar"
+#, kde-format
 msgid "Toggle pin selection actions bar"
-msgstr "Настроить секции"
+msgstr "Включить или отключить закрепление панели действий выделения"
 
 #: libs/ui/kis_selection_actions_panel.cpp:155
 #, kde-format
 msgid "Disable selection actions bar"
-msgstr "Включить панель действий выделения"
+msgstr "Отключить панель действий выделения"
 
 #: libs/ui/kis_selection_manager.cc:638
 #, kde-format
@@ -36709,23 +36707,23 @@ msgid ""
 msgstr ""
 "Файл %1 повреждён и отсутствует в %2. Попробуйте сохранить в другой папке."
 
-#: libs/ui/KisImportExportManager.cpp:302
+#: libs/ui/KisImportExportManager.cpp:303
 #, kde-format
 msgctxt "@title:window"
 msgid "Open Audio"
 msgstr "Открытие аудио"
 
-#: libs/ui/KisImportExportManager.cpp:401
+#: libs/ui/KisImportExportManager.cpp:402
 #, kde-format
 msgid "Opening document..."
 msgstr "Открытие документа..."
 
-#: libs/ui/KisImportExportManager.cpp:469
+#: libs/ui/KisImportExportManager.cpp:470
 #, kde-format
 msgid "Saving document..."
 msgstr "Сохранение документа..."
 
-#: libs/ui/KisImportExportManager.cpp:563
+#: libs/ui/KisImportExportManager.cpp:564
 #, kde-format
 msgctxt "image conversion warning"
 msgid "The image contains <b>assistants</b>. The assistants will not be saved."
@@ -36733,7 +36731,7 @@ msgstr ""
 "Изображение содержит <b>вспомогательные линии</b>. Вспомогательные линии не "
 "будут сохранены."
 
-#: libs/ui/KisImportExportManager.cpp:566
+#: libs/ui/KisImportExportManager.cpp:567
 #, kde-format
 msgctxt "image conversion warning"
 msgid ""
@@ -36743,14 +36741,14 @@ msgstr ""
 "Изображение содержит <b>эталонные изображения</b>. Эталонные изображения не "
 "будут сохранены."
 
-#: libs/ui/KisImportExportManager.cpp:569
+#: libs/ui/KisImportExportManager.cpp:570
 #, kde-format
 msgctxt "image conversion warning"
 msgid "The image contains <b>guides</b>. The guides will not be saved."
 msgstr ""
 "Изображение содержит <b>направляющие</b>. Направляющие не будут сохранены."
 
-#: libs/ui/KisImportExportManager.cpp:572
+#: libs/ui/KisImportExportManager.cpp:573
 #, kde-format
 msgctxt "image conversion warning"
 msgid ""
@@ -36760,7 +36758,7 @@ msgstr ""
 "Изображение содержит <b>пользовательские параметры сетки</b>. Параметры не "
 "будут сохранены."
 
-#: libs/ui/KisImportExportManager.cpp:590
+#: libs/ui/KisImportExportManager.cpp:591
 #, kde-format
 msgctxt "image conversion warning"
 msgid ""
@@ -36770,7 +36768,7 @@ msgstr ""
 "Попытка выполнить дополнительный экспорт изображения, содержащего <b>слой "
 "фильтра</b>. Перед изменением размера изображение будет <b>сведено</b>."
 
-#: libs/ui/KisImportExportManager.cpp:594
+#: libs/ui/KisImportExportManager.cpp:595
 #, kde-format
 msgctxt "image conversion warning"
 msgid ""
@@ -36780,7 +36778,7 @@ msgstr ""
 "Попытка выполнить дополнительный экспорт изображения, содержащего <b>маску "
 "фильтра</b>. Перед изменением размера изображение будет <b>сведено</b>."
 
-#: libs/ui/KisImportExportManager.cpp:605
+#: libs/ui/KisImportExportManager.cpp:606
 #, kde-format
 msgctxt "image conversion warning"
 msgid ""
@@ -36790,37 +36788,37 @@ msgstr ""
 "Попытка выполнить дополнительный экспорт изображения, содержащего <b>стиль "
 "слоя</b>. Перед изменением размера изображение будет <b>сведено</b>."
 
-#: libs/ui/KisImportExportManager.cpp:612
+#: libs/ui/KisImportExportManager.cpp:613
 #, kde-format
 msgid "Error: cannot save this image as a %1."
 msgstr "Ошибка: не удалось сохранить это изображение как %1."
 
-#: libs/ui/KisImportExportManager.cpp:613
-#: libs/ui/KisImportExportManager.cpp:656
+#: libs/ui/KisImportExportManager.cpp:614
+#: libs/ui/KisImportExportManager.cpp:657
 #, kde-format
 msgid "Reasons:"
 msgstr "Причины:"
 
-#: libs/ui/KisImportExportManager.cpp:621
+#: libs/ui/KisImportExportManager.cpp:622
 #, kde-format
 msgctxt "@title:window"
 msgid "Krita: Export Error"
 msgstr "Ошибка экспорта Krita"
 
-#: libs/ui/KisImportExportManager.cpp:638
+#: libs/ui/KisImportExportManager.cpp:639
 #, kde-format
 msgctxt "Keep the extra space at the end of the sentence, please"
 msgid "Warning: saving as a %1 will lose information from your image.    "
 msgstr ""
 "Внимание: сохранение как %1 приведёт к потере части данных изображения.    "
 
-#: libs/ui/KisImportExportManager.cpp:650
+#: libs/ui/KisImportExportManager.cpp:651
 #, kde-format
 msgid "You will lose information when saving this image as a %1."
 msgstr ""
 "При сохранении этого изображения как %1 часть его данных будет потеряна."
 
-#: libs/ui/KisImportExportManager.cpp:653
+#: libs/ui/KisImportExportManager.cpp:654
 #, kde-format
 msgid "Reason:"
 msgstr "Причина:"
@@ -36828,7 +36826,7 @@ msgstr "Причина:"
 #. i18n: ectx: attribute (title), widget (QWidget, textureOptionsTab)
 #. i18n: ectx: property (title), widget (QGroupBox, ckCCAutoUpdate)
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
-#: libs/ui/KisImportExportManager.cpp:671
+#: libs/ui/KisImportExportManager.cpp:672
 #: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:735
 #: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:942
 #: plugins/paintops/libpaintop/forms/wdgtexturechooser.ui:57
@@ -36836,12 +36834,12 @@ msgstr "Причина:"
 msgid "Options"
 msgstr "Параметры"
 
-#: libs/ui/KisImportExportManager.cpp:679
+#: libs/ui/KisImportExportManager.cpp:680
 #, kde-format
 msgid "Resize"
 msgstr "Изменить размер"
 
-#: libs/ui/KisImportExportManager.cpp:685
+#: libs/ui/KisImportExportManager.cpp:686
 #, kde-format
 msgid "Also save your image as a Krita file."
 msgstr "Также сохранить изображение в файл Krita."

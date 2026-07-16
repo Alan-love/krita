@@ -57,8 +57,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KOffice 1.6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-15 00:42+0000\n"
-"PO-Revision-Date: 2026-07-06 17:27+0200\n"
+"POT-Creation-Date: 2026-07-16 00:41+0000\n"
+"PO-Revision-Date: 2026-07-15 08:16+0200\n"
 "Last-Translator: Benedek Péter <benedekppeter@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -34297,7 +34297,7 @@ msgctxt "(qtundo-format)"
 msgid "Import animation"
 msgstr "Animáció importálása"
 
-#: libs/ui/kis_async_action_feedback.cpp:79
+#: libs/ui/kis_async_action_feedback.cpp:82
 #, kde-format
 msgctxt ""
 "progress dialog message when the user has to wait for the image to become "
@@ -35126,11 +35126,9 @@ msgid "Crop to Selection"
 msgstr "Vágás a kijelölésre"
 
 #: libs/ui/kis_selection_actions_panel.cpp:99
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "Configure selection actions bar"
+#, kde-format
 msgid "Toggle pin selection actions bar"
-msgstr "Kijelölési műveletsáv konfigurálása"
+msgstr "Kijelölési műveletsáv ki/be"
 
 #: libs/ui/kis_selection_actions_panel.cpp:155
 #, kde-format
@@ -36203,29 +36201,29 @@ msgstr ""
 "A(z) %1 komponens hiányzik innen: %2. Próbálja meg újra menteni egy másik "
 "helyre."
 
-#: libs/ui/KisImportExportManager.cpp:302
+#: libs/ui/KisImportExportManager.cpp:303
 #, kde-format
 msgctxt "@title:window"
 msgid "Open Audio"
 msgstr "Hang megnyitása"
 
-#: libs/ui/KisImportExportManager.cpp:401
+#: libs/ui/KisImportExportManager.cpp:402
 #, kde-format
 msgid "Opening document..."
 msgstr "Dokumentum megnyitása..."
 
-#: libs/ui/KisImportExportManager.cpp:469
+#: libs/ui/KisImportExportManager.cpp:470
 #, kde-format
 msgid "Saving document..."
 msgstr "Dokumentum mentése..."
 
-#: libs/ui/KisImportExportManager.cpp:563
+#: libs/ui/KisImportExportManager.cpp:564
 #, kde-format
 msgctxt "image conversion warning"
 msgid "The image contains <b>assistants</b>. The assistants will not be saved."
 msgstr "A kép <b>rajzsegédeket</b> tartalmaz. A segédek nem lesznek mentve."
 
-#: libs/ui/KisImportExportManager.cpp:566
+#: libs/ui/KisImportExportManager.cpp:567
 #, kde-format
 msgctxt "image conversion warning"
 msgid ""
@@ -36235,14 +36233,14 @@ msgstr ""
 "A kép <b>referenciaképeket</b> tartalmaz. A referenciaképek nem lesznek "
 "mentve."
 
-#: libs/ui/KisImportExportManager.cpp:569
+#: libs/ui/KisImportExportManager.cpp:570
 #, kde-format
 msgctxt "image conversion warning"
 msgid "The image contains <b>guides</b>. The guides will not be saved."
 msgstr ""
 "A kép <b>segédvonalakat</b> tartalmaz. A segédvonalak nem lesznek mentve."
 
-#: libs/ui/KisImportExportManager.cpp:572
+#: libs/ui/KisImportExportManager.cpp:573
 #, kde-format
 msgctxt "image conversion warning"
 msgid ""
@@ -36252,7 +36250,7 @@ msgstr ""
 "A kép <b>egyéni rácsbeállításokat</b> tartalmaz. A beállítások nem lesznek "
 "mentve."
 
-#: libs/ui/KisImportExportManager.cpp:590
+#: libs/ui/KisImportExportManager.cpp:591
 #, kde-format
 msgctxt "image conversion warning"
 msgid ""
@@ -36262,7 +36260,7 @@ msgstr ""
 "Speciális exportálás kísérlete <b>szűrőréteget</b> tartalmazó képen. A kép "
 "<b>lapítva</b> lesz az átméretezés előtt."
 
-#: libs/ui/KisImportExportManager.cpp:594
+#: libs/ui/KisImportExportManager.cpp:595
 #, kde-format
 msgctxt "image conversion warning"
 msgid ""
@@ -36272,7 +36270,7 @@ msgstr ""
 "Speciális exportálás kísérlete <b>szűrőmaszkot</b> tartalmazó képen. A kép "
 "<b>lapítva</b> lesz az átméretezés előtt."
 
-#: libs/ui/KisImportExportManager.cpp:605
+#: libs/ui/KisImportExportManager.cpp:606
 #, kde-format
 msgctxt "image conversion warning"
 msgid ""
@@ -36282,35 +36280,35 @@ msgstr ""
 "Speciális exportálás kísérlete <b>rétegstílust</b> tartalmazó képen. A kép "
 "<b>lapítva</b> lesz az átméretezés előtt."
 
-#: libs/ui/KisImportExportManager.cpp:612
+#: libs/ui/KisImportExportManager.cpp:613
 #, kde-format
 msgid "Error: cannot save this image as a %1."
 msgstr "Hiba: ez a kép nem menthető %1 formátumban."
 
-#: libs/ui/KisImportExportManager.cpp:613
-#: libs/ui/KisImportExportManager.cpp:656
+#: libs/ui/KisImportExportManager.cpp:614
+#: libs/ui/KisImportExportManager.cpp:657
 #, kde-format
 msgid "Reasons:"
 msgstr "Oka:"
 
-#: libs/ui/KisImportExportManager.cpp:621
+#: libs/ui/KisImportExportManager.cpp:622
 #, kde-format
 msgctxt "@title:window"
 msgid "Krita: Export Error"
 msgstr "Krita: Exportálási hiba"
 
-#: libs/ui/KisImportExportManager.cpp:638
+#: libs/ui/KisImportExportManager.cpp:639
 #, kde-format
 msgctxt "Keep the extra space at the end of the sentence, please"
 msgid "Warning: saving as a %1 will lose information from your image.    "
 msgstr "Figyelem: a(z) %1 formátumba mentés információvesztéssel jár.    "
 
-#: libs/ui/KisImportExportManager.cpp:650
+#: libs/ui/KisImportExportManager.cpp:651
 #, kde-format
 msgid "You will lose information when saving this image as a %1."
 msgstr "Információt fog veszíteni, ha a képet %1 formátumba menti."
 
-#: libs/ui/KisImportExportManager.cpp:653
+#: libs/ui/KisImportExportManager.cpp:654
 #, kde-format
 msgid "Reason:"
 msgstr "Oka:"
@@ -36318,7 +36316,7 @@ msgstr "Oka:"
 #. i18n: ectx: attribute (title), widget (QWidget, textureOptionsTab)
 #. i18n: ectx: property (title), widget (QGroupBox, ckCCAutoUpdate)
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
-#: libs/ui/KisImportExportManager.cpp:671
+#: libs/ui/KisImportExportManager.cpp:672
 #: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:735
 #: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:942
 #: plugins/paintops/libpaintop/forms/wdgtexturechooser.ui:57
@@ -36326,12 +36324,12 @@ msgstr "Oka:"
 msgid "Options"
 msgstr "Beállítások"
 
-#: libs/ui/KisImportExportManager.cpp:679
+#: libs/ui/KisImportExportManager.cpp:680
 #, kde-format
 msgid "Resize"
 msgstr "Átméretezés"
 
-#: libs/ui/KisImportExportManager.cpp:685
+#: libs/ui/KisImportExportManager.cpp:686
 #, kde-format
 msgid "Also save your image as a Krita file."
 msgstr "Mentse a képet Krita fájlként is."
@@ -70284,122 +70282,3 @@ msgstr ""
 "Váltás a teljes tartomány és a részleges tartomány között.\n"
 "Teljes tartomány: [%1, %2]\n"
 "Részleges tartomány: [%3, %4]"
-
-#~ msgid "Selection Actions Bar"
-#~ msgstr "Kijelölési műveletek sáv"
-
-#~ msgctxt "Status for the export of the video record"
-#~ msgid "Starting FFmpeg..."
-#~ msgstr "FFmpeg indítása..."
-
-#~ msgid "Export failed. FFmpeg message:"
-#~ msgstr "Az exportálás sikertelen. FFmpeg üzenet:"
-
-#~ msgid "Export Path:"
-#~ msgstr "Exportálási útvonal:"
-
-#~ msgid "Page Size:"
-#~ msgstr "Oldalméret:"
-
-#~ msgid "Page Orientation:"
-#~ msgstr "Oldal tájolása:"
-
-#~ msgid "Board Layout:"
-#~ msgstr "Sztoribord elrendezése:"
-
-#~ msgid "SVG Template Path:"
-#~ msgstr "SVG sablon útvonala:"
-
-#~ msgctxt "@label:inlistbox"
-#~ msgid "Proportional"
-#~ msgstr "Arányos"
-
-#~ msgid "Selected button:"
-#~ msgstr "Kijelölt gomb:"
-
-#~ msgid "Add a workflow button"
-#~ msgstr "Munkafolyamat-gomb hozzáadása"
-
-#~ msgid "Move selected workflow button to the left"
-#~ msgstr "Kijelölt munkafolyamat-gomb mozgatása balra"
-
-#~ msgid "Move selected workflow button to the right"
-#~ msgstr "Kijelölt munkafolyamat-gomb mozgatása jobbra"
-
-#~ msgid "Delete selected workflow button"
-#~ msgstr "Kijelölt munkafolyamat-gomb törlése"
-
-#~ msgid "Select icon mode:"
-#~ msgstr "Ikonmód kiválasztása:"
-
-#~ msgid "Select a custom icon:"
-#~ msgstr "Egyéni ikon kiválasztása:"
-
-#~ msgid "Custom icon path"
-#~ msgstr "Egyéni ikon elérési útja"
-
-#~ msgid "Select the custom icon"
-#~ msgstr "Egyéni ikon kiválasztása"
-
-#~ msgid "Enter a Tooltip:"
-#~ msgstr "Buboréksúgó megadása:"
-
-#~ msgid "Tooltip text"
-#~ msgstr "Buboréksúgó szövege"
-
-#~ msgid "Select a tool:"
-#~ msgstr "Eszköz kiválasztása:"
-
-#~ msgid "Select a brush preset:"
-#~ msgstr "Ecsetkészlet kiválasztása:"
-
-#~ msgid "Brush preset name"
-#~ msgstr "Ecsetkészlet neve"
-
-#~ msgid "Select the brush preset"
-#~ msgstr "Ecsetkészlet kiválasztása"
-
-#~ msgid "Select foreground color:"
-#~ msgstr "Előtérszín kiválasztása:"
-
-#~ msgid "Load current foreground color"
-#~ msgstr "Aktuális előtérszín betöltése"
-
-#~ msgid "Clear foreground color"
-#~ msgstr "Előtérszín törlése"
-
-#~ msgid "Color model ; depth ; profile ; components"
-#~ msgstr "Színmodell ; színmélység ; profil ; összetevők"
-
-#~ msgid "Select background color:"
-#~ msgstr "Háttérszín kiválasztása:"
-
-#~ msgid "Load current background color"
-#~ msgstr "Aktuális háttérszín betöltése"
-
-#~ msgid "Clear background color"
-#~ msgstr "Háttérszín törlése"
-
-#~ msgid "Select a script file:"
-#~ msgstr "Szkriptfájl kiválasztása:"
-
-#~ msgid "Script path"
-#~ msgstr "Szkript elérési útja"
-
-#~ msgid "Buttons size:"
-#~ msgstr "Gombok mérete:"
-
-#~ msgid "Settings button position:"
-#~ msgstr "Beállítások gomb pozíciója:"
-
-#~ msgid "Bottom bar"
-#~ msgstr "Alsó sáv"
-
-#~ msgid "Inline"
-#~ msgstr "Soron belüli"
-
-#~ msgid "Color info: "
-#~ msgstr "Színinformáció: "
-
-#~ msgid "Open workflow buttons settings dialog"
-#~ msgstr "Munkafolyamat-gombok beállítási ablakának megnyitása"

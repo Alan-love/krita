@@ -97,7 +97,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-15 00:42+0000\n"
+"POT-Creation-Date: 2026-07-16 00:41+0000\n"
 "PO-Revision-Date: 2012-11-26 15:40+0200\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -35042,7 +35042,7 @@ msgctxt "(qtundo-format)"
 msgid "Import animation"
 msgstr "Σύνθεση"
 
-#: libs/ui/kis_async_action_feedback.cpp:79
+#: libs/ui/kis_async_action_feedback.cpp:82
 #, fuzzy, kde-format
 #| msgid "Fetching the title: 0% complete"
 msgctxt ""
@@ -36939,23 +36939,23 @@ msgid ""
 "location."
 msgstr ""
 
-#: libs/ui/KisImportExportManager.cpp:302
+#: libs/ui/KisImportExportManager.cpp:303
 #, fuzzy, kde-format
 msgctxt "@title:window"
 msgid "Open Audio"
 msgstr "Άνοιγμα και επεξεργασία..."
 
-#: libs/ui/KisImportExportManager.cpp:401
+#: libs/ui/KisImportExportManager.cpp:402
 #, fuzzy, kde-format
 msgid "Opening document..."
 msgstr "Άνοιγμα σε νέα έγγραφα"
 
-#: libs/ui/KisImportExportManager.cpp:469
+#: libs/ui/KisImportExportManager.cpp:470
 #, fuzzy, kde-format
 msgid "Saving document..."
 msgstr "Αποθήκευση εγγράφου"
 
-#: libs/ui/KisImportExportManager.cpp:563
+#: libs/ui/KisImportExportManager.cpp:564
 #, fuzzy, kde-format
 msgctxt "image conversion warning"
 msgid "The image contains <b>assistants</b>. The assistants will not be saved."
@@ -36963,7 +36963,7 @@ msgstr ""
 "Η εικόνα αυτή περιέχει διανυσματικά, κλωνοποιημένα ή παραγόμενα στρώματα..\n"
 "Τα στρώματα αυτά θα αποθηκευτούν ως στρώματα χρωματικής περίπλεξης."
 
-#: libs/ui/KisImportExportManager.cpp:566
+#: libs/ui/KisImportExportManager.cpp:567
 #, fuzzy, kde-format
 msgctxt "image conversion warning"
 msgid ""
@@ -36973,7 +36973,7 @@ msgstr ""
 "Η εικόνα αυτή περιέχει διανυσματικά, κλωνοποιημένα ή παραγόμενα στρώματα..\n"
 "Τα στρώματα αυτά θα αποθηκευτούν ως στρώματα χρωματικής περίπλεξης."
 
-#: libs/ui/KisImportExportManager.cpp:569
+#: libs/ui/KisImportExportManager.cpp:570
 #, fuzzy, kde-format
 msgctxt "image conversion warning"
 msgid "The image contains <b>guides</b>. The guides will not be saved."
@@ -36981,7 +36981,7 @@ msgstr ""
 "Η εικόνα αυτή περιέχει διανυσματικά, κλωνοποιημένα ή παραγόμενα στρώματα..\n"
 "Τα στρώματα αυτά θα αποθηκευτούν ως στρώματα χρωματικής περίπλεξης."
 
-#: libs/ui/KisImportExportManager.cpp:572
+#: libs/ui/KisImportExportManager.cpp:573
 #, fuzzy, kde-format
 msgctxt "image conversion warning"
 msgid ""
@@ -36991,7 +36991,7 @@ msgstr ""
 "Η εικόνα αυτή περιέχει διανυσματικά, κλωνοποιημένα ή παραγόμενα στρώματα..\n"
 "Τα στρώματα αυτά θα αποθηκευτούν ως στρώματα χρωματικής περίπλεξης."
 
-#: libs/ui/KisImportExportManager.cpp:590
+#: libs/ui/KisImportExportManager.cpp:591
 #, kde-format
 msgctxt "image conversion warning"
 msgid ""
@@ -36999,7 +36999,7 @@ msgid ""
 "layer</b>. The image will be <b>flattened</b> before resizing."
 msgstr ""
 
-#: libs/ui/KisImportExportManager.cpp:594
+#: libs/ui/KisImportExportManager.cpp:595
 #, kde-format
 msgctxt "image conversion warning"
 msgid ""
@@ -37007,7 +37007,7 @@ msgid ""
 "mask</b>. The image will be <b>flattened</b> before resizing."
 msgstr ""
 
-#: libs/ui/KisImportExportManager.cpp:605
+#: libs/ui/KisImportExportManager.cpp:606
 #, kde-format
 msgctxt "image conversion warning"
 msgid ""
@@ -37015,38 +37015,38 @@ msgid ""
 "style</b>. The image will be <b>flattened</b> before resizing."
 msgstr ""
 
-#: libs/ui/KisImportExportManager.cpp:612
+#: libs/ui/KisImportExportManager.cpp:613
 #, fuzzy, kde-format
 #| msgid "Cannot export images in %1.\n"
 msgid "Error: cannot save this image as a %1."
 msgstr "Αδυναμία εξαγωγής εικόνων στο %1.\n"
 
-#: libs/ui/KisImportExportManager.cpp:613
-#: libs/ui/KisImportExportManager.cpp:656
+#: libs/ui/KisImportExportManager.cpp:614
+#: libs/ui/KisImportExportManager.cpp:657
 #, fuzzy, kde-format
 #| msgid "Dimensions"
 msgid "Reasons:"
 msgstr "Διαστάσεις"
 
-#: libs/ui/KisImportExportManager.cpp:621
+#: libs/ui/KisImportExportManager.cpp:622
 #, fuzzy, kde-format
 msgctxt "@title:window"
 msgid "Krita: Export Error"
 msgstr "Κατακόρυφο περίγραμμα"
 
-#: libs/ui/KisImportExportManager.cpp:638
+#: libs/ui/KisImportExportManager.cpp:639
 #, kde-format
 msgctxt "Keep the extra space at the end of the sentence, please"
 msgid "Warning: saving as a %1 will lose information from your image.    "
 msgstr ""
 
-#: libs/ui/KisImportExportManager.cpp:650
+#: libs/ui/KisImportExportManager.cpp:651
 #, fuzzy, kde-format
 #| msgid "Cannot export images in %1.\n"
 msgid "You will lose information when saving this image as a %1."
 msgstr "Αδυναμία εξαγωγής εικόνων στο %1.\n"
 
-#: libs/ui/KisImportExportManager.cpp:653
+#: libs/ui/KisImportExportManager.cpp:654
 #, fuzzy, kde-format
 #| msgid "Ruler assistant"
 msgid "Reason:"
@@ -37055,7 +37055,7 @@ msgstr "Βοηθός κανόνα"
 #. i18n: ectx: attribute (title), widget (QWidget, textureOptionsTab)
 #. i18n: ectx: property (title), widget (QGroupBox, ckCCAutoUpdate)
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
-#: libs/ui/KisImportExportManager.cpp:671
+#: libs/ui/KisImportExportManager.cpp:672
 #: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:735
 #: plugins/dockers/widegamutcolorselector/WdgWGSelectorSettings.ui:942
 #: plugins/paintops/libpaintop/forms/wdgtexturechooser.ui:57
@@ -37063,14 +37063,14 @@ msgstr "Βοηθός κανόνα"
 msgid "Options"
 msgstr "Επιλογές"
 
-#: libs/ui/KisImportExportManager.cpp:679
+#: libs/ui/KisImportExportManager.cpp:680
 #, fuzzy, kde-format
 #| msgctxt "(qtundo-format)"
 #| msgid "Resize"
 msgid "Resize"
 msgstr "Αλλαγή μεγέθους"
 
-#: libs/ui/KisImportExportManager.cpp:685
+#: libs/ui/KisImportExportManager.cpp:686
 #, fuzzy, kde-format
 msgid "Also save your image as a Krita file."
 msgstr "Αδυναμία προσθήκης του στρώματος στην εικόνα."

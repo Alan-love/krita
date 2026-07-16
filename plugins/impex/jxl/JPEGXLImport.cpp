@@ -874,7 +874,9 @@ JPEGXLImport::convert(KisDocument *document, QIODevice *io, KisPropertiesConfigu
                         break;
                     }
                     dbgFile << "\tlayer name:" << QString(layerNameRaw);
-                    layerName = QString(layerNameRaw);
+
+                    // do **not** include the null-termination char into the final layer name
+                    layerName = QString::fromUtf8(layerNameRaw.data(), d.m_header.name_length);
                 } else {
                     layerName = QString("Layer");
                 }

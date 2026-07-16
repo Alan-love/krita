@@ -8,7 +8,7 @@
 #define _KO_COLOR_CONVERSION_SYSTEM_H_
 
 class KoColorProfile;
-class KoColorProfileQuery;
+struct KoColorProfileQuery;
 class KoColorSpace;
 class KoColorSpaceFactory;
 class KoColorSpaceEngine;

@@ -13,7 +13,7 @@
 #include "kritapigment_export.h"
 
 class KoColorProfile;
-class KoColorProfileQuery;
+struct KoColorProfileQuery;
 class KoColorConversionTransformationFactory;
 
 /**

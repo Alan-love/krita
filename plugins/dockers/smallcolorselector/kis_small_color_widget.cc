@@ -54,7 +54,7 @@ struct KisSmallColorWidget::Private {
     int huePreferredHeight = 32;
     KisSliderSpinBox *dynamicRange = 0;
     qreal currentRelativeDynamicRange = 1.0;
-    qreal currenReferenceWhite = 80.0;
+    qreal currenOutputReferenceWhite = 80.0;
     KisDisplayColorConverter *displayColorConverter = KisDisplayColorConverter::dumbConverterInstance();
     KisSignalAutoConnectionsStore colorConverterConnections;
     bool hasHDR = false;
@@ -183,7 +183,7 @@ KisSmallColorWidget::KisSmallColorWidget(QWidget* parent)
         d->dynamicRange->setSingleStep(1);
         d->dynamicRange->setPageStep(100);
         d->dynamicRange->setSuffix("cd/m²");
-        d->dynamicRange->setValue(d->currenReferenceWhite * d->currentRelativeDynamicRange);
+        d->dynamicRange->setValue(d->currenOutputReferenceWhite * d->currentRelativeDynamicRange);
         connect(d->dynamicRange, SIGNAL(valueChanged(int)), SLOT(slotInitiateUpdateDynamicRange(int)));
     }
 
@@ -269,7 +269,7 @@ void KisSmallColorWidget::setColor(const KoColor &color)
         if (rangeCoeff < r || rangeCoeff < g || rangeCoeff < b) {
             rangeCoeff = std::max({r, g, b}) * 1.10f;
 
-            const int newMaxLuminance = qRound(d->currenReferenceWhite * rangeCoeff);
+            const int newMaxLuminance = qRound(d->currenOutputReferenceWhite * rangeCoeff);
             updateDynamicRange(newMaxLuminance);
             d->dynamicRange->setValue(newMaxLuminance);
         }
@@ -434,7 +434,7 @@ void KisSmallColorWidget::slotInitiateUpdateDynamicRange(int maxLuminance)
 void KisSmallColorWidget::updateDynamicRange(int maxLuminance)
 {
     const qreal oldRange = d->currentRelativeDynamicRange;
-    const qreal newRange = qreal(maxLuminance) / d->currenReferenceWhite;
+    const qreal newRange = qreal(maxLuminance) / d->currenOutputReferenceWhite;
 
     if (qFuzzyCompare(oldRange, newRange)) return;
 
@@ -493,7 +493,13 @@ void KisSmallColorWidget::slotDisplayConfigurationChanged()
                  cs->profile()->getTransferCharacteristics() == TRC_ITU_R_BT_2100_0_PQ);
 
         if (d->hasHDR) {
-            d->currenReferenceWhite = cs->profile()->hdrReferenceWhite().value_or(80.0);
+            const KoColorSpace *outputColorSpace = d->outputColorSpace();
+            if (!outputColorSpace->profile()->hdrReferenceWhite()) {
+                qWarning() << "WARNING: KisSmallColorWidget::slotDisplayConfigurationChanged(): output color space is "
+                              "not a PQ space, the meaning of the range slider may be wrong!";
+            }
+
+            d->currenOutputReferenceWhite = outputColorSpace->profile()->hdrReferenceWhite().value_or(80.0);
         }
     }
 

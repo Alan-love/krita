@@ -516,14 +516,16 @@ void TestColorConversionSystem::testRec2020PQConnectionPaths()
     QFETCH(std::vector<NodeKey>, expectedPath);
 
     auto loadExternalProfile = [](const QString &profileName, const QString &profileFileName) {
-        if (!KoColorSpaceRegistry::instance()->profileByName(profileName)) {
+        const KoColorProfile *profile = KoColorSpaceRegistry::instance()->profileByName(profileName);
+        if (!profile || profile->name() != profileName) {
             const QString profileFilePath = TestUtil::fetchDataFileLazy(profileFileName);
             KIS_ASSERT(QFile::exists(profileFilePath));
 
             {
                 KoColorSpaceEngine *iccEngine = KoColorSpaceEngineRegistry::instance()->get("icc");
                 KIS_ASSERT(iccEngine);
-                (void)iccEngine->addProfile(profileFilePath);
+                const KoColorProfile *profile = iccEngine->addProfile(profileFilePath);
+                KIS_ASSERT(profile);
             }
         }
     };

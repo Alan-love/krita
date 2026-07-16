@@ -17,9 +17,12 @@
  * a KoColorProfile for either search or generation.
  */
 struct KoColorProfileQuery {
-    KoColorProfileQuery(ColorPrimaries primaries = PRIMARIES_UNSPECIFIED, TransferCharacteristics transfer = TRC_UNSPECIFIED)
+    KoColorProfileQuery(ColorPrimaries primaries = PRIMARIES_UNSPECIFIED,
+                        TransferCharacteristics transfer = TRC_UNSPECIFIED,
+                        std::optional<qreal> hdrReferenceWhite = std::nullopt)
         : primaries(primaries)
         , transfer(transfer)
+        , hdrReferenceWhite(hdrReferenceWhite)
     {}
 
     KoColorProfileQuery(const KoColorProfileQuery &rhs) = default;

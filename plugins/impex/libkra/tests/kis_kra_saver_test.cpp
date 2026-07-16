@@ -579,19 +579,29 @@ void KisKraSaverTest::testRoundTripCicp_data()
 {
     QTest::addColumn<ColorPrimaries>("primaries");
     QTest::addColumn<TransferCharacteristics>("transfer");
+    QTest::addColumn<qreal>("hdrReferenceWhite");
 
-    QTest::addRow("rec2020") << PRIMARIES_ITU_R_BT_2020_2_AND_2100_0 << TRC_ITU_R_BT_2020_2_12bit;
-    QTest::addRow("rec2100 PQ") << PRIMARIES_ITU_R_BT_2020_2_AND_2100_0 << TRC_ITU_R_BT_2100_0_PQ;
-    QTest::addRow("rec709") << PRIMARIES_ITU_R_BT_709_5 << TRC_ITU_R_BT_709_5;
+    QTest::addRow("rec2020") << PRIMARIES_ITU_R_BT_2020_2_AND_2100_0 << TRC_ITU_R_BT_2020_2_12bit << -1.0;
+    QTest::addRow("rec2100 PQ 80 nits") << PRIMARIES_ITU_R_BT_2020_2_AND_2100_0 << TRC_ITU_R_BT_2100_0_PQ << 80.0;
+    QTest::addRow("rec2100 PQ 203 nits") << PRIMARIES_ITU_R_BT_2020_2_AND_2100_0 << TRC_ITU_R_BT_2100_0_PQ << 203.0;
+    QTest::addRow("rec709") << PRIMARIES_ITU_R_BT_709_5 << TRC_ITU_R_BT_709_5 << -1.0;
 }
 
 void KisKraSaverTest::testRoundTripCicp()
 {
     QFETCH(ColorPrimaries, primaries);
     QFETCH(TransferCharacteristics, transfer);
+    QFETCH(qreal, hdrReferenceWhite);
     QVector<double> colorants;
 
-    const KoColorProfile *profile = KoColorSpaceRegistry::instance()->profileFor(KoColorProfileQuery(primaries, transfer));
+    std::optional<qreal> hdrReferenceWhiteOpt;
+    if (hdrReferenceWhite > 0) {
+        hdrReferenceWhiteOpt = hdrReferenceWhite;
+    }
+
+    const KoColorProfile *profile =
+        KoColorSpaceRegistry::instance()->profileFor(KoColorProfileQuery(primaries, transfer, hdrReferenceWhiteOpt));
+    QVERIFY(profile);
 
     QRect imageRect(0,0,512,512);
     const KoColorSpace * cs = KoColorSpaceRegistry::instance()->colorSpace(RGBAColorModelID.id(), Integer8BitsColorDepthID.id(), profile);
@@ -606,8 +616,17 @@ void KisKraSaverTest::testRoundTripCicp()
     bool result = doc2->loadNativeFormat(name);
     QVERIFY(result);
     doc2->image()->waitForDone();
-    QVERIFY(doc2->image()->colorSpace()->profile()->getColorPrimaries() == primaries);
-    QVERIFY(doc2->image()->colorSpace()->profile()->getTransferCharacteristics() == transfer);
+
+    {
+        const KoColorProfile *profile = doc2->image()->colorSpace()->profile();
+        QCOMPARE(profile->getColorPrimaries(), primaries);
+        QCOMPARE(profile->getTransferCharacteristics(), transfer);
+        if (hdrReferenceWhite > 0.0) {
+            QCOMPARE(*profile->hdrReferenceWhite(), hdrReferenceWhite);
+        } else {
+            QVERIFY(!profile->hdrReferenceWhite().has_value());
+        }
+    }
 
     // De-Duplication test.
     QList<const KoColorProfile*> profiles = KoColorSpaceRegistry::instance()->profilesFor(cs->id());

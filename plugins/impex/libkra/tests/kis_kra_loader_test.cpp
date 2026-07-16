@@ -180,8 +180,9 @@ void KisKraLoaderTest::testLoadingOldHdrProfileNoCicp()
     doc->loadNativeFormat(QString(FILES_DATA_DIR) + '/' + "hdr_gem_old_profile_no_cicp.kra");
     KisImageSP image = doc->image();
     image->waitForDone();
-    QVERIFY(image->colorSpace()->profile()->getColorPrimaries() == PRIMARIES_ITU_R_BT_2020_2_AND_2100_0);
-    QVERIFY(image->colorSpace()->profile()->getTransferCharacteristics() == TRC_ITU_R_BT_2100_0_PQ);
+    QCOMPARE(image->colorSpace()->profile()->getColorPrimaries(), PRIMARIES_ITU_R_BT_2020_2_AND_2100_0);
+    QCOMPARE(image->colorSpace()->profile()->getTransferCharacteristics(), TRC_ITU_R_BT_2100_0_PQ);
+    QCOMPARE(*image->colorSpace()->profile()->hdrReferenceWhite(), 80.0);
 }
 
 void KisKraLoaderTest::testLoadingUncommonHdrProfileWithCicp()
@@ -190,9 +191,9 @@ void KisKraLoaderTest::testLoadingUncommonHdrProfileWithCicp()
     doc->loadNativeFormat(QString(FILES_DATA_DIR) + '/' + "hdr_gem_180nits_rec2100pq_profile.kra");
     KisImageSP image = doc->image();
     image->waitForDone();
-    QVERIFY(image->colorSpace()->profile()->getColorPrimaries() == PRIMARIES_ITU_R_BT_2020_2_AND_2100_0);
-    QVERIFY(image->colorSpace()->profile()->getTransferCharacteristics() == TRC_ITU_R_BT_2100_0_PQ);
-    QVERIFY(image->colorSpace()->profile()->name().contains("180nits"));
+    QCOMPARE(image->colorSpace()->profile()->getColorPrimaries(), PRIMARIES_ITU_R_BT_2020_2_AND_2100_0);
+    QCOMPARE(image->colorSpace()->profile()->getTransferCharacteristics(), TRC_ITU_R_BT_2100_0_PQ);
+    QCOMPARE(*image->colorSpace()->profile()->hdrReferenceWhite(), 180.0);
 }
 
 

@@ -226,7 +226,6 @@ public Q_SLOTS:
     void slotUpdateAuthorProfileActions();
 
     void slotToggleFgBg();
-    void slotResetFgBg();
 
     // Enable the last set brush outline, or disable it if already enabled
     void slotToggleBrushOutline();

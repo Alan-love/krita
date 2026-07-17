@@ -203,8 +203,6 @@ public:
     KisAction *viewPrintSize {nullptr};
     KisAction *softProof {nullptr};
     KisAction *gamutCheck {nullptr};
-    KisAction *toggleFgBg {nullptr};
-    KisAction *resetFgBg {nullptr};
     KisAction *toggleBrushOutline {nullptr};
 
     KisSelectionManager selectionManager;
@@ -815,12 +813,6 @@ void KisViewManager::createActions()
 
     d->showPixelGrid = actionManager()->createAction("view_pixel_grid");
     slotUpdatePixelGridAction();
-
-    // d->toggleFgBg = actionManager()->createAction("toggle_fg_bg");
-    // connect(d->toggleFgBg, SIGNAL(triggered(bool)), this, SLOT(slotToggleFgBg()));
-
-    // d->resetFgBg =  actionManager()->createAction("reset_fg_bg");
-    // connect(d->resetFgBg, SIGNAL(triggered(bool)), this, SLOT(slotResetFgBg()));
 
     d->toggleBrushOutline =  actionManager()->createAction("toggle_brush_outline");
     connect(d->toggleBrushOutline, SIGNAL(triggered(bool)), this, SLOT(slotToggleBrushOutline()));
@@ -1738,13 +1730,6 @@ void KisViewManager::slotToggleFgBg()
      */
     d->canvasResourceManager.setBackgroundColor(newBg);
     d->canvasResourceManager.setForegroundColor(newFg);
-}
-
-void KisViewManager::slotResetFgBg()
-{
-    // see a comment in slotToggleFgBg()
-    d->canvasResourceManager.setBackgroundColor(KoColor(Qt::white, KoColorSpaceRegistry::instance()->rgb8()));
-    d->canvasResourceManager.setForegroundColor(KoColor(Qt::black, KoColorSpaceRegistry::instance()->rgb8()));
 }
 
 void KisViewManager::slotToggleBrushOutline()

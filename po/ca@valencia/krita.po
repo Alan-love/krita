@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-16 00:41+0000\n"
-"PO-Revision-Date: 2026-07-09 09:40+0200\n"
+"POT-Creation-Date: 2026-07-17 00:41+0000\n"
+"PO-Revision-Date: 2026-07-14 09:07+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 25.04.0\n"
+"X-Generator: Lokalize 26.04.3\n"
 
 #. i18n: Display name of resource, see context: [path-to-resources]/[resource-type]/[resource-filename]
 #, kde-format
@@ -35211,11 +35211,9 @@ msgid "Crop to Selection"
 msgstr "Escapça a la selecció"
 
 #: libs/ui/kis_selection_actions_panel.cpp:99
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "Configure selection actions bar"
+#, kde-format
 msgid "Toggle pin selection actions bar"
-msgstr "Configura la barra d'accions de selecció"
+msgstr "Canvia la fixació de la barra d'accions de selecció"
 
 #: libs/ui/kis_selection_actions_panel.cpp:155
 #, kde-format
@@ -42708,112 +42706,112 @@ msgstr "Cb"
 msgid "Cr"
 msgstr "Cr"
 
-#: plugins/color/lcms2engine/IccColorSpaceEngine.cpp:152
+#: plugins/color/lcms2engine/IccColorSpaceEngine.cpp:151
 #, kde-format
 msgid "ICC Engine"
 msgstr "Motor ICC"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:156
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:154
 #, kde-format
 msgid "L*a*b*/8 Histogram"
 msgstr "Histograma L*a*b*/8"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:160
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:158
 #, kde-format
 msgid "L*a*b*/16 Histogram"
 msgstr "Histograma L*a*b*/16"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:164
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:162
 #, kde-format
 msgid "L*a*b*/32 Histogram"
 msgstr "Histograma L*a*b*/32"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:195
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:200
 #, kde-format
 msgid "RGBA/8 Histogram"
 msgstr "Histograma RGBA/8"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:199
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:204
 #, kde-format
 msgid "RGBA/16 Histogram"
 msgstr "Histograma RGBA/16"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:205
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:210
 #, kde-format
 msgid "RGBA/F16 Histogram"
 msgstr "Histograma RGBA/F16"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:211
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:216
 #, kde-format
 msgid "RGBA/F32 Histogram"
 msgstr "Histograma RGBA/F32"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:232
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:237
 #, kde-format
 msgid "GRAY/8 Histogram"
 msgstr "Histograma GRAY/8"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:236
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:241
 #, kde-format
 msgid "GRAY/16 Histogram"
 msgstr "Histograma GRAY/16"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:241
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:246
 #, kde-format
 msgid "GRAYF/F16 Histogram"
 msgstr "Histograma GRAYF/F16"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:247
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:252
 #, kde-format
 msgid "GRAY/F32 float Histogram"
 msgstr "Histograma GRAY/F32 flotant"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:257
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:262
 #, kde-format
 msgid "CMYK/8 Histogram"
 msgstr "Histograma CMYK/8"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:261
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:266
 #, kde-format
 msgid "CMYK/16 Histogram"
 msgstr "Histograma CMYK/16"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:265
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:270
 #, kde-format
 msgid "CMYK/F32 Histogram"
 msgstr "Histograma CMYK/F32"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:283
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:288
 #, kde-format
 msgid "XYZ/8 Histogram"
 msgstr "Histograma XYZ/8"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:287
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:292
 #, kde-format
 msgid "XYZ/16 Histogram"
 msgstr "Histograma XYZ/16"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:293
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:298
 #, kde-format
 msgid "XYZ/F16 Histogram"
 msgstr "Histograma XYZ/F16"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:299
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:304
 #, kde-format
 msgid "XYZF32 Histogram"
 msgstr "Histograma XYZF32"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:312
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:317
 #, kde-format
 msgid "YCbCr/8 Histogram"
 msgstr "Histograma YCbCr/8"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:316
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:321
 #, kde-format
 msgid "YCbCr/16 Histogram"
 msgstr "Histograma YCbCr/16"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:320
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:325
 #, kde-format
 msgid "YCbCr/F32 Histogram"
 msgstr "Histograma YCbCr/F32"
@@ -55812,7 +55810,7 @@ msgctxt "JPEG-XL"
 msgid "Invalid JPEG-XL layer name length"
 msgstr "Llargària no vàlida del nom de capa JPEG-XL"
 
-#: plugins/impex/jxl/JPEGXLImport.cpp:929
+#: plugins/impex/jxl/JPEGXLImport.cpp:931
 #, kde-format
 msgctxt "JPEG-XL errors"
 msgid "The animation declares a frame rate of more than 240 FPS."
@@ -70557,6 +70555,3 @@ msgstr ""
 "Canvia entre interval complet i subinterval.\n"
 "Interval complet: [%1, %2]\n"
 "Subinterval: [%3, %4]"
-
-#~ msgid "Selection Actions Bar"
-#~ msgstr "Barra d'accions de selecció"

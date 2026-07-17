@@ -32,7 +32,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-16 00:41+0000\n"
+"POT-Creation-Date: 2026-07-17 00:41+0000\n"
 "PO-Revision-Date: 2024-08-14 00:39+0330\n"
 "Last-Translator: Mohi Mirdamadi <mohi.pub@gmail.com>\n"
 "Language-Team: fa\n"
@@ -42176,117 +42176,117 @@ msgstr ""
 msgid "Cr"
 msgstr "خط برش"
 
-#: plugins/color/lcms2engine/IccColorSpaceEngine.cpp:152
+#: plugins/color/lcms2engine/IccColorSpaceEngine.cpp:151
 #, fuzzy, kde-format
 msgid "ICC Engine"
 msgstr "گستره رنگ"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:156
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:154
 #, fuzzy, kde-format
 #| msgid "Histogram"
 msgid "L*a*b*/8 Histogram"
 msgstr "سابقه‌نما"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:160
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:158
 #, fuzzy, kde-format
 #| msgid "Histogram"
 msgid "L*a*b*/16 Histogram"
 msgstr "سابقه‌نما"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:164
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:162
 #, fuzzy, kde-format
 #| msgid "Histogram"
 msgid "L*a*b*/32 Histogram"
 msgstr "سابقه‌نما"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:195
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:200
 #, fuzzy, kde-format
 msgid "RGBA/8 Histogram"
 msgstr "سابقه‌نما"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:199
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:204
 #, fuzzy, kde-format
 msgid "RGBA/16 Histogram"
 msgstr "سابقه‌نمای XYZ16"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:205
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:210
 #, fuzzy, kde-format
 msgid "RGBA/F16 Histogram"
 msgstr "سابقه‌نمای XYZ16"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:211
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:216
 #, fuzzy, kde-format
 msgid "RGBA/F32 Histogram"
 msgstr "سابقه‌نمای Float32"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:232
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:237
 #, fuzzy, kde-format
 #| msgid "GRAY/Alpha8 Histogram"
 msgid "GRAY/8 Histogram"
 msgstr "سابقه نمای خاکستری/آلفا۸"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:236
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:241
 #, fuzzy, kde-format
 msgid "GRAY/16 Histogram"
 msgstr "سابقه نمای خاکستری/آلفا ۱۶"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:241
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:246
 #, fuzzy, kde-format
 msgid "GRAYF/F16 Histogram"
 msgstr "سابقه نمای خاکستری/آلفا ۱۶"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:247
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:252
 #, fuzzy, kde-format
 msgid "GRAY/F32 float Histogram"
 msgstr "سابقه نمای خاکستری/آلفا۸"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:257
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:262
 #, fuzzy, kde-format
 msgid "CMYK/8 Histogram"
 msgstr "سابقه‌نما"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:261
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:266
 #, fuzzy, kde-format
 msgid "CMYK/16 Histogram"
 msgstr "سابقه‌نمای XYZ16"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:265
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:270
 #, fuzzy, kde-format
 msgid "CMYK/F32 Histogram"
 msgstr "سابقه‌نمای Float32"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:283
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:288
 #, fuzzy, kde-format
 msgid "XYZ/8 Histogram"
 msgstr "سابقه‌نمای XYZ16"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:287
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:292
 #, fuzzy, kde-format
 #| msgid "XYZ16 Histogram"
 msgid "XYZ/16 Histogram"
 msgstr "سابقه‌نمای XYZ16"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:293
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:298
 #, fuzzy, kde-format
 msgid "XYZ/F16 Histogram"
 msgstr "سابقه‌نمای XYZ16"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:299
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:304
 #, fuzzy, kde-format
 msgid "XYZF32 Histogram"
 msgstr "سابقه‌نمای XYZ16"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:312
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:317
 #, fuzzy, kde-format
 msgid "YCbCr/8 Histogram"
 msgstr "سابقه‌نما"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:316
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:321
 #, fuzzy, kde-format
 msgid "YCbCr/16 Histogram"
 msgstr "سابقه‌نمای XYZ16"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:320
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:325
 #, fuzzy, kde-format
 msgid "YCbCr/F32 Histogram"
 msgstr "سابقه‌نمای Float32"
@@ -55277,7 +55277,7 @@ msgctxt "JPEG-XL"
 msgid "Invalid JPEG-XL layer name length"
 msgstr ""
 
-#: plugins/impex/jxl/JPEGXLImport.cpp:929
+#: plugins/impex/jxl/JPEGXLImport.cpp:931
 #, kde-format
 msgctxt "JPEG-XL errors"
 msgid "The animation declares a frame rate of more than 240 FPS."

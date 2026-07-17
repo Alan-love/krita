@@ -60,7 +60,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-16 00:41+0000\n"
+"POT-Creation-Date: 2026-07-17 00:41+0000\n"
 "PO-Revision-Date: 2020-08-01 13:09+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -43451,129 +43451,129 @@ msgstr "Cb"
 msgid "Cr"
 msgstr "Cr"
 
-#: plugins/color/lcms2engine/IccColorSpaceEngine.cpp:152
+#: plugins/color/lcms2engine/IccColorSpaceEngine.cpp:151
 #, kde-format
 msgid "ICC Engine"
 msgstr "ICC-motor"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:156
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:154
 #, fuzzy, kde-format
 #| msgid "L*a*b* Histogram"
 msgid "L*a*b*/8 Histogram"
 msgstr "L*a*b*-histogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:160
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:158
 #, fuzzy, kde-format
 #| msgid "L*a*b* Histogram"
 msgid "L*a*b*/16 Histogram"
 msgstr "L*a*b*-histogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:164
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:162
 #, fuzzy, kde-format
 #| msgid "L*a*b* Histogram"
 msgid "L*a*b*/32 Histogram"
 msgstr "L*a*b*-histogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:195
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:200
 #, fuzzy, kde-format
 #| msgid "RGB8 Histogram"
 msgid "RGBA/8 Histogram"
 msgstr "RGB8-histogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:199
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:204
 #, fuzzy, kde-format
 #| msgid "RGB16 Histogram"
 msgid "RGBA/16 Histogram"
 msgstr "RGB16-histogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:205
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:210
 #, fuzzy, kde-format
 #| msgid "RGBF16 Histogram"
 msgid "RGBA/F16 Histogram"
 msgstr "RGBF16-histogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:211
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:216
 #, fuzzy, kde-format
 #| msgid "RGBF32 Histogram"
 msgid "RGBA/F32 Histogram"
 msgstr "RGBF32-histogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:232
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:237
 #, fuzzy, kde-format
 #| msgid "GRAY/Alpha8 Histogram"
 msgid "GRAY/8 Histogram"
 msgstr "Histogram for GRAY/Alpha8"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:236
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:241
 #, fuzzy, kde-format
 msgid "GRAY/16 Histogram"
 msgstr "RGBF16-histogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:241
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:246
 #, fuzzy, kde-format
 msgid "GRAYF/F16 Histogram"
 msgstr "RGBF16-histogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:247
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:252
 #, fuzzy, kde-format
 #| msgid "GRAY/Alpha 32 float Histogram"
 msgid "GRAY/F32 float Histogram"
 msgstr "GRAY/Alpha 32-decimaltal-histogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:257
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:262
 #, fuzzy, kde-format
 #| msgid "CMYK8 Histogram"
 msgid "CMYK/8 Histogram"
 msgstr "CMYK8-histogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:261
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:266
 #, fuzzy, kde-format
 #| msgid "CMYK16 Histogram"
 msgid "CMYK/16 Histogram"
 msgstr "CMYK16-histogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:265
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:270
 #, fuzzy, kde-format
 #| msgid "CMYK F32 Histogram"
 msgid "CMYK/F32 Histogram"
 msgstr "CMYK F32-histogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:283
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:288
 #, fuzzy, kde-format
 #| msgid "XYZ8 Histogram"
 msgid "XYZ/8 Histogram"
 msgstr "XYZ8-histogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:287
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:292
 #, fuzzy, kde-format
 #| msgid "XYZ16 Histogram"
 msgid "XYZ/16 Histogram"
 msgstr "Histogram for XYZ16"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:293
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:298
 #, fuzzy, kde-format
 #| msgid "XYZF16 Histogram"
 msgid "XYZ/F16 Histogram"
 msgstr "XYZF16-histogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:299
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:304
 #, kde-format
 msgid "XYZF32 Histogram"
 msgstr "XYZF32-histogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:312
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:317
 #, fuzzy, kde-format
 #| msgid "YCBCR8 Histogram"
 msgid "YCbCr/8 Histogram"
 msgstr "YCBCR8-histogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:316
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:321
 #, fuzzy, kde-format
 #| msgid "YCBCR16 Histogram"
 msgid "YCbCr/16 Histogram"
 msgstr "YCBCR16-histogram"
 
-#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:320
+#: plugins/color/lcms2engine/LcmsEnginePlugin.cpp:325
 #, fuzzy, kde-format
 #| msgid "YCBCRF32 Histogram"
 msgid "YCbCr/F32 Histogram"
@@ -57086,7 +57086,7 @@ msgctxt "JPEG-XL"
 msgid "Invalid JPEG-XL layer name length"
 msgstr ""
 
-#: plugins/impex/jxl/JPEGXLImport.cpp:929
+#: plugins/impex/jxl/JPEGXLImport.cpp:931
 #, kde-format
 msgctxt "JPEG-XL errors"
 msgid "The animation declares a frame rate of more than 240 FPS."

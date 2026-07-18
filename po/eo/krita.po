@@ -42,7 +42,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-17 00:41+0000\n"
+"POT-Creation-Date: 2026-07-18 00:42+0000\n"
 "PO-Revision-Date: 2025-03-30 23:35+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -16465,8 +16465,8 @@ msgctxt "@info:credit"
 msgid "© 1999–2026 The Krita Developers"
 msgstr ""
 
-#: krita/main.cc:820 libs/ui/KisApplication.cpp:517
-#: libs/ui/KisApplication.cpp:850
+#: krita/main.cc:820 libs/ui/KisApplication.cpp:493
+#: libs/ui/KisApplication.cpp:826
 #, kde-format
 msgctxt "@title:window"
 msgid "Krita: Warning"
@@ -22087,7 +22087,7 @@ msgstr "Prilaborado"
 #: libs/image/kis_psd_layer_style.cpp:106
 #: libs/ui/dialogs/KisDlgCreateNewDocument.cpp:32
 #: libs/ui/dialogs/KisDlgCreateNewDocument.cpp:38
-#: libs/ui/KisApplicationArguments.cpp:384 libs/ui/KisMainWindow.cpp:1477
+#: libs/ui/KisApplicationArguments.cpp:384 libs/ui/KisMainWindow.cpp:1462
 #: plugins/impex/libkra/kis_kra_saver.cpp:89
 #, kde-format
 msgid "Unnamed"
@@ -22868,8 +22868,8 @@ msgctxt "description of a file type"
 msgid "Radiance RGBE Image"
 msgstr "Radiance RGBE-Bildo"
 
-#: libs/libkis/Document.cpp:986 libs/ui/KisMainWindow.cpp:2237
-#: libs/ui/KisMainWindow.cpp:2318
+#: libs/libkis/Document.cpp:986 libs/ui/KisMainWindow.cpp:2222
+#: libs/ui/KisMainWindow.cpp:2303
 #, kde-format
 msgid "Import frames"
 msgstr "Importi kadrojn"
@@ -24221,17 +24221,17 @@ msgstr "Lokaj Rimedoj"
 #: libs/ui/kis_custom_pattern.cc:126 libs/ui/kis_filter_manager.cc:234
 #: libs/ui/kis_filter_manager.cc:243 libs/ui/kis_layer_manager.cc:326
 #: libs/ui/kis_layer_manager.cc:1044 libs/ui/kis_node_manager.cpp:1318
-#: libs/ui/kis_node_manager.cpp:1381 libs/ui/KisApplication.cpp:1251
-#: libs/ui/KisApplication.cpp:1254 libs/ui/KisApplication.cpp:1270
-#: libs/ui/KisApplication.cpp:1302 libs/ui/KisApplication.cpp:1316
-#: libs/ui/KisApplication.cpp:1344 libs/ui/KisDocument.cpp:1057
+#: libs/ui/kis_node_manager.cpp:1381 libs/ui/KisApplication.cpp:1227
+#: libs/ui/KisApplication.cpp:1230 libs/ui/KisApplication.cpp:1246
+#: libs/ui/KisApplication.cpp:1278 libs/ui/KisApplication.cpp:1292
+#: libs/ui/KisApplication.cpp:1320 libs/ui/KisDocument.cpp:1057
 #: libs/ui/KisDocument.cpp:1072 libs/ui/KisDocument.cpp:2039
 #: libs/ui/KisDocument.cpp:2082 libs/ui/KisDocument.cpp:2093
-#: libs/ui/KisMainWindow.cpp:1039 libs/ui/KisMainWindow.cpp:1109
-#: libs/ui/KisMainWindow.cpp:1253 libs/ui/KisMainWindow.cpp:1350
-#: libs/ui/KisMainWindow.cpp:2097 libs/ui/KisMainWindow.cpp:2106
-#: libs/ui/KisMainWindow.cpp:2245 libs/ui/KisMainWindow.cpp:2306
-#: libs/ui/KisMainWindow.cpp:2325 libs/ui/KisMainWindow.cpp:2967
+#: libs/ui/KisMainWindow.cpp:1024 libs/ui/KisMainWindow.cpp:1094
+#: libs/ui/KisMainWindow.cpp:1238 libs/ui/KisMainWindow.cpp:1335
+#: libs/ui/KisMainWindow.cpp:2082 libs/ui/KisMainWindow.cpp:2091
+#: libs/ui/KisMainWindow.cpp:2230 libs/ui/KisMainWindow.cpp:2291
+#: libs/ui/KisMainWindow.cpp:2310 libs/ui/KisMainWindow.cpp:2952
 #: libs/ui/KisPart.cpp:555 libs/ui/KisPart.cpp:558
 #: libs/ui/KisReferenceImage.cpp:192 libs/ui/KisRemoteFileFetcher.cpp:40
 #: libs/ui/KisRemoteFileFetcher.cpp:64 libs/ui/KisRemoteFileFetcher.cpp:91
@@ -24786,7 +24786,7 @@ msgid "Delete resource"
 msgstr "Forigi rimedon"
 
 #: libs/resourcewidgets/KisResourceItemChooser.cpp:339
-#: libs/ui/KisMainWindow.cpp:2764
+#: libs/ui/KisMainWindow.cpp:2749
 #: plugins/paintops/libpaintop/kis_predefined_brush_chooser.cpp:407
 #: qmlmodules/components/TagFilterProxyModelQmlWrapper.cpp:347
 #, kde-format
@@ -25289,7 +25289,7 @@ msgstr ""
 "Malsukcesis bildigi animaciajn kadrojn! Eligdosieroj estas nekompletaj."
 
 #: libs/ui/animation/KisDlgAnimationRenderer.cpp:54
-#: libs/ui/KisMainWindow.cpp:2348
+#: libs/ui/KisMainWindow.cpp:2333
 #, kde-format
 msgid "Render Animation"
 msgstr "Redoni Animacion"
@@ -27305,7 +27305,7 @@ msgid "Numerical"
 msgstr "Nombra"
 
 #: libs/ui/dialogs/kis_dlg_import_image_sequence.cpp:141
-#: libs/ui/KisMainWindow.cpp:1218
+#: libs/ui/KisMainWindow.cpp:1203
 #, kde-format
 msgid "Import Images"
 msgstr "Importi Bildojn"
@@ -27422,7 +27422,7 @@ msgctxt "@title:window"
 msgid "Enter new style name"
 msgstr "Enigi novan stilnomon"
 
-#: libs/ui/dialogs/kis_dlg_layer_style.cpp:319 libs/ui/KisMainWindow.cpp:2775
+#: libs/ui/dialogs/kis_dlg_layer_style.cpp:319 libs/ui/KisMainWindow.cpp:2760
 #, kde-format
 msgctxt "@label:textbox"
 msgid "Name:"
@@ -31925,7 +31925,7 @@ msgstr "Nuna peniko antaŭfiksita"
 
 #. i18n: ectx: property (text), widget (QPushButton, updateBrushNameButton)
 #. i18n: ectx: property (toolTip), widget (QToolButton, bnSaveMask)
-#: libs/ui/forms/wdgpaintopsettings.ui:184 libs/ui/KisMainWindow.cpp:1084
+#: libs/ui/forms/wdgpaintopsettings.ui:184 libs/ui/KisMainWindow.cpp:1069
 #: libs/ui/widgets/kis_workspace_chooser.cpp:134
 #: libs/ui/widgets/kis_workspace_chooser.cpp:209
 #: plugins/dockers/gamutmask/forms/wdgGamutMaskChooser.ui:232
@@ -33045,7 +33045,7 @@ msgid "HSV CCW"
 msgstr "HSV CCW"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, DlgSessionManager)
-#: libs/ui/forms/wdgsessionmanager.ui:18 libs/ui/KisApplication.cpp:452
+#: libs/ui/forms/wdgsessionmanager.ui:18 libs/ui/KisApplication.cpp:428
 #, kde-format
 msgid "Sessions"
 msgstr "Seancoj"
@@ -34535,52 +34535,70 @@ msgstr ""
 msgid "Favorites"
 msgstr "Plej ŝatataj"
 
-#: libs/ui/kis_control_frame.cpp:61
+#: libs/ui/kis_control_frame.cpp:67
 #, kde-format
 msgid "Fill Patterns"
 msgstr "Plenigŝablonoj"
 
-#: libs/ui/kis_control_frame.cpp:65
+#: libs/ui/kis_control_frame.cpp:71
 #, kde-format
 msgid "Fill Gradients"
 msgstr "Plenigaj Gradientojn"
 
-#: libs/ui/kis_control_frame.cpp:75
+#: libs/ui/kis_control_frame.cpp:81
 #, kde-format
 msgid "&Patterns"
 msgstr "Ŝa&blonoj"
 
-#: libs/ui/kis_control_frame.cpp:82
+#: libs/ui/kis_control_frame.cpp:88
 #, kde-format
 msgid "&Gradients"
 msgstr "&Kolortransiroj"
 
-#: libs/ui/kis_control_frame.cpp:97
+#: libs/ui/kis_control_frame.cpp:104
 #, kde-format
 msgid "&Choose foreground and background colors"
 msgstr "&Elekti antaŭajn kaj fonajn kolorojn"
 
-#: libs/ui/kis_control_frame.cpp:112
+#: libs/ui/kis_control_frame.cpp:122
+#, fuzzy, kde-format
+#| msgctxt "action"
+#| msgid "&Choose Foreground Color"
+msgid "&Choose foreground colour"
+msgstr "&Elekti Malfonan Koloron"
+
+#: libs/ui/kis_control_frame.cpp:141
+#, fuzzy, kde-format
+#| msgctxt "action"
+#| msgid "&Choose Background Color"
+msgid "&Choose background colour"
+msgstr "&Elekti Fonkoloron"
+
+#: libs/ui/kis_control_frame.cpp:160
+#, fuzzy, kde-format
+#| msgctxt "action"
+#| msgid "Swap Foreground and Background Colors"
+msgid "&Swap Foreground and Background Colors"
+msgstr "Interŝanĝi malfonan kaj fonan koloron"
+
+#: libs/ui/kis_control_frame.cpp:179
+#, fuzzy, kde-format
+#| msgctxt "action"
+#| msgid "Swap Foreground and Background Colors"
+msgid "&reset Foreground and Background Colors"
+msgstr "Interŝanĝi malfonan kaj fonan koloron"
+
+#: libs/ui/kis_control_frame.cpp:195
 #, kde-format
 msgid "&Painter's Tools"
 msgstr "&Pentristaj Iloj"
 
-#: libs/ui/kis_control_frame.cpp:117
-#, kde-format
-msgid "&Open Foreground color selector"
-msgstr "Malfermi la k&olorelektilon de malfono"
-
-#: libs/ui/kis_control_frame.cpp:122
-#, kde-format
-msgid "&Open Background color selector"
-msgstr "Malfermi F&onkolorelektilon"
-
-#: libs/ui/kis_control_frame.cpp:129
+#: libs/ui/kis_control_frame.cpp:203
 #, kde-format
 msgid "&Docker Box"
 msgstr "&Docker-ujo"
 
-#: libs/ui/kis_control_frame.cpp:196 libs/ui/KisApplication.cpp:448
+#: libs/ui/kis_control_frame.cpp:271 libs/ui/KisApplication.cpp:424
 #: plugins/dockers/patterndocker/patterndocker_dock.cpp:19
 #: plugins/extensions/resourcemanager/dlg_embed_tags.cpp:65
 #: plugins/extensions/resourcemanager/page_tag_chooser.cpp:60
@@ -34589,13 +34607,13 @@ msgstr "&Docker-ujo"
 msgid "Patterns"
 msgstr "Ŝablonoj"
 
-#: libs/ui/kis_control_frame.cpp:199 libs/ui/kis_control_frame.cpp:200
+#: libs/ui/kis_control_frame.cpp:274 libs/ui/kis_control_frame.cpp:275
 #, kde-format
 msgid "Custom Pattern"
 msgstr "Propra Ŝablono"
 
-#: libs/ui/kis_control_frame.cpp:248 libs/ui/KisApplication.cpp:433
-#: libs/ui/KisApplication.cpp:434
+#: libs/ui/kis_control_frame.cpp:323 libs/ui/KisApplication.cpp:409
+#: libs/ui/KisApplication.cpp:410
 #: plugins/extensions/resourcemanager/dlg_embed_tags.cpp:63
 #: plugins/extensions/resourcemanager/page_tag_chooser.cpp:58
 #: plugins/extensions/resourcemanager/wdgtagselection.cpp:272
@@ -34603,12 +34621,12 @@ msgstr "Propra Ŝablono"
 msgid "Gradients"
 msgstr "Kolortransiroj"
 
-#: libs/ui/kis_control_frame.cpp:283
+#: libs/ui/kis_control_frame.cpp:358
 #, kde-format
 msgid "Docker box"
 msgstr "Docker-ujo:"
 
-#: libs/ui/kis_control_frame.cpp:289
+#: libs/ui/kis_control_frame.cpp:364
 #, kde-format
 msgid "Toolbar Docker Box"
 msgstr "Docker-uja Ilbreto"
@@ -34669,7 +34687,7 @@ msgstr "Apliki Filtrilon Denove: %1"
 msgid "Import Image"
 msgstr "Importi Bildon"
 
-#: libs/ui/kis_image_manager.cc:198 libs/ui/widgets/KoDualColorButton.cpp:100
+#: libs/ui/kis_image_manager.cc:198 libs/ui/widgets/KoDualColorButton.cpp:77
 #, kde-format
 msgid "Select a Color"
 msgstr "Elekti Koloron"
@@ -35607,20 +35625,20 @@ msgctxt "floating message about zoom"
 msgid "Zoom: %1 %"
 msgstr "Zomo: %1 %"
 
-#: libs/ui/KisApplication.cpp:425
+#: libs/ui/KisApplication.cpp:401
 #: plugins/extensions/resourcemanager/wdgtagselection.cpp:266
 #, kde-format
 msgid "Brush presets"
 msgstr "Brusaj antaŭaj agordoj"
 
-#: libs/ui/KisApplication.cpp:428 libs/ui/KisApplication.cpp:429
-#: libs/ui/KisApplication.cpp:430 libs/ui/KisApplication.cpp:431
+#: libs/ui/KisApplication.cpp:404 libs/ui/KisApplication.cpp:405
+#: libs/ui/KisApplication.cpp:406 libs/ui/KisApplication.cpp:407
 #: plugins/extensions/resourcemanager/wdgtagselection.cpp:267
 #, kde-format
 msgid "Brush tips"
 msgstr "Penikpintoj"
 
-#: libs/ui/KisApplication.cpp:436
+#: libs/ui/KisApplication.cpp:412
 #: plugins/extensions/resourcemanager/dlg_embed_tags.cpp:66
 #: plugins/extensions/resourcemanager/page_tag_chooser.cpp:61
 #: plugins/extensions/resourcemanager/wdgtagselection.cpp:270
@@ -35628,7 +35646,7 @@ msgstr "Penikpintoj"
 msgid "Palettes"
 msgstr "Paletroj"
 
-#: libs/ui/KisApplication.cpp:449 libs/ui/widgets/kis_workspace_chooser.cpp:90
+#: libs/ui/KisApplication.cpp:425 libs/ui/widgets/kis_workspace_chooser.cpp:90
 #: plugins/extensions/resourcemanager/dlg_embed_tags.cpp:67
 #: plugins/extensions/resourcemanager/page_tag_chooser.cpp:62
 #: plugins/extensions/resourcemanager/wdgtagselection.cpp:268
@@ -35636,45 +35654,45 @@ msgstr "Paletroj"
 msgid "Workspaces"
 msgstr "Laborspacoj"
 
-#: libs/ui/KisApplication.cpp:450
+#: libs/ui/KisApplication.cpp:426
 #, kde-format
 msgid "SVG symbol libraries"
 msgstr "SVG-simbolbibliotekoj"
 
-#: libs/ui/KisApplication.cpp:451 libs/ui/widgets/kis_workspace_chooser.cpp:104
+#: libs/ui/KisApplication.cpp:427 libs/ui/widgets/kis_workspace_chooser.cpp:104
 #, kde-format
 msgid "Window layouts"
 msgstr "Fenestraj aranĝoj"
 
-#: libs/ui/KisApplication.cpp:453
+#: libs/ui/KisApplication.cpp:429
 #: plugins/extensions/resourcemanager/wdgtagselection.cpp:273
 #, kde-format
 msgid "Gamut masks"
 msgstr "Gamut maskoj"
 
-#: libs/ui/KisApplication.cpp:455
+#: libs/ui/KisApplication.cpp:431
 #, kde-format
 msgid "SeExpr Scripts"
 msgstr "SeExpr-Skriptoj"
 
-#: libs/ui/KisApplication.cpp:460
+#: libs/ui/KisApplication.cpp:436
 #, kde-format
 msgctxt "Resource type name"
 msgid "Layer styles"
 msgstr "Tavolstiloj"
 
-#: libs/ui/KisApplication.cpp:463
+#: libs/ui/KisApplication.cpp:439
 #, kde-format
 msgid "Font Families"
 msgstr "Tiparofamilioj"
 
-#: libs/ui/KisApplication.cpp:464
+#: libs/ui/KisApplication.cpp:440
 #, fuzzy, kde-format
 #| msgid "Style Sheet"
 msgid "Style Presets"
 msgstr "Stila Folio"
 
-#: libs/ui/KisApplication.cpp:476
+#: libs/ui/KisApplication.cpp:452
 #, kde-format
 msgid ""
 "%1\n"
@@ -35685,13 +35703,13 @@ msgstr ""
 "\n"
 "Krita ĉesos nun."
 
-#: libs/ui/KisApplication.cpp:476 libs/ui/KisApplication.cpp:482
+#: libs/ui/KisApplication.cpp:452 libs/ui/KisApplication.cpp:458
 #, kde-format
 msgctxt "@title:window"
 msgid "Krita: Fatal error"
 msgstr "Krita: Mortiga eraro"
 
-#: libs/ui/KisApplication.cpp:482
+#: libs/ui/KisApplication.cpp:458
 #, kde-format
 msgid ""
 "\n"
@@ -35702,7 +35720,7 @@ msgstr ""
 "\n"
 "Krita ĉesos nun."
 
-#: libs/ui/KisApplication.cpp:518
+#: libs/ui/KisApplication.cpp:494
 #, kde-format
 msgid ""
 "You are running a 32 bits build on a 64 bits Windows.\n"
@@ -35713,65 +35731,65 @@ msgstr ""
 "Ĉi tio ne estas rekomendita.\n"
 "Bonvolu elŝuti kaj instali la x64-konstruaĵon anstataŭe."
 
-#: libs/ui/KisApplication.cpp:535
+#: libs/ui/KisApplication.cpp:511
 #, kde-format
 msgid "Initializing Globals..."
 msgstr "Komencante Globals..."
 
-#: libs/ui/KisApplication.cpp:573
+#: libs/ui/KisApplication.cpp:549
 #, kde-format
 msgid "Adding resource types..."
 msgstr "Aldonante rimedotipojn..."
 
-#: libs/ui/KisApplication.cpp:577
+#: libs/ui/KisApplication.cpp:553
 #, kde-format
 msgid "Loading plugins..."
 msgstr "Ŝargante kromprogramojn..."
 
-#: libs/ui/KisApplication.cpp:583
+#: libs/ui/KisApplication.cpp:559
 #, kde-format
 msgid "Loading resources..."
 msgstr "Ŝargante risurcojn..."
 
-#: libs/ui/KisApplication.cpp:592
+#: libs/ui/KisApplication.cpp:568
 #, kde-format
 msgid "Loading Main Window..."
 msgstr "Ŝargante Ĉeffenestron..."
 
-#: libs/ui/KisApplication.cpp:624
+#: libs/ui/KisApplication.cpp:600
 #, kde-format
 msgid "Launching..."
 msgstr "Lanĉante..."
 
-#: libs/ui/KisApplication.cpp:745
+#: libs/ui/KisApplication.cpp:721
 #, kde-format
 msgid "Mimetype not found, try using the -mimetype option"
 msgstr "Mimetype ne trovita, provu uzi la -mimetype opcion"
 
-#: libs/ui/KisApplication.cpp:806
+#: libs/ui/KisApplication.cpp:782
 #, kde-format
 msgid "Failed to render animation frames!"
 msgstr "Malsukcesis bildigi animaciajn kadrojn!"
 
-#: libs/ui/KisApplication.cpp:831 libs/ui/KisApplication.cpp:1110
+#: libs/ui/KisApplication.cpp:807 libs/ui/KisApplication.cpp:1086
 #, kde-format
 msgid "File layer"
 msgstr "Dosiera tavolo"
 
-#: libs/ui/KisApplication.cpp:839 libs/ui/KisApplication.cpp:844
-#: libs/ui/KisApplication.cpp:1104 libs/ui/KisApplication.cpp:1118
-#: libs/ui/KisApplication.cpp:1123
+#: libs/ui/KisApplication.cpp:815 libs/ui/KisApplication.cpp:820
+#: libs/ui/KisApplication.cpp:1080 libs/ui/KisApplication.cpp:1094
+#: libs/ui/KisApplication.cpp:1099
 #, kde-format
 msgctxt "@title:window"
 msgid "Krita:Warning"
 msgstr "Krita:Averto"
 
-#: libs/ui/KisApplication.cpp:840 libs/ui/KisApplication.cpp:1119
+#: libs/ui/KisApplication.cpp:816 libs/ui/KisApplication.cpp:1095
 #, kde-format
 msgid "Cannot add %1 as a file layer: the file does not exist."
 msgstr "Ne povas aldoni %1 kiel dosiertavolon: la dosiero ne ekzistas."
 
-#: libs/ui/KisApplication.cpp:845
+#: libs/ui/KisApplication.cpp:821
 #, kde-format
 msgid ""
 "Cannot add the file layer: no document is open.\n"
@@ -35792,7 +35810,7 @@ msgstr ""
 "funkcianta kazo de Krita, marku la markokeston \"Permesi nur unu ekzemplon "
 "de Krita\" en la agordoj (Agordoj -> Ĝenerala -> Fenestro)."
 
-#: libs/ui/KisApplication.cpp:851
+#: libs/ui/KisApplication.cpp:827
 #, kde-format
 msgid ""
 "Cannot add the file layer: no document is open.\n"
@@ -35803,32 +35821,32 @@ msgstr ""
 "Vi povas aŭ krei novan dosieron uzante la opcion --new-image, aŭ vi povas "
 "malfermi ekzistantan dosieron."
 
-#: libs/ui/KisApplication.cpp:1105
+#: libs/ui/KisApplication.cpp:1081
 #, kde-format
 msgid "Couldn't open file %1"
 msgstr "Ne eblis malfermi la dosieron %1"
 
-#: libs/ui/KisApplication.cpp:1124
+#: libs/ui/KisApplication.cpp:1100
 #, kde-format
 msgid "Cannot add the file layer: no document is open."
 msgstr "Ne povas aldoni la dosiertavolon: neniu dokumento estas malfermita."
 
-#: libs/ui/KisApplication.cpp:1252
+#: libs/ui/KisApplication.cpp:1228
 #, kde-format
 msgid "No template found for: %1"
 msgstr "Neniu ŝablono trovita por: %1"
 
-#: libs/ui/KisApplication.cpp:1255
+#: libs/ui/KisApplication.cpp:1231
 #, kde-format
 msgid "Too many templates found for: %1"
 msgstr "Tro da ŝablonoj trovitaj por: %1"
 
-#: libs/ui/KisApplication.cpp:1271
+#: libs/ui/KisApplication.cpp:1247
 #, kde-format
 msgid "Template %1 failed to load."
 msgstr "Ŝablono %1 malsukcesis ŝargi."
 
-#: libs/ui/KisApplication.cpp:1303
+#: libs/ui/KisApplication.cpp:1279
 #, kde-format
 msgid ""
 "Krita configurations reset!\n"
@@ -35843,7 +35861,7 @@ msgstr ""
 "\n"
 "Rekomencu Krita por ke ŝanĝoj efektiviĝu."
 
-#: libs/ui/KisApplication.cpp:1317
+#: libs/ui/KisApplication.cpp:1293
 #, kde-format
 msgid ""
 "Failed to clear %1\n"
@@ -35854,7 +35872,7 @@ msgstr ""
 "\n"
 "Bonvolu certigi, ke neniu alia programo uzas la dosieron kaj provu denove."
 
-#: libs/ui/KisApplication.cpp:1345
+#: libs/ui/KisApplication.cpp:1321
 #, kde-format
 msgid "Do you want to clear the settings file?"
 msgstr "Ĉu vi volas forigi la agordan dosieron?"
@@ -36589,32 +36607,32 @@ msgctxt "@action:inmenu"
 msgid "Wor&kspace"
 msgstr "Lab&orspaco"
 
-#: libs/ui/KisMainWindow.cpp:606
+#: libs/ui/KisMainWindow.cpp:591
 #, kde-format
 msgid "Show %1 Toolbar"
 msgstr "Montri %1 Ilobreto"
 
-#: libs/ui/KisMainWindow.cpp:608
+#: libs/ui/KisMainWindow.cpp:593
 #, kde-format
 msgid "Hide %1 Toolbar"
 msgstr "Kaŝi %1 Ilobreto"
 
-#: libs/ui/KisMainWindow.cpp:1081
+#: libs/ui/KisMainWindow.cpp:1066
 #, kde-format
 msgid "Save as %1"
 msgstr "Konservi kiel %1"
 
-#: libs/ui/KisMainWindow.cpp:1109
+#: libs/ui/KisMainWindow.cpp:1094
 #, kde-format
 msgid "The file %1 does not exist."
 msgstr "La dosiero %1 ne ekzistas."
 
-#: libs/ui/KisMainWindow.cpp:1218
+#: libs/ui/KisMainWindow.cpp:1203
 #, kde-format
 msgid "Open Images"
 msgstr "Malfermi Bildojn"
 
-#: libs/ui/KisMainWindow.cpp:1351
+#: libs/ui/KisMainWindow.cpp:1336
 #, kde-format
 msgid ""
 "You are saving a file while the image is still rendering. The saved file may "
@@ -36627,29 +36645,29 @@ msgstr ""
 "\n"
 "Bonvolu elekti lokon kie la originala dosiero ne estos anstataŭita!"
 
-#: libs/ui/KisMainWindow.cpp:1412
+#: libs/ui/KisMainWindow.cpp:1397
 #, kde-format
 msgid "Exporting"
 msgstr "Eksportante"
 
-#: libs/ui/KisMainWindow.cpp:1412
+#: libs/ui/KisMainWindow.cpp:1397
 #, kde-format
 msgid "Saving As"
 msgstr "Konservante Kiel"
 
-#: libs/ui/KisMainWindow.cpp:2066
+#: libs/ui/KisMainWindow.cpp:2051
 #, kde-format
 msgid "Layers/Masks"
 msgstr "Tavoloj/Maskoj"
 
-#: libs/ui/KisMainWindow.cpp:2092
+#: libs/ui/KisMainWindow.cpp:2077
 #: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:201
 #: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:365
 #, kde-format
 msgid "You don't have any resource bundles enabled."
 msgstr "Vi ne havas iujn ajn rimedajn pakaĵojn ebligitaj."
 
-#: libs/ui/KisMainWindow.cpp:2096
+#: libs/ui/KisMainWindow.cpp:2081
 #, kde-format
 msgid ""
 "\n"
@@ -36660,7 +36678,7 @@ msgstr ""
 "Ne estas disponeblaj antaŭmetitaj penikoj. Bonvolu ebligi pakon kiu havas "
 "antaŭdifiniĝojn antaŭ ol daŭrigi.\n"
 
-#: libs/ui/KisMainWindow.cpp:2106
+#: libs/ui/KisMainWindow.cpp:2091
 #: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:211
 #: plugins/extensions/resourcemanager/dlg_bundle_manager.cpp:377
 #, kde-format
@@ -36671,7 +36689,7 @@ msgstr ""
 "\n"
 "Nur viaj lokaj rimedoj disponeblas."
 
-#: libs/ui/KisMainWindow.cpp:2245 libs/ui/KisMainWindow.cpp:2325
+#: libs/ui/KisMainWindow.cpp:2230 libs/ui/KisMainWindow.cpp:2310
 #, kde-format
 msgid ""
 "Could not finish import animation:\n"
@@ -36680,40 +36698,40 @@ msgstr ""
 "Ne eblis fini importadon de animacio:\n"
 "%1"
 
-#: libs/ui/KisMainWindow.cpp:2306
+#: libs/ui/KisMainWindow.cpp:2291
 #, kde-format
 msgid "Failed to create new document. Animation import aborted."
 msgstr "Malsukcesis krei novan dokumenton. Animacia importo ĉesigita."
 
-#: libs/ui/KisMainWindow.cpp:2755
+#: libs/ui/KisMainWindow.cpp:2740
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Import Workspace..."
 msgstr "&Importi Laborspacon..."
 
-#: libs/ui/KisMainWindow.cpp:2770
+#: libs/ui/KisMainWindow.cpp:2755
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&New Workspace..."
 msgstr "&Nova Laborspaco..."
 
-#: libs/ui/KisMainWindow.cpp:2774
+#: libs/ui/KisMainWindow.cpp:2759
 #, kde-format
 msgctxt "@title:window"
 msgid "New Workspace..."
 msgstr "Nova Laborspaco..."
 
-#: libs/ui/KisMainWindow.cpp:2818
+#: libs/ui/KisMainWindow.cpp:2803
 #, kde-format
 msgid "&%1 %2"
 msgstr "&%1 %2"
 
-#: libs/ui/KisMainWindow.cpp:2821
+#: libs/ui/KisMainWindow.cpp:2806
 #, kde-format
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: libs/ui/KisMainWindow.cpp:2990
+#: libs/ui/KisMainWindow.cpp:2975
 #, kde-format
 msgid ""
 "The Krita LittleCMS color management plugin is not installed. Krita will "
@@ -36722,19 +36740,19 @@ msgstr ""
 "La kromadministrado de koloro Krita LittleCMS ne estas instalita. Krita "
 "ĉesos nun."
 
-#: libs/ui/KisMainWindow.cpp:3006
+#: libs/ui/KisMainWindow.cpp:2991
 #, kde-format
 msgctxt "@title:window"
 msgid "Installation error"
 msgstr "Instala eraro"
 
-#: libs/ui/KisMainWindow.cpp:3119
+#: libs/ui/KisMainWindow.cpp:3104
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Themes"
 msgstr "E&tosoj"
 
-#: libs/ui/KisMainWindow.cpp:3205
+#: libs/ui/KisMainWindow.cpp:3190
 #, kde-format
 msgid "Expanding Spacer"
 msgstr "Vastiĝanta Spacer"
@@ -37130,35 +37148,35 @@ msgstr "Sed Soft Proofing ankoraŭ estas for."
 msgid "Gamut Warnings turned off."
 msgstr "Gamut-Avertoj malŝaltitaj."
 
-#: libs/ui/KisViewManager.cpp:811
+#: libs/ui/KisViewManager.cpp:809
 #, kde-format
 msgid "Active Author Profile"
 msgstr "Aktiva Aŭtora Profilo"
 
-#: libs/ui/KisViewManager.cpp:941
+#: libs/ui/KisViewManager.cpp:933
 #, kde-format
 msgid "%1 (Copy)"
 msgstr "%1 (Kopio)"
 
-#: libs/ui/KisViewManager.cpp:1067 libs/ui/KisViewManager.cpp:1135
+#: libs/ui/KisViewManager.cpp:1059 libs/ui/KisViewManager.cpp:1127
 #, kde-format
 msgid "Alternative names exhausted, try manually saving with a higher number"
 msgstr ""
 "Alternativaj nomoj elĉerpitaj, provu konservi permane kun pli alta nombro"
 
-#: libs/ui/KisViewManager.cpp:1067
+#: libs/ui/KisViewManager.cpp:1059
 #, kde-format
 msgctxt "@title:window"
 msgid "Couldn't save incremental version"
 msgstr "Ne eblis konservi pliigan version"
 
-#: libs/ui/KisViewManager.cpp:1135
+#: libs/ui/KisViewManager.cpp:1127
 #, kde-format
 msgctxt "@title:window"
 msgid "Couldn't save incremental backup"
 msgstr "Ne eblis konservi pliigan sekurkopion"
 
-#: libs/ui/KisViewManager.cpp:1419
+#: libs/ui/KisViewManager.cpp:1411
 #, kde-format
 msgid ""
 "Going into Canvas-Only mode.\n"
@@ -37167,13 +37185,13 @@ msgstr ""
 "Enirante nur Canvas-reĝimon.\n"
 "Premu %1 por reiri."
 
-#: libs/ui/KisViewManager.cpp:1489
+#: libs/ui/KisViewManager.cpp:1481
 #, kde-format
 msgctxt "@title:window resource folder"
 msgid "Open Resource Folder"
 msgstr "Malfermi Rimedan Dosierujon"
 
-#: libs/ui/KisViewManager.cpp:1493
+#: libs/ui/KisViewManager.cpp:1485
 #, kde-format
 msgctxt "@info resource folder"
 msgid ""
@@ -37197,19 +37215,19 @@ msgstr ""
 "<p><b>Privata aplika loko</b>:<br/> \n"
 "%2</p>"
 
-#: libs/ui/KisViewManager.cpp:1508
+#: libs/ui/KisViewManager.cpp:1500
 #, kde-format
 msgctxt "@action:button resource folder"
 msgid "Open in &user AppData"
 msgstr "Malfermi en AppData de &uzanto"
 
-#: libs/ui/KisViewManager.cpp:1509
+#: libs/ui/KisViewManager.cpp:1501
 #, kde-format
 msgctxt "@action:button resource folder"
 msgid "Open in &private app location"
 msgstr "Malfermi en &privata aplikloko"
 
-#: libs/ui/KisViewManager.cpp:1657 libs/ui/KisViewManager.cpp:1675
+#: libs/ui/KisViewManager.cpp:1649 libs/ui/KisViewManager.cpp:1667
 #, kde-format
 msgctxt "choice for author profile"
 msgid "Anonymous"
@@ -40486,25 +40504,29 @@ msgstr ""
 "en/general_concepts/colors/color_managed_workflow.html\">Pliaj informoj</a></"
 "p></body></html>"
 
-#: libs/ui/widgets/KoDualColorButton.cpp:465
+#: libs/ui/widgets/KoBackgroundColour.cpp:51
+#: libs/ui/widgets/KoDualColorButton.cpp:468
+#, kde-format
+msgid "Background color selector"
+msgstr "Fonkolorelektilo"
+
+#: libs/ui/widgets/KoDualColorButton.cpp:457
+#: libs/ui/widgets/KoForegroundColour.cpp:50
 #, kde-format
 msgid "Foreground color selector"
 msgstr "Malantaŭa kolorelektilo"
 
-#: libs/ui/widgets/KoDualColorButton.cpp:468
+#: libs/ui/widgets/KoDualColorButton.cpp:460
+#: libs/ui/widgets/KoResetBgFgColours.cpp:43
 #, kde-format
 msgid "Set foreground and background colors to black and white"
 msgstr "Agordi antaŭajn kaj fonajn kolorojn al nigra kaj blanka"
 
-#: libs/ui/widgets/KoDualColorButton.cpp:473
+#: libs/ui/widgets/KoDualColorButton.cpp:465
+#: libs/ui/widgets/KoSwapBgFgColours.cpp:42
 #, kde-format
 msgid "Swap foreground and background colors"
 msgstr "Interŝanĝi malfonan kaj fonan kolorojn"
-
-#: libs/ui/widgets/KoDualColorButton.cpp:476
-#, kde-format
-msgid "Background color selector"
-msgstr "Fonkolorelektilo"
 
 #: libs/ui/widgets/KoFillConfigWidget.cpp:261
 #, kde-format
@@ -66524,12 +66546,16 @@ msgstr "Montri Antaŭrigardon"
 msgid "Show Guideline"
 msgstr "Montri Gvidlinion"
 
-#: plugins/tools/basictools/kis_tool_line.cc:465
-#, kde-format
-msgid "Length: %1 px"
+#: plugins/tools/basictools/kis_tool_line.cc:467
+#, fuzzy, kde-format
+#| msgid "Length: %1 px"
+msgctxt "%1=length in pixels %2=angle in degrees"
+msgid ""
+"Length: %1 px\n"
+"Angle: %2°"
 msgstr "Longo: %1 px"
 
-#: plugins/tools/basictools/kis_tool_line.cc:483
+#: plugins/tools/basictools/kis_tool_line.cc:487
 #, kde-format
 msgid ""
 "Alt+Drag will move the origin of the currently displayed line around, Shift"
@@ -70809,6 +70835,12 @@ msgstr ""
 "Ŝanĝu inter plena gamo kaj subintervalo.\n"
 "Plena gamo: [%1, %2]\n"
 "Subgamo: [%3, %4]"
+
+#~ msgid "&Open Foreground color selector"
+#~ msgstr "Malfermi la k&olorelektilon de malfono"
+
+#~ msgid "&Open Background color selector"
+#~ msgstr "Malfermi F&onkolorelektilon"
 
 #, fuzzy
 #~| msgid "Selection Actions"

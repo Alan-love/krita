@@ -53,7 +53,7 @@ msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-18 00:42+0000\n"
-"PO-Revision-Date: 2026-07-14 07:19+0200\n"
+"PO-Revision-Date: 2026-07-18 08:07+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -34304,32 +34304,24 @@ msgid "&Choose foreground and background colors"
 msgstr "&Välj förgrunds- och bakgrundsfärger"
 
 #: libs/ui/kis_control_frame.cpp:122
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "&Choose Foreground Color"
+#, kde-format
 msgid "&Choose foreground colour"
-msgstr "Välj förgrunds&färg"
+msgstr "&Välj förgrundsfärg"
 
 #: libs/ui/kis_control_frame.cpp:141
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "&Choose Background Color"
+#, kde-format
 msgid "&Choose background colour"
-msgstr "Välj bakgrunds&färg"
+msgstr "%Välj bakgrundsfärg"
 
 #: libs/ui/kis_control_frame.cpp:160
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "Swap Foreground and Background Colors"
+#, kde-format
 msgid "&Swap Foreground and Background Colors"
-msgstr "Byt förgrunds- och bakgrundsfärger"
+msgstr "&Byt förgrunds- och bakgrundsfärger"
 
 #: libs/ui/kis_control_frame.cpp:179
-#, fuzzy, kde-format
-#| msgctxt "(qtundo-format) action"
-#| msgid "Reset Foreground and Background Color"
+#, kde-format
 msgid "&reset Foreground and Background Colors"
-msgstr "Återställ förgrunds- och bakgrundsfärg"
+msgstr "Åter&ställ förgrunds- och bakgrundsfärg"
 
 #: libs/ui/kis_control_frame.cpp:195
 #, kde-format
@@ -66014,13 +66006,14 @@ msgid "Show Guideline"
 msgstr "Visa hjälplinjer"
 
 #: plugins/tools/basictools/kis_tool_line.cc:467
-#, fuzzy, kde-format
-#| msgid "Length: %1 px"
+#, kde-format
 msgctxt "%1=length in pixels %2=angle in degrees"
 msgid ""
 "Length: %1 px\n"
 "Angle: %2°"
-msgstr "Längd: %1 bildpunkter"
+msgstr ""
+"Längd: %1 bildpunkter\n"
+"Vinkel: %2°"
 
 #: plugins/tools/basictools/kis_tool_line.cc:487
 #, kde-format

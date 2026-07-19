@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-18 00:42+0000\n"
-"PO-Revision-Date: 2026-07-14 09:07+0200\n"
+"PO-Revision-Date: 2026-07-18 09:53+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -34467,32 +34467,24 @@ msgid "&Choose foreground and background colors"
 msgstr "Es&colliu els colors de primer pla i de fons"
 
 #: libs/ui/kis_control_frame.cpp:122
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "&Choose Foreground Color"
+#, kde-format
 msgid "&Choose foreground colour"
 msgstr "Tria el &color de primer pla"
 
 #: libs/ui/kis_control_frame.cpp:141
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "&Choose Background Color"
+#, kde-format
 msgid "&Choose background colour"
 msgstr "Tria el &color de fons"
 
 #: libs/ui/kis_control_frame.cpp:160
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "Swap Foreground and Background Colors"
+#, kde-format
 msgid "&Swap Foreground and Background Colors"
-msgstr "Intercanvia els colors de primer pla i de fons"
+msgstr "&Intercanvia els colors de primer pla i de fons"
 
 #: libs/ui/kis_control_frame.cpp:179
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "Swap Foreground and Background Colors"
+#, kde-format
 msgid "&reset Foreground and Background Colors"
-msgstr "Intercanvia els colors de primer pla i de fons"
+msgstr "&Reinicia els colors de primer pla i de fons"
 
 #: libs/ui/kis_control_frame.cpp:195
 #, kde-format
@@ -66404,13 +66396,14 @@ msgid "Show Guideline"
 msgstr "Mostra les línies guia"
 
 #: plugins/tools/basictools/kis_tool_line.cc:467
-#, fuzzy, kde-format
-#| msgid "Length: %1 px"
+#, kde-format
 msgctxt "%1=length in pixels %2=angle in degrees"
 msgid ""
 "Length: %1 px\n"
 "Angle: %2°"
-msgstr "Llargària: %1 px"
+msgstr ""
+"Llargària: %1 px\n"
+"Angle: %2°"
 
 #: plugins/tools/basictools/kis_tool_line.cc:487
 #, kde-format
@@ -70581,9 +70574,3 @@ msgstr ""
 "Canvia entre interval complet i subinterval.\n"
 "Interval complet: [%1, %2]\n"
 "Subinterval: [%3, %4]"
-
-#~ msgid "&Open Foreground color selector"
-#~ msgstr "O&bri el selector de color del primer pla"
-
-#~ msgid "&Open Background color selector"
-#~ msgstr "O&bri el selector de color del fons"

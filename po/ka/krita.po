@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-18 00:42+0000\n"
-"PO-Revision-Date: 2026-07-15 06:02+0200\n"
+"PO-Revision-Date: 2026-07-18 06:11+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -33999,32 +33999,24 @@ msgid "&Choose foreground and background colors"
 msgstr "წინა &პლანისა და ფონის ფერების არჩევა"
 
 #: libs/ui/kis_control_frame.cpp:122
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "&Choose Foreground Color"
+#, kde-format
 msgid "&Choose foreground colour"
 msgstr "აირჩიეთ წინა პლანის &ფერი"
 
 #: libs/ui/kis_control_frame.cpp:141
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "&Choose Background Color"
+#, kde-format
 msgid "&Choose background colour"
 msgstr "აი&რჩიეთ ფონის ფერი"
 
 #: libs/ui/kis_control_frame.cpp:160
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "Swap Foreground and Background Colors"
+#, kde-format
 msgid "&Swap Foreground and Background Colors"
 msgstr "წინა პლანის და ფონის ფერების მიმოცვლა"
 
 #: libs/ui/kis_control_frame.cpp:179
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "Swap Foreground and Background Colors"
+#, kde-format
 msgid "&reset Foreground and Background Colors"
-msgstr "წინა პლანის და ფონის ფერების მიმოცვლა"
+msgstr "წინა პლანის და ფონის ფერების ჩამოყ&რა"
 
 #: libs/ui/kis_control_frame.cpp:195
 #, kde-format
@@ -64970,13 +64962,14 @@ msgid "Show Guideline"
 msgstr "მიმმართველი ხაზის ჩვენება"
 
 #: plugins/tools/basictools/kis_tool_line.cc:467
-#, fuzzy, kde-format
-#| msgid "Length: %1 px"
+#, kde-format
 msgctxt "%1=length in pixels %2=angle in degrees"
 msgid ""
 "Length: %1 px\n"
 "Angle: %2°"
-msgstr "სიგრძე: %1 პიქს"
+msgstr ""
+"სიგრძე: %1 პიქს\n"
+"კუთხე: %2°"
 
 #: plugins/tools/basictools/kis_tool_line.cc:487
 #, kde-format

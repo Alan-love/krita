@@ -22,7 +22,7 @@ msgstr ""
 "Project-Id-Version: Krita trunk\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-18 00:42+0000\n"
-"PO-Revision-Date: 2026-07-15 15:07+0200\n"
+"PO-Revision-Date: 2026-07-18 08:32+0200\n"
 "Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -34276,32 +34276,24 @@ msgid "&Choose foreground and background colors"
 msgstr "&Izberi barve ospredja in ozadja"
 
 #: libs/ui/kis_control_frame.cpp:122
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "&Choose Foreground Color"
+#, kde-format
 msgid "&Choose foreground colour"
 msgstr "&Izberi barvo ospredja"
 
 #: libs/ui/kis_control_frame.cpp:141
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "&Choose Background Color"
+#, kde-format
 msgid "&Choose background colour"
 msgstr "&Izberi barvo ozadja"
 
 #: libs/ui/kis_control_frame.cpp:160
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "Swap Foreground and Background Colors"
+#, kde-format
 msgid "&Swap Foreground and Background Colors"
-msgstr "Zamenjaj barvi ospredja in ozadja"
+msgstr "&Zamenjaj barvi ospredja in ozadja"
 
 #: libs/ui/kis_control_frame.cpp:179
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "Swap Foreground and Background Colors"
+#, kde-format
 msgid "&reset Foreground and Background Colors"
-msgstr "Zamenjaj barvi ospredja in ozadja"
+msgstr "&Ponastavi barvi ospredja in ozadja"
 
 #: libs/ui/kis_control_frame.cpp:195
 #, kde-format
@@ -66064,13 +66056,14 @@ msgid "Show Guideline"
 msgstr "Pokaži vodilo"
 
 #: plugins/tools/basictools/kis_tool_line.cc:467
-#, fuzzy, kde-format
-#| msgid "Length: %1 px"
+#, kde-format
 msgctxt "%1=length in pixels %2=angle in degrees"
 msgid ""
 "Length: %1 px\n"
 "Angle: %2°"
-msgstr "Dolžina: %1 slik. točk"
+msgstr ""
+"Dolžina: %1 slik. točk\n"
+"Kot: %2°"
 
 #: plugins/tools/basictools/kis_tool_line.cc:487
 #, kde-format
@@ -70225,9 +70218,3 @@ msgstr ""
 "Preklopite med polnim obsegom in podobsegom.\n"
 "Celoten obseg: [%1, %2]\n"
 "Podobseg: [%3, %4]"
-
-#~ msgid "&Open Foreground color selector"
-#~ msgstr "&Odpri izbirnik barv ospredja"
-
-#~ msgid "&Open Background color selector"
-#~ msgstr "&Odpri izbirnik barv ozadja"

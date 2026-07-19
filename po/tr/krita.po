@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-18 00:42+0000\n"
-"PO-Revision-Date: 2026-07-14 20:23+0300\n"
+"PO-Revision-Date: 2026-07-18 20:04+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -34284,32 +34284,24 @@ msgid "&Choose foreground and background colors"
 msgstr "Ö&n plan ve arka plan renklerini seç"
 
 #: libs/ui/kis_control_frame.cpp:122
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "&Choose Foreground Color"
+#, kde-format
 msgid "&Choose foreground colour"
 msgstr "Ön Plan &Rengi Seç"
 
 #: libs/ui/kis_control_frame.cpp:141
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "&Choose Background Color"
+#, kde-format
 msgid "&Choose background colour"
 msgstr "&Arka Plan Rengi Seç"
 
 #: libs/ui/kis_control_frame.cpp:160
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "Swap Foreground and Background Colors"
+#, kde-format
 msgid "&Swap Foreground and Background Colors"
-msgstr "Ön Plan ve Arka Plan Renklerini Yer Değiştir"
+msgstr "Ö&n/Arka Plan Renklerini Yer Değiştir"
 
 #: libs/ui/kis_control_frame.cpp:179
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "Swap Foreground and Background Colors"
+#, kde-format
 msgid "&reset Foreground and Background Colors"
-msgstr "Ön Plan ve Arka Plan Renklerini Yer Değiştir"
+msgstr "Ön/Arka &Plan Renklerini Sıfırla"
 
 #: libs/ui/kis_control_frame.cpp:195
 #, kde-format
@@ -65992,13 +65984,14 @@ msgid "Show Guideline"
 msgstr "Kılavuz çizgisi göster"
 
 #: plugins/tools/basictools/kis_tool_line.cc:467
-#, fuzzy, kde-format
-#| msgid "Length: %1 px"
+#, kde-format
 msgctxt "%1=length in pixels %2=angle in degrees"
 msgid ""
 "Length: %1 px\n"
 "Angle: %2°"
-msgstr "Uzunluk: %1 pks"
+msgstr ""
+"Uzunluk: %1 pks\n"
+"Açı: %2°"
 
 #: plugins/tools/basictools/kis_tool_line.cc:487
 #, kde-format

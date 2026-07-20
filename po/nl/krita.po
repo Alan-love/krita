@@ -63,7 +63,7 @@ msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-18 00:42+0000\n"
-"PO-Revision-Date: 2026-07-14 09:37+0200\n"
+"PO-Revision-Date: 2026-07-18 13:07+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -34453,32 +34453,24 @@ msgid "&Choose foreground and background colors"
 msgstr "Voor- en achtergrondkleuren kiezen"
 
 #: libs/ui/kis_control_frame.cpp:122
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "&Choose Foreground Color"
+#, kde-format
 msgid "&Choose foreground colour"
 msgstr "Voorgrondkleur &kiezen"
 
 #: libs/ui/kis_control_frame.cpp:141
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "&Choose Background Color"
+#, kde-format
 msgid "&Choose background colour"
 msgstr "Achtergrondkleur &kiezen"
 
 #: libs/ui/kis_control_frame.cpp:160
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "Swap Foreground and Background Colors"
+#, kde-format
 msgid "&Swap Foreground and Background Colors"
-msgstr "Voor- en achtergrondkleuren omwisselen"
+msgstr "Voor- en achtergrondkleuren &omwisselen"
 
 #: libs/ui/kis_control_frame.cpp:179
-#, fuzzy, kde-format
-#| msgctxt "(qtundo-format) action"
-#| msgid "Reset Foreground and Background Color"
+#, kde-format
 msgid "&reset Foreground and Background Colors"
-msgstr "Voor- en achtergrondkleur herstellen"
+msgstr "Voor- en achtergrondkleur he&rstellen"
 
 #: libs/ui/kis_control_frame.cpp:195
 #, kde-format
@@ -66350,13 +66342,14 @@ msgid "Show Guideline"
 msgstr "Hulplijn tonen"
 
 #: plugins/tools/basictools/kis_tool_line.cc:467
-#, fuzzy, kde-format
-#| msgid "Length: %1 px"
+#, kde-format
 msgctxt "%1=length in pixels %2=angle in degrees"
 msgid ""
 "Length: %1 px\n"
 "Angle: %2°"
-msgstr "Lengte: %1 px"
+msgstr ""
+"Lengte: %1 px\n"
+"Hoek: %2°"
 
 #: plugins/tools/basictools/kis_tool_line.cc:487
 #, kde-format

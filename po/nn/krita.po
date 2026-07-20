@@ -69864,9 +69864,3 @@ msgid ""
 "Full range: [%1, %2]\n"
 "Subrange: [%3, %4]"
 msgstr ""
-
-#~ msgid "&Open Foreground color selector"
-#~ msgstr "&Vel framgrunnsfarge"
-
-#~ msgid "&Open Background color selector"
-#~ msgstr "&Vel bakgrunnsfarge"

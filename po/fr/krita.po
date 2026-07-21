@@ -103,7 +103,7 @@ msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-18 00:42+0000\n"
-"PO-Revision-Date: 2026-07-16 14:25+0200\n"
+"PO-Revision-Date: 2026-07-19 09:39+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -34632,32 +34632,24 @@ msgid "&Choose foreground and background colors"
 msgstr "Séle&ctionner les couleurs de premier plan et d'arrière-plan"
 
 #: libs/ui/kis_control_frame.cpp:122
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "&Choose Foreground Color"
+#, kde-format
 msgid "&Choose foreground colour"
 msgstr "Sélectionner une &couleur du premier plan"
 
 #: libs/ui/kis_control_frame.cpp:141
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "&Choose Background Color"
+#, kde-format
 msgid "&Choose background colour"
 msgstr "Sélectionner une &couleur d'arrière-plan"
 
 #: libs/ui/kis_control_frame.cpp:160
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "Swap Foreground and Background Colors"
+#, kde-format
 msgid "&Swap Foreground and Background Colors"
-msgstr "Inverser les couleurs de premier plan et d'arrière-plan"
+msgstr "Inver&ser les couleurs de premier plan et d'arrière-plan"
 
 #: libs/ui/kis_control_frame.cpp:179
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "Reset Foreground and Background Color"
+#, kde-format
 msgid "&reset Foreground and Background Colors"
-msgstr "Réinitialiser les couleurs de premier plan et d'arrière-plan"
+msgstr "&Réinitialiser les couleurs de premier plan et d'arrière-plan"
 
 #: libs/ui/kis_control_frame.cpp:195
 #, kde-format
@@ -66766,13 +66758,14 @@ msgid "Show Guideline"
 msgstr "Afficher les guides"
 
 #: plugins/tools/basictools/kis_tool_line.cc:467
-#, fuzzy, kde-format
-#| msgid "Length: %1 px"
+#, kde-format
 msgctxt "%1=length in pixels %2=angle in degrees"
 msgid ""
 "Length: %1 px\n"
 "Angle: %2°"
-msgstr "Longueur : %1 px"
+msgstr ""
+"Longueur : %1 px\n"
+"Angle : %2 °"
 
 #: plugins/tools/basictools/kis_tool_line.cc:487
 #, kde-format

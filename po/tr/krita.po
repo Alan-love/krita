@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-18 00:42+0000\n"
-"PO-Revision-Date: 2026-07-18 20:04+0300\n"
+"PO-Revision-Date: 2026-07-21 21:01+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -35737,7 +35737,7 @@ msgstr ""
 #: libs/ui/KisDocument.cpp:903
 #, kde-format
 msgid "Could not start saving %1. Image is busy"
-msgstr "%1 kaydedilmeye başlanamadı. Görsel meşgul."
+msgstr "%1 kaydedilmeye başlanamadı. Görsel meşgûl."
 
 #: libs/ui/KisDocument.cpp:908
 #, kde-format
@@ -35788,7 +35788,7 @@ msgstr "Kendiliğinden kaydediliyor…"
 #: libs/ui/KisDocument.cpp:1553
 #, kde-format
 msgid "Autosaving postponed: document is busy..."
-msgstr "Kendiliğinden kaydetme ertelendi: Belge meşgul…"
+msgstr "Kendiliğinden kaydetme ertelendi: Belge meşgûl…"
 
 #: libs/ui/KisDocument.cpp:1696
 #, kde-format
@@ -36015,7 +36015,7 @@ msgstr "Bilinmeyen hata."
 #: libs/ui/KisImportExportErrorCode.cpp:182
 #, kde-format
 msgid "Image is busy."
-msgstr "Görsel meşgul."
+msgstr "Görsel meşgûl."
 
 #: libs/ui/KisImportExportFilter.cpp:166
 #, kde-format

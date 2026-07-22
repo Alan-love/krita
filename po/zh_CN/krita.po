@@ -33934,32 +33934,24 @@ msgid "&Choose foreground and background colors"
 msgstr "拾取前景/背景色(&C)"
 
 #: libs/ui/kis_control_frame.cpp:122
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "&Choose Foreground Color"
+#, kde-format
 msgid "&Choose foreground colour"
 msgstr "选择前景色(&C)"
 
 #: libs/ui/kis_control_frame.cpp:141
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "&Choose Background Color"
+#, kde-format
 msgid "&Choose background colour"
 msgstr "选择背景色(&C)"
 
 #: libs/ui/kis_control_frame.cpp:160
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "Swap Foreground and Background Colors"
+#, kde-format
 msgid "&Swap Foreground and Background Colors"
-msgstr "前景/背景色对换"
+msgstr "对换前景色和背景色(&S)"
 
 #: libs/ui/kis_control_frame.cpp:179
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "Swap Foreground and Background Colors"
+#, kde-format
 msgid "&reset Foreground and Background Colors"
-msgstr "前景/背景色对换"
+msgstr "重置前景色和背景色(&R)"
 
 #: libs/ui/kis_control_frame.cpp:195
 #, kde-format
@@ -65132,13 +65124,14 @@ msgid "Show Guideline"
 msgstr "显示引导线"
 
 #: plugins/tools/basictools/kis_tool_line.cc:467
-#, fuzzy, kde-format
-#| msgid "Length: %1 px"
+#, kde-format
 msgctxt "%1=length in pixels %2=angle in degrees"
 msgid ""
 "Length: %1 px\n"
 "Angle: %2°"
-msgstr "长度：%1 像素"
+msgstr ""
+"长度：%1 像素\n"
+"角度：%2°"
 
 #: plugins/tools/basictools/kis_tool_line.cc:487
 #, kde-format
@@ -69228,9 +69221,3 @@ msgstr ""
 "切换全范围/子范围模式。\n"
 "全范围：[%1, %2]\n"
 "子范围：[%3, %4]"
-
-#~ msgid "&Open Foreground color selector"
-#~ msgstr "打开前景色拾色器(&O)"
-
-#~ msgid "&Open Background color selector"
-#~ msgstr "打开背景色拾色器(&O)"

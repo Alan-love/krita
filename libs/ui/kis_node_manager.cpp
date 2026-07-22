@@ -400,8 +400,6 @@ void KisNodeManager::setup(KisKActionCollection * actionCollection, KisActionMan
 
     CONVERT_NODE_ACTION_2("convert_to_transparency_mask", "KisTransparencyMask", QStringList() << "KisTransparencyMask" << "KisColorizeMask");
 
-    CONVERT_NODE_ACTION("convert_to_animated", "animated");
-
     CONVERT_NODE_ACTION_2("convert_to_file_layer", "KisFileLayer", QStringList() << "KisFileLayer" << "KisCloneLayer");
 
     connect(&m_d->nodeConversionSignalMapper, SIGNAL(mapped(QString)),

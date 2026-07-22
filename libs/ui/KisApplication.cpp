@@ -245,16 +245,17 @@ KisApplication::KisApplication(const QString &key, int &argc, char **argv)
            // if style is set from config, try to load that
     KisConfig cfg(true);
     QString widgetStyleFromConfig = cfg.widgetStyle();
+    QString defaultStyle = style()->objectName().toLower();
     if (!widgetStyleFromConfig.isEmpty()) {
         qApp->setStyle(widgetStyleFromConfig);
 #if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-    } else if (style()->objectName().toLower() == "macintosh") {
-         // if no configured style on macOS, default to Fusion
+    } else if (defaultStyle == "macintosh" || defaultStyle == "windowsvista") {
+         // default to Fusion instead of styles that use native theming
         qApp->setStyle("fusion");
     }
 #else
-    } else if (style()->objectName().toLower() == "macos") {
-        // if no configured style on macOS, default to Fusion
+    } else if (style()->objectName().toLower() == "macos" || defaultStyle == "windowsvista") {
+        // default to Fusion instead of styles that use native theming
         qApp->setStyle("fusion");
     }
 #endif

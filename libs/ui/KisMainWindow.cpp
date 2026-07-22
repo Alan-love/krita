@@ -2556,12 +2556,13 @@ void KisMainWindow::slotUpdateWidgetStyle()
 
             // When switching to a style that uses system colors, reset the theme
 #ifndef Q_OS_HAIKU
+            QString currentStyle = qApp->style()->objectName();
 #if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
-            if (qApp->style()->objectName() == "macintosh") {
+            if (currentStyle == "macintosh" || currentStyle == "windowsvista") {
                 d->themeManager->setCurrentTheme("System");
             }
 #else
-            if (qApp->style()->name() == "macos") {
+            if (currentStyle || currentStyle == "windowsvista") {
                 d->themeManager->setCurrentTheme("System");
             }
 #endif

@@ -86,7 +86,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-18 00:42+0000\n"
+"POT-Creation-Date: 2026-07-23 00:41+0000\n"
 "PO-Revision-Date: 2026-01-19 18:02+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -13106,27 +13106,8 @@ msgctxt "action"
 msgid "Convert child layers into animation frames"
 msgstr "Komposiittitila"
 
-#. i18n: context: text @ Action (convert_to_animated), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3058
-#, fuzzy, kde-format
-#| msgctxt "(qtundo-format)"
-#| msgid "Convert to an animated layer"
-msgctxt "action"
-msgid "Convert to &Animated Layer"
-msgstr "Muunna animoiduksi tasoksi"
-
-#. i18n: context: toolTip @ Action (convert_to_animated), Actions (Layers), ActionCollection (Krita)
-#. i18n: context: iconText @ Action (convert_to_animated), Actions (Layers), ActionCollection (Krita)
-#. i18n: context: toolTip @ Action (convert_to_animated), Actions (Layers), ActionCollection (Krita)
-#. i18n: context: iconText @ Action (convert_to_animated), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3060 krita/krita.action:3061
-#, fuzzy, kde-format
-msgctxt "action"
-msgid "Convert layer into animation frames"
-msgstr "Komposiittitila"
-
 #. i18n: context: text @ Action (convert_to_file_layer), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3070
+#: krita/krita.action:3058
 #, fuzzy, kde-format
 #| msgctxt "(qtundo-format)"
 #| msgid "Convert to a file layer"
@@ -13135,14 +13116,14 @@ msgid "Convert to &File Layer..."
 msgstr "Muunna tiedostotasoksi"
 
 #. i18n: context: toolTip @ Action (convert_to_file_layer), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3072
+#: krita/krita.action:3060
 #, kde-format
 msgctxt "action"
 msgid "Saves out the layers into a new image and then references that image."
 msgstr ""
 
 #. i18n: context: iconText @ Action (convert_to_file_layer), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3073
+#: krita/krita.action:3061
 #, fuzzy, kde-format
 #| msgctxt "(qtundo-format)"
 #| msgid "Convert to a file layer"
@@ -13151,7 +13132,7 @@ msgid "Convert to File Layer"
 msgstr "Muunna tiedostotasoksi"
 
 #. i18n: context: text @ Action (import_layer_from_file), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3082
+#: krita/krita.action:3070
 #, kde-format
 msgctxt "action"
 msgid "I&mport Layer..."
@@ -13161,14 +13142,14 @@ msgstr "&Tuo taso…"
 #. i18n: context: iconText @ Action (import_layer_from_file), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (import_layer_from_file), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (import_layer_from_file), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3084 krita/krita.action:3085
+#: krita/krita.action:3072 krita/krita.action:3073
 #, kde-format
 msgctxt "action"
 msgid "Import Layer"
 msgstr "Tuo taso"
 
 #. i18n: context: text @ Action (import_layer_as_paint_layer), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3094
+#: krita/krita.action:3082
 #, kde-format
 msgctxt "action"
 msgid "&as Paint Layer..."
@@ -13178,14 +13159,14 @@ msgstr "&maalitasona…"
 #. i18n: context: iconText @ Action (import_layer_as_paint_layer), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (import_layer_as_paint_layer), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (import_layer_as_paint_layer), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3096 krita/krita.action:3097
+#: krita/krita.action:3084 krita/krita.action:3085
 #, kde-format
 msgctxt "action"
 msgid "as Paint Layer"
 msgstr "maalitasona"
 
 #. i18n: context: text @ Action (import_layer_as_transparency_mask), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3106
+#: krita/krita.action:3094
 #, kde-format
 msgctxt "action"
 msgid "as &Transparency Mask..."
@@ -13195,14 +13176,14 @@ msgstr "&läpinäkyvyysmaskina"
 #. i18n: context: iconText @ Action (import_layer_as_transparency_mask), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (import_layer_as_transparency_mask), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (import_layer_as_transparency_mask), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3108 krita/krita.action:3109
+#: krita/krita.action:3096 krita/krita.action:3097
 #, kde-format
 msgctxt "action"
 msgid "as Transparency Mask"
 msgstr "läpinäkyvyysmaskina"
 
 #. i18n: context: text @ Action (import_layer_as_filter_mask), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3118
+#: krita/krita.action:3106
 #, kde-format
 msgctxt "action"
 msgid "as &Filter Mask..."
@@ -13212,14 +13193,14 @@ msgstr "&suodinmaskina"
 #. i18n: context: iconText @ Action (import_layer_as_filter_mask), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (import_layer_as_filter_mask), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (import_layer_as_filter_mask), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3120 krita/krita.action:3121
+#: krita/krita.action:3108 krita/krita.action:3109
 #, kde-format
 msgctxt "action"
 msgid "as Filter Mask"
 msgstr "suodinmaskina"
 
 #. i18n: context: text @ Action (import_layer_as_selection_mask), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3130
+#: krita/krita.action:3118
 #, kde-format
 msgctxt "action"
 msgid "as &Selection Mask..."
@@ -13229,14 +13210,14 @@ msgstr "&valintamaskina"
 #. i18n: context: iconText @ Action (import_layer_as_selection_mask), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (import_layer_as_selection_mask), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (import_layer_as_selection_mask), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3132 krita/krita.action:3133
+#: krita/krita.action:3120 krita/krita.action:3121
 #, kde-format
 msgctxt "action"
 msgid "as Selection Mask"
 msgstr "valintamaskina"
 
 #. i18n: context: text @ Action (convert_to_paint_layer), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3142
+#: krita/krita.action:3130
 #, fuzzy, kde-format
 #| msgctxt "(qtundo-format)"
 #| msgid "Convert to a Paint Layer"
@@ -13250,14 +13231,14 @@ msgstr ""
 #. i18n: context: iconText @ Action (convert_to_paint_layer), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (convert_to_paint_layer), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (convert_to_paint_layer), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3144 krita/krita.action:3145
+#: krita/krita.action:3132 krita/krita.action:3133
 #, kde-format
 msgctxt "action"
 msgid "to Paint Layer"
 msgstr "maalitasoksi"
 
 #. i18n: context: text @ Action (convert_to_transparency_mask), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3154
+#: krita/krita.action:3142
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "to &Transparency Mask"
@@ -13269,14 +13250,14 @@ msgstr "&läpinäkyvyysmaskiksi"
 #. i18n: context: iconText @ Action (convert_to_transparency_mask), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (convert_to_transparency_mask), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (convert_to_transparency_mask), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3156 krita/krita.action:3157
+#: krita/krita.action:3144 krita/krita.action:3145
 #, kde-format
 msgctxt "action"
 msgid "to Transparency Mask"
 msgstr "läpinäkyvyysmaskiksi"
 
 #. i18n: context: text @ Action (convert_to_filter_mask), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3166
+#: krita/krita.action:3154
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "to &Filter Mask..."
@@ -13288,14 +13269,14 @@ msgstr "&suodinmaskiksi…"
 #. i18n: context: iconText @ Action (convert_to_filter_mask), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (convert_to_filter_mask), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (convert_to_filter_mask), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3168 krita/krita.action:3169
+#: krita/krita.action:3156 krita/krita.action:3157
 #, kde-format
 msgctxt "action"
 msgid "to Filter Mask"
 msgstr "suodinmaskiksi"
 
 #. i18n: context: text @ Action (convert_to_selection_mask), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3178
+#: krita/krita.action:3166
 #, fuzzy, kde-format
 #| msgctxt "(qtundo-format)"
 #| msgid "Convert to a Selection Mask"
@@ -13307,14 +13288,14 @@ msgstr "Muunna valintamaskiksi"
 #. i18n: context: iconText @ Action (convert_to_selection_mask), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (convert_to_selection_mask), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (convert_to_selection_mask), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3180 krita/krita.action:3181
+#: krita/krita.action:3168 krita/krita.action:3169
 #, kde-format
 msgctxt "action"
 msgid "to Selection Mask"
 msgstr "valintamaskiksi"
 
 #. i18n: context: text @ Action (split_alpha_into_mask), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3190
+#: krita/krita.action:3178
 #, kde-format
 msgctxt "action"
 msgid "&Alpha into Mask"
@@ -13324,14 +13305,14 @@ msgstr "&Alfa maskiksi"
 #. i18n: context: iconText @ Action (split_alpha_into_mask), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (split_alpha_into_mask), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (split_alpha_into_mask), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3192 krita/krita.action:3193
+#: krita/krita.action:3180 krita/krita.action:3181
 #, kde-format
 msgctxt "action"
 msgid "Alpha into Mask"
 msgstr "Alfa maskiksi"
 
 #. i18n: context: text @ Action (split_alpha_write), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3202
+#: krita/krita.action:3190
 #, kde-format
 msgctxt "action"
 msgid "&Write as Alpha"
@@ -13341,14 +13322,14 @@ msgstr "Kirjoita al&faksi"
 #. i18n: context: iconText @ Action (split_alpha_write), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (split_alpha_write), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (split_alpha_write), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3204 krita/krita.action:3205
+#: krita/krita.action:3192 krita/krita.action:3193
 #, kde-format
 msgctxt "action"
 msgid "Write as Alpha"
 msgstr "Kirjoita alfaksi"
 
 #. i18n: context: text @ Action (split_alpha_save_merged), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3214
+#: krita/krita.action:3202
 #, kde-format
 msgctxt "action"
 msgid "&Save Merged..."
@@ -13358,14 +13339,14 @@ msgstr "&Tallenna yhdistetty"
 #. i18n: context: iconText @ Action (split_alpha_save_merged), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (split_alpha_save_merged), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (split_alpha_save_merged), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3216 krita/krita.action:3217
+#: krita/krita.action:3204 krita/krita.action:3205
 #, kde-format
 msgctxt "action"
 msgid "Save Merged"
 msgstr "Tallenna yhdistetty"
 
 #. i18n: context: text @ Action (layersplit), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3226
+#: krita/krita.action:3214
 #, kde-format
 msgctxt "action"
 msgid "Split Layer..."
@@ -13375,14 +13356,14 @@ msgstr "Jaa taso…"
 #. i18n: context: iconText @ Action (layersplit), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (layersplit), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (layersplit), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3228 krita/krita.action:3229
+#: krita/krita.action:3216 krita/krita.action:3217
 #, kde-format
 msgctxt "action"
 msgid "Split Layer"
 msgstr "Jaa taso"
 
 #. i18n: context: text @ Action (waveletdecompose), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3238
+#: krita/krita.action:3226
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "&Wavelet Noise Reducer..."
@@ -13394,7 +13375,7 @@ msgstr "&Wavelet-kohinanvähentäjä…"
 #. i18n: context: iconText @ Action (waveletdecompose), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (waveletdecompose), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (waveletdecompose), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3240 krita/krita.action:3241
+#: krita/krita.action:3228 krita/krita.action:3229
 #, fuzzy, kde-format
 #| msgctxt "@item:inlistbox Noise Reduction"
 #| msgid "Wavelets"
@@ -13403,7 +13384,7 @@ msgid "Wavelet Decompose"
 msgstr "Aallokkeet"
 
 #. i18n: context: text @ Action (mirrorNodeX), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3250
+#: krita/krita.action:3238
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Mirror Layer Hori&zontally"
@@ -13415,7 +13396,7 @@ msgstr "Peilaa taso &vaakasuunnassa"
 #. i18n: context: iconText @ Action (mirrorNodeX), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (mirrorNodeX), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (mirrorNodeX), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3252 krita/krita.action:3253
+#: krita/krita.action:3240 krita/krita.action:3241
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Mirror Layer Horizontally"
@@ -13424,7 +13405,7 @@ msgid "Mirror Layers Horizontally"
 msgstr "Peilaa taso vaakasuunnassa"
 
 #. i18n: context: text @ Action (mirrorNodeY), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3262
+#: krita/krita.action:3250
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Mirror Layer &Vertically"
@@ -13436,7 +13417,7 @@ msgstr "Peilaa taso &pystysuunnassa"
 #. i18n: context: iconText @ Action (mirrorNodeY), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (mirrorNodeY), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (mirrorNodeY), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3264 krita/krita.action:3265
+#: krita/krita.action:3252 krita/krita.action:3253
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Mirror Layer Vertically"
@@ -13445,7 +13426,7 @@ msgid "Mirror Layers Vertically"
 msgstr "Peilaa taso pystysuunnassa"
 
 #. i18n: context: text @ Action (rotatelayer), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3274
+#: krita/krita.action:3262
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "&Rotate Layer..."
@@ -13457,7 +13438,7 @@ msgstr "Kie&rrä tasoa…"
 #. i18n: context: iconText @ Action (rotatelayer), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (rotatelayer), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (rotatelayer), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3276 krita/krita.action:3277
+#: krita/krita.action:3264 krita/krita.action:3265
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Rotate Layer"
@@ -13466,7 +13447,7 @@ msgid "Rotate Layers"
 msgstr "Kierrä tasoa"
 
 #. i18n: context: text @ Action (rotateLayerCW90), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3286
+#: krita/krita.action:3274
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Rotate &Layer 90° to the Right"
@@ -13478,7 +13459,7 @@ msgstr "Kierrä &tasoa 90° oikeaan"
 #. i18n: context: iconText @ Action (rotateLayerCW90), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (rotateLayerCW90), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (rotateLayerCW90), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3288 krita/krita.action:3289
+#: krita/krita.action:3276 krita/krita.action:3277
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Rotate Layer 90° to the Right"
@@ -13487,7 +13468,7 @@ msgid "Rotate Layers 90° to the Right"
 msgstr "Kierrä tasoa 90° oikeaan"
 
 #. i18n: context: text @ Action (rotateLayerCCW90), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3298
+#: krita/krita.action:3286
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Rotate Layer &90° to the Left"
@@ -13499,7 +13480,7 @@ msgstr "Kierrä tasoa &90° vasempaan"
 #. i18n: context: iconText @ Action (rotateLayerCCW90), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (rotateLayerCCW90), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (rotateLayerCCW90), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3300 krita/krita.action:3301
+#: krita/krita.action:3288 krita/krita.action:3289
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Rotate Layer 90° to the Left"
@@ -13508,7 +13489,7 @@ msgid "Rotate Layers 90° to the Left"
 msgstr "Kierrä tasoa 90° vasempaan"
 
 #. i18n: context: text @ Action (rotateLayer180), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3310
+#: krita/krita.action:3298
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Rotate Layer &180°"
@@ -13520,7 +13501,7 @@ msgstr "Kierrä tasoa &180°"
 #. i18n: context: iconText @ Action (rotateLayer180), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (rotateLayer180), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (rotateLayer180), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3312 krita/krita.action:3313
+#: krita/krita.action:3300 krita/krita.action:3301
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Rotate Layer 180°"
@@ -13529,7 +13510,7 @@ msgid "Rotate Layers 180°"
 msgstr "Kierrä tasoa 180°"
 
 #. i18n: context: text @ Action (layersize), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3322
+#: krita/krita.action:3310
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Scale &Layer to new Size..."
@@ -13541,7 +13522,7 @@ msgstr "&Skaalaa taso uuteen kokoon…"
 #. i18n: context: iconText @ Action (layersize), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (layersize), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (layersize), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3324 krita/krita.action:3325
+#: krita/krita.action:3312 krita/krita.action:3313
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Scale Layer to new Size"
@@ -13550,7 +13531,7 @@ msgid "Scale Layers to new Size"
 msgstr "Skaalaa taso uuteen kokoon"
 
 #. i18n: context: text @ Action (shearlayer), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3334
+#: krita/krita.action:3322
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "&Shear Layer..."
@@ -13562,7 +13543,7 @@ msgstr "&Viistoa taso…"
 #. i18n: context: iconText @ Action (shearlayer), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (shearlayer), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (shearlayer), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3336 krita/krita.action:3337
+#: krita/krita.action:3324 krita/krita.action:3325
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Shear Layer"
@@ -13571,7 +13552,7 @@ msgid "Shear Layers"
 msgstr "Viistoa taso"
 
 #. i18n: context: text @ Action (mirrorAllNodesX), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3346
+#: krita/krita.action:3334
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Mirror Layer Hori&zontally"
@@ -13583,7 +13564,7 @@ msgstr "Peilaa taso &vaakasuunnassa"
 #. i18n: context: iconText @ Action (mirrorAllNodesX), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (mirrorAllNodesX), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (mirrorAllNodesX), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3348 krita/krita.action:3349
+#: krita/krita.action:3336 krita/krita.action:3337
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Mirror Layer Horizontally"
@@ -13592,7 +13573,7 @@ msgid "Mirror All Layers Horizontally"
 msgstr "Peilaa taso vaakasuunnassa"
 
 #. i18n: context: text @ Action (mirrorAllNodesY), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3358
+#: krita/krita.action:3346
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Mirror Layer &Vertically"
@@ -13604,7 +13585,7 @@ msgstr "Peilaa taso &pystysuunnassa"
 #. i18n: context: iconText @ Action (mirrorAllNodesY), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (mirrorAllNodesY), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (mirrorAllNodesY), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3360 krita/krita.action:3361
+#: krita/krita.action:3348 krita/krita.action:3349
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Mirror Layer Vertically"
@@ -13613,7 +13594,7 @@ msgid "Mirror All Layers Vertically"
 msgstr "Peilaa taso pystysuunnassa"
 
 #. i18n: context: text @ Action (rotateAllLayers), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3370
+#: krita/krita.action:3358
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "&Rotate Layer..."
@@ -13625,7 +13606,7 @@ msgstr "Kie&rrä tasoa…"
 #. i18n: context: iconText @ Action (rotateAllLayers), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (rotateAllLayers), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (rotateAllLayers), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3372 krita/krita.action:3373
+#: krita/krita.action:3360 krita/krita.action:3361
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Rotate Layer"
@@ -13634,7 +13615,7 @@ msgid "Rotate All Layers"
 msgstr "Kierrä tasoa"
 
 #. i18n: context: text @ Action (rotateAllLayersCW90), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3382
+#: krita/krita.action:3370
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Rotate &Layer 90° to the Right"
@@ -13646,7 +13627,7 @@ msgstr "Kierrä &tasoa 90° oikeaan"
 #. i18n: context: iconText @ Action (rotateAllLayersCW90), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (rotateAllLayersCW90), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (rotateAllLayersCW90), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3384 krita/krita.action:3385
+#: krita/krita.action:3372 krita/krita.action:3373
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Rotate Layer 90° to the Right"
@@ -13655,7 +13636,7 @@ msgid "Rotate All Layers 90° to the Right"
 msgstr "Kierrä tasoa 90° oikeaan"
 
 #. i18n: context: text @ Action (rotateAllLayersCCW90), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3394
+#: krita/krita.action:3382
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Rotate Layer &90° to the Left"
@@ -13667,7 +13648,7 @@ msgstr "Kierrä tasoa &90° vasempaan"
 #. i18n: context: iconText @ Action (rotateAllLayersCCW90), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (rotateAllLayersCCW90), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (rotateAllLayersCCW90), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3396 krita/krita.action:3397
+#: krita/krita.action:3384 krita/krita.action:3385
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Rotate Layer 90° to the Left"
@@ -13676,7 +13657,7 @@ msgid "Rotate All Layers 90° to the Left"
 msgstr "Kierrä tasoa 90° vasempaan"
 
 #. i18n: context: text @ Action (rotateAllLayers180), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3406
+#: krita/krita.action:3394
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Rotate Layer &180°"
@@ -13688,7 +13669,7 @@ msgstr "Kierrä tasoa &180°"
 #. i18n: context: iconText @ Action (rotateAllLayers180), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (rotateAllLayers180), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (rotateAllLayers180), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3408 krita/krita.action:3409
+#: krita/krita.action:3396 krita/krita.action:3397
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Rotate Layer 180°"
@@ -13697,7 +13678,7 @@ msgid "Rotate All Layers 180°"
 msgstr "Kierrä tasoa 180°"
 
 #. i18n: context: text @ Action (scaleAllLayers), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3418
+#: krita/krita.action:3406
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Scale &Layer to new Size..."
@@ -13709,7 +13690,7 @@ msgstr "&Skaalaa taso uuteen kokoon…"
 #. i18n: context: iconText @ Action (scaleAllLayers), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (scaleAllLayers), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (scaleAllLayers), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3420 krita/krita.action:3421
+#: krita/krita.action:3408 krita/krita.action:3409
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Scale Layer to new Size"
@@ -13718,7 +13699,7 @@ msgid "Scale All Layers to new Size"
 msgstr "Skaalaa taso uuteen kokoon"
 
 #. i18n: context: text @ Action (shearAllLayers), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3430
+#: krita/krita.action:3418
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "&Shear Layer..."
@@ -13730,7 +13711,7 @@ msgstr "&Viistoa taso…"
 #. i18n: context: iconText @ Action (shearAllLayers), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (shearAllLayers), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (shearAllLayers), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3432 krita/krita.action:3433
+#: krita/krita.action:3420 krita/krita.action:3421
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Shear Layer"
@@ -13739,7 +13720,7 @@ msgid "Shear All Layers"
 msgstr "Viistoa taso"
 
 #. i18n: context: text @ Action (offsetlayer), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3442
+#: krita/krita.action:3430
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "&Offset Layer..."
@@ -13751,7 +13732,7 @@ msgstr "Siirrä tas&oa…"
 #. i18n: context: iconText @ Action (offsetlayer), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (offsetlayer), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (offsetlayer), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3444 krita/krita.action:3445
+#: krita/krita.action:3432 krita/krita.action:3433
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Offset Layer"
@@ -13760,7 +13741,7 @@ msgid "Offset Layers"
 msgstr "Siirrä tasoa"
 
 #. i18n: context: text @ Action (clones_array), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3454
+#: krita/krita.action:3442
 #, fuzzy, kde-format
 msgctxt "action"
 msgid "Clones &Array..."
@@ -13770,14 +13751,14 @@ msgstr "&Kopiotaso"
 #. i18n: context: iconText @ Action (clones_array), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (clones_array), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (clones_array), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3456 krita/krita.action:3457
+#: krita/krita.action:3444 krita/krita.action:3445
 #, fuzzy, kde-format
 msgctxt "action"
 msgid "Clones Array"
 msgstr "&Kopiotaso"
 
 #. i18n: context: text @ Action (EditLayerMetaData), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3466
+#: krita/krita.action:3454
 #, kde-format
 msgctxt "action"
 msgid "&Edit metadata..."
@@ -13787,14 +13768,14 @@ msgstr "&Muokkaa metatietoja…"
 #. i18n: context: iconText @ Action (EditLayerMetaData), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (EditLayerMetaData), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (EditLayerMetaData), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3468 krita/krita.action:3469
+#: krita/krita.action:3456 krita/krita.action:3457
 #, kde-format
 msgctxt "action"
 msgid "Edit metadata"
 msgstr "Muokkaa metatietoja"
 
 #. i18n: context: text @ Action (histogram), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3478
+#: krita/krita.action:3466
 #, kde-format
 msgctxt "action"
 msgid "&Histogram..."
@@ -13804,14 +13785,14 @@ msgstr "&Histogrammi…"
 #. i18n: context: iconText @ Action (histogram), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (histogram), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (histogram), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3480 krita/krita.action:3481
+#: krita/krita.action:3468 krita/krita.action:3469
 #, kde-format
 msgctxt "action"
 msgid "Histogram"
 msgstr "Histogrammi"
 
 #. i18n: context: text @ Action (layercolorspaceconversion), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3490
+#: krita/krita.action:3478
 #, kde-format
 msgctxt "action"
 msgid "&Convert Layer Color Space..."
@@ -13821,7 +13802,7 @@ msgstr "Muunna &tason väriavaruus…"
 #. i18n: context: iconText @ Action (layercolorspaceconversion), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (layercolorspaceconversion), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (layercolorspaceconversion), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3492 krita/krita.action:3493
+#: krita/krita.action:3480 krita/krita.action:3481
 #, kde-format
 msgctxt "action"
 msgid "Convert Layer Color Space"
@@ -13831,7 +13812,7 @@ msgstr "Muunna tason väriavaruus"
 #. i18n: context: iconText @ Action (unifylayerscolorspace), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: text @ Action (unifylayerscolorspace), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (unifylayerscolorspace), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3502 krita/krita.action:3505
+#: krita/krita.action:3490 krita/krita.action:3493
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Convert Layer Color Space"
@@ -13840,7 +13821,7 @@ msgid "Unify Layers Color Space"
 msgstr "Muunna tason väriavaruus"
 
 #. i18n: context: toolTip @ Action (unifylayerscolorspace), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3504
+#: krita/krita.action:3492
 #, kde-format
 msgctxt "action"
 msgid ""
@@ -13849,7 +13830,7 @@ msgid ""
 msgstr ""
 
 #. i18n: context: text @ Action (merge_layer), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3514
+#: krita/krita.action:3502
 #, kde-format
 msgctxt "action"
 msgid "&Merge with Layer Below"
@@ -13859,14 +13840,14 @@ msgstr "&Yhdistä alempaan tasoon"
 #. i18n: context: iconText @ Action (merge_layer), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (merge_layer), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (merge_layer), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3516 krita/krita.action:3517
+#: krita/krita.action:3504 krita/krita.action:3505
 #, kde-format
 msgctxt "action"
 msgid "Merge with Layer Below"
 msgstr "Yhdistä alempaan tasoon"
 
 #. i18n: context: text @ Action (flatten_layer), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3526
+#: krita/krita.action:3514
 #, kde-format
 msgctxt "action"
 msgid "&Flatten Layer"
@@ -13876,14 +13857,14 @@ msgstr "&Latista taso"
 #. i18n: context: iconText @ Action (flatten_layer), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (flatten_layer), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (flatten_layer), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3528 krita/krita.action:3529
+#: krita/krita.action:3516 krita/krita.action:3517
 #, kde-format
 msgctxt "action"
 msgid "Flatten Layer"
 msgstr "Latista taso"
 
 #. i18n: context: text @ Action (flatten_image), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3538
+#: krita/krita.action:3526
 #, kde-format
 msgctxt "action"
 msgid "Flatten ima&ge"
@@ -13893,14 +13874,14 @@ msgstr "&Latista kuva"
 #. i18n: context: iconText @ Action (flatten_image), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (flatten_image), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (flatten_image), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3540 krita/krita.action:3541
+#: krita/krita.action:3528 krita/krita.action:3529
 #, kde-format
 msgctxt "action"
 msgid "Flatten image"
 msgstr "Latista kuva"
 
 #. i18n: context: text @ Action (layer_style), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3550
+#: krita/krita.action:3538
 #, kde-format
 msgctxt "action"
 msgid "La&yer Style..."
@@ -13910,7 +13891,7 @@ msgstr "&Tason tyyli…"
 #. i18n: context: iconText @ Action (layer_style), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (layer_style), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (layer_style), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3552 krita/krita.action:3553
+#: krita/krita.action:3540 krita/krita.action:3541
 #, kde-format
 msgctxt "action"
 msgid "Layer Style"
@@ -13922,7 +13903,7 @@ msgstr "Tason tyyli"
 #. i18n: context: text @ Action (LayerGroupSwitcher/previous), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (LayerGroupSwitcher/previous), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (LayerGroupSwitcher/previous), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3562 krita/krita.action:3564 krita/krita.action:3565
+#: krita/krita.action:3550 krita/krita.action:3552 krita/krita.action:3553
 #, kde-format
 msgctxt "action"
 msgid "Move into previous group"
@@ -13934,7 +13915,7 @@ msgstr "Siirrä edelliseen ryhmään"
 #. i18n: context: text @ Action (LayerGroupSwitcher/next), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (LayerGroupSwitcher/next), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (LayerGroupSwitcher/next), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3574 krita/krita.action:3576 krita/krita.action:3577
+#: krita/krita.action:3562 krita/krita.action:3564 krita/krita.action:3565
 #, kde-format
 msgctxt "action"
 msgid "Move into next group"
@@ -13946,14 +13927,14 @@ msgstr "Siirrä seuraavaan ryhmään"
 #. i18n: context: text @ Action (RenameCurrentLayer), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (RenameCurrentLayer), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (RenameCurrentLayer), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3586 krita/krita.action:3588 krita/krita.action:3589
+#: krita/krita.action:3574 krita/krita.action:3576 krita/krita.action:3577
 #, kde-format
 msgctxt "action"
 msgid "Rename current layer"
 msgstr "Nimeä nykyinen taso uudelleen"
 
 #. i18n: context: text @ Action (remove_layer), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3598
+#: krita/krita.action:3586
 #, kde-format
 msgctxt "action"
 msgid "&Remove Layer"
@@ -13963,7 +13944,7 @@ msgstr "&Poista taso"
 #. i18n: context: iconText @ Action (remove_layer), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (remove_layer), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (remove_layer), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3600 krita/krita.action:3601
+#: krita/krita.action:3588 krita/krita.action:3589
 #, kde-format
 msgctxt "action"
 msgid "Remove Layer"
@@ -13973,7 +13954,7 @@ msgstr "Poista taso"
 #. i18n: context: toolTip @ Action (move_layer_up), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: text @ Action (move_layer_up), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (move_layer_up), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3610 krita/krita.action:3612
+#: krita/krita.action:3598 krita/krita.action:3600
 #, kde-format
 msgctxt "action"
 msgid "Move Layer or Mask Up"
@@ -13983,14 +13964,14 @@ msgstr "Nosta tasoa tai maskia"
 #. i18n: context: toolTip @ Action (move_layer_down), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: text @ Action (move_layer_down), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (move_layer_down), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3620 krita/krita.action:3622
+#: krita/krita.action:3608 krita/krita.action:3610
 #, kde-format
 msgctxt "action"
 msgid "Move Layer or Mask Down"
 msgstr "Laske tasoa tai maskia"
 
 #. i18n: context: text @ Action (layer_properties), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3630
+#: krita/krita.action:3618
 #, kde-format
 msgctxt "action"
 msgid "&Properties..."
@@ -14000,14 +13981,14 @@ msgstr "&Ominaisuudet…"
 #. i18n: context: iconText @ Action (layer_properties), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (layer_properties), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (layer_properties), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3632 krita/krita.action:3633
+#: krita/krita.action:3620 krita/krita.action:3621
 #, kde-format
 msgctxt "Layer Properties"
 msgid "Properties"
 msgstr "Ominaisuudet"
 
 #. i18n: context: text @ Action (set-copy-from), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3642
+#: krita/krita.action:3630
 #, fuzzy, kde-format
 #| msgid "Copy From"
 msgctxt "action"
@@ -14015,7 +13996,7 @@ msgid "Set Copy F&rom..."
 msgstr "Kopioi lähteestä"
 
 #. i18n: context: toolTip @ Action (set-copy-from), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3644
+#: krita/krita.action:3632
 #, fuzzy, kde-format
 #| msgid "Set the blend mode for the layer"
 msgctxt "action"
@@ -14023,7 +14004,7 @@ msgid "Set the source for the selected clone layer(s)."
 msgstr "Aseta tason sekoitustapa"
 
 #. i18n: context: iconText @ Action (set-copy-from), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3645
+#: krita/krita.action:3633
 #, fuzzy, kde-format
 #| msgid "Copy From"
 msgctxt "action"
@@ -14034,7 +14015,7 @@ msgstr "Kopioi lähteestä"
 #. i18n: context: toolTip @ Action (create_reference_image_from_active_layer), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: text @ Action (create_reference_image_from_active_layer), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (create_reference_image_from_active_layer), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3654 krita/krita.action:3656
+#: krita/krita.action:3642 krita/krita.action:3644
 #, fuzzy, kde-format
 #| msgid "Reference Images Tool"
 msgctxt "action"
@@ -14045,7 +14026,7 @@ msgstr "Viitekuvatyökalu"
 #. i18n: context: toolTip @ Action (create_reference_image_from_visible_canvas), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: text @ Action (create_reference_image_from_visible_canvas), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (create_reference_image_from_visible_canvas), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3666 krita/krita.action:3668
+#: krita/krita.action:3654 krita/krita.action:3656
 #, fuzzy, kde-format
 #| msgid "Reference Images Tool"
 msgctxt "action"
@@ -14053,7 +14034,7 @@ msgid "Reference Image from Visible"
 msgstr "Viitekuvatyökalu"
 
 #. i18n: context: text @ Action (force_palette_colors), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3678
+#: krita/krita.action:3666
 #, fuzzy, kde-format
 #| msgid "Named Colors"
 msgctxt "action"
@@ -14064,7 +14045,7 @@ msgstr "Nimetyt värit"
 #. i18n: context: toolTip @ Action (force_palette_colors), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: whatsThis @ Action (force_palette_colors), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (force_palette_colors), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3679 krita/krita.action:3680
+#: krita/krita.action:3667 krita/krita.action:3668
 #, kde-format
 msgctxt "action"
 msgid ""
@@ -14073,7 +14054,7 @@ msgid ""
 msgstr ""
 
 #. i18n: context: iconText @ Action (force_palette_colors), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3681
+#: krita/krita.action:3669
 #, fuzzy, kde-format
 #| msgctxt "description of a file type"
 #| msgid "Color Palette"
@@ -23651,7 +23632,7 @@ msgid "Clone Layer"
 msgstr "&Kopiotaso"
 
 #: libs/impex/KisExportCheckRegistry.cpp:111 libs/ui/kis_layer_manager.cc:699
-#: libs/ui/kis_node_manager.cpp:1631
+#: libs/ui/kis_node_manager.cpp:1629
 #, kde-format
 msgctxt "A group of layers"
 msgid "Group"
@@ -23697,7 +23678,7 @@ msgid "Transform Mask"
 msgstr "Muunnosmaski"
 
 #: libs/impex/KisExportCheckRegistry.cpp:127 libs/ui/kis_mask_manager.cc:216
-#: libs/ui/kis_node_manager.cpp:1393
+#: libs/ui/kis_node_manager.cpp:1391
 #: plugins/impex/libkra/kis_kra_load_visitor.cpp:214
 #: plugins/impex/psd/psd_loader.cpp:593
 #: plugins/impex/tiff/kis_tiff_import.cc:565
@@ -25466,8 +25447,8 @@ msgstr "Ladataan resursseja…"
 #: libs/ui/input/kis_tablet_debugger.cpp:106 libs/ui/kis_clipboard.cc:779
 #: libs/ui/kis_custom_pattern.cc:126 libs/ui/kis_filter_manager.cc:234
 #: libs/ui/kis_filter_manager.cc:243 libs/ui/kis_layer_manager.cc:326
-#: libs/ui/kis_layer_manager.cc:1044 libs/ui/kis_node_manager.cpp:1318
-#: libs/ui/kis_node_manager.cpp:1381 libs/ui/KisApplication.cpp:1227
+#: libs/ui/kis_layer_manager.cc:1044 libs/ui/kis_node_manager.cpp:1316
+#: libs/ui/kis_node_manager.cpp:1379 libs/ui/KisApplication.cpp:1227
 #: libs/ui/KisApplication.cpp:1230 libs/ui/KisApplication.cpp:1246
 #: libs/ui/KisApplication.cpp:1278 libs/ui/KisApplication.cpp:1292
 #: libs/ui/KisApplication.cpp:1320 libs/ui/KisDocument.cpp:1057
@@ -36607,80 +36588,80 @@ msgstr "Peilaa näkymä"
 msgid "Mirror View Around Canvas"
 msgstr "Peilaa näkymä"
 
-#: libs/ui/kis_node_manager.cpp:488
+#: libs/ui/kis_node_manager.cpp:486
 #, fuzzy, kde-format
 #| msgid "Layer is locked."
 msgid "Layer is locked"
 msgstr "Taso on lukittu."
 
-#: libs/ui/kis_node_manager.cpp:490 libs/ui/kis_node_manager.cpp:515
+#: libs/ui/kis_node_manager.cpp:488 libs/ui/kis_node_manager.cpp:513
 #, fuzzy, kde-format
 #| msgid "Layer is locked."
 msgid "Layer \"%1\" is locked"
 msgstr "Taso on lukittu."
 
-#: libs/ui/kis_node_manager.cpp:543
+#: libs/ui/kis_node_manager.cpp:541
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Move Nodes"
 msgstr "Viivatyökalu"
 
-#: libs/ui/kis_node_manager.cpp:550
+#: libs/ui/kis_node_manager.cpp:548
 #, fuzzy
 msgctxt "(qtundo-format)"
 msgid "Copy Nodes"
 msgstr "%1 – kopio"
 
-#: libs/ui/kis_node_manager.cpp:557
+#: libs/ui/kis_node_manager.cpp:555
 msgctxt "(qtundo-format)"
 msgid "Add Nodes"
 msgstr "Lisää solmuja"
 
-#: libs/ui/kis_node_manager.cpp:729
+#: libs/ui/kis_node_manager.cpp:727
 msgctxt "(qtundo-format)"
 msgid "Convert to a Selection Mask"
 msgstr "Muunna valintamaskiksi"
 
-#: libs/ui/kis_node_manager.cpp:775
+#: libs/ui/kis_node_manager.cpp:773
 #, fuzzy, kde-format
 #| msgid "Could not load reference image from clipboard"
 msgctxt "error dialog from the reference tool"
 msgid "Could not create a reference image from the active layer."
 msgstr "Viitekuvaa ei voitu ladata leikepöydältä."
 
-#: libs/ui/kis_node_manager.cpp:776
+#: libs/ui/kis_node_manager.cpp:774
 #, fuzzy, kde-format
 #| msgid "Could not load reference image from clipboard"
 msgctxt "error dialog from the reference tool"
 msgid "Could not create a reference image from the visible canvas."
 msgstr "Viitekuvaa ei voitu ladata leikepöydältä."
 
-#: libs/ui/kis_node_manager.cpp:1031
+#: libs/ui/kis_node_manager.cpp:1029
 #, kde-format
 msgid "Onion skins require a layer with transparent background."
 msgstr ""
 
-#: libs/ui/kis_node_manager.cpp:1058
+#: libs/ui/kis_node_manager.cpp:1056
 msgctxt "(qtundo-format)"
 msgid "Duplicate Nodes"
 msgstr "Monista solmut"
 
-#: libs/ui/kis_node_manager.cpp:1083
+#: libs/ui/kis_node_manager.cpp:1081
 msgctxt "(qtundo-format)"
 msgid "Raise Nodes"
 msgstr "Nosta solmuja"
 
-#: libs/ui/kis_node_manager.cpp:1092
+#: libs/ui/kis_node_manager.cpp:1090
 msgctxt "(qtundo-format)"
 msgid "Lower Nodes"
 msgstr "Laske solmuja"
 
-#: libs/ui/kis_node_manager.cpp:1112
+#: libs/ui/kis_node_manager.cpp:1110
 msgctxt "(qtundo-format)"
 msgid "Remove Nodes"
 msgstr "Poista solmut"
 
-#: libs/ui/kis_node_manager.cpp:1128
+#: libs/ui/kis_node_manager.cpp:1126
 #, fuzzy
 #| msgctxt "action"
 #| msgid "Mirror Layer Horizontally"
@@ -36688,7 +36669,7 @@ msgctxt "(qtundo-format)"
 msgid "Mirror Mask Horizontally"
 msgstr "Peilaa taso vaakasuunnassa"
 
-#: libs/ui/kis_node_manager.cpp:1131
+#: libs/ui/kis_node_manager.cpp:1129
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Mirror Layer Horizontally"
@@ -36698,7 +36679,7 @@ msgid_plural "Mirror %1 Layers Horizontally"
 msgstr[0] "Peilaa taso vaakasuunnassa"
 msgstr[1] "Peilaa taso vaakasuunnassa"
 
-#: libs/ui/kis_node_manager.cpp:1142
+#: libs/ui/kis_node_manager.cpp:1140
 #, fuzzy
 #| msgctxt "action"
 #| msgid "Mirror Layer Vertically"
@@ -36706,7 +36687,7 @@ msgctxt "(qtundo-format)"
 msgid "Mirror Mask Vertically"
 msgstr "Peilaa taso pystysuunnassa"
 
-#: libs/ui/kis_node_manager.cpp:1145
+#: libs/ui/kis_node_manager.cpp:1143
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Mirror Layer Vertically"
@@ -36716,7 +36697,7 @@ msgid_plural "Mirror %1 Layers Vertically"
 msgstr[0] "Peilaa taso pystysuunnassa"
 msgstr[1] "Peilaa taso pystysuunnassa"
 
-#: libs/ui/kis_node_manager.cpp:1153
+#: libs/ui/kis_node_manager.cpp:1151
 #, fuzzy
 #| msgctxt "action"
 #| msgid "Mirror Layer Horizontally"
@@ -36724,7 +36705,7 @@ msgctxt "(qtundo-format)"
 msgid "Mirror All Layers Horizontally"
 msgstr "Peilaa taso vaakasuunnassa"
 
-#: libs/ui/kis_node_manager.cpp:1160
+#: libs/ui/kis_node_manager.cpp:1158
 #, fuzzy
 #| msgctxt "action"
 #| msgid "Mirror Layer Vertically"
@@ -36732,12 +36713,12 @@ msgctxt "(qtundo-format)"
 msgid "Mirror All Layers Vertically"
 msgstr "Peilaa taso pystysuunnassa"
 
-#: libs/ui/kis_node_manager.cpp:1292
+#: libs/ui/kis_node_manager.cpp:1290
 #, kde-format
 msgid "Export \"%1\""
 msgstr "Vie ”%1”"
 
-#: libs/ui/kis_node_manager.cpp:1319
+#: libs/ui/kis_node_manager.cpp:1317
 #, fuzzy, kde-format
 #| msgid ""
 #| "Could not save\n"
@@ -36747,7 +36728,7 @@ msgstr ""
 "Ei voitu tallentaa tiedostoa\n"
 "%1"
 
-#: libs/ui/kis_node_manager.cpp:1337
+#: libs/ui/kis_node_manager.cpp:1335
 #, fuzzy, kde-format
 #| msgctxt "@title:window"
 #| msgid "Layer %1 is not editable"
@@ -36755,7 +36736,7 @@ msgctxt "warning message when trying to export a transform mask"
 msgid "Layer has no pixel data"
 msgstr "Taso %1 ei ole muokattavissa"
 
-#: libs/ui/kis_node_manager.cpp:1361
+#: libs/ui/kis_node_manager.cpp:1359
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Export"
@@ -36763,7 +36744,7 @@ msgctxt "@title:window"
 msgid "Export to SVG"
 msgstr "Vie"
 
-#: libs/ui/kis_node_manager.cpp:1381
+#: libs/ui/kis_node_manager.cpp:1379
 #, fuzzy, kde-format
 #| msgid ""
 #| "Could not save\n"
@@ -36773,13 +36754,13 @@ msgstr ""
 "Ei voitu tallentaa tiedostoa\n"
 "%1"
 
-#: libs/ui/kis_node_manager.cpp:1406
+#: libs/ui/kis_node_manager.cpp:1404
 #, kde-format
 msgctxt "@title:window"
 msgid "Layer %1 is not editable"
 msgstr "Taso %1 ei ole muokattavissa"
 
-#: libs/ui/kis_node_manager.cpp:1407
+#: libs/ui/kis_node_manager.cpp:1405
 #, kde-format
 msgid ""
 "Cannot write alpha channel of the parent layer \"%1\".\n"
@@ -36788,51 +36769,51 @@ msgstr ""
 "Alfakanavaa ei voida kirjoittaa emotasoon ”%1”.\n"
 "Toimenpide perutaan."
 
-#: libs/ui/kis_node_manager.cpp:1438
+#: libs/ui/kis_node_manager.cpp:1436
 msgctxt "(qtundo-format)"
 msgid "Write Alpha into a Layer"
 msgstr "Kirjoita alfa tasoon"
 
-#: libs/ui/kis_node_manager.cpp:1578
+#: libs/ui/kis_node_manager.cpp:1576
 msgctxt "(qtundo-format)"
 msgid "Cut Nodes"
 msgstr "Leikkaa solmut"
 
-#: libs/ui/kis_node_manager.cpp:1661
+#: libs/ui/kis_node_manager.cpp:1659
 msgctxt "(qtundo-format)"
 msgid "Quick Group"
 msgstr "Pikaryhmä"
 
-#: libs/ui/kis_node_manager.cpp:1672
+#: libs/ui/kis_node_manager.cpp:1670
 msgctxt "(qtundo-format)"
 msgid "Quick Clipping Group"
 msgstr "Rajaava pikaryhmä"
 
-#: libs/ui/kis_node_manager.cpp:1679
+#: libs/ui/kis_node_manager.cpp:1677
 #, kde-format
 msgctxt "default name for a clipping group layer"
 msgid "Clipping Group"
 msgstr "Rajaava ryhmä"
 
-#: libs/ui/kis_node_manager.cpp:1680
+#: libs/ui/kis_node_manager.cpp:1678
 #, kde-format
 msgctxt "default name for quick clip group mask layer"
 msgid "Mask Layer"
 msgstr "Maskitaso"
 
-#: libs/ui/kis_node_manager.cpp:1707
+#: libs/ui/kis_node_manager.cpp:1705
 #, fuzzy, kde-format
 #| msgid "Put every layer in its own, separate group layer"
 msgid "Cannot move layer \"%1\" into new parent \"%2\""
 msgstr "Sijoita jokainen taso omaan erilliseen ryhmätasoonsa"
 
-#: libs/ui/kis_node_manager.cpp:1710
+#: libs/ui/kis_node_manager.cpp:1708
 #, fuzzy, kde-format
 #| msgid "Put every layer in its own, separate group layer"
 msgid "Cannot move layer \"%1\" into the root layer"
 msgstr "Sijoita jokainen taso omaan erilliseen ryhmätasoonsa"
 
-#: libs/ui/kis_node_manager.cpp:1718
+#: libs/ui/kis_node_manager.cpp:1716
 msgctxt "(qtundo-format)"
 msgid "Quick Ungroup"
 msgstr "Pikapura ryhmä"
@@ -72869,6 +72850,18 @@ msgid ""
 "Full range: [%1, %2]\n"
 "Subrange: [%3, %4]"
 msgstr ""
+
+#, fuzzy
+#~| msgctxt "(qtundo-format)"
+#~| msgid "Convert to an animated layer"
+#~ msgctxt "action"
+#~ msgid "Convert to &Animated Layer"
+#~ msgstr "Muunna animoiduksi tasoksi"
+
+#, fuzzy
+#~ msgctxt "action"
+#~ msgid "Convert layer into animation frames"
+#~ msgstr "Komposiittitila"
 
 #, fuzzy
 #~| msgid "Similar Selection"

@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-18 00:42+0000\n"
+"POT-Creation-Date: 2026-07-23 00:41+0000\n"
 "PO-Revision-Date: 2024-08-20 23:32+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -13118,27 +13118,8 @@ msgctxt "action"
 msgid "Convert child layers into animation frames"
 msgstr "자식 레이어를 애니메이션 프레임으로 변환"
 
-#. i18n: context: text @ Action (convert_to_animated), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3058
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "Convert to &animated layer"
-msgctxt "action"
-msgid "Convert to &Animated Layer"
-msgstr "애니메이션 레이어로 변환(&A)"
-
-#. i18n: context: toolTip @ Action (convert_to_animated), Actions (Layers), ActionCollection (Krita)
-#. i18n: context: iconText @ Action (convert_to_animated), Actions (Layers), ActionCollection (Krita)
-#. i18n: context: toolTip @ Action (convert_to_animated), Actions (Layers), ActionCollection (Krita)
-#. i18n: context: iconText @ Action (convert_to_animated), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3060 krita/krita.action:3061
-#, kde-format
-msgctxt "action"
-msgid "Convert layer into animation frames"
-msgstr "레이어를 애니메이션 프레임으로 변환"
-
 #. i18n: context: text @ Action (convert_to_file_layer), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3070
+#: krita/krita.action:3058
 #, fuzzy, kde-format
 #| msgctxt "(qtundo-format)"
 #| msgid "Convert to a file layer"
@@ -13147,14 +13128,14 @@ msgid "Convert to &File Layer..."
 msgstr "파일 레이어로 변환"
 
 #. i18n: context: toolTip @ Action (convert_to_file_layer), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3072
+#: krita/krita.action:3060
 #, kde-format
 msgctxt "action"
 msgid "Saves out the layers into a new image and then references that image."
 msgstr "레이어를 새 이미지로 저장하고 해당 이미지를 참조합니다."
 
 #. i18n: context: iconText @ Action (convert_to_file_layer), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3073
+#: krita/krita.action:3061
 #, fuzzy, kde-format
 #| msgctxt "(qtundo-format)"
 #| msgid "Convert to a file layer"
@@ -13163,7 +13144,7 @@ msgid "Convert to File Layer"
 msgstr "파일 레이어로 변환"
 
 #. i18n: context: text @ Action (import_layer_from_file), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3082
+#: krita/krita.action:3070
 #, kde-format
 msgctxt "action"
 msgid "I&mport Layer..."
@@ -13173,14 +13154,14 @@ msgstr "레이어 가져오기(&M)..."
 #. i18n: context: iconText @ Action (import_layer_from_file), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (import_layer_from_file), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (import_layer_from_file), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3084 krita/krita.action:3085
+#: krita/krita.action:3072 krita/krita.action:3073
 #, kde-format
 msgctxt "action"
 msgid "Import Layer"
 msgstr "레이어 가져오기"
 
 #. i18n: context: text @ Action (import_layer_as_paint_layer), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3094
+#: krita/krita.action:3082
 #, kde-format
 msgctxt "action"
 msgid "&as Paint Layer..."
@@ -13190,14 +13171,14 @@ msgstr "칠하기 레이어로(&A)..."
 #. i18n: context: iconText @ Action (import_layer_as_paint_layer), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (import_layer_as_paint_layer), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (import_layer_as_paint_layer), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3096 krita/krita.action:3097
+#: krita/krita.action:3084 krita/krita.action:3085
 #, kde-format
 msgctxt "action"
 msgid "as Paint Layer"
 msgstr "칠하기 레이어로"
 
 #. i18n: context: text @ Action (import_layer_as_transparency_mask), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3106
+#: krita/krita.action:3094
 #, kde-format
 msgctxt "action"
 msgid "as &Transparency Mask..."
@@ -13207,14 +13188,14 @@ msgstr "투명도 마스크로(&T)..."
 #. i18n: context: iconText @ Action (import_layer_as_transparency_mask), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (import_layer_as_transparency_mask), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (import_layer_as_transparency_mask), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3108 krita/krita.action:3109
+#: krita/krita.action:3096 krita/krita.action:3097
 #, kde-format
 msgctxt "action"
 msgid "as Transparency Mask"
 msgstr "투명도 마스크로"
 
 #. i18n: context: text @ Action (import_layer_as_filter_mask), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3118
+#: krita/krita.action:3106
 #, kde-format
 msgctxt "action"
 msgid "as &Filter Mask..."
@@ -13224,14 +13205,14 @@ msgstr "필터 마스크로(&F)..."
 #. i18n: context: iconText @ Action (import_layer_as_filter_mask), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (import_layer_as_filter_mask), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (import_layer_as_filter_mask), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3120 krita/krita.action:3121
+#: krita/krita.action:3108 krita/krita.action:3109
 #, kde-format
 msgctxt "action"
 msgid "as Filter Mask"
 msgstr "필터 마스크로"
 
 #. i18n: context: text @ Action (import_layer_as_selection_mask), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3130
+#: krita/krita.action:3118
 #, kde-format
 msgctxt "action"
 msgid "as &Selection Mask..."
@@ -13241,14 +13222,14 @@ msgstr "선택 마스크로(&S)..."
 #. i18n: context: iconText @ Action (import_layer_as_selection_mask), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (import_layer_as_selection_mask), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (import_layer_as_selection_mask), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3132 krita/krita.action:3133
+#: krita/krita.action:3120 krita/krita.action:3121
 #, kde-format
 msgctxt "action"
 msgid "as Selection Mask"
 msgstr "선택 마스크로"
 
 #. i18n: context: text @ Action (convert_to_paint_layer), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3142
+#: krita/krita.action:3130
 #, fuzzy, kde-format
 #| msgctxt "(qtundo-format)"
 #| msgid "Convert to a Paint Layer"
@@ -13260,14 +13241,14 @@ msgstr "칠하기 레이어로 변환"
 #. i18n: context: iconText @ Action (convert_to_paint_layer), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (convert_to_paint_layer), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (convert_to_paint_layer), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3144 krita/krita.action:3145
+#: krita/krita.action:3132 krita/krita.action:3133
 #, kde-format
 msgctxt "action"
 msgid "to Paint Layer"
 msgstr "칠하기 레이어로"
 
 #. i18n: context: text @ Action (convert_to_transparency_mask), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3154
+#: krita/krita.action:3142
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "to &Transparency Mask"
@@ -13279,14 +13260,14 @@ msgstr "투명도 마스크로(&T)"
 #. i18n: context: iconText @ Action (convert_to_transparency_mask), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (convert_to_transparency_mask), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (convert_to_transparency_mask), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3156 krita/krita.action:3157
+#: krita/krita.action:3144 krita/krita.action:3145
 #, kde-format
 msgctxt "action"
 msgid "to Transparency Mask"
 msgstr "투명도 마스크로"
 
 #. i18n: context: text @ Action (convert_to_filter_mask), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3166
+#: krita/krita.action:3154
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "to &Filter Mask..."
@@ -13298,14 +13279,14 @@ msgstr "필터 마스크로(&F)..."
 #. i18n: context: iconText @ Action (convert_to_filter_mask), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (convert_to_filter_mask), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (convert_to_filter_mask), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3168 krita/krita.action:3169
+#: krita/krita.action:3156 krita/krita.action:3157
 #, kde-format
 msgctxt "action"
 msgid "to Filter Mask"
 msgstr "필터 마스크로"
 
 #. i18n: context: text @ Action (convert_to_selection_mask), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3178
+#: krita/krita.action:3166
 #, fuzzy, kde-format
 #| msgctxt "(qtundo-format)"
 #| msgid "Convert to a Selection Mask"
@@ -13317,14 +13298,14 @@ msgstr "선택을 마스크로 변환"
 #. i18n: context: iconText @ Action (convert_to_selection_mask), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (convert_to_selection_mask), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (convert_to_selection_mask), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3180 krita/krita.action:3181
+#: krita/krita.action:3168 krita/krita.action:3169
 #, kde-format
 msgctxt "action"
 msgid "to Selection Mask"
 msgstr "선택 마스크로"
 
 #. i18n: context: text @ Action (split_alpha_into_mask), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3190
+#: krita/krita.action:3178
 #, kde-format
 msgctxt "action"
 msgid "&Alpha into Mask"
@@ -13334,14 +13315,14 @@ msgstr "알파에서 마스크로(&A)"
 #. i18n: context: iconText @ Action (split_alpha_into_mask), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (split_alpha_into_mask), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (split_alpha_into_mask), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3192 krita/krita.action:3193
+#: krita/krita.action:3180 krita/krita.action:3181
 #, kde-format
 msgctxt "action"
 msgid "Alpha into Mask"
 msgstr "알파에서 마스크로"
 
 #. i18n: context: text @ Action (split_alpha_write), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3202
+#: krita/krita.action:3190
 #, kde-format
 msgctxt "action"
 msgid "&Write as Alpha"
@@ -13351,14 +13332,14 @@ msgstr "알파로 쓰기(&W)"
 #. i18n: context: iconText @ Action (split_alpha_write), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (split_alpha_write), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (split_alpha_write), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3204 krita/krita.action:3205
+#: krita/krita.action:3192 krita/krita.action:3193
 #, kde-format
 msgctxt "action"
 msgid "Write as Alpha"
 msgstr "알파로 쓰기"
 
 #. i18n: context: text @ Action (split_alpha_save_merged), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3214
+#: krita/krita.action:3202
 #, kde-format
 msgctxt "action"
 msgid "&Save Merged..."
@@ -13368,14 +13349,14 @@ msgstr "병합된 항목 저장(&S)..."
 #. i18n: context: iconText @ Action (split_alpha_save_merged), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (split_alpha_save_merged), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (split_alpha_save_merged), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3216 krita/krita.action:3217
+#: krita/krita.action:3204 krita/krita.action:3205
 #, kde-format
 msgctxt "action"
 msgid "Save Merged"
 msgstr "병합된 항목 저장"
 
 #. i18n: context: text @ Action (layersplit), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3226
+#: krita/krita.action:3214
 #, kde-format
 msgctxt "action"
 msgid "Split Layer..."
@@ -13385,14 +13366,14 @@ msgstr "레이어 분할..."
 #. i18n: context: iconText @ Action (layersplit), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (layersplit), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (layersplit), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3228 krita/krita.action:3229
+#: krita/krita.action:3216 krita/krita.action:3217
 #, kde-format
 msgctxt "action"
 msgid "Split Layer"
 msgstr "레이어 분할"
 
 #. i18n: context: text @ Action (waveletdecompose), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3238
+#: krita/krita.action:3226
 #, kde-format
 msgctxt "action"
 msgid "Wavelet Decompose ..."
@@ -13402,14 +13383,14 @@ msgstr "웨이블릿 분해..."
 #. i18n: context: iconText @ Action (waveletdecompose), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (waveletdecompose), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (waveletdecompose), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3240 krita/krita.action:3241
+#: krita/krita.action:3228 krita/krita.action:3229
 #, kde-format
 msgctxt "action"
 msgid "Wavelet Decompose"
 msgstr "웨이블릿 분해"
 
 #. i18n: context: text @ Action (mirrorNodeX), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3250
+#: krita/krita.action:3238
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Mirror Layer Hori&zontally"
@@ -13421,7 +13402,7 @@ msgstr "레이어 좌우 반전(&Z)"
 #. i18n: context: iconText @ Action (mirrorNodeX), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (mirrorNodeX), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (mirrorNodeX), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3252 krita/krita.action:3253
+#: krita/krita.action:3240 krita/krita.action:3241
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Mirror Layer Horizontally"
@@ -13430,7 +13411,7 @@ msgid "Mirror Layers Horizontally"
 msgstr "레이어 좌우 반전"
 
 #. i18n: context: text @ Action (mirrorNodeY), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3262
+#: krita/krita.action:3250
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Mirror Layer &Vertically"
@@ -13442,7 +13423,7 @@ msgstr "레이어 상하 반전(&V)"
 #. i18n: context: iconText @ Action (mirrorNodeY), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (mirrorNodeY), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (mirrorNodeY), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3264 krita/krita.action:3265
+#: krita/krita.action:3252 krita/krita.action:3253
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Mirror Layer Vertically"
@@ -13451,7 +13432,7 @@ msgid "Mirror Layers Vertically"
 msgstr "레이어 상하 반전"
 
 #. i18n: context: text @ Action (rotatelayer), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3274
+#: krita/krita.action:3262
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "&Rotate Layer..."
@@ -13463,7 +13444,7 @@ msgstr "레이어 회전(&R)..."
 #. i18n: context: iconText @ Action (rotatelayer), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (rotatelayer), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (rotatelayer), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3276 krita/krita.action:3277
+#: krita/krita.action:3264 krita/krita.action:3265
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Rotate Layer"
@@ -13472,7 +13453,7 @@ msgid "Rotate Layers"
 msgstr "레이어 회전"
 
 #. i18n: context: text @ Action (rotateLayerCW90), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3286
+#: krita/krita.action:3274
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Rotate &Layer 90° to the Right"
@@ -13484,7 +13465,7 @@ msgstr "레이어 오른쪽으로 90° 회전(&L)"
 #. i18n: context: iconText @ Action (rotateLayerCW90), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (rotateLayerCW90), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (rotateLayerCW90), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3288 krita/krita.action:3289
+#: krita/krita.action:3276 krita/krita.action:3277
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Rotate Layer 90° to the Right"
@@ -13493,7 +13474,7 @@ msgid "Rotate Layers 90° to the Right"
 msgstr "레이어 오른쪽으로 90° 회전"
 
 #. i18n: context: text @ Action (rotateLayerCCW90), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3298
+#: krita/krita.action:3286
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Rotate Layer &90° to the Left"
@@ -13505,7 +13486,7 @@ msgstr "레이어 왼쪽으로 90° 회전(&9)"
 #. i18n: context: iconText @ Action (rotateLayerCCW90), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (rotateLayerCCW90), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (rotateLayerCCW90), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3300 krita/krita.action:3301
+#: krita/krita.action:3288 krita/krita.action:3289
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Rotate Layer 90° to the Left"
@@ -13514,7 +13495,7 @@ msgid "Rotate Layers 90° to the Left"
 msgstr "레이어 왼쪽으로 90° 회전"
 
 #. i18n: context: text @ Action (rotateLayer180), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3310
+#: krita/krita.action:3298
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Rotate Layer &180°"
@@ -13526,7 +13507,7 @@ msgstr "레이어 180° 회전(&1)"
 #. i18n: context: iconText @ Action (rotateLayer180), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (rotateLayer180), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (rotateLayer180), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3312 krita/krita.action:3313
+#: krita/krita.action:3300 krita/krita.action:3301
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Rotate Layer 180°"
@@ -13535,7 +13516,7 @@ msgid "Rotate Layers 180°"
 msgstr "레이어 180° 회전"
 
 #. i18n: context: text @ Action (layersize), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3322
+#: krita/krita.action:3310
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Scale &Layer to new Size..."
@@ -13547,7 +13528,7 @@ msgstr "레이어를 새 크기로 조정(&L)..."
 #. i18n: context: iconText @ Action (layersize), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (layersize), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (layersize), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3324 krita/krita.action:3325
+#: krita/krita.action:3312 krita/krita.action:3313
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Scale Layer to new Size"
@@ -13556,7 +13537,7 @@ msgid "Scale Layers to new Size"
 msgstr "레이어를 새 크기로 조정"
 
 #. i18n: context: text @ Action (shearlayer), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3334
+#: krita/krita.action:3322
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "&Shear Layer..."
@@ -13568,7 +13549,7 @@ msgstr "레이어 기울이기(&S)..."
 #. i18n: context: iconText @ Action (shearlayer), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (shearlayer), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (shearlayer), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3336 krita/krita.action:3337
+#: krita/krita.action:3324 krita/krita.action:3325
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Shear Layer"
@@ -13577,7 +13558,7 @@ msgid "Shear Layers"
 msgstr "레이어 기울이기"
 
 #. i18n: context: text @ Action (mirrorAllNodesX), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3346
+#: krita/krita.action:3334
 #, kde-format
 msgctxt "action"
 msgid "Mirror All Layers Hori&zontally"
@@ -13587,14 +13568,14 @@ msgstr "모든 레이어 좌우 반전(&Z)"
 #. i18n: context: iconText @ Action (mirrorAllNodesX), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (mirrorAllNodesX), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (mirrorAllNodesX), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3348 krita/krita.action:3349
+#: krita/krita.action:3336 krita/krita.action:3337
 #, kde-format
 msgctxt "action"
 msgid "Mirror All Layers Horizontally"
 msgstr "모든 레이어 좌우 반전"
 
 #. i18n: context: text @ Action (mirrorAllNodesY), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3358
+#: krita/krita.action:3346
 #, kde-format
 msgctxt "action"
 msgid "Mirror All Layers &Vertically"
@@ -13604,14 +13585,14 @@ msgstr "모든 레이어 상하 반전(&V)"
 #. i18n: context: iconText @ Action (mirrorAllNodesY), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (mirrorAllNodesY), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (mirrorAllNodesY), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3360 krita/krita.action:3361
+#: krita/krita.action:3348 krita/krita.action:3349
 #, kde-format
 msgctxt "action"
 msgid "Mirror All Layers Vertically"
 msgstr "모든 레이어 상하 반전"
 
 #. i18n: context: text @ Action (rotateAllLayers), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3370
+#: krita/krita.action:3358
 #, kde-format
 msgctxt "action"
 msgid "&Rotate All Layers..."
@@ -13621,14 +13602,14 @@ msgstr "모든 레이어 회전(&R)..."
 #. i18n: context: iconText @ Action (rotateAllLayers), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (rotateAllLayers), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (rotateAllLayers), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3372 krita/krita.action:3373
+#: krita/krita.action:3360 krita/krita.action:3361
 #, kde-format
 msgctxt "action"
 msgid "Rotate All Layers"
 msgstr "모든 레이어 회전"
 
 #. i18n: context: text @ Action (rotateAllLayersCW90), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3382
+#: krita/krita.action:3370
 #, kde-format
 msgctxt "action"
 msgid "Rotate All &Layers 90° to the Right"
@@ -13638,14 +13619,14 @@ msgstr "모든 레이어 오른쪽으로 90° 회전(&L)"
 #. i18n: context: iconText @ Action (rotateAllLayersCW90), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (rotateAllLayersCW90), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (rotateAllLayersCW90), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3384 krita/krita.action:3385
+#: krita/krita.action:3372 krita/krita.action:3373
 #, kde-format
 msgctxt "action"
 msgid "Rotate All Layers 90° to the Right"
 msgstr "모든 레이어 오른쪽으로 90° 회전"
 
 #. i18n: context: text @ Action (rotateAllLayersCCW90), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3394
+#: krita/krita.action:3382
 #, kde-format
 msgctxt "action"
 msgid "Rotate All Layers &90° to the Left"
@@ -13655,14 +13636,14 @@ msgstr "모든 레이어 왼쪽으로 90° 회전(&9)"
 #. i18n: context: iconText @ Action (rotateAllLayersCCW90), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (rotateAllLayersCCW90), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (rotateAllLayersCCW90), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3396 krita/krita.action:3397
+#: krita/krita.action:3384 krita/krita.action:3385
 #, kde-format
 msgctxt "action"
 msgid "Rotate All Layers 90° to the Left"
 msgstr "모든 레이어 왼쪽으로 90° 회전"
 
 #. i18n: context: text @ Action (rotateAllLayers180), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3406
+#: krita/krita.action:3394
 #, kde-format
 msgctxt "action"
 msgid "Rotate All Layers &180°"
@@ -13672,14 +13653,14 @@ msgstr "모든 레이어 180° 회전(&1)"
 #. i18n: context: iconText @ Action (rotateAllLayers180), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (rotateAllLayers180), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (rotateAllLayers180), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3408 krita/krita.action:3409
+#: krita/krita.action:3396 krita/krita.action:3397
 #, kde-format
 msgctxt "action"
 msgid "Rotate All Layers 180°"
 msgstr "모든 레이어 180° 회전"
 
 #. i18n: context: text @ Action (scaleAllLayers), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3418
+#: krita/krita.action:3406
 #, kde-format
 msgctxt "action"
 msgid "Scale All &Layers to new Size..."
@@ -13689,14 +13670,14 @@ msgstr "모든 레이어를 새 크기로 조정(&L)..."
 #. i18n: context: iconText @ Action (scaleAllLayers), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (scaleAllLayers), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (scaleAllLayers), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3420 krita/krita.action:3421
+#: krita/krita.action:3408 krita/krita.action:3409
 #, kde-format
 msgctxt "action"
 msgid "Scale All Layers to new Size"
 msgstr "모든 레이어를 새 크기로 조정"
 
 #. i18n: context: text @ Action (shearAllLayers), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3430
+#: krita/krita.action:3418
 #, kde-format
 msgctxt "action"
 msgid "&Shear All Layers..."
@@ -13706,14 +13687,14 @@ msgstr "모든 레이어 기울이기(&S)..."
 #. i18n: context: iconText @ Action (shearAllLayers), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (shearAllLayers), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (shearAllLayers), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3432 krita/krita.action:3433
+#: krita/krita.action:3420 krita/krita.action:3421
 #, kde-format
 msgctxt "action"
 msgid "Shear All Layers"
 msgstr "모든 레이어 기울이기"
 
 #. i18n: context: text @ Action (offsetlayer), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3442
+#: krita/krita.action:3430
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "&Offset Layer..."
@@ -13725,7 +13706,7 @@ msgstr "레이어 오프셋(&O)..."
 #. i18n: context: iconText @ Action (offsetlayer), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (offsetlayer), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (offsetlayer), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3444 krita/krita.action:3445
+#: krita/krita.action:3432 krita/krita.action:3433
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Offset Layer"
@@ -13734,7 +13715,7 @@ msgid "Offset Layers"
 msgstr "레이어 오프셋"
 
 #. i18n: context: text @ Action (clones_array), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3454
+#: krita/krita.action:3442
 #, kde-format
 msgctxt "action"
 msgid "Clones &Array..."
@@ -13744,14 +13725,14 @@ msgstr "배열 복제(&A)..."
 #. i18n: context: iconText @ Action (clones_array), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (clones_array), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (clones_array), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3456 krita/krita.action:3457
+#: krita/krita.action:3444 krita/krita.action:3445
 #, kde-format
 msgctxt "action"
 msgid "Clones Array"
 msgstr "배열 복제"
 
 #. i18n: context: text @ Action (EditLayerMetaData), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3466
+#: krita/krita.action:3454
 #, kde-format
 msgctxt "action"
 msgid "&Edit metadata..."
@@ -13761,14 +13742,14 @@ msgstr "메타데이터 편집(&E)..."
 #. i18n: context: iconText @ Action (EditLayerMetaData), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (EditLayerMetaData), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (EditLayerMetaData), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3468 krita/krita.action:3469
+#: krita/krita.action:3456 krita/krita.action:3457
 #, kde-format
 msgctxt "action"
 msgid "Edit metadata"
 msgstr "메타데이터 편집"
 
 #. i18n: context: text @ Action (histogram), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3478
+#: krita/krita.action:3466
 #, kde-format
 msgctxt "action"
 msgid "&Histogram..."
@@ -13778,14 +13759,14 @@ msgstr "히스토그램(&H)..."
 #. i18n: context: iconText @ Action (histogram), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (histogram), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (histogram), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3480 krita/krita.action:3481
+#: krita/krita.action:3468 krita/krita.action:3469
 #, kde-format
 msgctxt "action"
 msgid "Histogram"
 msgstr "히스토그램"
 
 #. i18n: context: text @ Action (layercolorspaceconversion), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3490
+#: krita/krita.action:3478
 #, kde-format
 msgctxt "action"
 msgid "&Convert Layer Color Space..."
@@ -13795,7 +13776,7 @@ msgstr "레이어 색 공간 변환(&C)..."
 #. i18n: context: iconText @ Action (layercolorspaceconversion), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (layercolorspaceconversion), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (layercolorspaceconversion), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3492 krita/krita.action:3493
+#: krita/krita.action:3480 krita/krita.action:3481
 #, kde-format
 msgctxt "action"
 msgid "Convert Layer Color Space"
@@ -13805,7 +13786,7 @@ msgstr "레이어 색 공간 변환"
 #. i18n: context: iconText @ Action (unifylayerscolorspace), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: text @ Action (unifylayerscolorspace), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (unifylayerscolorspace), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3502 krita/krita.action:3505
+#: krita/krita.action:3490 krita/krita.action:3493
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Convert Layer Color Space"
@@ -13814,7 +13795,7 @@ msgid "Unify Layers Color Space"
 msgstr "레이어 색 공간 변환"
 
 #. i18n: context: toolTip @ Action (unifylayerscolorspace), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3504
+#: krita/krita.action:3492
 #, kde-format
 msgctxt "action"
 msgid ""
@@ -13823,7 +13804,7 @@ msgid ""
 msgstr ""
 
 #. i18n: context: text @ Action (merge_layer), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3514
+#: krita/krita.action:3502
 #, kde-format
 msgctxt "action"
 msgid "&Merge with Layer Below"
@@ -13833,14 +13814,14 @@ msgstr "아래 레이어와 병합(&M)"
 #. i18n: context: iconText @ Action (merge_layer), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (merge_layer), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (merge_layer), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3516 krita/krita.action:3517
+#: krita/krita.action:3504 krita/krita.action:3505
 #, kde-format
 msgctxt "action"
 msgid "Merge with Layer Below"
 msgstr "아래 레이어와 병합"
 
 #. i18n: context: text @ Action (flatten_layer), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3526
+#: krita/krita.action:3514
 #, kde-format
 msgctxt "action"
 msgid "&Flatten Layer"
@@ -13850,14 +13831,14 @@ msgstr "레이어 병합(&F)"
 #. i18n: context: iconText @ Action (flatten_layer), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (flatten_layer), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (flatten_layer), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3528 krita/krita.action:3529
+#: krita/krita.action:3516 krita/krita.action:3517
 #, kde-format
 msgctxt "action"
 msgid "Flatten Layer"
 msgstr "레이어 병합"
 
 #. i18n: context: text @ Action (flatten_image), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3538
+#: krita/krita.action:3526
 #, kde-format
 msgctxt "action"
 msgid "Flatten ima&ge"
@@ -13867,14 +13848,14 @@ msgstr "이미지 병합(&G)"
 #. i18n: context: iconText @ Action (flatten_image), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (flatten_image), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (flatten_image), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3540 krita/krita.action:3541
+#: krita/krita.action:3528 krita/krita.action:3529
 #, kde-format
 msgctxt "action"
 msgid "Flatten image"
 msgstr "이미지 병합"
 
 #. i18n: context: text @ Action (layer_style), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3550
+#: krita/krita.action:3538
 #, kde-format
 msgctxt "action"
 msgid "La&yer Style..."
@@ -13884,7 +13865,7 @@ msgstr "레이어 스타일(&Y)..."
 #. i18n: context: iconText @ Action (layer_style), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (layer_style), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (layer_style), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3552 krita/krita.action:3553
+#: krita/krita.action:3540 krita/krita.action:3541
 #, kde-format
 msgctxt "action"
 msgid "Layer Style"
@@ -13896,7 +13877,7 @@ msgstr "레이어 스타일"
 #. i18n: context: text @ Action (LayerGroupSwitcher/previous), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (LayerGroupSwitcher/previous), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (LayerGroupSwitcher/previous), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3562 krita/krita.action:3564 krita/krita.action:3565
+#: krita/krita.action:3550 krita/krita.action:3552 krita/krita.action:3553
 #, kde-format
 msgctxt "action"
 msgid "Move into previous group"
@@ -13908,7 +13889,7 @@ msgstr "이전 그룹으로 이동"
 #. i18n: context: text @ Action (LayerGroupSwitcher/next), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (LayerGroupSwitcher/next), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (LayerGroupSwitcher/next), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3574 krita/krita.action:3576 krita/krita.action:3577
+#: krita/krita.action:3562 krita/krita.action:3564 krita/krita.action:3565
 #, kde-format
 msgctxt "action"
 msgid "Move into next group"
@@ -13920,14 +13901,14 @@ msgstr "다음 그룹으로 이동"
 #. i18n: context: text @ Action (RenameCurrentLayer), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (RenameCurrentLayer), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (RenameCurrentLayer), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3586 krita/krita.action:3588 krita/krita.action:3589
+#: krita/krita.action:3574 krita/krita.action:3576 krita/krita.action:3577
 #, kde-format
 msgctxt "action"
 msgid "Rename current layer"
 msgstr "현재 레이어 이름 바꾸기"
 
 #. i18n: context: text @ Action (remove_layer), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3598
+#: krita/krita.action:3586
 #, kde-format
 msgctxt "action"
 msgid "&Remove Layer"
@@ -13937,7 +13918,7 @@ msgstr "레이어 삭제(&R)"
 #. i18n: context: iconText @ Action (remove_layer), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (remove_layer), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (remove_layer), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3600 krita/krita.action:3601
+#: krita/krita.action:3588 krita/krita.action:3589
 #, kde-format
 msgctxt "action"
 msgid "Remove Layer"
@@ -13947,7 +13928,7 @@ msgstr "레이어 삭제"
 #. i18n: context: toolTip @ Action (move_layer_up), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: text @ Action (move_layer_up), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (move_layer_up), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3610 krita/krita.action:3612
+#: krita/krita.action:3598 krita/krita.action:3600
 #, kde-format
 msgctxt "action"
 msgid "Move Layer or Mask Up"
@@ -13957,14 +13938,14 @@ msgstr "레이어/마스크 위로 이동"
 #. i18n: context: toolTip @ Action (move_layer_down), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: text @ Action (move_layer_down), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (move_layer_down), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3620 krita/krita.action:3622
+#: krita/krita.action:3608 krita/krita.action:3610
 #, kde-format
 msgctxt "action"
 msgid "Move Layer or Mask Down"
 msgstr "레이어/마스크 아래로 이동"
 
 #. i18n: context: text @ Action (layer_properties), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3630
+#: krita/krita.action:3618
 #, kde-format
 msgctxt "action"
 msgid "&Properties..."
@@ -13974,28 +13955,28 @@ msgstr "속성(&P)..."
 #. i18n: context: iconText @ Action (layer_properties), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (layer_properties), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: iconText @ Action (layer_properties), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3632 krita/krita.action:3633
+#: krita/krita.action:3620 krita/krita.action:3621
 #, kde-format
 msgctxt "Layer Properties"
 msgid "Properties"
 msgstr "속성"
 
 #. i18n: context: text @ Action (set-copy-from), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3642
+#: krita/krita.action:3630
 #, kde-format
 msgctxt "action"
 msgid "Set Copy F&rom..."
 msgstr "사본 위치 지정(&R)..."
 
 #. i18n: context: toolTip @ Action (set-copy-from), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3644
+#: krita/krita.action:3632
 #, kde-format
 msgctxt "action"
 msgid "Set the source for the selected clone layer(s)."
 msgstr "선택한 복제 레이어의 원본을 지정하십시오."
 
 #. i18n: context: iconText @ Action (set-copy-from), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3645
+#: krita/krita.action:3633
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Set Copy F&rom..."
@@ -14007,7 +13988,7 @@ msgstr "사본 위치 지정(&R)..."
 #. i18n: context: toolTip @ Action (create_reference_image_from_active_layer), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: text @ Action (create_reference_image_from_active_layer), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (create_reference_image_from_active_layer), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3654 krita/krita.action:3656
+#: krita/krita.action:3642 krita/krita.action:3644
 #, fuzzy, kde-format
 #| msgid "Reference Images Tool"
 msgctxt "action"
@@ -14018,7 +13999,7 @@ msgstr "참조 이미지 도구"
 #. i18n: context: toolTip @ Action (create_reference_image_from_visible_canvas), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: text @ Action (create_reference_image_from_visible_canvas), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (create_reference_image_from_visible_canvas), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3666 krita/krita.action:3668
+#: krita/krita.action:3654 krita/krita.action:3656
 #, fuzzy, kde-format
 #| msgid "Reference Images Tool"
 msgctxt "action"
@@ -14026,7 +14007,7 @@ msgid "Reference Image from Visible"
 msgstr "참조 이미지 도구"
 
 #. i18n: context: text @ Action (force_palette_colors), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3678
+#: krita/krita.action:3666
 #, fuzzy, kde-format
 #| msgid "Nearest Colors"
 msgctxt "action"
@@ -14037,7 +14018,7 @@ msgstr "가장 가까운 색상"
 #. i18n: context: toolTip @ Action (force_palette_colors), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: whatsThis @ Action (force_palette_colors), Actions (Layers), ActionCollection (Krita)
 #. i18n: context: toolTip @ Action (force_palette_colors), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3679 krita/krita.action:3680
+#: krita/krita.action:3667 krita/krita.action:3668
 #, fuzzy, kde-format
 #| msgid ""
 #| "Enforce palette colors: always select the nearest color from the active "
@@ -14049,7 +14030,7 @@ msgid ""
 msgstr "팔레트 색상 강제 적용: 항상 활성 팔레트의 인접한 색을 선택합니다."
 
 #. i18n: context: iconText @ Action (force_palette_colors), Actions (Layers), ActionCollection (Krita)
-#: krita/krita.action:3681
+#: krita/krita.action:3669
 #, fuzzy, kde-format
 #| msgctxt "description of a file type"
 #| msgid "Color Palette"
@@ -23505,7 +23486,7 @@ msgid "Clone Layer"
 msgstr "복제 레이어"
 
 #: libs/impex/KisExportCheckRegistry.cpp:111 libs/ui/kis_layer_manager.cc:699
-#: libs/ui/kis_node_manager.cpp:1631
+#: libs/ui/kis_node_manager.cpp:1629
 #, kde-format
 msgctxt "A group of layers"
 msgid "Group"
@@ -23549,7 +23530,7 @@ msgid "Transform Mask"
 msgstr "변형 마스크"
 
 #: libs/impex/KisExportCheckRegistry.cpp:127 libs/ui/kis_mask_manager.cc:216
-#: libs/ui/kis_node_manager.cpp:1393
+#: libs/ui/kis_node_manager.cpp:1391
 #: plugins/impex/libkra/kis_kra_load_visitor.cpp:214
 #: plugins/impex/psd/psd_loader.cpp:593
 #: plugins/impex/tiff/kis_tiff_import.cc:565
@@ -25228,8 +25209,8 @@ msgstr "로컬 리소스"
 #: libs/ui/input/kis_tablet_debugger.cpp:106 libs/ui/kis_clipboard.cc:779
 #: libs/ui/kis_custom_pattern.cc:126 libs/ui/kis_filter_manager.cc:234
 #: libs/ui/kis_filter_manager.cc:243 libs/ui/kis_layer_manager.cc:326
-#: libs/ui/kis_layer_manager.cc:1044 libs/ui/kis_node_manager.cpp:1318
-#: libs/ui/kis_node_manager.cpp:1381 libs/ui/KisApplication.cpp:1227
+#: libs/ui/kis_layer_manager.cc:1044 libs/ui/kis_node_manager.cpp:1316
+#: libs/ui/kis_node_manager.cpp:1379 libs/ui/KisApplication.cpp:1227
 #: libs/ui/KisApplication.cpp:1230 libs/ui/KisApplication.cpp:1246
 #: libs/ui/KisApplication.cpp:1278 libs/ui/KisApplication.cpp:1292
 #: libs/ui/KisApplication.cpp:1320 libs/ui/KisDocument.cpp:1057
@@ -36108,76 +36089,76 @@ msgstr "보기 반전"
 msgid "Mirror View Around Canvas"
 msgstr "보기 반전"
 
-#: libs/ui/kis_node_manager.cpp:488
+#: libs/ui/kis_node_manager.cpp:486
 #, kde-format
 msgid "Layer is locked"
 msgstr "레이어가 잠겨 있습니다"
 
-#: libs/ui/kis_node_manager.cpp:490 libs/ui/kis_node_manager.cpp:515
+#: libs/ui/kis_node_manager.cpp:488 libs/ui/kis_node_manager.cpp:513
 #, kde-format
 msgid "Layer \"%1\" is locked"
 msgstr "레이어 \"%1\"이(가) 잠김|/|레이어 \"%1\"$[이가 %1] 잠김"
 
-#: libs/ui/kis_node_manager.cpp:543
+#: libs/ui/kis_node_manager.cpp:541
 msgctxt "(qtundo-format)"
 msgid "Move Nodes"
 msgstr "노드 이동"
 
-#: libs/ui/kis_node_manager.cpp:550
+#: libs/ui/kis_node_manager.cpp:548
 msgctxt "(qtundo-format)"
 msgid "Copy Nodes"
 msgstr "노드 복사"
 
-#: libs/ui/kis_node_manager.cpp:557
+#: libs/ui/kis_node_manager.cpp:555
 msgctxt "(qtundo-format)"
 msgid "Add Nodes"
 msgstr "노드 추가"
 
-#: libs/ui/kis_node_manager.cpp:729
+#: libs/ui/kis_node_manager.cpp:727
 msgctxt "(qtundo-format)"
 msgid "Convert to a Selection Mask"
 msgstr "선택을 마스크로 변환"
 
-#: libs/ui/kis_node_manager.cpp:775
+#: libs/ui/kis_node_manager.cpp:773
 #, fuzzy, kde-format
 #| msgid "Could not load reference image from clipboard"
 msgctxt "error dialog from the reference tool"
 msgid "Could not create a reference image from the active layer."
 msgstr "클립보드에서 참조 이미지를 불러올 수 없음"
 
-#: libs/ui/kis_node_manager.cpp:776
+#: libs/ui/kis_node_manager.cpp:774
 #, fuzzy, kde-format
 #| msgid "Could not load reference image from clipboard"
 msgctxt "error dialog from the reference tool"
 msgid "Could not create a reference image from the visible canvas."
 msgstr "클립보드에서 참조 이미지를 불러올 수 없음"
 
-#: libs/ui/kis_node_manager.cpp:1031
+#: libs/ui/kis_node_manager.cpp:1029
 #, kde-format
 msgid "Onion skins require a layer with transparent background."
 msgstr "어니언 스킨을 사용하려면 투명한 배경이 있는 레이어가 필요합니다."
 
-#: libs/ui/kis_node_manager.cpp:1058
+#: libs/ui/kis_node_manager.cpp:1056
 msgctxt "(qtundo-format)"
 msgid "Duplicate Nodes"
 msgstr "노드 복제"
 
-#: libs/ui/kis_node_manager.cpp:1083
+#: libs/ui/kis_node_manager.cpp:1081
 msgctxt "(qtundo-format)"
 msgid "Raise Nodes"
 msgstr "노드 앞으로 가져오기"
 
-#: libs/ui/kis_node_manager.cpp:1092
+#: libs/ui/kis_node_manager.cpp:1090
 msgctxt "(qtundo-format)"
 msgid "Lower Nodes"
 msgstr "노드 뒤로 보내기"
 
-#: libs/ui/kis_node_manager.cpp:1112
+#: libs/ui/kis_node_manager.cpp:1110
 msgctxt "(qtundo-format)"
 msgid "Remove Nodes"
 msgstr "노드 삭제"
 
-#: libs/ui/kis_node_manager.cpp:1128
+#: libs/ui/kis_node_manager.cpp:1126
 #, fuzzy
 #| msgctxt "action"
 #| msgid "Mirror Horizontally"
@@ -36185,7 +36166,7 @@ msgctxt "(qtundo-format)"
 msgid "Mirror Mask Horizontally"
 msgstr "좌우 반전"
 
-#: libs/ui/kis_node_manager.cpp:1131
+#: libs/ui/kis_node_manager.cpp:1129
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Mirror Layer Horizontally"
@@ -36194,7 +36175,7 @@ msgid "Mirror Layer Horizontally"
 msgid_plural "Mirror %1 Layers Horizontally"
 msgstr[0] "레이어 좌우 반전"
 
-#: libs/ui/kis_node_manager.cpp:1142
+#: libs/ui/kis_node_manager.cpp:1140
 #, fuzzy
 #| msgctxt "action"
 #| msgid "Mirror Vertically"
@@ -36202,7 +36183,7 @@ msgctxt "(qtundo-format)"
 msgid "Mirror Mask Vertically"
 msgstr "상하 반전"
 
-#: libs/ui/kis_node_manager.cpp:1145
+#: libs/ui/kis_node_manager.cpp:1143
 #, fuzzy, kde-format
 #| msgctxt "action"
 #| msgid "Mirror Layer Vertically"
@@ -36211,7 +36192,7 @@ msgid "Mirror Layer Vertically"
 msgid_plural "Mirror %1 Layers Vertically"
 msgstr[0] "레이어 상하 반전"
 
-#: libs/ui/kis_node_manager.cpp:1153
+#: libs/ui/kis_node_manager.cpp:1151
 #, fuzzy
 #| msgctxt "action"
 #| msgid "Mirror All Layers Horizontally"
@@ -36219,7 +36200,7 @@ msgctxt "(qtundo-format)"
 msgid "Mirror All Layers Horizontally"
 msgstr "모든 레이어 좌우 반전"
 
-#: libs/ui/kis_node_manager.cpp:1160
+#: libs/ui/kis_node_manager.cpp:1158
 #, fuzzy
 #| msgctxt "action"
 #| msgid "Mirror All Layers Vertically"
@@ -36227,40 +36208,40 @@ msgctxt "(qtundo-format)"
 msgid "Mirror All Layers Vertically"
 msgstr "모든 레이어 상하 반전"
 
-#: libs/ui/kis_node_manager.cpp:1292
+#: libs/ui/kis_node_manager.cpp:1290
 #, kde-format
 msgid "Export \"%1\""
 msgstr "\"%1\" 내보내기"
 
-#: libs/ui/kis_node_manager.cpp:1319
+#: libs/ui/kis_node_manager.cpp:1317
 #, kde-format
 msgid "Could not save the layer. %1"
 msgstr "레이어를 저장할 수 없습니다. %1"
 
-#: libs/ui/kis_node_manager.cpp:1337
+#: libs/ui/kis_node_manager.cpp:1335
 #, kde-format
 msgctxt "warning message when trying to export a transform mask"
 msgid "Layer has no pixel data"
 msgstr "레이어에 픽셀 데이터가 없음"
 
-#: libs/ui/kis_node_manager.cpp:1361
+#: libs/ui/kis_node_manager.cpp:1359
 #, kde-format
 msgctxt "@title:window"
 msgid "Export to SVG"
 msgstr "SVG로 내보내기"
 
-#: libs/ui/kis_node_manager.cpp:1381
+#: libs/ui/kis_node_manager.cpp:1379
 #, kde-format
 msgid "Could not save to svg: %1"
 msgstr "SVG로 저장할 수 없습니다: %1"
 
-#: libs/ui/kis_node_manager.cpp:1406
+#: libs/ui/kis_node_manager.cpp:1404
 #, kde-format
 msgctxt "@title:window"
 msgid "Layer %1 is not editable"
 msgstr "%1 레이어를 편집할 수 없음"
 
-#: libs/ui/kis_node_manager.cpp:1407
+#: libs/ui/kis_node_manager.cpp:1405
 #, kde-format
 msgid ""
 "Cannot write alpha channel of the parent layer \"%1\".\n"
@@ -36269,51 +36250,51 @@ msgstr ""
 "부모 레이어 \"%1\"의 알파 채널에 쓸 수 없습니다.\n"
 "작업이 취소됩니다."
 
-#: libs/ui/kis_node_manager.cpp:1438
+#: libs/ui/kis_node_manager.cpp:1436
 msgctxt "(qtundo-format)"
 msgid "Write Alpha into a Layer"
 msgstr "알파값을 레이어에 기록"
 
-#: libs/ui/kis_node_manager.cpp:1578
+#: libs/ui/kis_node_manager.cpp:1576
 msgctxt "(qtundo-format)"
 msgid "Cut Nodes"
 msgstr "노드 자르기"
 
-#: libs/ui/kis_node_manager.cpp:1661
+#: libs/ui/kis_node_manager.cpp:1659
 msgctxt "(qtundo-format)"
 msgid "Quick Group"
 msgstr "빠른 그룹"
 
-#: libs/ui/kis_node_manager.cpp:1672
+#: libs/ui/kis_node_manager.cpp:1670
 msgctxt "(qtundo-format)"
 msgid "Quick Clipping Group"
 msgstr "빠른 클리핑 그룹"
 
-#: libs/ui/kis_node_manager.cpp:1679
+#: libs/ui/kis_node_manager.cpp:1677
 #, kde-format
 msgctxt "default name for a clipping group layer"
 msgid "Clipping Group"
 msgstr "클리핑 그룹"
 
-#: libs/ui/kis_node_manager.cpp:1680
+#: libs/ui/kis_node_manager.cpp:1678
 #, kde-format
 msgctxt "default name for quick clip group mask layer"
 msgid "Mask Layer"
 msgstr "마스크 레이어"
 
-#: libs/ui/kis_node_manager.cpp:1707
+#: libs/ui/kis_node_manager.cpp:1705
 #, fuzzy, kde-format
 #| msgid "Put every layer in its own, separate group layer"
 msgid "Cannot move layer \"%1\" into new parent \"%2\""
 msgstr "개별 레이어를 각각의 그룹 레이어 아래에 두기"
 
-#: libs/ui/kis_node_manager.cpp:1710
+#: libs/ui/kis_node_manager.cpp:1708
 #, fuzzy, kde-format
 #| msgid "Put every layer in its own, separate group layer"
 msgid "Cannot move layer \"%1\" into the root layer"
 msgstr "개별 레이어를 각각의 그룹 레이어 아래에 두기"
 
-#: libs/ui/kis_node_manager.cpp:1718
+#: libs/ui/kis_node_manager.cpp:1716
 msgctxt "(qtundo-format)"
 msgid "Quick Ungroup"
 msgstr "빠른 그룹 해제"
@@ -72517,6 +72498,17 @@ msgid ""
 "Full range: [%1, %2]\n"
 "Subrange: [%3, %4]"
 msgstr ""
+
+#, fuzzy
+#~| msgctxt "action"
+#~| msgid "Convert to &animated layer"
+#~ msgctxt "action"
+#~ msgid "Convert to &Animated Layer"
+#~ msgstr "애니메이션 레이어로 변환(&A)"
+
+#~ msgctxt "action"
+#~ msgid "Convert layer into animation frames"
+#~ msgstr "레이어를 애니메이션 프레임으로 변환"
 
 #, fuzzy
 #~| msgid "Foreground color selector"

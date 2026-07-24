@@ -33,7 +33,7 @@ msgstr ""
 "Project-Id-Version: krita\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-23 00:41+0000\n"
-"PO-Revision-Date: 2026-07-15 20:13+0200\n"
+"PO-Revision-Date: 2026-07-18 23:23+0200\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -34443,32 +34443,24 @@ msgid "&Choose foreground and background colors"
 msgstr "S&cegli colori di primo piano e di sfondo"
 
 #: libs/ui/kis_control_frame.cpp:122
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "&Choose Foreground Color"
+#, kde-format
 msgid "&Choose foreground colour"
 msgstr "Scegli &colore di primo piano"
 
 #: libs/ui/kis_control_frame.cpp:141
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "&Choose Background Color"
+#, kde-format
 msgid "&Choose background colour"
 msgstr "Scegli &colore di sfondo"
 
 #: libs/ui/kis_control_frame.cpp:160
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "Swap Foreground and Background Colors"
+#, kde-format
 msgid "&Swap Foreground and Background Colors"
-msgstr "Scambia colori di primo piano e di sfondo"
+msgstr "&Scambia colori di primo piano e di sfondo"
 
 #: libs/ui/kis_control_frame.cpp:179
-#, fuzzy, kde-format
-#| msgctxt "action"
-#| msgid "Reset Foreground and Background Color"
+#, kde-format
 msgid "&reset Foreground and Background Colors"
-msgstr "Azzera colori di primo piano e di sfondo"
+msgstr "Azze&ra colori di primo piano e di sfondo"
 
 #: libs/ui/kis_control_frame.cpp:195
 #, kde-format
@@ -66412,13 +66404,14 @@ msgid "Show Guideline"
 msgstr "Mostra linea guida"
 
 #: plugins/tools/basictools/kis_tool_line.cc:467
-#, fuzzy, kde-format
-#| msgid "Length: %1 px"
+#, kde-format
 msgctxt "%1=length in pixels %2=angle in degrees"
 msgid ""
 "Length: %1 px\n"
 "Angle: %2°"
-msgstr "Lunghezza: %1 px"
+msgstr ""
+"Lunghezza: %1 px\n"
+"Angolo: %2°"
 
 #: plugins/tools/basictools/kis_tool_line.cc:487
 #, kde-format
